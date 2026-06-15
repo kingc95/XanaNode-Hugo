@@ -1,0 +1,19 @@
+{{- $dest := .Destination -}}
+{{- $isYouTube := findRE `(?i)^(https?:)?//(www\.)?(youtube\.com/watch\?v=|youtube\.com/embed/|youtube\.com/shorts/|youtu\.be/)` $dest -}}
+{{- $isPdf := findRE `(?i)\.pdf(?:[?#].*)?$` $dest -}}
+{{- if $isYouTube -}}
+  {{ partial "youtube-embed.html" (dict "url" $dest "text" .Text) }}
+{{- else if $isPdf -}}
+  <div class="xana-pdf-embed">
+    <div class="xana-pdf-embed__frame">
+      <iframe
+        src="{{ $dest }}"
+        title="PDF viewer"
+        loading="lazy">
+      </iframe>
+    </div>
+    <a class="xana-pdf-embed__link" href="{{ $dest }}" target="_blank" rel="noopener noreferrer">{{ .Text | safeHTML }}</a>
+  </div>
+{{- else -}}
+  <a href="{{ $dest }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- end -}}

@@ -1,0 +1,20 @@
+baseURL: "https://builtbybots.com/"
+languageCode: "en-us"
+title: "Built By Bots"
+contentDir: "exampleSite/content"
+dataDir: "exampleSite/data"
+
+params:
+  description: "A living investigation into intelligence, memory, provenance, and the systems we build to remember things."
+  author: "Christian Siefen"
+  tagline: "Investigating how humans, machines, and civilizations remember things."
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+outputs:
+  home:
+    - HTML
+    - JSON

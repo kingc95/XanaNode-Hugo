@@ -1,0 +1,8 @@
+{{ $id := . }}
+{{ $found := false }}
+{{ range site.RegularPages }}
+  {{ if eq .File.ContentBaseName $id }}
+    {{ $found = . }}
+  {{ end }}
+{{ end }}
+{{ return $found }}

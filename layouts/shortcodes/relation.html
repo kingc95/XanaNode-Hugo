@@ -1,0 +1,4 @@
+{{ $type := .Get "type" }}
+{{ $targetID := .Get "target" }}
+{{ $target := partial "find-page-by-id.html" $targetID }}
+<span class="inline-relation"><span class="relation-type">{{ $type }}</span>{{ if $target }}<a href="{{ $target.RelPermalink }}">{{ $target.Title }}</a>{{ else }}{{ $targetID }}{{ end }}</span>

@@ -1,0 +1,30 @@
+{{- $ref := .Get "ref" -}}
+{{- $label := .Get "label" -}}
+{{- $parts := split (replaceRE "^xana://" "" $ref) "/" -}}
+{{- $nodeVersion := index $parts 0 -}}
+{{- $range := cond (ge (len $parts) 2) (index $parts 1) "1" -}}
+{{- $nodeParts := split $nodeVersion "@" -}}
+{{- $nodeID := index $nodeParts 0 -}}
+{{- $version := cond (ge (len $nodeParts) 2) (index $nodeParts 1) "latest" -}}
+{{- $nodeData := index site.Data.xananode_fragments.nodes $nodeID -}}
+{{- $page := partial "find-page-by-id.html" (dict "id" $nodeID) -}}
+<aside class="transclusion xana-transclusion" data-xana-ref="{{ $ref }}">
+  <div class="transclusion-label">{{ if $label }}{{ $label }}{{ else }}Xana transclusion{{ end }}</div>
+  {{- if $nodeData -}}
+    {{- $versionData := index $nodeData.versions $version -}}
+    {{- if not $versionData }}{{ $versionData = index $nodeData.versions "latest" }}{{ end -}}
+    {{- $text := "" -}}
+    {{- if $versionData -}}
+      {{- $text = index $versionData.fragments $range -}}
+    {{- end -}}
+    <h3>{{ if $page }}<a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>{{ else }}{{ $nodeData.title }}{{ end }}</h3>
+    <p class="xana-ref"><code>{{ $ref }}</code></p>
+    {{- if $text -}}
+      <blockquote>{{ $text | markdownify }}</blockquote>
+    {{- else -}}
+      <p>Fragment not found for range <code>{{ $range }}</code>. Run <code>npm run prepare</code> to regenerate fragment data.</p>
+    {{- end -}}
+  {{- else -}}
+    <p>Missing XanaNode reference: <code>{{ $ref }}</code></p>
+  {{- end -}}
+</aside>

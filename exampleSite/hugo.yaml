@@ -1,0 +1,19 @@
+baseURL: "https://example.com/"
+languageCode: "en-us"
+title: "XanaNode Example Substrate"
+theme: "xananode"
+
+params:
+  description: "A self-hosting example knowledge substrate that explains XanaNode using XanaNode."
+  author: "XanaNode Contributors"
+  tagline: "A relationship-first static knowledge substrate."
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+outputs:
+  home:
+    - HTML
+    - JSON

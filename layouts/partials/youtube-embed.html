@@ -1,0 +1,37 @@
+{{- $url := .url | default "" -}}
+{{- $text := .text | default "Watch on YouTube" -}}
+{{- $videoID := "" -}}
+{{- $patterns := slice
+  `(https?:)?//(www\.)?youtu\.be/([^?&/]+)`
+  `(https?:)?//(www\.)?youtube\.com/watch\?v=([^?&/]+)`
+  `(https?:)?//(www\.)?youtube\.com/embed/([^?&/]+)`
+  `(https?:)?//(www\.)?youtube\.com/shorts/([^?&/]+)`
+-}}
+{{- range $pattern := $patterns -}}
+  {{- if eq $videoID "" -}}
+    {{- $matches := findRE $pattern $url -}}
+    {{- if $matches -}}
+      {{- $match := index $matches 0 -}}
+      {{- $videoID = replaceRE $pattern `${3}` $match -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $videoID -}}
+  <div class="xana-youtube-embed">
+    <div class="xana-youtube-embed__frame">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/{{ $videoID }}"
+        title="YouTube video player"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <a class="xana-youtube-embed__link" href="{{ $url }}" target="_blank" rel="noopener noreferrer">
+      {{ $text }}
+    </a>
+  </div>
+{{- else -}}
+  <a href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ $text }}</a>
+{{- end -}}

@@ -1,0 +1,223 @@
+{
+  "generated_at": "2026-06-15T16:04:19.595Z",
+  "nodes": {
+    "lost-lineage": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "This trail follows the buried lineage of associative memory and relationship-first information architecture.\n\n{{< node ref=\"bush-as-we-may-think\" >}} {{< node ref=\"nelson-xanadu\" >}} {{< node ref=\"knowledge-substrate\" >}}",
+            "1.1": "This trail follows the buried lineage of associative memory and relationship-first information architecture.",
+            "1.1.1": "This trail follows the buried lineage of associative memory and relationship-first information architecture.",
+            "1.2": "{{< node ref=\"bush-as-we-may-think\" >}} {{< node ref=\"nelson-xanadu\" >}} {{< node ref=\"knowledge-substrate\" >}}",
+            "1.2.1": "{{< node ref=\"bush-as-we-may-think\" >}} {{< node ref=\"nelson-xanadu\" >}} {{< node ref=\"knowledge-substrate\" >}}"
+          }
+        },
+        "latest": {
+          "fragments": {
+            "1": "This trail follows the buried lineage of associative memory and relationship-first information architecture.\n\n{{< node ref=\"bush-as-we-may-think\" >}} {{< node ref=\"nelson-xanadu\" >}} {{< node ref=\"knowledge-substrate\" >}}",
+            "1.1": "This trail follows the buried lineage of associative memory and relationship-first information architecture.",
+            "1.1.1": "This trail follows the buried lineage of associative memory and relationship-first information architecture.",
+            "1.2": "{{< node ref=\"bush-as-we-may-think\" >}} {{< node ref=\"nelson-xanadu\" >}} {{< node ref=\"knowledge-substrate\" >}}",
+            "1.2.1": "{{< node ref=\"bush-as-we-may-think\" >}} {{< node ref=\"nelson-xanadu\" >}} {{< node ref=\"knowledge-substrate\" >}}"
+          }
+        }
+      },
+      "title": "The Lost Lineage",
+      "type": "trail"
+    },
+    "nelson-xanadu": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Nelson's paper argues that media should allow compatible connections, reuse, visible links, and provenance-preserving inclusion.",
+            "1.1": "Nelson's paper argues that media should allow compatible connections, reuse, visible links, and provenance-preserving inclusion.",
+            "1.1.1": "Nelson's paper argues that media should allow compatible connections, reuse, visible links, and provenance-preserving inclusion."
+          }
+        },
+        "latest": {
+          "fragments": {
+            "1": "Nelson's paper argues that media should allow compatible connections, reuse, visible links, and provenance-preserving inclusion.",
+            "1.1": "Nelson's paper argues that media should allow compatible connections, reuse, visible links, and provenance-preserving inclusion.",
+            "1.1.1": "Nelson's paper argues that media should allow compatible connections, reuse, visible links, and provenance-preserving inclusion."
+          }
+        }
+      },
+      "title": "Xanadu: Document Interconnection Enabling Re-use",
+      "type": "source"
+    },
+    "bush-as-we-may-think": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Bush's essay introduces associative trails and the Memex as responses to information overload.",
+            "1.1": "Bush's essay introduces associative trails and the Memex as responses to information overload.",
+            "1.1.1": "Bush's essay introduces associative trails and the Memex as responses to information overload."
+          }
+        },
+        "latest": {
+          "fragments": {
+            "1": "Bush's essay introduces associative trails and the Memex as responses to information overload.",
+            "1.1": "Bush's essay introduces associative trails and the Memex as responses to information overload.",
+            "1.1.1": "Bush's essay introduces associative trails and the Memex as responses to information overload."
+          }
+        }
+      },
+      "title": "As We May Think",
+      "type": "source"
+    },
+    "ted-nelson": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Nelson argued that documents were the wrong primitive and that relationships between materials should remain visible and traversable.",
+            "1.1": "Nelson argued that documents were the wrong primitive and that relationships between materials should remain visible and traversable.",
+            "1.1.1": "Nelson argued that documents were the wrong primitive and that relationships between materials should remain visible and traversable."
+          }
+        },
+        "latest": {
+          "fragments": {
+            "1": "Nelson argued that documents were the wrong primitive and that relationships between materials should remain visible and traversable.",
+            "1.1": "Nelson argued that documents were the wrong primitive and that relationships between materials should remain visible and traversable.",
+            "1.1.1": "Nelson argued that documents were the wrong primitive and that relationships between materials should remain visible and traversable."
+          }
+        }
+      },
+      "title": "Ted Nelson",
+      "type": "person"
+    },
+    "russell-bromley-ai-scam": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "The surface story is simple: an AI system surfaced fake shopping links.\n\nThe deeper chain is not simple: brand identity, acquisition, retired domains, official retail presence, scam copies, search indexing, and AI retrieval all collide.\n\n{{< relation type=\"demonstrates\" target=\"knowledge-substrate\" >}}",
+            "1.1": "The surface story is simple: an AI system surfaced fake shopping links.",
+            "1.1.1": "The surface story is simple: an AI system surfaced fake shopping links.",
+            "1.2": "The deeper chain is not simple: brand identity, acquisition, retired domains, official retail presence, scam copies, search indexing, and AI retrieval all collide.",
+            "1.2.1": "The deeper chain is not simple: brand identity, acquisition, retired domains, official retail presence, scam copies, search indexing, and AI retrieval all collide.",
+            "1.3": "{{< relation type=\"demonstrates\" target=\"knowledge-substrate\" >}}",
+            "1.3.1": "{{< relation type=\"demonstrates\" target=\"knowledge-substrate\" >}}"
+          }
+        },
+        "latest": {
+          "fragments": {
+            "1": "The surface story is simple: an AI system surfaced fake shopping links.\n\nThe deeper chain is not simple: brand identity, acquisition, retired domains, official retail presence, scam copies, search indexing, and AI retrieval all collide.\n\n{{< relation type=\"demonstrates\" target=\"knowledge-substrate\" >}}",
+            "1.1": "The surface story is simple: an AI system surfaced fake shopping links.",
+            "1.1.1": "The surface story is simple: an AI system surfaced fake shopping links.",
+            "1.2": "The deeper chain is not simple: brand identity, acquisition, retired domains, official retail presence, scam copies, search indexing, and AI retrieval all collide.",
+            "1.2.1": "The deeper chain is not simple: brand identity, acquisition, retired domains, official retail presence, scam copies, search indexing, and AI retrieval all collide.",
+            "1.3": "{{< relation type=\"demonstrates\" target=\"knowledge-substrate\" >}}",
+            "1.3.1": "{{< relation type=\"demonstrates\" target=\"knowledge-substrate\" >}}"
+          }
+        }
+      },
+      "title": "The Russell & Bromley AI Scam Problem",
+      "type": "observation"
+    },
+    "as-we-may-or-may-not-remember": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "In 1945, Vannevar Bush worried that humanity was producing more knowledge than it could meaningfully navigate.\n\n{{< claim id=\"info-not-knowledge\" >}} Information is not knowledge. Knowledge lives in relationships, context, provenance, contradiction, and memory. {{< /claim >}}\n\nThe web solved publication. It did not solve memory.\n\n{{< transclude source=\"bush-as-we-may-think\" label=\"Bush on information overload\" >}}\n\nThat is the thing AI is exposing now.",
+            "1.1": "In 1945, Vannevar Bush worried that humanity was producing more knowledge than it could meaningfully navigate.",
+            "1.1.1": "In 1945, Vannevar Bush worried that humanity was producing more knowledge than it could meaningfully navigate.",
+            "1.2": "{{< claim id=\"info-not-knowledge\" >}} Information is not knowledge. Knowledge lives in relationships, context, provenance, contradiction, and memory. {{< /claim >}}",
+            "1.2.1": "{{< claim id=\"info-not-knowledge\" >}} Information is not knowledge.",
+            "1.2.2": "Knowledge lives in relationships, context, provenance, contradiction, and memory.",
+            "1.2.3": "{{< /claim >}}",
+            "1.3": "The web solved publication. It did not solve memory.",
+            "1.3.1": "The web solved publication.",
+            "1.3.2": "It did not solve memory.",
+            "1.4": "{{< transclude source=\"bush-as-we-may-think\" label=\"Bush on information overload\" >}}",
+            "1.4.1": "{{< transclude source=\"bush-as-we-may-think\" label=\"Bush on information overload\" >}}",
+            "1.5": "That is the thing AI is exposing now.",
+            "1.5.1": "That is the thing AI is exposing now."
+          }
+        },
+        "latest": {
+          "fragments": {
+            "1": "In 1945, Vannevar Bush worried that humanity was producing more knowledge than it could meaningfully navigate.\n\n{{< claim id=\"info-not-knowledge\" >}} Information is not knowledge. Knowledge lives in relationships, context, provenance, contradiction, and memory. {{< /claim >}}\n\nThe web solved publication. It did not solve memory.\n\n{{< transclude source=\"bush-as-we-may-think\" label=\"Bush on information overload\" >}}\n\nThat is the thing AI is exposing now.",
+            "1.1": "In 1945, Vannevar Bush worried that humanity was producing more knowledge than it could meaningfully navigate.",
+            "1.1.1": "In 1945, Vannevar Bush worried that humanity was producing more knowledge than it could meaningfully navigate.",
+            "1.2": "{{< claim id=\"info-not-knowledge\" >}} Information is not knowledge. Knowledge lives in relationships, context, provenance, contradiction, and memory. {{< /claim >}}",
+            "1.2.1": "{{< claim id=\"info-not-knowledge\" >}} Information is not knowledge.",
+            "1.2.2": "Knowledge lives in relationships, context, provenance, contradiction, and memory.",
+            "1.2.3": "{{< /claim >}}",
+            "1.3": "The web solved publication. It did not solve memory.",
+            "1.3.1": "The web solved publication.",
+            "1.3.2": "It did not solve memory.",
+            "1.4": "{{< transclude source=\"bush-as-we-may-think\" label=\"Bush on information overload\" >}}",
+            "1.4.1": "{{< transclude source=\"bush-as-we-may-think\" label=\"Bush on information overload\" >}}",
+            "1.5": "That is the thing AI is exposing now.",
+            "1.5.1": "That is the thing AI is exposing now."
+          }
+        }
+      },
+      "title": "As We May or May Not Remember",
+      "type": "essay"
+    },
+    "transclusion": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Transclusion is one of Nelson's most important concepts: material is included without pretending it originated here.",
+            "1.1": "Transclusion is one of Nelson's most important concepts: material is included without pretending it originated here.",
+            "1.1.1": "Transclusion is one of Nelson's most important concepts: material is included without pretending it originated here."
+          }
+        },
+        "latest": {
+          "fragments": {
+            "1": "Transclusion is one of Nelson's most important concepts: material is included without pretending it originated here.",
+            "1.1": "Transclusion is one of Nelson's most important concepts: material is included without pretending it originated here.",
+            "1.1.1": "Transclusion is one of Nelson's most important concepts: material is included without pretending it originated here."
+          }
+        }
+      },
+      "title": "Transclusion",
+      "type": "concept"
+    },
+    "provenance": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Provenance is not decorative metadata. In this project, provenance is treated as part of meaning.",
+            "1.1": "Provenance is not decorative metadata. In this project, provenance is treated as part of meaning.",
+            "1.1.1": "Provenance is not decorative metadata.",
+            "1.1.2": "In this project, provenance is treated as part of meaning."
+          }
+        },
+        "latest": {
+          "fragments": {
+            "1": "Provenance is not decorative metadata. In this project, provenance is treated as part of meaning.",
+            "1.1": "Provenance is not decorative metadata. In this project, provenance is treated as part of meaning.",
+            "1.1.1": "Provenance is not decorative metadata.",
+            "1.1.2": "In this project, provenance is treated as part of meaning."
+          }
+        }
+      },
+      "title": "Provenance",
+      "type": "concept"
+    },
+    "knowledge-substrate": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "A knowledge substrate is not a pile of documents. It is the relationship layer beneath claims, sources, evidence, contradictions, and interpretation.",
+            "1.1": "A knowledge substrate is not a pile of documents. It is the relationship layer beneath claims, sources, evidence, contradictions, and interpretation.",
+            "1.1.1": "A knowledge substrate is not a pile of documents.",
+            "1.1.2": "It is the relationship layer beneath claims, sources, evidence, contradictions, and interpretation."
+          }
+        },
+        "latest": {
+          "fragments": {
+            "1": "A knowledge substrate is not a pile of documents. It is the relationship layer beneath claims, sources, evidence, contradictions, and interpretation.",
+            "1.1": "A knowledge substrate is not a pile of documents. It is the relationship layer beneath claims, sources, evidence, contradictions, and interpretation.",
+            "1.1.1": "A knowledge substrate is not a pile of documents.",
+            "1.1.2": "It is the relationship layer beneath claims, sources, evidence, contradictions, and interpretation."
+          }
+        }
+      },
+      "title": "Knowledge Substrate",
+      "type": "concept"
+    }
+  }
+}

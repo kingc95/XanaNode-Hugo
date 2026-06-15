@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Node Not Found</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+        
+        .node-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 40px;
+            background: radial-gradient(circle at 30% 30%, #60a5fa, #3b82f6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.7); }
+            50% { box-shadow: 0 0 0 30px rgba(96, 165, 250, 0); }
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin-bottom: 16px;
+            color: #f1f5f9;
+        }
+        
+        .error-code {
+            font-size: 72px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+        }
+        
+        .message {
+            font-size: 18px;
+            color: #cbd5e1;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        
+        .note {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            margin: 32px 0;
+            border-radius: 4px;
+            font-style: italic;
+            color: #a5f3fc;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        a {
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-home {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+        }
+        
+        .btn-home:hover {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .btn-back {
+            border: 2px solid #475569;
+            color: #cbd5e1;
+        }
+        
+        .btn-back:hover {
+            border-color: #64748b;
+            color: #f1f5f9;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="node-icon">⚠️</div>
+        <div class="error-code">404</div>
+        <h1>Node Not Found</h1>
+        <p class="message">The path you're looking for doesn't exist in the network.</p>
+        
+        <div class="note">
+            ✨ Maybe this is a sign we need a node here...
+        </div>
+        
+        <div class="actions">
+            <a href="/" class="btn-home">Return Home</a>
+            <a href="javascript:history.back()" class="btn-back">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+{{ define "main" }}
+<section class="xana-list-page" data-section="{{ .Section }}">
+  <a class="xana-back-home" href="/">← Return to node explorer</a>
+
+  <header class="xana-list-hero">
+    <div class="xana-list-kicker">{{ .Section }}</div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}
+      <div class="xana-list-intro">{{ . }}</div>
+    {{ end }}
+
+    <div class="xana-list-metrics" aria-label="Section summary">
+      <div class="xana-list-metric">
+        <span class="xana-list-metric-value">{{ len .RegularPages }}</span>
+        <span class="xana-list-metric-label">nodes</span>
+      </div>
+      <div class="xana-list-metric">
+        <span class="xana-list-metric-value">{{ if gt (len .Sections) 0 }}{{ len .Sections }}{{ else }}0{{ end }}</span>
+        <span class="xana-list-metric-label">subsections</span>
+      </div>
+      <div class="xana-list-metric">
+        <span class="xana-list-metric-value">{{ len .Pages }}</span>
+        <span class="xana-list-metric-label">entries</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="xana-list-grid">
+    {{ range .RegularPages.ByTitle }}
+      {{ $nodeID := .Params.node_id | default .File.ContentBaseName }}
+      {{ $viewerURL := printf "/node/%s" ($nodeID | urlquery) }}
+      <article class="xana-list-card">
+        <div class="xana-list-card-topline">
+          <span class="xana-list-type">{{ .Params.node_type | default .Params.type | default .Section }}</span>
+          {{ with .Params.importance }}
+            <span class="xana-list-importance">importance {{ . }}</span>
+          {{ end }}
+        </div>
+
+        <h2><a href="{{ $viewerURL }}">{{ .Title }}</a></h2>
+
+        {{ with .Params.summary }}
+          <p>{{ . }}</p>
+        {{ else }}
+          <p class="xana-list-empty">No summary available.</p>
+        {{ end }}
+
+        <div class="xana-list-card-footer">
+          <a href="{{ $viewerURL }}">Open node</a>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
