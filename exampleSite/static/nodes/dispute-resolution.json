@@ -1,0 +1,39 @@
+{
+  "id": "xananode.example:concept/dispute-resolution",
+  "title": "Dispute Resolution",
+  "type": "concept",
+  "importance": 4,
+  "summary": "A governance process for preserving contested claims, identity matches, relationships, and moderation decisions without pretending disagreement has disappeared.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/moderation-model-context_for-dispute-resolution-135",
+      "type": "context_for",
+      "source": "xananode.example:concept/moderation-model",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/dispute-resolution-requires-provenance-169",
+      "type": "requires",
+      "target": "xananode.example:concept/provenance",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/dispute-resolution-supports-claim-merge-without-collapse-170",
+      "type": "supports",
+      "target": "xananode.example:claim/claim-merge-without-collapse",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/dispute-resolution-context_for-merge-report-171",
+      "type": "context_for",
+      "target": "xananode.example:concept/merge-report",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/dispute-resolution-required_for-federation-rules-172",
+      "type": "required_for",
+      "target": "xananode.example:concept/federation-rules",
+      "direction": "outgoing"
+    }
+  ]
+}

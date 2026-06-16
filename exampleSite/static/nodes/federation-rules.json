@@ -1,0 +1,51 @@
+{
+  "id": "xananode.example:concept/federation-rules",
+  "title": "Federation Rules",
+  "type": "concept",
+  "importance": 5,
+  "summary": "The rules for exchanging, comparing, and preserving independently governed substrates without collapsing them into one authority.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/moderation-model-required_for-federation-rules-134",
+      "type": "required_for",
+      "source": "xananode.example:concept/moderation-model",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/federation-rules-defines-federated-knowledge-substrates-156",
+      "type": "defines",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/federation-rules-preserves-independent-moderation-157",
+      "type": "preserves",
+      "target": "xananode.example:concept/independent-moderation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/federation-rules-requires-compatibility-report-158",
+      "type": "requires",
+      "target": "xananode.example:concept/compatibility-report",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/federation-rules-requires-merge-report-159",
+      "type": "requires",
+      "target": "xananode.example:concept/merge-report",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-federation-rules-166",
+      "type": "requires",
+      "source": "xananode.example:concept/federated-knowledge-substrates",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/dispute-resolution-required_for-federation-rules-172",
+      "type": "required_for",
+      "source": "xananode.example:concept/dispute-resolution",
+      "direction": "incoming"
+    }
+  ]
+}

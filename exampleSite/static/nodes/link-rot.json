@@ -1,0 +1,39 @@
+{
+  "id": "xananode.example:observation/link-rot",
+  "title": "Link Rot",
+  "type": "observation",
+  "importance": 4,
+  "summary": "A failure mode where references embedded in digital artifacts decay, move, disappear, or lose context over time.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/source-code-link-decay-study-documents-link-rot-22",
+      "type": "documents",
+      "source": "xananode.example:source/source-code-link-decay-study",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/link-rot-demonstrates-unlabeled-hyperlink-75",
+      "type": "demonstrates",
+      "target": "xananode.example:concept/unlabeled-hyperlink",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/link-rot-threatens-provenance-76",
+      "type": "threatens",
+      "target": "xananode.example:concept/provenance",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/link-rot-supported_by-source-code-link-decay-study-77",
+      "type": "supported_by",
+      "target": "xananode.example:source/source-code-link-decay-study",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/link-rot-explained_by-knowledge-substrate-78",
+      "type": "explained_by",
+      "target": "xananode.example:concept/knowledge-substrate",
+      "direction": "outgoing"
+    }
+  ]
+}

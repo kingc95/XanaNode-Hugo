@@ -1,0 +1,93 @@
+{
+  "id": "xananode.example:concept/provenance",
+  "title": "Provenance",
+  "type": "concept",
+  "importance": 5,
+  "summary": "The visible lineage of where information came from, how it changed, who asserted it, and what evidence it depends on.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/link-rot-threatens-provenance-76",
+      "type": "threatens",
+      "source": "xananode.example:observation/link-rot",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-preserves-provenance-96",
+      "type": "preserves",
+      "source": "xananode.example:concept/xananode",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/unlabeled-hyperlink-threatens-provenance-99",
+      "type": "threatens",
+      "source": "xananode.example:concept/unlabeled-hyperlink",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/tumbler-addressing-preserves-provenance-104",
+      "type": "preserves",
+      "source": "xananode.example:concept/tumbler-addressing",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/transclusion-preserves-provenance-108",
+      "type": "preserves",
+      "source": "xananode.example:concept/transclusion",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/substrate-relationship-list-preserves-provenance-111",
+      "type": "preserves",
+      "source": "xananode.example:concept/substrate-relationship-list",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/provenance-has_evidence-claim-relationships-preserve-context-123",
+      "type": "has_evidence",
+      "target": "xananode.example:claim/claim-relationships-preserve-context",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/merge-validation-requires-provenance-137",
+      "type": "requires",
+      "source": "xananode.example:concept/merge-validation",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/merge-report-preserves-provenance-143",
+      "type": "preserves",
+      "source": "xananode.example:concept/merge-report",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/knowledge-substrate-requires-provenance-148",
+      "type": "requires",
+      "source": "xananode.example:concept/knowledge-substrate",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/independent-moderation-requires-provenance-152",
+      "type": "requires",
+      "source": "xananode.example:concept/independent-moderation",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/fragment-node-preserves-provenance-154",
+      "type": "preserves",
+      "source": "xananode.example:concept/fragment-node",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/dispute-resolution-requires-provenance-169",
+      "type": "requires",
+      "source": "xananode.example:concept/dispute-resolution",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/civilizational-memory-requires-provenance-186",
+      "type": "requires",
+      "source": "xananode.example:concept/civilizational-memory",
+      "direction": "incoming"
+    }
+  ]
+}

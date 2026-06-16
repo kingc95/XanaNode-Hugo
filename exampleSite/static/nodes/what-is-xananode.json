@@ -1,0 +1,39 @@
+{
+  "id": "xananode.example:essay/what-is-xananode",
+  "title": "What Is XanaNode?",
+  "type": "essay",
+  "importance": 5,
+  "summary": "XanaNode is a protocol for interoperable knowledge substrates, not merely a graph viewer or static site theme.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/what-is-xananode-defines-xananode-82",
+      "type": "defines",
+      "target": "xananode.example:concept/xananode",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/what-is-xananode-explains-xananode-hugo-theme-83",
+      "type": "explains",
+      "target": "xananode.example:project/xananode-hugo-theme",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/what-is-xananode-arrives_at-claim-merge-without-collapse-84",
+      "type": "arrives_at",
+      "target": "xananode.example:claim/claim-merge-without-collapse",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/what-is-xananode-context_for-federated-knowledge-substrates-85",
+      "type": "context_for",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/what-is-xananode-explains-protocol-artifacts-86",
+      "type": "explains",
+      "target": "xananode.example:concept/protocol-artifacts",
+      "direction": "outgoing"
+    }
+  ]
+}

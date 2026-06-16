@@ -1,0 +1,93 @@
+{
+  "id": "xananode.example:concept/knowledge-substrate",
+  "title": "Knowledge Substrate",
+  "type": "concept",
+  "importance": 5,
+  "summary": "The structure that determines how information relates, persists, evolves, and can be navigated as knowledge.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-core-trail-continues_to-knowledge-substrate-3",
+      "type": "continues_to",
+      "source": "xananode.example:trail/xananode-core-trail",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/cytoscape-js-represents-knowledge-substrate-18",
+      "type": "represents",
+      "source": "xananode.example:technology/cytoscape-js",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/mother-of-all-demos-supports-knowledge-substrate-25",
+      "type": "supports",
+      "source": "xananode.example:source/mother-of-all-demos",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-hugo-theme-demonstrates-knowledge-substrate-58",
+      "type": "demonstrates",
+      "source": "xananode.example:project/xananode-hugo-theme",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/vannevar-bush-anticipated-knowledge-substrate-67",
+      "type": "anticipated",
+      "source": "xananode.example:person/vannevar-bush",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/link-rot-explained_by-knowledge-substrate-78",
+      "type": "explained_by",
+      "source": "xananode.example:observation/link-rot",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/start-here-explains-knowledge-substrate-88",
+      "type": "explains",
+      "source": "xananode.example:essay/start-here",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-defines-knowledge-substrate-93",
+      "type": "defines",
+      "source": "xananode.example:concept/xananode",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/single-source-of-truth-alternative_to-knowledge-substrate-117",
+      "type": "alternative_to",
+      "source": "xananode.example:concept/single-source-of-truth",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/knowledge-substrate-has_claim-claim-substrate-is-structure-147",
+      "type": "has_claim",
+      "target": "xananode.example:claim/claim-substrate-is-structure",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/knowledge-substrate-requires-provenance-148",
+      "type": "requires",
+      "target": "xananode.example:concept/provenance",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/knowledge-substrate-requires-typed-relationships-149",
+      "type": "requires",
+      "target": "xananode.example:concept/typed-relationships",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/knowledge-substrate-enabled_by-xananode-core-schema-150",
+      "type": "enabled_by",
+      "target": "xananode.example:schema/xananode-core-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/civilizational-memory-requires-knowledge-substrate-185",
+      "type": "requires",
+      "source": "xananode.example:concept/civilizational-memory",
+      "direction": "incoming"
+    }
+  ]
+}

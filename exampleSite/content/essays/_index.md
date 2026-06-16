@@ -1,4 +1,5 @@
 ---
 title: "Essays"
 ---
-Long-form arguments and thesis pieces.
+
+Long-form arguments that connect claims, concepts, sources, and trails.

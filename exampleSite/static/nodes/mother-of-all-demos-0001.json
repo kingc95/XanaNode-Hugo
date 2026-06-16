@@ -1,0 +1,28 @@
+{
+  "id": "xananode.example:fragment/mother-of-all-demos-0001",
+  "title": "Augmenting Human Intelligence Fragment",
+  "type": "fragment",
+  "importance": 4,
+  "summary": "Engelbart's demonstration as an example of computers augmenting structured knowledge work.",
+  "source_node": "xananode.example:source/mother-of-all-demos",
+  "fragment_id": "0001",
+  "tumbler": "xananode.example:source/mother-of-all-demos#fragment/0001",
+  "selector": {
+    "type": "semantic-anchor",
+    "value": "augmenting-human-intelligence"
+  },
+  "relationships": [
+    {
+      "id": "xananode.example:rel/mother-of-all-demos-fragment-0001-derived-from-source",
+      "type": "derived_from",
+      "target": "xananode.example:source/mother-of-all-demos",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/fragment-node-transcludes-0001",
+      "type": "transcludes",
+      "source": "xananode.example:concept/fragment-node",
+      "direction": "incoming"
+    }
+  ]
+}

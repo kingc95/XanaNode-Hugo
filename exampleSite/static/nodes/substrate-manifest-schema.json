@@ -1,0 +1,34 @@
+{
+  "id": "xananode.example:schema/substrate-manifest-schema",
+  "title": "Substrate Manifest Schema",
+  "type": "schema",
+  "status": "draft",
+  "importance": 5,
+  "summary": "The JSON Schema that validates a XanaNode substrate manifest.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-manifest-schema-32",
+      "type": "defines",
+      "source": "xananode.example:schema/xananode-core-schema",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/substrate-manifest-schema-defines-substrate-manifest-43",
+      "type": "defines",
+      "target": "xananode.example:concept/substrate-manifest",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/substrate-manifest-schema-part_of-xananode-core-schema-44",
+      "type": "part_of",
+      "target": "xananode.example:schema/xananode-core-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/substrate-manifest-schema-required_for-compatibility-report-45",
+      "type": "required_for",
+      "target": "xananode.example:concept/compatibility-report",
+      "direction": "outgoing"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "xananode.example:concept/independent-moderation",
+  "title": "Independent Moderation",
+  "type": "concept",
+  "importance": 4,
+  "summary": "The principle that each substrate may govern its own content while still remaining interoperable with others.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/single-source-of-truth-threatens-independent-moderation-116",
+      "type": "threatens",
+      "source": "xananode.example:concept/single-source-of-truth",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/moderation-model-defines-independent-moderation-133",
+      "type": "defines",
+      "source": "xananode.example:concept/moderation-model",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/independent-moderation-contrasts_with-single-source-of-truth-151",
+      "type": "contrasts_with",
+      "target": "xananode.example:concept/single-source-of-truth",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/independent-moderation-requires-provenance-152",
+      "type": "requires",
+      "target": "xananode.example:concept/provenance",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/federation-rules-preserves-independent-moderation-157",
+      "type": "preserves",
+      "source": "xananode.example:concept/federation-rules",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/federation-example-preserves-independent-moderation-163",
+      "type": "preserves",
+      "source": "xananode.example:concept/federation-example",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/federated-knowledge-substrates-preserves-independent-moderation-167",
+      "type": "preserves",
+      "source": "xananode.example:concept/federated-knowledge-substrates",
+      "direction": "incoming"
+    }
+  ]
+}

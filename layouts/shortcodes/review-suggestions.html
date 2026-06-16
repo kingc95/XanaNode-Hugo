@@ -1,0 +1,47 @@
+{{- $suggestions := site.Data.xananode_suggestions -}}
+{{- $autolinks := $suggestions.autolinks | default slice -}}
+{{- $transclusions := $suggestions.transclusions | default slice -}}
+<section class="xana-suggestion-report">
+  <div class="xana-suggestion-summary">
+    <div>
+      <strong>{{ len $autolinks }}</strong>
+      <span>pending autolinks</span>
+    </div>
+    <div>
+      <strong>{{ len $transclusions }}</strong>
+      <span>pending transclusions</span>
+    </div>
+  </div>
+  <p>
+    Suggestions are generated automatically during prepare/validate, but they are not applied automatically.
+    Each item stays pending until an author reviews and edits the source Markdown.
+  </p>
+  <p>
+    <a href="/xananode-suggestions.md">Open Markdown report</a>
+    ·
+    <a href="/xananode-suggestions.json">Open JSON report</a>
+  </p>
+  {{- if gt (len $autolinks) 0 -}}
+    <h3>Autolink Suggestions</h3>
+    <ol class="xana-suggestion-list">
+      {{- range first 12 $autolinks -}}
+        <li>
+          <code>{{ .file }}:{{ .line }}</code>
+          <span>{{ .matched_text }}</span>
+          <span>→ {{ .target_title }}</span>
+        </li>
+      {{- end -}}
+    </ol>
+  {{- end -}}
+  {{- if gt (len $transclusions) 0 -}}
+    <h3>Transclusion Suggestions</h3>
+    <ol class="xana-suggestion-list">
+      {{- range first 12 $transclusions -}}
+        <li>
+          <code>{{ .file }}:{{ .line }}</code>
+          <span>{{ .target_title }}@{{ .version }}/{{ .range }}</span>
+        </li>
+      {{- end -}}
+    </ol>
+  {{- end -}}
+</section>

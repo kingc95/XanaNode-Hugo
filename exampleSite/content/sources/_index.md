@@ -1,4 +1,5 @@
 ---
 title: "Sources"
 ---
-Primary and secondary source records.
+
+Source records that document, support, or contextualize the graph.

@@ -1,19 +1,17 @@
 ---
 title: "Ted Nelson"
 type: "person"
-importance: 3
-summary: "Hypertext theorist and founder of Project Xanadu."
-roles:
-  - "Hypertext theorist"
-  - "Project Xanadu founder"
-concepts:
-  - transclusion
-  - provenance
+importance: 5
+summary: "Hypertext theorist and founder of Project Xanadu, associated with transclusion, visible interconnection, and nonsequential writing."
 relationships:
   - type: "created"
+    target: "project-xanadu"
+  - type: "introduced"
     target: "transclusion"
   - type: "authored"
-    target: "nelson-xanadu"
+    target: "xanadu-document-interconnection"
+  - type: "influenced"
+    target: "xananode"
 ---
 
-Nelson argued that documents were the wrong primitive and that relationships between materials should remain visible and traversable.
+Ted Nelson argued that documents were the wrong primitive and that systems should preserve reusable, visibly connected media.

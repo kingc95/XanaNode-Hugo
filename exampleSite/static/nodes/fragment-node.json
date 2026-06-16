@@ -1,0 +1,51 @@
+{
+  "id": "xananode.example:concept/fragment-node",
+  "title": "Fragment Node",
+  "type": "concept",
+  "importance": 4,
+  "summary": "A node representing a stable addressable portion of another source, publication, media object, or node.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/tumbler-addressing-enables-fragment-node-105",
+      "type": "enables",
+      "source": "xananode.example:concept/tumbler-addressing",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/transclusion-uses-fragment-node-109",
+      "type": "uses",
+      "source": "xananode.example:concept/transclusion",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/substrate-node-record-contains-fragment-node-113",
+      "type": "contains",
+      "source": "xananode.example:concept/substrate-node-record",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/fragment-node-required_for-transclusion-153",
+      "type": "required_for",
+      "target": "xananode.example:concept/transclusion",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/fragment-node-preserves-provenance-154",
+      "type": "preserves",
+      "target": "xananode.example:concept/provenance",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/fragment-node-deep_links_to-mother-of-all-demos-155",
+      "type": "deep_links_to",
+      "target": "xananode.example:source/mother-of-all-demos",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/fragment-node-transcludes-0001",
+      "type": "transcludes",
+      "target": "xananode.example:fragment/mother-of-all-demos-0001",
+      "direction": "outgoing"
+    }
+  ]
+}

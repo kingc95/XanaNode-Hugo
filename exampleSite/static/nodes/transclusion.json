@@ -1,0 +1,69 @@
+{
+  "id": "xananode.example:concept/transclusion",
+  "title": "Transclusion",
+  "type": "concept",
+  "importance": 5,
+  "summary": "Including a specific versioned fragment by reference rather than copying it, preserving identity, attribution, and revision lineage.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xanadu-document-interconnection-defines-transclusion-20",
+      "type": "defines",
+      "source": "xananode.example:source/xanadu-document-interconnection",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/project-xanadu-defines-transclusion-59",
+      "type": "defines",
+      "source": "xananode.example:project/project-xanadu",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/ted-nelson-introduced-transclusion-69",
+      "type": "introduced",
+      "source": "xananode.example:person/ted-nelson",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/tumbler-addressing-enables-transclusion-102",
+      "type": "enables",
+      "source": "xananode.example:concept/tumbler-addressing",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/transclusion-preserves-provenance-108",
+      "type": "preserves",
+      "target": "xananode.example:concept/provenance",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/transclusion-uses-fragment-node-109",
+      "type": "uses",
+      "target": "xananode.example:concept/fragment-node",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/review-suggestions-uses-transclusion-122",
+      "type": "uses",
+      "source": "xananode.example:concept/review-suggestions",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/fragment-node-required_for-transclusion-153",
+      "type": "required_for",
+      "source": "xananode.example:concept/fragment-node",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/deep-linking-enables-transclusion-173",
+      "type": "enables",
+      "source": "xananode.example:concept/deep-linking",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/transclusion-transcludes-0001",
+      "type": "transcludes",
+      "target": "xananode.example:fragment/xanadu-document-interconnection-0001",
+      "direction": "outgoing"
+    }
+  ]
+}

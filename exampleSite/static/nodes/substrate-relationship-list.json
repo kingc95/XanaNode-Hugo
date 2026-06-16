@@ -1,0 +1,39 @@
+{
+  "id": "xananode.example:concept/substrate-relationship-list",
+  "title": "Substrate Relationship List",
+  "type": "concept",
+  "importance": 5,
+  "summary": "The protocol-level relationship file containing typed edges with stable ids, source and target ids, summaries, visibility, weights, and assertion provenance.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/protocol-artifacts-trail-continues_to-substrate-relationship-list-9",
+      "type": "continues_to",
+      "source": "xananode.example:trail/protocol-artifacts-trail",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/substrate-relationships-schema-defines-substrate-relationship-list-37",
+      "type": "defines",
+      "source": "xananode.example:schema/substrate-relationships-schema",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/substrate-relationship-list-uses-xananode-relationship-types-110",
+      "type": "uses",
+      "target": "xananode.example:schema/xananode-relationship-types",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/substrate-relationship-list-preserves-provenance-111",
+      "type": "preserves",
+      "target": "xananode.example:concept/provenance",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-relationship-list-127",
+      "type": "contains",
+      "source": "xananode.example:concept/protocol-artifacts",
+      "direction": "incoming"
+    }
+  ]
+}

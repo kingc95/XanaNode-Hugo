@@ -1,0 +1,47 @@
+{
+  "id": "xananode.example:source/as-we-may-think",
+  "title": "As We May Think",
+  "type": "source",
+  "importance": 5,
+  "summary": "Bush's essay proposing associative trails and the Memex as responses to information overload.",
+  "source_url": "https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/",
+  "rights_status": "copyrighted",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/as-we-may-think-documents-memex-26",
+      "type": "documents",
+      "target": "xananode.example:project/memex",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/as-we-may-think-supports-claim-substrate-is-structure-27",
+      "type": "supports",
+      "target": "xananode.example:claim/claim-substrate-is-structure",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/memex-introduced_in-as-we-may-think-63",
+      "type": "introduced_in",
+      "source": "xananode.example:project/memex",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/vannevar-bush-authored-as-we-may-think-65",
+      "type": "authored",
+      "source": "xananode.example:person/vannevar-bush",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/tumbler-addressing-deep_links_to-as-we-may-think-107",
+      "type": "deep_links_to",
+      "source": "xananode.example:concept/tumbler-addressing",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/as-we-may-think-fragment-0004-derived-from-source",
+      "type": "derived_from",
+      "source": "xananode.example:fragment/as-we-may-think-0004",
+      "direction": "incoming"
+    }
+  ]
+}

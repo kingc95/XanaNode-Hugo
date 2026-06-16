@@ -1,0 +1,51 @@
+{
+  "id": "xananode.example:concept/compatibility-levels",
+  "title": "Compatibility Levels",
+  "type": "concept",
+  "importance": 5,
+  "summary": "A staged way to describe how much of a substrate another implementation can recognize, validate, extend, merge, or federate.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/protocol-artifacts-trail-continues_to-compatibility-levels-10",
+      "type": "continues_to",
+      "source": "xananode.example:trail/protocol-artifacts-trail",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/compatibility-report-schema-documents-compatibility-levels-53",
+      "type": "documents",
+      "source": "xananode.example:schema/compatibility-report-schema",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/known-implementations-registry-supports-compatibility-levels-146",
+      "type": "supports",
+      "source": "xananode.example:concept/known-implementations-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/compatibility-report-documents-compatibility-levels-179",
+      "type": "documents",
+      "source": "xananode.example:concept/compatibility-report",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/compatibility-levels-uses-compatibility-report-181",
+      "type": "uses",
+      "target": "xananode.example:concept/compatibility-report",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/compatibility-levels-requires-substrate-manifest-182",
+      "type": "requires",
+      "target": "xananode.example:concept/substrate-manifest",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/compatibility-levels-required_for-federated-knowledge-substrates-183",
+      "type": "required_for",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "direction": "outgoing"
+    }
+  ]
+}

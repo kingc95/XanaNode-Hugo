@@ -1,4 +1,5 @@
 ---
 title: "Concepts"
 ---
-Reusable ideas and knowledge nodes.
+
+Core ideas used by this XanaNode example substrate.

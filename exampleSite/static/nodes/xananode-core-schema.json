@@ -1,0 +1,100 @@
+{
+  "id": "xananode.example:schema/xananode-core-schema",
+  "title": "XanaNode Core Schema",
+  "type": "schema",
+  "status": "draft",
+  "importance": 5,
+  "summary": "The canonical core node and relationship vocabulary used to make independent substrates interoperable.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-core-schema-defines-xananode-node-types-30",
+      "type": "defines",
+      "target": "xananode.example:schema/xananode-node-types",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-core-schema-defines-xananode-relationship-types-31",
+      "type": "defines",
+      "target": "xananode.example:schema/xananode-relationship-types",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-manifest-schema-32",
+      "type": "defines",
+      "target": "xananode.example:schema/substrate-manifest-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-node-schema-33",
+      "type": "defines",
+      "target": "xananode.example:schema/substrate-node-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-relationships-schema-34",
+      "type": "defines",
+      "target": "xananode.example:schema/substrate-relationships-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-core-schema-required_for-federated-knowledge-substrates-35",
+      "type": "required_for",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-core-schema-enables-schema-extension-36",
+      "type": "enables",
+      "target": "xananode.example:concept/schema-extension",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/substrate-relationships-schema-part_of-xananode-core-schema-39",
+      "type": "part_of",
+      "source": "xananode.example:schema/substrate-relationships-schema",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/substrate-node-schema-part_of-xananode-core-schema-42",
+      "type": "part_of",
+      "source": "xananode.example:schema/substrate-node-schema",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/substrate-manifest-schema-part_of-xananode-core-schema-44",
+      "type": "part_of",
+      "source": "xananode.example:schema/substrate-manifest-schema",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-requires-xananode-core-schema-95",
+      "type": "requires",
+      "source": "xananode.example:concept/xananode",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/schema-extension-requires-xananode-core-schema-119",
+      "type": "requires",
+      "source": "xananode.example:concept/schema-extension",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/protocol-artifacts-defined_by-xananode-core-schema-124",
+      "type": "defined_by",
+      "source": "xananode.example:concept/protocol-artifacts",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/knowledge-substrate-enabled_by-xananode-core-schema-150",
+      "type": "enabled_by",
+      "source": "xananode.example:concept/knowledge-substrate",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/claim-merge-without-collapse-supported_by-xananode-core-schema-194",
+      "type": "supported_by",
+      "source": "xananode.example:claim/claim-merge-without-collapse",
+      "direction": "incoming"
+    }
+  ]
+}

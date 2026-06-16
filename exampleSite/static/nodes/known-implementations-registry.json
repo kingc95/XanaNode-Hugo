@@ -1,0 +1,21 @@
+{
+  "id": "xananode.example:concept/known-implementations-registry",
+  "title": "Known Implementations Registry",
+  "type": "concept",
+  "importance": 4,
+  "summary": "A registry of tools, themes, validators, renderers, and substrates that claim some level of XanaNode compatibility.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/known-implementations-registry-documents-xananode-hugo-theme-145",
+      "type": "documents",
+      "target": "xananode.example:project/xananode-hugo-theme",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/known-implementations-registry-supports-compatibility-levels-146",
+      "type": "supports",
+      "target": "xananode.example:concept/compatibility-levels",
+      "direction": "outgoing"
+    }
+  ]
+}

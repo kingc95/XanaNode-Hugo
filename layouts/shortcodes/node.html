@@ -1,4 +1,4 @@
-{{ $id := .Get 0 }}
+{{ $id := .Get "ref" | default (.Get 0) }}
 {{ $target := false }}
 
 {{ range site.RegularPages }}

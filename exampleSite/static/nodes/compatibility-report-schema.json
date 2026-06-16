@@ -1,0 +1,28 @@
+{
+  "id": "xananode.example:schema/compatibility-report-schema",
+  "title": "Compatibility Report Schema",
+  "type": "schema",
+  "status": "draft",
+  "importance": 4,
+  "summary": "The JSON Schema that validates compatibility reports between tools and substrates.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/compatibility-report-schema-defines-compatibility-report-52",
+      "type": "defines",
+      "target": "xananode.example:concept/compatibility-report",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/compatibility-report-schema-documents-compatibility-levels-53",
+      "type": "documents",
+      "target": "xananode.example:concept/compatibility-levels",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/compatibility-report-schema-required_for-federation-example-54",
+      "type": "required_for",
+      "target": "xananode.example:concept/federation-example",
+      "direction": "outgoing"
+    }
+  ]
+}

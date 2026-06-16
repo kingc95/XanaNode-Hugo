@@ -1,4 +1,5 @@
 ---
 title: "People"
 ---
-Thinkers, builders, writers, critics, and witnesses.
+
+Thinkers and builders in the lineage of relationship-first knowledge systems.

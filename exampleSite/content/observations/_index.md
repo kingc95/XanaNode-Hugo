@@ -1,4 +1,5 @@
 ---
-title: "Evidence"
+title: "Observations"
 ---
-Observation records for current events, failures, and symptoms.
+
+Real-world symptoms and cases that motivate the knowledge substrate model.

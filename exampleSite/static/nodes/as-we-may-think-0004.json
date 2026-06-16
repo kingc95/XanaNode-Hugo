@@ -1,0 +1,29 @@
+{
+  "id": "xananode.example:fragment/as-we-may-think-0004",
+  "title": "Associative Trails Fragment",
+  "type": "fragment",
+  "importance": 4,
+  "summary": "Bush's argument that knowledge systems need associative navigation and recall.",
+  "source_node": "xananode.example:source/as-we-may-think",
+  "fragment_id": "0004",
+  "tumbler": "xananode.example:source/as-we-may-think#fragment/0004",
+  "selector": {
+    "type": "semantic-anchor",
+    "value": "associative-trails-discussion"
+  },
+  "rights_status": "copyrighted",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/as-we-may-think-fragment-0004-derived-from-source",
+      "type": "derived_from",
+      "target": "xananode.example:source/as-we-may-think",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/tumbler-addressing-transcludes-0004",
+      "type": "transcludes",
+      "source": "xananode.example:concept/tumbler-addressing",
+      "direction": "incoming"
+    }
+  ]
+}

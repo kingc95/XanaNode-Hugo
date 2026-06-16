@@ -1,0 +1,28 @@
+{
+  "id": "xananode.example:schema/namespace-schema",
+  "title": "Namespace Schema",
+  "type": "schema",
+  "status": "draft",
+  "importance": 4,
+  "summary": "The JSON Schema for namespace registry entries.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/namespace-schema-defines-namespace-registry-46",
+      "type": "defines",
+      "target": "xananode.example:concept/namespace-registry",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/namespace-schema-supports-namespacing-47",
+      "type": "supports",
+      "target": "xananode.example:concept/namespacing",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/namespace-schema-required_for-schema-extension-48",
+      "type": "required_for",
+      "target": "xananode.example:concept/schema-extension",
+      "direction": "outgoing"
+    }
+  ]
+}

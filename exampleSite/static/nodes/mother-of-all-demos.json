@@ -1,0 +1,46 @@
+{
+  "id": "xananode.example:source/mother-of-all-demos",
+  "title": "Mother of All Demos",
+  "type": "source",
+  "importance": 4,
+  "summary": "Engelbart's demonstration of interactive computing, hypertext navigation, collaboration, and tools for thought.",
+  "source_url": "https://www.dougengelbart.org/content/view/209/",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/mother-of-all-demos-documents-nls-24",
+      "type": "documents",
+      "target": "xananode.example:project/nls",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/mother-of-all-demos-supports-knowledge-substrate-25",
+      "type": "supports",
+      "target": "xananode.example:concept/knowledge-substrate",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/nls-demonstrated_by-mother-of-all-demos-61",
+      "type": "demonstrated_by",
+      "source": "xananode.example:project/nls",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/douglas-engelbart-presented-mother-of-all-demos-73",
+      "type": "presented",
+      "source": "xananode.example:person/douglas-engelbart",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/fragment-node-deep_links_to-mother-of-all-demos-155",
+      "type": "deep_links_to",
+      "source": "xananode.example:concept/fragment-node",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/mother-of-all-demos-fragment-0001-derived-from-source",
+      "type": "derived_from",
+      "source": "xananode.example:fragment/mother-of-all-demos-0001",
+      "direction": "incoming"
+    }
+  ]
+}

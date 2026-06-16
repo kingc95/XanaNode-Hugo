@@ -1,0 +1,51 @@
+{
+  "id": "xananode.example:concept/federation-example",
+  "title": "Federation Example",
+  "type": "concept",
+  "importance": 5,
+  "summary": "A protocol example showing two independently authored substrates being compared through compatibility and merge reports.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/protocol-artifacts-trail-arrives_at-federation-example-11",
+      "type": "arrives_at",
+      "source": "xananode.example:trail/protocol-artifacts-trail",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/merge-report-schema-required_for-federation-example-51",
+      "type": "required_for",
+      "source": "xananode.example:schema/merge-report-schema",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/compatibility-report-schema-required_for-federation-example-54",
+      "type": "required_for",
+      "source": "xananode.example:schema/compatibility-report-schema",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/federation-example-demonstrates-federated-knowledge-substrates-160",
+      "type": "demonstrates",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/federation-example-uses-compatibility-report-161",
+      "type": "uses",
+      "target": "xananode.example:concept/compatibility-report",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/federation-example-uses-merge-report-162",
+      "type": "uses",
+      "target": "xananode.example:concept/merge-report",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/federation-example-preserves-independent-moderation-163",
+      "type": "preserves",
+      "target": "xananode.example:concept/independent-moderation",
+      "direction": "outgoing"
+    }
+  ]
+}

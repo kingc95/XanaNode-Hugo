@@ -1,0 +1,11 @@
+{
+  "id": "xananode.example",
+  "name": "XanaNode Hugo Substrate",
+  "description": "A Hugo-published XanaNode-compatible knowledge substrate.",
+  "version": "0.1.0",
+  "namespace": "xananode.example",
+  "schema_version": "xananode-core@0.4.0",
+  "imports": [
+    "xananode:core"
+  ]
+}

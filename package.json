@@ -1,13 +1,13 @@
 {
-  "name": "xananode",
+  "name": "xananode-hugo",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "scripts": {
     "prepare": "node tools/prepare-xananode.mjs exampleSite",
     "validate": "node tools/prepare-xananode.mjs exampleSite",
-    "example:dev": "npm run prepare && hugo server --source exampleSite --themesDir ..",
-    "example:build": "npm run prepare && hugo --source exampleSite --themesDir .. --gc --minify"
+    "example:dev": "npm run prepare && hugo server --source exampleSite --themesDir ../..",
+    "example:build": "npm run prepare && hugo --source exampleSite --themesDir ../.. --gc --minify"
   },
   "devDependencies": {
     "ajv": "^8.17.1",

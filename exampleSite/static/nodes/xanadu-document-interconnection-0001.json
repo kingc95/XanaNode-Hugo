@@ -1,0 +1,29 @@
+{
+  "id": "xananode.example:fragment/xanadu-document-interconnection-0001",
+  "title": "Reusable Media Fragment",
+  "type": "fragment",
+  "importance": 4,
+  "summary": "Nelson's work as a source layer for transclusion, reusable media, and visible interconnection.",
+  "source_node": "xananode.example:source/xanadu-document-interconnection",
+  "fragment_id": "0001",
+  "tumbler": "xananode.example:source/xanadu-document-interconnection#fragment/0001",
+  "selector": {
+    "type": "semantic-anchor",
+    "value": "reusable-media-visible-interconnection"
+  },
+  "rights_status": "copyrighted",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xanadu-document-interconnection-fragment-0001-derived-from-source",
+      "type": "derived_from",
+      "target": "xananode.example:source/xanadu-document-interconnection",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/transclusion-transcludes-0001",
+      "type": "transcludes",
+      "source": "xananode.example:concept/transclusion",
+      "direction": "incoming"
+    }
+  ]
+}

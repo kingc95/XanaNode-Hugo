@@ -1,4 +1,5 @@
 ---
 title: "Trails"
 ---
-Curated associative paths through the map.
+
+Curated associative paths through the substrate.

@@ -1,0 +1,47 @@
+{
+  "id": "xananode.example:source/xanadu-document-interconnection",
+  "title": "Xanadu: Document Interconnection Enabling Re-use",
+  "type": "source",
+  "importance": 5,
+  "summary": "A paper describing Xanadu concepts including reusable media, visible interconnection, and transclusion.",
+  "source_url": "https://www.xanadu.net/",
+  "rights_status": "copyrighted",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xanadu-document-interconnection-documents-project-xanadu-19",
+      "type": "documents",
+      "target": "xananode.example:project/project-xanadu",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xanadu-document-interconnection-defines-transclusion-20",
+      "type": "defines",
+      "target": "xananode.example:concept/transclusion",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-relationships-preserve-context-21",
+      "type": "supports",
+      "target": "xananode.example:claim/claim-relationships-preserve-context",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/ted-nelson-authored-xanadu-document-interconnection-70",
+      "type": "authored",
+      "source": "xananode.example:person/ted-nelson",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/claim-substrate-is-structure-supported_by-xanadu-document-interconnection-190",
+      "type": "supported_by",
+      "source": "xananode.example:claim/claim-substrate-is-structure",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xanadu-document-interconnection-fragment-0001-derived-from-source",
+      "type": "derived_from",
+      "source": "xananode.example:fragment/xanadu-document-interconnection-0001",
+      "direction": "incoming"
+    }
+  ]
+}

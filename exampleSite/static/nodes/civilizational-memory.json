@@ -1,0 +1,39 @@
+{
+  "id": "xananode.example:concept/civilizational-memory",
+  "title": "Civilizational Memory",
+  "type": "concept",
+  "importance": 5,
+  "summary": "A long-term, federated memory layer where knowledge remains traceable, disputed, interoperable, and navigable across generations.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-core-trail-arrives_at-civilizational-memory-5",
+      "type": "arrives_at",
+      "source": "xananode.example:trail/xananode-core-trail",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/civilizational-memory-enabled_by-federated-knowledge-substrates-184",
+      "type": "enabled_by",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/civilizational-memory-requires-knowledge-substrate-185",
+      "type": "requires",
+      "target": "xananode.example:concept/knowledge-substrate",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/civilizational-memory-requires-provenance-186",
+      "type": "requires",
+      "target": "xananode.example:concept/provenance",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/civilizational-memory-requires-merge-validation-187",
+      "type": "requires",
+      "target": "xananode.example:concept/merge-validation",
+      "direction": "outgoing"
+    }
+  ]
+}

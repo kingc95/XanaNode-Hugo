@@ -1,0 +1,52 @@
+{
+  "id": "xananode.example:claim/claim-merge-without-collapse",
+  "title": "Substrates should merge without collapsing disagreement",
+  "type": "claim",
+  "status": "active",
+  "importance": 5,
+  "summary": "Federated substrates should preserve authorship, provenance, and disagreement rather than forcing one merged source of truth.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/what-is-xananode-arrives_at-claim-merge-without-collapse-84",
+      "type": "arrives_at",
+      "source": "xananode.example:essay/what-is-xananode",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/merge-validation-arrives_at-claim-merge-without-collapse-141",
+      "type": "arrives_at",
+      "source": "xananode.example:concept/merge-validation",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/merge-report-supports-claim-merge-without-collapse-144",
+      "type": "supports",
+      "source": "xananode.example:concept/merge-report",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/dispute-resolution-supports-claim-merge-without-collapse-170",
+      "type": "supports",
+      "source": "xananode.example:concept/dispute-resolution",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/claim-merge-without-collapse-claim_of-merge-validation-193",
+      "type": "claim_of",
+      "target": "xananode.example:concept/merge-validation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/claim-merge-without-collapse-supported_by-xananode-core-schema-194",
+      "type": "supported_by",
+      "target": "xananode.example:schema/xananode-core-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/claim-merge-without-collapse-contradicts-single-source-of-truth-195",
+      "type": "contradicts",
+      "target": "xananode.example:concept/single-source-of-truth",
+      "direction": "outgoing"
+    }
+  ]
+}

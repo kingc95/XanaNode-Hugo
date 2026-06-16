@@ -1,0 +1,130 @@
+{
+  "id": "xananode.example:concept/xananode",
+  "title": "XanaNode",
+  "type": "concept",
+  "importance": 5,
+  "summary": "A protocol for interoperable, independently authored knowledge substrates that preserve relationships, provenance, lineage, disagreement, and addressable fragments.",
+  "primary_media": "xananode.example:media/xananode-icon",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-core-trail-continues_to-xananode-2",
+      "type": "continues_to",
+      "source": "xananode.example:trail/xananode-core-trail",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/historical-lineage-trail-arrives_at-xananode-15",
+      "type": "arrives_at",
+      "source": "xananode.example:trail/historical-lineage-trail",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-defines-xananode-29",
+      "type": "defines",
+      "source": "xananode.example:schema/xananode-node-types",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-hugo-theme-implements-xananode-55",
+      "type": "implements",
+      "source": "xananode.example:project/xananode-hugo-theme",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/project-xanadu-influenced-xananode-60",
+      "type": "influenced",
+      "source": "xananode.example:project/project-xanadu",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/nls-anticipated-xananode-62",
+      "type": "anticipated",
+      "source": "xananode.example:project/nls",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/memex-anticipated-xananode-64",
+      "type": "anticipated",
+      "source": "xananode.example:project/memex",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/ted-nelson-influenced-xananode-71",
+      "type": "influenced",
+      "source": "xananode.example:person/ted-nelson",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/douglas-engelbart-extended_by-xananode-74",
+      "type": "extended_by",
+      "source": "xananode.example:person/douglas-engelbart",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-icon-represents-xananode-81",
+      "type": "represents",
+      "source": "xananode.example:media/xananode-icon",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/what-is-xananode-defines-xananode-82",
+      "type": "defines",
+      "source": "xananode.example:essay/what-is-xananode",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/start-here-explains-xananode-87",
+      "type": "explains",
+      "source": "xananode.example:essay/start-here",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-defines-knowledge-substrate-93",
+      "type": "defines",
+      "target": "xananode.example:concept/knowledge-substrate",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-explains-federated-knowledge-substrates-94",
+      "type": "explains",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-requires-xananode-core-schema-95",
+      "type": "requires",
+      "target": "xananode.example:schema/xananode-core-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-preserves-provenance-96",
+      "type": "preserves",
+      "target": "xananode.example:concept/provenance",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-extends-project-xanadu-97",
+      "type": "extends",
+      "target": "xananode.example:project/project-xanadu",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-extends-memex-98",
+      "type": "extends",
+      "target": "xananode.example:project/memex",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/tumbler-addressing-extended_by-xananode-106",
+      "type": "extended_by",
+      "source": "xananode.example:concept/tumbler-addressing",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-represented-by-xananode-icon",
+      "type": "represented_by",
+      "target": "xananode.example:media/xananode-icon",
+      "direction": "outgoing"
+    }
+  ]
+}

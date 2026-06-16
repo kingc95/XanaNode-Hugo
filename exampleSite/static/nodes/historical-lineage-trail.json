@@ -1,0 +1,33 @@
+{
+  "id": "xananode.example:trail/historical-lineage-trail",
+  "title": "Historical Lineage Trail",
+  "type": "trail",
+  "importance": 4,
+  "summary": "A curated path through Bush, Engelbart, Nelson, and XanaNode.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/historical-lineage-trail-starts_with-vannevar-bush-12",
+      "type": "starts_with",
+      "target": "xananode.example:person/vannevar-bush",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/historical-lineage-trail-continues_to-douglas-engelbart-13",
+      "type": "continues_to",
+      "target": "xananode.example:person/douglas-engelbart",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/historical-lineage-trail-continues_to-ted-nelson-14",
+      "type": "continues_to",
+      "target": "xananode.example:person/ted-nelson",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/historical-lineage-trail-arrives_at-xananode-15",
+      "type": "arrives_at",
+      "target": "xananode.example:concept/xananode",
+      "direction": "outgoing"
+    }
+  ]
+}

@@ -321,6 +321,7 @@
             searchResults: [],
             auditResults: [],
             auditMode: false,
+            isTraveling: false,
             pathExplorer: {
                 active: false,
                 sourceQuery: focusId || "",
@@ -1586,6 +1587,7 @@
 
     function travelToNode(nextId, state, pushUrl) {
         if (!nextId || nextId === state.focusId) return;
+        if (state.isTraveling) return;
 
         const cy = state.cy;
         const currentId = state.focusId;
@@ -1623,6 +1625,7 @@
         connectingEdges.removeClass("travel-dim").addClass("travel-path");
 
         panelEl.classList.add("panel-transitioning");
+        state.isTraveling = true;
 
         // Capture the current generation so we can detect if the graph was
         // rebuilt (e.g. by a search clear or another tap) before we finish.
@@ -1638,12 +1641,20 @@
                 easing: "ease-in-out",
                 complete: () => {
                     // If renderVisibleGraph ran while we were zooming, abort.
-                    if (_navGen !== travelGen) return;
+                    if (_navGen !== travelGen) {
+                        state.isTraveling = false;
+                        panelEl.classList.remove("panel-transitioning");
+                        return;
+                    }
 
                     cy.elements().addClass("pre-exit");
 
                     const t = window.setTimeout(() => {
-                        if (_navGen !== travelGen) return;
+                        if (_navGen !== travelGen) {
+                            state.isTraveling = false;
+                            panelEl.classList.remove("panel-transitioning");
+                            return;
+                        }
 
                         state.previousFocusId = currentId;
                         state.focusId = nextId;
@@ -1655,6 +1666,7 @@
                         });
 
                         panelEl.classList.remove("panel-transitioning");
+                        state.isTraveling = false;
                     }, 180);
 
                     _revealTimers.push(t);
@@ -1787,7 +1799,7 @@
         }
 
         return `
-            <div class="xana-node-image-link unresolved-media">
+            <div class="xana-node-image-link${node.type === "media" ? "" : " unresolved-media"}">
                 <img
                     class="${imageClass} xana-node-image--panel"
                     src="${escapeHtml(src)}"
@@ -2533,6 +2545,7 @@
             const href = link.getAttribute("href");
 
             if (!href || href.startsWith("#")) return;
+            if (link.hasAttribute("data-node-jump")) return;
 
             // Primary match: compare normalized URL paths (works for absolute hrefs).
             let matchingNode = state.allNodes.find((node) => {

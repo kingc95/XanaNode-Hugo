@@ -1,137 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Node Not Found</title>
+    {{ partial "head.html" . }}
+    <title>404 - Node Not Found | {{ site.Title }}</title>
     <style>
-        * {
+        html,
+        body {
+            min-height: 100%;
+            overflow: auto;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at 20% 15%, rgba(85, 214, 190, 0.16), transparent 24%),
+                radial-gradient(circle at 80% 20%, rgba(255, 209, 102, 0.1), transparent 20%),
+                radial-gradient(circle at 50% 85%, rgba(139, 211, 255, 0.1), transparent 26%),
+                var(--xana-bg);
+        }
+
+        .xana-404 {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 2rem;
+        }
+
+        .xana-404-shell {
+            width: min(860px, 100%);
+            padding: 1.25rem;
+            border: 1px solid var(--xana-panel-border);
+            border-radius: 1.5rem;
+            background: linear-gradient(180deg, rgba(21, 25, 34, 0.96), rgba(11, 14, 20, 0.98));
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .xana-404-shell::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at top left, rgba(85, 214, 190, 0.16), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(245, 158, 195, 0.09), transparent 28%);
+            pointer-events: none;
+        }
+
+        .xana-404-card {
+            position: relative;
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: minmax(0, 1fr);
+            padding: clamp(1.5rem, 4vw, 3.25rem);
+            border-radius: 1.2rem;
+            background: rgba(7, 10, 14, 0.72);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .xana-404-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            width: fit-content;
+            padding: 0.45rem 0.8rem;
+            border-radius: 999px;
+            border: 1px solid var(--xana-accent-border);
+            background: var(--xana-accent-soft);
+            color: var(--xana-accent);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .xana-404-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+            align-items: center;
+        }
+
+        .xana-404-number {
+            margin: 0;
+            font-family: "Fraunces", Georgia, serif;
+            font-size: clamp(4rem, 12vw, 7rem);
+            line-height: 0.9;
+            letter-spacing: -0.05em;
+            color: var(--xana-text);
+        }
+
+        .xana-404-title {
+            margin: 0.4rem 0 0;
+            font-size: clamp(2rem, 4vw, 3.3rem);
+            line-height: 1.02;
+        }
+
+        .xana-404-copy {
+            margin: 0.9rem 0 0;
+            max-width: 58ch;
+            color: var(--xana-text-muted);
+            font-size: 1.02rem;
+            line-height: 1.7;
+        }
+
+        .xana-404-panel {
+            padding: 1.1rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(85, 214, 190, 0.2);
+            background: linear-gradient(180deg, rgba(17, 24, 39, 0.95), rgba(7, 10, 14, 0.95));
+        }
+
+        .xana-404-panel h2 {
+            margin: 0 0 0.75rem;
+            font-size: 1.15rem;
+        }
+
+        .xana-404-list {
+            list-style: none;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            display: grid;
+            gap: 0.7rem;
         }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #e2e8f0;
-            min-height: 100vh;
+
+        .xana-404-list li {
+            display: grid;
+            gap: 0.2rem;
+            padding: 0.85rem 0.9rem;
+            border-radius: 0.9rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .xana-404-list strong {
+            color: var(--xana-text);
+            font-weight: 700;
+        }
+
+        .xana-404-list span {
+            color: var(--xana-text-muted);
+            font-size: 0.93rem;
+            line-height: 1.5;
+        }
+
+        .xana-404-actions {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .container {
-            text-align: center;
-            max-width: 600px;
-        }
-        
-        .node-icon {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 40px;
-            background: radial-gradient(circle at 30% 30%, #60a5fa, #3b82f6);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.7); }
-            50% { box-shadow: 0 0 0 30px rgba(96, 165, 250, 0); }
-        }
-        
-        h1 {
-            font-size: 48px;
-            margin-bottom: 16px;
-            color: #f1f5f9;
-        }
-        
-        .error-code {
-            font-size: 72px;
-            font-weight: bold;
-            background: linear-gradient(135deg, #60a5fa, #3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 16px;
-        }
-        
-        .message {
-            font-size: 18px;
-            color: #cbd5e1;
-            margin-bottom: 32px;
-            line-height: 1.6;
-        }
-        
-        .note {
-            background: rgba(59, 130, 246, 0.1);
-            border-left: 4px solid #3b82f6;
-            padding: 20px;
-            margin: 32px 0;
-            border-radius: 4px;
-            font-style: italic;
-            color: #a5f3fc;
-        }
-        
-        .actions {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
+            gap: 0.9rem;
             flex-wrap: wrap;
+            margin-top: 0.25rem;
         }
-        
-        a {
-            padding: 12px 24px;
-            border-radius: 6px;
+
+        .xana-404-actions a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.82rem 1.1rem;
+            border-radius: 0.85rem;
             text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            display: inline-block;
+            font-weight: 700;
+            transition: transform 150ms ease, border-color 150ms ease, background 150ms ease;
         }
-        
-        .btn-home {
-            background: linear-gradient(135deg, #3b82f6, #2563eb);
-            color: white;
+
+        .xana-404-home {
+            background: linear-gradient(135deg, var(--xana-accent), #2ab8a0);
+            color: #04120f;
         }
-        
-        .btn-home:hover {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+
+        .xana-404-back {
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--xana-text);
         }
-        
-        .btn-back {
-            border: 2px solid #475569;
-            color: #cbd5e1;
+
+        .xana-404-actions a:hover {
+            transform: translateY(-1px);
         }
-        
-        .btn-back:hover {
-            border-color: #64748b;
-            color: #f1f5f9;
-            transform: translateY(-2px);
+
+        .xana-404-home:hover {
+            background: linear-gradient(135deg, #67e8d0, #2ab8a0);
+        }
+
+        .xana-404-back:hover {
+            border-color: rgba(85, 214, 190, 0.35);
+            background: rgba(85, 214, 190, 0.08);
+        }
+
+        .xana-404-footnote {
+            margin-top: 1rem;
+            color: var(--xana-text-muted);
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        @media (max-width: 760px) {
+            .xana-404 {
+                padding: 1rem;
+            }
+
+            .xana-404-card {
+                padding: 1rem;
+            }
+
+            .xana-404-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="node-icon">⚠️</div>
-        <div class="error-code">404</div>
-        <h1>Node Not Found</h1>
-        <p class="message">The path you're looking for doesn't exist in the network.</p>
-        
-        <div class="note">
-            ✨ Maybe this is a sign we need a node here...
-        </div>
-        
-        <div class="actions">
-            <a href="/" class="btn-home">Return Home</a>
-            <a href="javascript:history.back()" class="btn-back">Go Back</a>
-        </div>
-    </div>
+    <main class="xana-404">
+        <section class="xana-404-shell" aria-labelledby="xana-404-title">
+            <div class="xana-404-card">
+                <div class="xana-404-kicker">Broken reference</div>
+
+                <div class="xana-404-grid">
+                    <div>
+                        <p class="xana-404-number">404</p>
+                        <h1 class="xana-404-title" id="xana-404-title">Node not found in this substrate</h1>
+                        <p class="xana-404-copy">
+                            The path you followed does not resolve to a published node, fragment, or route.
+                            In XanaNode terms, the reference exists, but the target is missing, renamed, or not yet authored.
+                        </p>
+                    </div>
+
+                    <aside class="xana-404-panel" aria-label="What this usually means">
+                        <h2>What this usually means</h2>
+                        <ul class="xana-404-list">
+                            <li>
+                                <strong>Missing node</strong>
+                                <span>The content has not been created or is not part of the current graph.</span>
+                            </li>
+                            <li>
+                                <strong>Unstable link</strong>
+                                <span>The URL was copied from a draft, old version, or stale reference.</span>
+                            </li>
+                            <li>
+                                <strong>Transclusion gap</strong>
+                                <span>A fragment address or tumbler range points to something that no longer exists.</span>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+
+                <div>
+                    <div class="xana-404-actions">
+                        <a href="/" class="xana-404-home">Return to the graph</a>
+                        <a href="javascript:history.back()" class="xana-404-back">Go back</a>
+                    </div>
+
+                    <p class="xana-404-footnote">
+                        XanaNode treats missing references as a signal, not just an error. The absence may mean the node should be added, versioned, or linked differently.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

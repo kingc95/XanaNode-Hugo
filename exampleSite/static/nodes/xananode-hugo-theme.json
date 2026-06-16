@@ -1,0 +1,71 @@
+{
+  "id": "xananode.example:project/xananode-hugo-theme",
+  "title": "XanaNode Hugo Theme",
+  "type": "project",
+  "status": "prototype",
+  "importance": 4,
+  "summary": "A static-site reference implementation that reads XanaNode content files and renders them as a navigable graph.",
+  "primary_media": "xananode.example:media/xananode-icon",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/static-publishing-enabled_by-xananode-hugo-theme-16",
+      "type": "enabled_by",
+      "source": "xananode.example:technology/static-publishing",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-hugo-theme-implements-xananode-55",
+      "type": "implements",
+      "target": "xananode.example:concept/xananode",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-hugo-theme-uses-hugo-56",
+      "type": "uses",
+      "target": "xananode.example:technology/hugo",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-hugo-theme-uses-cytoscape-js-57",
+      "type": "uses",
+      "target": "xananode.example:technology/cytoscape-js",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-hugo-theme-demonstrates-knowledge-substrate-58",
+      "type": "demonstrates",
+      "target": "xananode.example:concept/knowledge-substrate",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-icon-used_as_primary_media_for-xananode-hugo-theme-79",
+      "type": "used_as_primary_media_for",
+      "source": "xananode.example:media/xananode-icon",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-icon-depicts-xananode-hugo-theme-80",
+      "type": "depicts",
+      "source": "xananode.example:media/xananode-icon",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/what-is-xananode-explains-xananode-hugo-theme-83",
+      "type": "explains",
+      "source": "xananode.example:essay/what-is-xananode",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/known-implementations-registry-documents-xananode-hugo-theme-145",
+      "type": "documents",
+      "source": "xananode.example:concept/known-implementations-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-hugo-theme-represented-by-xananode-icon",
+      "type": "represented_by",
+      "target": "xananode.example:media/xananode-icon",
+      "direction": "outgoing"
+    }
+  ]
+}

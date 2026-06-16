@@ -1,0 +1,63 @@
+{
+  "id": "xananode.example:concept/protocol-artifacts",
+  "title": "Protocol Artifacts",
+  "type": "concept",
+  "importance": 5,
+  "summary": "The machine-readable files and reports that let a XanaNode substrate be validated, compared, merged, and federated.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-core-trail-continues_to-protocol-artifacts-4",
+      "type": "continues_to",
+      "source": "xananode.example:trail/xananode-core-trail",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/protocol-artifacts-trail-starts_with-protocol-artifacts-6",
+      "type": "starts_with",
+      "source": "xananode.example:trail/protocol-artifacts-trail",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/what-is-xananode-explains-protocol-artifacts-86",
+      "type": "explains",
+      "source": "xananode.example:essay/what-is-xananode",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/protocol-artifacts-defined_by-xananode-core-schema-124",
+      "type": "defined_by",
+      "target": "xananode.example:schema/xananode-core-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-manifest-125",
+      "type": "contains",
+      "target": "xananode.example:concept/substrate-manifest",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-node-record-126",
+      "type": "contains",
+      "target": "xananode.example:concept/substrate-node-record",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-relationship-list-127",
+      "type": "contains",
+      "target": "xananode.example:concept/substrate-relationship-list",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/protocol-artifacts-contains-review-suggestions-128",
+      "type": "contains",
+      "target": "xananode.example:concept/review-suggestions",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/protocol-artifacts-required_for-federated-knowledge-substrates-129",
+      "type": "required_for",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "direction": "outgoing"
+    }
+  ]
+}

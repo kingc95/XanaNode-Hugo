@@ -1,7 +1,8 @@
-{{ $id := . }}
+{{ $id := cond (reflect.IsMap .) .id . }}
 {{ $found := false }}
 {{ range site.RegularPages }}
-  {{ if eq .File.ContentBaseName $id }}
+  {{ $nodeID := .Params.node_id | default .File.ContentBaseName }}
+  {{ if or (eq .File.ContentBaseName $id) (eq $nodeID $id) }}
     {{ $found = . }}
   {{ end }}
 {{ end }}

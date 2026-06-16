@@ -1,0 +1,51 @@
+{
+  "id": "xananode.example:concept/tumbler-addressing",
+  "title": "Tumbler Addressing",
+  "type": "concept",
+  "importance": 5,
+  "summary": "Persistent, location-independent addressing for nodes, relationships, revisions, and fragments inside a substrate.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/tumbler-addressing-enables-transclusion-102",
+      "type": "enables",
+      "target": "xananode.example:concept/transclusion",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/tumbler-addressing-enables-deep-linking-103",
+      "type": "enables",
+      "target": "xananode.example:concept/deep-linking",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/tumbler-addressing-preserves-provenance-104",
+      "type": "preserves",
+      "target": "xananode.example:concept/provenance",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/tumbler-addressing-enables-fragment-node-105",
+      "type": "enables",
+      "target": "xananode.example:concept/fragment-node",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/tumbler-addressing-extended_by-xananode-106",
+      "type": "extended_by",
+      "target": "xananode.example:concept/xananode",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/tumbler-addressing-deep_links_to-as-we-may-think-107",
+      "type": "deep_links_to",
+      "target": "xananode.example:source/as-we-may-think",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/tumbler-addressing-transcludes-0004",
+      "type": "transcludes",
+      "target": "xananode.example:fragment/as-we-may-think-0004",
+      "direction": "outgoing"
+    }
+  ]
+}

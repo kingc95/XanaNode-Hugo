@@ -1,0 +1,28 @@
+{
+  "id": "xananode.example:schema/merge-report-schema",
+  "title": "Merge Report Schema",
+  "type": "schema",
+  "status": "draft",
+  "importance": 4,
+  "summary": "The JSON Schema that validates merge reports for substrate comparison and federation workflows.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/merge-report-schema-defines-merge-report-49",
+      "type": "defines",
+      "target": "xananode.example:concept/merge-report",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/merge-report-schema-documents-merge-validation-50",
+      "type": "documents",
+      "target": "xananode.example:concept/merge-validation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/merge-report-schema-required_for-federation-example-51",
+      "type": "required_for",
+      "target": "xananode.example:concept/federation-example",
+      "direction": "outgoing"
+    }
+  ]
+}

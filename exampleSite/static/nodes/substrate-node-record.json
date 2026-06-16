@@ -1,0 +1,39 @@
+{
+  "id": "xananode.example:concept/substrate-node-record",
+  "title": "Substrate Node Record",
+  "type": "concept",
+  "importance": 5,
+  "summary": "A JSON representation of a node with a protocol identifier, type, summary, importance, provenance fields, and incoming or outgoing relationship summaries.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/protocol-artifacts-trail-continues_to-substrate-node-record-8",
+      "type": "continues_to",
+      "source": "xananode.example:trail/protocol-artifacts-trail",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/substrate-node-schema-defines-substrate-node-record-40",
+      "type": "defines",
+      "source": "xananode.example:schema/substrate-node-schema",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/substrate-node-record-uses-xananode-node-types-112",
+      "type": "uses",
+      "target": "xananode.example:schema/xananode-node-types",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/substrate-node-record-contains-fragment-node-113",
+      "type": "contains",
+      "target": "xananode.example:concept/fragment-node",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-node-record-126",
+      "type": "contains",
+      "source": "xananode.example:concept/protocol-artifacts",
+      "direction": "incoming"
+    }
+  ]
+}

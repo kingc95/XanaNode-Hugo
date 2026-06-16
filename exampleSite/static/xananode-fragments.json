@@ -1,223 +1,2049 @@
 {
-  "generated_at": "2026-06-15T16:04:19.595Z",
+  "generated_at": "2026-06-16T18:53:17.297Z",
   "nodes": {
-    "lost-lineage": {
+    "xananode-core-trail": {
       "versions": {
         "v1": {
           "fragments": {
-            "1": "This trail follows the buried lineage of associative memory and relationship-first information architecture.\n\n{{< node ref=\"bush-as-we-may-think\" >}} {{< node ref=\"nelson-xanadu\" >}} {{< node ref=\"knowledge-substrate\" >}}",
-            "1.1": "This trail follows the buried lineage of associative memory and relationship-first information architecture.",
-            "1.1.1": "This trail follows the buried lineage of associative memory and relationship-first information architecture.",
-            "1.2": "{{< node ref=\"bush-as-we-may-think\" >}} {{< node ref=\"nelson-xanadu\" >}} {{< node ref=\"knowledge-substrate\" >}}",
-            "1.2.1": "{{< node ref=\"bush-as-we-may-think\" >}} {{< node ref=\"nelson-xanadu\" >}} {{< node ref=\"knowledge-substrate\" >}}"
-          }
+            "1": "This trail introduces XanaNode as a protocol, ontology, and publishing architecture for interoperable knowledge substrates.\n\nIt moves from the problem of isolated documents to typed relationships, provenance, stable fragments, namespaced schemas, protocol artifacts, merge validation, compatibility levels, federation, and civilizational memory.\n\n{{< node ref=\"start-here\" >}} {{< node ref=\"xananode\" >}} {{< node ref=\"knowledge-substrate\" >}} {{< node ref=\"typed-relationships\" >}} {{< node ref=\"provenance\" >}} {{< node ref=\"transclusion\" >}} {{< node ref=\"tumbler-addressing\" >}} {{< node ref=\"namespacing\" >}} {{< node ref=\"merge-validation\" >}} {{< node ref=\"protocol-artifacts\" >}} {{< node ref=\"compatibility-levels\" >}} {{< node ref=\"federated-knowledge-substrates\" >}} {{< node ref=\"civilizational-memory\" >}}",
+            "1.1": "This trail introduces XanaNode as a protocol, ontology, and publishing architecture for interoperable knowledge substrates.",
+            "1.1.1": "This trail introduces XanaNode as a protocol, ontology, and publishing architecture for interoperable knowledge substrates.",
+            "1.2": "It moves from the problem of isolated documents to typed relationships, provenance, stable fragments, namespaced schemas, protocol artifacts, merge validation, compatibility levels, federation, and civilizational memory.",
+            "1.2.1": "It moves from the problem of isolated documents to typed relationships, provenance, stable fragments, namespaced schemas, protocol artifacts, merge validation, compatibility levels, federation, and civilizational memory.",
+            "1.3": "{{< node ref=\"start-here\" >}} {{< node ref=\"xananode\" >}} {{< node ref=\"knowledge-substrate\" >}} {{< node ref=\"typed-relationships\" >}} {{< node ref=\"provenance\" >}} {{< node ref=\"transclusion\" >}} {{< node ref=\"tumbler-addressing\" >}} {{< node ref=\"namespacing\" >}} {{< node ref=\"merge-validation\" >}} {{< node ref=\"protocol-artifacts\" >}} {{< node ref=\"compatibility-levels\" >}} {{< node ref=\"federated-knowledge-substrates\" >}} {{< node ref=\"civilizational-memory\" >}}",
+            "1.3.1": "{{< node ref=\"start-here\" >}} {{< node ref=\"xananode\" >}} {{< node ref=\"knowledge-substrate\" >}} {{< node ref=\"typed-relationships\" >}} {{< node ref=\"provenance\" >}} {{< node ref=\"transclusion\" >}} {{< node ref=\"tumbler-addressing\" >}} {{< node ref=\"namespacing\" >}} {{< node ref=\"merge-validation\" >}} {{< node ref=\"protocol-artifacts\" >}} {{< node ref=\"compatibility-levels\" >}} {{< node ref=\"federated-knowledge-substrates\" >}} {{< node ref=\"civilizational-memory\" >}}"
+          },
+          "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "This trail follows the buried lineage of associative memory and relationship-first information architecture.\n\n{{< node ref=\"bush-as-we-may-think\" >}} {{< node ref=\"nelson-xanadu\" >}} {{< node ref=\"knowledge-substrate\" >}}",
-            "1.1": "This trail follows the buried lineage of associative memory and relationship-first information architecture.",
-            "1.1.1": "This trail follows the buried lineage of associative memory and relationship-first information architecture.",
-            "1.2": "{{< node ref=\"bush-as-we-may-think\" >}} {{< node ref=\"nelson-xanadu\" >}} {{< node ref=\"knowledge-substrate\" >}}",
-            "1.2.1": "{{< node ref=\"bush-as-we-may-think\" >}} {{< node ref=\"nelson-xanadu\" >}} {{< node ref=\"knowledge-substrate\" >}}"
-          }
+            "1": "This trail introduces XanaNode as a protocol, ontology, and publishing architecture for interoperable knowledge substrates.\n\nIt moves from the problem of isolated documents to typed relationships, provenance, stable fragments, namespaced schemas, protocol artifacts, merge validation, compatibility levels, federation, and civilizational memory.\n\n{{< node ref=\"start-here\" >}} {{< node ref=\"xananode\" >}} {{< node ref=\"knowledge-substrate\" >}} {{< node ref=\"typed-relationships\" >}} {{< node ref=\"provenance\" >}} {{< node ref=\"transclusion\" >}} {{< node ref=\"tumbler-addressing\" >}} {{< node ref=\"namespacing\" >}} {{< node ref=\"merge-validation\" >}} {{< node ref=\"protocol-artifacts\" >}} {{< node ref=\"compatibility-levels\" >}} {{< node ref=\"federated-knowledge-substrates\" >}} {{< node ref=\"civilizational-memory\" >}}",
+            "1.1": "This trail introduces XanaNode as a protocol, ontology, and publishing architecture for interoperable knowledge substrates.",
+            "1.1.1": "This trail introduces XanaNode as a protocol, ontology, and publishing architecture for interoperable knowledge substrates.",
+            "1.2": "It moves from the problem of isolated documents to typed relationships, provenance, stable fragments, namespaced schemas, protocol artifacts, merge validation, compatibility levels, federation, and civilizational memory.",
+            "1.2.1": "It moves from the problem of isolated documents to typed relationships, provenance, stable fragments, namespaced schemas, protocol artifacts, merge validation, compatibility levels, federation, and civilizational memory.",
+            "1.3": "{{< node ref=\"start-here\" >}} {{< node ref=\"xananode\" >}} {{< node ref=\"knowledge-substrate\" >}} {{< node ref=\"typed-relationships\" >}} {{< node ref=\"provenance\" >}} {{< node ref=\"transclusion\" >}} {{< node ref=\"tumbler-addressing\" >}} {{< node ref=\"namespacing\" >}} {{< node ref=\"merge-validation\" >}} {{< node ref=\"protocol-artifacts\" >}} {{< node ref=\"compatibility-levels\" >}} {{< node ref=\"federated-knowledge-substrates\" >}} {{< node ref=\"civilizational-memory\" >}}",
+            "1.3.1": "{{< node ref=\"start-here\" >}} {{< node ref=\"xananode\" >}} {{< node ref=\"knowledge-substrate\" >}} {{< node ref=\"typed-relationships\" >}} {{< node ref=\"provenance\" >}} {{< node ref=\"transclusion\" >}} {{< node ref=\"tumbler-addressing\" >}} {{< node ref=\"namespacing\" >}} {{< node ref=\"merge-validation\" >}} {{< node ref=\"protocol-artifacts\" >}} {{< node ref=\"compatibility-levels\" >}} {{< node ref=\"federated-knowledge-substrates\" >}} {{< node ref=\"civilizational-memory\" >}}"
+          },
+          "metadata": {}
         }
       },
-      "title": "The Lost Lineage",
+      "title": "XanaNode Core Trail",
       "type": "trail"
     },
-    "nelson-xanadu": {
+    "protocol-artifacts-trail": {
       "versions": {
         "v1": {
           "fragments": {
-            "1": "Nelson's paper argues that media should allow compatible connections, reuse, visible links, and provenance-preserving inclusion.",
-            "1.1": "Nelson's paper argues that media should allow compatible connections, reuse, visible links, and provenance-preserving inclusion.",
-            "1.1.1": "Nelson's paper argues that media should allow compatible connections, reuse, visible links, and provenance-preserving inclusion."
+            "1": "This trail follows the artifacts a XanaNode implementation publishes or consumes.\n\nIt begins with the manifest, node records, and relationship list, then moves through compatibility reports, merge reports, registries, extension policy, custom extensions, federation examples, and governance rules.\n\n{{< node ref=\"protocol-artifacts\" >}} {{< node ref=\"substrate-manifest\" >}} {{< node ref=\"substrate-node-record\" >}} {{< node ref=\"substrate-relationship-list\" >}} {{< node ref=\"compatibility-levels\" >}} {{< node ref=\"compatibility-report\" >}} {{< node ref=\"merge-report\" >}} {{< node ref=\"namespace-registry\" >}} {{< node ref=\"known-implementations-registry\" >}} {{< node ref=\"review-suggestions\" >}} {{< node ref=\"canonical-type-policy\" >}} {{< node ref=\"custom-extension-substrate\" >}} {{< node ref=\"federation-example\" >}} {{< node ref=\"federation-rules\" >}}",
+            "1.1": "This trail follows the artifacts a XanaNode implementation publishes or consumes.",
+            "1.1.1": "This trail follows the artifacts a XanaNode implementation publishes or consumes.",
+            "1.2": "It begins with the manifest, node records, and relationship list, then moves through compatibility reports, merge reports, registries, extension policy, custom extensions, federation examples, and governance rules.",
+            "1.2.1": "It begins with the manifest, node records, and relationship list, then moves through compatibility reports, merge reports, registries, extension policy, custom extensions, federation examples, and governance rules.",
+            "1.3": "{{< node ref=\"protocol-artifacts\" >}} {{< node ref=\"substrate-manifest\" >}} {{< node ref=\"substrate-node-record\" >}} {{< node ref=\"substrate-relationship-list\" >}} {{< node ref=\"compatibility-levels\" >}} {{< node ref=\"compatibility-report\" >}} {{< node ref=\"merge-report\" >}} {{< node ref=\"namespace-registry\" >}} {{< node ref=\"known-implementations-registry\" >}} {{< node ref=\"review-suggestions\" >}} {{< node ref=\"canonical-type-policy\" >}} {{< node ref=\"custom-extension-substrate\" >}} {{< node ref=\"federation-example\" >}} {{< node ref=\"federation-rules\" >}}",
+            "1.3.1": "{{< node ref=\"protocol-artifacts\" >}} {{< node ref=\"substrate-manifest\" >}} {{< node ref=\"substrate-node-record\" >}} {{< node ref=\"substrate-relationship-list\" >}} {{< node ref=\"compatibility-levels\" >}} {{< node ref=\"compatibility-report\" >}} {{< node ref=\"merge-report\" >}} {{< node ref=\"namespace-registry\" >}} {{< node ref=\"known-implementations-registry\" >}} {{< node ref=\"review-suggestions\" >}} {{< node ref=\"canonical-type-policy\" >}} {{< node ref=\"custom-extension-substrate\" >}} {{< node ref=\"federation-example\" >}} {{< node ref=\"federation-rules\" >}}"
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "This trail follows the artifacts a XanaNode implementation publishes or consumes.\n\nIt begins with the manifest, node records, and relationship list, then moves through compatibility reports, merge reports, registries, extension policy, custom extensions, federation examples, and governance rules.\n\n{{< node ref=\"protocol-artifacts\" >}} {{< node ref=\"substrate-manifest\" >}} {{< node ref=\"substrate-node-record\" >}} {{< node ref=\"substrate-relationship-list\" >}} {{< node ref=\"compatibility-levels\" >}} {{< node ref=\"compatibility-report\" >}} {{< node ref=\"merge-report\" >}} {{< node ref=\"namespace-registry\" >}} {{< node ref=\"known-implementations-registry\" >}} {{< node ref=\"review-suggestions\" >}} {{< node ref=\"canonical-type-policy\" >}} {{< node ref=\"custom-extension-substrate\" >}} {{< node ref=\"federation-example\" >}} {{< node ref=\"federation-rules\" >}}",
+            "1.1": "This trail follows the artifacts a XanaNode implementation publishes or consumes.",
+            "1.1.1": "This trail follows the artifacts a XanaNode implementation publishes or consumes.",
+            "1.2": "It begins with the manifest, node records, and relationship list, then moves through compatibility reports, merge reports, registries, extension policy, custom extensions, federation examples, and governance rules.",
+            "1.2.1": "It begins with the manifest, node records, and relationship list, then moves through compatibility reports, merge reports, registries, extension policy, custom extensions, federation examples, and governance rules.",
+            "1.3": "{{< node ref=\"protocol-artifacts\" >}} {{< node ref=\"substrate-manifest\" >}} {{< node ref=\"substrate-node-record\" >}} {{< node ref=\"substrate-relationship-list\" >}} {{< node ref=\"compatibility-levels\" >}} {{< node ref=\"compatibility-report\" >}} {{< node ref=\"merge-report\" >}} {{< node ref=\"namespace-registry\" >}} {{< node ref=\"known-implementations-registry\" >}} {{< node ref=\"review-suggestions\" >}} {{< node ref=\"canonical-type-policy\" >}} {{< node ref=\"custom-extension-substrate\" >}} {{< node ref=\"federation-example\" >}} {{< node ref=\"federation-rules\" >}}",
+            "1.3.1": "{{< node ref=\"protocol-artifacts\" >}} {{< node ref=\"substrate-manifest\" >}} {{< node ref=\"substrate-node-record\" >}} {{< node ref=\"substrate-relationship-list\" >}} {{< node ref=\"compatibility-levels\" >}} {{< node ref=\"compatibility-report\" >}} {{< node ref=\"merge-report\" >}} {{< node ref=\"namespace-registry\" >}} {{< node ref=\"known-implementations-registry\" >}} {{< node ref=\"review-suggestions\" >}} {{< node ref=\"canonical-type-policy\" >}} {{< node ref=\"custom-extension-substrate\" >}} {{< node ref=\"federation-example\" >}} {{< node ref=\"federation-rules\" >}}"
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Protocol Artifacts Trail",
+      "type": "trail"
+    },
+    "historical-lineage-trail": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "This trail follows the historical lineage behind XanaNode: Bush's associative trails, Engelbart's augmentation work, Nelson's transclusion and visible interconnection, and the protocol's current focus on typed relationships and stable fragments.",
+            "1.1": "This trail follows the historical lineage behind XanaNode: Bush's associative trails, Engelbart's augmentation work, Nelson's transclusion and visible interconnection, and the protocol's current focus on typed relationships and stable fragments.",
+            "1.1.1": "This trail follows the historical lineage behind XanaNode: Bush's associative trails, Engelbart's augmentation work, Nelson's transclusion and visible interconnection, and the protocol's current focus on typed relationships and stable fragments."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "This trail follows the historical lineage behind XanaNode: Bush's associative trails, Engelbart's augmentation work, Nelson's transclusion and visible interconnection, and the protocol's current focus on typed relationships and stable fragments.",
+            "1.1": "This trail follows the historical lineage behind XanaNode: Bush's associative trails, Engelbart's augmentation work, Nelson's transclusion and visible interconnection, and the protocol's current focus on typed relationships and stable fragments.",
+            "1.1.1": "This trail follows the historical lineage behind XanaNode: Bush's associative trails, Engelbart's augmentation work, Nelson's transclusion and visible interconnection, and the protocol's current focus on typed relationships and stable fragments."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Historical Lineage Trail",
+      "type": "trail"
+    },
+    "static-publishing": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Static publishing makes a substrate easy to host, mirror, archive, and inspect.",
+            "1.1": "Static publishing makes a substrate easy to host, mirror, archive, and inspect.",
+            "1.1.1": "Static publishing makes a substrate easy to host, mirror, archive, and inspect."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Static publishing makes a substrate easy to host, mirror, archive, and inspect.",
+            "1.1": "Static publishing makes a substrate easy to host, mirror, archive, and inspect.",
+            "1.1.1": "Static publishing makes a substrate easy to host, mirror, archive, and inspect."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Static Publishing",
+      "type": "technology"
+    },
+    "hugo": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Hugo provides the static publishing layer for this example implementation.",
+            "1.1": "Hugo provides the static publishing layer for this example implementation.",
+            "1.1.1": "Hugo provides the static publishing layer for this example implementation."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Hugo provides the static publishing layer for this example implementation.",
+            "1.1": "Hugo provides the static publishing layer for this example implementation.",
+            "1.1.1": "Hugo provides the static publishing layer for this example implementation."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Hugo",
+      "type": "technology"
+    },
+    "cytoscape-js": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Cytoscape.js renders the visible graph. It is a presentation dependency, not the knowledge model itself.",
+            "1.1": "Cytoscape.js renders the visible graph. It is a presentation dependency, not the knowledge model itself.",
+            "1.1.1": "Cytoscape.",
+            "1.1.2": "js renders the visible graph.",
+            "1.1.3": "It is a presentation dependency, not the knowledge model itself."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Cytoscape.js renders the visible graph. It is a presentation dependency, not the knowledge model itself.",
+            "1.1": "Cytoscape.js renders the visible graph. It is a presentation dependency, not the knowledge model itself.",
+            "1.1.1": "Cytoscape.",
+            "1.1.2": "js renders the visible graph.",
+            "1.1.3": "It is a presentation dependency, not the knowledge model itself."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Cytoscape.js",
+      "type": "technology"
+    },
+    "xanadu-document-interconnection": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Nelson's work provides a key source layer for transclusion, reusable media, and visible interconnection.",
+            "1.1": "Nelson's work provides a key source layer for transclusion, reusable media, and visible interconnection.",
+            "1.1.1": "Nelson's work provides a key source layer for transclusion, reusable media, and visible interconnection.",
+            "0001": "Nelson's work provides a key source layer for transclusion, reusable media, and visible interconnection."
+          },
+          "metadata": {
+            "0001": {
+              "authored": true,
+              "id": "0001",
+              "title": "Reusable Media Fragment",
+              "summary": "Nelson's work as a source layer for transclusion, reusable media, and visible interconnection.",
+              "source_node": "xananode.example:source/xanadu-document-interconnection",
+              "protocol_id": "xananode.example:fragment/xanadu-document-interconnection-0001",
+              "tumbler": "xananode.example:source/xanadu-document-interconnection#fragment/0001",
+              "selector": {
+                "type": "semantic-anchor",
+                "value": "reusable-media-visible-interconnection"
+              },
+              "rights_status": "copyrighted"
+            }
           }
         },
         "latest": {
           "fragments": {
-            "1": "Nelson's paper argues that media should allow compatible connections, reuse, visible links, and provenance-preserving inclusion.",
-            "1.1": "Nelson's paper argues that media should allow compatible connections, reuse, visible links, and provenance-preserving inclusion.",
-            "1.1.1": "Nelson's paper argues that media should allow compatible connections, reuse, visible links, and provenance-preserving inclusion."
+            "1": "Nelson's work provides a key source layer for transclusion, reusable media, and visible interconnection.",
+            "1.1": "Nelson's work provides a key source layer for transclusion, reusable media, and visible interconnection.",
+            "1.1.1": "Nelson's work provides a key source layer for transclusion, reusable media, and visible interconnection.",
+            "0001": "Nelson's work provides a key source layer for transclusion, reusable media, and visible interconnection."
+          },
+          "metadata": {
+            "0001": {
+              "authored": true,
+              "id": "0001",
+              "title": "Reusable Media Fragment",
+              "summary": "Nelson's work as a source layer for transclusion, reusable media, and visible interconnection.",
+              "source_node": "xananode.example:source/xanadu-document-interconnection",
+              "protocol_id": "xananode.example:fragment/xanadu-document-interconnection-0001",
+              "tumbler": "xananode.example:source/xanadu-document-interconnection#fragment/0001",
+              "selector": {
+                "type": "semantic-anchor",
+                "value": "reusable-media-visible-interconnection"
+              },
+              "rights_status": "copyrighted"
+            }
           }
         }
       },
       "title": "Xanadu: Document Interconnection Enabling Re-use",
       "type": "source"
     },
-    "bush-as-we-may-think": {
+    "source-code-link-decay-study": {
       "versions": {
         "v1": {
           "fragments": {
-            "1": "Bush's essay introduces associative trails and the Memex as responses to information overload.",
-            "1.1": "Bush's essay introduces associative trails and the Memex as responses to information overload.",
-            "1.1.1": "Bush's essay introduces associative trails and the Memex as responses to information overload."
+            "1": "This source records empirical evidence that embedded references in digital artifacts can decay or lose context over time.",
+            "1.1": "This source records empirical evidence that embedded references in digital artifacts can decay or lose context over time.",
+            "1.1.1": "This source records empirical evidence that embedded references in digital artifacts can decay or lose context over time."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "This source records empirical evidence that embedded references in digital artifacts can decay or lose context over time.",
+            "1.1": "This source records empirical evidence that embedded references in digital artifacts can decay or lose context over time.",
+            "1.1.1": "This source records empirical evidence that embedded references in digital artifacts can decay or lose context over time."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "9.6 Million Links in Source Code Comments",
+      "type": "source"
+    },
+    "mother-of-all-demos": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "The demonstration showed computers as tools for augmenting human intelligence and navigating structured knowledge work.",
+            "1.1": "The demonstration showed computers as tools for augmenting human intelligence and navigating structured knowledge work.",
+            "1.1.1": "The demonstration showed computers as tools for augmenting human intelligence and navigating structured knowledge work.",
+            "0001": "The demonstration showed computers as tools for augmenting human intelligence and navigating structured knowledge work."
+          },
+          "metadata": {
+            "0001": {
+              "authored": true,
+              "id": "0001",
+              "title": "Augmenting Human Intelligence Fragment",
+              "summary": "Engelbart's demonstration as an example of computers augmenting structured knowledge work.",
+              "source_node": "xananode.example:source/mother-of-all-demos",
+              "protocol_id": "xananode.example:fragment/mother-of-all-demos-0001",
+              "tumbler": "xananode.example:source/mother-of-all-demos#fragment/0001",
+              "selector": {
+                "type": "semantic-anchor",
+                "value": "augmenting-human-intelligence"
+              }
+            }
           }
         },
         "latest": {
           "fragments": {
-            "1": "Bush's essay introduces associative trails and the Memex as responses to information overload.",
-            "1.1": "Bush's essay introduces associative trails and the Memex as responses to information overload.",
-            "1.1.1": "Bush's essay introduces associative trails and the Memex as responses to information overload."
+            "1": "The demonstration showed computers as tools for augmenting human intelligence and navigating structured knowledge work.",
+            "1.1": "The demonstration showed computers as tools for augmenting human intelligence and navigating structured knowledge work.",
+            "1.1.1": "The demonstration showed computers as tools for augmenting human intelligence and navigating structured knowledge work.",
+            "0001": "The demonstration showed computers as tools for augmenting human intelligence and navigating structured knowledge work."
+          },
+          "metadata": {
+            "0001": {
+              "authored": true,
+              "id": "0001",
+              "title": "Augmenting Human Intelligence Fragment",
+              "summary": "Engelbart's demonstration as an example of computers augmenting structured knowledge work.",
+              "source_node": "xananode.example:source/mother-of-all-demos",
+              "protocol_id": "xananode.example:fragment/mother-of-all-demos-0001",
+              "tumbler": "xananode.example:source/mother-of-all-demos#fragment/0001",
+              "selector": {
+                "type": "semantic-anchor",
+                "value": "augmenting-human-intelligence"
+              }
+            }
+          }
+        }
+      },
+      "title": "Mother of All Demos",
+      "type": "source"
+    },
+    "as-we-may-think": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Bush argued that the growing record of knowledge required better associative methods for navigation and recall.",
+            "1.1": "Bush argued that the growing record of knowledge required better associative methods for navigation and recall.",
+            "1.1.1": "Bush argued that the growing record of knowledge required better associative methods for navigation and recall.",
+            "0004": "Bush argued that the growing record of knowledge required better associative methods for navigation and recall."
+          },
+          "metadata": {
+            "0004": {
+              "authored": true,
+              "id": "0004",
+              "title": "Associative Trails Fragment",
+              "summary": "Bush's argument that knowledge systems need associative navigation and recall.",
+              "source_node": "xananode.example:source/as-we-may-think",
+              "protocol_id": "xananode.example:fragment/as-we-may-think-0004",
+              "tumbler": "xananode.example:source/as-we-may-think#fragment/0004",
+              "selector": {
+                "type": "semantic-anchor",
+                "value": "associative-trails-discussion"
+              },
+              "rights_status": "copyrighted"
+            }
+          }
+        },
+        "latest": {
+          "fragments": {
+            "1": "Bush argued that the growing record of knowledge required better associative methods for navigation and recall.",
+            "1.1": "Bush argued that the growing record of knowledge required better associative methods for navigation and recall.",
+            "1.1.1": "Bush argued that the growing record of knowledge required better associative methods for navigation and recall.",
+            "0004": "Bush argued that the growing record of knowledge required better associative methods for navigation and recall."
+          },
+          "metadata": {
+            "0004": {
+              "authored": true,
+              "id": "0004",
+              "title": "Associative Trails Fragment",
+              "summary": "Bush's argument that knowledge systems need associative navigation and recall.",
+              "source_node": "xananode.example:source/as-we-may-think",
+              "protocol_id": "xananode.example:fragment/as-we-may-think-0004",
+              "tumbler": "xananode.example:source/as-we-may-think#fragment/0004",
+              "selector": {
+                "type": "semantic-anchor",
+                "value": "associative-trails-discussion"
+              },
+              "rights_status": "copyrighted"
+            }
           }
         }
       },
       "title": "As We May Think",
       "type": "source"
     },
+    "xananode-relationship-types": {
+      "versions": {
+        "0.4.0": {
+          "fragments": {
+            "1": "Relationship types describe why nodes are connected.\n\nThe current canonical registry contains 144 typed relationships, including evidence, authorship, lineage, identity, media, trail, governance, transclusion, deep-linking, compatibility, and extension relationships.\n\nExamples include supports, contradicts, explains, derived_from, memorializes, transcludes, and deep_links_to.",
+            "1.1": "Relationship types describe why nodes are connected.",
+            "1.1.1": "Relationship types describe why nodes are connected.",
+            "1.2": "The current canonical registry contains 144 typed relationships, including evidence, authorship, lineage, identity, media, trail, governance, transclusion, deep-linking, compatibility, and extension relationships.",
+            "1.2.1": "The current canonical registry contains 144 typed relationships, including evidence, authorship, lineage, identity, media, trail, governance, transclusion, deep-linking, compatibility, and extension relationships.",
+            "1.3": "Examples include supports, contradicts, explains, derived_from, memorializes, transcludes, and deep_links_to.",
+            "1.3.1": "Examples include supports, contradicts, explains, derived_from, memorializes, transcludes, and deep_links_to."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Relationship types describe why nodes are connected.\n\nThe current canonical registry contains 144 typed relationships, including evidence, authorship, lineage, identity, media, trail, governance, transclusion, deep-linking, compatibility, and extension relationships.\n\nExamples include supports, contradicts, explains, derived_from, memorializes, transcludes, and deep_links_to.",
+            "1.1": "Relationship types describe why nodes are connected.",
+            "1.1.1": "Relationship types describe why nodes are connected.",
+            "1.2": "The current canonical registry contains 144 typed relationships, including evidence, authorship, lineage, identity, media, trail, governance, transclusion, deep-linking, compatibility, and extension relationships.",
+            "1.2.1": "The current canonical registry contains 144 typed relationships, including evidence, authorship, lineage, identity, media, trail, governance, transclusion, deep-linking, compatibility, and extension relationships.",
+            "1.3": "Examples include supports, contradicts, explains, derived_from, memorializes, transcludes, and deep_links_to.",
+            "1.3.1": "Examples include supports, contradicts, explains, derived_from, memorializes, transcludes, and deep_links_to."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "XanaNode Relationship Types",
+      "type": "schema"
+    },
+    "xananode-node-types": {
+      "versions": {
+        "0.3.0": {
+          "fragments": {
+            "1": "Node types describe what kind of thing a node represents.\n\nThe current canonical registry contains 19 core node types: person, concept, claim, source, essay, observation, media, event, place, organization, project, technology, publication, community, relationship, revision, trail, schema, and fragment.",
+            "1.1": "Node types describe what kind of thing a node represents.",
+            "1.1.1": "Node types describe what kind of thing a node represents.",
+            "1.2": "The current canonical registry contains 19 core node types: person, concept, claim, source, essay, observation, media, event, place, organization, project, technology, publication, community, relationship, revision, trail, schema, and fragment.",
+            "1.2.1": "The current canonical registry contains 19 core node types: person, concept, claim, source, essay, observation, media, event, place, organization, project, technology, publication, community, relationship, revision, trail, schema, and fragment."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Node types describe what kind of thing a node represents.\n\nThe current canonical registry contains 19 core node types: person, concept, claim, source, essay, observation, media, event, place, organization, project, technology, publication, community, relationship, revision, trail, schema, and fragment.",
+            "1.1": "Node types describe what kind of thing a node represents.",
+            "1.1.1": "Node types describe what kind of thing a node represents.",
+            "1.2": "The current canonical registry contains 19 core node types: person, concept, claim, source, essay, observation, media, event, place, organization, project, technology, publication, community, relationship, revision, trail, schema, and fragment.",
+            "1.2.1": "The current canonical registry contains 19 core node types: person, concept, claim, source, essay, observation, media, event, place, organization, project, technology, publication, community, relationship, revision, trail, schema, and fragment."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "XanaNode Node Types",
+      "type": "schema"
+    },
+    "xananode-core-schema": {
+      "versions": {
+        "0.4": {
+          "fragments": {
+            "1": "XanaNode Core is the shared compatibility layer.\n\nA substrate may extend it, but the core gives other tools a stable set of meanings to validate, display, map, and merge.\n\nIn the current protocol, Core includes the xananode-node-types.v0.3.0.json registry, the xananode-relationship-types.v0.4.0.json registry, and JSON Schemas for substrate manifests, node records, relationship lists, namespace records, merge reports, and compatibility reports.",
+            "1.1": "XanaNode Core is the shared compatibility layer.",
+            "1.1.1": "XanaNode Core is the shared compatibility layer.",
+            "1.2": "A substrate may extend it, but the core gives other tools a stable set of meanings to validate, display, map, and merge.",
+            "1.2.1": "A substrate may extend it, but the core gives other tools a stable set of meanings to validate, display, map, and merge.",
+            "1.3": "In the current protocol, Core includes the xananode-node-types.v0.3.0.json registry, the xananode-relationship-types.v0.4.0.json registry, and JSON Schemas for substrate manifests, node records, relationship lists, namespace records, merge reports, and compatibility reports.",
+            "1.3.1": "In the current protocol, Core includes the xananode-node-types.",
+            "1.3.2": "v0.",
+            "1.3.3": "3.",
+            "1.3.4": "0.",
+            "1.3.5": "json registry, the xananode-relationship-types.",
+            "1.3.6": "v0.",
+            "1.3.7": "4.",
+            "1.3.8": "0.",
+            "1.3.9": "json registry, and JSON Schemas for substrate manifests, node records, relationship lists, namespace records, merge reports, and compatibility reports."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "XanaNode Core is the shared compatibility layer.\n\nA substrate may extend it, but the core gives other tools a stable set of meanings to validate, display, map, and merge.\n\nIn the current protocol, Core includes the xananode-node-types.v0.3.0.json registry, the xananode-relationship-types.v0.4.0.json registry, and JSON Schemas for substrate manifests, node records, relationship lists, namespace records, merge reports, and compatibility reports.",
+            "1.1": "XanaNode Core is the shared compatibility layer.",
+            "1.1.1": "XanaNode Core is the shared compatibility layer.",
+            "1.2": "A substrate may extend it, but the core gives other tools a stable set of meanings to validate, display, map, and merge.",
+            "1.2.1": "A substrate may extend it, but the core gives other tools a stable set of meanings to validate, display, map, and merge.",
+            "1.3": "In the current protocol, Core includes the xananode-node-types.v0.3.0.json registry, the xananode-relationship-types.v0.4.0.json registry, and JSON Schemas for substrate manifests, node records, relationship lists, namespace records, merge reports, and compatibility reports.",
+            "1.3.1": "In the current protocol, Core includes the xananode-node-types.",
+            "1.3.2": "v0.",
+            "1.3.3": "3.",
+            "1.3.4": "0.",
+            "1.3.5": "json registry, the xananode-relationship-types.",
+            "1.3.6": "v0.",
+            "1.3.7": "4.",
+            "1.3.8": "0.",
+            "1.3.9": "json registry, and JSON Schemas for substrate manifests, node records, relationship lists, namespace records, merge reports, and compatibility reports."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "XanaNode Core Schema",
+      "type": "schema"
+    },
+    "substrate-relationships-schema": {
+      "versions": {
+        "2020-12": {
+          "fragments": {
+            "1": "This schema validates relationships.json.\n\nIt requires each relationship to have an id, source, target, type, and summary. Optional fields preserve weight, visibility, assertion provenance, confidence, evidence, tumbler address, external-target metadata, and federation metadata.",
+            "1.1": "This schema validates relationships.json.",
+            "1.1.1": "This schema validates relationships.",
+            "1.1.2": "json.",
+            "1.2": "It requires each relationship to have an id, source, target, type, and summary. Optional fields preserve weight, visibility, assertion provenance, confidence, evidence, tumbler address, external-target metadata, and federation metadata.",
+            "1.2.1": "It requires each relationship to have an id, source, target, type, and summary.",
+            "1.2.2": "Optional fields preserve weight, visibility, assertion provenance, confidence, evidence, tumbler address, external-target metadata, and federation metadata."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "This schema validates relationships.json.\n\nIt requires each relationship to have an id, source, target, type, and summary. Optional fields preserve weight, visibility, assertion provenance, confidence, evidence, tumbler address, external-target metadata, and federation metadata.",
+            "1.1": "This schema validates relationships.json.",
+            "1.1.1": "This schema validates relationships.",
+            "1.1.2": "json.",
+            "1.2": "It requires each relationship to have an id, source, target, type, and summary. Optional fields preserve weight, visibility, assertion provenance, confidence, evidence, tumbler address, external-target metadata, and federation metadata.",
+            "1.2.1": "It requires each relationship to have an id, source, target, type, and summary.",
+            "1.2.2": "Optional fields preserve weight, visibility, assertion provenance, confidence, evidence, tumbler address, external-target metadata, and federation metadata."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Substrate Relationships Schema",
+      "type": "schema"
+    },
+    "substrate-node-schema": {
+      "versions": {
+        "2020-12": {
+          "fragments": {
+            "1": "This schema validates each exported node record.\n\nIt requires a protocol id, title, type, importance, summary, and relationship summaries. It also accepts provenance fields and fragment metadata such as source_node, fragment_id, tumbler, and selector.",
+            "1.1": "This schema validates each exported node record.",
+            "1.1.1": "This schema validates each exported node record.",
+            "1.2": "It requires a protocol id, title, type, importance, summary, and relationship summaries. It also accepts provenance fields and fragment metadata such as source_node, fragment_id, tumbler, and selector.",
+            "1.2.1": "It requires a protocol id, title, type, importance, summary, and relationship summaries.",
+            "1.2.2": "It also accepts provenance fields and fragment metadata such as source_node, fragment_id, tumbler, and selector."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "This schema validates each exported node record.\n\nIt requires a protocol id, title, type, importance, summary, and relationship summaries. It also accepts provenance fields and fragment metadata such as source_node, fragment_id, tumbler, and selector.",
+            "1.1": "This schema validates each exported node record.",
+            "1.1.1": "This schema validates each exported node record.",
+            "1.2": "It requires a protocol id, title, type, importance, summary, and relationship summaries. It also accepts provenance fields and fragment metadata such as source_node, fragment_id, tumbler, and selector.",
+            "1.2.1": "It requires a protocol id, title, type, importance, summary, and relationship summaries.",
+            "1.2.2": "It also accepts provenance fields and fragment metadata such as source_node, fragment_id, tumbler, and selector."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Substrate Node Schema",
+      "type": "schema"
+    },
+    "substrate-manifest-schema": {
+      "versions": {
+        "2020-12": {
+          "fragments": {
+            "1": "This schema validates substrate.json.\n\nIt checks the substrate identifier, name, namespace, version, optional description, schema version, maintainers, imports, and extension declarations.",
+            "1.1": "This schema validates substrate.json.",
+            "1.1.1": "This schema validates substrate.",
+            "1.1.2": "json.",
+            "1.2": "It checks the substrate identifier, name, namespace, version, optional description, schema version, maintainers, imports, and extension declarations.",
+            "1.2.1": "It checks the substrate identifier, name, namespace, version, optional description, schema version, maintainers, imports, and extension declarations."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "This schema validates substrate.json.\n\nIt checks the substrate identifier, name, namespace, version, optional description, schema version, maintainers, imports, and extension declarations.",
+            "1.1": "This schema validates substrate.json.",
+            "1.1.1": "This schema validates substrate.",
+            "1.1.2": "json.",
+            "1.2": "It checks the substrate identifier, name, namespace, version, optional description, schema version, maintainers, imports, and extension declarations.",
+            "1.2.1": "It checks the substrate identifier, name, namespace, version, optional description, schema version, maintainers, imports, and extension declarations."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Substrate Manifest Schema",
+      "type": "schema"
+    },
+    "namespace-schema": {
+      "versions": {
+        "2020-12": {
+          "fragments": {
+            "1": "Namespace records help identify who owns a prefix and how it should be interpreted.\n\nThey support registry tooling, extension discovery, and federation checks while allowing unknown namespaces to remain preserved rather than rejected.",
+            "1.1": "Namespace records help identify who owns a prefix and how it should be interpreted.",
+            "1.1.1": "Namespace records help identify who owns a prefix and how it should be interpreted.",
+            "1.2": "They support registry tooling, extension discovery, and federation checks while allowing unknown namespaces to remain preserved rather than rejected.",
+            "1.2.1": "They support registry tooling, extension discovery, and federation checks while allowing unknown namespaces to remain preserved rather than rejected."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Namespace records help identify who owns a prefix and how it should be interpreted.\n\nThey support registry tooling, extension discovery, and federation checks while allowing unknown namespaces to remain preserved rather than rejected.",
+            "1.1": "Namespace records help identify who owns a prefix and how it should be interpreted.",
+            "1.1.1": "Namespace records help identify who owns a prefix and how it should be interpreted.",
+            "1.2": "They support registry tooling, extension discovery, and federation checks while allowing unknown namespaces to remain preserved rather than rejected.",
+            "1.2.1": "They support registry tooling, extension discovery, and federation checks while allowing unknown namespaces to remain preserved rather than rejected."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Namespace Schema",
+      "type": "schema"
+    },
+    "merge-report-schema": {
+      "versions": {
+        "2020-12": {
+          "fragments": {
+            "1": "This schema validates the record of a proposed merge or comparison.\n\nIt preserves mappings, conflicts, identity decisions, unresolved questions, and warnings so downstream tools can inspect what happened without treating a comparison as a destructive merge.",
+            "1.1": "This schema validates the record of a proposed merge or comparison.",
+            "1.1.1": "This schema validates the record of a proposed merge or comparison.",
+            "1.2": "It preserves mappings, conflicts, identity decisions, unresolved questions, and warnings so downstream tools can inspect what happened without treating a comparison as a destructive merge.",
+            "1.2.1": "It preserves mappings, conflicts, identity decisions, unresolved questions, and warnings so downstream tools can inspect what happened without treating a comparison as a destructive merge."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "This schema validates the record of a proposed merge or comparison.\n\nIt preserves mappings, conflicts, identity decisions, unresolved questions, and warnings so downstream tools can inspect what happened without treating a comparison as a destructive merge.",
+            "1.1": "This schema validates the record of a proposed merge or comparison.",
+            "1.1.1": "This schema validates the record of a proposed merge or comparison.",
+            "1.2": "It preserves mappings, conflicts, identity decisions, unresolved questions, and warnings so downstream tools can inspect what happened without treating a comparison as a destructive merge.",
+            "1.2.1": "It preserves mappings, conflicts, identity decisions, unresolved questions, and warnings so downstream tools can inspect what happened without treating a comparison as a destructive merge."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Merge Report Schema",
+      "type": "schema"
+    },
+    "compatibility-report-schema": {
+      "versions": {
+        "2020-12": {
+          "fragments": {
+            "1": "This schema validates reports about what one implementation can safely understand.\n\nThose reports let a tool say more than pass or fail. They record the achieved compatibility level, recognized schemas, unsupported extensions, warnings, and blocking issues.",
+            "1.1": "This schema validates reports about what one implementation can safely understand.",
+            "1.1.1": "This schema validates reports about what one implementation can safely understand.",
+            "1.2": "Those reports let a tool say more than pass or fail. They record the achieved compatibility level, recognized schemas, unsupported extensions, warnings, and blocking issues.",
+            "1.2.1": "Those reports let a tool say more than pass or fail.",
+            "1.2.2": "They record the achieved compatibility level, recognized schemas, unsupported extensions, warnings, and blocking issues."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "This schema validates reports about what one implementation can safely understand.\n\nThose reports let a tool say more than pass or fail. They record the achieved compatibility level, recognized schemas, unsupported extensions, warnings, and blocking issues.",
+            "1.1": "This schema validates reports about what one implementation can safely understand.",
+            "1.1.1": "This schema validates reports about what one implementation can safely understand.",
+            "1.2": "Those reports let a tool say more than pass or fail. They record the achieved compatibility level, recognized schemas, unsupported extensions, warnings, and blocking issues.",
+            "1.2.1": "Those reports let a tool say more than pass or fail.",
+            "1.2.2": "They record the achieved compatibility level, recognized schemas, unsupported extensions, warnings, and blocking issues."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Compatibility Report Schema",
+      "type": "schema"
+    },
+    "xananode-hugo-theme": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "The Hugo theme is not XanaNode itself.\n\nIt is one reference implementation: a static site generator, content folder, front matter conventions, JSON index, and graph viewer that demonstrate the XanaNode model.",
+            "1.1": "The Hugo theme is not XanaNode itself.",
+            "1.1.1": "The Hugo theme is not XanaNode itself.",
+            "1.2": "It is one reference implementation: a static site generator, content folder, front matter conventions, JSON index, and graph viewer that demonstrate the XanaNode model.",
+            "1.2.1": "It is one reference implementation: a static site generator, content folder, front matter conventions, JSON index, and graph viewer that demonstrate the XanaNode model."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "The Hugo theme is not XanaNode itself.\n\nIt is one reference implementation: a static site generator, content folder, front matter conventions, JSON index, and graph viewer that demonstrate the XanaNode model.",
+            "1.1": "The Hugo theme is not XanaNode itself.",
+            "1.1.1": "The Hugo theme is not XanaNode itself.",
+            "1.2": "It is one reference implementation: a static site generator, content folder, front matter conventions, JSON index, and graph viewer that demonstrate the XanaNode model.",
+            "1.2.1": "It is one reference implementation: a static site generator, content folder, front matter conventions, JSON index, and graph viewer that demonstrate the XanaNode model."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "XanaNode Hugo Theme",
+      "type": "project"
+    },
+    "project-xanadu": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Project Xanadu is the clearest historical predecessor for persistent transclusion, deep linking, and relationship-preserving media.",
+            "1.1": "Project Xanadu is the clearest historical predecessor for persistent transclusion, deep linking, and relationship-preserving media.",
+            "1.1.1": "Project Xanadu is the clearest historical predecessor for persistent transclusion, deep linking, and relationship-preserving media."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Project Xanadu is the clearest historical predecessor for persistent transclusion, deep linking, and relationship-preserving media.",
+            "1.1": "Project Xanadu is the clearest historical predecessor for persistent transclusion, deep linking, and relationship-preserving media.",
+            "1.1.1": "Project Xanadu is the clearest historical predecessor for persistent transclusion, deep linking, and relationship-preserving media."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Project Xanadu",
+      "type": "project"
+    },
+    "nls": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "NLS demonstrated interactive navigation, collaborative editing, and computer-supported knowledge work decades before those ideas became common.",
+            "1.1": "NLS demonstrated interactive navigation, collaborative editing, and computer-supported knowledge work decades before those ideas became common.",
+            "1.1.1": "NLS demonstrated interactive navigation, collaborative editing, and computer-supported knowledge work decades before those ideas became common."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "NLS demonstrated interactive navigation, collaborative editing, and computer-supported knowledge work decades before those ideas became common.",
+            "1.1": "NLS demonstrated interactive navigation, collaborative editing, and computer-supported knowledge work decades before those ideas became common.",
+            "1.1.1": "NLS demonstrated interactive navigation, collaborative editing, and computer-supported knowledge work decades before those ideas became common."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "NLS",
+      "type": "project"
+    },
+    "memex": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "The Memex is an ancestor concept for associative trails and human-centered knowledge navigation.",
+            "1.1": "The Memex is an ancestor concept for associative trails and human-centered knowledge navigation.",
+            "1.1.1": "The Memex is an ancestor concept for associative trails and human-centered knowledge navigation."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "The Memex is an ancestor concept for associative trails and human-centered knowledge navigation.",
+            "1.1": "The Memex is an ancestor concept for associative trails and human-centered knowledge navigation.",
+            "1.1.1": "The Memex is an ancestor concept for associative trails and human-centered knowledge navigation."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Memex",
+      "type": "project"
+    },
+    "vannevar-bush": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Vannevar Bush framed the problem as one of navigation through a growing record of knowledge.",
+            "1.1": "Vannevar Bush framed the problem as one of navigation through a growing record of knowledge.",
+            "1.1.1": "Vannevar Bush framed the problem as one of navigation through a growing record of knowledge."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Vannevar Bush framed the problem as one of navigation through a growing record of knowledge.",
+            "1.1": "Vannevar Bush framed the problem as one of navigation through a growing record of knowledge.",
+            "1.1.1": "Vannevar Bush framed the problem as one of navigation through a growing record of knowledge."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Vannevar Bush",
+      "type": "person"
+    },
     "ted-nelson": {
       "versions": {
         "v1": {
           "fragments": {
-            "1": "Nelson argued that documents were the wrong primitive and that relationships between materials should remain visible and traversable.",
-            "1.1": "Nelson argued that documents were the wrong primitive and that relationships between materials should remain visible and traversable.",
-            "1.1.1": "Nelson argued that documents were the wrong primitive and that relationships between materials should remain visible and traversable."
-          }
+            "1": "Ted Nelson argued that documents were the wrong primitive and that systems should preserve reusable, visibly connected media.",
+            "1.1": "Ted Nelson argued that documents were the wrong primitive and that systems should preserve reusable, visibly connected media.",
+            "1.1.1": "Ted Nelson argued that documents were the wrong primitive and that systems should preserve reusable, visibly connected media."
+          },
+          "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "Nelson argued that documents were the wrong primitive and that relationships between materials should remain visible and traversable.",
-            "1.1": "Nelson argued that documents were the wrong primitive and that relationships between materials should remain visible and traversable.",
-            "1.1.1": "Nelson argued that documents were the wrong primitive and that relationships between materials should remain visible and traversable."
-          }
+            "1": "Ted Nelson argued that documents were the wrong primitive and that systems should preserve reusable, visibly connected media.",
+            "1.1": "Ted Nelson argued that documents were the wrong primitive and that systems should preserve reusable, visibly connected media.",
+            "1.1.1": "Ted Nelson argued that documents were the wrong primitive and that systems should preserve reusable, visibly connected media."
+          },
+          "metadata": {}
         }
       },
       "title": "Ted Nelson",
       "type": "person"
     },
-    "russell-bromley-ai-scam": {
+    "douglas-engelbart": {
       "versions": {
         "v1": {
           "fragments": {
-            "1": "The surface story is simple: an AI system surfaced fake shopping links.\n\nThe deeper chain is not simple: brand identity, acquisition, retired domains, official retail presence, scam copies, search indexing, and AI retrieval all collide.\n\n{{< relation type=\"demonstrates\" target=\"knowledge-substrate\" >}}",
-            "1.1": "The surface story is simple: an AI system surfaced fake shopping links.",
-            "1.1.1": "The surface story is simple: an AI system surfaced fake shopping links.",
-            "1.2": "The deeper chain is not simple: brand identity, acquisition, retired domains, official retail presence, scam copies, search indexing, and AI retrieval all collide.",
-            "1.2.1": "The deeper chain is not simple: brand identity, acquisition, retired domains, official retail presence, scam copies, search indexing, and AI retrieval all collide.",
-            "1.3": "{{< relation type=\"demonstrates\" target=\"knowledge-substrate\" >}}",
-            "1.3.1": "{{< relation type=\"demonstrates\" target=\"knowledge-substrate\" >}}"
-          }
+            "1": "Engelbart treated computers as tools for increasing human ability to reason, collaborate, and navigate complex problems.",
+            "1.1": "Engelbart treated computers as tools for increasing human ability to reason, collaborate, and navigate complex problems.",
+            "1.1.1": "Engelbart treated computers as tools for increasing human ability to reason, collaborate, and navigate complex problems."
+          },
+          "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "The surface story is simple: an AI system surfaced fake shopping links.\n\nThe deeper chain is not simple: brand identity, acquisition, retired domains, official retail presence, scam copies, search indexing, and AI retrieval all collide.\n\n{{< relation type=\"demonstrates\" target=\"knowledge-substrate\" >}}",
-            "1.1": "The surface story is simple: an AI system surfaced fake shopping links.",
-            "1.1.1": "The surface story is simple: an AI system surfaced fake shopping links.",
-            "1.2": "The deeper chain is not simple: brand identity, acquisition, retired domains, official retail presence, scam copies, search indexing, and AI retrieval all collide.",
-            "1.2.1": "The deeper chain is not simple: brand identity, acquisition, retired domains, official retail presence, scam copies, search indexing, and AI retrieval all collide.",
-            "1.3": "{{< relation type=\"demonstrates\" target=\"knowledge-substrate\" >}}",
-            "1.3.1": "{{< relation type=\"demonstrates\" target=\"knowledge-substrate\" >}}"
-          }
+            "1": "Engelbart treated computers as tools for increasing human ability to reason, collaborate, and navigate complex problems.",
+            "1.1": "Engelbart treated computers as tools for increasing human ability to reason, collaborate, and navigate complex problems.",
+            "1.1.1": "Engelbart treated computers as tools for increasing human ability to reason, collaborate, and navigate complex problems."
+          },
+          "metadata": {}
         }
       },
-      "title": "The Russell & Bromley AI Scam Problem",
+      "title": "Douglas Engelbart",
+      "type": "person"
+    },
+    "link-rot": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Link rot shows why ordinary document-embedded references are fragile.\n\nThe target may disappear, move, change meaning, or lose its surrounding context.",
+            "1.1": "Link rot shows why ordinary document-embedded references are fragile.",
+            "1.1.1": "Link rot shows why ordinary document-embedded references are fragile.",
+            "1.2": "The target may disappear, move, change meaning, or lose its surrounding context.",
+            "1.2.1": "The target may disappear, move, change meaning, or lose its surrounding context."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Link rot shows why ordinary document-embedded references are fragile.\n\nThe target may disappear, move, change meaning, or lose its surrounding context.",
+            "1.1": "Link rot shows why ordinary document-embedded references are fragile.",
+            "1.1.1": "Link rot shows why ordinary document-embedded references are fragile.",
+            "1.2": "The target may disappear, move, change meaning, or lose its surrounding context.",
+            "1.2.1": "The target may disappear, move, change meaning, or lose its surrounding context."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Link Rot",
       "type": "observation"
     },
-    "as-we-may-or-may-not-remember": {
+    "xananode-icon": {
       "versions": {
         "v1": {
           "fragments": {
-            "1": "In 1945, Vannevar Bush worried that humanity was producing more knowledge than it could meaningfully navigate.\n\n{{< claim id=\"info-not-knowledge\" >}} Information is not knowledge. Knowledge lives in relationships, context, provenance, contradiction, and memory. {{< /claim >}}\n\nThe web solved publication. It did not solve memory.\n\n{{< transclude source=\"bush-as-we-may-think\" label=\"Bush on information overload\" >}}\n\nThat is the thing AI is exposing now.",
-            "1.1": "In 1945, Vannevar Bush worried that humanity was producing more knowledge than it could meaningfully navigate.",
-            "1.1.1": "In 1945, Vannevar Bush worried that humanity was producing more knowledge than it could meaningfully navigate.",
-            "1.2": "{{< claim id=\"info-not-knowledge\" >}} Information is not knowledge. Knowledge lives in relationships, context, provenance, contradiction, and memory. {{< /claim >}}",
-            "1.2.1": "{{< claim id=\"info-not-knowledge\" >}} Information is not knowledge.",
-            "1.2.2": "Knowledge lives in relationships, context, provenance, contradiction, and memory.",
-            "1.2.3": "{{< /claim >}}",
-            "1.3": "The web solved publication. It did not solve memory.",
-            "1.3.1": "The web solved publication.",
-            "1.3.2": "It did not solve memory.",
-            "1.4": "{{< transclude source=\"bush-as-we-may-think\" label=\"Bush on information overload\" >}}",
-            "1.4.1": "{{< transclude source=\"bush-as-we-may-think\" label=\"Bush on information overload\" >}}",
-            "1.5": "That is the thing AI is exposing now.",
-            "1.5.1": "That is the thing AI is exposing now."
-          }
+            "1": "This icon is the visual mark for the XanaNode theme.\n\nThe crossing lines and central node are meant to suggest typed relationships, visible lineage, and a substrate whose meaning comes from the connections between things rather than from isolated documents.",
+            "1.1": "This icon is the visual mark for the XanaNode theme.",
+            "1.1.1": "This icon is the visual mark for the XanaNode theme.",
+            "1.2": "The crossing lines and central node are meant to suggest typed relationships, visible lineage, and a substrate whose meaning comes from the connections between things rather than from isolated documents.",
+            "1.2.1": "The crossing lines and central node are meant to suggest typed relationships, visible lineage, and a substrate whose meaning comes from the connections between things rather than from isolated documents."
+          },
+          "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "In 1945, Vannevar Bush worried that humanity was producing more knowledge than it could meaningfully navigate.\n\n{{< claim id=\"info-not-knowledge\" >}} Information is not knowledge. Knowledge lives in relationships, context, provenance, contradiction, and memory. {{< /claim >}}\n\nThe web solved publication. It did not solve memory.\n\n{{< transclude source=\"bush-as-we-may-think\" label=\"Bush on information overload\" >}}\n\nThat is the thing AI is exposing now.",
-            "1.1": "In 1945, Vannevar Bush worried that humanity was producing more knowledge than it could meaningfully navigate.",
-            "1.1.1": "In 1945, Vannevar Bush worried that humanity was producing more knowledge than it could meaningfully navigate.",
-            "1.2": "{{< claim id=\"info-not-knowledge\" >}} Information is not knowledge. Knowledge lives in relationships, context, provenance, contradiction, and memory. {{< /claim >}}",
-            "1.2.1": "{{< claim id=\"info-not-knowledge\" >}} Information is not knowledge.",
-            "1.2.2": "Knowledge lives in relationships, context, provenance, contradiction, and memory.",
-            "1.2.3": "{{< /claim >}}",
-            "1.3": "The web solved publication. It did not solve memory.",
-            "1.3.1": "The web solved publication.",
-            "1.3.2": "It did not solve memory.",
-            "1.4": "{{< transclude source=\"bush-as-we-may-think\" label=\"Bush on information overload\" >}}",
-            "1.4.1": "{{< transclude source=\"bush-as-we-may-think\" label=\"Bush on information overload\" >}}",
-            "1.5": "That is the thing AI is exposing now.",
-            "1.5.1": "That is the thing AI is exposing now."
-          }
+            "1": "This icon is the visual mark for the XanaNode theme.\n\nThe crossing lines and central node are meant to suggest typed relationships, visible lineage, and a substrate whose meaning comes from the connections between things rather than from isolated documents.",
+            "1.1": "This icon is the visual mark for the XanaNode theme.",
+            "1.1.1": "This icon is the visual mark for the XanaNode theme.",
+            "1.2": "The crossing lines and central node are meant to suggest typed relationships, visible lineage, and a substrate whose meaning comes from the connections between things rather than from isolated documents.",
+            "1.2.1": "The crossing lines and central node are meant to suggest typed relationships, visible lineage, and a substrate whose meaning comes from the connections between things rather than from isolated documents."
+          },
+          "metadata": {}
         }
       },
-      "title": "As We May or May Not Remember",
+      "title": "XanaNode Icon",
+      "type": "media"
+    },
+    "what-is-xananode": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "XanaNode is best understood in layers.\n\nThe ontology defines what kinds of things can be represented.\n\nThe relationship vocabulary defines why those things are connected.\n\nA substrate is an independently authored graph using that vocabulary.\n\nProtocol artifacts make that graph portable: substrate.json identifies the substrate, node records describe addressable objects, relationships.json preserves typed edges, schemas validate the artifacts, and reports explain compatibility or merge decisions.\n\nA renderer, such as this Hugo theme, is one way to publish and navigate a substrate. It is not the protocol itself.\n\nThe larger goal is federation: many independently moderated substrates that can still interoperate because they declare their schemas and relationships clearly.",
+            "1.1": "XanaNode is best understood in layers.",
+            "1.1.1": "XanaNode is best understood in layers.",
+            "1.2": "The ontology defines what kinds of things can be represented.",
+            "1.2.1": "The ontology defines what kinds of things can be represented.",
+            "1.3": "The relationship vocabulary defines why those things are connected.",
+            "1.3.1": "The relationship vocabulary defines why those things are connected.",
+            "1.4": "A substrate is an independently authored graph using that vocabulary.",
+            "1.4.1": "A substrate is an independently authored graph using that vocabulary.",
+            "1.5": "Protocol artifacts make that graph portable: substrate.json identifies the substrate, node records describe addressable objects, relationships.json preserves typed edges, schemas validate the artifacts, and reports explain compatibility or merge decisions.",
+            "1.5.1": "Protocol artifacts make that graph portable: substrate.",
+            "1.5.2": "json identifies the substrate, node records describe addressable objects, relationships.",
+            "1.5.3": "json preserves typed edges, schemas validate the artifacts, and reports explain compatibility or merge decisions.",
+            "1.6": "A renderer, such as this Hugo theme, is one way to publish and navigate a substrate. It is not the protocol itself.",
+            "1.6.1": "A renderer, such as this Hugo theme, is one way to publish and navigate a substrate.",
+            "1.6.2": "It is not the protocol itself.",
+            "1.7": "The larger goal is federation: many independently moderated substrates that can still interoperate because they declare their schemas and relationships clearly.",
+            "1.7.1": "The larger goal is federation: many independently moderated substrates that can still interoperate because they declare their schemas and relationships clearly."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "XanaNode is best understood in layers.\n\nThe ontology defines what kinds of things can be represented.\n\nThe relationship vocabulary defines why those things are connected.\n\nA substrate is an independently authored graph using that vocabulary.\n\nProtocol artifacts make that graph portable: substrate.json identifies the substrate, node records describe addressable objects, relationships.json preserves typed edges, schemas validate the artifacts, and reports explain compatibility or merge decisions.\n\nA renderer, such as this Hugo theme, is one way to publish and navigate a substrate. It is not the protocol itself.\n\nThe larger goal is federation: many independently moderated substrates that can still interoperate because they declare their schemas and relationships clearly.",
+            "1.1": "XanaNode is best understood in layers.",
+            "1.1.1": "XanaNode is best understood in layers.",
+            "1.2": "The ontology defines what kinds of things can be represented.",
+            "1.2.1": "The ontology defines what kinds of things can be represented.",
+            "1.3": "The relationship vocabulary defines why those things are connected.",
+            "1.3.1": "The relationship vocabulary defines why those things are connected.",
+            "1.4": "A substrate is an independently authored graph using that vocabulary.",
+            "1.4.1": "A substrate is an independently authored graph using that vocabulary.",
+            "1.5": "Protocol artifacts make that graph portable: substrate.json identifies the substrate, node records describe addressable objects, relationships.json preserves typed edges, schemas validate the artifacts, and reports explain compatibility or merge decisions.",
+            "1.5.1": "Protocol artifacts make that graph portable: substrate.",
+            "1.5.2": "json identifies the substrate, node records describe addressable objects, relationships.",
+            "1.5.3": "json preserves typed edges, schemas validate the artifacts, and reports explain compatibility or merge decisions.",
+            "1.6": "A renderer, such as this Hugo theme, is one way to publish and navigate a substrate. It is not the protocol itself.",
+            "1.6.1": "A renderer, such as this Hugo theme, is one way to publish and navigate a substrate.",
+            "1.6.2": "It is not the protocol itself.",
+            "1.7": "The larger goal is federation: many independently moderated substrates that can still interoperate because they declare their schemas and relationships clearly.",
+            "1.7.1": "The larger goal is federation: many independently moderated substrates that can still interoperate because they declare their schemas and relationships clearly."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "What Is XanaNode?",
       "type": "essay"
+    },
+    "start-here": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "XanaNode begins with a simple claim: civilization is good at publishing information and bad at preserving the relationships that make information understandable.\n\nA page can say something. A graph can show where that statement came from, what supports it, what challenges it, what it depends on, and how it changed.\n\nThis example substrate explains XanaNode using XanaNode itself. The pages are human-readable nodes, and the build also publishes protocol JSON for machines.\n\nFollow the core trail from the problem of isolated documents, through typed relationships, provenance, transclusion, namespacing, merge validation, and federation.\n\nThen follow the protocol artifacts trail to see the manifest, node records, relationship list, schemas, registries, extension examples, reports, and governance rules that make federation concrete.",
+            "1.1": "XanaNode begins with a simple claim: civilization is good at publishing information and bad at preserving the relationships that make information understandable.",
+            "1.1.1": "XanaNode begins with a simple claim: civilization is good at publishing information and bad at preserving the relationships that make information understandable.",
+            "1.2": "A page can say something. A graph can show where that statement came from, what supports it, what challenges it, what it depends on, and how it changed.",
+            "1.2.1": "A page can say something.",
+            "1.2.2": "A graph can show where that statement came from, what supports it, what challenges it, what it depends on, and how it changed.",
+            "1.3": "This example substrate explains XanaNode using XanaNode itself. The pages are human-readable nodes, and the build also publishes protocol JSON for machines.",
+            "1.3.1": "This example substrate explains XanaNode using XanaNode itself.",
+            "1.3.2": "The pages are human-readable nodes, and the build also publishes protocol JSON for machines.",
+            "1.4": "Follow the core trail from the problem of isolated documents, through typed relationships, provenance, transclusion, namespacing, merge validation, and federation.",
+            "1.4.1": "Follow the core trail from the problem of isolated documents, through typed relationships, provenance, transclusion, namespacing, merge validation, and federation.",
+            "1.5": "Then follow the protocol artifacts trail to see the manifest, node records, relationship list, schemas, registries, extension examples, reports, and governance rules that make federation concrete.",
+            "1.5.1": "Then follow the protocol artifacts trail to see the manifest, node records, relationship list, schemas, registries, extension examples, reports, and governance rules that make federation concrete."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "XanaNode begins with a simple claim: civilization is good at publishing information and bad at preserving the relationships that make information understandable.\n\nA page can say something. A graph can show where that statement came from, what supports it, what challenges it, what it depends on, and how it changed.\n\nThis example substrate explains XanaNode using XanaNode itself. The pages are human-readable nodes, and the build also publishes protocol JSON for machines.\n\nFollow the core trail from the problem of isolated documents, through typed relationships, provenance, transclusion, namespacing, merge validation, and federation.\n\nThen follow the protocol artifacts trail to see the manifest, node records, relationship list, schemas, registries, extension examples, reports, and governance rules that make federation concrete.",
+            "1.1": "XanaNode begins with a simple claim: civilization is good at publishing information and bad at preserving the relationships that make information understandable.",
+            "1.1.1": "XanaNode begins with a simple claim: civilization is good at publishing information and bad at preserving the relationships that make information understandable.",
+            "1.2": "A page can say something. A graph can show where that statement came from, what supports it, what challenges it, what it depends on, and how it changed.",
+            "1.2.1": "A page can say something.",
+            "1.2.2": "A graph can show where that statement came from, what supports it, what challenges it, what it depends on, and how it changed.",
+            "1.3": "This example substrate explains XanaNode using XanaNode itself. The pages are human-readable nodes, and the build also publishes protocol JSON for machines.",
+            "1.3.1": "This example substrate explains XanaNode using XanaNode itself.",
+            "1.3.2": "The pages are human-readable nodes, and the build also publishes protocol JSON for machines.",
+            "1.4": "Follow the core trail from the problem of isolated documents, through typed relationships, provenance, transclusion, namespacing, merge validation, and federation.",
+            "1.4.1": "Follow the core trail from the problem of isolated documents, through typed relationships, provenance, transclusion, namespacing, merge validation, and federation.",
+            "1.5": "Then follow the protocol artifacts trail to see the manifest, node records, relationship list, schemas, registries, extension examples, reports, and governance rules that make federation concrete.",
+            "1.5.1": "Then follow the protocol artifacts trail to see the manifest, node records, relationship list, schemas, registries, extension examples, reports, and governance rules that make federation concrete."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Start Here",
+      "type": "essay"
+    },
+    "xananode": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "XanaNode is a protocol, ontology, and publishing architecture for interoperable knowledge substrates.\n\nIt treats relationships as first-class structures, not decoration around documents. Claims, sources, people, events, media, trails, schemas, fragments, and revisions become addressable nodes connected by typed relationships.\n\nThe core schema gives independently authored substrates enough shared meaning to validate, compare, merge, federate, or analyze them without requiring a single central source of truth.",
+            "1.1": "XanaNode is a protocol, ontology, and publishing architecture for interoperable knowledge substrates.",
+            "1.1.1": "XanaNode is a protocol, ontology, and publishing architecture for interoperable knowledge substrates.",
+            "1.2": "It treats relationships as first-class structures, not decoration around documents. Claims, sources, people, events, media, trails, schemas, fragments, and revisions become addressable nodes connected by typed relationships.",
+            "1.2.1": "It treats relationships as first-class structures, not decoration around documents.",
+            "1.2.2": "Claims, sources, people, events, media, trails, schemas, fragments, and revisions become addressable nodes connected by typed relationships.",
+            "1.3": "The core schema gives independently authored substrates enough shared meaning to validate, compare, merge, federate, or analyze them without requiring a single central source of truth.",
+            "1.3.1": "The core schema gives independently authored substrates enough shared meaning to validate, compare, merge, federate, or analyze them without requiring a single central source of truth."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "XanaNode is a protocol, ontology, and publishing architecture for interoperable knowledge substrates.\n\nIt treats relationships as first-class structures, not decoration around documents. Claims, sources, people, events, media, trails, schemas, fragments, and revisions become addressable nodes connected by typed relationships.\n\nThe core schema gives independently authored substrates enough shared meaning to validate, compare, merge, federate, or analyze them without requiring a single central source of truth.",
+            "1.1": "XanaNode is a protocol, ontology, and publishing architecture for interoperable knowledge substrates.",
+            "1.1.1": "XanaNode is a protocol, ontology, and publishing architecture for interoperable knowledge substrates.",
+            "1.2": "It treats relationships as first-class structures, not decoration around documents. Claims, sources, people, events, media, trails, schemas, fragments, and revisions become addressable nodes connected by typed relationships.",
+            "1.2.1": "It treats relationships as first-class structures, not decoration around documents.",
+            "1.2.2": "Claims, sources, people, events, media, trails, schemas, fragments, and revisions become addressable nodes connected by typed relationships.",
+            "1.3": "The core schema gives independently authored substrates enough shared meaning to validate, compare, merge, federate, or analyze them without requiring a single central source of truth.",
+            "1.3.1": "The core schema gives independently authored substrates enough shared meaning to validate, compare, merge, federate, or analyze them without requiring a single central source of truth."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "XanaNode",
+      "type": "concept"
+    },
+    "unlabeled-hyperlink": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "The web hyperlink is powerful because it is simple. It spread because it was easy.\n\nIts weakness is that it usually does not say whether the target supports, contradicts, defines, documents, quotes, explains, or merely mentions the source.",
+            "1.1": "The web hyperlink is powerful because it is simple. It spread because it was easy.",
+            "1.1.1": "The web hyperlink is powerful because it is simple.",
+            "1.1.2": "It spread because it was easy.",
+            "1.2": "Its weakness is that it usually does not say whether the target supports, contradicts, defines, documents, quotes, explains, or merely mentions the source.",
+            "1.2.1": "Its weakness is that it usually does not say whether the target supports, contradicts, defines, documents, quotes, explains, or merely mentions the source."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "The web hyperlink is powerful because it is simple. It spread because it was easy.\n\nIts weakness is that it usually does not say whether the target supports, contradicts, defines, documents, quotes, explains, or merely mentions the source.",
+            "1.1": "The web hyperlink is powerful because it is simple. It spread because it was easy.",
+            "1.1.1": "The web hyperlink is powerful because it is simple.",
+            "1.1.2": "It spread because it was easy.",
+            "1.2": "Its weakness is that it usually does not say whether the target supports, contradicts, defines, documents, quotes, explains, or merely mentions the source.",
+            "1.2.1": "Its weakness is that it usually does not say whether the target supports, contradicts, defines, documents, quotes, explains, or merely mentions the source."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Unlabeled Hyperlink",
+      "type": "concept"
+    },
+    "typed-relationships": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "A normal hyperlink says that two things are connected.\n\nA typed relationship says how they are connected.\n\nThat difference matters. supports, contradicts, explains, derived_from, memorializes, transcludes, and deep_links_to carry different meanings and should not be flattened into generic relatedness.",
+            "1.1": "A normal hyperlink says that two things are connected.",
+            "1.1.1": "A normal hyperlink says that two things are connected.",
+            "1.2": "A typed relationship says how they are connected.",
+            "1.2.1": "A typed relationship says how they are connected.",
+            "1.3": "That difference matters. supports, contradicts, explains, derived_from, memorializes, transcludes, and deep_links_to carry different meanings and should not be flattened into generic relatedness.",
+            "1.3.1": "That difference matters.",
+            "1.3.2": "supports, contradicts, explains, derived_from, memorializes, transcludes, and deep_links_to carry different meanings and should not be flattened into generic relatedness."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "A normal hyperlink says that two things are connected.\n\nA typed relationship says how they are connected.\n\nThat difference matters. supports, contradicts, explains, derived_from, memorializes, transcludes, and deep_links_to carry different meanings and should not be flattened into generic relatedness.",
+            "1.1": "A normal hyperlink says that two things are connected.",
+            "1.1.1": "A normal hyperlink says that two things are connected.",
+            "1.2": "A typed relationship says how they are connected.",
+            "1.2.1": "A typed relationship says how they are connected.",
+            "1.3": "That difference matters. supports, contradicts, explains, derived_from, memorializes, transcludes, and deep_links_to carry different meanings and should not be flattened into generic relatedness.",
+            "1.3.1": "That difference matters.",
+            "1.3.2": "supports, contradicts, explains, derived_from, memorializes, transcludes, and deep_links_to carry different meanings and should not be flattened into generic relatedness."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Typed Relationships",
+      "type": "concept"
+    },
+    "tumbler-addressing": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Tumbler addressing keeps content addressable when files move, URLs change, or layouts are rebuilt.\n\nXanaNode uses stable node identifiers and stable fragment identifiers for deep linking and transclusion.\n\nThe protocol-level address profile uses namespaced ids such as example.minimal:source/as-we-may-think#fragment/0004 so fragments can remain identifiable across renderers and rebuilds.\n\nThis page resolves a local stable fragment. The shortcode below points at fragment 0004 inside the as-we-may-think source node:\n\n{{< xana ref=\"as-we-may-think@v1/0004\" label=\"Tumbler-addressed fragment\" >}}\n\nIf the source file moves or the page layout changes, the reference still names the logical node, version, and fragment id rather than a fragile screen location.",
+            "1.1": "Tumbler addressing keeps content addressable when files move, URLs change, or layouts are rebuilt.",
+            "1.1.1": "Tumbler addressing keeps content addressable when files move, URLs change, or layouts are rebuilt.",
+            "1.2": "XanaNode uses stable node identifiers and stable fragment identifiers for deep linking and transclusion.",
+            "1.2.1": "XanaNode uses stable node identifiers and stable fragment identifiers for deep linking and transclusion.",
+            "1.3": "The protocol-level address profile uses namespaced ids such as example.minimal:source/as-we-may-think#fragment/0004 so fragments can remain identifiable across renderers and rebuilds.",
+            "1.3.1": "The protocol-level address profile uses namespaced ids such as example.",
+            "1.3.2": "minimal:source/as-we-may-think#fragment/0004 so fragments can remain identifiable across renderers and rebuilds.",
+            "1.4": "This page resolves a local stable fragment. The shortcode below points at fragment 0004 inside the as-we-may-think source node:",
+            "1.4.1": "This page resolves a local stable fragment.",
+            "1.4.2": "The shortcode below points at fragment 0004 inside the as-we-may-think source node:",
+            "1.5": "{{< xana ref=\"as-we-may-think@v1/0004\" label=\"Tumbler-addressed fragment\" >}}",
+            "1.5.1": "{{< xana ref=\"as-we-may-think@v1/0004\" label=\"Tumbler-addressed fragment\" >}}",
+            "1.6": "If the source file moves or the page layout changes, the reference still names the logical node, version, and fragment id rather than a fragile screen location.",
+            "1.6.1": "If the source file moves or the page layout changes, the reference still names the logical node, version, and fragment id rather than a fragile screen location."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Tumbler addressing keeps content addressable when files move, URLs change, or layouts are rebuilt.\n\nXanaNode uses stable node identifiers and stable fragment identifiers for deep linking and transclusion.\n\nThe protocol-level address profile uses namespaced ids such as example.minimal:source/as-we-may-think#fragment/0004 so fragments can remain identifiable across renderers and rebuilds.\n\nThis page resolves a local stable fragment. The shortcode below points at fragment 0004 inside the as-we-may-think source node:\n\n{{< xana ref=\"as-we-may-think@v1/0004\" label=\"Tumbler-addressed fragment\" >}}\n\nIf the source file moves or the page layout changes, the reference still names the logical node, version, and fragment id rather than a fragile screen location.",
+            "1.1": "Tumbler addressing keeps content addressable when files move, URLs change, or layouts are rebuilt.",
+            "1.1.1": "Tumbler addressing keeps content addressable when files move, URLs change, or layouts are rebuilt.",
+            "1.2": "XanaNode uses stable node identifiers and stable fragment identifiers for deep linking and transclusion.",
+            "1.2.1": "XanaNode uses stable node identifiers and stable fragment identifiers for deep linking and transclusion.",
+            "1.3": "The protocol-level address profile uses namespaced ids such as example.minimal:source/as-we-may-think#fragment/0004 so fragments can remain identifiable across renderers and rebuilds.",
+            "1.3.1": "The protocol-level address profile uses namespaced ids such as example.",
+            "1.3.2": "minimal:source/as-we-may-think#fragment/0004 so fragments can remain identifiable across renderers and rebuilds.",
+            "1.4": "This page resolves a local stable fragment. The shortcode below points at fragment 0004 inside the as-we-may-think source node:",
+            "1.4.1": "This page resolves a local stable fragment.",
+            "1.4.2": "The shortcode below points at fragment 0004 inside the as-we-may-think source node:",
+            "1.5": "{{< xana ref=\"as-we-may-think@v1/0004\" label=\"Tumbler-addressed fragment\" >}}",
+            "1.5.1": "{{< xana ref=\"as-we-may-think@v1/0004\" label=\"Tumbler-addressed fragment\" >}}",
+            "1.6": "If the source file moves or the page layout changes, the reference still names the logical node, version, and fragment id rather than a fragile screen location.",
+            "1.6.1": "If the source file moves or the page layout changes, the reference still names the logical node, version, and fragment id rather than a fragile screen location."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Tumbler Addressing",
+      "type": "concept"
     },
     "transclusion": {
       "versions": {
         "v1": {
           "fragments": {
-            "1": "Transclusion is one of Nelson's most important concepts: material is included without pretending it originated here.",
-            "1.1": "Transclusion is one of Nelson's most important concepts: material is included without pretending it originated here.",
-            "1.1.1": "Transclusion is one of Nelson's most important concepts: material is included without pretending it originated here."
-          }
+            "1": "Transclusion includes a source fragment by reference instead of turning it into an anonymous copy.\n\nIn this XanaNode substrate, a transclusion points to a stable fragment id inside a versioned source node.\n\nThe rendered passage keeps its source identity, selector metadata, attribution path, and protocol tumbler address.\n\nThis page includes fragment 0001 from the Xanadu source node:\n\n{{< xana ref=\"xanadu-document-interconnection@v1/0001\" label=\"Transcluded source fragment\" >}}\n\nThe block above is backed by xanadu-document-interconnection@v1/0001, which resolves to the protocol address xananode.example:source/xanadu-document-interconnection#fragment/0001.",
+            "1.1": "Transclusion includes a source fragment by reference instead of turning it into an anonymous copy.",
+            "1.1.1": "Transclusion includes a source fragment by reference instead of turning it into an anonymous copy.",
+            "1.2": "In this XanaNode substrate, a transclusion points to a stable fragment id inside a versioned source node.",
+            "1.2.1": "In this XanaNode substrate, a transclusion points to a stable fragment id inside a versioned source node.",
+            "1.3": "The rendered passage keeps its source identity, selector metadata, attribution path, and protocol tumbler address.",
+            "1.3.1": "The rendered passage keeps its source identity, selector metadata, attribution path, and protocol tumbler address.",
+            "1.4": "This page includes fragment 0001 from the Xanadu source node:",
+            "1.4.1": "This page includes fragment 0001 from the Xanadu source node:",
+            "1.5": "{{< xana ref=\"xanadu-document-interconnection@v1/0001\" label=\"Transcluded source fragment\" >}}",
+            "1.5.1": "{{< xana ref=\"xanadu-document-interconnection@v1/0001\" label=\"Transcluded source fragment\" >}}",
+            "1.6": "The block above is backed by xanadu-document-interconnection@v1/0001, which resolves to the protocol address xananode.example:source/xanadu-document-interconnection#fragment/0001.",
+            "1.6.1": "The block above is backed by xanadu-document-interconnection@v1/0001, which resolves to the protocol address xananode.",
+            "1.6.2": "example:source/xanadu-document-interconnection#fragment/0001."
+          },
+          "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "Transclusion is one of Nelson's most important concepts: material is included without pretending it originated here.",
-            "1.1": "Transclusion is one of Nelson's most important concepts: material is included without pretending it originated here.",
-            "1.1.1": "Transclusion is one of Nelson's most important concepts: material is included without pretending it originated here."
-          }
+            "1": "Transclusion includes a source fragment by reference instead of turning it into an anonymous copy.\n\nIn this XanaNode substrate, a transclusion points to a stable fragment id inside a versioned source node.\n\nThe rendered passage keeps its source identity, selector metadata, attribution path, and protocol tumbler address.\n\nThis page includes fragment 0001 from the Xanadu source node:\n\n{{< xana ref=\"xanadu-document-interconnection@v1/0001\" label=\"Transcluded source fragment\" >}}\n\nThe block above is backed by xanadu-document-interconnection@v1/0001, which resolves to the protocol address xananode.example:source/xanadu-document-interconnection#fragment/0001.",
+            "1.1": "Transclusion includes a source fragment by reference instead of turning it into an anonymous copy.",
+            "1.1.1": "Transclusion includes a source fragment by reference instead of turning it into an anonymous copy.",
+            "1.2": "In this XanaNode substrate, a transclusion points to a stable fragment id inside a versioned source node.",
+            "1.2.1": "In this XanaNode substrate, a transclusion points to a stable fragment id inside a versioned source node.",
+            "1.3": "The rendered passage keeps its source identity, selector metadata, attribution path, and protocol tumbler address.",
+            "1.3.1": "The rendered passage keeps its source identity, selector metadata, attribution path, and protocol tumbler address.",
+            "1.4": "This page includes fragment 0001 from the Xanadu source node:",
+            "1.4.1": "This page includes fragment 0001 from the Xanadu source node:",
+            "1.5": "{{< xana ref=\"xanadu-document-interconnection@v1/0001\" label=\"Transcluded source fragment\" >}}",
+            "1.5.1": "{{< xana ref=\"xanadu-document-interconnection@v1/0001\" label=\"Transcluded source fragment\" >}}",
+            "1.6": "The block above is backed by xanadu-document-interconnection@v1/0001, which resolves to the protocol address xananode.example:source/xanadu-document-interconnection#fragment/0001.",
+            "1.6.1": "The block above is backed by xanadu-document-interconnection@v1/0001, which resolves to the protocol address xananode.",
+            "1.6.2": "example:source/xanadu-document-interconnection#fragment/0001."
+          },
+          "metadata": {}
         }
       },
       "title": "Transclusion",
+      "type": "concept"
+    },
+    "substrate-relationship-list": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "relationships.json is the edge list for a substrate.\n\nEach relationship has its own id, source, target, type, and summary. It can also carry weight, visibility, assertion provenance, confidence, evidence, federation metadata, and tumbler references.\n\nThis implementation derives the protocol relationship list from authored front matter, primary media links, trail membership, and stable transclusion shortcodes.",
+            "1.1": "relationships.json is the edge list for a substrate.",
+            "1.1.1": "relationships.",
+            "1.1.2": "json is the edge list for a substrate.",
+            "1.2": "Each relationship has its own id, source, target, type, and summary. It can also carry weight, visibility, assertion provenance, confidence, evidence, federation metadata, and tumbler references.",
+            "1.2.1": "Each relationship has its own id, source, target, type, and summary.",
+            "1.2.2": "It can also carry weight, visibility, assertion provenance, confidence, evidence, federation metadata, and tumbler references.",
+            "1.3": "This implementation derives the protocol relationship list from authored front matter, primary media links, trail membership, and stable transclusion shortcodes.",
+            "1.3.1": "This implementation derives the protocol relationship list from authored front matter, primary media links, trail membership, and stable transclusion shortcodes."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "relationships.json is the edge list for a substrate.\n\nEach relationship has its own id, source, target, type, and summary. It can also carry weight, visibility, assertion provenance, confidence, evidence, federation metadata, and tumbler references.\n\nThis implementation derives the protocol relationship list from authored front matter, primary media links, trail membership, and stable transclusion shortcodes.",
+            "1.1": "relationships.json is the edge list for a substrate.",
+            "1.1.1": "relationships.",
+            "1.1.2": "json is the edge list for a substrate.",
+            "1.2": "Each relationship has its own id, source, target, type, and summary. It can also carry weight, visibility, assertion provenance, confidence, evidence, federation metadata, and tumbler references.",
+            "1.2.1": "Each relationship has its own id, source, target, type, and summary.",
+            "1.2.2": "It can also carry weight, visibility, assertion provenance, confidence, evidence, federation metadata, and tumbler references.",
+            "1.3": "This implementation derives the protocol relationship list from authored front matter, primary media links, trail membership, and stable transclusion shortcodes.",
+            "1.3.1": "This implementation derives the protocol relationship list from authored front matter, primary media links, trail membership, and stable transclusion shortcodes."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Substrate Relationship List",
+      "type": "concept"
+    },
+    "substrate-node-record": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "A node record is the machine-readable counterpart to a human-readable page.\n\nIt preserves the protocol id, title, type, importance, summary, provenance fields, and incoming or outgoing relationship summaries needed for tools to traverse the substrate without scraping HTML.\n\nFor authored fragments, this implementation also emits protocol fragment node records with source_node, fragment_id, tumbler, and selector metadata.",
+            "1.1": "A node record is the machine-readable counterpart to a human-readable page.",
+            "1.1.1": "A node record is the machine-readable counterpart to a human-readable page.",
+            "1.2": "It preserves the protocol id, title, type, importance, summary, provenance fields, and incoming or outgoing relationship summaries needed for tools to traverse the substrate without scraping HTML.",
+            "1.2.1": "It preserves the protocol id, title, type, importance, summary, provenance fields, and incoming or outgoing relationship summaries needed for tools to traverse the substrate without scraping HTML.",
+            "1.3": "For authored fragments, this implementation also emits protocol fragment node records with source_node, fragment_id, tumbler, and selector metadata.",
+            "1.3.1": "For authored fragments, this implementation also emits protocol fragment node records with source_node, fragment_id, tumbler, and selector metadata."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "A node record is the machine-readable counterpart to a human-readable page.\n\nIt preserves the protocol id, title, type, importance, summary, provenance fields, and incoming or outgoing relationship summaries needed for tools to traverse the substrate without scraping HTML.\n\nFor authored fragments, this implementation also emits protocol fragment node records with source_node, fragment_id, tumbler, and selector metadata.",
+            "1.1": "A node record is the machine-readable counterpart to a human-readable page.",
+            "1.1.1": "A node record is the machine-readable counterpart to a human-readable page.",
+            "1.2": "It preserves the protocol id, title, type, importance, summary, provenance fields, and incoming or outgoing relationship summaries needed for tools to traverse the substrate without scraping HTML.",
+            "1.2.1": "It preserves the protocol id, title, type, importance, summary, provenance fields, and incoming or outgoing relationship summaries needed for tools to traverse the substrate without scraping HTML.",
+            "1.3": "For authored fragments, this implementation also emits protocol fragment node records with source_node, fragment_id, tumbler, and selector metadata.",
+            "1.3.1": "For authored fragments, this implementation also emits protocol fragment node records with source_node, fragment_id, tumbler, and selector metadata."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Substrate Node Record",
+      "type": "concept"
+    },
+    "substrate-manifest": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "substrate.json is the first file another tool should read.\n\nIt identifies the substrate, namespace, substrate version, targeted core schema version, imports, maintainers, and extension declarations.\n\nThis theme generates substrate.json during preparation so the human site and machine-readable substrate stay aligned.",
+            "1.1": "substrate.json is the first file another tool should read.",
+            "1.1.1": "substrate.",
+            "1.1.2": "json is the first file another tool should read.",
+            "1.2": "It identifies the substrate, namespace, substrate version, targeted core schema version, imports, maintainers, and extension declarations.",
+            "1.2.1": "It identifies the substrate, namespace, substrate version, targeted core schema version, imports, maintainers, and extension declarations.",
+            "1.3": "This theme generates substrate.json during preparation so the human site and machine-readable substrate stay aligned.",
+            "1.3.1": "This theme generates substrate.",
+            "1.3.2": "json during preparation so the human site and machine-readable substrate stay aligned."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "substrate.json is the first file another tool should read.\n\nIt identifies the substrate, namespace, substrate version, targeted core schema version, imports, maintainers, and extension declarations.\n\nThis theme generates substrate.json during preparation so the human site and machine-readable substrate stay aligned.",
+            "1.1": "substrate.json is the first file another tool should read.",
+            "1.1.1": "substrate.",
+            "1.1.2": "json is the first file another tool should read.",
+            "1.2": "It identifies the substrate, namespace, substrate version, targeted core schema version, imports, maintainers, and extension declarations.",
+            "1.2.1": "It identifies the substrate, namespace, substrate version, targeted core schema version, imports, maintainers, and extension declarations.",
+            "1.3": "This theme generates substrate.json during preparation so the human site and machine-readable substrate stay aligned.",
+            "1.3.1": "This theme generates substrate.",
+            "1.3.2": "json during preparation so the human site and machine-readable substrate stay aligned."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Substrate Manifest",
+      "type": "concept"
+    },
+    "single-source-of-truth": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Single-source-of-truth systems are useful when consensus, control, and simplicity matter.\n\nThey become fragile when knowledge is disputed, partial, culturally specific, politically sensitive, or evolving.\n\nXanaNode favors interoperable sources of context over one enforced source of truth.",
+            "1.1": "Single-source-of-truth systems are useful when consensus, control, and simplicity matter.",
+            "1.1.1": "Single-source-of-truth systems are useful when consensus, control, and simplicity matter.",
+            "1.2": "They become fragile when knowledge is disputed, partial, culturally specific, politically sensitive, or evolving.",
+            "1.2.1": "They become fragile when knowledge is disputed, partial, culturally specific, politically sensitive, or evolving.",
+            "1.3": "XanaNode favors interoperable sources of context over one enforced source of truth.",
+            "1.3.1": "XanaNode favors interoperable sources of context over one enforced source of truth."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Single-source-of-truth systems are useful when consensus, control, and simplicity matter.\n\nThey become fragile when knowledge is disputed, partial, culturally specific, politically sensitive, or evolving.\n\nXanaNode favors interoperable sources of context over one enforced source of truth.",
+            "1.1": "Single-source-of-truth systems are useful when consensus, control, and simplicity matter.",
+            "1.1.1": "Single-source-of-truth systems are useful when consensus, control, and simplicity matter.",
+            "1.2": "They become fragile when knowledge is disputed, partial, culturally specific, politically sensitive, or evolving.",
+            "1.2.1": "They become fragile when knowledge is disputed, partial, culturally specific, politically sensitive, or evolving.",
+            "1.3": "XanaNode favors interoperable sources of context over one enforced source of truth.",
+            "1.3.1": "XanaNode favors interoperable sources of context over one enforced source of truth."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Single Source of Truth",
+      "type": "concept"
+    },
+    "schema-extension": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "XanaNode Core is intentionally shared, but it is not the only vocabulary a substrate can use.\n\nThe core schema provides shared interoperability. Extension schemas allow local domains to define additional meanings without breaking the whole system.\n\nA custom type is valid when it is namespaced, described, versioned, machine-readable, and preserved even by tools that do not understand it.\n\nThe custom extension substrate example shows this in practice: a local domain can define additional types while still publishing the core manifest, node, relationship, and schema files expected by XanaNode tools.",
+            "1.1": "XanaNode Core is intentionally shared, but it is not the only vocabulary a substrate can use.",
+            "1.1.1": "XanaNode Core is intentionally shared, but it is not the only vocabulary a substrate can use.",
+            "1.2": "The core schema provides shared interoperability. Extension schemas allow local domains to define additional meanings without breaking the whole system.",
+            "1.2.1": "The core schema provides shared interoperability.",
+            "1.2.2": "Extension schemas allow local domains to define additional meanings without breaking the whole system.",
+            "1.3": "A custom type is valid when it is namespaced, described, versioned, machine-readable, and preserved even by tools that do not understand it.",
+            "1.3.1": "A custom type is valid when it is namespaced, described, versioned, machine-readable, and preserved even by tools that do not understand it.",
+            "1.4": "The custom extension substrate example shows this in practice: a local domain can define additional types while still publishing the core manifest, node, relationship, and schema files expected by XanaNode tools.",
+            "1.4.1": "The custom extension substrate example shows this in practice: a local domain can define additional types while still publishing the core manifest, node, relationship, and schema files expected by XanaNode tools."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "XanaNode Core is intentionally shared, but it is not the only vocabulary a substrate can use.\n\nThe core schema provides shared interoperability. Extension schemas allow local domains to define additional meanings without breaking the whole system.\n\nA custom type is valid when it is namespaced, described, versioned, machine-readable, and preserved even by tools that do not understand it.\n\nThe custom extension substrate example shows this in practice: a local domain can define additional types while still publishing the core manifest, node, relationship, and schema files expected by XanaNode tools.",
+            "1.1": "XanaNode Core is intentionally shared, but it is not the only vocabulary a substrate can use.",
+            "1.1.1": "XanaNode Core is intentionally shared, but it is not the only vocabulary a substrate can use.",
+            "1.2": "The core schema provides shared interoperability. Extension schemas allow local domains to define additional meanings without breaking the whole system.",
+            "1.2.1": "The core schema provides shared interoperability.",
+            "1.2.2": "Extension schemas allow local domains to define additional meanings without breaking the whole system.",
+            "1.3": "A custom type is valid when it is namespaced, described, versioned, machine-readable, and preserved even by tools that do not understand it.",
+            "1.3.1": "A custom type is valid when it is namespaced, described, versioned, machine-readable, and preserved even by tools that do not understand it.",
+            "1.4": "The custom extension substrate example shows this in practice: a local domain can define additional types while still publishing the core manifest, node, relationship, and schema files expected by XanaNode tools.",
+            "1.4.1": "The custom extension substrate example shows this in practice: a local domain can define additional types while still publishing the core manifest, node, relationship, and schema files expected by XanaNode tools."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Schema Extension",
+      "type": "concept"
+    },
+    "review-suggestions": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "The suggestion scanner looks for existing node titles and aliases in Markdown content, plus repeated fragment text that could become a transclusion.\n\nIt does not rewrite pages automatically. It produces a review queue so an author can approve each ordinary link or transclusion before editing the source file.\n\n{{< review-suggestions >}}",
+            "1.1": "The suggestion scanner looks for existing node titles and aliases in Markdown content, plus repeated fragment text that could become a transclusion.",
+            "1.1.1": "The suggestion scanner looks for existing node titles and aliases in Markdown content, plus repeated fragment text that could become a transclusion.",
+            "1.2": "It does not rewrite pages automatically. It produces a review queue so an author can approve each ordinary link or transclusion before editing the source file.",
+            "1.2.1": "It does not rewrite pages automatically.",
+            "1.2.2": "It produces a review queue so an author can approve each ordinary link or transclusion before editing the source file.",
+            "1.3": "{{< review-suggestions >}}",
+            "1.3.1": "{{< review-suggestions >}}"
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "The suggestion scanner looks for existing node titles and aliases in Markdown content, plus repeated fragment text that could become a transclusion.\n\nIt does not rewrite pages automatically. It produces a review queue so an author can approve each ordinary link or transclusion before editing the source file.\n\n{{< review-suggestions >}}",
+            "1.1": "The suggestion scanner looks for existing node titles and aliases in Markdown content, plus repeated fragment text that could become a transclusion.",
+            "1.1.1": "The suggestion scanner looks for existing node titles and aliases in Markdown content, plus repeated fragment text that could become a transclusion.",
+            "1.2": "It does not rewrite pages automatically. It produces a review queue so an author can approve each ordinary link or transclusion before editing the source file.",
+            "1.2.1": "It does not rewrite pages automatically.",
+            "1.2.2": "It produces a review queue so an author can approve each ordinary link or transclusion before editing the source file.",
+            "1.3": "{{< review-suggestions >}}",
+            "1.3.1": "{{< review-suggestions >}}"
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Review Suggestions",
       "type": "concept"
     },
     "provenance": {
       "versions": {
         "v1": {
           "fragments": {
-            "1": "Provenance is not decorative metadata. In this project, provenance is treated as part of meaning.",
-            "1.1": "Provenance is not decorative metadata. In this project, provenance is treated as part of meaning.",
+            "1": "Provenance is not decorative metadata. It is part of meaning.\n\nA claim without provenance may still be useful, but its status is different from a claim tied to sources, authorship, revisions, and evidence.",
+            "1.1": "Provenance is not decorative metadata. It is part of meaning.",
             "1.1.1": "Provenance is not decorative metadata.",
-            "1.1.2": "In this project, provenance is treated as part of meaning."
-          }
+            "1.1.2": "It is part of meaning.",
+            "1.2": "A claim without provenance may still be useful, but its status is different from a claim tied to sources, authorship, revisions, and evidence.",
+            "1.2.1": "A claim without provenance may still be useful, but its status is different from a claim tied to sources, authorship, revisions, and evidence."
+          },
+          "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "Provenance is not decorative metadata. In this project, provenance is treated as part of meaning.",
-            "1.1": "Provenance is not decorative metadata. In this project, provenance is treated as part of meaning.",
+            "1": "Provenance is not decorative metadata. It is part of meaning.\n\nA claim without provenance may still be useful, but its status is different from a claim tied to sources, authorship, revisions, and evidence.",
+            "1.1": "Provenance is not decorative metadata. It is part of meaning.",
             "1.1.1": "Provenance is not decorative metadata.",
-            "1.1.2": "In this project, provenance is treated as part of meaning."
-          }
+            "1.1.2": "It is part of meaning.",
+            "1.2": "A claim without provenance may still be useful, but its status is different from a claim tied to sources, authorship, revisions, and evidence.",
+            "1.2.1": "A claim without provenance may still be useful, but its status is different from a claim tied to sources, authorship, revisions, and evidence."
+          },
+          "metadata": {}
         }
       },
       "title": "Provenance",
+      "type": "concept"
+    },
+    "protocol-artifacts": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "The protocol is not only a set of ideas. It is a set of publishable artifacts.\n\nThis implementation publishes those artifacts as static JSON: substrate.json, relationships.json, one JSON record per node, copied schema files, generated fragment data, and pending review suggestions.\n\nHuman pages make the substrate readable. Protocol artifacts make it inspectable, validatable, comparable, and federatable by other tools.",
+            "1.1": "The protocol is not only a set of ideas. It is a set of publishable artifacts.",
+            "1.1.1": "The protocol is not only a set of ideas.",
+            "1.1.2": "It is a set of publishable artifacts.",
+            "1.2": "This implementation publishes those artifacts as static JSON: substrate.json, relationships.json, one JSON record per node, copied schema files, generated fragment data, and pending review suggestions.",
+            "1.2.1": "This implementation publishes those artifacts as static JSON: substrate.",
+            "1.2.2": "json, relationships.",
+            "1.2.3": "json, one JSON record per node, copied schema files, generated fragment data, and pending review suggestions.",
+            "1.3": "Human pages make the substrate readable. Protocol artifacts make it inspectable, validatable, comparable, and federatable by other tools.",
+            "1.3.1": "Human pages make the substrate readable.",
+            "1.3.2": "Protocol artifacts make it inspectable, validatable, comparable, and federatable by other tools."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "The protocol is not only a set of ideas. It is a set of publishable artifacts.\n\nThis implementation publishes those artifacts as static JSON: substrate.json, relationships.json, one JSON record per node, copied schema files, generated fragment data, and pending review suggestions.\n\nHuman pages make the substrate readable. Protocol artifacts make it inspectable, validatable, comparable, and federatable by other tools.",
+            "1.1": "The protocol is not only a set of ideas. It is a set of publishable artifacts.",
+            "1.1.1": "The protocol is not only a set of ideas.",
+            "1.1.2": "It is a set of publishable artifacts.",
+            "1.2": "This implementation publishes those artifacts as static JSON: substrate.json, relationships.json, one JSON record per node, copied schema files, generated fragment data, and pending review suggestions.",
+            "1.2.1": "This implementation publishes those artifacts as static JSON: substrate.",
+            "1.2.2": "json, relationships.",
+            "1.2.3": "json, one JSON record per node, copied schema files, generated fragment data, and pending review suggestions.",
+            "1.3": "Human pages make the substrate readable. Protocol artifacts make it inspectable, validatable, comparable, and federatable by other tools.",
+            "1.3.1": "Human pages make the substrate readable.",
+            "1.3.2": "Protocol artifacts make it inspectable, validatable, comparable, and federatable by other tools."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Protocol Artifacts",
+      "type": "concept"
+    },
+    "namespacing": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Namespacing prevents independent substrates and extension vocabularies from colliding.\n\nThe core namespace is xananode. A substrate can use its own namespace for local nodes and extension types, such as example.museum:artifact or example.researcher_a:concept/knowledge-substrate.\n\nUnknown namespaced types are not invalid knowledge. They are declared extensions that can be displayed, preserved, mapped, or quarantined until another system understands them.",
+            "1.1": "Namespacing prevents independent substrates and extension vocabularies from colliding.",
+            "1.1.1": "Namespacing prevents independent substrates and extension vocabularies from colliding.",
+            "1.2": "The core namespace is xananode. A substrate can use its own namespace for local nodes and extension types, such as example.museum:artifact or example.researcher_a:concept/knowledge-substrate.",
+            "1.2.1": "The core namespace is xananode.",
+            "1.2.2": "A substrate can use its own namespace for local nodes and extension types, such as example.",
+            "1.2.3": "museum:artifact or example.",
+            "1.2.4": "researcher_a:concept/knowledge-substrate.",
+            "1.3": "Unknown namespaced types are not invalid knowledge. They are declared extensions that can be displayed, preserved, mapped, or quarantined until another system understands them.",
+            "1.3.1": "Unknown namespaced types are not invalid knowledge.",
+            "1.3.2": "They are declared extensions that can be displayed, preserved, mapped, or quarantined until another system understands them."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Namespacing prevents independent substrates and extension vocabularies from colliding.\n\nThe core namespace is xananode. A substrate can use its own namespace for local nodes and extension types, such as example.museum:artifact or example.researcher_a:concept/knowledge-substrate.\n\nUnknown namespaced types are not invalid knowledge. They are declared extensions that can be displayed, preserved, mapped, or quarantined until another system understands them.",
+            "1.1": "Namespacing prevents independent substrates and extension vocabularies from colliding.",
+            "1.1.1": "Namespacing prevents independent substrates and extension vocabularies from colliding.",
+            "1.2": "The core namespace is xananode. A substrate can use its own namespace for local nodes and extension types, such as example.museum:artifact or example.researcher_a:concept/knowledge-substrate.",
+            "1.2.1": "The core namespace is xananode.",
+            "1.2.2": "A substrate can use its own namespace for local nodes and extension types, such as example.",
+            "1.2.3": "museum:artifact or example.",
+            "1.2.4": "researcher_a:concept/knowledge-substrate.",
+            "1.3": "Unknown namespaced types are not invalid knowledge. They are declared extensions that can be displayed, preserved, mapped, or quarantined until another system understands them.",
+            "1.3.1": "Unknown namespaced types are not invalid knowledge.",
+            "1.3.2": "They are declared extensions that can be displayed, preserved, mapped, or quarantined until another system understands them."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Namespacing",
+      "type": "concept"
+    },
+    "namespace-registry": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "The namespace registry records known namespace ids and their owners.\n\nIt does not make every other namespace invalid. It helps tools distinguish recognized namespaces from private, experimental, or not-yet-registered ones while still preserving unknown data.",
+            "1.1": "The namespace registry records known namespace ids and their owners.",
+            "1.1.1": "The namespace registry records known namespace ids and their owners.",
+            "1.2": "It does not make every other namespace invalid. It helps tools distinguish recognized namespaces from private, experimental, or not-yet-registered ones while still preserving unknown data.",
+            "1.2.1": "It does not make every other namespace invalid.",
+            "1.2.2": "It helps tools distinguish recognized namespaces from private, experimental, or not-yet-registered ones while still preserving unknown data."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "The namespace registry records known namespace ids and their owners.\n\nIt does not make every other namespace invalid. It helps tools distinguish recognized namespaces from private, experimental, or not-yet-registered ones while still preserving unknown data.",
+            "1.1": "The namespace registry records known namespace ids and their owners.",
+            "1.1.1": "The namespace registry records known namespace ids and their owners.",
+            "1.2": "It does not make every other namespace invalid. It helps tools distinguish recognized namespaces from private, experimental, or not-yet-registered ones while still preserving unknown data.",
+            "1.2.1": "It does not make every other namespace invalid.",
+            "1.2.2": "It helps tools distinguish recognized namespaces from private, experimental, or not-yet-registered ones while still preserving unknown data."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Namespace Registry",
+      "type": "concept"
+    },
+    "moderation-model": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "XanaNode does not require one global moderation authority.\n\nEach substrate can decide what it publishes, imports, hides, rejects, or marks as disputed. Federation works because those decisions are visible rather than silently normalized away.",
+            "1.1": "XanaNode does not require one global moderation authority.",
+            "1.1.1": "XanaNode does not require one global moderation authority.",
+            "1.2": "Each substrate can decide what it publishes, imports, hides, rejects, or marks as disputed. Federation works because those decisions are visible rather than silently normalized away.",
+            "1.2.1": "Each substrate can decide what it publishes, imports, hides, rejects, or marks as disputed.",
+            "1.2.2": "Federation works because those decisions are visible rather than silently normalized away."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "XanaNode does not require one global moderation authority.\n\nEach substrate can decide what it publishes, imports, hides, rejects, or marks as disputed. Federation works because those decisions are visible rather than silently normalized away.",
+            "1.1": "XanaNode does not require one global moderation authority.",
+            "1.1.1": "XanaNode does not require one global moderation authority.",
+            "1.2": "Each substrate can decide what it publishes, imports, hides, rejects, or marks as disputed. Federation works because those decisions are visible rather than silently normalized away.",
+            "1.2.1": "Each substrate can decide what it publishes, imports, hides, rejects, or marks as disputed.",
+            "1.2.2": "Federation works because those decisions are visible rather than silently normalized away."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Moderation Model",
+      "type": "concept"
+    },
+    "merge-validation": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Merge validation is not deduplication.\n\nA merge-safe system does not automatically collapse two nodes with similar titles into one truth. It compares identity, provenance, source lineage, schema compatibility, and relationship meaning.\n\nThe goal is to preserve both substrates while making their overlaps and differences navigable.\n\nCompatibility reports explain whether two substrates can be compared safely. Merge reports preserve the proposed mappings, conflicts, unresolved issues, and identity decisions produced by that comparison.",
+            "1.1": "Merge validation is not deduplication.",
+            "1.1.1": "Merge validation is not deduplication.",
+            "1.2": "A merge-safe system does not automatically collapse two nodes with similar titles into one truth. It compares identity, provenance, source lineage, schema compatibility, and relationship meaning.",
+            "1.2.1": "A merge-safe system does not automatically collapse two nodes with similar titles into one truth.",
+            "1.2.2": "It compares identity, provenance, source lineage, schema compatibility, and relationship meaning.",
+            "1.3": "The goal is to preserve both substrates while making their overlaps and differences navigable.",
+            "1.3.1": "The goal is to preserve both substrates while making their overlaps and differences navigable.",
+            "1.4": "Compatibility reports explain whether two substrates can be compared safely. Merge reports preserve the proposed mappings, conflicts, unresolved issues, and identity decisions produced by that comparison.",
+            "1.4.1": "Compatibility reports explain whether two substrates can be compared safely.",
+            "1.4.2": "Merge reports preserve the proposed mappings, conflicts, unresolved issues, and identity decisions produced by that comparison."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Merge validation is not deduplication.\n\nA merge-safe system does not automatically collapse two nodes with similar titles into one truth. It compares identity, provenance, source lineage, schema compatibility, and relationship meaning.\n\nThe goal is to preserve both substrates while making their overlaps and differences navigable.\n\nCompatibility reports explain whether two substrates can be compared safely. Merge reports preserve the proposed mappings, conflicts, unresolved issues, and identity decisions produced by that comparison.",
+            "1.1": "Merge validation is not deduplication.",
+            "1.1.1": "Merge validation is not deduplication.",
+            "1.2": "A merge-safe system does not automatically collapse two nodes with similar titles into one truth. It compares identity, provenance, source lineage, schema compatibility, and relationship meaning.",
+            "1.2.1": "A merge-safe system does not automatically collapse two nodes with similar titles into one truth.",
+            "1.2.2": "It compares identity, provenance, source lineage, schema compatibility, and relationship meaning.",
+            "1.3": "The goal is to preserve both substrates while making their overlaps and differences navigable.",
+            "1.3.1": "The goal is to preserve both substrates while making their overlaps and differences navigable.",
+            "1.4": "Compatibility reports explain whether two substrates can be compared safely. Merge reports preserve the proposed mappings, conflicts, unresolved issues, and identity decisions produced by that comparison.",
+            "1.4.1": "Compatibility reports explain whether two substrates can be compared safely.",
+            "1.4.2": "Merge reports preserve the proposed mappings, conflicts, unresolved issues, and identity decisions produced by that comparison."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Merge Validation",
+      "type": "concept"
+    },
+    "merge-report": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "A merge report is not a command to flatten two substrates into one truth.\n\nIt is an audit trail for a comparison. It preserves proposed identity matches, conflicts, unresolved decisions, warnings, and the reasoning behind mappings so disagreement remains navigable after analysis.\n\nThe canonical federation example uses a merge report to keep two overlapping concepts distinct while still recording their possible relationship.",
+            "1.1": "A merge report is not a command to flatten two substrates into one truth.",
+            "1.1.1": "A merge report is not a command to flatten two substrates into one truth.",
+            "1.2": "It is an audit trail for a comparison. It preserves proposed identity matches, conflicts, unresolved decisions, warnings, and the reasoning behind mappings so disagreement remains navigable after analysis.",
+            "1.2.1": "It is an audit trail for a comparison.",
+            "1.2.2": "It preserves proposed identity matches, conflicts, unresolved decisions, warnings, and the reasoning behind mappings so disagreement remains navigable after analysis.",
+            "1.3": "The canonical federation example uses a merge report to keep two overlapping concepts distinct while still recording their possible relationship.",
+            "1.3.1": "The canonical federation example uses a merge report to keep two overlapping concepts distinct while still recording their possible relationship."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "A merge report is not a command to flatten two substrates into one truth.\n\nIt is an audit trail for a comparison. It preserves proposed identity matches, conflicts, unresolved decisions, warnings, and the reasoning behind mappings so disagreement remains navigable after analysis.\n\nThe canonical federation example uses a merge report to keep two overlapping concepts distinct while still recording their possible relationship.",
+            "1.1": "A merge report is not a command to flatten two substrates into one truth.",
+            "1.1.1": "A merge report is not a command to flatten two substrates into one truth.",
+            "1.2": "It is an audit trail for a comparison. It preserves proposed identity matches, conflicts, unresolved decisions, warnings, and the reasoning behind mappings so disagreement remains navigable after analysis.",
+            "1.2.1": "It is an audit trail for a comparison.",
+            "1.2.2": "It preserves proposed identity matches, conflicts, unresolved decisions, warnings, and the reasoning behind mappings so disagreement remains navigable after analysis.",
+            "1.3": "The canonical federation example uses a merge report to keep two overlapping concepts distinct while still recording their possible relationship.",
+            "1.3.1": "The canonical federation example uses a merge report to keep two overlapping concepts distinct while still recording their possible relationship."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Merge Report",
+      "type": "concept"
+    },
+    "known-implementations-registry": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "The known implementations registry is a discovery aid for the ecosystem.\n\nIt lists tools, themes, validators, renderers, and example substrates that claim a level of XanaNode compatibility.\n\nThe registry does not replace validation. It gives implementers real targets to inspect, compare, and test against.",
+            "1.1": "The known implementations registry is a discovery aid for the ecosystem.",
+            "1.1.1": "The known implementations registry is a discovery aid for the ecosystem.",
+            "1.2": "It lists tools, themes, validators, renderers, and example substrates that claim a level of XanaNode compatibility.",
+            "1.2.1": "It lists tools, themes, validators, renderers, and example substrates that claim a level of XanaNode compatibility.",
+            "1.3": "The registry does not replace validation. It gives implementers real targets to inspect, compare, and test against.",
+            "1.3.1": "The registry does not replace validation.",
+            "1.3.2": "It gives implementers real targets to inspect, compare, and test against."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "The known implementations registry is a discovery aid for the ecosystem.\n\nIt lists tools, themes, validators, renderers, and example substrates that claim a level of XanaNode compatibility.\n\nThe registry does not replace validation. It gives implementers real targets to inspect, compare, and test against.",
+            "1.1": "The known implementations registry is a discovery aid for the ecosystem.",
+            "1.1.1": "The known implementations registry is a discovery aid for the ecosystem.",
+            "1.2": "It lists tools, themes, validators, renderers, and example substrates that claim a level of XanaNode compatibility.",
+            "1.2.1": "It lists tools, themes, validators, renderers, and example substrates that claim a level of XanaNode compatibility.",
+            "1.3": "The registry does not replace validation. It gives implementers real targets to inspect, compare, and test against.",
+            "1.3.1": "The registry does not replace validation.",
+            "1.3.2": "It gives implementers real targets to inspect, compare, and test against."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Known Implementations Registry",
       "type": "concept"
     },
     "knowledge-substrate": {
       "versions": {
         "v1": {
           "fragments": {
-            "1": "A knowledge substrate is not a pile of documents. It is the relationship layer beneath claims, sources, evidence, contradictions, and interpretation.",
-            "1.1": "A knowledge substrate is not a pile of documents. It is the relationship layer beneath claims, sources, evidence, contradictions, and interpretation.",
-            "1.1.1": "A knowledge substrate is not a pile of documents.",
-            "1.1.2": "It is the relationship layer beneath claims, sources, evidence, contradictions, and interpretation."
-          }
+            "1": "A knowledge substrate is not the information itself. It is the structure that lets information remain understandable across time.\n\nThe same facts arranged as isolated documents, unlabeled hyperlinks, or typed relationships produce different knowledge capabilities. XanaNode makes that structure explicit.",
+            "1.1": "A knowledge substrate is not the information itself. It is the structure that lets information remain understandable across time.",
+            "1.1.1": "A knowledge substrate is not the information itself.",
+            "1.1.2": "It is the structure that lets information remain understandable across time.",
+            "1.2": "The same facts arranged as isolated documents, unlabeled hyperlinks, or typed relationships produce different knowledge capabilities. XanaNode makes that structure explicit.",
+            "1.2.1": "The same facts arranged as isolated documents, unlabeled hyperlinks, or typed relationships produce different knowledge capabilities.",
+            "1.2.2": "XanaNode makes that structure explicit."
+          },
+          "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "A knowledge substrate is not a pile of documents. It is the relationship layer beneath claims, sources, evidence, contradictions, and interpretation.",
-            "1.1": "A knowledge substrate is not a pile of documents. It is the relationship layer beneath claims, sources, evidence, contradictions, and interpretation.",
-            "1.1.1": "A knowledge substrate is not a pile of documents.",
-            "1.1.2": "It is the relationship layer beneath claims, sources, evidence, contradictions, and interpretation."
-          }
+            "1": "A knowledge substrate is not the information itself. It is the structure that lets information remain understandable across time.\n\nThe same facts arranged as isolated documents, unlabeled hyperlinks, or typed relationships produce different knowledge capabilities. XanaNode makes that structure explicit.",
+            "1.1": "A knowledge substrate is not the information itself. It is the structure that lets information remain understandable across time.",
+            "1.1.1": "A knowledge substrate is not the information itself.",
+            "1.1.2": "It is the structure that lets information remain understandable across time.",
+            "1.2": "The same facts arranged as isolated documents, unlabeled hyperlinks, or typed relationships produce different knowledge capabilities. XanaNode makes that structure explicit.",
+            "1.2.1": "The same facts arranged as isolated documents, unlabeled hyperlinks, or typed relationships produce different knowledge capabilities.",
+            "1.2.2": "XanaNode makes that structure explicit."
+          },
+          "metadata": {}
         }
       },
       "title": "Knowledge Substrate",
       "type": "concept"
+    },
+    "independent-moderation": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Independent moderation means each substrate controls what it accepts, rejects, disputes, hides, deprecates, or marks as uncertain.\n\nFederation does not require one moderation team to control validity for everyone. Local decisions remain visible as provenance, confidence, claims, counterclaims, evidence, and mappings across substrates.",
+            "1.1": "Independent moderation means each substrate controls what it accepts, rejects, disputes, hides, deprecates, or marks as uncertain.",
+            "1.1.1": "Independent moderation means each substrate controls what it accepts, rejects, disputes, hides, deprecates, or marks as uncertain.",
+            "1.2": "Federation does not require one moderation team to control validity for everyone. Local decisions remain visible as provenance, confidence, claims, counterclaims, evidence, and mappings across substrates.",
+            "1.2.1": "Federation does not require one moderation team to control validity for everyone.",
+            "1.2.2": "Local decisions remain visible as provenance, confidence, claims, counterclaims, evidence, and mappings across substrates."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Independent moderation means each substrate controls what it accepts, rejects, disputes, hides, deprecates, or marks as uncertain.\n\nFederation does not require one moderation team to control validity for everyone. Local decisions remain visible as provenance, confidence, claims, counterclaims, evidence, and mappings across substrates.",
+            "1.1": "Independent moderation means each substrate controls what it accepts, rejects, disputes, hides, deprecates, or marks as uncertain.",
+            "1.1.1": "Independent moderation means each substrate controls what it accepts, rejects, disputes, hides, deprecates, or marks as uncertain.",
+            "1.2": "Federation does not require one moderation team to control validity for everyone. Local decisions remain visible as provenance, confidence, claims, counterclaims, evidence, and mappings across substrates.",
+            "1.2.1": "Federation does not require one moderation team to control validity for everyone.",
+            "1.2.2": "Local decisions remain visible as provenance, confidence, claims, counterclaims, evidence, and mappings across substrates."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Independent Moderation",
+      "type": "concept"
+    },
+    "fragment-node": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Fragment nodes represent stable addressable parts of larger objects.\n\nInstead of pointing only to a whole source, a fragment carries its own id, selector metadata, tumbler address, and relationship history.\n\nFor example, this concept cites a specific fragment of the Mother of All Demos source node:\n\n{{< xana ref=\"mother-of-all-demos@v1/0001\" label=\"Fragment node example\" >}}\n\nThat fragment is not copied into this page. It is rendered from the source node's authored stable fragment map.",
+            "1.1": "Fragment nodes represent stable addressable parts of larger objects.",
+            "1.1.1": "Fragment nodes represent stable addressable parts of larger objects.",
+            "1.2": "Instead of pointing only to a whole source, a fragment carries its own id, selector metadata, tumbler address, and relationship history.",
+            "1.2.1": "Instead of pointing only to a whole source, a fragment carries its own id, selector metadata, tumbler address, and relationship history.",
+            "1.3": "For example, this concept cites a specific fragment of the Mother of All Demos source node:",
+            "1.3.1": "For example, this concept cites a specific fragment of the Mother of All Demos source node:",
+            "1.4": "{{< xana ref=\"mother-of-all-demos@v1/0001\" label=\"Fragment node example\" >}}",
+            "1.4.1": "{{< xana ref=\"mother-of-all-demos@v1/0001\" label=\"Fragment node example\" >}}",
+            "1.5": "That fragment is not copied into this page. It is rendered from the source node's authored stable fragment map.",
+            "1.5.1": "That fragment is not copied into this page.",
+            "1.5.2": "It is rendered from the source node's authored stable fragment map."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Fragment nodes represent stable addressable parts of larger objects.\n\nInstead of pointing only to a whole source, a fragment carries its own id, selector metadata, tumbler address, and relationship history.\n\nFor example, this concept cites a specific fragment of the Mother of All Demos source node:\n\n{{< xana ref=\"mother-of-all-demos@v1/0001\" label=\"Fragment node example\" >}}\n\nThat fragment is not copied into this page. It is rendered from the source node's authored stable fragment map.",
+            "1.1": "Fragment nodes represent stable addressable parts of larger objects.",
+            "1.1.1": "Fragment nodes represent stable addressable parts of larger objects.",
+            "1.2": "Instead of pointing only to a whole source, a fragment carries its own id, selector metadata, tumbler address, and relationship history.",
+            "1.2.1": "Instead of pointing only to a whole source, a fragment carries its own id, selector metadata, tumbler address, and relationship history.",
+            "1.3": "For example, this concept cites a specific fragment of the Mother of All Demos source node:",
+            "1.3.1": "For example, this concept cites a specific fragment of the Mother of All Demos source node:",
+            "1.4": "{{< xana ref=\"mother-of-all-demos@v1/0001\" label=\"Fragment node example\" >}}",
+            "1.4.1": "{{< xana ref=\"mother-of-all-demos@v1/0001\" label=\"Fragment node example\" >}}",
+            "1.5": "That fragment is not copied into this page. It is rendered from the source node's authored stable fragment map.",
+            "1.5.1": "That fragment is not copied into this page.",
+            "1.5.2": "It is rendered from the source node's authored stable fragment map."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Fragment Node",
+      "type": "concept"
+    },
+    "federation-rules": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Federation starts from substrate sovereignty.\n\nAnother substrate may import, map, compare, or reject data, but it must not silently overwrite provenance, collapse disagreement, or erase local moderation decisions.\n\nThe canonical rule is simple: merge by adding structure, not by destroying context.",
+            "1.1": "Federation starts from substrate sovereignty.",
+            "1.1.1": "Federation starts from substrate sovereignty.",
+            "1.2": "Another substrate may import, map, compare, or reject data, but it must not silently overwrite provenance, collapse disagreement, or erase local moderation decisions.",
+            "1.2.1": "Another substrate may import, map, compare, or reject data, but it must not silently overwrite provenance, collapse disagreement, or erase local moderation decisions.",
+            "1.3": "The canonical rule is simple: merge by adding structure, not by destroying context.",
+            "1.3.1": "The canonical rule is simple: merge by adding structure, not by destroying context."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Federation starts from substrate sovereignty.\n\nAnother substrate may import, map, compare, or reject data, but it must not silently overwrite provenance, collapse disagreement, or erase local moderation decisions.\n\nThe canonical rule is simple: merge by adding structure, not by destroying context.",
+            "1.1": "Federation starts from substrate sovereignty.",
+            "1.1.1": "Federation starts from substrate sovereignty.",
+            "1.2": "Another substrate may import, map, compare, or reject data, but it must not silently overwrite provenance, collapse disagreement, or erase local moderation decisions.",
+            "1.2.1": "Another substrate may import, map, compare, or reject data, but it must not silently overwrite provenance, collapse disagreement, or erase local moderation decisions.",
+            "1.3": "The canonical rule is simple: merge by adding structure, not by destroying context.",
+            "1.3.1": "The canonical rule is simple: merge by adding structure, not by destroying context."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Federation Rules",
+      "type": "concept"
+    },
+    "federation-example": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "The canonical federation example makes the protocol concrete.\n\nIt compares two independently authored substrates: one models a knowledge substrate, the other models a memory substrate. Each keeps its own namespace and local records.\n\nThe compatibility report records how much interoperability is safe. The merge report records mappings and the decision not to collapse overlapping concepts into one forced truth.",
+            "1.1": "The canonical federation example makes the protocol concrete.",
+            "1.1.1": "The canonical federation example makes the protocol concrete.",
+            "1.2": "It compares two independently authored substrates: one models a knowledge substrate, the other models a memory substrate. Each keeps its own namespace and local records.",
+            "1.2.1": "It compares two independently authored substrates: one models a knowledge substrate, the other models a memory substrate.",
+            "1.2.2": "Each keeps its own namespace and local records.",
+            "1.3": "The compatibility report records how much interoperability is safe. The merge report records mappings and the decision not to collapse overlapping concepts into one forced truth.",
+            "1.3.1": "The compatibility report records how much interoperability is safe.",
+            "1.3.2": "The merge report records mappings and the decision not to collapse overlapping concepts into one forced truth."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "The canonical federation example makes the protocol concrete.\n\nIt compares two independently authored substrates: one models a knowledge substrate, the other models a memory substrate. Each keeps its own namespace and local records.\n\nThe compatibility report records how much interoperability is safe. The merge report records mappings and the decision not to collapse overlapping concepts into one forced truth.",
+            "1.1": "The canonical federation example makes the protocol concrete.",
+            "1.1.1": "The canonical federation example makes the protocol concrete.",
+            "1.2": "It compares two independently authored substrates: one models a knowledge substrate, the other models a memory substrate. Each keeps its own namespace and local records.",
+            "1.2.1": "It compares two independently authored substrates: one models a knowledge substrate, the other models a memory substrate.",
+            "1.2.2": "Each keeps its own namespace and local records.",
+            "1.3": "The compatibility report records how much interoperability is safe. The merge report records mappings and the decision not to collapse overlapping concepts into one forced truth.",
+            "1.3.1": "The compatibility report records how much interoperability is safe.",
+            "1.3.2": "The merge report records mappings and the decision not to collapse overlapping concepts into one forced truth."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Federation Example",
+      "type": "concept"
+    },
+    "federated-knowledge-substrates": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Federation connects independently authored substrates without making them surrender ownership.\n\nEach person, lab, community, archive, or institution keeps its own namespace, governance, and provenance. Those substrates do not need to agree. They need to describe nodes, relationships, schemas, and provenance clearly enough that another tool can ingest, map, compare, or ignore them safely.\n\nFederation turns isolated knowledge graphs into comparable civilizational memory.\n\nIn protocol terms, federation depends on manifests, namespaces, compatibility reports, merge reports, and governance rules that prevent one substrate from silently overwriting another.",
+            "1.1": "Federation connects independently authored substrates without making them surrender ownership.",
+            "1.1.1": "Federation connects independently authored substrates without making them surrender ownership.",
+            "1.2": "Each person, lab, community, archive, or institution keeps its own namespace, governance, and provenance. Those substrates do not need to agree. They need to describe nodes, relationships, schemas, and provenance clearly enough that another tool can ingest, map, compare, or ignore them safely.",
+            "1.2.1": "Each person, lab, community, archive, or institution keeps its own namespace, governance, and provenance.",
+            "1.2.2": "Those substrates do not need to agree.",
+            "1.2.3": "They need to describe nodes, relationships, schemas, and provenance clearly enough that another tool can ingest, map, compare, or ignore them safely.",
+            "1.3": "Federation turns isolated knowledge graphs into comparable civilizational memory.",
+            "1.3.1": "Federation turns isolated knowledge graphs into comparable civilizational memory.",
+            "1.4": "In protocol terms, federation depends on manifests, namespaces, compatibility reports, merge reports, and governance rules that prevent one substrate from silently overwriting another.",
+            "1.4.1": "In protocol terms, federation depends on manifests, namespaces, compatibility reports, merge reports, and governance rules that prevent one substrate from silently overwriting another."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Federation connects independently authored substrates without making them surrender ownership.\n\nEach person, lab, community, archive, or institution keeps its own namespace, governance, and provenance. Those substrates do not need to agree. They need to describe nodes, relationships, schemas, and provenance clearly enough that another tool can ingest, map, compare, or ignore them safely.\n\nFederation turns isolated knowledge graphs into comparable civilizational memory.\n\nIn protocol terms, federation depends on manifests, namespaces, compatibility reports, merge reports, and governance rules that prevent one substrate from silently overwriting another.",
+            "1.1": "Federation connects independently authored substrates without making them surrender ownership.",
+            "1.1.1": "Federation connects independently authored substrates without making them surrender ownership.",
+            "1.2": "Each person, lab, community, archive, or institution keeps its own namespace, governance, and provenance. Those substrates do not need to agree. They need to describe nodes, relationships, schemas, and provenance clearly enough that another tool can ingest, map, compare, or ignore them safely.",
+            "1.2.1": "Each person, lab, community, archive, or institution keeps its own namespace, governance, and provenance.",
+            "1.2.2": "Those substrates do not need to agree.",
+            "1.2.3": "They need to describe nodes, relationships, schemas, and provenance clearly enough that another tool can ingest, map, compare, or ignore them safely.",
+            "1.3": "Federation turns isolated knowledge graphs into comparable civilizational memory.",
+            "1.3.1": "Federation turns isolated knowledge graphs into comparable civilizational memory.",
+            "1.4": "In protocol terms, federation depends on manifests, namespaces, compatibility reports, merge reports, and governance rules that prevent one substrate from silently overwriting another.",
+            "1.4.1": "In protocol terms, federation depends on manifests, namespaces, compatibility reports, merge reports, and governance rules that prevent one substrate from silently overwriting another."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Federated Knowledge Substrates",
+      "type": "concept"
+    },
+    "dispute-resolution": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Disputes are knowledge, not cleanup errors.\n\nXanaNode preserves disagreement about claims, relationships, identity mappings, and merge decisions. The contested state remains traceable through provenance, evidence, counterevidence, and explicit relationship types such as contradicts, disputes, possible_match, and disputed_identity.\n\nThe goal is navigable uncertainty, not instant consensus.",
+            "1.1": "Disputes are knowledge, not cleanup errors.",
+            "1.1.1": "Disputes are knowledge, not cleanup errors.",
+            "1.2": "XanaNode preserves disagreement about claims, relationships, identity mappings, and merge decisions. The contested state remains traceable through provenance, evidence, counterevidence, and explicit relationship types such as contradicts, disputes, possible_match, and disputed_identity.",
+            "1.2.1": "XanaNode preserves disagreement about claims, relationships, identity mappings, and merge decisions.",
+            "1.2.2": "The contested state remains traceable through provenance, evidence, counterevidence, and explicit relationship types such as contradicts, disputes, possible_match, and disputed_identity.",
+            "1.3": "The goal is navigable uncertainty, not instant consensus.",
+            "1.3.1": "The goal is navigable uncertainty, not instant consensus."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Disputes are knowledge, not cleanup errors.\n\nXanaNode preserves disagreement about claims, relationships, identity mappings, and merge decisions. The contested state remains traceable through provenance, evidence, counterevidence, and explicit relationship types such as contradicts, disputes, possible_match, and disputed_identity.\n\nThe goal is navigable uncertainty, not instant consensus.",
+            "1.1": "Disputes are knowledge, not cleanup errors.",
+            "1.1.1": "Disputes are knowledge, not cleanup errors.",
+            "1.2": "XanaNode preserves disagreement about claims, relationships, identity mappings, and merge decisions. The contested state remains traceable through provenance, evidence, counterevidence, and explicit relationship types such as contradicts, disputes, possible_match, and disputed_identity.",
+            "1.2.1": "XanaNode preserves disagreement about claims, relationships, identity mappings, and merge decisions.",
+            "1.2.2": "The contested state remains traceable through provenance, evidence, counterevidence, and explicit relationship types such as contradicts, disputes, possible_match, and disputed_identity.",
+            "1.3": "The goal is navigable uncertainty, not instant consensus.",
+            "1.3.1": "The goal is navigable uncertainty, not instant consensus."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Dispute Resolution",
+      "type": "concept"
+    },
+    "deep-linking": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Deep linking points at an addressable part of a node rather than only at a whole page.\n\nIn XanaNode, stable fragment ids and tumbler addresses give those links protocol identity. A deep link can identify the source node, version, and fragment being discussed or transcluded.\n\nThat is the practical bridge between ordinary hyperlinks and the provenance-preserving reuse imagined by Xanadu.",
+            "1.1": "Deep linking points at an addressable part of a node rather than only at a whole page.",
+            "1.1.1": "Deep linking points at an addressable part of a node rather than only at a whole page.",
+            "1.2": "In XanaNode, stable fragment ids and tumbler addresses give those links protocol identity. A deep link can identify the source node, version, and fragment being discussed or transcluded.",
+            "1.2.1": "In XanaNode, stable fragment ids and tumbler addresses give those links protocol identity.",
+            "1.2.2": "A deep link can identify the source node, version, and fragment being discussed or transcluded.",
+            "1.3": "That is the practical bridge between ordinary hyperlinks and the provenance-preserving reuse imagined by Xanadu.",
+            "1.3.1": "That is the practical bridge between ordinary hyperlinks and the provenance-preserving reuse imagined by Xanadu."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Deep linking points at an addressable part of a node rather than only at a whole page.\n\nIn XanaNode, stable fragment ids and tumbler addresses give those links protocol identity. A deep link can identify the source node, version, and fragment being discussed or transcluded.\n\nThat is the practical bridge between ordinary hyperlinks and the provenance-preserving reuse imagined by Xanadu.",
+            "1.1": "Deep linking points at an addressable part of a node rather than only at a whole page.",
+            "1.1.1": "Deep linking points at an addressable part of a node rather than only at a whole page.",
+            "1.2": "In XanaNode, stable fragment ids and tumbler addresses give those links protocol identity. A deep link can identify the source node, version, and fragment being discussed or transcluded.",
+            "1.2.1": "In XanaNode, stable fragment ids and tumbler addresses give those links protocol identity.",
+            "1.2.2": "A deep link can identify the source node, version, and fragment being discussed or transcluded.",
+            "1.3": "That is the practical bridge between ordinary hyperlinks and the provenance-preserving reuse imagined by Xanadu.",
+            "1.3.1": "That is the practical bridge between ordinary hyperlinks and the provenance-preserving reuse imagined by Xanadu."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Deep Linking",
+      "type": "concept"
+    },
+    "custom-extension-substrate": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "The custom extension substrate example shows local vocabulary coexisting with XanaNode Core.\n\nThe canonical example defines a museum namespace with a custom artifact node type and custom curatorial relationship types.\n\nTools that do not understand those custom types still preserve them as declared, namespaced, versioned extensions instead of discarding them.",
+            "1.1": "The custom extension substrate example shows local vocabulary coexisting with XanaNode Core.",
+            "1.1.1": "The custom extension substrate example shows local vocabulary coexisting with XanaNode Core.",
+            "1.2": "The canonical example defines a museum namespace with a custom artifact node type and custom curatorial relationship types.",
+            "1.2.1": "The canonical example defines a museum namespace with a custom artifact node type and custom curatorial relationship types.",
+            "1.3": "Tools that do not understand those custom types still preserve them as declared, namespaced, versioned extensions instead of discarding them.",
+            "1.3.1": "Tools that do not understand those custom types still preserve them as declared, namespaced, versioned extensions instead of discarding them."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "The custom extension substrate example shows local vocabulary coexisting with XanaNode Core.\n\nThe canonical example defines a museum namespace with a custom artifact node type and custom curatorial relationship types.\n\nTools that do not understand those custom types still preserve them as declared, namespaced, versioned extensions instead of discarding them.",
+            "1.1": "The custom extension substrate example shows local vocabulary coexisting with XanaNode Core.",
+            "1.1.1": "The custom extension substrate example shows local vocabulary coexisting with XanaNode Core.",
+            "1.2": "The canonical example defines a museum namespace with a custom artifact node type and custom curatorial relationship types.",
+            "1.2.1": "The canonical example defines a museum namespace with a custom artifact node type and custom curatorial relationship types.",
+            "1.3": "Tools that do not understand those custom types still preserve them as declared, namespaced, versioned extensions instead of discarding them.",
+            "1.3.1": "Tools that do not understand those custom types still preserve them as declared, namespaced, versioned extensions instead of discarding them."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Custom Extension Substrate",
+      "type": "concept"
+    },
+    "compatibility-report": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "A compatibility report records how one implementation understands a substrate.\n\nIt names the compatibility level reached, the schema versions recognized, unsupported extensions, warnings, and any blocking issues.\n\nThe canonical protocol example publishes a compatibility report for its federation example, and this Hugo implementation publishes the schema needed to validate that report shape.",
+            "1.1": "A compatibility report records how one implementation understands a substrate.",
+            "1.1.1": "A compatibility report records how one implementation understands a substrate.",
+            "1.2": "It names the compatibility level reached, the schema versions recognized, unsupported extensions, warnings, and any blocking issues.",
+            "1.2.1": "It names the compatibility level reached, the schema versions recognized, unsupported extensions, warnings, and any blocking issues.",
+            "1.3": "The canonical protocol example publishes a compatibility report for its federation example, and this Hugo implementation publishes the schema needed to validate that report shape.",
+            "1.3.1": "The canonical protocol example publishes a compatibility report for its federation example, and this Hugo implementation publishes the schema needed to validate that report shape."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "A compatibility report records how one implementation understands a substrate.\n\nIt names the compatibility level reached, the schema versions recognized, unsupported extensions, warnings, and any blocking issues.\n\nThe canonical protocol example publishes a compatibility report for its federation example, and this Hugo implementation publishes the schema needed to validate that report shape.",
+            "1.1": "A compatibility report records how one implementation understands a substrate.",
+            "1.1.1": "A compatibility report records how one implementation understands a substrate.",
+            "1.2": "It names the compatibility level reached, the schema versions recognized, unsupported extensions, warnings, and any blocking issues.",
+            "1.2.1": "It names the compatibility level reached, the schema versions recognized, unsupported extensions, warnings, and any blocking issues.",
+            "1.3": "The canonical protocol example publishes a compatibility report for its federation example, and this Hugo implementation publishes the schema needed to validate that report shape.",
+            "1.3.1": "The canonical protocol example publishes a compatibility report for its federation example, and this Hugo implementation publishes the schema needed to validate that report shape."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Compatibility Report",
+      "type": "concept"
+    },
+    "compatibility-levels": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Compatibility is not all-or-nothing.\n\nThe protocol describes six practical levels: opaque storage, manifest recognition, core validation, declared extensions, merge candidacy, and federation readiness.\n\nThe point is preservation. A tool can keep data it does not fully understand, report the compatibility level it reached, and avoid pretending that unknown extensions are invalid knowledge.",
+            "1.1": "Compatibility is not all-or-nothing.",
+            "1.1.1": "Compatibility is not all-or-nothing.",
+            "1.2": "The protocol describes six practical levels: opaque storage, manifest recognition, core validation, declared extensions, merge candidacy, and federation readiness.",
+            "1.2.1": "The protocol describes six practical levels: opaque storage, manifest recognition, core validation, declared extensions, merge candidacy, and federation readiness.",
+            "1.3": "The point is preservation. A tool can keep data it does not fully understand, report the compatibility level it reached, and avoid pretending that unknown extensions are invalid knowledge.",
+            "1.3.1": "The point is preservation.",
+            "1.3.2": "A tool can keep data it does not fully understand, report the compatibility level it reached, and avoid pretending that unknown extensions are invalid knowledge."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Compatibility is not all-or-nothing.\n\nThe protocol describes six practical levels: opaque storage, manifest recognition, core validation, declared extensions, merge candidacy, and federation readiness.\n\nThe point is preservation. A tool can keep data it does not fully understand, report the compatibility level it reached, and avoid pretending that unknown extensions are invalid knowledge.",
+            "1.1": "Compatibility is not all-or-nothing.",
+            "1.1.1": "Compatibility is not all-or-nothing.",
+            "1.2": "The protocol describes six practical levels: opaque storage, manifest recognition, core validation, declared extensions, merge candidacy, and federation readiness.",
+            "1.2.1": "The protocol describes six practical levels: opaque storage, manifest recognition, core validation, declared extensions, merge candidacy, and federation readiness.",
+            "1.3": "The point is preservation. A tool can keep data it does not fully understand, report the compatibility level it reached, and avoid pretending that unknown extensions are invalid knowledge.",
+            "1.3.1": "The point is preservation.",
+            "1.3.2": "A tool can keep data it does not fully understand, report the compatibility level it reached, and avoid pretending that unknown extensions are invalid knowledge."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Compatibility Levels",
+      "type": "concept"
+    },
+    "civilizational-memory": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Civilizational memory is the long-term horizon for XanaNode.\n\nIt is not one website, database, or moderation team. It is a network of independently authored substrates that preserve lineage, disagreement, evidence, and context while remaining interoperable.\n\nThe protocol pieces in this example are deliberately small, but they point at that larger pattern: locally owned knowledge that can still be compared, mapped, cited, and preserved across systems.",
+            "1.1": "Civilizational memory is the long-term horizon for XanaNode.",
+            "1.1.1": "Civilizational memory is the long-term horizon for XanaNode.",
+            "1.2": "It is not one website, database, or moderation team. It is a network of independently authored substrates that preserve lineage, disagreement, evidence, and context while remaining interoperable.",
+            "1.2.1": "It is not one website, database, or moderation team.",
+            "1.2.2": "It is a network of independently authored substrates that preserve lineage, disagreement, evidence, and context while remaining interoperable.",
+            "1.3": "The protocol pieces in this example are deliberately small, but they point at that larger pattern: locally owned knowledge that can still be compared, mapped, cited, and preserved across systems.",
+            "1.3.1": "The protocol pieces in this example are deliberately small, but they point at that larger pattern: locally owned knowledge that can still be compared, mapped, cited, and preserved across systems."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Civilizational memory is the long-term horizon for XanaNode.\n\nIt is not one website, database, or moderation team. It is a network of independently authored substrates that preserve lineage, disagreement, evidence, and context while remaining interoperable.\n\nThe protocol pieces in this example are deliberately small, but they point at that larger pattern: locally owned knowledge that can still be compared, mapped, cited, and preserved across systems.",
+            "1.1": "Civilizational memory is the long-term horizon for XanaNode.",
+            "1.1.1": "Civilizational memory is the long-term horizon for XanaNode.",
+            "1.2": "It is not one website, database, or moderation team. It is a network of independently authored substrates that preserve lineage, disagreement, evidence, and context while remaining interoperable.",
+            "1.2.1": "It is not one website, database, or moderation team.",
+            "1.2.2": "It is a network of independently authored substrates that preserve lineage, disagreement, evidence, and context while remaining interoperable.",
+            "1.3": "The protocol pieces in this example are deliberately small, but they point at that larger pattern: locally owned knowledge that can still be compared, mapped, cited, and preserved across systems.",
+            "1.3.1": "The protocol pieces in this example are deliberately small, but they point at that larger pattern: locally owned knowledge that can still be compared, mapped, cited, and preserved across systems."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Civilizational Memory",
+      "type": "concept"
+    },
+    "canonical-type-policy": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Canonical types are the shared vocabulary that let independent substrates understand one another.\n\nThe core stays small, stable, and broadly useful. Domain-specific meanings belong in namespaced extension schemas unless they become common enough to justify canonical status.\n\nThis keeps the core interoperable while still letting local substrates model museums, legal records, biology, archives, or other specialized domains precisely.",
+            "1.1": "Canonical types are the shared vocabulary that let independent substrates understand one another.",
+            "1.1.1": "Canonical types are the shared vocabulary that let independent substrates understand one another.",
+            "1.2": "The core stays small, stable, and broadly useful. Domain-specific meanings belong in namespaced extension schemas unless they become common enough to justify canonical status.",
+            "1.2.1": "The core stays small, stable, and broadly useful.",
+            "1.2.2": "Domain-specific meanings belong in namespaced extension schemas unless they become common enough to justify canonical status.",
+            "1.3": "This keeps the core interoperable while still letting local substrates model museums, legal records, biology, archives, or other specialized domains precisely.",
+            "1.3.1": "This keeps the core interoperable while still letting local substrates model museums, legal records, biology, archives, or other specialized domains precisely."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Canonical types are the shared vocabulary that let independent substrates understand one another.\n\nThe core stays small, stable, and broadly useful. Domain-specific meanings belong in namespaced extension schemas unless they become common enough to justify canonical status.\n\nThis keeps the core interoperable while still letting local substrates model museums, legal records, biology, archives, or other specialized domains precisely.",
+            "1.1": "Canonical types are the shared vocabulary that let independent substrates understand one another.",
+            "1.1.1": "Canonical types are the shared vocabulary that let independent substrates understand one another.",
+            "1.2": "The core stays small, stable, and broadly useful. Domain-specific meanings belong in namespaced extension schemas unless they become common enough to justify canonical status.",
+            "1.2.1": "The core stays small, stable, and broadly useful.",
+            "1.2.2": "Domain-specific meanings belong in namespaced extension schemas unless they become common enough to justify canonical status.",
+            "1.3": "This keeps the core interoperable while still letting local substrates model museums, legal records, biology, archives, or other specialized domains precisely.",
+            "1.3.1": "This keeps the core interoperable while still letting local substrates model museums, legal records, biology, archives, or other specialized domains precisely."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Canonical Type Policy",
+      "type": "concept"
+    },
+    "claim-substrate-is-structure": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "Most information systems focus on what is stored.\n\nXanaNode focuses on how what is stored relates.",
+            "1.1": "Most information systems focus on what is stored.",
+            "1.1.1": "Most information systems focus on what is stored.",
+            "1.2": "XanaNode focuses on how what is stored relates.",
+            "1.2.1": "XanaNode focuses on how what is stored relates."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "Most information systems focus on what is stored.\n\nXanaNode focuses on how what is stored relates.",
+            "1.1": "Most information systems focus on what is stored.",
+            "1.1.1": "Most information systems focus on what is stored.",
+            "1.2": "XanaNode focuses on how what is stored relates.",
+            "1.2.1": "XanaNode focuses on how what is stored relates."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "A knowledge substrate is structure, not information",
+      "type": "claim"
+    },
+    "claim-relationships-preserve-context": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "A hyperlink can connect a source to a target without saying whether the source cites, defines, contradicts, explains, quotes, or merely mentions the target.\n\nTyped relationships make that missing meaning explicit.",
+            "1.1": "A hyperlink can connect a source to a target without saying whether the source cites, defines, contradicts, explains, quotes, or merely mentions the target.",
+            "1.1.1": "A hyperlink can connect a source to a target without saying whether the source cites, defines, contradicts, explains, quotes, or merely mentions the target.",
+            "1.2": "Typed relationships make that missing meaning explicit.",
+            "1.2.1": "Typed relationships make that missing meaning explicit."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "A hyperlink can connect a source to a target without saying whether the source cites, defines, contradicts, explains, quotes, or merely mentions the target.\n\nTyped relationships make that missing meaning explicit.",
+            "1.1": "A hyperlink can connect a source to a target without saying whether the source cites, defines, contradicts, explains, quotes, or merely mentions the target.",
+            "1.1.1": "A hyperlink can connect a source to a target without saying whether the source cites, defines, contradicts, explains, quotes, or merely mentions the target.",
+            "1.2": "Typed relationships make that missing meaning explicit.",
+            "1.2.1": "Typed relationships make that missing meaning explicit."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Typed relationships preserve context that hyperlinks lose",
+      "type": "claim"
+    },
+    "claim-merge-without-collapse": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "The goal of merging substrates is not to erase differences.\n\nThe goal is to expose correspondences, conflicts, overlaps, and gaps while preserving who asserted what and why.",
+            "1.1": "The goal of merging substrates is not to erase differences.",
+            "1.1.1": "The goal of merging substrates is not to erase differences.",
+            "1.2": "The goal is to expose correspondences, conflicts, overlaps, and gaps while preserving who asserted what and why.",
+            "1.2.1": "The goal is to expose correspondences, conflicts, overlaps, and gaps while preserving who asserted what and why."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "The goal of merging substrates is not to erase differences.\n\nThe goal is to expose correspondences, conflicts, overlaps, and gaps while preserving who asserted what and why.",
+            "1.1": "The goal of merging substrates is not to erase differences.",
+            "1.1.1": "The goal of merging substrates is not to erase differences.",
+            "1.2": "The goal is to expose correspondences, conflicts, overlaps, and gaps while preserving who asserted what and why.",
+            "1.2.1": "The goal is to expose correspondences, conflicts, overlaps, and gaps while preserving who asserted what and why."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Substrates should merge without collapsing disagreement",
+      "type": "claim"
     }
   }
 }
