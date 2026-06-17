@@ -19,10 +19,10 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/namespace-schema-required_for-schema-extension-48",
-      "type": "required_for",
-      "target": "xananode.example:concept/schema-extension",
-      "direction": "outgoing"
+      "id": "xananode.example:rel/schema-extension-requires-namespace-schema-48",
+      "type": "requires",
+      "source": "xananode.example:concept/schema-extension",
+      "direction": "incoming"
     }
   ]
 }

@@ -5,8 +5,12 @@
   "importance": 4,
   "summary": "Bush's argument that knowledge systems need associative navigation and recall.",
   "source_node": "xananode.example:source/as-we-may-think",
+  "source_content_id": "sha256:5e8e3a3bbe2278db54e5ea7b8e6a2677b620f67d2095e37409bc7c42451e1705",
+  "source_version_id": "sha256:5e8e3a3bbe2278db54e5ea7b8e6a2677b620f67d2095e37409bc7c42451e1705",
+  "content_id": "sha256:f712416ac32e6b8771dcbe4315d4d9ff61635e6407265b20301ec3e3a79afc0e",
+  "version_id": "sha256:f712416ac32e6b8771dcbe4315d4d9ff61635e6407265b20301ec3e3a79afc0e",
   "fragment_id": "0004",
-  "tumbler": "xananode.example:source/as-we-may-think#fragment/0004",
+  "tumbler": "xananode.example:source/as-we-may-think@sha256:5e8e3a3bbe2278db54e5ea7b8e6a2677b620f67d2095e37409bc7c42451e1705#fragment/0004@sha256:f712416ac32e6b8771dcbe4315d4d9ff61635e6407265b20301ec3e3a79afc0e",
   "selector": {
     "type": "semantic-anchor",
     "value": "associative-trails-discussion"

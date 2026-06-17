@@ -42,10 +42,10 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/provenance-has_evidence-claim-relationships-preserve-context-123",
-      "type": "has_evidence",
-      "target": "xananode.example:claim/claim-relationships-preserve-context",
-      "direction": "outgoing"
+      "id": "xananode.example:rel/claim-relationships-preserve-context-evidence_for-provenance-123",
+      "type": "evidence_for",
+      "source": "xananode.example:claim/claim-relationships-preserve-context",
+      "direction": "incoming"
     },
     {
       "id": "xananode.example:rel/merge-validation-requires-provenance-137",

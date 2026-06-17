@@ -19,10 +19,10 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/nls-demonstrated_by-mother-of-all-demos-61",
-      "type": "demonstrated_by",
-      "source": "xananode.example:project/nls",
-      "direction": "incoming"
+      "id": "xananode.example:rel/mother-of-all-demos-demonstrates-nls-61",
+      "type": "demonstrates",
+      "target": "xananode.example:project/nls",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.example:rel/douglas-engelbart-presented-mother-of-all-demos-73",

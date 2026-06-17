@@ -19,10 +19,10 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/merge-report-schema-required_for-federation-example-51",
-      "type": "required_for",
-      "target": "xananode.example:concept/federation-example",
-      "direction": "outgoing"
+      "id": "xananode.example:rel/federation-example-requires-merge-report-schema-51",
+      "type": "requires",
+      "source": "xananode.example:concept/federation-example",
+      "direction": "incoming"
     }
   ]
 }

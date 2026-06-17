@@ -5,8 +5,12 @@
   "importance": 4,
   "summary": "Nelson's work as a source layer for transclusion, reusable media, and visible interconnection.",
   "source_node": "xananode.example:source/xanadu-document-interconnection",
+  "source_content_id": "sha256:551b9b3f6532555b2b61f8411b721ef8610000d1f5f13d6bb050a03ec8af7b51",
+  "source_version_id": "sha256:551b9b3f6532555b2b61f8411b721ef8610000d1f5f13d6bb050a03ec8af7b51",
+  "content_id": "sha256:48d3c63d7645b547a9d41b7f6f39d2f07a885f4a479353dd3ae8742c4225cbfe",
+  "version_id": "sha256:48d3c63d7645b547a9d41b7f6f39d2f07a885f4a479353dd3ae8742c4225cbfe",
   "fragment_id": "0001",
-  "tumbler": "xananode.example:source/xanadu-document-interconnection#fragment/0001",
+  "tumbler": "xananode.example:source/xanadu-document-interconnection@sha256:551b9b3f6532555b2b61f8411b721ef8610000d1f5f13d6bb050a03ec8af7b51#fragment/0001@sha256:48d3c63d7645b547a9d41b7f6f39d2f07a885f4a479353dd3ae8742c4225cbfe",
   "selector": {
     "type": "semantic-anchor",
     "value": "reusable-media-visible-interconnection"

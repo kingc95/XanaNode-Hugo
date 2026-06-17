@@ -19,10 +19,10 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/compatibility-report-schema-required_for-federation-example-54",
-      "type": "required_for",
-      "target": "xananode.example:concept/federation-example",
-      "direction": "outgoing"
+      "id": "xananode.example:rel/federation-example-requires-compatibility-report-schema-54",
+      "type": "requires",
+      "source": "xananode.example:concept/federation-example",
+      "direction": "incoming"
     }
   ]
 }

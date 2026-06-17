@@ -12,16 +12,16 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/namespace-schema-required_for-schema-extension-48",
-      "type": "required_for",
-      "source": "xananode.example:schema/namespace-schema",
-      "direction": "incoming"
+      "id": "xananode.example:rel/schema-extension-requires-namespace-schema-48",
+      "type": "requires",
+      "target": "xananode.example:schema/namespace-schema",
+      "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/schema-extension-enabled_by-namespacing-118",
-      "type": "enabled_by",
-      "target": "xananode.example:concept/namespacing",
-      "direction": "outgoing"
+      "id": "xananode.example:rel/namespacing-enables-schema-extension-118",
+      "type": "enables",
+      "source": "xananode.example:concept/namespacing",
+      "direction": "incoming"
     },
     {
       "id": "xananode.example:rel/schema-extension-requires-xananode-core-schema-119",
@@ -30,10 +30,10 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/schema-extension-required_for-federated-knowledge-substrates-120",
-      "type": "required_for",
-      "target": "xananode.example:concept/federated-knowledge-substrates",
-      "direction": "outgoing"
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-schema-extension-120",
+      "type": "requires",
+      "source": "xananode.example:concept/federated-knowledge-substrates",
+      "direction": "incoming"
     },
     {
       "id": "xananode.example:rel/namespacing-clarifies-schema-extension-130",
@@ -42,10 +42,10 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/namespace-registry-required_for-schema-extension-132",
-      "type": "required_for",
-      "source": "xananode.example:concept/namespace-registry",
-      "direction": "incoming"
+      "id": "xananode.example:rel/schema-extension-requires-namespace-registry-132",
+      "type": "requires",
+      "target": "xananode.example:concept/namespace-registry",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.example:rel/merge-validation-requires-schema-extension-138",

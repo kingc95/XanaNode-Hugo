@@ -25,16 +25,16 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/provenance-has_evidence-claim-relationships-preserve-context-123",
-      "type": "has_evidence",
-      "source": "xananode.example:concept/provenance",
-      "direction": "incoming"
+      "id": "xananode.example:rel/claim-relationships-preserve-context-evidence_for-provenance-123",
+      "type": "evidence_for",
+      "target": "xananode.example:concept/provenance",
+      "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/claim-relationships-preserve-context-claim_of-typed-relationships-191",
-      "type": "claim_of",
-      "target": "xananode.example:concept/typed-relationships",
-      "direction": "outgoing"
+      "id": "xananode.example:rel/typed-relationships-has_claim-claim-relationships-preserve-context-191",
+      "type": "has_claim",
+      "source": "xananode.example:concept/typed-relationships",
+      "direction": "incoming"
     },
     {
       "id": "xananode.example:rel/claim-relationships-preserve-context-contrasts_with-unlabeled-hyperlink-192",

@@ -8,10 +8,10 @@
   "primary_media": "xananode.example:media/xananode-icon",
   "relationships": [
     {
-      "id": "xananode.example:rel/static-publishing-enabled_by-xananode-hugo-theme-16",
-      "type": "enabled_by",
-      "source": "xananode.example:technology/static-publishing",
-      "direction": "incoming"
+      "id": "xananode.example:rel/xananode-hugo-theme-enables-static-publishing-16",
+      "type": "enables",
+      "target": "xananode.example:technology/static-publishing",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.example:rel/xananode-hugo-theme-implements-xananode-55",
@@ -38,10 +38,10 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-icon-used_as_primary_media_for-xananode-hugo-theme-79",
-      "type": "used_as_primary_media_for",
-      "source": "xananode.example:media/xananode-icon",
-      "direction": "incoming"
+      "id": "xananode.example:rel/xananode-hugo-theme-has_primary_media-xananode-icon-79",
+      "type": "has_primary_media",
+      "target": "xananode.example:media/xananode-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.example:rel/xananode-icon-depicts-xananode-hugo-theme-80",

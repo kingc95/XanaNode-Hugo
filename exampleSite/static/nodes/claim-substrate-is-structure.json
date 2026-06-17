@@ -19,10 +19,10 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/claim-substrate-is-structure-supported_by-xanadu-document-interconnection-190",
-      "type": "supported_by",
-      "target": "xananode.example:source/xanadu-document-interconnection",
-      "direction": "outgoing"
+      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-substrate-is-structure-190",
+      "type": "supports",
+      "source": "xananode.example:source/xanadu-document-interconnection",
+      "direction": "incoming"
     }
   ]
 }

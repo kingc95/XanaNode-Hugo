@@ -12,16 +12,16 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/merge-report-schema-required_for-federation-example-51",
-      "type": "required_for",
-      "source": "xananode.example:schema/merge-report-schema",
-      "direction": "incoming"
+      "id": "xananode.example:rel/federation-example-requires-merge-report-schema-51",
+      "type": "requires",
+      "target": "xananode.example:schema/merge-report-schema",
+      "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/compatibility-report-schema-required_for-federation-example-54",
-      "type": "required_for",
-      "source": "xananode.example:schema/compatibility-report-schema",
-      "direction": "incoming"
+      "id": "xananode.example:rel/federation-example-requires-compatibility-report-schema-54",
+      "type": "requires",
+      "target": "xananode.example:schema/compatibility-report-schema",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.example:rel/federation-example-demonstrates-federated-knowledge-substrates-160",

@@ -28,6 +28,12 @@
     "source_url": { "type": "string", "format": "uri" },
     "rights_status": { "type": "string" },
     "confidence": { "type": "string" },
+    "protocol_id": { "type": "string" },
+    "content_id": { "type": "string" },
+    "version_id": { "type": "string" },
+    "source_content_id": { "type": "string" },
+    "source_version_id": { "type": "string" },
+    "signature": { "type": "string" },
     "source_node": { "type": "string" },
     "fragment_id": {
       "type": "string",
@@ -35,14 +41,30 @@
     },
     "tumbler": {
       "type": "string",
-      "pattern": "^[a-z][a-z0-9_-]*(\\.[a-z][a-z0-9_-]*)*:[a-z][a-z0-9_-]*/[^\\s#]+(#fragment/[A-Za-z0-9._-]+)?$"
+      "pattern": "^[a-z][a-z0-9_-]*(\\.[a-z][a-z0-9_-]*)*:[a-z][a-z0-9_-]*/[^\\s#@]+(@[^\\s#]+)?(#fragment/[A-Za-z0-9._-]+(@[^\\s#]+)?)?$"
     },
     "selector": {
       "type": "object",
       "additionalProperties": true,
       "properties": {
-        "type": { "type": "string" },
-        "value": { "type": "string" }
+        "type": {
+          "type": "string",
+          "enum": [
+            "semantic-anchor",
+            "TextQuoteSelector",
+            "TextPositionSelector",
+            "FragmentSelector",
+            "CssSelector",
+            "XPathSelector",
+            "RangeSelector"
+          ]
+        },
+        "value": { "type": "string" },
+        "exact": { "type": "string" },
+        "prefix": { "type": "string" },
+        "suffix": { "type": "string" },
+        "start": { "type": "integer" },
+        "end": { "type": "integer" }
       }
     },
     "relationships": {
@@ -68,5 +90,27 @@
         }
       }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "type": { "const": "fragment" }
+        },
+        "required": ["type"]
+      },
+      "then": {
+        "required": [
+          "source_node",
+          "source_version_id",
+          "source_content_id",
+          "fragment_id",
+          "tumbler",
+          "selector",
+          "content_id",
+          "version_id"
+        ]
+      }
+    }
+  ]
 }

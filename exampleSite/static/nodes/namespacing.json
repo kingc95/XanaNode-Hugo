@@ -18,10 +18,10 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/schema-extension-enabled_by-namespacing-118",
-      "type": "enabled_by",
-      "source": "xananode.example:concept/schema-extension",
-      "direction": "incoming"
+      "id": "xananode.example:rel/namespacing-enables-schema-extension-118",
+      "type": "enables",
+      "target": "xananode.example:concept/schema-extension",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.example:rel/namespacing-clarifies-schema-extension-130",

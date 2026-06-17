@@ -1,7 +1,7 @@
 baseURL: "https://example.com/"
 languageCode: "en-us"
 title: "XanaNode Example Substrate"
-theme: "xananode"
+theme: "xananode-hugo"
 
 params:
   description: "A self-hosting example knowledge substrate that explains XanaNode using XanaNode."

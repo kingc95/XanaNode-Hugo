@@ -36,10 +36,10 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/link-rot-explained_by-knowledge-substrate-78",
-      "type": "explained_by",
-      "source": "xananode.example:observation/link-rot",
-      "direction": "incoming"
+      "id": "xananode.example:rel/knowledge-substrate-explains-link-rot-78",
+      "type": "explains",
+      "target": "xananode.example:observation/link-rot",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.example:rel/start-here-explains-knowledge-substrate-88",
@@ -78,10 +78,10 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/knowledge-substrate-enabled_by-xananode-core-schema-150",
-      "type": "enabled_by",
-      "target": "xananode.example:schema/xananode-core-schema",
-      "direction": "outgoing"
+      "id": "xananode.example:rel/xananode-core-schema-enables-knowledge-substrate-150",
+      "type": "enables",
+      "source": "xananode.example:schema/xananode-core-schema",
+      "direction": "incoming"
     },
     {
       "id": "xananode.example:rel/civilizational-memory-requires-knowledge-substrate-185",

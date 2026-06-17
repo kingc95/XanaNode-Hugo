@@ -6,10 +6,10 @@
   "summary": "A report that records how one substrate or tool understands another substrate, including compatibility level, supported schemas, warnings, and blocking issues.",
   "relationships": [
     {
-      "id": "xananode.example:rel/substrate-manifest-schema-required_for-compatibility-report-45",
-      "type": "required_for",
-      "source": "xananode.example:schema/substrate-manifest-schema",
-      "direction": "incoming"
+      "id": "xananode.example:rel/compatibility-report-requires-substrate-manifest-schema-45",
+      "type": "requires",
+      "target": "xananode.example:schema/substrate-manifest-schema",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.example:rel/compatibility-report-schema-defines-compatibility-report-52",
@@ -42,10 +42,10 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/compatibility-report-required_for-merge-validation-180",
-      "type": "required_for",
-      "target": "xananode.example:concept/merge-validation",
-      "direction": "outgoing"
+      "id": "xananode.example:rel/merge-validation-requires-compatibility-report-180",
+      "type": "requires",
+      "source": "xananode.example:concept/merge-validation",
+      "direction": "incoming"
     },
     {
       "id": "xananode.example:rel/compatibility-levels-uses-compatibility-report-181",

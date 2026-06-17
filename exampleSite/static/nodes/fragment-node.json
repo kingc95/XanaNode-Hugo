@@ -24,10 +24,10 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/fragment-node-required_for-transclusion-153",
-      "type": "required_for",
-      "target": "xananode.example:concept/transclusion",
-      "direction": "outgoing"
+      "id": "xananode.example:rel/transclusion-requires-fragment-node-153",
+      "type": "requires",
+      "source": "xananode.example:concept/transclusion",
+      "direction": "incoming"
     },
     {
       "id": "xananode.example:rel/fragment-node-preserves-provenance-154",

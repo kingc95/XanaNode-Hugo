@@ -20,10 +20,10 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/link-rot-supported_by-source-code-link-decay-study-77",
-      "type": "supported_by",
-      "source": "xananode.example:observation/link-rot",
-      "direction": "incoming"
+      "id": "xananode.example:rel/source-code-link-decay-study-supports-link-rot-77",
+      "type": "supports",
+      "target": "xananode.example:observation/link-rot",
+      "direction": "outgoing"
     }
   ]
 }

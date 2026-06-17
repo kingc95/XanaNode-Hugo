@@ -24,16 +24,16 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/link-rot-supported_by-source-code-link-decay-study-77",
-      "type": "supported_by",
-      "target": "xananode.example:source/source-code-link-decay-study",
-      "direction": "outgoing"
+      "id": "xananode.example:rel/source-code-link-decay-study-supports-link-rot-77",
+      "type": "supports",
+      "source": "xananode.example:source/source-code-link-decay-study",
+      "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/link-rot-explained_by-knowledge-substrate-78",
-      "type": "explained_by",
-      "target": "xananode.example:concept/knowledge-substrate",
-      "direction": "outgoing"
+      "id": "xananode.example:rel/knowledge-substrate-explains-link-rot-78",
+      "type": "explains",
+      "source": "xananode.example:concept/knowledge-substrate",
+      "direction": "incoming"
     }
   ]
 }

@@ -5,8 +5,12 @@
   "importance": 4,
   "summary": "Engelbart's demonstration as an example of computers augmenting structured knowledge work.",
   "source_node": "xananode.example:source/mother-of-all-demos",
+  "source_content_id": "sha256:88a43c06a3135ff5a982ca8efe948753f1d6e839561dcf664bd873719025e210",
+  "source_version_id": "sha256:88a43c06a3135ff5a982ca8efe948753f1d6e839561dcf664bd873719025e210",
+  "content_id": "sha256:217a3bcf5fb3c571fd4661497b6bdde97bba61576045ca253f21b9c0d2987ce4",
+  "version_id": "sha256:217a3bcf5fb3c571fd4661497b6bdde97bba61576045ca253f21b9c0d2987ce4",
   "fragment_id": "0001",
-  "tumbler": "xananode.example:source/mother-of-all-demos#fragment/0001",
+  "tumbler": "xananode.example:source/mother-of-all-demos@sha256:88a43c06a3135ff5a982ca8efe948753f1d6e839561dcf664bd873719025e210#fragment/0001@sha256:217a3bcf5fb3c571fd4661497b6bdde97bba61576045ca253f21b9c0d2987ce4",
   "selector": {
     "type": "semantic-anchor",
     "value": "augmenting-human-intelligence"

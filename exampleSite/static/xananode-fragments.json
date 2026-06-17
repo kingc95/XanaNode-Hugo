@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T18:53:17.297Z",
+  "generated_at": "2026-06-17T05:38:30.861Z",
   "nodes": {
     "xananode-core-trail": {
       "versions": {
@@ -166,11 +166,15 @@
             "0001": {
               "authored": true,
               "id": "0001",
+              "content_id": "sha256:48d3c63d7645b547a9d41b7f6f39d2f07a885f4a479353dd3ae8742c4225cbfe",
+              "version_id": "sha256:48d3c63d7645b547a9d41b7f6f39d2f07a885f4a479353dd3ae8742c4225cbfe",
+              "source_content_id": "sha256:551b9b3f6532555b2b61f8411b721ef8610000d1f5f13d6bb050a03ec8af7b51",
+              "source_version_id": "sha256:551b9b3f6532555b2b61f8411b721ef8610000d1f5f13d6bb050a03ec8af7b51",
               "title": "Reusable Media Fragment",
               "summary": "Nelson's work as a source layer for transclusion, reusable media, and visible interconnection.",
               "source_node": "xananode.example:source/xanadu-document-interconnection",
               "protocol_id": "xananode.example:fragment/xanadu-document-interconnection-0001",
-              "tumbler": "xananode.example:source/xanadu-document-interconnection#fragment/0001",
+              "tumbler": "xananode.example:source/xanadu-document-interconnection@sha256:551b9b3f6532555b2b61f8411b721ef8610000d1f5f13d6bb050a03ec8af7b51#fragment/0001@sha256:48d3c63d7645b547a9d41b7f6f39d2f07a885f4a479353dd3ae8742c4225cbfe",
               "selector": {
                 "type": "semantic-anchor",
                 "value": "reusable-media-visible-interconnection"
@@ -190,11 +194,15 @@
             "0001": {
               "authored": true,
               "id": "0001",
+              "content_id": "sha256:48d3c63d7645b547a9d41b7f6f39d2f07a885f4a479353dd3ae8742c4225cbfe",
+              "version_id": "sha256:48d3c63d7645b547a9d41b7f6f39d2f07a885f4a479353dd3ae8742c4225cbfe",
+              "source_content_id": "sha256:551b9b3f6532555b2b61f8411b721ef8610000d1f5f13d6bb050a03ec8af7b51",
+              "source_version_id": "sha256:551b9b3f6532555b2b61f8411b721ef8610000d1f5f13d6bb050a03ec8af7b51",
               "title": "Reusable Media Fragment",
               "summary": "Nelson's work as a source layer for transclusion, reusable media, and visible interconnection.",
               "source_node": "xananode.example:source/xanadu-document-interconnection",
               "protocol_id": "xananode.example:fragment/xanadu-document-interconnection-0001",
-              "tumbler": "xananode.example:source/xanadu-document-interconnection#fragment/0001",
+              "tumbler": "xananode.example:source/xanadu-document-interconnection@sha256:551b9b3f6532555b2b61f8411b721ef8610000d1f5f13d6bb050a03ec8af7b51#fragment/0001@sha256:48d3c63d7645b547a9d41b7f6f39d2f07a885f4a479353dd3ae8742c4225cbfe",
               "selector": {
                 "type": "semantic-anchor",
                 "value": "reusable-media-visible-interconnection"
@@ -242,11 +250,15 @@
             "0001": {
               "authored": true,
               "id": "0001",
+              "content_id": "sha256:217a3bcf5fb3c571fd4661497b6bdde97bba61576045ca253f21b9c0d2987ce4",
+              "version_id": "sha256:217a3bcf5fb3c571fd4661497b6bdde97bba61576045ca253f21b9c0d2987ce4",
+              "source_content_id": "sha256:88a43c06a3135ff5a982ca8efe948753f1d6e839561dcf664bd873719025e210",
+              "source_version_id": "sha256:88a43c06a3135ff5a982ca8efe948753f1d6e839561dcf664bd873719025e210",
               "title": "Augmenting Human Intelligence Fragment",
               "summary": "Engelbart's demonstration as an example of computers augmenting structured knowledge work.",
               "source_node": "xananode.example:source/mother-of-all-demos",
               "protocol_id": "xananode.example:fragment/mother-of-all-demos-0001",
-              "tumbler": "xananode.example:source/mother-of-all-demos#fragment/0001",
+              "tumbler": "xananode.example:source/mother-of-all-demos@sha256:88a43c06a3135ff5a982ca8efe948753f1d6e839561dcf664bd873719025e210#fragment/0001@sha256:217a3bcf5fb3c571fd4661497b6bdde97bba61576045ca253f21b9c0d2987ce4",
               "selector": {
                 "type": "semantic-anchor",
                 "value": "augmenting-human-intelligence"
@@ -265,11 +277,15 @@
             "0001": {
               "authored": true,
               "id": "0001",
+              "content_id": "sha256:217a3bcf5fb3c571fd4661497b6bdde97bba61576045ca253f21b9c0d2987ce4",
+              "version_id": "sha256:217a3bcf5fb3c571fd4661497b6bdde97bba61576045ca253f21b9c0d2987ce4",
+              "source_content_id": "sha256:88a43c06a3135ff5a982ca8efe948753f1d6e839561dcf664bd873719025e210",
+              "source_version_id": "sha256:88a43c06a3135ff5a982ca8efe948753f1d6e839561dcf664bd873719025e210",
               "title": "Augmenting Human Intelligence Fragment",
               "summary": "Engelbart's demonstration as an example of computers augmenting structured knowledge work.",
               "source_node": "xananode.example:source/mother-of-all-demos",
               "protocol_id": "xananode.example:fragment/mother-of-all-demos-0001",
-              "tumbler": "xananode.example:source/mother-of-all-demos#fragment/0001",
+              "tumbler": "xananode.example:source/mother-of-all-demos@sha256:88a43c06a3135ff5a982ca8efe948753f1d6e839561dcf664bd873719025e210#fragment/0001@sha256:217a3bcf5fb3c571fd4661497b6bdde97bba61576045ca253f21b9c0d2987ce4",
               "selector": {
                 "type": "semantic-anchor",
                 "value": "augmenting-human-intelligence"
@@ -294,11 +310,15 @@
             "0004": {
               "authored": true,
               "id": "0004",
+              "content_id": "sha256:f712416ac32e6b8771dcbe4315d4d9ff61635e6407265b20301ec3e3a79afc0e",
+              "version_id": "sha256:f712416ac32e6b8771dcbe4315d4d9ff61635e6407265b20301ec3e3a79afc0e",
+              "source_content_id": "sha256:5e8e3a3bbe2278db54e5ea7b8e6a2677b620f67d2095e37409bc7c42451e1705",
+              "source_version_id": "sha256:5e8e3a3bbe2278db54e5ea7b8e6a2677b620f67d2095e37409bc7c42451e1705",
               "title": "Associative Trails Fragment",
               "summary": "Bush's argument that knowledge systems need associative navigation and recall.",
               "source_node": "xananode.example:source/as-we-may-think",
               "protocol_id": "xananode.example:fragment/as-we-may-think-0004",
-              "tumbler": "xananode.example:source/as-we-may-think#fragment/0004",
+              "tumbler": "xananode.example:source/as-we-may-think@sha256:5e8e3a3bbe2278db54e5ea7b8e6a2677b620f67d2095e37409bc7c42451e1705#fragment/0004@sha256:f712416ac32e6b8771dcbe4315d4d9ff61635e6407265b20301ec3e3a79afc0e",
               "selector": {
                 "type": "semantic-anchor",
                 "value": "associative-trails-discussion"
@@ -318,11 +338,15 @@
             "0004": {
               "authored": true,
               "id": "0004",
+              "content_id": "sha256:f712416ac32e6b8771dcbe4315d4d9ff61635e6407265b20301ec3e3a79afc0e",
+              "version_id": "sha256:f712416ac32e6b8771dcbe4315d4d9ff61635e6407265b20301ec3e3a79afc0e",
+              "source_content_id": "sha256:5e8e3a3bbe2278db54e5ea7b8e6a2677b620f67d2095e37409bc7c42451e1705",
+              "source_version_id": "sha256:5e8e3a3bbe2278db54e5ea7b8e6a2677b620f67d2095e37409bc7c42451e1705",
               "title": "Associative Trails Fragment",
               "summary": "Bush's argument that knowledge systems need associative navigation and recall.",
               "source_node": "xananode.example:source/as-we-may-think",
               "protocol_id": "xananode.example:fragment/as-we-may-think-0004",
-              "tumbler": "xananode.example:source/as-we-may-think#fragment/0004",
+              "tumbler": "xananode.example:source/as-we-may-think@sha256:5e8e3a3bbe2278db54e5ea7b8e6a2677b620f67d2095e37409bc7c42451e1705#fragment/0004@sha256:f712416ac32e6b8771dcbe4315d4d9ff61635e6407265b20301ec3e3a79afc0e",
               "selector": {
                 "type": "semantic-anchor",
                 "value": "associative-trails-discussion"

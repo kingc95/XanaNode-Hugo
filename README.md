@@ -4,6 +4,8 @@ This repository is a Hugo implementation of the XanaNode protocol.
 
 The canonical protocol lives at [kingc95/xananode](https://github.com/kingc95/xananode). Use that repository as the source of truth for the core specs, schemas, governance model, registries, examples, and protocol proposals.
 
+The renderer uses [kingc95/XanaNode-Core-SDK](https://github.com/kingc95/XanaNode-Core-SDK) schemas when the SDK is available locally, with the bundled schemas kept as a fallback for standalone theme installs.
+
 This theme turns a Hugo content tree into a readable website plus machine-readable XanaNode substrate artifacts.
 
 ## What It Publishes
@@ -29,7 +31,7 @@ The theme does not replace the protocol. It is one static-site renderer and vali
 ## Repository Layout
 
 ```text
-themes/xananode/
+themes/xananode-hugo/
   archetypes/                 Starter node templates
   assets/                     Base CSS
   layouts/                    Hugo templates and JSON export
@@ -42,7 +44,7 @@ themes/xananode/
 
 ## Protocol Alignment
 
-The build tool validates the bundled core registries and generated substrate artifacts against the XanaNode schemas from the protocol repo.
+The build tool validates the bundled core registries and generated substrate artifacts against the XanaNode schemas from the Core SDK. It looks for `XANANODE_SDK_ROOT` first, then for a sibling `XanaNode-Core-SDK` checkout, then falls back to the bundled `static/schemas` copy.
 
 Current generated protocol files include:
 
@@ -184,8 +186,8 @@ The example site is intentionally self-hosting: it explains XanaNode using XanaN
 hugo new site my-substrate
 cd my-substrate
 git init
-git submodule add https://github.com/kingc95/xananode-hugo.git themes/xananode
-cp themes/xananode/exampleSite/hugo.yaml ./hugo.yaml
+git submodule add https://github.com/kingc95/xananode-hugo.git themes/xananode-hugo
+cp themes/xananode-hugo/exampleSite/hugo.yaml ./hugo.yaml
 npm init -y
 npm install --save-dev ajv gray-matter glob
 ```
@@ -195,8 +197,8 @@ Add scripts to your site's `package.json`:
 ```json
 {
   "scripts": {
-    "prepare": "node themes/xananode/tools/prepare-xananode.mjs .",
-    "validate": "node themes/xananode/tools/prepare-xananode.mjs .",
+    "prepare": "node themes/xananode-hugo/tools/prepare-xananode.mjs .",
+    "validate": "node themes/xananode-hugo/tools/prepare-xananode.mjs .",
     "dev": "npm run prepare && hugo server",
     "build": "npm run prepare && hugo --gc --minify"
   }

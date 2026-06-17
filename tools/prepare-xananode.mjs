@@ -2,19 +2,30 @@
 import fs from "node:fs";
 import path from "node:path";
 import process from "node:process";
+import { createHash } from "node:crypto";
 import matter from "gray-matter";
 import { globSync } from "glob";
 import Ajv2020 from "ajv/dist/2020.js";
 
 const siteRoot = path.resolve(process.argv[2] || ".");
 const themeRootCandidates = [
+  path.join(siteRoot, "themes", "xananode-hugo"),
   path.join(siteRoot, "themes", "xananode"),
+  path.join(siteRoot, "..", "xananode-hugo"),
   path.join(siteRoot, "..", "xananode"),
   path.resolve(siteRoot, ".."),
   siteRoot
 ];
 const themeRoot = themeRootCandidates.find((candidate) => fs.existsSync(path.join(candidate, "static", "schemas"))) || themeRootCandidates[0];
+const sdkRootCandidates = [
+  process.env.XANANODE_SDK_ROOT,
+  path.resolve(siteRoot, "..", "..", "..", "..", "XanaNode-Core-SDK"),
+  path.resolve(siteRoot, "..", "..", "..", "..", "xananode-core-sdk"),
+  path.resolve(themeRoot, "..", "..", "..", "XanaNode-Core-SDK"),
+  path.resolve(themeRoot, "..", "..", "..", "xananode-core-sdk")
+].filter(Boolean);
 const schemaCandidates = [
+  ...sdkRootCandidates.map((candidate) => path.join(candidate, "schemas")),
   path.join(siteRoot, "static", "schemas"),
   path.join(themeRoot, "static", "schemas")
 ];
@@ -29,7 +40,9 @@ const schemaAliasPairs = [
   ["xananode-node-types.v0.3.0.json", "xananode-node-types.json"],
   ["xananode-node-types.schema.v0.3.0.json", "xananode-node-types.schema.json"],
   ["xananode-relationship-types.v0.4.0.json", "xananode-relationship-types.json"],
-  ["xananode-relationship-types.schema.v0.4.0.json", "xananode-relationship-types.schema.json"]
+  ["xananode-relationship-types.schema.v0.4.0.json", "xananode-relationship-types.schema.json"],
+  ["xananode-relationship-types.v0.5.0.json", "xananode-relationship-types.json"],
+  ["xananode-relationship-types.schema.v0.5.0.json", "xananode-relationship-types.schema.json"]
 ];
 
 function firstExistingFile(relativePath) {
@@ -116,6 +129,10 @@ function protocolIdFor(localId, data, namespace) {
   if (data.protocol_id) return data.protocol_id;
   if (String(localId).includes(":")) return String(localId);
   return `${namespace}:${protocolTypePath(data.type)}/${slugify(localId, "node")}`;
+}
+
+function contentIdFor(value) {
+  return `sha256:${createHash("sha256").update(String(value || "")).digest("hex")}`;
 }
 
 function relationshipIdFor(namespace, sourceId, relationshipType, targetId, index) {
@@ -225,11 +242,19 @@ function buildFragments(markdown, data, context) {
     }
 
     const protocolId = fragment.protocol_id || fragmentProtocolIdFor(context.namespace, context.localId, fragmentId);
-    const tumbler = fragment.tumbler || `${context.protocolId}#fragment/${fragmentId}`;
+    const sourceContentId = context.sourceContentId;
+    const sourceVersionId = context.sourceVersionId;
+    const fragmentContentId = fragment.content_id || contentIdFor(fragment.raw || text || fragmentId);
+    const fragmentVersionId = fragment.version_id || fragmentContentId;
+    const tumbler = fragment.tumbler || `${context.protocolId}@${sourceVersionId}#fragment/${fragmentId}@${fragmentVersionId}`;
     fragmentMap[fragmentId] = text;
     metadata[fragmentId] = {
       authored: true,
       id: fragmentId,
+      content_id: fragmentContentId,
+      version_id: fragmentVersionId,
+      source_content_id: sourceContentId,
+      source_version_id: sourceVersionId,
       title: fragment.title || `${data.title || context.localId} Fragment ${fragmentId}`,
       summary: fragment.summary || `A stable addressable fragment of ${data.title || context.localId}.`,
       source_node: context.protocolId,
@@ -574,6 +599,30 @@ if (!validateRelationshipRegistry(relationshipTypesRegistry)) {
 const nodeTypeMap = new Map((nodeTypesRegistry.node_types || []).map((nodeType) => [nodeType.type, nodeType]));
 const relationshipTypeMap = new Map((relationshipTypesRegistry.relationship_types || []).map((relationshipType) => [relationshipType.type, relationshipType]));
 const relationshipInverseMap = new Map((relationshipTypesRegistry.relationship_types || []).map((relationshipType) => [relationshipType.type, relationshipType.inverse]));
+const relationshipInverseToTypeMap = new Map(
+  (relationshipTypesRegistry.relationship_types || [])
+    .filter((relationshipType) => relationshipType.inverse)
+    .map((relationshipType) => [relationshipType.inverse, relationshipType.type])
+);
+
+function relationshipDefinitionFor(type) {
+  return relationshipTypeMap.get(type) || relationshipTypeMap.get(relationshipInverseToTypeMap.get(type));
+}
+
+function normalizeAuthoredEdge(edge) {
+  const canonicalType = relationshipInverseToTypeMap.get(edge.type);
+  if (!relationshipTypeMap.has(edge.type) && canonicalType) {
+    return {
+      ...edge,
+      source: edge.target,
+      target: edge.source,
+      type: canonicalType,
+      authoredType: edge.type,
+      inverted: true
+    };
+  }
+  return { ...edge, authoredType: edge.type, inverted: false };
+}
 
 const contentDir = path.join(siteRoot, "content");
 if (!fs.existsSync(contentDir)) errors.push("Missing content directory.");
@@ -598,6 +647,13 @@ const substrateManifest = {
   description: process.env.XANANODE_DESCRIPTION || "A Hugo-published XanaNode-compatible knowledge substrate.",
   version: process.env.XANANODE_VERSION || "0.1.0",
   namespace: substrateNamespace,
+  repository: {
+    type: "git",
+    url: process.env.XANANODE_REPOSITORY_URL || "https://github.com/kingc95/xananode-hugo",
+    default_branch: process.env.XANANODE_REPOSITORY_BRANCH || "main",
+    ...(process.env.XANANODE_REPOSITORY_PATH ? { path: process.env.XANANODE_REPOSITORY_PATH } : {}),
+    ...(process.env.XANANODE_REPOSITORY_COMMIT ? { commit: process.env.XANANODE_REPOSITORY_COMMIT } : {})
+  },
   schema_version: `xananode-core@${relationshipTypesRegistry.version || "0.4.0"}`,
   imports: ["xananode:core"]
 };
@@ -619,6 +675,8 @@ for (const relativeFile of contentFiles) {
   }
   nodes.set(id, { id, protocolId, file: relativeFile, data, body: parsed.content, body_start_line: bodyStartLine(raw, parsed.content) });
   const version = data.version || "v1";
+  const sourceContentId = data.content_id || contentIdFor(parsed.content);
+  const sourceVersionId = data.version_id || sourceContentId;
   fragments.nodes[id] = fragments.nodes[id] || { versions: {} };
   fragments.nodes[id].title = data.title || id;
   fragments.nodes[id].type = data.type;
@@ -627,7 +685,9 @@ for (const relativeFile of contentFiles) {
     localId: id,
     protocolId,
     file: relativeFile,
-    version
+    version,
+    sourceContentId,
+    sourceVersionId
   });
   if (!fragments.nodes[id].versions.latest) {
     fragments.nodes[id].versions.latest = fragments.nodes[id].versions[version];
@@ -669,7 +729,7 @@ for (const node of nodes.values()) {
     }
     if (!relationship.type) errors.push(`${file}: relationships[${index}] is missing "type".`);
     if (!relationship.target) errors.push(`${file}: relationships[${index}] is missing "target".`);
-    if (relationship.type && !relationshipTypeMap.has(relationship.type)) {
+    if (relationship.type && !relationshipDefinitionFor(relationship.type)) {
       errors.push(`${file}: relationship "${relationship.type}" is not in xananode-relationship-types.json.`);
     }
     if (relationship.target && !nodes.has(relationship.target)) {
@@ -682,7 +742,7 @@ for (const node of nodes.values()) {
       errors.push(`${file}: relationship "${relationship.type}" has invalid visibility "${relationship.visibility}".`);
     }
     if (relationship.type && relationship.target) {
-      authoredEdges.push({ source: id, target: relationship.target, type: relationship.type, file, relationship, index });
+      authoredEdges.push(normalizeAuthoredEdge({ source: id, target: relationship.target, type: relationship.type, file, relationship, index }));
     }
   }
   const implicitReferenceFields = ["claims", "sources", "people", "concepts", "projects", "events", "organizations", "technologies", "observations", "media", "depicts", "nodes"];
@@ -734,12 +794,6 @@ for (const node of nodes.values()) {
   }
 }
 
-for (const relationshipType of relationshipTypesRegistry.relationship_types || []) {
-  if (relationshipType.inverse && !relationshipTypeMap.has(relationshipType.inverse)) {
-    errors.push(`Relationship type "${relationshipType.type}" declares missing inverse "${relationshipType.inverse}".`);
-  }
-}
-
 const edgeSet = new Set(authoredEdges.map((edge) => `${edge.source}\u0000${edge.type}\u0000${edge.target}`));
 for (const edge of authoredEdges) {
   const inverseType = relationshipInverseMap.get(edge.type);
@@ -759,8 +813,8 @@ const authoredProtocolEdges = authoredEdges.map((edge, index) => {
     source: sourceNode.protocolId,
     target: targetNode.protocolId,
     type: edge.type,
-    weight: relationship.weight || relationshipTypeMap.get(edge.type)?.default_weight || 3,
-    visibility: relationship.visibility || relationshipTypeMap.get(edge.type)?.default_visibility || "secondary",
+    weight: relationship.weight || relationshipDefinitionFor(edge.type)?.default_weight || 3,
+    visibility: relationship.visibility || relationshipDefinitionFor(edge.type)?.default_visibility || "secondary",
     summary: relationship.summary || generatedSummary({
       source: sourceNode.protocolId,
       sourceTitle: sourceNode.data.title,
@@ -892,6 +946,10 @@ for (const fragment of authoredFragmentNodes) {
     importance: 4,
     summary: fragment.summary,
     source_node: fragment.sourceProtocolId,
+    source_content_id: fragment.source_content_id,
+    source_version_id: fragment.source_version_id,
+    content_id: fragment.content_id,
+    version_id: fragment.version_id,
     fragment_id: fragment.id,
     tumbler: fragment.tumbler,
     selector: fragment.selector,

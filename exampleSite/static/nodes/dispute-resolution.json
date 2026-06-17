@@ -30,10 +30,10 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/dispute-resolution-required_for-federation-rules-172",
-      "type": "required_for",
-      "target": "xananode.example:concept/federation-rules",
-      "direction": "outgoing"
+      "id": "xananode.example:rel/federation-rules-requires-dispute-resolution-172",
+      "type": "requires",
+      "source": "xananode.example:concept/federation-rules",
+      "direction": "incoming"
     }
   ]
 }

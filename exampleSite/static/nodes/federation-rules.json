@@ -6,10 +6,10 @@
   "summary": "The rules for exchanging, comparing, and preserving independently governed substrates without collapsing them into one authority.",
   "relationships": [
     {
-      "id": "xananode.example:rel/moderation-model-required_for-federation-rules-134",
-      "type": "required_for",
-      "source": "xananode.example:concept/moderation-model",
-      "direction": "incoming"
+      "id": "xananode.example:rel/federation-rules-requires-moderation-model-134",
+      "type": "requires",
+      "target": "xananode.example:concept/moderation-model",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.example:rel/federation-rules-defines-federated-knowledge-substrates-156",
@@ -42,10 +42,10 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/dispute-resolution-required_for-federation-rules-172",
-      "type": "required_for",
-      "source": "xananode.example:concept/dispute-resolution",
-      "direction": "incoming"
+      "id": "xananode.example:rel/federation-rules-requires-dispute-resolution-172",
+      "type": "requires",
+      "target": "xananode.example:concept/dispute-resolution",
+      "direction": "outgoing"
     }
   ]
 }

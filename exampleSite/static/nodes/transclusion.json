@@ -48,10 +48,10 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/fragment-node-required_for-transclusion-153",
-      "type": "required_for",
-      "source": "xananode.example:concept/fragment-node",
-      "direction": "incoming"
+      "id": "xananode.example:rel/transclusion-requires-fragment-node-153",
+      "type": "requires",
+      "target": "xananode.example:concept/fragment-node",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.example:rel/deep-linking-enables-transclusion-173",

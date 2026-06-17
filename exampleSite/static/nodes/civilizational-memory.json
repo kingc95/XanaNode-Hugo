@@ -12,10 +12,10 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/civilizational-memory-enabled_by-federated-knowledge-substrates-184",
-      "type": "enabled_by",
-      "target": "xananode.example:concept/federated-knowledge-substrates",
-      "direction": "outgoing"
+      "id": "xananode.example:rel/federated-knowledge-substrates-enables-civilizational-memory-184",
+      "type": "enables",
+      "source": "xananode.example:concept/federated-knowledge-substrates",
+      "direction": "incoming"
     },
     {
       "id": "xananode.example:rel/civilizational-memory-requires-knowledge-substrate-185",

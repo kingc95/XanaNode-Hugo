@@ -36,10 +36,10 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/claim-relationships-preserve-context-claim_of-typed-relationships-191",
-      "type": "claim_of",
-      "source": "xananode.example:claim/claim-relationships-preserve-context",
-      "direction": "incoming"
+      "id": "xananode.example:rel/typed-relationships-has_claim-claim-relationships-preserve-context-191",
+      "type": "has_claim",
+      "target": "xananode.example:claim/claim-relationships-preserve-context",
+      "direction": "outgoing"
     }
   ]
 }

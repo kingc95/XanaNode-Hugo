@@ -42,10 +42,10 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/compatibility-levels-required_for-federated-knowledge-substrates-183",
-      "type": "required_for",
-      "target": "xananode.example:concept/federated-knowledge-substrates",
-      "direction": "outgoing"
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-compatibility-levels-183",
+      "type": "requires",
+      "source": "xananode.example:concept/federated-knowledge-substrates",
+      "direction": "incoming"
     }
   ]
 }

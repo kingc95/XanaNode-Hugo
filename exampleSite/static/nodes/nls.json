@@ -12,10 +12,10 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/nls-demonstrated_by-mother-of-all-demos-61",
-      "type": "demonstrated_by",
-      "target": "xananode.example:source/mother-of-all-demos",
-      "direction": "outgoing"
+      "id": "xananode.example:rel/mother-of-all-demos-demonstrates-nls-61",
+      "type": "demonstrates",
+      "source": "xananode.example:source/mother-of-all-demos",
+      "direction": "incoming"
     },
     {
       "id": "xananode.example:rel/nls-anticipated-xananode-62",

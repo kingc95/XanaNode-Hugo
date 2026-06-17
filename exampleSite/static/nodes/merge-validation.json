@@ -60,10 +60,10 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/compatibility-report-required_for-merge-validation-180",
-      "type": "required_for",
-      "source": "xananode.example:concept/compatibility-report",
-      "direction": "incoming"
+      "id": "xananode.example:rel/merge-validation-requires-compatibility-report-180",
+      "type": "requires",
+      "target": "xananode.example:concept/compatibility-report",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.example:rel/civilizational-memory-requires-merge-validation-187",
@@ -72,10 +72,10 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/claim-merge-without-collapse-claim_of-merge-validation-193",
-      "type": "claim_of",
-      "source": "xananode.example:claim/claim-merge-without-collapse",
-      "direction": "incoming"
+      "id": "xananode.example:rel/merge-validation-has_claim-claim-merge-without-collapse-193",
+      "type": "has_claim",
+      "target": "xananode.example:claim/claim-merge-without-collapse",
+      "direction": "outgoing"
     }
   ]
 }
