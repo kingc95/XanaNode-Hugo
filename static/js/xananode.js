@@ -336,9 +336,14 @@
             tourIndex: 0,
             cy: null,
             allNodes,
+            nodeIds,
             allEdges,
             allEdgesRaw
         };
+
+        if (state.focusId) {
+            updateUrl(state.focusId, true);
+        }
 
         renderChrome(state);
 
@@ -357,7 +362,13 @@
         state.cy = cy;
 
         cy.on("tap", "node", function (evt) {
-            travelToNode(evt.target.id(), state, true);
+            const nodeId = evt.target.id();
+            if (!state.nodeIds.has(nodeId)) return;
+            if (nodeId === state.focusId) {
+                notifyStudioNodeSelection(nodeId);
+                return;
+            }
+            travelToNode(nodeId, state, true);
         });
 
         cy.on("zoom pan", debounce(() => {
@@ -392,10 +403,6 @@
 
         if (state.searchQuery.trim()) {
             runSearch(state.searchQuery, state);
-        }
-
-        if (state.focusId) {
-            updateUrl(state.focusId, true);
         }
 
         renderVisibleGraph(state, {
@@ -1587,6 +1594,7 @@
 
     function travelToNode(nextId, state, pushUrl) {
         if (!nextId || nextId === state.focusId) return;
+        if (state.nodeIds && !state.nodeIds.has(nextId)) return;
         if (state.isTraveling) return;
 
         const cy = state.cy;
@@ -2753,6 +2761,20 @@
         } else {
             window.history.pushState({ node: nodeId }, "", url);
         }
+
+        notifyStudioNodeSelection(nodeId);
+    }
+
+    function notifyStudioNodeSelection(nodeId) {
+        if (!nodeId || window.parent === window) return;
+
+        window.parent.postMessage({
+            source: "xananode-preview",
+            type: "node-selected",
+            nodeId,
+            path: `/node/${encodeURIComponent(nodeId)}`,
+            url: window.location.href
+        }, "*");
     }
 
     function nodeIdFromUrl() {

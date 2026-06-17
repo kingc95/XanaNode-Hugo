@@ -707,6 +707,21 @@ for (const relativeFile of contentFiles) {
   }
 }
 
+const nodeLookup = new Map();
+for (const node of nodes.values()) {
+  nodeLookup.set(node.id, node);
+  nodeLookup.set(node.protocolId, node);
+  nodeLookup.set(node.data.protocol_id, node);
+}
+
+function resolveNodeRef(ref) {
+  return nodeLookup.get(String(ref || "").trim()) || null;
+}
+
+function resolveNodeId(ref) {
+  return resolveNodeRef(ref)?.id || String(ref || "");
+}
+
 for (const node of nodes.values()) {
   const { id, file, data, body } = node;
   const nodeType = nodeTypeMap.get(data.type);
@@ -732,7 +747,8 @@ for (const node of nodes.values()) {
     if (relationship.type && !relationshipDefinitionFor(relationship.type)) {
       errors.push(`${file}: relationship "${relationship.type}" is not in xananode-relationship-types.json.`);
     }
-    if (relationship.target && !nodes.has(relationship.target)) {
+    const targetNode = resolveNodeRef(relationship.target);
+    if (relationship.target && !targetNode) {
       errors.push(`${file}: relationship "${relationship.type}" points to missing target "${relationship.target}".`);
     }
     if (relationship.weight !== undefined && (!Number.isInteger(relationship.weight) || relationship.weight < 1 || relationship.weight > 5)) {
@@ -742,17 +758,17 @@ for (const node of nodes.values()) {
       errors.push(`${file}: relationship "${relationship.type}" has invalid visibility "${relationship.visibility}".`);
     }
     if (relationship.type && relationship.target) {
-      authoredEdges.push(normalizeAuthoredEdge({ source: id, target: relationship.target, type: relationship.type, file, relationship, index }));
+      authoredEdges.push(normalizeAuthoredEdge({ source: id, target: resolveNodeId(relationship.target), type: relationship.type, file, relationship, index }));
     }
   }
   const implicitReferenceFields = ["claims", "sources", "people", "concepts", "projects", "events", "organizations", "technologies", "observations", "media", "depicts", "nodes"];
   for (const field of implicitReferenceFields) {
     for (const target of asArray(data[field])) {
       if (typeof target !== "string") errors.push(`${file}: ${field} contains a non-string target.`);
-      else if (!nodes.has(target)) errors.push(`${file}: ${field} points to missing target "${target}".`);
+      else if (!resolveNodeRef(target)) errors.push(`${file}: ${field} points to missing target "${target}".`);
     }
   }
-  if (data.primary_media && !nodes.has(data.primary_media)) errors.push(`${file}: primary_media points to missing target "${data.primary_media}".`);
+  if (data.primary_media && !resolveNodeRef(data.primary_media)) errors.push(`${file}: primary_media points to missing target "${data.primary_media}".`);
   if (data.type === "claim" && !data.status) errors.push(`${file}: claim nodes require "status".`);
   if (data.type === "source" && !data.source_url && !data.file) warnings.push(`${file}: source node has neither source_url nor file.`);
 
