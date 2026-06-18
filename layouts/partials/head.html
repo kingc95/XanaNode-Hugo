@@ -27,10 +27,12 @@
     try {
       var theme = JSON.parse(localStorage.getItem("xananode.colorTheme") || "\"dark\"");
       var density = JSON.parse(localStorage.getItem("xananode.uiDensity") || "\"comfortable\"");
+      var readerFontScale = JSON.parse(localStorage.getItem("xananode.readerFontScale") || "100");
       var atmosphere = JSON.parse(localStorage.getItem("xananode.graphAtmosphere") || "\"alive\"");
       document.documentElement.dataset.xanaTheme = theme;
       document.documentElement.dataset.xanaDensity = density;
       document.documentElement.dataset.xanaAtmosphere = atmosphere;
+      document.documentElement.style.setProperty("--xana-reader-scale", String(Math.min(150, Math.max(85, Number(readerFontScale) || 100)) / 100));
     } catch (_) {}
   })();
 </script>

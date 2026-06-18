@@ -16,6 +16,7 @@
     // Tour timers — managed outside state so they survive renderVisibleGraph rebuilds.
     let _tourTimer = null;
     let _tourScrollInterval = null;
+    let _aliveTimer = null;
     let TOUR_DWELL_MS = 9000;     // ms between node hops — updated by speed input
 
     const STORAGE_KEYS = {
@@ -30,6 +31,7 @@
         tourSpeed: "xananode.tourSpeed",
         colorTheme: "xananode.colorTheme",
         uiDensity: "xananode.uiDensity",
+        readerFontScale: "xananode.readerFontScale",
         graphAtmosphere: "xananode.graphAtmosphere",
         ttsNarrator: "xananode.ttsNarrator",
         ttsVoice: "xananode.ttsVoice",
@@ -41,6 +43,7 @@
     const DISPLAY_DEFAULTS = Object.freeze({
         colorTheme: "dark",
         uiDensity: "comfortable",
+        readerFontScale: 100,
         graphAtmosphere: "alive",
         ttsNarrator: false,
         ttsVoice: "",
@@ -250,19 +253,16 @@
                 return res.json();
             }),
             fetch("/schemas/xananode-node-types.json").then((r) => r.json()).catch(() => null),
-            fetch("/schemas/xananode-relationship-types.json").then((r) => r.json()).catch(() => null),
-            fetch("/xananode-fragments.json")
-                .then((r) => r.ok ? r.json() : null)
-                .catch(() => null)
+            fetch("/schemas/xananode-relationship-types.json").then((r) => r.json()).catch(() => null)
         ]))
-        .then(([data, nodeSchema, relSchema, fragmentsData]) => {
+        .then(([data, nodeSchema, relSchema]) => {
             if (nodeSchema?.node_types) {
                 VALID_NODE_TYPES = new Set(nodeSchema.node_types.map((t) => t.type));
             }
             if (relSchema?.relationship_types) {
                 VALID_RELATIONSHIP_TYPES = new Set(relSchema.relationship_types.map((t) => t.type));
             }
-            init(data, nodeSchema, fragmentsData);
+            init(data, nodeSchema, null);
         })
         .catch((err) => {
             graphEl.innerHTML = `<p class="xana-error">${escapeHtml(err.message)}</p>`;
@@ -465,6 +465,17 @@
             saveSetting(STORAGE_KEYS.graphPan, cy.pan());
         }, 250));
 
+        cy.on("drag", "node", debounce((evt) => {
+            if (state.displaySettings?.graphAtmosphere !== "alive") return;
+            enlivenDraggedNode(evt.target, state, 0.48);
+        }, 40));
+
+        cy.on("free", "node", (evt) => {
+            if (state.displaySettings?.graphAtmosphere !== "alive") return;
+            enlivenDraggedNode(evt.target, state, 1);
+            startAliveMotion(state);
+        });
+
         bindControls(state);
         startSearchVerbRotation();
         makeResizable(state);
@@ -620,14 +631,19 @@
                     </div>
                     <div class="xana-settings-group" role="group" aria-label="Interface density">
                         <span class="xana-settings-label">Density</span>
-                        <button type="button" data-display-setting="uiDensity" data-value="comfortable">Roomy</button>
+                        <button type="button" data-display-setting="uiDensity" data-value="roomy">Roomy</button>
+                        <button type="button" data-display-setting="uiDensity" data-value="comfortable">Balanced</button>
                         <button type="button" data-display-setting="uiDensity" data-value="compact">Compact</button>
                     </div>
+                    <label class="xana-settings-range xana-settings-range--inline">
+                        <span>Text size <output data-reader-font-output>${Number(state.displaySettings.readerFontScale || 100)}%</output></span>
+                        <input type="range" min="85" max="150" step="5" data-reader-font-scale value="${Number(state.displaySettings.readerFontScale || 100)}">
+                    </label>
                     <div class="xana-settings-group" role="group" aria-label="Graph atmosphere">
                         <span class="xana-settings-label">Graph</span>
                         <button type="button" data-display-setting="graphAtmosphere" data-value="alive">Alive</button>
-                        <button type="button" data-display-setting="graphAtmosphere" data-value="still">Still</button>
-                        <button type="button" data-display-setting="graphAtmosphere" data-value="plain">Plain</button>
+                        <button type="button" data-display-setting="graphAtmosphere" data-value="still">Quiet</button>
+                        <button type="button" data-display-setting="graphAtmosphere" data-value="plain">Minimal</button>
                     </div>
                     <label class="xana-settings-toggle">
                         <input type="checkbox" data-display-toggle="ttsNarrator" ${state.displaySettings.ttsNarrator ? "checked" : ""}>
@@ -876,6 +892,8 @@
         const detailSelect = graphEl.querySelector("[data-tts-detail]");
         const rateInput = graphEl.querySelector("[data-tts-rate]");
         const pitchInput = graphEl.querySelector("[data-tts-pitch]");
+        const readerFontInput = graphEl.querySelector("[data-reader-font-scale]");
+        const readerFontOutput = graphEl.querySelector("[data-reader-font-output]");
         const interfaceTourButton = graphEl.querySelector("[data-interface-tour]");
 
         updateDisplaySettingButtons(state);
@@ -911,6 +929,9 @@
                 saveSetting(STORAGE_KEYS[key], value);
                 applyDisplaySettings(state.displaySettings);
                 updateDisplaySettingButtons(state);
+                if (key === "graphAtmosphere") {
+                    refreshAliveMotion(state);
+                }
             });
         });
 
@@ -955,6 +976,14 @@
         pitchInput?.addEventListener("input", () => {
             state.displaySettings.ttsPitch = Number(pitchInput.value) || DISPLAY_DEFAULTS.ttsPitch;
             saveSetting(STORAGE_KEYS.ttsPitch, state.displaySettings.ttsPitch);
+        });
+
+        readerFontInput?.addEventListener("input", () => {
+            const scale = clampNumber(readerFontInput.value, 85, 150, DISPLAY_DEFAULTS.readerFontScale);
+            state.displaySettings.readerFontScale = scale;
+            saveSetting(STORAGE_KEYS.readerFontScale, scale);
+            if (readerFontOutput) readerFontOutput.textContent = `${scale}%`;
+            applyDisplaySettings(state.displaySettings);
         });
 
         filterToggleBtn?.addEventListener("click", (event) => {
@@ -1446,6 +1475,8 @@
         if (options.stagedReveal) {
             stagedReveal(cy, state.previousFocusId);
         }
+
+        refreshAliveMotion(state);
     }
 
     function getVisibleSubgraph(
@@ -1740,6 +1771,113 @@
                 });
             });
         }
+    }
+
+    function refreshAliveMotion(state) {
+        if (state.displaySettings?.graphAtmosphere === "alive") {
+            startAliveMotion(state);
+        } else {
+            stopAliveMotion();
+        }
+    }
+
+    function stopAliveMotion() {
+        if (_aliveTimer) {
+            window.clearInterval(_aliveTimer);
+            _aliveTimer = null;
+        }
+    }
+
+    function startAliveMotion(state) {
+        stopAliveMotion();
+        if (state.displaySettings?.graphAtmosphere !== "alive") return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        _aliveTimer = window.setInterval(() => {
+            const cy = state.cy;
+            if (!cy || state.isTraveling || state.tourActive) return;
+
+            const nodes = cy.nodes().filter((node) => !node.grabbed() && !node.hasClass("focused-node"));
+            if (!nodes.length) return;
+
+            nodes.slice(0, Math.min(5, nodes.length)).forEach((node, index) => {
+                const phase = Date.now() / 900 + index * 1.7;
+                slideNode(node, {
+                    x: Math.cos(phase) * 6,
+                    y: Math.sin(phase * 0.8) * 5
+                }, cy, 900);
+            });
+        }, 1600);
+    }
+
+    function enlivenDraggedNode(node, state, strength) {
+        const cy = state.cy;
+        if (!cy || !node?.length) return;
+
+        const origin = node.position();
+        const draggedLayer = getNodeLayer(node);
+        const radius = 220;
+
+        cy.nodes().not(node).forEach((other) => {
+            if (other.hasClass("focused-node")) return;
+            if (getNodeLayer(other) !== draggedLayer) return;
+            const pos = other.position();
+            const dx = pos.x - origin.x;
+            const dy = pos.y - origin.y;
+            const distance = Math.sqrt(dx * dx + dy * dy) || 1;
+            const minDistance = Number(node.width() || 92) / 2 + Number(other.width() || 92) / 2 + 18;
+            if (distance > Math.max(radius, minDistance)) return;
+
+            const overlapPush = Math.max(0, minDistance - distance) * 0.9;
+            const fieldPush = Math.max(0, 1 - distance / radius) * 16;
+            const push = (overlapPush + fieldPush) * strength;
+            if (push <= 0) return;
+            slideNode(other, {
+                x: (dx / distance) * push,
+                y: (dy / distance) * push
+            }, cy, 180);
+        });
+
+        node.connectedEdges().forEach((edge) => {
+            const other = edge.source().id() === node.id() ? edge.target() : edge.source();
+            if (!other.length || other.hasClass("focused-node")) return;
+            if (getNodeLayer(other) !== draggedLayer) return;
+
+            const pos = other.position();
+            const dx = pos.x - origin.x;
+            const dy = pos.y - origin.y;
+            const distance = Math.sqrt(dx * dx + dy * dy) || 1;
+            if (distance > radius * 0.75) return;
+
+            const ripple = (1 - distance / (radius * 0.75)) * 10 * strength;
+            slideNode(other, {
+                x: (dx / distance) * ripple,
+                y: (dy / distance) * ripple
+            }, cy, 180);
+        });
+    }
+
+    function getNodeLayer(node) {
+        if (node.hasClass("focused-node")) return 0;
+        if (node.hasClass("distance-1")) return 1;
+        if (node.hasClass("distance-2")) return 2;
+        if (node.hasClass("distance-3")) return 3;
+        return 4;
+    }
+
+    function slideNode(node, delta, cy, duration) {
+        const container = cy.container();
+        const width = container.clientWidth || 1000;
+        const height = container.clientHeight || 700;
+        const pos = node.position();
+        const padding = 42;
+        const next = {
+            x: clampNumber(pos.x + delta.x, padding, width - padding, pos.x),
+            y: clampNumber(pos.y + delta.y, padding, height - padding, pos.y)
+        };
+
+        node.stop(true, false);
+        node.animate({ position: next }, { duration, easing: "ease-out" });
     }
 
     function stagedReveal(cy, previousFocusId) {
@@ -3766,6 +3904,7 @@
         return {
             colorTheme: loadSetting(STORAGE_KEYS.colorTheme, DISPLAY_DEFAULTS.colorTheme),
             uiDensity: loadSetting(STORAGE_KEYS.uiDensity, DISPLAY_DEFAULTS.uiDensity),
+            readerFontScale: clampNumber(loadSetting(STORAGE_KEYS.readerFontScale, DISPLAY_DEFAULTS.readerFontScale), 85, 150, DISPLAY_DEFAULTS.readerFontScale),
             graphAtmosphere: loadSetting(STORAGE_KEYS.graphAtmosphere, DISPLAY_DEFAULTS.graphAtmosphere),
             ttsNarrator: loadSetting(STORAGE_KEYS.ttsNarrator, DISPLAY_DEFAULTS.ttsNarrator),
             ttsVoice: loadSetting(STORAGE_KEYS.ttsVoice, DISPLAY_DEFAULTS.ttsVoice),
@@ -3786,6 +3925,7 @@
         document.documentElement.dataset.xanaTheme = resolved.colorTheme;
         document.documentElement.dataset.xanaDensity = resolved.uiDensity;
         document.documentElement.dataset.xanaAtmosphere = resolved.graphAtmosphere;
+        document.documentElement.style.setProperty("--xana-reader-scale", `${clampNumber(resolved.readerFontScale, 85, 150, 100) / 100}`);
     }
 
     function updateDisplaySettingButtons(state) {
