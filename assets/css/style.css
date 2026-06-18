@@ -733,38 +733,16 @@ body,
 
 .xana-settings {
   position: absolute;
-  right: 1.25rem;
-  bottom: 1.25rem;
+  left: 1.5rem;
+  bottom: 4.45rem;
   z-index: 45;
   pointer-events: auto;
 }
 
-.xana-settings-fab {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid var(--xana-accent-border);
-  background: color-mix(in srgb, var(--xana-surface) 88%, transparent);
-  color: var(--xana-accent);
-  font-size: 1.15rem;
-  cursor: pointer;
-  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.28);
-}
-
-.xana-settings-fab:hover,
-.xana-settings-fab.active {
-  background: var(--xana-accent-soft);
-  border-color: var(--xana-accent);
-}
-
 .xana-settings-panel {
-  position: absolute;
-  right: 0;
-  bottom: 3.35rem;
-  width: min(320px, calc(100vw - 2rem));
+  width: min(360px, calc(100vw - 2rem));
+  max-height: min(68vh, 620px);
+  overflow: auto;
   padding: 0.8rem;
   border: 1px solid var(--xana-panel-border);
   border-radius: 0.9rem;
@@ -842,6 +820,40 @@ body,
 }
 
 .xana-settings-toggle input {
+  accent-color: var(--xana-accent);
+}
+
+.xana-settings-field,
+.xana-settings-range {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.65rem;
+  color: var(--xana-text);
+  font-size: 0.82rem;
+}
+
+.xana-settings-field label,
+.xana-settings-range span {
+  color: var(--xana-text-muted);
+  font-size: 0.68rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.xana-settings-field select {
+  width: 100%;
+  min-height: 34px;
+  border: 1px solid var(--xana-panel-border);
+  border-radius: 0.55rem;
+  background: var(--xana-surface-elevated);
+  color: var(--xana-text);
+  padding: 0 0.55rem;
+  font: inherit;
+}
+
+.xana-settings-range input {
+  width: 100%;
   accent-color: var(--xana-accent);
 }
 
@@ -2082,6 +2094,11 @@ a.xana-type-badge-link:focus-visible {
     bottom: 1rem;
   }
 
+  .xana-settings {
+    left: 1rem;
+    bottom: 4rem;
+  }
+
   .xana-filter-popover {
     left: 1rem;
     bottom: 4rem;
@@ -2106,6 +2123,17 @@ a.xana-type-badge-link:focus-visible {
 
   .xana-panel {
     padding: 18px;
+  }
+
+  .xana-settings {
+    right: 0.75rem;
+    left: 0.75rem;
+    bottom: 4.25rem;
+  }
+
+  .xana-settings-panel {
+    width: 100%;
+    max-height: 55svh;
   }
 
   .xana-node-header,

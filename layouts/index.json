@@ -1,12 +1,17 @@
 {{- $pages := where site.RegularPages "Params.type" "!=" nil -}}
+{{- $namespace := site.Params.xananode.namespace | default "xananode.example" -}}
 {
+  "namespace": {{ $namespace | jsonify }},
   "nodes": [
     {{- range $i, $p := $pages -}}
+      {{- $nodeID := $p.Params.node_id | default $p.File.ContentBaseName -}}
+      {{- $nodeType := $p.Params.node_type | default $p.Params.type | default $p.Section -}}
       {{- if $i }},{{ end }}
       {
-        "id": {{ ($p.Params.node_id | default $p.File.ContentBaseName) | jsonify }},
+        "id": {{ $nodeID | jsonify }},
+        "protocol_id": {{ ($p.Params.protocol_id | default (printf "%s:%s/%s" $namespace ($nodeType | urlize) ($nodeID | urlize))) | jsonify }},
         "title": {{ $p.Title | jsonify }},
-        "type": {{ ($p.Params.node_type | default $p.Params.type | default $p.Section) | jsonify }},
+        "type": {{ $nodeType | jsonify }},
         "section": {{ $p.Section | jsonify }},
         "importance": {{ ($p.Params.importance | default 3) | jsonify }},
 
@@ -31,6 +36,7 @@
         "license": {{ ($p.Params.license | default "") | jsonify }},
         "license_url": {{ ($p.Params.license_url | default "") | jsonify }},
         "rights_status": {{ ($p.Params.rights_status | default "") | jsonify }},
+        "tumbler": {{ ($p.Params.tumbler | default "") | jsonify }},
         "author": {{ ($p.Params.author | default "") | jsonify }},
         "year": {{ ($p.Params.year | default "") | jsonify }}
       }

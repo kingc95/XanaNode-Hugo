@@ -22,10 +22,10 @@
     <div class="xana-transclusion-header">
       <div>
         <p class="xana-transclusion-kicker">Source node</p>
-        <h3>{{ if $page }}<a href="/node/{{ $nodeID | urlquery }}" data-node-jump="{{ $nodeID }}">{{ $page.Title }}</a>{{ else }}{{ $nodeData.title }}{{ end }}</h3>
+        <h3>{{ if $page }}<a href="{{ $page.RelPermalink }}" data-node-jump="{{ $nodeID }}">{{ $page.Title }}</a>{{ else }}{{ $nodeData.title }}{{ end }}</h3>
       </div>
       {{- if $page -}}
-        <a class="xana-transclusion-source-link" href="/node/{{ $nodeID | urlquery }}" data-node-jump="{{ $nodeID }}">Open source</a>
+        <a class="xana-transclusion-source-link" href="{{ $page.RelPermalink }}" data-node-jump="{{ $nodeID }}">Open source</a>
       {{- end -}}
     </div>
     <dl class="xana-transclusion-meta">
@@ -53,7 +53,7 @@
       <p class="xana-transclusion-citation">
         Transcluded from
         {{ if $page -}}
-          <a href="/node/{{ $nodeID | urlquery }}" data-node-jump="{{ $nodeID }}">{{ $page.Title }}</a>
+          <a href="{{ $page.RelPermalink }}" data-node-jump="{{ $nodeID }}">{{ $page.Title }}</a>
         {{ else -}}
           {{ $nodeData.title }}
         {{ end -}}

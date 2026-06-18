@@ -31,14 +31,22 @@
         colorTheme: "xananode.colorTheme",
         uiDensity: "xananode.uiDensity",
         graphAtmosphere: "xananode.graphAtmosphere",
-        ttsNarrator: "xananode.ttsNarrator"
+        ttsNarrator: "xananode.ttsNarrator",
+        ttsVoice: "xananode.ttsVoice",
+        ttsRate: "xananode.ttsRate",
+        ttsPitch: "xananode.ttsPitch",
+        ttsDetail: "xananode.ttsDetail"
     };
 
     const DISPLAY_DEFAULTS = Object.freeze({
         colorTheme: "dark",
         uiDensity: "comfortable",
         graphAtmosphere: "alive",
-        ttsNarrator: false
+        ttsNarrator: false,
+        ttsVoice: "",
+        ttsRate: 0.95,
+        ttsPitch: 1,
+        ttsDetail: "full"
     });
 
     const SEARCH_VERBS = ["Explore", "Map", "Trace", "Search", "Navigate", "Follow", "Question", "Compare"];
@@ -295,10 +303,13 @@
 
         hydrateMedia(allNodes);
 
+        window.__xanaAllNodes = allNodes;
         window.__xanaAllEdges = allEdges;
 
-        // Resolve the requested node from the URL, handling doubled /node/node/ prefixes.
-        const rawRequested = nodeIdFromUrl();
+        // Resolve the requested node from the URL. The current public route is
+        // type-aware (for example /concept/knowledge-substrate/), with support
+        // for old /node/<id> links as a compatibility alias.
+        const rawRequested = nodeIdFromUrl(allNodes);
         // Try the raw ID, then strip a leading "node/" segment in case of a doubled prefix.
         const requestedNode = rawRequested && (
             nodeIds.has(rawRequested)
@@ -373,8 +384,7 @@
             minZoom: 0.15,
             maxZoom: 3,
             style: getCyStyle(nodeTypeColors),
-            layout: { name: "preset" },
-            wheelSensitivity: 0.16
+            layout: { name: "preset" }
         });
 
         state.cy = cy;
@@ -407,7 +417,7 @@
         }, 180));
 
         window.addEventListener("popstate", () => {
-            const nodeFromUrl = nodeIdFromUrl();
+            const nodeFromUrl = nodeIdFromUrl(allNodes);
 
             if (nodeFromUrl && allNodes.some((node) => node.id === nodeFromUrl)) {
                 state.previousFocusId = state.focusId;
@@ -506,6 +516,7 @@
                 <button class="xana-ctrl-btn" data-path-open aria-label="Path explorer" title="Compare connective path">&#x2934;</button>
                 <span class="xana-ctrl-sep"></span>
                 <button class="xana-ctrl-btn" data-tour-toggle aria-label="Guided tour" title="Guided tour">&#x25B6;</button>
+                <button class="xana-ctrl-btn" data-settings-toggle aria-label="Display and narration settings" title="Settings">&#9881;</button>
                 <input
                     type="number"
                     class="xana-ctrl-speed"
@@ -520,7 +531,6 @@
             </div>
 
             <div class="xana-settings">
-                <button class="xana-settings-fab" data-settings-toggle aria-label="Display settings" title="Display settings">&#9881;</button>
                 <div class="xana-settings-panel" hidden>
                     <div class="xana-settings-header">
                         <span>Display</span>
@@ -546,6 +556,25 @@
                     <label class="xana-settings-toggle">
                         <input type="checkbox" data-display-toggle="ttsNarrator" ${state.displaySettings.ttsNarrator ? "checked" : ""}>
                         <span>Narrate guided tour</span>
+                    </label>
+                    <div class="xana-settings-field">
+                        <label for="xana-tts-voice">Voice</label>
+                        <select id="xana-tts-voice" data-tts-voice></select>
+                    </div>
+                    <div class="xana-settings-field">
+                        <label for="xana-tts-detail">Read</label>
+                        <select id="xana-tts-detail" data-tts-detail>
+                            <option value="summary" ${state.displaySettings.ttsDetail === "summary" ? "selected" : ""}>Title and summary</option>
+                            <option value="full" ${state.displaySettings.ttsDetail === "full" ? "selected" : ""}>Title, summary, and content</option>
+                        </select>
+                    </div>
+                    <label class="xana-settings-range">
+                        <span>Speed</span>
+                        <input type="range" min="0.65" max="1.35" step="0.05" data-tts-rate value="${Number(state.displaySettings.ttsRate || 0.95)}">
+                    </label>
+                    <label class="xana-settings-range">
+                        <span>Pitch</span>
+                        <input type="range" min="0.75" max="1.35" step="0.05" data-tts-pitch value="${Number(state.displaySettings.ttsPitch || 1)}">
                     </label>
                 </div>
             </div>
@@ -738,8 +767,16 @@
         const settingsToggle = graphEl.querySelector("[data-settings-toggle]");
         const settingsPanel = graphEl.querySelector(".xana-settings-panel");
         const settingsClose = graphEl.querySelector("[data-settings-close]");
+        const voiceSelect = graphEl.querySelector("[data-tts-voice]");
+        const detailSelect = graphEl.querySelector("[data-tts-detail]");
+        const rateInput = graphEl.querySelector("[data-tts-rate]");
+        const pitchInput = graphEl.querySelector("[data-tts-pitch]");
 
         updateDisplaySettingButtons(state);
+        populateVoiceOptions(state);
+        if ("speechSynthesis" in window) {
+            window.speechSynthesis.onvoiceschanged = () => populateVoiceOptions(state);
+        }
 
         settingsToggle?.addEventListener("click", (event) => {
             event.stopPropagation();
@@ -782,6 +819,32 @@
                     narrateNode(state.allNodes.find((node) => node.id === state.focusId), state);
                 }
             });
+        });
+
+        voiceSelect?.addEventListener("change", () => {
+            state.displaySettings.ttsVoice = voiceSelect.value;
+            saveSetting(STORAGE_KEYS.ttsVoice, state.displaySettings.ttsVoice);
+            if (state.tourActive && state.displaySettings.ttsNarrator) {
+                narrateNode(state.allNodes.find((node) => node.id === state.focusId), state);
+            }
+        });
+
+        detailSelect?.addEventListener("change", () => {
+            state.displaySettings.ttsDetail = detailSelect.value;
+            saveSetting(STORAGE_KEYS.ttsDetail, state.displaySettings.ttsDetail);
+            if (state.tourActive && state.displaySettings.ttsNarrator) {
+                narrateNode(state.allNodes.find((node) => node.id === state.focusId), state);
+            }
+        });
+
+        rateInput?.addEventListener("input", () => {
+            state.displaySettings.ttsRate = Number(rateInput.value) || DISPLAY_DEFAULTS.ttsRate;
+            saveSetting(STORAGE_KEYS.ttsRate, state.displaySettings.ttsRate);
+        });
+
+        pitchInput?.addEventListener("input", () => {
+            state.displaySettings.ttsPitch = Number(pitchInput.value) || DISPLAY_DEFAULTS.ttsPitch;
+            saveSetting(STORAGE_KEYS.ttsPitch, state.displaySettings.ttsPitch);
         });
 
         filterToggleBtn?.addEventListener("click", (event) => {
@@ -1624,9 +1687,9 @@
         updateTourButton();
         panelEl.scrollTop = 0;
         startTourPanelScroll();
-        narrateNode(state.allNodes.find((node) => node.id === state.focusId), state);
+        const narrated = narrateNode(state.allNodes.find((node) => node.id === state.focusId), state);
         restartTourRing();
-        scheduleTourAdvance(state);
+        if (!narrated) scheduleTourAdvance(state);
     }
 
     function stopTour(state) {
@@ -1711,8 +1774,9 @@
         }
     }
 
-    function scheduleTourAdvance(state) {
+    function scheduleTourAdvance(state, forceTimer = false) {
         if (_tourTimer) window.clearTimeout(_tourTimer);
+        if (!forceTimer && state.displaySettings?.ttsNarrator && canNarrate()) return;
 
         _tourTimer = window.setTimeout(() => {
             if (!state.tourActive) return;
@@ -1832,7 +1896,7 @@
 
         panelEl.innerHTML = `
             <div class="xana-node-header ${(node.image && panelIsVisual) ? "has-media" : node.image ? "has-media has-doc-media" : "no-media"}">
-                ${renderPanelImage(node)}
+                ${renderPanelImage(node, state)}
                 <div class="xana-node-heading-text">
                     ${renderTypeBadge(node.type)}
                     <h1>${escapeHtml(node.title || node.id)}</h1>
@@ -1882,28 +1946,51 @@
         if (state.tourActive) {
             panelEl.scrollTop = 0;
             startTourPanelScroll();
-            narrateNode(node, state);
+            const narrated = narrateNode(node, state);
             restartTourRing();
+            if (!narrated) scheduleTourAdvance(state);
         }
     }
 
     function narrateNode(node, state) {
-        if (!node || !state?.displaySettings?.ttsNarrator) return;
-        if (!("speechSynthesis" in window) || !window.SpeechSynthesisUtterance) return;
+        if (!node || !state?.displaySettings?.ttsNarrator) return false;
+        if (!canNarrate()) return false;
 
         const title = node.title || node.id || "Untitled node";
-        const summary = stripHtml(node.summary || node.content || "").replace(/\s+/g, " ").trim();
-        const shortSummary = summary.length > 220 ? `${summary.slice(0, 220)}...` : summary;
-        const text = [title, shortSummary].filter(Boolean).join(". ");
+        const summary = stripHtml(node.summary || "").replace(/\s+/g, " ").trim();
+        const content = stripHtml(node.content || node.html || "").replace(/\s+/g, " ").trim();
+        const wantsFull = state.displaySettings.ttsDetail !== "summary";
+        const readableContent = wantsFull && content && content !== summary
+            ? content
+            : "";
+        const text = [title, summary, readableContent].filter(Boolean).join(". ");
 
-        if (!text) return;
+        if (!text) return false;
         stopNarration();
 
         const utterance = new SpeechSynthesisUtterance(text);
-        utterance.rate = 0.95;
-        utterance.pitch = 1;
+        const voices = getAvailableVoices();
+        const selectedVoice = voices.find((voice) => voice.voiceURI === state.displaySettings.ttsVoice)
+            || voices.find((voice) => voice.default)
+            || voices[0];
+
+        if (selectedVoice) utterance.voice = selectedVoice;
+        utterance.rate = clampNumber(state.displaySettings.ttsRate, 0.65, 1.35, DISPLAY_DEFAULTS.ttsRate);
+        utterance.pitch = clampNumber(state.displaySettings.ttsPitch, 0.75, 1.35, DISPLAY_DEFAULTS.ttsPitch);
         utterance.volume = 0.88;
+        utterance.onend = () => {
+            if (!state.tourActive) return;
+            window.setTimeout(() => {
+                if (!state.tourActive) return;
+                const nextId = pickNextTourNode(state);
+                if (nextId) travelToNode(nextId, state, false);
+            }, 450);
+        };
+        utterance.onerror = () => {
+            if (state.tourActive) scheduleTourAdvance(state, true);
+        };
         window.speechSynthesis.speak(utterance);
+        return true;
     }
 
     function stopNarration() {
@@ -1912,7 +1999,34 @@
         }
     }
 
-    function renderPanelImage(node) {
+    function canNarrate() {
+        return "speechSynthesis" in window && Boolean(window.SpeechSynthesisUtterance);
+    }
+
+    function getAvailableVoices() {
+        return canNarrate() ? window.speechSynthesis.getVoices() : [];
+    }
+
+    function populateVoiceOptions(state) {
+        const select = graphEl.querySelector("[data-tts-voice]");
+        if (!select) return;
+
+        const voices = getAvailableVoices();
+        const current = state.displaySettings.ttsVoice || "";
+        select.innerHTML = [
+            `<option value="">Browser default</option>`,
+            ...voices.map((voice) => {
+                const label = `${voice.name}${voice.lang ? ` (${voice.lang})` : ""}${voice.localService ? "" : " - network"}`;
+                return `<option value="${escapeHtml(voice.voiceURI)}" ${voice.voiceURI === current ? "selected" : ""}>${escapeHtml(label)}</option>`;
+            })
+        ].join("");
+
+        if (current && !voices.some((voice) => voice.voiceURI === current)) {
+            select.value = "";
+        }
+    }
+
+    function renderPanelImage(node, state) {
         if (!node.image) return "";
 
         const mediaType = node.primary_media_node?.media_type || "";
@@ -1953,7 +2067,7 @@
             return `
                 <a
                     class="xana-node-image-link"
-                    href="/node/${encodeURIComponent(node.primary_media_node.id)}"
+                    href="${escapeHtml(nodeHref(node.primary_media_node, state))}"
                     data-node-jump="${escapeHtml(node.primary_media_node.id)}"
                 >
                     <img
@@ -1984,7 +2098,7 @@
         return `
             <div class="xana-media-credit">
                 <a
-                    href="/node/${encodeURIComponent(media.id)}"
+                    href="${escapeHtml(nodeHref(media, { allNodes: [media] }))}"
                     data-node-jump="${escapeHtml(media.id)}"
                 >
                     ${escapeHtml(media.title || "Media node")}
@@ -2050,7 +2164,7 @@
 
             return `
                 <li class="xana-rel-item">
-                    <a class="xana-rel-link" href="/node/${encodeURIComponent(other.id)}" data-node-jump="${escapeHtml(other.id)}">
+                    <a class="xana-rel-link" href="${escapeHtml(nodeHref(other, { allNodes }))}" data-node-jump="${escapeHtml(other.id)}">
                         <span class="xana-rel-title">${escapeHtml(other.title || other.id)}</span>
                         <span class="xana-rel-meta">
                             ${renderTypeBadge(other.type, "xana-type-badge--sm")}
@@ -2719,16 +2833,17 @@
                 return normalizePath(node.url) === normalizePath(href);
             });
 
-            // Fallback: treat the href as a "node/<id>" pattern (written in markdown
-            // as relative links like `node/provenance` or `/node/provenance`).
-            // Strip any leading slash, strip the "node/" prefix, and look up by id.
+            // Fallback: treat type-aware routes and old "node/<id>" routes as
+            // local node links.
             if (!matchingNode) {
-                const stripped = href.replace(/^\//, "").replace(/^node\//, "").replace(/\/$/, "");
-                matchingNode = nodeById.get(stripped);
+                const stripped = href.replace(/^\//, "").replace(/\/$/, "");
+                const routeParts = stripped.split("/");
+                const candidateId = routeParts.length >= 2 ? routeParts.at(-1) : stripped;
+                matchingNode = nodeById.get(candidateId);
             }
 
             if (matchingNode) {
-                link.setAttribute("href", `/node/${encodeURIComponent(matchingNode.id)}`);
+                link.setAttribute("href", nodeHref(matchingNode, state));
 
                 link.addEventListener("click", (event) => {
                     event.preventDefault();
@@ -2913,8 +3028,9 @@
     function updateUrl(nodeId, replace) {
         if (!nodeId) return;
 
+        const node = window.__xanaAllNodes?.find((candidate) => candidate.id === nodeId);
         const url = new URL(window.location.href);
-        url.pathname = `/node/${encodeURIComponent(nodeId)}`;
+        url.pathname = nodeHref(node || { id: nodeId, type: "node" }, { allNodes: window.__xanaAllNodes || [] });
         url.search = "";
 
         if (replace) {
@@ -2933,15 +3049,29 @@
             source: "xananode-preview",
             type: "node-selected",
             nodeId,
-            path: `/node/${encodeURIComponent(nodeId)}`,
+            path: nodeHref(window.__xanaAllNodes?.find((node) => node.id === nodeId) || { id: nodeId, type: "node" }, { allNodes: window.__xanaAllNodes || [] }),
             url: window.location.href
         }, "*");
     }
 
-    function nodeIdFromUrl() {
+    function nodeIdFromUrl(allNodes = []) {
         const pathname = window.location.pathname.replace(/\/$/, "");
         const match = pathname.match(/^\/node\/(.+)$/);
         if (match) return decodeURIComponent(match[1]);
+        const matchingNode = allNodes.find((node) => normalizePath(node.url) === normalizePath(pathname));
+        if (matchingNode) return matchingNode.id;
+
+        const parts = pathname.replace(/^\//, "").split("/");
+        if (parts.length >= 2) {
+            try {
+                const candidateId = decodeURIComponent(parts.at(-1));
+                if (allNodes.some((node) => node.id === candidateId)) return candidateId;
+            } catch {
+                const candidateId = parts.at(-1);
+                if (allNodes.some((node) => node.id === candidateId)) return candidateId;
+            }
+        }
+
         return new URLSearchParams(window.location.search).get("node");
     }
 
@@ -2968,6 +3098,27 @@
         } catch {
             return String(path || "").replace(/\/$/, "");
         }
+    }
+
+    function nodeHref(nodeOrId, state = {}) {
+        const id = typeof nodeOrId === "string" ? nodeOrId : nodeOrId?.id;
+        if (!id) return "/";
+
+        const node = typeof nodeOrId === "string"
+            ? state.allNodes?.find((candidate) => candidate.id === nodeOrId)
+            : nodeOrId;
+
+        if (node?.url) return node.url;
+        const typeSegment = slugSegment(node?.type || "node");
+        return `/${typeSegment}/${encodeURIComponent(id)}/`;
+    }
+
+    function slugSegment(value) {
+        return String(value || "node")
+            .trim()
+            .toLowerCase()
+            .replace(/[^a-z0-9._-]+/g, "-")
+            .replace(/^-+|-+$/g, "") || "node";
     }
 
     function normalizeSearchText(value) {
@@ -3053,8 +3204,18 @@
             colorTheme: loadSetting(STORAGE_KEYS.colorTheme, DISPLAY_DEFAULTS.colorTheme),
             uiDensity: loadSetting(STORAGE_KEYS.uiDensity, DISPLAY_DEFAULTS.uiDensity),
             graphAtmosphere: loadSetting(STORAGE_KEYS.graphAtmosphere, DISPLAY_DEFAULTS.graphAtmosphere),
-            ttsNarrator: loadSetting(STORAGE_KEYS.ttsNarrator, DISPLAY_DEFAULTS.ttsNarrator)
+            ttsNarrator: loadSetting(STORAGE_KEYS.ttsNarrator, DISPLAY_DEFAULTS.ttsNarrator),
+            ttsVoice: loadSetting(STORAGE_KEYS.ttsVoice, DISPLAY_DEFAULTS.ttsVoice),
+            ttsRate: clampNumber(loadSetting(STORAGE_KEYS.ttsRate, DISPLAY_DEFAULTS.ttsRate), 0.65, 1.35, DISPLAY_DEFAULTS.ttsRate),
+            ttsPitch: clampNumber(loadSetting(STORAGE_KEYS.ttsPitch, DISPLAY_DEFAULTS.ttsPitch), 0.75, 1.35, DISPLAY_DEFAULTS.ttsPitch),
+            ttsDetail: loadSetting(STORAGE_KEYS.ttsDetail, DISPLAY_DEFAULTS.ttsDetail)
         };
+    }
+
+    function clampNumber(value, min, max, fallback) {
+        const number = Number(value);
+        if (!Number.isFinite(number)) return fallback;
+        return Math.min(max, Math.max(min, number));
     }
 
     function applyDisplaySettings(settings) {

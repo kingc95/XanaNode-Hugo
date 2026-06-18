@@ -102,6 +102,23 @@ function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
+function withoutGeneratedAt(value) {
+  return JSON.stringify(value, (key, innerValue) => key === "generated_at" ? undefined : innerValue);
+}
+
+function withStableGeneratedAt(nextValue, existingPath) {
+  if (!fs.existsSync(existingPath)) return nextValue;
+  try {
+    const existingValue = readJson(existingPath);
+    if (withoutGeneratedAt(existingValue) === withoutGeneratedAt(nextValue) && existingValue.generated_at) {
+      return { ...nextValue, generated_at: existingValue.generated_at };
+    }
+  } catch {
+    // Keep the fresh timestamp if the previous artifact cannot be read.
+  }
+  return nextValue;
+}
+
 function asArray(value) {
   if (value === undefined || value === null) return [];
   return Array.isArray(value) ? value : [value];
@@ -122,6 +139,21 @@ function protocolTypePath(type) {
   if (normalizedType === "media") return "media";
   return normalizedType;
 }
+
+const PUBLIC_ROUTE_TYPES = new Set([
+  "claim",
+  "concept",
+  "essay",
+  "media",
+  "observation",
+  "person",
+  "project",
+  "schema",
+  "source",
+  "technology",
+  "trail",
+  "node"
+]);
 
 function nodeIdFor(relativeFile, data) {
   return data.node_id || path.basename(relativeFile, ".md");
@@ -360,7 +392,7 @@ function lineColumnFor(text, index) {
 }
 
 function linkTargetFor(node) {
-  return `/node/${encodeURIComponent(node.id)}`;
+  return `/${protocolTypePath(node.data?.type || "node")}/${encodeURIComponent(node.id)}/`;
 }
 
 function nodeIdFromLinkHref(href) {
@@ -372,11 +404,12 @@ function nodeIdFromLinkHref(href) {
     pathValue = value;
   }
   const stripped = pathValue.replace(/^\//, "").replace(/\/$/, "");
-  if (!stripped.startsWith("node/")) return null;
+  const [routeType, ...rest] = stripped.split("/");
+  if (!PUBLIC_ROUTE_TYPES.has(routeType) || !rest.length) return null;
   try {
-    return decodeURIComponent(stripped.slice("node/".length));
+    return decodeURIComponent(rest.at(-1));
   } catch {
-    return stripped.slice("node/".length);
+    return rest.at(-1);
   }
 }
 
@@ -1022,9 +1055,11 @@ fs.mkdirSync(dataDir, { recursive: true });
 fs.mkdirSync(staticDir, { recursive: true });
 fs.mkdirSync(staticNodesDir, { recursive: true });
 copyProtocolSchemas(staticSchemaDir);
-fs.writeFileSync(path.join(dataDir, "xananode_fragments.json"), JSON.stringify(fragments, null, 2) + "\n");
+const fragmentsOutput = withStableGeneratedAt(fragments, path.join(dataDir, "xananode_fragments.json"));
+reviewSuggestions = withStableGeneratedAt(reviewSuggestions, path.join(dataDir, "xananode_suggestions.json"));
+fs.writeFileSync(path.join(dataDir, "xananode_fragments.json"), JSON.stringify(fragmentsOutput, null, 2) + "\n");
 fs.writeFileSync(path.join(dataDir, "xananode_suggestions.json"), JSON.stringify(reviewSuggestions, null, 2) + "\n");
-fs.writeFileSync(path.join(staticDir, "xananode-fragments.json"), JSON.stringify(fragments, null, 2) + "\n");
+fs.writeFileSync(path.join(staticDir, "xananode-fragments.json"), JSON.stringify(fragmentsOutput, null, 2) + "\n");
 fs.writeFileSync(path.join(staticDir, "xananode-suggestions.json"), JSON.stringify(reviewSuggestions, null, 2) + "\n");
 fs.writeFileSync(path.join(staticDir, "xananode-suggestions.md"), renderSuggestionReport(reviewSuggestions));
 fs.writeFileSync(path.join(staticDir, "substrate.json"), JSON.stringify(substrateManifest, null, 2) + "\n");

@@ -19,6 +19,8 @@ params:
     gtag: ""
     plausibleDomain: ""
     plausibleSrc: "https://plausible.io/js/script.js"
+  xananode:
+    namespace: "xananode.example"
 
 markup:
   goldmark:
@@ -29,3 +31,17 @@ outputs:
   home:
     - HTML
     - JSON
+
+permalinks:
+  page:
+    claims: "/claim/:slug/"
+    concepts: "/concept/:slug/"
+    essays: "/essay/:slug/"
+    media: "/media/:slug/"
+    observations: "/observation/:slug/"
+    people: "/person/:slug/"
+    projects: "/project/:slug/"
+    schemas: "/schema/:slug/"
+    sources: "/source/:slug/"
+    technologies: "/technology/:slug/"
+    trails: "/trail/:slug/"
