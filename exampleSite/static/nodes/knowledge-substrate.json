@@ -12,85 +12,85 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/cytoscape-js-represents-knowledge-substrate-23",
+      "id": "xananode.example:rel/cytoscape-js-represents-knowledge-substrate-27",
       "type": "represents",
       "source": "xananode.example:technology/cytoscape-js",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-studio-repo-demonstrates-knowledge-substrate-28",
+      "id": "xananode.example:rel/xananode-studio-repo-demonstrates-knowledge-substrate-32",
       "type": "demonstrates",
       "source": "xananode.example:source/xananode-studio-repo",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/mother-of-all-demos-supports-knowledge-substrate-44",
+      "id": "xananode.example:rel/mother-of-all-demos-supports-knowledge-substrate-48",
       "type": "supports",
       "source": "xananode.example:source/mother-of-all-demos",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-hugo-theme-demonstrates-knowledge-substrate-77",
+      "id": "xananode.example:rel/xananode-hugo-theme-demonstrates-knowledge-substrate-81",
       "type": "demonstrates",
       "source": "xananode.example:project/xananode-hugo-theme",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/vannevar-bush-anticipated-knowledge-substrate-86",
+      "id": "xananode.example:rel/vannevar-bush-anticipated-knowledge-substrate-90",
       "type": "anticipated",
       "source": "xananode.example:person/vannevar-bush",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/knowledge-substrate-explains-link-rot-97",
+      "id": "xananode.example:rel/knowledge-substrate-explains-link-rot-101",
       "type": "explains",
       "target": "xananode.example:observation/link-rot",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/start-here-explains-knowledge-substrate-107",
+      "id": "xananode.example:rel/start-here-explains-knowledge-substrate-111",
       "type": "explains",
       "source": "xananode.example:essay/start-here",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-defines-knowledge-substrate-112",
+      "id": "xananode.example:rel/xananode-defines-knowledge-substrate-116",
       "type": "defines",
       "source": "xananode.example:concept/xananode",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/single-source-of-truth-alternative_to-knowledge-substrate-136",
+      "id": "xananode.example:rel/single-source-of-truth-alternative_to-knowledge-substrate-140",
       "type": "alternative_to",
       "source": "xananode.example:concept/single-source-of-truth",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/knowledge-substrate-has_claim-claim-substrate-is-structure-166",
+      "id": "xananode.example:rel/knowledge-substrate-has_claim-claim-substrate-is-structure-170",
       "type": "has_claim",
       "target": "xananode.example:claim/claim-substrate-is-structure",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/knowledge-substrate-requires-provenance-167",
+      "id": "xananode.example:rel/knowledge-substrate-requires-provenance-171",
       "type": "requires",
       "target": "xananode.example:concept/provenance",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/knowledge-substrate-requires-typed-relationships-168",
+      "id": "xananode.example:rel/knowledge-substrate-requires-typed-relationships-172",
       "type": "requires",
       "target": "xananode.example:concept/typed-relationships",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-enables-knowledge-substrate-169",
+      "id": "xananode.example:rel/xananode-core-schema-enables-knowledge-substrate-173",
       "type": "enables",
       "source": "xananode.example:schema/xananode-core-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/civilizational-memory-requires-knowledge-substrate-204",
+      "id": "xananode.example:rel/civilizational-memory-requires-knowledge-substrate-208",
       "type": "requires",
       "source": "xananode.example:concept/civilizational-memory",
       "direction": "incoming"

@@ -411,9 +411,7 @@ body,
 }
 
 .xana-search-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: block;
   background: rgba(5, 7, 10, 0.82);
   border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 1.5rem;
@@ -432,8 +430,18 @@ body,
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  flex: 1 1 calc(100% - 1rem);
   min-width: 0;
+}
+
+.xana-search-form::after {
+  content: "";
+  flex: 0 0 auto;
+  width: 1px;
+  height: 1.15em;
+  margin-left: 0.05rem;
+  background: var(--xana-accent);
+  opacity: 0.75;
+  animation: xana-caret-blink 900ms steps(2, start) infinite;
 }
 
 .xana-search-form input {
@@ -453,18 +461,8 @@ body,
   font-style: normal;
 }
 
-.xana-search-wrap::after {
-  content: "";
-  display: inline-block;
-  width: 1px;
-  height: 1.15em;
-  margin-left: 0.15rem;
-  background: var(--xana-accent);
-  opacity: 0.75;
-  animation: xana-caret-blink 900ms steps(2, start) infinite;
-}
-
-.xana-search-wrap:focus-within::after {
+.xana-search-wrap:focus-within .xana-search-form::after,
+.xana-search-wrap:has(input:not(:placeholder-shown)) .xana-search-form::after {
   display: none;
 }
 
@@ -884,14 +882,16 @@ body,
 }
 
 .xana-interface-tour {
-  position: absolute;
+  position: fixed;
   inset: 0;
-  z-index: 70;
+  z-index: 2147483000;
   pointer-events: none;
+  background: rgba(2, 6, 10, 0.28);
 }
 
 .xana-interface-tour-card {
   position: absolute;
+  z-index: 1;
   right: 1.5rem;
   top: 1.5rem;
   width: min(360px, calc(100% - 3rem));
@@ -954,11 +954,11 @@ body,
 
 .xana-tour-target {
   position: relative;
-  z-index: 72 !important;
+  z-index: 2147482999 !important;
   outline: 3px solid rgba(85, 214, 190, 0.72);
   outline-offset: 5px;
   border-radius: 0.9rem;
-  box-shadow: 0 0 0 9999px rgba(2, 6, 10, 0.38), 0 0 34px rgba(85, 214, 190, 0.34);
+  box-shadow: 0 0 34px rgba(85, 214, 190, 0.34);
 }
 
 html[data-xana-density="compact"] .xana-panel {
@@ -1628,9 +1628,25 @@ a.xana-type-badge-link:focus-visible {
 .xana-fragment-highlight {
   position: relative;
   border-radius: 0.55rem;
-  outline: 2px solid rgba(255, 209, 102, 0.9);
-  background: rgba(255, 209, 102, 0.14);
-  box-shadow: 0 0 0 6px rgba(255, 209, 102, 0.08);
+  outline: 3px solid rgba(255, 209, 102, 0.95);
+  outline-offset: 4px;
+  background: linear-gradient(90deg, rgba(255, 209, 102, 0.22), rgba(85, 214, 190, 0.1));
+  box-shadow: 0 0 0 7px rgba(255, 209, 102, 0.1), 0 0 28px rgba(255, 209, 102, 0.22);
+}
+
+.xana-fragment-highlight::before {
+  content: attr(data-fragment-label);
+  display: inline-block;
+  margin: 0 0 0.55rem;
+  padding: 0.25rem 0.45rem;
+  border: 1px solid rgba(255, 209, 102, 0.55);
+  border-radius: 0.4rem;
+  background: rgba(255, 209, 102, 0.16);
+  color: #ffd166;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .xana-fragment-note {
@@ -1743,6 +1759,96 @@ a.xana-type-badge-link:focus-visible {
 .xana-trail-playlist-items button:hover {
   border-color: var(--xana-accent);
   background: rgba(30, 41, 59, 0.8);
+}
+
+.xana-trail-choice {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(2, 6, 10, 0.62);
+  backdrop-filter: blur(10px);
+}
+
+.xana-trail-choice-card {
+  width: min(520px, 100%);
+  max-height: min(680px, calc(100svh - 2rem));
+  overflow: auto;
+  padding: 1rem;
+  border: 1px solid var(--xana-accent-border);
+  border-radius: 0.9rem;
+  background: var(--xana-panel-bg);
+  color: var(--xana-text);
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.45);
+}
+
+.xana-trail-choice-kicker {
+  color: var(--xana-accent);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.xana-trail-choice-card h2 {
+  margin: 0.35rem 0 0.85rem;
+  font-size: 1.3rem;
+}
+
+.xana-trail-choice-options {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.xana-trail-choice-options button {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 0.25rem 0.7rem;
+  align-items: start;
+  width: 100%;
+  min-height: 58px;
+  padding: 0.75rem;
+  border: 1px solid var(--xana-panel-border);
+  border-radius: 0.75rem;
+  background: var(--xana-surface-elevated);
+  color: var(--xana-text);
+  cursor: pointer;
+  text-align: left;
+}
+
+.xana-trail-choice-options button span {
+  display: grid;
+  grid-row: 1 / span 2;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--xana-accent-soft);
+  color: var(--xana-accent);
+  font-weight: 900;
+}
+
+.xana-trail-choice-options button strong,
+.xana-trail-choice-options button em {
+  min-width: 0;
+}
+
+.xana-trail-choice-options button strong {
+  font-size: 0.98rem;
+}
+
+.xana-trail-choice-options button em {
+  color: var(--xana-text-muted);
+  font-size: 0.84rem;
+  font-style: normal;
+  line-height: 1.35;
+}
+
+.xana-trail-choice-options button:hover {
+  border-color: var(--xana-accent-border);
+  background: var(--xana-accent-soft);
 }
 
 .xana-media-warning {

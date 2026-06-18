@@ -19,109 +19,115 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-protocol-repo-defines-xananode-29",
+      "id": "xananode.example:rel/branching-orientation-trail-continues_to-xananode-22",
+      "type": "continues_to",
+      "source": "xananode.example:trail/branching-orientation-trail",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-protocol-repo-defines-xananode-33",
       "type": "defines",
       "source": "xananode.example:source/xananode-protocol-repo",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-node-types-defines-xananode-48",
+      "id": "xananode.example:rel/xananode-node-types-defines-xananode-52",
       "type": "defines",
       "source": "xananode.example:schema/xananode-node-types",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-hugo-theme-implements-xananode-74",
+      "id": "xananode.example:rel/xananode-hugo-theme-implements-xananode-78",
       "type": "implements",
       "source": "xananode.example:project/xananode-hugo-theme",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/project-xanadu-influenced-xananode-79",
+      "id": "xananode.example:rel/project-xanadu-influenced-xananode-83",
       "type": "influenced",
       "source": "xananode.example:project/project-xanadu",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/nls-anticipated-xananode-81",
+      "id": "xananode.example:rel/nls-anticipated-xananode-85",
       "type": "anticipated",
       "source": "xananode.example:project/nls",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/memex-anticipated-xananode-83",
+      "id": "xananode.example:rel/memex-anticipated-xananode-87",
       "type": "anticipated",
       "source": "xananode.example:project/memex",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/ted-nelson-influenced-xananode-90",
+      "id": "xananode.example:rel/ted-nelson-influenced-xananode-94",
       "type": "influenced",
       "source": "xananode.example:person/ted-nelson",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-extends-douglas-engelbart-93",
+      "id": "xananode.example:rel/xananode-extends-douglas-engelbart-97",
       "type": "extends",
       "target": "xananode.example:person/douglas-engelbart",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-icon-represents-xananode-100",
+      "id": "xananode.example:rel/xananode-icon-represents-xananode-104",
       "type": "represents",
       "source": "xananode.example:media/xananode-icon",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/what-is-xananode-defines-xananode-101",
+      "id": "xananode.example:rel/what-is-xananode-defines-xananode-105",
       "type": "defines",
       "source": "xananode.example:essay/what-is-xananode",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/start-here-explains-xananode-106",
+      "id": "xananode.example:rel/start-here-explains-xananode-110",
       "type": "explains",
       "source": "xananode.example:essay/start-here",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-defines-knowledge-substrate-112",
+      "id": "xananode.example:rel/xananode-defines-knowledge-substrate-116",
       "type": "defines",
       "target": "xananode.example:concept/knowledge-substrate",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-explains-federated-knowledge-substrates-113",
+      "id": "xananode.example:rel/xananode-explains-federated-knowledge-substrates-117",
       "type": "explains",
       "target": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-requires-xananode-core-schema-114",
+      "id": "xananode.example:rel/xananode-requires-xananode-core-schema-118",
       "type": "requires",
       "target": "xananode.example:schema/xananode-core-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-preserves-provenance-115",
+      "id": "xananode.example:rel/xananode-preserves-provenance-119",
       "type": "preserves",
       "target": "xananode.example:concept/provenance",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-extends-project-xanadu-116",
+      "id": "xananode.example:rel/xananode-extends-project-xanadu-120",
       "type": "extends",
       "target": "xananode.example:project/project-xanadu",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-extends-memex-117",
+      "id": "xananode.example:rel/xananode-extends-memex-121",
       "type": "extends",
       "target": "xananode.example:project/memex",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-extends-tumbler-addressing-125",
+      "id": "xananode.example:rel/xananode-extends-tumbler-addressing-129",
       "type": "extends",
       "target": "xananode.example:concept/tumbler-addressing",
       "direction": "outgoing"

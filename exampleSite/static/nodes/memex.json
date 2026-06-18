@@ -6,31 +6,31 @@
   "summary": "Vannevar Bush's proposed associative memory device for navigating trails through recorded knowledge.",
   "relationships": [
     {
-      "id": "xananode.example:rel/as-we-may-think-documents-memex-45",
+      "id": "xananode.example:rel/as-we-may-think-documents-memex-49",
       "type": "documents",
       "source": "xananode.example:source/as-we-may-think",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/memex-introduced_in-as-we-may-think-82",
+      "id": "xananode.example:rel/memex-introduced_in-as-we-may-think-86",
       "type": "introduced_in",
       "target": "xananode.example:source/as-we-may-think",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/memex-anticipated-xananode-83",
+      "id": "xananode.example:rel/memex-anticipated-xananode-87",
       "type": "anticipated",
       "target": "xananode.example:concept/xananode",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/vannevar-bush-proposed-memex-85",
+      "id": "xananode.example:rel/vannevar-bush-proposed-memex-89",
       "type": "proposed",
       "source": "xananode.example:person/vannevar-bush",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-extends-memex-117",
+      "id": "xananode.example:rel/xananode-extends-memex-121",
       "type": "extends",
       "source": "xananode.example:concept/xananode",
       "direction": "incoming"

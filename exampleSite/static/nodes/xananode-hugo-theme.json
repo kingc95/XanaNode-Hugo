@@ -8,67 +8,67 @@
   "primary_media": "xananode.example:media/xananode-icon",
   "relationships": [
     {
-      "id": "xananode.example:rel/xananode-hugo-theme-enables-static-publishing-21",
+      "id": "xananode.example:rel/xananode-hugo-theme-enables-static-publishing-25",
       "type": "enables",
       "target": "xananode.example:technology/static-publishing",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-studio-repo-uses-xananode-hugo-theme-27",
+      "id": "xananode.example:rel/xananode-studio-repo-uses-xananode-hugo-theme-31",
       "type": "uses",
       "source": "xananode.example:source/xananode-studio-repo",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-hugo-repo-implements-xananode-hugo-theme-32",
+      "id": "xananode.example:rel/xananode-hugo-repo-implements-xananode-hugo-theme-36",
       "type": "implements",
       "source": "xananode.example:source/xananode-hugo-repo",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-hugo-theme-implements-xananode-74",
+      "id": "xananode.example:rel/xananode-hugo-theme-implements-xananode-78",
       "type": "implements",
       "target": "xananode.example:concept/xananode",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-hugo-theme-uses-hugo-75",
+      "id": "xananode.example:rel/xananode-hugo-theme-uses-hugo-79",
       "type": "uses",
       "target": "xananode.example:technology/hugo",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-hugo-theme-uses-cytoscape-js-76",
+      "id": "xananode.example:rel/xananode-hugo-theme-uses-cytoscape-js-80",
       "type": "uses",
       "target": "xananode.example:technology/cytoscape-js",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-hugo-theme-demonstrates-knowledge-substrate-77",
+      "id": "xananode.example:rel/xananode-hugo-theme-demonstrates-knowledge-substrate-81",
       "type": "demonstrates",
       "target": "xananode.example:concept/knowledge-substrate",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-hugo-theme-has_primary_media-xananode-icon-98",
+      "id": "xananode.example:rel/xananode-hugo-theme-has_primary_media-xananode-icon-102",
       "type": "has_primary_media",
       "target": "xananode.example:media/xananode-icon",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-icon-depicts-xananode-hugo-theme-99",
+      "id": "xananode.example:rel/xananode-icon-depicts-xananode-hugo-theme-103",
       "type": "depicts",
       "source": "xananode.example:media/xananode-icon",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/what-is-xananode-explains-xananode-hugo-theme-102",
+      "id": "xananode.example:rel/what-is-xananode-explains-xananode-hugo-theme-106",
       "type": "explains",
       "source": "xananode.example:essay/what-is-xananode",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/known-implementations-registry-documents-xananode-hugo-theme-164",
+      "id": "xananode.example:rel/known-implementations-registry-documents-xananode-hugo-theme-168",
       "type": "documents",
       "source": "xananode.example:concept/known-implementations-registry",
       "direction": "incoming"

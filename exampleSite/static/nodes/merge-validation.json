@@ -6,73 +6,73 @@
   "summary": "The process of safely combining or comparing substrates without destroying authorship, provenance, disagreement, or local moderation.",
   "relationships": [
     {
-      "id": "xananode.example:rel/merge-report-schema-documents-merge-validation-69",
+      "id": "xananode.example:rel/merge-report-schema-documents-merge-validation-73",
       "type": "documents",
       "source": "xananode.example:schema/merge-report-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/merge-validation-requires-namespacing-155",
+      "id": "xananode.example:rel/merge-validation-requires-namespacing-159",
       "type": "requires",
       "target": "xananode.example:concept/namespacing",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/merge-validation-requires-provenance-156",
+      "id": "xananode.example:rel/merge-validation-requires-provenance-160",
       "type": "requires",
       "target": "xananode.example:concept/provenance",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/merge-validation-requires-schema-extension-157",
+      "id": "xananode.example:rel/merge-validation-requires-schema-extension-161",
       "type": "requires",
       "target": "xananode.example:concept/schema-extension",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/merge-validation-uses-merge-report-158",
+      "id": "xananode.example:rel/merge-validation-uses-merge-report-162",
       "type": "uses",
       "target": "xananode.example:concept/merge-report",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/merge-validation-uses-compatibility-report-159",
+      "id": "xananode.example:rel/merge-validation-uses-compatibility-report-163",
       "type": "uses",
       "target": "xananode.example:concept/compatibility-report",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/merge-validation-arrives_at-claim-merge-without-collapse-160",
+      "id": "xananode.example:rel/merge-validation-arrives_at-claim-merge-without-collapse-164",
       "type": "arrives_at",
       "target": "xananode.example:claim/claim-merge-without-collapse",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/merge-report-documents-merge-validation-161",
+      "id": "xananode.example:rel/merge-report-documents-merge-validation-165",
       "type": "documents",
       "source": "xananode.example:concept/merge-report",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-merge-validation-184",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-merge-validation-188",
       "type": "requires",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/merge-validation-requires-compatibility-report-199",
+      "id": "xananode.example:rel/merge-validation-requires-compatibility-report-203",
       "type": "requires",
       "target": "xananode.example:concept/compatibility-report",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/civilizational-memory-requires-merge-validation-206",
+      "id": "xananode.example:rel/civilizational-memory-requires-merge-validation-210",
       "type": "requires",
       "source": "xananode.example:concept/civilizational-memory",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/merge-validation-has_claim-claim-merge-without-collapse-212",
+      "id": "xananode.example:rel/merge-validation-has_claim-claim-merge-without-collapse-216",
       "type": "has_claim",
       "target": "xananode.example:claim/claim-merge-without-collapse",
       "direction": "outgoing"

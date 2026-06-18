@@ -8,31 +8,31 @@
   "rights_status": "copyrighted",
   "relationships": [
     {
-      "id": "xananode.example:rel/xanadu-document-interconnection-documents-project-xanadu-38",
+      "id": "xananode.example:rel/xanadu-document-interconnection-documents-project-xanadu-42",
       "type": "documents",
       "target": "xananode.example:project/project-xanadu",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xanadu-document-interconnection-defines-transclusion-39",
+      "id": "xananode.example:rel/xanadu-document-interconnection-defines-transclusion-43",
       "type": "defines",
       "target": "xananode.example:concept/transclusion",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-relationships-preserve-context-40",
+      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-relationships-preserve-context-44",
       "type": "supports",
       "target": "xananode.example:claim/claim-relationships-preserve-context",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/ted-nelson-authored-xanadu-document-interconnection-89",
+      "id": "xananode.example:rel/ted-nelson-authored-xanadu-document-interconnection-93",
       "type": "authored",
       "source": "xananode.example:person/ted-nelson",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-substrate-is-structure-209",
+      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-substrate-is-structure-213",
       "type": "supports",
       "target": "xananode.example:claim/claim-substrate-is-structure",
       "direction": "outgoing"

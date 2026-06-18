@@ -1,0 +1,33 @@
+{
+  "id": "xananode.example:trail/branching-orientation-trail",
+  "title": "Branching Orientation Trail",
+  "type": "trail",
+  "importance": 5,
+  "summary": "A choose-your-path trail used to test mobile-friendly branch choices in guided tours.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/branching-orientation-trail-starts_with-start-here-21",
+      "type": "starts_with",
+      "target": "xananode.example:essay/start-here",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/branching-orientation-trail-continues_to-xananode-22",
+      "type": "continues_to",
+      "target": "xananode.example:concept/xananode",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/branching-orientation-trail-continues_to-vannevar-bush-23",
+      "type": "continues_to",
+      "target": "xananode.example:person/vannevar-bush",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/branching-orientation-trail-continues_to-xananode-protocol-repo-24",
+      "type": "continues_to",
+      "target": "xananode.example:source/xananode-protocol-repo",
+      "direction": "outgoing"
+    }
+  ]
+}

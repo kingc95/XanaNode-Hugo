@@ -8,31 +8,31 @@
   "rights_status": "copyrighted",
   "relationships": [
     {
-      "id": "xananode.example:rel/as-we-may-think-documents-memex-45",
+      "id": "xananode.example:rel/as-we-may-think-documents-memex-49",
       "type": "documents",
       "target": "xananode.example:project/memex",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/as-we-may-think-supports-claim-substrate-is-structure-46",
+      "id": "xananode.example:rel/as-we-may-think-supports-claim-substrate-is-structure-50",
       "type": "supports",
       "target": "xananode.example:claim/claim-substrate-is-structure",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/memex-introduced_in-as-we-may-think-82",
+      "id": "xananode.example:rel/memex-introduced_in-as-we-may-think-86",
       "type": "introduced_in",
       "source": "xananode.example:project/memex",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/vannevar-bush-authored-as-we-may-think-84",
+      "id": "xananode.example:rel/vannevar-bush-authored-as-we-may-think-88",
       "type": "authored",
       "source": "xananode.example:person/vannevar-bush",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/tumbler-addressing-deep_links_to-as-we-may-think-126",
+      "id": "xananode.example:rel/tumbler-addressing-deep_links_to-as-we-may-think-130",
       "type": "deep_links_to",
       "source": "xananode.example:concept/tumbler-addressing",
       "direction": "incoming"

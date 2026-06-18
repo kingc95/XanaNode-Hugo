@@ -7,25 +7,25 @@
   "summary": "The canonical node type registry for XanaNode substrates.",
   "relationships": [
     {
-      "id": "xananode.example:rel/xananode-node-types-defines-xananode-48",
+      "id": "xananode.example:rel/xananode-node-types-defines-xananode-52",
       "type": "defines",
       "target": "xananode.example:concept/xananode",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-xananode-node-types-49",
+      "id": "xananode.example:rel/xananode-core-schema-defines-xananode-node-types-53",
       "type": "defines",
       "source": "xananode.example:schema/xananode-core-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-node-schema-uses-xananode-node-types-60",
+      "id": "xananode.example:rel/substrate-node-schema-uses-xananode-node-types-64",
       "type": "uses",
       "source": "xananode.example:schema/substrate-node-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-node-record-uses-xananode-node-types-131",
+      "id": "xananode.example:rel/substrate-node-record-uses-xananode-node-types-135",
       "type": "uses",
       "source": "xananode.example:concept/substrate-node-record",
       "direction": "incoming"

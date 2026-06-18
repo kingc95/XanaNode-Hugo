@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T04:24:11.885Z",
+  "generated_at": "2026-06-18T04:37:16.672Z",
   "nodes": {
     "xananode-implementation-stack-trail": {
       "versions": {
@@ -127,6 +127,32 @@
         }
       },
       "title": "Historical Lineage Trail",
+      "type": "trail"
+    },
+    "branching-orientation-trail": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "This trail deliberately branches after XanaNode so the viewer can test a guided choose-your-path experience.\n\n{{< node ref=\"start-here\" >}} {{< node ref=\"xananode\" >}}",
+            "1.1": "This trail deliberately branches after XanaNode so the viewer can test a guided choose-your-path experience.",
+            "1.1.1": "This trail deliberately branches after XanaNode so the viewer can test a guided choose-your-path experience.",
+            "1.2": "{{< node ref=\"start-here\" >}} {{< node ref=\"xananode\" >}}",
+            "1.2.1": "{{< node ref=\"start-here\" >}} {{< node ref=\"xananode\" >}}"
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "This trail deliberately branches after XanaNode so the viewer can test a guided choose-your-path experience.\n\n{{< node ref=\"start-here\" >}} {{< node ref=\"xananode\" >}}",
+            "1.1": "This trail deliberately branches after XanaNode so the viewer can test a guided choose-your-path experience.",
+            "1.1.1": "This trail deliberately branches after XanaNode so the viewer can test a guided choose-your-path experience.",
+            "1.2": "{{< node ref=\"start-here\" >}} {{< node ref=\"xananode\" >}}",
+            "1.2.1": "{{< node ref=\"start-here\" >}} {{< node ref=\"xananode\" >}}"
+          },
+          "metadata": {}
+        }
+      },
+      "title": "Branching Orientation Trail",
       "type": "trail"
     },
     "static-publishing": {

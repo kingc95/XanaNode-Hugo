@@ -371,6 +371,7 @@
             tourVisited: new Set(),
             tourRecent: [],
             activeTrail: null,
+            trailChoicePending: false,
             cy: null,
             allNodes,
             nodeIds,
@@ -380,6 +381,10 @@
             pendingFragmentHighlight: null,
             displaySettings
         };
+
+        if (requestedNode && window.location.hash) {
+            state.pendingFragmentHighlight = fragmentHighlightFromHash(requestedNode.id, state);
+        }
 
         if (rawRequested && !requestedNode) {
             const protocolTarget = resolveProtocolAddress(rawRequested, state);
@@ -445,17 +450,18 @@
         window.addEventListener("popstate", () => {
             const nodeFromUrl = nodeIdFromUrl(allNodes);
             const protocolTarget = nodeFromUrl ? resolveProtocolAddress(nodeFromUrl, state) : null;
+            const nextId = protocolTarget?.nodeId || nodeFromUrl;
 
             if (protocolTarget || (nodeFromUrl && allNodes.some((node) => node.id === nodeFromUrl))) {
                 state.previousFocusId = state.focusId;
-                state.focusId = protocolTarget?.nodeId || nodeFromUrl;
+                state.focusId = nextId;
                 state.pendingFragmentHighlight = protocolTarget?.fragmentId
                     ? {
                         nodeId: protocolTarget.nodeId,
                         fragmentId: protocolTarget.fragmentId,
                         fragment: protocolTarget.fragment
                     }
-                    : null;
+                    : fragmentHighlightFromHash(nextId, state);
                 renderVisibleGraph(state, {
                     updateUrl: false,
                     stagedReveal: true,
@@ -1199,6 +1205,30 @@
         return null;
     }
 
+    function fragmentHighlightFromHash(nodeId, state) {
+        return fragmentHighlightFromHref(nodeId, window.location.href, state);
+    }
+
+    function fragmentHighlightFromHref(nodeId, href, state) {
+        const fragmentId = extractFragmentId(href);
+        if (!nodeId || !fragmentId) return null;
+        const node = state.allNodes.find((candidate) => candidate.id === nodeId);
+        const rawAddress = `${node?.protocol_id || nodeId}#fragment/${fragmentId}`;
+        return {
+            nodeId,
+            fragmentId,
+            fragment: findFragmentRecord(nodeId, fragmentId, rawAddress, state)
+        };
+    }
+
+    function extractFragmentId(value) {
+        try {
+            return decodeURIComponent(new URL(value, window.location.origin).hash || "").match(/^#fragment\/([A-Za-z0-9._-]+)/)?.[1] || "";
+        } catch {
+            return decodeURIComponent(String(value || "")).match(/#fragment\/([A-Za-z0-9._-]+)/)?.[1] || "";
+        }
+    }
+
     function scoreSearchResult(node, haystack, normalizedQuery, queryTokens) {
         let score = 0;
 
@@ -1783,8 +1813,10 @@
     function stopTour(state) {
         state.tourActive = false;
         state.activeTrail = null;
+        state.trailChoicePending = false;
         graphEl.dataset.tourActive = "0";
         clearTourTimers();
+        closeTrailChoice();
         stopNarration();
         updateTourButton();
         const tourBtn = graphEl.querySelector("[data-tour-toggle]");
@@ -1823,8 +1855,13 @@
     }
 
     function pickNextTourNode(state) {
-        const trailNext = pickNextTrailNode(state);
-        if (trailNext) return trailNext;
+        if (state.activeTrail?.nodes?.length) {
+            const trailNext = pickNextTrailNode(state);
+            if (trailNext) return trailNext;
+            if (state.trailChoicePending) return null;
+            stopTour(state);
+            return null;
+        }
 
         const cy = state.cy;
         if (!cy) return null;
@@ -1855,20 +1892,62 @@
 
     function buildActiveTrail(state) {
         const focusNode = state.allNodes.find((node) => node.id === state.focusId);
-        const trailNodes = Array.isArray(focusNode?.trail_nodes)
-            ? focusNode.trail_nodes.filter((id) => state.nodeIds.has(id))
-            : [];
+        const trailNodes = getTrailNodeIds(focusNode, state);
         if (!trailNodes.length) return null;
         return {
             trailId: focusNode.id,
             nodes: trailNodes,
-            index: 0
+            index: 0,
+            branches: getTrailBranches(focusNode, state),
+            branchChoices: {}
         };
+    }
+
+    function getTrailNodeIds(node, state) {
+        if (!node) return [];
+
+        const explicitNodes = Array.isArray(node.trail_nodes)
+            ? node.trail_nodes.filter((id) => state.nodeIds.has(id))
+            : [];
+        if (explicitNodes.length) return explicitNodes;
+
+        return (state.allEdgesRaw || [])
+            .filter((edge) => edge.source === node.id && edge.origin === "trail" && state.nodeIds.has(edge.target))
+            .map((edge) => edge.target)
+            .filter((id, index, ids) => ids.indexOf(id) === index);
+    }
+
+    function getTrailBranches(node, state) {
+        if (!Array.isArray(node?.trail_branches)) return [];
+        return node.trail_branches
+            .map((branch) => ({
+                after: branch?.after || "",
+                prompt: branch?.prompt || "Choose the next path",
+                choices: Array.isArray(branch?.choices)
+                    ? branch.choices
+                        .map((choice) => ({
+                            label: choice?.label || "Continue",
+                            summary: choice?.summary || "",
+                            nodes: Array.isArray(choice?.nodes)
+                                ? choice.nodes.filter((id) => state.nodeIds.has(id))
+                                : []
+                        }))
+                        .filter((choice) => choice.nodes.length)
+                    : []
+            }))
+            .filter((branch) => branch.after && branch.choices.length);
     }
 
     function pickNextTrailNode(state) {
         const trail = state.activeTrail;
         if (!trail?.nodes?.length) return null;
+        const branch = trail.branches?.find((candidate) => {
+            return candidate.after === state.focusId && !trail.branchChoices?.[candidate.after];
+        });
+        if (branch) {
+            showTrailChoice(branch, state);
+            return null;
+        }
         const currentIndex = trail.nodes.indexOf(state.focusId);
         const nextIndex = currentIndex >= 0 ? currentIndex + 1 : trail.index;
         const nextId = trail.nodes[nextIndex];
@@ -1879,6 +1958,49 @@
         }
         rememberTourVisit(nextId, state);
         return nextId;
+    }
+
+    function showTrailChoice(branch, state) {
+        if (state.trailChoicePending) return;
+        state.trailChoicePending = true;
+        closeTrailChoice();
+
+        const overlay = document.createElement("div");
+        overlay.className = "xana-trail-choice";
+        overlay.setAttribute("data-tts-skip", "");
+        overlay.innerHTML = `
+            <div class="xana-trail-choice-card" role="dialog" aria-modal="true" aria-label="Choose trail branch">
+                <div class="xana-trail-choice-kicker">Trail branch</div>
+                <h2>${escapeHtml(branch.prompt)}</h2>
+                <div class="xana-trail-choice-options">
+                    ${branch.choices.map((choice, index) => `
+                        <button type="button" data-trail-choice="${index}">
+                            <span>${index + 1}</span>
+                            <strong>${escapeHtml(choice.label)}</strong>
+                            ${choice.summary ? `<em>${escapeHtml(choice.summary)}</em>` : ""}
+                        </button>
+                    `).join("")}
+                </div>
+            </div>
+        `;
+        document.body.appendChild(overlay);
+
+        overlay.querySelectorAll("[data-trail-choice]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const choice = branch.choices[Number(button.getAttribute("data-trail-choice"))];
+                if (!choice?.nodes?.length) return;
+                state.activeTrail.branchChoices[branch.after] = choice.label;
+                state.activeTrail.nodes = choice.nodes;
+                state.activeTrail.index = 0;
+                state.trailChoicePending = false;
+                closeTrailChoice();
+                travelToNode(choice.nodes[0], state, !state.tourActive);
+            });
+        });
+    }
+
+    function closeTrailChoice() {
+        document.querySelectorAll(".xana-trail-choice").forEach((el) => el.remove());
     }
 
     function rememberTourVisit(nodeId, state) {
@@ -1902,7 +2024,7 @@
             if (!state.tourActive) return;
             const nextId = pickNextTourNode(state);
             if (nextId) travelToNode(nextId, state, false);
-            scheduleTourAdvance(state);
+            if (state.tourActive && !state.trailChoicePending) scheduleTourAdvance(state);
         }, TOUR_DWELL_MS);
     }
 
@@ -2079,8 +2201,9 @@
     }
 
     function renderTrailPlaylist(node, state) {
-        if (!Array.isArray(node.trail_nodes) || !node.trail_nodes.length) return "";
-        const items = node.trail_nodes
+        const trailNodes = getTrailNodeIds(node, state);
+        if (!trailNodes.length) return "";
+        const items = trailNodes
             .map((id, index) => {
                 const target = state.allNodes.find((candidate) => candidate.id === id);
                 if (!target) return "";
@@ -2111,10 +2234,14 @@
         panelEl.querySelectorAll("[data-trail-jump]").forEach((button) => {
             button.addEventListener("click", () => {
                 const id = button.getAttribute("data-trail-jump");
+                const trailNodes = getTrailNodeIds(state.allNodes.find((node) => node.id === state.focusId), state);
+                const trailNode = state.allNodes.find((node) => node.id === state.focusId);
                 state.activeTrail = {
                     trailId: state.focusId,
-                    nodes: [...(state.allNodes.find((node) => node.id === state.focusId)?.trail_nodes || [])],
-                    index: 0
+                    nodes: trailNodes,
+                    index: Math.max(0, trailNodes.indexOf(id) + 1),
+                    branches: getTrailBranches(trailNode, state),
+                    branchChoices: {}
                 };
                 travelToNode(id, state, true);
             });
@@ -2166,23 +2293,31 @@
 
         if (target) {
             target.classList.add("xana-fragment-highlight");
+            target.setAttribute("data-fragment-label", `Fragment ${pending.fragmentId}`);
             target.scrollIntoView({ block: "center", behavior: "smooth" });
+            const note = buildFragmentNote(pending, state, "Highlighted fragment");
+            target.insertAdjacentElement("beforebegin", note);
             state.pendingFragmentHighlight = null;
             return;
         }
 
+        const note = buildFragmentNote(pending, state, "Fragment address");
+        const content = panelEl.querySelector(".xana-node-content");
+        if (content) content.prepend(note);
+        note.scrollIntoView({ block: "center", behavior: "smooth" });
+        state.pendingFragmentHighlight = null;
+    }
+
+    function buildFragmentNote(pending, state, label) {
         const note = document.createElement("aside");
         note.className = "xana-fragment-note";
         note.setAttribute("data-tts-skip", "");
         note.setAttribute("aria-hidden", "true");
         note.innerHTML = `
-            <span>Fragment address</span>
+            <span>${escapeHtml(label)}</span>
             <code>${escapeHtml(pending.fragment?.tumbler || `${state.allNodes.find((node) => node.id === pending.nodeId)?.protocol_id || pending.nodeId}#fragment/${pending.fragmentId}`)}</code>
         `;
-        const content = panelEl.querySelector(".xana-node-content");
-        if (content) content.prepend(note);
-        note.scrollIntoView({ block: "center", behavior: "smooth" });
-        state.pendingFragmentHighlight = null;
+        return note;
     }
 
     function normalizeFragmentText(value) {
@@ -2222,10 +2357,11 @@
             if (!state.tourActive) return;
             window.setTimeout(() => {
                 if (!state.tourActive) return;
-                const nextId = pickNextTourNode(state);
-                if (nextId) travelToNode(nextId, state, false);
-            }, 450);
-        };
+            const nextId = pickNextTourNode(state);
+            if (nextId) travelToNode(nextId, state, false);
+            if (!nextId && !state.trailChoicePending) stopTour(state);
+        }, 450);
+    };
         utterance.onerror = () => {
             if (state.tourActive) scheduleTourAdvance(state, true);
         };
@@ -2309,7 +2445,7 @@
         renderInterfaceTourStep();
 
         function renderInterfaceTourStep() {
-            graphEl.querySelectorAll(".xana-interface-tour, .xana-tour-spotlight").forEach((el) => el.remove());
+            document.querySelectorAll(".xana-interface-tour, .xana-tour-spotlight").forEach((el) => el.remove());
             document.querySelectorAll(".xana-tour-target").forEach((el) => el.classList.remove("xana-tour-target"));
 
             const step = steps[index];
@@ -2331,7 +2467,7 @@
                     </div>
                 </div>
             `;
-            graphEl.appendChild(overlay);
+            document.body.appendChild(overlay);
 
             overlay.querySelector("[data-tour-close]")?.addEventListener("click", closeInterfaceTour);
             overlay.querySelector("[data-tour-prev]")?.addEventListener("click", () => {
@@ -2349,7 +2485,7 @@
         }
 
         function closeInterfaceTour() {
-            graphEl.querySelectorAll(".xana-interface-tour").forEach((el) => el.remove());
+            document.querySelectorAll(".xana-interface-tour").forEach((el) => el.remove());
             document.querySelectorAll(".xana-tour-target").forEach((el) => el.classList.remove("xana-tour-target"));
         }
     }
@@ -3202,7 +3338,11 @@
                 link.addEventListener("click", (event) => {
                     event.preventDefault();
                     closeTransientUi(state, { clearSearch: true });
+                    state.pendingFragmentHighlight = fragmentHighlightFromHref(matchingNode.id, href, state);
                     travelToNode(matchingNode.id, state, true);
+                    if (matchingNode.id === state.focusId) {
+                        highlightPendingFragment(state);
+                    }
                 });
 
                 return;

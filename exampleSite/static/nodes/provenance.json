@@ -6,85 +6,85 @@
   "summary": "The visible lineage of where information came from, how it changed, who asserted it, and what evidence it depends on.",
   "relationships": [
     {
-      "id": "xananode.example:rel/link-rot-threatens-provenance-95",
+      "id": "xananode.example:rel/link-rot-threatens-provenance-99",
       "type": "threatens",
       "source": "xananode.example:observation/link-rot",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-preserves-provenance-115",
+      "id": "xananode.example:rel/xananode-preserves-provenance-119",
       "type": "preserves",
       "source": "xananode.example:concept/xananode",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/unlabeled-hyperlink-threatens-provenance-118",
+      "id": "xananode.example:rel/unlabeled-hyperlink-threatens-provenance-122",
       "type": "threatens",
       "source": "xananode.example:concept/unlabeled-hyperlink",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/tumbler-addressing-preserves-provenance-123",
+      "id": "xananode.example:rel/tumbler-addressing-preserves-provenance-127",
       "type": "preserves",
       "source": "xananode.example:concept/tumbler-addressing",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/transclusion-preserves-provenance-127",
+      "id": "xananode.example:rel/transclusion-preserves-provenance-131",
       "type": "preserves",
       "source": "xananode.example:concept/transclusion",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-relationship-list-preserves-provenance-130",
+      "id": "xananode.example:rel/substrate-relationship-list-preserves-provenance-134",
       "type": "preserves",
       "source": "xananode.example:concept/substrate-relationship-list",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/claim-relationships-preserve-context-evidence_for-provenance-142",
+      "id": "xananode.example:rel/claim-relationships-preserve-context-evidence_for-provenance-146",
       "type": "evidence_for",
       "source": "xananode.example:claim/claim-relationships-preserve-context",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/merge-validation-requires-provenance-156",
+      "id": "xananode.example:rel/merge-validation-requires-provenance-160",
       "type": "requires",
       "source": "xananode.example:concept/merge-validation",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/merge-report-preserves-provenance-162",
+      "id": "xananode.example:rel/merge-report-preserves-provenance-166",
       "type": "preserves",
       "source": "xananode.example:concept/merge-report",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/knowledge-substrate-requires-provenance-167",
+      "id": "xananode.example:rel/knowledge-substrate-requires-provenance-171",
       "type": "requires",
       "source": "xananode.example:concept/knowledge-substrate",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/independent-moderation-requires-provenance-171",
+      "id": "xananode.example:rel/independent-moderation-requires-provenance-175",
       "type": "requires",
       "source": "xananode.example:concept/independent-moderation",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/fragment-node-preserves-provenance-173",
+      "id": "xananode.example:rel/fragment-node-preserves-provenance-177",
       "type": "preserves",
       "source": "xananode.example:concept/fragment-node",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/dispute-resolution-requires-provenance-188",
+      "id": "xananode.example:rel/dispute-resolution-requires-provenance-192",
       "type": "requires",
       "source": "xananode.example:concept/dispute-resolution",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/civilizational-memory-requires-provenance-205",
+      "id": "xananode.example:rel/civilizational-memory-requires-provenance-209",
       "type": "requires",
       "source": "xananode.example:concept/civilizational-memory",
       "direction": "incoming"

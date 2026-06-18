@@ -6,19 +6,19 @@
   "summary": "The governance model that lets each substrate decide its own trust, inclusion, review, and publication rules.",
   "relationships": [
     {
-      "id": "xananode.example:rel/moderation-model-defines-independent-moderation-152",
+      "id": "xananode.example:rel/moderation-model-defines-independent-moderation-156",
       "type": "defines",
       "target": "xananode.example:concept/independent-moderation",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-rules-requires-moderation-model-153",
+      "id": "xananode.example:rel/federation-rules-requires-moderation-model-157",
       "type": "requires",
       "source": "xananode.example:concept/federation-rules",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/moderation-model-context_for-dispute-resolution-154",
+      "id": "xananode.example:rel/moderation-model-context_for-dispute-resolution-158",
       "type": "context_for",
       "target": "xananode.example:concept/dispute-resolution",
       "direction": "outgoing"

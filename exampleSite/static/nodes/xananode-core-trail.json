@@ -36,7 +36,7 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/start-here-continues_to-xananode-core-trail-110",
+      "id": "xananode.example:rel/start-here-continues_to-xananode-core-trail-114",
       "type": "continues_to",
       "source": "xananode.example:essay/start-here",
       "direction": "incoming"

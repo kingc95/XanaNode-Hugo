@@ -6,49 +6,49 @@
   "summary": "A report that records how one substrate or tool understands another substrate, including compatibility level, supported schemas, warnings, and blocking issues.",
   "relationships": [
     {
-      "id": "xananode.example:rel/compatibility-report-requires-substrate-manifest-schema-64",
+      "id": "xananode.example:rel/compatibility-report-requires-substrate-manifest-schema-68",
       "type": "requires",
       "target": "xananode.example:schema/substrate-manifest-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/compatibility-report-schema-defines-compatibility-report-71",
+      "id": "xananode.example:rel/compatibility-report-schema-defines-compatibility-report-75",
       "type": "defines",
       "source": "xananode.example:schema/compatibility-report-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/merge-validation-uses-compatibility-report-159",
+      "id": "xananode.example:rel/merge-validation-uses-compatibility-report-163",
       "type": "uses",
       "source": "xananode.example:concept/merge-validation",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/federation-rules-requires-compatibility-report-177",
+      "id": "xananode.example:rel/federation-rules-requires-compatibility-report-181",
       "type": "requires",
       "source": "xananode.example:concept/federation-rules",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/federation-example-uses-compatibility-report-180",
+      "id": "xananode.example:rel/federation-example-uses-compatibility-report-184",
       "type": "uses",
       "source": "xananode.example:concept/federation-example",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/compatibility-report-documents-compatibility-levels-198",
+      "id": "xananode.example:rel/compatibility-report-documents-compatibility-levels-202",
       "type": "documents",
       "target": "xananode.example:concept/compatibility-levels",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/merge-validation-requires-compatibility-report-199",
+      "id": "xananode.example:rel/merge-validation-requires-compatibility-report-203",
       "type": "requires",
       "source": "xananode.example:concept/merge-validation",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/compatibility-levels-uses-compatibility-report-200",
+      "id": "xananode.example:rel/compatibility-levels-uses-compatibility-report-204",
       "type": "uses",
       "source": "xananode.example:concept/compatibility-levels",
       "direction": "incoming"
