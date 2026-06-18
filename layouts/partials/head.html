@@ -49,6 +49,7 @@
 -}}
 {{- $themeConfig := dict
   "brand" $brandConfig
+  "homeNode" (index $xanaParams "homeNode" | default "start-here")
   "searchPrompts" (index $xanaParams "searchPrompts" | default slice)
 -}}
 <script>

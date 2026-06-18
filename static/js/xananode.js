@@ -100,6 +100,7 @@
             : [];
 
         return {
+            homeNode: String(raw.homeNode || "start-here").trim() || "start-here",
             brand: {
                 name: String(brand.name || "XanaNode"),
                 tagline: String(brand.tagline || "Relationships preserve knowledge"),
@@ -111,6 +112,13 @@
             },
             searchPrompts: prompts
         };
+    }
+
+    function resolveHomeNodeId(allNodes, nodeIds = new Set(allNodes.map((node) => node.id))) {
+        const configured = THEME_CONFIG.homeNode;
+        if (configured && nodeIds.has(configured)) return configured;
+        if (nodeIds.has("start-here")) return "start-here";
+        return allNodes[0]?.id || "";
     }
 
     // Fallback valid types — overridden at runtime by /schemas/xananode-node-types.json
@@ -359,13 +367,15 @@
                     : null
         );
 
-        // Use the requested node if resolved; fall back to start-here only when
+        const homeNodeId = resolveHomeNodeId(allNodes, nodeIds);
+
+        // Use the requested node if resolved; fall back to the configured home only when
         // there is genuinely no URL node (e.g. landing on the bare home page).
         let focusId = requestedNode
             ? requestedNode
             : rawRequested
-                ? (nodeIds.has(rawRequested) ? rawRequested : "start-here")
-                : "start-here";
+                ? (nodeIds.has(rawRequested) ? rawRequested : homeNodeId)
+                : homeNodeId;
 
         if (!nodeIds.has(focusId)) {
             focusId = allNodes[0]?.id || "";
@@ -1058,9 +1068,7 @@
 
         const homeBtn = (graphEl.closest(".xana-app") || document).querySelector("[data-home-btn]");
         homeBtn?.addEventListener("click", () => {
-            const homeId = state.allNodes.some((n) => n.id === "start-here")
-                ? "start-here"
-                : state.allNodes[0]?.id;
+            const homeId = resolveHomeNodeId(state.allNodes, state.nodeIds);
             if (homeId) travelToNode(homeId, state, true);
         });
 

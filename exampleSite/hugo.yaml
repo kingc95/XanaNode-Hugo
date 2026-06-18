@@ -21,6 +21,7 @@ params:
     plausibleSrc: "https://plausible.io/js/script.js"
   xananode:
     namespace: "xananode.example"
+    homeNode: "start-here"
     brand:
       name: "XanaNode"
       tagline: "Relationships preserve knowledge"
