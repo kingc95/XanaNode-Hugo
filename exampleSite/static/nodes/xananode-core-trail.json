@@ -4,6 +4,22 @@
   "type": "trail",
   "importance": 5,
   "summary": "A curated path through the core concepts that define XanaNode.",
+  "trail_nodes": [
+    "xananode.example:essay/start-here",
+    "xananode.example:concept/xananode",
+    "xananode.example:concept/knowledge-substrate",
+    "xananode.example:concept/typed-relationships",
+    "xananode.example:concept/provenance",
+    "xananode.example:concept/transclusion",
+    "xananode.example:concept/tumbler-addressing",
+    "xananode.example:concept/namespacing",
+    "xananode.example:concept/schema-extension",
+    "xananode.example:concept/protocol-artifacts",
+    "xananode.example:concept/merge-validation",
+    "xananode.example:concept/compatibility-levels",
+    "xananode.example:concept/federated-knowledge-substrates",
+    "xananode.example:concept/civilizational-memory"
+  ],
   "relationships": [
     {
       "id": "xananode.example:rel/xananode-core-trail-starts_with-start-here-6",

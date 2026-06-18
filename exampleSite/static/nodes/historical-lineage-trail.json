@@ -4,6 +4,17 @@
   "type": "trail",
   "importance": 4,
   "summary": "A curated path through Bush, Engelbart, Nelson, and XanaNode.",
+  "trail_nodes": [
+    "xananode.example:person/vannevar-bush",
+    "xananode.example:source/as-we-may-think",
+    "xananode.example:project/memex",
+    "xananode.example:person/douglas-engelbart",
+    "xananode.example:project/nls",
+    "xananode.example:person/ted-nelson",
+    "xananode.example:project/project-xanadu",
+    "xananode.example:concept/transclusion",
+    "xananode.example:concept/xananode"
+  ],
   "relationships": [
     {
       "id": "xananode.example:rel/historical-lineage-trail-starts_with-vannevar-bush-17",

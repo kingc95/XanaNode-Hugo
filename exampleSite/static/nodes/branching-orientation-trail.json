@@ -4,6 +4,42 @@
   "type": "trail",
   "importance": 5,
   "summary": "A choose-your-path trail used to test mobile-friendly branch choices in guided tours.",
+  "trail_nodes": [
+    "xananode.example:essay/start-here",
+    "xananode.example:concept/xananode"
+  ],
+  "trail_branches": [
+    {
+      "after": "xananode",
+      "prompt": "Which path do you want to follow next?",
+      "choices": [
+        {
+          "label": "Historical lineage",
+          "summary": "Bush, Engelbart, Nelson, Xanadu, and the ideas XanaNode extends.",
+          "nodes": [
+            "xananode.example:person/vannevar-bush",
+            "xananode.example:source/as-we-may-think",
+            "xananode.example:person/douglas-engelbart",
+            "xananode.example:project/nls",
+            "xananode.example:person/ted-nelson",
+            "xananode.example:project/project-xanadu",
+            "xananode.example:concept/transclusion"
+          ]
+        },
+        {
+          "label": "Protocol implementation",
+          "summary": "The active XanaNode repositories in dependency order.",
+          "nodes": [
+            "xananode.example:source/xananode-protocol-repo",
+            "xananode.example:source/xananode-core-sdk-repo",
+            "xananode.example:source/xananode-hugo-repo",
+            "xananode.example:source/xananode-workspace-repo",
+            "xananode.example:source/xananode-studio-repo"
+          ]
+        }
+      ]
+    }
+  ],
   "relationships": [
     {
       "id": "xananode.example:rel/branching-orientation-trail-starts_with-start-here-21",

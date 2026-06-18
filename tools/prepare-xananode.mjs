@@ -979,6 +979,14 @@ for (const edge of protocolEdges) {
 
 const protocolNodes = [...nodes.values()].map((node) => {
   const { data } = node;
+  const protocolTrailNodes = asArray(data.nodes).map((id) => nodes.get(id)?.protocolId || id);
+  const protocolTrailBranches = asArray(data.branches).map((branch) => ({
+    ...branch,
+    choices: asArray(branch?.choices).map((choice) => ({
+      ...choice,
+      nodes: asArray(choice?.nodes).map((id) => nodes.get(id)?.protocolId || id)
+    }))
+  }));
   return {
     id: node.protocolId,
     title: data.title || node.id,
@@ -994,6 +1002,8 @@ const protocolNodes = [...nodes.values()].map((node) => {
     ...(data.confidence ? { confidence: data.confidence } : {}),
     ...(data.primary_media ? { primary_media: nodes.get(data.primary_media)?.protocolId || data.primary_media } : {}),
     ...(data.source_node ? { source_node: nodes.get(data.source_node)?.protocolId || data.source_node } : {}),
+    ...(protocolTrailNodes.length ? { trail_nodes: protocolTrailNodes } : {}),
+    ...(protocolTrailBranches.length ? { trail_branches: protocolTrailBranches } : {}),
     ...(data.fragment_id ? { fragment_id: data.fragment_id } : {}),
     ...(data.tumbler ? { tumbler: data.tumbler } : {}),
     ...(data.selector ? { selector: data.selector } : {}),

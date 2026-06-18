@@ -4,6 +4,13 @@
   "type": "trail",
   "importance": 5,
   "summary": "A curated path through the XanaNode repositories in dependency order: Protocol, Core SDK, Hugo, Workspace, and Studio.",
+  "trail_nodes": [
+    "xananode.example:source/xananode-protocol-repo",
+    "xananode.example:source/xananode-core-sdk-repo",
+    "xananode.example:source/xananode-hugo-repo",
+    "xananode.example:source/xananode-workspace-repo",
+    "xananode.example:source/xananode-studio-repo"
+  ],
   "relationships": [
     {
       "id": "xananode.example:rel/xananode-implementation-stack-trail-starts_with-xananode-protocol-repo-1",

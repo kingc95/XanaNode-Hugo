@@ -373,14 +373,14 @@
 
         const savedTypes = loadSetting(STORAGE_KEYS.enabledTypes, null);
         const savedMediaTypes = loadSetting(STORAGE_KEYS.enabledMediaTypes, null);
-        const savedDepth = loadSetting(STORAGE_KEYS.depth, 2);
+        const savedDepth = clampNumber(loadSetting(STORAGE_KEYS.depth, 2), 1, 4, 2);
         const displaySettings = loadDisplaySettings();
         applyDisplaySettings(displaySettings);
 
         const state = {
             focusId,
             previousFocusId: null,
-            depth: Number(savedDepth) || 2,
+            depth: savedDepth,
             enabledTypes: savedTypes ? new Set(savedTypes) : new Set(DEFAULT_TYPES),
             enabledMediaTypes: savedMediaTypes ? new Set(savedMediaTypes) : new Set(DEFAULT_MEDIA_TYPES),
             searchQuery: loadSetting(STORAGE_KEYS.searchQuery, ""),
@@ -590,7 +590,6 @@
                     <button data-depth="2" ${dact(2)}>Mid</button>
                     <button data-depth="3" ${dact(3)}>Deep</button>
                     <button data-depth="4" ${dact(4)}>Far</button>
-                    <button data-depth="5" ${dact(5)}>All</button>
                 </div>
             </div>
 
@@ -1512,34 +1511,12 @@
             1: { minWeight: 5, maxFirst: 6, maxSecond: 0, maxThird: 0 },
             2: { minWeight: 4, maxFirst: 9, maxSecond: 8, maxThird: 0 },
             3: { minWeight: 3, maxFirst: 12, maxSecond: 14, maxThird: 8 },
-            4: { minWeight: 2, maxFirst: 18, maxSecond: 24, maxThird: 20, maxFourth: 16 },
-            5: { minWeight: 1, global: true }
+            4: { minWeight: 2, maxFirst: 18, maxSecond: 24, maxThird: 20, maxFourth: 16 }
         };
 
         const settings = settingsByDepth[maxDepth] || settingsByDepth[2];
         const distances = {};
         const visibleIds = new Set();
-
-        if (settings.global) {
-            allNodes.forEach((node) => {
-                visibleIds.add(node.id);
-                distances[node.id] = node.id === focusId ? 0 : 4;
-            });
-            const globalEdges = dedupeEdges(allEdges)
-                .map((edge) => ({
-                    ...edge,
-                    weight: Number(edge.weight || 1),
-                    score: scoreEdge(edge, allNodes, focusId)
-                }))
-                .filter((edge) => visibleIds.has(edge.source) && visibleIds.has(edge.target))
-                .sort((a, b) => b.score - a.score);
-
-            return {
-                nodes: allNodes,
-                edges: globalEdges,
-                distances
-            };
-        }
 
         if (focusId) {
             visibleIds.add(focusId);
@@ -1669,7 +1646,7 @@
             edges = edges.filter((edge) => edge.source === focusId || edge.target === focusId);
         }
 
-        edges = edges.slice(0, settings.maxFirst + settings.maxSecond + settings.maxThird);
+        edges = edges.slice(0, settings.maxFirst + settings.maxSecond + settings.maxThird + (settings.maxFourth || 0));
 
         return { nodes, edges, distances };
     }
@@ -2429,13 +2406,15 @@
 
             ${(node.youtube_url || node.primary_media_node?.youtube_url) ? renderYouTubeEmbed(node.youtube_url || node.primary_media_node?.youtube_url, node.primary_media_node?.title || "Watch on YouTube") : ""}
 
+            ${node.type === "trail" ? renderTrailPlaylist(node, state) : ""}
+
             ${node.html || node.content ? `<div class="xana-node-content">${node.html || escapeHtml(node.content)}</div>` : ""}
 
             ${renderSourceInfo(node)}
 
             ${renderProtocolFooter(node)}
 
-            ${renderTrailPlaylist(node, state)}
+            ${node.type === "trail" ? "" : renderTrailPlaylist(node, state)}
 
             <details class="xana-connections" ${loadSetting(STORAGE_KEYS.connectionsOpen, false) ? "open" : ""}>
                 <summary class="xana-connections-summary">
@@ -2480,7 +2459,7 @@
     }
 
     function renderTrailPlaylist(node, state) {
-        const trailNodes = getTrailNodeIds(node, state);
+        const trailNodes = getTrailPlaylistNodeIds(node, state);
         if (!trailNodes.length) return "";
         const items = trailNodes
             .map((id, index) => {
@@ -2507,6 +2486,23 @@
                 <div class="xana-trail-playlist-items">${items}</div>
             </section>
         `;
+    }
+
+    function getTrailPlaylistNodeIds(node, state) {
+        const ids = [];
+        const add = (id) => {
+            if (!id || !state.nodeIds.has(id) || ids.includes(id)) return;
+            ids.push(id);
+        };
+
+        getTrailNodeIds(node, state).forEach(add);
+        getTrailBranches(node, state).forEach((branch) => {
+            branch.choices.forEach((choice) => {
+                choice.nodes.forEach(add);
+            });
+        });
+
+        return ids;
     }
 
     function bindTrailPlaylist(state) {

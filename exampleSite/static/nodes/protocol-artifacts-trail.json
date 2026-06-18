@@ -4,6 +4,22 @@
   "type": "trail",
   "importance": 5,
   "summary": "A curated path through the concrete JSON files, reports, registries, and governance documents that make a XanaNode substrate interoperable.",
+  "trail_nodes": [
+    "xananode.example:concept/protocol-artifacts",
+    "xananode.example:concept/substrate-manifest",
+    "xananode.example:concept/substrate-node-record",
+    "xananode.example:concept/substrate-relationship-list",
+    "xananode.example:concept/compatibility-levels",
+    "xananode.example:concept/compatibility-report",
+    "xananode.example:concept/merge-report",
+    "xananode.example:concept/namespace-registry",
+    "xananode.example:concept/known-implementations-registry",
+    "xananode.example:concept/review-suggestions",
+    "xananode.example:concept/canonical-type-policy",
+    "xananode.example:concept/custom-extension-substrate",
+    "xananode.example:concept/federation-example",
+    "xananode.example:concept/federation-rules"
+  ],
   "relationships": [
     {
       "id": "xananode.example:rel/protocol-artifacts-trail-starts_with-protocol-artifacts-11",
