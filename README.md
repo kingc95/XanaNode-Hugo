@@ -37,7 +37,7 @@ themes/xananode-hugo/
   layouts/                    Hugo templates and JSON export
   static/js/xananode.js       Cytoscape-powered graph viewer
   static/schemas/             Bundled XanaNode schemas and registries
-  tools/prepare-xananode.mjs  Validator, protocol artifact generator, fragment generator, suggestion scanner
+  tools/prepare-xananode.mjs  Hugo adapter that prepares Core-validated artifacts
   vendor/xananode-core/       Core SDK submodule used for protocol validation
   exampleSite/                Self-hosting example substrate
   package.json                Validation/build scripts for the example
@@ -46,6 +46,8 @@ themes/xananode-hugo/
 ## Protocol Alignment
 
 The build tool validates generated substrate artifacts with `@xananode/core`. It also copies the latest protocol schemas from the Core SDK submodule into the example site's static output so the published Hugo site and the machine-readable artifacts stay aligned.
+
+`tools/prepare-xananode.mjs` intentionally remains in this repository because it is Hugo-specific glue. It reads Hugo Markdown/front matter conventions, resolves Hugo shortcodes, writes files into Hugo's `data/` and `static/` folders, and prepares the viewer feed used by the theme. Protocol rules should live in Core; renderer concerns should stay here. If this script needs a protocol rule that Core does not expose, that rule belongs upstream in Core rather than being reimplemented permanently in Hugo.
 
 Current generated protocol files include:
 
@@ -209,6 +211,56 @@ Add scripts to your site's `package.json`:
 ```
 
 Then create content nodes under `content/`.
+
+## White-Labeling The Example
+
+The example site is meant to teach the model. For a real project, copy its
+configuration as a starting point, then replace the XanaNode example identity in
+your site's `hugo.yaml`.
+
+The main knobs live under `params.xananode`:
+
+```yaml
+params:
+  description: "Your public site description for search engines and previews."
+  author: "Your team or organization"
+  tagline: "Your site tagline"
+  image: "your-social-card.png"
+  analytics:
+    gtag: "G-XXXXXXXXXX"
+    plausibleDomain: "example.org"
+  xananode:
+    namespace: "example.org"
+    homeNode: "welcome"
+    brand:
+      name: "Your Project"
+      tagline: "Your relationship-first knowledge base"
+      icon: "your-icon.svg"
+      homeLabel: "Go to the project home node"
+      attributionLabel: "Your Project"
+      attributionText: "example.org"
+      attributionUrl: "https://example.org"
+    searchPrompts:
+      - "explore the project archive"
+      - "trace a claim to its source"
+      - "follow a trail"
+```
+
+`homeNode` is the stable node id used when a visitor opens the bare site URL or
+clicks the brand/home button. If it is missing or points to a node that does not
+exist, the viewer falls back to `start-here`, then to the first available node.
+
+Keep `namespace` stable once published. It becomes part of protocol ids,
+fragment addresses, generated node records, and federation references.
+
+White-label the content too:
+
+- Replace or remove the example nodes under `content/`.
+- Keep any example node only if it is genuinely part of your substrate.
+- Replace `xananode-icon.svg`, social images, and brand copy.
+- Update `params.keywords`, analytics settings, and `baseURL`.
+- Choose a default visual mode from the in-browser settings; reader choices are
+  stored locally per browser.
 
 ## Static-Site Rule
 

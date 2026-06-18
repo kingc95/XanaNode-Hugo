@@ -6,31 +6,31 @@
   "summary": "Hypertext theorist and founder of Project Xanadu, associated with transclusion, visible interconnection, and nonsequential writing.",
   "relationships": [
     {
-      "id": "xananode.example:rel/historical-lineage-trail-continues_to-ted-nelson-14",
+      "id": "xananode.example:rel/historical-lineage-trail-continues_to-ted-nelson-19",
       "type": "continues_to",
       "source": "xananode.example:trail/historical-lineage-trail",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/ted-nelson-created-project-xanadu-68",
+      "id": "xananode.example:rel/ted-nelson-created-project-xanadu-91",
       "type": "created",
       "target": "xananode.example:project/project-xanadu",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/ted-nelson-introduced-transclusion-69",
+      "id": "xananode.example:rel/ted-nelson-introduced-transclusion-92",
       "type": "introduced",
       "target": "xananode.example:concept/transclusion",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/ted-nelson-authored-xanadu-document-interconnection-70",
+      "id": "xananode.example:rel/ted-nelson-authored-xanadu-document-interconnection-93",
       "type": "authored",
       "target": "xananode.example:source/xanadu-document-interconnection",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/ted-nelson-influenced-xananode-71",
+      "id": "xananode.example:rel/ted-nelson-influenced-xananode-94",
       "type": "influenced",
       "target": "xananode.example:concept/xananode",
       "direction": "outgoing"

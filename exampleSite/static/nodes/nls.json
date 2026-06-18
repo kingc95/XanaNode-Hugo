@@ -6,25 +6,25 @@
   "summary": "Douglas Engelbart's oN-Line System, an early interactive computing environment for augmenting human intellect.",
   "relationships": [
     {
-      "id": "xananode.example:rel/mother-of-all-demos-documents-nls-24",
+      "id": "xananode.example:rel/mother-of-all-demos-documents-nls-47",
       "type": "documents",
       "source": "xananode.example:source/mother-of-all-demos",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/mother-of-all-demos-demonstrates-nls-61",
+      "id": "xananode.example:rel/mother-of-all-demos-demonstrates-nls-84",
       "type": "demonstrates",
       "source": "xananode.example:source/mother-of-all-demos",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/nls-anticipated-xananode-62",
+      "id": "xananode.example:rel/nls-anticipated-xananode-85",
       "type": "anticipated",
       "target": "xananode.example:concept/xananode",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/douglas-engelbart-created-nls-72",
+      "id": "xananode.example:rel/douglas-engelbart-created-nls-95",
       "type": "created",
       "source": "xananode.example:person/douglas-engelbart",
       "direction": "incoming"

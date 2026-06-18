@@ -6,13 +6,13 @@
   "summary": "Publishing files that can be hosted without a dynamic application server.",
   "relationships": [
     {
-      "id": "xananode.example:rel/xananode-hugo-theme-enables-static-publishing-16",
+      "id": "xananode.example:rel/xananode-hugo-theme-enables-static-publishing-25",
       "type": "enables",
       "source": "xananode.example:project/xananode-hugo-theme",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/hugo-implements-static-publishing-17",
+      "id": "xananode.example:rel/hugo-implements-static-publishing-26",
       "type": "implements",
       "source": "xananode.example:technology/hugo",
       "direction": "incoming"

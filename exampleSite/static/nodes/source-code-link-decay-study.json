@@ -8,19 +8,19 @@
   "rights_status": "open-access",
   "relationships": [
     {
-      "id": "xananode.example:rel/source-code-link-decay-study-documents-link-rot-22",
+      "id": "xananode.example:rel/source-code-link-decay-study-documents-link-rot-45",
       "type": "documents",
       "target": "xananode.example:observation/link-rot",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/source-code-link-decay-study-supports-claim-relationships-preserve-context-23",
+      "id": "xananode.example:rel/source-code-link-decay-study-supports-claim-relationships-preserve-context-46",
       "type": "supports",
       "target": "xananode.example:claim/claim-relationships-preserve-context",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/source-code-link-decay-study-supports-link-rot-77",
+      "id": "xananode.example:rel/source-code-link-decay-study-supports-link-rot-100",
       "type": "supports",
       "target": "xananode.example:observation/link-rot",
       "direction": "outgoing"

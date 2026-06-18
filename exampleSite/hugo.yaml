@@ -7,6 +7,35 @@ params:
   description: "A self-hosting example knowledge substrate that explains XanaNode using XanaNode."
   author: "XanaNode Contributors"
   tagline: "A relationship-first static knowledge substrate."
+  keywords:
+    - XanaNode
+    - knowledge graph
+    - provenance
+    - static publishing
+    - semantic web
+  themeColor: "#55d6be"
+  image: "xananode-icon.svg"
+  analytics:
+    gtag: ""
+    plausibleDomain: ""
+    plausibleSrc: "https://plausible.io/js/script.js"
+  xananode:
+    namespace: "xananode.example"
+    homeNode: "start-here"
+    brand:
+      name: "XanaNode"
+      tagline: "Relationships preserve knowledge"
+      icon: "xananode-icon.svg"
+      attributionLabel: "XanaNode"
+      attributionText: "xananode.com"
+      attributionUrl: "https://xananode.com"
+    searchPrompts:
+      - "explore the knowledge substrate"
+      - "trace an idea across sources"
+      - "follow a claim to evidence"
+      - "compare connected nodes"
+      - "search for provenance"
+      - "map a trail through context"
 
 markup:
   goldmark:
@@ -17,3 +46,17 @@ outputs:
   home:
     - HTML
     - JSON
+
+permalinks:
+  page:
+    claims: "/claim/:slug/"
+    concepts: "/concept/:slug/"
+    essays: "/essay/:slug/"
+    media: "/media/:slug/"
+    observations: "/observation/:slug/"
+    people: "/person/:slug/"
+    projects: "/project/:slug/"
+    schemas: "/schema/:slug/"
+    sources: "/source/:slug/"
+    technologies: "/technology/:slug/"
+    trails: "/trail/:slug/"

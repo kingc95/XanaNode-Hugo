@@ -1,0 +1,41 @@
+{
+  "id": "xananode.example:source/xananode-protocol-repo",
+  "title": "XanaNode Protocol Repository",
+  "type": "source",
+  "importance": 5,
+  "summary": "The canonical XanaNode protocol repository containing schemas, registries, examples, specs, governance, and proposals.",
+  "source_url": "https://github.com/kingc95/xananode",
+  "rights_status": "open-source",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-implementation-stack-trail-starts_with-xananode-protocol-repo-1",
+      "type": "starts_with",
+      "source": "xananode.example:trail/xananode-implementation-stack-trail",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/branching-orientation-trail-continues_to-xananode-protocol-repo-24",
+      "type": "continues_to",
+      "source": "xananode.example:trail/branching-orientation-trail",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-protocol-repo-defines-xananode-33",
+      "type": "defines",
+      "target": "xananode.example:concept/xananode",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-protocol-repo-defines-xananode-core-schema-34",
+      "type": "defines",
+      "target": "xananode.example:schema/xananode-core-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-protocol-repo-documents-protocol-artifacts-35",
+      "type": "documents",
+      "target": "xananode.example:concept/protocol-artifacts",
+      "direction": "outgoing"
+    }
+  ]
+}

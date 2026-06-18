@@ -16,7 +16,9 @@
     // Tour timers — managed outside state so they survive renderVisibleGraph rebuilds.
     let _tourTimer = null;
     let _tourScrollInterval = null;
+    let _aliveTimer = null;
     let TOUR_DWELL_MS = 9000;     // ms between node hops — updated by speed input
+    const NARRATION_AFTER_END_PAUSE_MS = 1200;
 
     const STORAGE_KEYS = {
         panelWidth: "xananode.panelWidth",
@@ -27,8 +29,45 @@
         enabledMediaTypes: "xananode.enabledMediaTypes",
         depth: "xananode.depth",
         connectionsOpen: "xananode.connectionsOpen",
-        tourSpeed: "xananode.tourSpeed"
+        tourSpeed: "xananode.tourSpeed",
+        tourMode: "xananode.tourMode",
+        colorTheme: "xananode.colorTheme",
+        uiDensity: "xananode.uiDensity",
+        readerFontScale: "xananode.readerFontScale",
+        graphAtmosphere: "xananode.graphAtmosphere",
+        ttsNarrator: "xananode.ttsNarrator",
+        ttsVoice: "xananode.ttsVoice",
+        ttsRate: "xananode.ttsRate",
+        ttsPitch: "xananode.ttsPitch",
+        ttsDetail: "xananode.ttsDetail"
     };
+
+    const DISPLAY_DEFAULTS = Object.freeze({
+        colorTheme: "dark",
+        uiDensity: "comfortable",
+        readerFontScale: 100,
+        graphAtmosphere: "alive",
+        tourMode: "narration",
+        ttsNarrator: true,
+        ttsVoice: "",
+        ttsRate: 0.95,
+        ttsPitch: 1,
+        ttsDetail: "full"
+    });
+
+    const DEFAULT_SEARCH_PROMPTS = [
+        "explore the knowledge substrate",
+        "trace an idea across sources",
+        "follow a claim to evidence",
+        "compare connected nodes",
+        "search for provenance",
+        "map a trail through context"
+    ];
+
+    const THEME_CONFIG = normalizeThemeConfig(window.XanaNodeTheme);
+    const SEARCH_PROMPTS = THEME_CONFIG.searchPrompts.length
+        ? THEME_CONFIG.searchPrompts
+        : DEFAULT_SEARCH_PROMPTS;
 
     const DEFAULT_TYPES = [
         "essay",
@@ -51,6 +90,37 @@
         "revision",
         "schema"
     ];
+
+    function normalizeThemeConfig(config) {
+        const raw = config && typeof config === "object" ? config : {};
+        const brand = raw.brand && typeof raw.brand === "object" ? raw.brand : {};
+        const prompts = Array.isArray(raw.searchPrompts)
+            ? raw.searchPrompts
+                .map((prompt) => String(prompt || "").trim())
+                .filter(Boolean)
+            : [];
+
+        return {
+            homeNode: String(raw.homeNode || "start-here").trim() || "start-here",
+            brand: {
+                name: String(brand.name || "XanaNode"),
+                tagline: String(brand.tagline || "Relationships preserve knowledge"),
+                icon: String(brand.icon || "/xananode-icon.svg"),
+                homeLabel: String(brand.homeLabel || "Go to home node"),
+                attributionLabel: String(brand.attributionLabel || brand.name || "XanaNode"),
+                attributionText: String(brand.attributionText || "xananode.com"),
+                attributionUrl: String(brand.attributionUrl || "https://xananode.com")
+            },
+            searchPrompts: prompts
+        };
+    }
+
+    function resolveHomeNodeId(allNodes, nodeIds = new Set(allNodes.map((node) => node.id))) {
+        const configured = THEME_CONFIG.homeNode;
+        if (configured && nodeIds.has(configured)) return configured;
+        if (nodeIds.has("start-here")) return "start-here";
+        return allNodes[0]?.id || "";
+    }
 
     // Fallback valid types — overridden at runtime by /schemas/xananode-node-types.json
     // Note: "artifact" is intentionally absent — existing artifact nodes will be flagged.
@@ -203,7 +273,7 @@
             if (relSchema?.relationship_types) {
                 VALID_RELATIONSHIP_TYPES = new Set(relSchema.relationship_types.map((t) => t.type));
             }
-            init(data, nodeSchema);
+            init(data, nodeSchema, null);
         })
         .catch((err) => {
             graphEl.innerHTML = `<p class="xana-error">${escapeHtml(err.message)}</p>`;
@@ -267,7 +337,7 @@
         `;
     }
 
-    function init(data, nodeTypesData) {
+    function init(data, nodeTypesData, fragmentsData) {
         const allNodes = Array.isArray(data.nodes) ? data.nodes : [];
         const nodeTypeColors = buildTypeColorMap(nodeTypesData);
         const nodeIds = new Set(allNodes.map((node) => node.id));
@@ -282,10 +352,13 @@
 
         hydrateMedia(allNodes);
 
+        window.__xanaAllNodes = allNodes;
         window.__xanaAllEdges = allEdges;
 
-        // Resolve the requested node from the URL, handling doubled /node/node/ prefixes.
-        const rawRequested = nodeIdFromUrl();
+        // Resolve the requested node from the URL. The current public route is
+        // type-aware (for example /concept/knowledge-substrate/), with support
+        // for old /node/<id> links as a compatibility alias.
+        const rawRequested = nodeIdFromUrl(allNodes);
         // Try the raw ID, then strip a leading "node/" segment in case of a doubled prefix.
         const requestedNode = rawRequested && (
             nodeIds.has(rawRequested)
@@ -295,13 +368,15 @@
                     : null
         );
 
-        // Use the requested node if resolved; fall back to start-here only when
+        const homeNodeId = resolveHomeNodeId(allNodes, nodeIds);
+
+        // Use the requested node if resolved; fall back to the configured home only when
         // there is genuinely no URL node (e.g. landing on the bare home page).
         let focusId = requestedNode
             ? requestedNode
             : rawRequested
-                ? (nodeIds.has(rawRequested) ? rawRequested : "start-here")
-                : "start-here";
+                ? (nodeIds.has(rawRequested) ? rawRequested : homeNodeId)
+                : homeNodeId;
 
         if (!nodeIds.has(focusId)) {
             focusId = allNodes[0]?.id || "";
@@ -309,12 +384,14 @@
 
         const savedTypes = loadSetting(STORAGE_KEYS.enabledTypes, null);
         const savedMediaTypes = loadSetting(STORAGE_KEYS.enabledMediaTypes, null);
-        const savedDepth = loadSetting(STORAGE_KEYS.depth, 2);
+        const savedDepth = clampNumber(loadSetting(STORAGE_KEYS.depth, 2), 1, 4, 2);
+        const displaySettings = loadDisplaySettings();
+        applyDisplaySettings(displaySettings);
 
         const state = {
             focusId,
             previousFocusId: null,
-            depth: Number(savedDepth) || 2,
+            depth: savedDepth,
             enabledTypes: savedTypes ? new Set(savedTypes) : new Set(DEFAULT_TYPES),
             enabledMediaTypes: savedMediaTypes ? new Set(savedMediaTypes) : new Set(DEFAULT_MEDIA_TYPES),
             searchQuery: loadSetting(STORAGE_KEYS.searchQuery, ""),
@@ -334,12 +411,38 @@
             },
             tourActive: false,
             tourIndex: 0,
+            tourVisited: new Set(),
+            tourRecent: [],
+            activeTrail: null,
+            trailChoicePending: false,
             cy: null,
             allNodes,
             nodeIds,
             allEdges,
-            allEdgesRaw
+            allEdgesRaw,
+            fragmentsData: fragmentsData || {},
+            pendingFragmentHighlight: null,
+            displaySettings
         };
+
+        if (requestedNode && window.location.hash) {
+            state.pendingFragmentHighlight = fragmentHighlightFromHash(requestedNode.id, state);
+        }
+
+        if (rawRequested && !requestedNode) {
+            const protocolTarget = resolveProtocolAddress(rawRequested, state);
+            if (protocolTarget) {
+                state.focusId = protocolTarget.nodeId;
+                state.pendingFragmentHighlight = protocolTarget.fragmentId
+                    ? {
+                        nodeId: protocolTarget.nodeId,
+                        fragmentId: protocolTarget.fragmentId,
+                        fragment: protocolTarget.fragment
+                    }
+                    : null;
+                state.pathExplorer.sourceQuery = protocolTarget.nodeId;
+            }
+        }
 
         if (state.focusId) {
             updateUrl(state.focusId, true);
@@ -355,8 +458,7 @@
             minZoom: 0.15,
             maxZoom: 3,
             style: getCyStyle(nodeTypeColors),
-            layout: { name: "preset" },
-            wheelSensitivity: 0.16
+            layout: { name: "preset" }
         });
 
         state.cy = cy;
@@ -376,7 +478,19 @@
             saveSetting(STORAGE_KEYS.graphPan, cy.pan());
         }, 250));
 
+        cy.on("drag", "node", debounce((evt) => {
+            if (state.displaySettings?.graphAtmosphere !== "alive") return;
+            enlivenDraggedNode(evt.target, state, 0.48);
+        }, 40));
+
+        cy.on("free", "node", (evt) => {
+            if (state.displaySettings?.graphAtmosphere !== "alive") return;
+            enlivenDraggedNode(evt.target, state, 1);
+            startAliveMotion(state);
+        });
+
         bindControls(state);
+        startSearchVerbRotation();
         makeResizable(state);
         restorePanelWidth(state);
 
@@ -388,11 +502,20 @@
         }, 180));
 
         window.addEventListener("popstate", () => {
-            const nodeFromUrl = nodeIdFromUrl();
+            const nodeFromUrl = nodeIdFromUrl(allNodes);
+            const protocolTarget = nodeFromUrl ? resolveProtocolAddress(nodeFromUrl, state) : null;
+            const nextId = protocolTarget?.nodeId || nodeFromUrl;
 
-            if (nodeFromUrl && allNodes.some((node) => node.id === nodeFromUrl)) {
+            if (protocolTarget || (nodeFromUrl && allNodes.some((node) => node.id === nodeFromUrl))) {
                 state.previousFocusId = state.focusId;
-                state.focusId = nodeFromUrl;
+                state.focusId = nextId;
+                state.pendingFragmentHighlight = protocolTarget?.fragmentId
+                    ? {
+                        nodeId: protocolTarget.nodeId,
+                        fragmentId: protocolTarget.fragmentId,
+                        fragment: protocolTarget.fragment
+                    }
+                    : fragmentHighlightFromHash(nextId, state);
                 renderVisibleGraph(state, {
                     updateUrl: false,
                     stagedReveal: true,
@@ -419,6 +542,7 @@
         const chk = (type) => t.has(type) ? "checked" : "";
         const mchk = (type) => m.has(type) ? "checked" : "";
         const dact = (n) => d === n ? "class=\"active\"" : "";
+        const brand = THEME_CONFIG.brand;
 
         // Inject navbar into the .xana-app parent (runs once; guard against duplicates)
         const appEl = graphEl.closest(".xana-app") || graphEl.parentElement;
@@ -427,11 +551,11 @@
             nav.className = "xana-navbar";
             nav.setAttribute("aria-label", "XanaNode navigation");
             nav.innerHTML = `
-                <button class="xana-brand-home" data-home-btn aria-label="Go to home node">
-                    <img src="/xananode-icon.svg" alt="" class="xana-brand-icon" aria-hidden="true">
+                <button class="xana-brand-home" data-home-btn aria-label="${escapeHtml(brand.homeLabel)}">
+                    <img src="${escapeHtml(brand.icon)}" alt="" class="xana-brand-icon" aria-hidden="true">
                     <div class="xana-brand-text">
-                        <span class="xana-brand-name">XanaNode</span>
-                        <span class="xana-brand-tagline">Relationships preserve knowledge</span>
+                        <span class="xana-brand-name">${escapeHtml(brand.name)}</span>
+                        <span class="xana-brand-tagline">${escapeHtml(brand.tagline)}</span>
                     </div>
                 </button>
             `;
@@ -441,8 +565,8 @@
         graphEl.innerHTML = `
             <!-- Attribution: bottom-right watermark -->
             <div class="xana-attribution">
-                <button class="xana-attribution-home" data-home-jump aria-label="Go to XanaNode node">XanaNode</button>
-                &middot; powered by <a href="https://builtbybots.com" target="_blank" rel="noopener noreferrer">BuiltByBots.com</a>
+                <button class="xana-attribution-home" data-home-jump aria-label="Go to ${escapeHtml(brand.attributionLabel)} node">${escapeHtml(brand.attributionLabel)}</button>
+                &middot; <a href="${escapeHtml(brand.attributionUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(brand.attributionText)}</a>
             </div>
 
             <!-- Search portal: the primary navigation surface -->
@@ -454,9 +578,13 @@
                             type="search"
                             autocomplete="off"
                             spellcheck="false"
-                            placeholder="Explore the knowledge substrate\u2026"
+                            placeholder=""
+                            aria-label="${escapeHtml(SEARCH_PROMPTS[0])}"
                             value="${escapeHtml(state.searchQuery)}"
                         >
+                        <span class="xana-search-prompt" data-search-prompt aria-hidden="true">
+                            <span data-search-prompt-text>${escapeHtml(SEARCH_PROMPTS[0])}</span><span class="xana-search-caret"></span>
+                        </span>
                         <button
                             type="button"
                             class="xana-search-clear-btn"
@@ -472,6 +600,7 @@
                     <button data-depth="1" ${dact(1)}>Near</button>
                     <button data-depth="2" ${dact(2)}>Mid</button>
                     <button data-depth="3" ${dact(3)}>Deep</button>
+                    <button data-depth="4" ${dact(4)}>Far</button>
                 </div>
             </div>
 
@@ -487,17 +616,67 @@
                 <button class="xana-ctrl-btn" data-path-open aria-label="Path explorer" title="Compare connective path">&#x2934;</button>
                 <span class="xana-ctrl-sep"></span>
                 <button class="xana-ctrl-btn" data-tour-toggle aria-label="Guided tour" title="Guided tour">&#x25B6;</button>
-                <input
-                    type="number"
-                    class="xana-ctrl-speed"
-                    data-tour-speed
-                    min="3"
-                    max="120"
-                    step="1"
-                    value="${loadSetting(STORAGE_KEYS.tourSpeed, 9)}"
-                    aria-label="Tour dwell time in seconds"
-                    title="Seconds per node"
-                >
+                <button class="xana-ctrl-btn" data-settings-toggle aria-label="Display and narration settings" title="Settings">&#9881;</button>
+                <button class="xana-ctrl-btn" data-interface-tour aria-label="Interface tour" title="Interface tour">?</button>
+            </div>
+
+            <div class="xana-settings">
+                <div class="xana-settings-panel" hidden>
+                    <div class="xana-settings-header">
+                        <span>Display</span>
+                        <button type="button" data-settings-close aria-label="Close display settings">&#x2715;</button>
+                    </div>
+                    <div class="xana-settings-group" role="group" aria-label="Color theme">
+                        <span class="xana-settings-label">Theme</span>
+                        <button type="button" data-display-setting="colorTheme" data-value="dark">Dark</button>
+                        <button type="button" data-display-setting="colorTheme" data-value="light">Light</button>
+                        <button type="button" data-display-setting="colorTheme" data-value="classic">Classic</button>
+                    </div>
+                    <div class="xana-settings-group" role="group" aria-label="Interface density">
+                        <span class="xana-settings-label">Density</span>
+                        <button type="button" data-display-setting="uiDensity" data-value="roomy">Roomy</button>
+                        <button type="button" data-display-setting="uiDensity" data-value="comfortable">Balanced</button>
+                        <button type="button" data-display-setting="uiDensity" data-value="compact">Compact</button>
+                    </div>
+                    <label class="xana-settings-range xana-settings-range--inline">
+                        <span>Text size <output data-reader-font-output>${Number(state.displaySettings.readerFontScale || 100)}%</output></span>
+                        <input type="range" min="85" max="150" step="5" data-reader-font-scale value="${Number(state.displaySettings.readerFontScale || 100)}">
+                    </label>
+                    <div class="xana-settings-group" role="group" aria-label="Graph atmosphere">
+                        <span class="xana-settings-label">Graph</span>
+                        <button type="button" data-display-setting="graphAtmosphere" data-value="alive">Alive</button>
+                        <button type="button" data-display-setting="graphAtmosphere" data-value="still">Quiet</button>
+                        <button type="button" data-display-setting="graphAtmosphere" data-value="plain">Minimal</button>
+                    </div>
+                    <div class="xana-settings-group xana-settings-group--two" role="group" aria-label="Tour advance mode">
+                        <span class="xana-settings-label">Tour</span>
+                        <button type="button" data-display-setting="tourMode" data-value="narration">Narration</button>
+                        <button type="button" data-display-setting="tourMode" data-value="timed">Timed</button>
+                    </div>
+                    <label class="xana-settings-range" data-tour-timed-control>
+                        <span>Seconds per node</span>
+                        <input type="range" min="3" max="120" step="1" data-tour-speed value="${loadSetting(STORAGE_KEYS.tourSpeed, 9)}">
+                    </label>
+                    <div class="xana-settings-field" data-narration-control>
+                        <label for="xana-tts-voice">Voice</label>
+                        <select id="xana-tts-voice" data-tts-voice></select>
+                    </div>
+                    <div class="xana-settings-field" data-narration-control>
+                        <label for="xana-tts-detail">Read</label>
+                        <select id="xana-tts-detail" data-tts-detail>
+                            <option value="summary" ${state.displaySettings.ttsDetail === "summary" ? "selected" : ""}>Title and summary</option>
+                            <option value="full" ${state.displaySettings.ttsDetail === "full" ? "selected" : ""}>Title, summary, and content</option>
+                        </select>
+                    </div>
+                    <label class="xana-settings-range" data-narration-control>
+                        <span>Speed</span>
+                        <input type="range" min="0.65" max="1.35" step="0.05" data-tts-rate value="${Number(state.displaySettings.ttsRate || 0.95)}">
+                    </label>
+                    <label class="xana-settings-range" data-narration-control>
+                        <span>Pitch</span>
+                        <input type="range" min="0.75" max="1.35" step="0.05" data-tts-pitch value="${Number(state.displaySettings.ttsPitch || 1)}">
+                    </label>
+                </div>
             </div>
 
             <!-- Filter popover: types + media, opens above controls strip -->
@@ -544,6 +723,7 @@
             <!-- Audit meta: shown when audit is active -->
             <div class="xana-audit-meta" aria-live="polite" hidden></div>
 
+            <div class="xana-graph-atmosphere" aria-hidden="true"></div>
             <div id="xana-stage"></div>
             <div id="xana-audit-stage" hidden></div>
             <div id="xana-path-stage" hidden></div>
@@ -554,7 +734,10 @@
         const cy = state.cy;
         const searchForm = graphEl.querySelector(".xana-search-form");
         const searchInput = graphEl.querySelector("#xana-search-input");
+        const searchWrap = graphEl.querySelector(".xana-search-wrap");
         const clearSearchButton = graphEl.querySelector("[data-search-clear]");
+
+        updateSearchPromptState();
 
         searchForm?.addEventListener("submit", (event) => {
             event.preventDefault();
@@ -580,7 +763,26 @@
             });
 
             if (clearSearchButton) clearSearchButton.hidden = !query;
+            updateSearchPromptState();
         }, 180));
+
+        searchInput?.addEventListener("focus", () => {
+            if (searchInput.value.trim() || state.searchQuery.trim()) {
+                searchInput.value = "";
+                state.searchQuery = "";
+                state.searchResults = [];
+                saveSetting(STORAGE_KEYS.searchQuery, "");
+                if (clearSearchButton) clearSearchButton.hidden = true;
+                renderSearchResults(state);
+                renderVisibleGraph(state, {
+                    updateUrl: false,
+                    preserveViewport: false
+                });
+            }
+            updateSearchPromptState();
+        });
+
+        searchInput?.addEventListener("blur", updateSearchPromptState);
 
         clearSearchButton?.addEventListener("click", () => {
             searchInput.value = "";
@@ -594,7 +796,14 @@
                 preserveViewport: false
             });
             searchInput.focus();
+            updateSearchPromptState();
         });
+
+        function updateSearchPromptState() {
+            if (!searchWrap || !searchInput) return;
+            searchWrap.classList.toggle("is-focused", document.activeElement === searchInput);
+            searchWrap.classList.toggle("has-value", Boolean(searchInput.value.trim()));
+        }
 
         graphEl.querySelectorAll("[data-depth]").forEach((button) => {
             button.addEventListener("click", () => {
@@ -607,7 +816,8 @@
                 saveSetting(STORAGE_KEYS.depth, state.depth);
                 renderVisibleGraph(state, {
                     updateUrl: false,
-                    preserveViewport: false
+                    preserveViewport: false,
+                    stagedReveal: true
                 });
             });
         });
@@ -684,6 +894,127 @@
         const filterCloseBtn = graphEl.querySelector("[data-filter-close]");
         const filterPopover = graphEl.querySelector(".xana-filter-popover");
         const pathOpenButton = graphEl.querySelector("[data-path-open]");
+        const settingsToggle = graphEl.querySelector("[data-settings-toggle]");
+        const settingsPanel = graphEl.querySelector(".xana-settings-panel");
+        const settingsClose = graphEl.querySelector("[data-settings-close]");
+        const voiceSelect = graphEl.querySelector("[data-tts-voice]");
+        const detailSelect = graphEl.querySelector("[data-tts-detail]");
+        const rateInput = graphEl.querySelector("[data-tts-rate]");
+        const pitchInput = graphEl.querySelector("[data-tts-pitch]");
+        const readerFontInput = graphEl.querySelector("[data-reader-font-scale]");
+        const readerFontOutput = graphEl.querySelector("[data-reader-font-output]");
+        const interfaceTourButton = graphEl.querySelector("[data-interface-tour]");
+
+        updateDisplaySettingButtons(state);
+        populateVoiceOptions(state);
+        if ("speechSynthesis" in window) {
+            window.speechSynthesis.onvoiceschanged = () => populateVoiceOptions(state);
+        }
+
+        settingsToggle?.addEventListener("click", (event) => {
+            event.stopPropagation();
+            if (!settingsPanel) return;
+            const opening = settingsPanel.hidden;
+            settingsPanel.hidden = !opening;
+            settingsToggle.classList.toggle("active", opening);
+        });
+
+        settingsClose?.addEventListener("click", () => {
+            if (settingsPanel) settingsPanel.hidden = true;
+            settingsToggle?.classList.remove("active");
+        });
+
+        interfaceTourButton?.addEventListener("click", () => {
+            startInterfaceTour(state);
+        });
+
+        graphEl.querySelectorAll("[data-display-setting]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const key = button.getAttribute("data-display-setting");
+                const value = button.getAttribute("data-value");
+                if (!key || !value || !state.displaySettings) return;
+
+                state.displaySettings[key] = value;
+                saveSetting(STORAGE_KEYS[key], value);
+                if (key === "tourMode") {
+                    state.displaySettings.ttsNarrator = value === "narration";
+                    saveSetting(STORAGE_KEYS.ttsNarrator, state.displaySettings.ttsNarrator);
+                    const narratorToggle = graphEl.querySelector("[data-display-toggle='ttsNarrator']");
+                    if (narratorToggle) narratorToggle.checked = state.displaySettings.ttsNarrator;
+                    if (state.tourActive) {
+                        clearTourTimers();
+                        stopNarration();
+                        const narrated = value === "narration"
+                            ? narrateNode(state.allNodes.find((node) => node.id === state.focusId), state)
+                            : false;
+                        restartTourRing();
+                        if (!narrated) scheduleTourAdvance(state, true);
+                    }
+                }
+                applyDisplaySettings(state.displaySettings);
+                updateDisplaySettingButtons(state);
+                if (key === "graphAtmosphere") {
+                    refreshAliveMotion(state);
+                }
+            });
+        });
+
+        graphEl.querySelectorAll("[data-display-toggle]").forEach((input) => {
+            input.addEventListener("change", () => {
+                const key = input.getAttribute("data-display-toggle");
+                if (!key || !state.displaySettings) return;
+
+                state.displaySettings[key] = Boolean(input.checked);
+                saveSetting(STORAGE_KEYS[key], state.displaySettings[key]);
+                if (key === "ttsNarrator") {
+                    state.displaySettings.tourMode = state.displaySettings[key] ? "narration" : "timed";
+                    saveSetting(STORAGE_KEYS.tourMode, state.displaySettings.tourMode);
+                }
+                applyDisplaySettings(state.displaySettings);
+                updateDisplaySettingButtons(state);
+
+                if (key === "ttsNarrator" && !state.displaySettings[key]) {
+                    stopNarration();
+                    if (state.tourActive) scheduleTourAdvance(state, true);
+                } else if (key === "ttsNarrator" && state.tourActive) {
+                    narrateNode(state.allNodes.find((node) => node.id === state.focusId), state);
+                }
+            });
+        });
+
+        voiceSelect?.addEventListener("change", () => {
+            state.displaySettings.ttsVoice = voiceSelect.value;
+            saveSetting(STORAGE_KEYS.ttsVoice, state.displaySettings.ttsVoice);
+            if (state.tourActive && state.displaySettings.ttsNarrator) {
+                narrateNode(state.allNodes.find((node) => node.id === state.focusId), state);
+            }
+        });
+
+        detailSelect?.addEventListener("change", () => {
+            state.displaySettings.ttsDetail = detailSelect.value;
+            saveSetting(STORAGE_KEYS.ttsDetail, state.displaySettings.ttsDetail);
+            if (state.tourActive && state.displaySettings.ttsNarrator) {
+                narrateNode(state.allNodes.find((node) => node.id === state.focusId), state);
+            }
+        });
+
+        rateInput?.addEventListener("input", () => {
+            state.displaySettings.ttsRate = Number(rateInput.value) || DISPLAY_DEFAULTS.ttsRate;
+            saveSetting(STORAGE_KEYS.ttsRate, state.displaySettings.ttsRate);
+        });
+
+        pitchInput?.addEventListener("input", () => {
+            state.displaySettings.ttsPitch = Number(pitchInput.value) || DISPLAY_DEFAULTS.ttsPitch;
+            saveSetting(STORAGE_KEYS.ttsPitch, state.displaySettings.ttsPitch);
+        });
+
+        readerFontInput?.addEventListener("input", () => {
+            const scale = clampNumber(readerFontInput.value, 85, 150, DISPLAY_DEFAULTS.readerFontScale);
+            state.displaySettings.readerFontScale = scale;
+            saveSetting(STORAGE_KEYS.readerFontScale, scale);
+            if (readerFontOutput) readerFontOutput.textContent = `${scale}%`;
+            applyDisplaySettings(state.displaySettings);
+        });
 
         filterToggleBtn?.addEventListener("click", (event) => {
             event.stopPropagation();
@@ -701,6 +1032,11 @@
         });
 
         document.addEventListener("click", (event) => {
+            if (settingsPanel && !settingsPanel.hidden && !event.target.closest(".xana-settings")) {
+                settingsPanel.hidden = true;
+                settingsToggle?.classList.remove("active");
+            }
+
             if (!filterPopover || filterPopover.hidden) return;
             if (event.target.closest(".xana-filter-popover") || event.target.closest("[data-filter-toggle]")) return;
 
@@ -733,9 +1069,7 @@
 
         const homeBtn = (graphEl.closest(".xana-app") || document).querySelector("[data-home-btn]");
         homeBtn?.addEventListener("click", () => {
-            const homeId = state.allNodes.some((n) => n.id === "start-here")
-                ? "start-here"
-                : state.allNodes[0]?.id;
+            const homeId = resolveHomeNodeId(state.allNodes, state.nodeIds);
             if (homeId) travelToNode(homeId, state, true);
         });
 
@@ -759,14 +1093,13 @@
             const secs = Math.max(3, Math.min(120, Number(e.target.value) || 9));
             TOUR_DWELL_MS = secs * 1000;
             saveSetting(STORAGE_KEYS.tourSpeed, secs);
-            // If tour is running, reschedule with new timing
-            if (state.tourActive) {
+            if (state.tourActive && state.displaySettings?.tourMode === "timed") {
                 restartTourRing();
                 if (_tourTimer) {
                     window.clearTimeout(_tourTimer);
                     _tourTimer = null;
                 }
-                scheduleTourAdvance(state);
+                scheduleTourAdvance(state, true);
             }
         });
     }
@@ -916,6 +1249,7 @@
         resultsEl.querySelectorAll("[data-search-jump]").forEach((button) => {
             button.addEventListener("click", () => {
                 const id = button.getAttribute("data-search-jump");
+                clearSearchUi(state);
                 travelToNode(id, state, true);
             });
         });
@@ -942,6 +1276,77 @@
             Array.isArray(node.tags) ? node.tags.join(" ") : "",
             Array.isArray(node.aliases) ? node.aliases.join(" ") : ""
         ].filter(Boolean).join(" "));
+    }
+
+    function resolveProtocolAddress(value, state) {
+        const raw = decodeURIComponent(String(value || "").trim()).replace(/^xana:\/\//, "");
+        if (!raw) return null;
+
+        const nodes = state.allNodes || [];
+        const fragmentMatch = raw.match(/^(.*?)(?:@[^#]+)?#fragment\/([A-Za-z0-9._-]+)(?:@.+)?$/);
+        const nodeAddress = fragmentMatch ? fragmentMatch[1] : raw.replace(/@[^/#]+$/, "");
+        const fragmentId = fragmentMatch?.[2] || "";
+
+        const node = nodes.find((candidate) => {
+            return candidate.id === nodeAddress ||
+                candidate.protocol_id === nodeAddress ||
+                candidate.tumbler === nodeAddress;
+        });
+
+        if (!node) return null;
+        if (!fragmentId) return { nodeId: node.id, fragmentId: "", fragment: null };
+
+        const fragment = findFragmentRecord(node.id, fragmentId, raw, state);
+        return { nodeId: node.id, fragmentId, fragment };
+    }
+
+    function findFragmentRecord(nodeId, fragmentId, rawAddress, state) {
+        const versions = state.fragmentsData?.nodes?.[nodeId]?.versions || {};
+        for (const version of Object.values(versions)) {
+            const metadata = version?.metadata || {};
+            for (const fragment of Object.values(metadata)) {
+                if (!fragment) continue;
+                const tumblerNoVersion = String(fragment.tumbler || "").replace(/@[^#]+(?=#fragment\/)/, "").replace(/@[^@#]+$/, "");
+                const rawNoVersion = rawAddress.replace(/@[^#]+(?=#fragment\/)/, "").replace(/@[^@#]+$/, "");
+                if (
+                    fragment.id === fragmentId ||
+                    fragment.fragment_id === fragmentId ||
+                    fragment.protocol_id === rawAddress ||
+                    fragment.tumbler === rawAddress ||
+                    (tumblerNoVersion && tumblerNoVersion === rawNoVersion)
+                ) {
+                    return {
+                        ...fragment,
+                        text: version.fragments?.[fragment.id || fragmentId] || ""
+                    };
+                }
+            }
+        }
+        return null;
+    }
+
+    function fragmentHighlightFromHash(nodeId, state) {
+        return fragmentHighlightFromHref(nodeId, window.location.href, state);
+    }
+
+    function fragmentHighlightFromHref(nodeId, href, state) {
+        const fragmentId = extractFragmentId(href);
+        if (!nodeId || !fragmentId) return null;
+        const node = state.allNodes.find((candidate) => candidate.id === nodeId);
+        const rawAddress = `${node?.protocol_id || nodeId}#fragment/${fragmentId}`;
+        return {
+            nodeId,
+            fragmentId,
+            fragment: findFragmentRecord(nodeId, fragmentId, rawAddress, state)
+        };
+    }
+
+    function extractFragmentId(value) {
+        try {
+            return decodeURIComponent(new URL(value, window.location.origin).hash || "").match(/^#fragment\/([A-Za-z0-9._-]+)/)?.[1] || "";
+        } catch {
+            return decodeURIComponent(String(value || "")).match(/#fragment\/([A-Za-z0-9._-]+)/)?.[1] || "";
+        }
     }
 
     function scoreSearchResult(node, haystack, normalizedQuery, queryTokens) {
@@ -1076,10 +1481,9 @@
             panelEl.scrollTop = 0;
         }
 
-        // If a tour is running, reset scroll and start gentle downward drift
-        if (state.tourActive) {
+        if (state.tourActive && state.displaySettings?.tourMode === "timed") {
             panelEl.scrollTop = 0;
-            startTourPanelScroll();
+            startTourPanelScroll(TOUR_DWELL_MS);
         }
 
         if (options.updateUrl) {
@@ -1097,6 +1501,8 @@
         if (options.stagedReveal) {
             stagedReveal(cy, state.previousFocusId);
         }
+
+        refreshAliveMotion(state);
     }
 
     function getVisibleSubgraph(
@@ -1112,7 +1518,8 @@
         const settingsByDepth = {
             1: { minWeight: 5, maxFirst: 6, maxSecond: 0, maxThird: 0 },
             2: { minWeight: 4, maxFirst: 9, maxSecond: 8, maxThird: 0 },
-            3: { minWeight: 3, maxFirst: 12, maxSecond: 14, maxThird: 8 }
+            3: { minWeight: 3, maxFirst: 12, maxSecond: 14, maxThird: 8 },
+            4: { minWeight: 2, maxFirst: 18, maxSecond: 24, maxThird: 20, maxFourth: 16 }
         };
 
         const settings = settingsByDepth[maxDepth] || settingsByDepth[2];
@@ -1201,6 +1608,24 @@
             });
         }
 
+        if (maxDepth >= 4) {
+            const thirdIds = Array.from(visibleIds).filter((id) => distances[id] === 3);
+            const fourthEdges = scoredEdges
+                .filter((edge) => thirdIds.includes(edge.source) || thirdIds.includes(edge.target))
+                .slice(0, settings.maxFourth || 0);
+
+            fourthEdges.forEach((edge) => {
+                if (!visibleIds.has(edge.source)) {
+                    visibleIds.add(edge.source);
+                    distances[edge.source] = 4;
+                }
+                if (!visibleIds.has(edge.target)) {
+                    visibleIds.add(edge.target);
+                    distances[edge.target] = 4;
+                }
+            });
+        }
+
         // Note: search results are shown in the dropdown and highlighted via the
         // search-match class on already-visible nodes. We do NOT inject them into
         // visibleIds here — that caused unrelated nodes to bleed into the graph
@@ -1229,7 +1654,7 @@
             edges = edges.filter((edge) => edge.source === focusId || edge.target === focusId);
         }
 
-        edges = edges.slice(0, settings.maxFirst + settings.maxSecond + settings.maxThird);
+        edges = edges.slice(0, settings.maxFirst + settings.maxSecond + settings.maxThird + (settings.maxFourth || 0));
 
         return { nodes, edges, distances };
     }
@@ -1316,7 +1741,7 @@
             focus.position({ x: centerX, y: centerY });
         }
 
-        [1, 2, 3].forEach((distance) => {
+        [1, 2, 3, 4].forEach((distance) => {
             const nodes = cy.nodes()
                 .filter((node) => distances[node.id()] === distance)
                 .sort((a, b) => {
@@ -1331,19 +1756,30 @@
 
             const largestNodeSize = Math.max(...nodes.map((node) => Number(node.width() || 92)));
             const focusSize = focus.length ? Number(focus.width() || 160) : 160;
+            const isGlobalLayer = distance === 4 && count > 18;
 
             const baseRadius = focusSize / 2 + largestNodeSize + 90 + distance * 150;
             const radius = Math.max(baseRadius, Math.min(width, height) * (0.2 + distance * 0.18));
             const fullCircle = Math.PI * 2;
-            const angleStep = fullCircle / count;
+            const nodesPerRing = isGlobalLayer ? 22 : count;
+            const ringCount = isGlobalLayer ? Math.ceil(count / nodesPerRing) : 1;
 
             nodes.forEach((node, index) => {
                 const stagger = distance * 0.37;
-                const angle = -Math.PI / 2 + index * angleStep + stagger;
+                const ringIndex = isGlobalLayer ? Math.floor(index / nodesPerRing) : 0;
+                const indexInRing = isGlobalLayer ? index % nodesPerRing : index;
+                const ringSize = isGlobalLayer && ringIndex === ringCount - 1
+                    ? count - ringIndex * nodesPerRing
+                    : nodesPerRing;
+                const angleStep = fullCircle / Math.max(1, ringSize);
+                const ringRadius = isGlobalLayer
+                    ? radius + ringIndex * Math.max(150, largestNodeSize + 80)
+                    : radius;
+                const angle = -Math.PI / 2 + indexInRing * angleStep + stagger + ringIndex * 0.29;
 
                 node.position({
-                    x: centerX + Math.cos(angle) * radius,
-                    y: centerY + Math.sin(angle) * radius
+                    x: centerX + Math.cos(angle) * ringRadius,
+                    y: centerY + Math.sin(angle) * ringRadius
                 });
             });
         });
@@ -1393,6 +1829,113 @@
         }
     }
 
+    function refreshAliveMotion(state) {
+        if (state.displaySettings?.graphAtmosphere === "alive") {
+            startAliveMotion(state);
+        } else {
+            stopAliveMotion();
+        }
+    }
+
+    function stopAliveMotion() {
+        if (_aliveTimer) {
+            window.clearInterval(_aliveTimer);
+            _aliveTimer = null;
+        }
+    }
+
+    function startAliveMotion(state) {
+        stopAliveMotion();
+        if (state.displaySettings?.graphAtmosphere !== "alive") return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        _aliveTimer = window.setInterval(() => {
+            const cy = state.cy;
+            if (!cy || state.isTraveling || state.tourActive) return;
+
+            const nodes = cy.nodes().filter((node) => !node.grabbed() && !node.hasClass("focused-node"));
+            if (!nodes.length) return;
+
+            nodes.slice(0, Math.min(5, nodes.length)).forEach((node, index) => {
+                const phase = Date.now() / 900 + index * 1.7;
+                slideNode(node, {
+                    x: Math.cos(phase) * 6,
+                    y: Math.sin(phase * 0.8) * 5
+                }, cy, 900);
+            });
+        }, 1600);
+    }
+
+    function enlivenDraggedNode(node, state, strength) {
+        const cy = state.cy;
+        if (!cy || !node?.length) return;
+
+        const origin = node.position();
+        const draggedLayer = getNodeLayer(node);
+        const radius = 220;
+
+        cy.nodes().not(node).forEach((other) => {
+            if (other.hasClass("focused-node")) return;
+            if (getNodeLayer(other) !== draggedLayer) return;
+            const pos = other.position();
+            const dx = pos.x - origin.x;
+            const dy = pos.y - origin.y;
+            const distance = Math.sqrt(dx * dx + dy * dy) || 1;
+            const minDistance = Number(node.width() || 92) / 2 + Number(other.width() || 92) / 2 + 18;
+            if (distance > Math.max(radius, minDistance)) return;
+
+            const overlapPush = Math.max(0, minDistance - distance) * 0.9;
+            const fieldPush = Math.max(0, 1 - distance / radius) * 16;
+            const push = (overlapPush + fieldPush) * strength;
+            if (push <= 0) return;
+            slideNode(other, {
+                x: (dx / distance) * push,
+                y: (dy / distance) * push
+            }, cy, 180);
+        });
+
+        node.connectedEdges().forEach((edge) => {
+            const other = edge.source().id() === node.id() ? edge.target() : edge.source();
+            if (!other.length || other.hasClass("focused-node")) return;
+            if (getNodeLayer(other) !== draggedLayer) return;
+
+            const pos = other.position();
+            const dx = pos.x - origin.x;
+            const dy = pos.y - origin.y;
+            const distance = Math.sqrt(dx * dx + dy * dy) || 1;
+            if (distance > radius * 0.75) return;
+
+            const ripple = (1 - distance / (radius * 0.75)) * 10 * strength;
+            slideNode(other, {
+                x: (dx / distance) * ripple,
+                y: (dy / distance) * ripple
+            }, cy, 180);
+        });
+    }
+
+    function getNodeLayer(node) {
+        if (node.hasClass("focused-node")) return 0;
+        if (node.hasClass("distance-1")) return 1;
+        if (node.hasClass("distance-2")) return 2;
+        if (node.hasClass("distance-3")) return 3;
+        return 4;
+    }
+
+    function slideNode(node, delta, cy, duration) {
+        const container = cy.container();
+        const width = container.clientWidth || 1000;
+        const height = container.clientHeight || 700;
+        const pos = node.position();
+        const padding = 42;
+        const next = {
+            x: clampNumber(pos.x + delta.x, padding, width - padding, pos.x),
+            y: clampNumber(pos.y + delta.y, padding, height - padding, pos.y)
+        };
+
+        node.stop(true, false);
+        node.animate({ position: next }, { duration, easing: "ease-out" });
+    }
+
     function stagedReveal(cy, previousFocusId) {
         // Cancel any timers from a previous in-flight reveal (e.g. navigating
         // via search while the last animation is still running).
@@ -1406,27 +1949,26 @@
 
         const focus = cy.nodes(".focused-node").first();
         const focusId = focus.id();
-        const focusPos = { x: focus.position("x"), y: focus.position("y") };
 
-        // Snapshot the final computed positions before we collapse nodes to center
-        const finalPositions = {};
-        cy.nodes().forEach((n) => {
-            finalPositions[n.id()] = { x: n.position("x"), y: n.position("y") };
-        });
-
-        // Hide everything and collapse non-focus nodes onto the focus point
+        // Hide everything at its computed position, then reveal by graph layer.
+        // Keeping nodes in place avoids the "black hole" effect when depth changes.
         cy.elements().style("opacity", 0);
         focus.style("opacity", 1);
-        cy.nodes().not(focus).forEach((n) => n.position({ x: focusPos.x, y: focusPos.y }));
+        focus.style("width", "");
+        focus.style("height", "");
 
-        // Animate a node to its final position and opacity, spring-eased
-        const flyIn = (node, opacity, delay, duration) => {
+        const revealNode = (node, opacity, delay, duration) => {
             after(() => {
-                const fp = finalPositions[node.id()];
-                if (!fp) return;
+                const originalWidth = parseFloat(node.style("width")) || Number(node.data("size")) || 54;
+                const originalHeight = parseFloat(node.style("height")) || originalWidth;
+                node.style({
+                    opacity: 0,
+                    width: Math.max(18, originalWidth * 0.72),
+                    height: Math.max(18, originalHeight * 0.72)
+                });
                 node.animate(
-                    { position: fp, style: { opacity } },
-                    { duration, easing: "spring(400, 28)" }
+                    { style: { opacity, width: originalWidth, height: originalHeight } },
+                    { duration, easing: "spring(360, 30)" }
                 );
             }, delay);
         };
@@ -1448,7 +1990,7 @@
 
         if (hasPrev) {
             const prevOpacity = prevNode.hasClass("distance-1") ? 0.95 : 0.32;
-            flyIn(prevNode, prevOpacity, cursor, 360);
+            revealNode(prevNode, prevOpacity, cursor, 360);
             revealEdges(prevNode.id(), 0.6, cursor + 80, 260);
             cursor += 160;
         }
@@ -1459,7 +2001,7 @@
             .sort((a, b) => Number(b.data("importance") || 3) - Number(a.data("importance") || 3));
 
         d1.forEach((node, i) => {
-            flyIn(node, 0.95, cursor + i * 60, 420);
+            revealNode(node, 0.95, cursor + i * 60, 420);
             revealEdges(node.id(), 0.6, cursor + i * 60 + 110, 280);
         });
 
@@ -1470,14 +2012,20 @@
             .sort((a, b) => Number(b.data("importance") || 3) - Number(a.data("importance") || 3));
 
         d2.forEach((node, i) => {
-            flyIn(node, 0.32, cursor + i * 40, 500);
+            revealNode(node, 0.32, cursor + i * 40, 500);
         });
 
         cursor += Math.max(d2.length, 1) * 40 + 220;
 
         // Wave 3 — distance-3 nodes, subtle drift in
         cy.nodes(".distance-3").forEach((node, i) => {
-            flyIn(node, 0.10, cursor + i * 25, 580);
+            revealNode(node, 0.16, cursor + i * 25, 580);
+        });
+
+        cursor += Math.max(cy.nodes(".distance-3").length, 1) * 25 + 180;
+
+        cy.nodes(".distance-4").forEach((node, i) => {
+            revealNode(node, 0.08, cursor + i * 18, 620);
         });
 
         after(() => {
@@ -1509,22 +2057,33 @@
     }
 
     function startTour(state) {
-        // Load saved speed preference
         TOUR_DWELL_MS = Math.max(3000, (loadSetting(STORAGE_KEYS.tourSpeed, 9) || 9) * 1000);
         state.tourActive = true;
         state.tourIndex = 0;
+        state.tourVisited = new Set([state.focusId].filter(Boolean));
+        state.tourRecent = [state.focusId].filter(Boolean);
+        state.activeTrail = buildActiveTrail(state);
         graphEl.dataset.tourActive = "1";
         updateTourButton();
         panelEl.scrollTop = 0;
-        startTourPanelScroll();
+        const narrated = state.displaySettings?.tourMode === "narration"
+            ? narrateNode(state.allNodes.find((node) => node.id === state.focusId), state)
+            : false;
         restartTourRing();
-        scheduleTourAdvance(state);
+        if (!narrated) {
+            startTourPanelScroll(TOUR_DWELL_MS);
+            scheduleTourAdvance(state);
+        }
     }
 
     function stopTour(state) {
         state.tourActive = false;
+        state.activeTrail = null;
+        state.trailChoicePending = false;
         graphEl.dataset.tourActive = "0";
         clearTourTimers();
+        closeTrailChoice();
+        stopNarration();
         updateTourButton();
         const tourBtn = graphEl.querySelector("[data-tour-toggle]");
         if (tourBtn) tourBtn.classList.remove("tour-ring-anim");
@@ -1535,13 +2094,14 @@
         if (_tourScrollInterval) { window.cancelAnimationFrame(_tourScrollInterval); _tourScrollInterval = null; }
     }
 
-    function startTourPanelScroll() {
+    function startTourPanelScroll(durationMs = TOUR_DWELL_MS) {
         if (_tourScrollInterval) window.cancelAnimationFrame(_tourScrollInterval);
 
         // Measure total scrollable distance once the panel has rendered.
         // Scroll position is time-based so short content scrolls slowly and
-        // long content scrolls faster — both finish at the bottom at dwell end.
+        // long content scrolls faster. The caller decides which clock owns it.
         const startTime = performance.now();
+        const duration = Math.max(1200, Number(durationMs) || TOUR_DWELL_MS);
         const totalDistance = Math.max(0, panelEl.scrollHeight - panelEl.clientHeight);
 
         if (totalDistance === 0) return; // nothing to scroll
@@ -1549,7 +2109,7 @@
         const scroll = (now) => {
             if (!_tourScrollInterval) return;
             const elapsed = now - startTime;
-            const progress = Math.min(elapsed / TOUR_DWELL_MS, 1);
+            const progress = Math.min(elapsed / duration, 1);
             panelEl.scrollTop = totalDistance * progress;
             if (progress < 1) {
                 _tourScrollInterval = window.requestAnimationFrame(scroll);
@@ -1562,31 +2122,176 @@
     }
 
     function pickNextTourNode(state) {
+        if (state.activeTrail?.nodes?.length) {
+            const trailNext = pickNextTrailNode(state);
+            if (trailNext) return trailNext;
+            if (state.trailChoicePending) return null;
+            stopTour(state);
+            return null;
+        }
+
         const cy = state.cy;
         if (!cy) return null;
 
-        // Distance-1 neighbours sorted by importance, skipping where we just came from
-        const d1 = cy.nodes(".distance-1")
-            .sort((a, b) => Number(b.data("importance") || 3) - Number(a.data("importance") || 3));
-        const candidates = d1.filter((n) => n.id() !== state.previousFocusId);
-        const pool = candidates.length ? candidates : d1;
+        const visibleNodes = cy.nodes().filter((node) => node.id() !== state.focusId);
+        const localNodes = visibleNodes.filter((node) => node.hasClass("distance-1") || node.hasClass("distance-2"));
+        const basePool = localNodes.length ? localNodes : visibleNodes;
+        const recent = new Set(state.tourRecent || []);
+        const fresh = basePool.filter((node) => !state.tourVisited?.has(node.id()) && !recent.has(node.id()));
+        const notRecent = basePool.filter((node) => !recent.has(node.id()) && node.id() !== state.previousFocusId);
+        const pool = (fresh.length ? fresh : notRecent.length ? notRecent : basePool)
+            .sort((a, b) => {
+                const aDistance = a.hasClass("distance-1") ? 1 : a.hasClass("distance-2") ? 2 : 3;
+                const bDistance = b.hasClass("distance-1") ? 1 : b.hasClass("distance-2") ? 2 : 3;
+                if (aDistance !== bDistance) return aDistance - bDistance;
+                return Number(b.data("importance") || 3) - Number(a.data("importance") || 3);
+            });
         if (!pool.length) return null;
 
         state.tourIndex = state.tourIndex % pool.length;
         const next = pool[state.tourIndex];
         state.tourIndex = (state.tourIndex + 1) % pool.length;
 
-        return next?.id() || null;
+        const nextId = next?.id() || null;
+        if (nextId) rememberTourVisit(nextId, state);
+        return nextId;
     }
 
-    function scheduleTourAdvance(state) {
+    function buildActiveTrail(state) {
+        const focusNode = state.allNodes.find((node) => node.id === state.focusId);
+        const trailNodes = getTrailNodeIds(focusNode, state);
+        if (!trailNodes.length) return null;
+        return {
+            trailId: focusNode.id,
+            nodes: trailNodes,
+            index: 0,
+            branches: getTrailBranches(focusNode, state),
+            branchChoices: {}
+        };
+    }
+
+    function getTrailNodeIds(node, state) {
+        if (!node) return [];
+
+        const explicitNodes = Array.isArray(node.trail_nodes)
+            ? node.trail_nodes.filter((id) => state.nodeIds.has(id))
+            : [];
+        if (explicitNodes.length) return explicitNodes;
+
+        return (state.allEdgesRaw || [])
+            .filter((edge) => edge.source === node.id && edge.origin === "trail" && state.nodeIds.has(edge.target))
+            .map((edge) => edge.target)
+            .filter((id, index, ids) => ids.indexOf(id) === index);
+    }
+
+    function getTrailBranches(node, state) {
+        if (!Array.isArray(node?.trail_branches)) return [];
+        return node.trail_branches
+            .map((branch) => ({
+                after: branch?.after || "",
+                prompt: branch?.prompt || "Choose the next path",
+                choices: Array.isArray(branch?.choices)
+                    ? branch.choices
+                        .map((choice) => ({
+                            label: choice?.label || "Continue",
+                            summary: choice?.summary || "",
+                            nodes: Array.isArray(choice?.nodes)
+                                ? choice.nodes.filter((id) => state.nodeIds.has(id))
+                                : []
+                        }))
+                        .filter((choice) => choice.nodes.length)
+                    : []
+            }))
+            .filter((branch) => branch.after && branch.choices.length);
+    }
+
+    function pickNextTrailNode(state) {
+        const trail = state.activeTrail;
+        if (!trail?.nodes?.length) return null;
+        const branch = trail.branches?.find((candidate) => {
+            return candidate.after === state.focusId && !trail.branchChoices?.[candidate.after];
+        });
+        if (branch) {
+            showTrailChoice(branch, state);
+            return null;
+        }
+        const currentIndex = trail.nodes.indexOf(state.focusId);
+        const nextIndex = currentIndex >= 0 ? currentIndex + 1 : trail.index;
+        const nextId = trail.nodes[nextIndex];
+        trail.index = nextIndex + 1;
+        if (!nextId) {
+            state.activeTrail = null;
+            return null;
+        }
+        rememberTourVisit(nextId, state);
+        return nextId;
+    }
+
+    function showTrailChoice(branch, state) {
+        if (state.trailChoicePending) return;
+        state.trailChoicePending = true;
+        closeTrailChoice();
+
+        const overlay = document.createElement("div");
+        overlay.className = "xana-trail-choice";
+        overlay.setAttribute("data-tts-skip", "");
+        overlay.innerHTML = `
+            <div class="xana-trail-choice-card" role="dialog" aria-modal="true" aria-label="Choose trail branch">
+                <div class="xana-trail-choice-kicker">Trail branch</div>
+                <h2>${escapeHtml(branch.prompt)}</h2>
+                <div class="xana-trail-choice-options">
+                    ${branch.choices.map((choice, index) => `
+                        <button type="button" data-trail-choice="${index}">
+                            <span>${index + 1}</span>
+                            <strong>${escapeHtml(choice.label)}</strong>
+                            ${choice.summary ? `<em>${escapeHtml(choice.summary)}</em>` : ""}
+                        </button>
+                    `).join("")}
+                </div>
+            </div>
+        `;
+        document.body.appendChild(overlay);
+
+        overlay.querySelectorAll("[data-trail-choice]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const choice = branch.choices[Number(button.getAttribute("data-trail-choice"))];
+                if (!choice?.nodes?.length) return;
+                state.activeTrail.branchChoices[branch.after] = choice.label;
+                state.activeTrail.nodes = choice.nodes;
+                state.activeTrail.index = 0;
+                state.trailChoicePending = false;
+                closeTrailChoice();
+                travelToNode(choice.nodes[0], state, !state.tourActive);
+            });
+        });
+    }
+
+    function closeTrailChoice() {
+        document.querySelectorAll(".xana-trail-choice").forEach((el) => el.remove());
+    }
+
+    function rememberTourVisit(nodeId, state) {
+        state.tourVisited = state.tourVisited || new Set();
+        state.tourRecent = state.tourRecent || [];
+        state.tourVisited.add(nodeId);
+        state.tourRecent.push(nodeId);
+        state.tourRecent = state.tourRecent.slice(-7);
+
+        const visibleCount = state.cy?.nodes().length || 0;
+        if (visibleCount > 0 && state.tourVisited.size > Math.max(8, Math.floor(visibleCount * 0.7))) {
+            state.tourVisited = new Set(state.tourRecent);
+        }
+    }
+
+    function scheduleTourAdvance(state, forceTimer = false) {
         if (_tourTimer) window.clearTimeout(_tourTimer);
+        if (!forceTimer && state.displaySettings?.tourMode === "narration" && state.displaySettings?.ttsNarrator && canNarrate()) return;
 
         _tourTimer = window.setTimeout(() => {
             if (!state.tourActive) return;
             const nextId = pickNextTourNode(state);
             if (nextId) travelToNode(nextId, state, false);
-            scheduleTourAdvance(state);
+            if (state.tourActive && !state.trailChoicePending) scheduleTourAdvance(state);
         }, TOUR_DWELL_MS);
     }
 
@@ -1596,6 +2301,7 @@
         if (!nextId || nextId === state.focusId) return;
         if (state.nodeIds && !state.nodeIds.has(nextId)) return;
         if (state.isTraveling) return;
+        closeTransientUi(state, { clearSearch: true });
 
         const cy = state.cy;
         const currentId = state.focusId;
@@ -1699,7 +2405,7 @@
 
         panelEl.innerHTML = `
             <div class="xana-node-header ${(node.image && panelIsVisual) ? "has-media" : node.image ? "has-media has-doc-media" : "no-media"}">
-                ${renderPanelImage(node)}
+                ${renderPanelImage(node, state)}
                 <div class="xana-node-heading-text">
                     ${renderTypeBadge(node.type)}
                     <h1>${escapeHtml(node.title || node.id)}</h1>
@@ -1711,9 +2417,15 @@
 
             ${(node.youtube_url || node.primary_media_node?.youtube_url) ? renderYouTubeEmbed(node.youtube_url || node.primary_media_node?.youtube_url, node.primary_media_node?.title || "Watch on YouTube") : ""}
 
+            ${node.type === "trail" ? renderTrailPlaylist(node, state) : ""}
+
             ${node.html || node.content ? `<div class="xana-node-content">${node.html || escapeHtml(node.content)}</div>` : ""}
 
             ${renderSourceInfo(node)}
+
+            ${renderProtocolFooter(node)}
+
+            ${node.type === "trail" ? "" : renderTrailPlaylist(node, state)}
 
             <details class="xana-connections" ${loadSetting(STORAGE_KEYS.connectionsOpen, false) ? "open" : ""}>
                 <summary class="xana-connections-summary">
@@ -1743,17 +2455,358 @@
         }
 
         normalizePanelLinks(state);
+        bindTrailPlaylist(state);
+        highlightPendingFragment(state);
 
         // Tour: reset scroll and restart both the panel-scroll loop and the
         // countdown ring animation so both are in sync with the new node's dwell.
         if (state.tourActive) {
             panelEl.scrollTop = 0;
-            startTourPanelScroll();
+            const narrated = narrateNode(node, state);
             restartTourRing();
+            if (!narrated) {
+                startTourPanelScroll(TOUR_DWELL_MS);
+                scheduleTourAdvance(state);
+            }
         }
     }
 
-    function renderPanelImage(node) {
+    function renderTrailPlaylist(node, state) {
+        const trailNodes = getTrailPlaylistNodeIds(node, state);
+        if (!trailNodes.length) return "";
+        const items = trailNodes
+            .map((id, index) => {
+                const target = state.allNodes.find((candidate) => candidate.id === id);
+                if (!target) return "";
+                return `
+                    <button type="button" data-trail-jump="${escapeHtml(target.id)}">
+                        <span>${index + 1}</span>
+                        <strong>${escapeHtml(target.title || target.id)}</strong>
+                        <em>${escapeHtml(target.type || "node")}</em>
+                    </button>
+                `;
+            })
+            .filter(Boolean)
+            .join("");
+
+        if (!items) return "";
+        return `
+            <section class="xana-trail-playlist" data-tts-skip>
+                <div class="xana-trail-playlist-head">
+                    <span>Trail playlist</span>
+                    <button type="button" data-trail-start="${escapeHtml(node.id)}">Play trail</button>
+                </div>
+                <div class="xana-trail-playlist-items">${items}</div>
+            </section>
+        `;
+    }
+
+    function getTrailPlaylistNodeIds(node, state) {
+        const ids = [];
+        const add = (id) => {
+            if (!id || !state.nodeIds.has(id) || ids.includes(id)) return;
+            ids.push(id);
+        };
+
+        getTrailNodeIds(node, state).forEach(add);
+        getTrailBranches(node, state).forEach((branch) => {
+            branch.choices.forEach((choice) => {
+                choice.nodes.forEach(add);
+            });
+        });
+
+        return ids;
+    }
+
+    function bindTrailPlaylist(state) {
+        panelEl.querySelectorAll("[data-trail-jump]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const id = button.getAttribute("data-trail-jump");
+                const trailNodes = getTrailNodeIds(state.allNodes.find((node) => node.id === state.focusId), state);
+                const trailNode = state.allNodes.find((node) => node.id === state.focusId);
+                state.activeTrail = {
+                    trailId: state.focusId,
+                    nodes: trailNodes,
+                    index: Math.max(0, trailNodes.indexOf(id) + 1),
+                    branches: getTrailBranches(trailNode, state),
+                    branchChoices: {}
+                };
+                travelToNode(id, state, true);
+            });
+        });
+
+        panelEl.querySelector("[data-trail-start]")?.addEventListener("click", () => {
+            state.activeTrail = buildActiveTrail(state);
+            const nextId = pickNextTrailNode(state);
+            if (nextId) travelToNode(nextId, state, true);
+        });
+    }
+
+    function renderProtocolFooter(node) {
+        const rows = [
+            node.protocol_id ? ["Protocol", node.protocol_id] : null,
+            node.tumbler ? ["Tumbler", node.tumbler] : null
+        ].filter(Boolean);
+
+        if (!rows.length) return "";
+
+        return `
+            <footer class="xana-protocol-footer" data-tts-skip aria-hidden="true">
+                ${rows.map(([label, value]) => `
+                    <div>
+                        <span>${escapeHtml(label)}</span>
+                        <code>${escapeHtml(value)}</code>
+                    </div>
+                `).join("")}
+            </footer>
+        `;
+    }
+
+    function highlightPendingFragment(state) {
+        const pending = state.pendingFragmentHighlight;
+        if (!pending || pending.nodeId !== state.focusId) return;
+
+        panelEl.querySelectorAll(".xana-fragment-highlight").forEach((el) => {
+            el.classList.remove("xana-fragment-highlight");
+        });
+        panelEl.querySelectorAll(".xana-fragment-note").forEach((el) => el.remove());
+
+        const text = normalizeFragmentText(pending.fragment?.text || "");
+        const candidates = [...panelEl.querySelectorAll(".xana-node-content p, .xana-node-content li, .xana-node-content blockquote, .xana-node-content pre")];
+        const target = candidates.find((el) => {
+            const candidate = normalizeFragmentText(el.textContent || "");
+            if (!candidate || !text) return false;
+            return candidate.includes(text) || text.includes(candidate) || candidate.includes(text.slice(0, 80));
+        });
+
+        if (target) {
+            target.classList.add("xana-fragment-highlight");
+            target.setAttribute("data-fragment-label", `Fragment ${pending.fragmentId}`);
+            target.scrollIntoView({ block: "center", behavior: "smooth" });
+            const note = buildFragmentNote(pending, state, "Highlighted fragment");
+            target.insertAdjacentElement("beforebegin", note);
+            state.pendingFragmentHighlight = null;
+            return;
+        }
+
+        const note = buildFragmentNote(pending, state, "Fragment address");
+        const content = panelEl.querySelector(".xana-node-content");
+        if (content) content.prepend(note);
+        note.scrollIntoView({ block: "center", behavior: "smooth" });
+        state.pendingFragmentHighlight = null;
+    }
+
+    function buildFragmentNote(pending, state, label) {
+        const note = document.createElement("aside");
+        note.className = "xana-fragment-note";
+        note.setAttribute("data-tts-skip", "");
+        note.setAttribute("aria-hidden", "true");
+        note.innerHTML = `
+            <span>${escapeHtml(label)}</span>
+            <code>${escapeHtml(pending.fragment?.tumbler || `${state.allNodes.find((node) => node.id === pending.nodeId)?.protocol_id || pending.nodeId}#fragment/${pending.fragmentId}`)}</code>
+        `;
+        return note;
+    }
+
+    function normalizeFragmentText(value) {
+        return stripHtml(value)
+            .replace(/\s+/g, " ")
+            .trim()
+            .toLowerCase();
+    }
+
+    function narrateNode(node, state) {
+        if (!node || state?.displaySettings?.tourMode !== "narration" || !state?.displaySettings?.ttsNarrator) return false;
+        if (!canNarrate()) return false;
+
+        const title = node.title || node.id || "Untitled node";
+        const summary = stripHtml(node.summary || "").replace(/\s+/g, " ").trim();
+        const content = stripHtml(node.html || node.content || "").replace(/\s+/g, " ").trim();
+        const wantsFull = state.displaySettings.ttsDetail !== "summary";
+        const readableContent = wantsFull && content && content !== summary
+            ? content
+            : "";
+        const text = [title, summary, readableContent].filter(Boolean).join(". ");
+
+        if (!text) return false;
+        stopNarration();
+
+        const rate = clampNumber(state.displaySettings.ttsRate, 0.65, 1.35, DISPLAY_DEFAULTS.ttsRate);
+        startTourPanelScroll(estimateNarrationDurationMs(text, rate));
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        const voices = getAvailableVoices();
+        const selectedVoice = voices.find((voice) => voice.voiceURI === state.displaySettings.ttsVoice)
+            || findPreferredNarratorVoice(voices)
+            || voices.find((voice) => voice.default)
+            || voices[0];
+
+        if (selectedVoice) utterance.voice = selectedVoice;
+        utterance.rate = rate;
+        utterance.pitch = clampNumber(state.displaySettings.ttsPitch, 0.75, 1.35, DISPLAY_DEFAULTS.ttsPitch);
+        utterance.volume = 0.88;
+        utterance.onend = () => {
+            if (!state.tourActive) return;
+            window.setTimeout(() => {
+                if (!state.tourActive) return;
+                const nextId = pickNextTourNode(state);
+                if (nextId) travelToNode(nextId, state, false);
+                if (!nextId && !state.trailChoicePending) stopTour(state);
+            }, NARRATION_AFTER_END_PAUSE_MS);
+        };
+        utterance.onerror = () => {
+            if (state.tourActive) scheduleTourAdvance(state, true);
+        };
+        window.speechSynthesis.speak(utterance);
+        return true;
+    }
+
+    function estimateNarrationDurationMs(text, rate) {
+        const words = String(text || "").trim().split(/\s+/).filter(Boolean).length;
+        const punctuationPauses = (String(text || "").match(/[.!?;:]/g) || []).length * 180;
+        const baseWordsPerMinute = 155;
+        const effectiveWordsPerMinute = baseWordsPerMinute * clampNumber(rate, 0.65, 1.35, DISPLAY_DEFAULTS.ttsRate);
+        const spokenMs = (words / effectiveWordsPerMinute) * 60000;
+        return Math.max(2600, spokenMs + punctuationPauses);
+    }
+
+    function stopNarration() {
+        if ("speechSynthesis" in window) {
+            window.speechSynthesis.cancel();
+        }
+    }
+
+    function canNarrate() {
+        return "speechSynthesis" in window && Boolean(window.SpeechSynthesisUtterance);
+    }
+
+    function getAvailableVoices() {
+        return canNarrate() ? window.speechSynthesis.getVoices() : [];
+    }
+
+    function findPreferredNarratorVoice(voices) {
+        return voices.find((voice) => /google/i.test(voice.name) && /uk|united kingdom|gb|en-gb/i.test(`${voice.name} ${voice.lang}`) && /male/i.test(voice.name))
+            || voices.find((voice) => /google/i.test(voice.name) && /en-gb/i.test(voice.lang || ""))
+            || voices.find((voice) => /en-gb/i.test(voice.lang || ""));
+    }
+
+    function populateVoiceOptions(state) {
+        const select = graphEl.querySelector("[data-tts-voice]");
+        if (!select) return;
+
+        const voices = getAvailableVoices();
+        let current = state.displaySettings.ttsVoice || "";
+        if (!current && voices.length) {
+            const preferred = findPreferredNarratorVoice(voices);
+            if (preferred) current = preferred.voiceURI;
+            if (preferred && !loadSetting(STORAGE_KEYS.ttsVoice, "")) {
+                state.displaySettings.ttsVoice = preferred.voiceURI;
+            }
+        }
+        select.innerHTML = [
+            `<option value="">Browser default</option>`,
+            ...voices.map((voice) => {
+                const label = `${voice.name}${voice.lang ? ` (${voice.lang})` : ""}${voice.localService ? "" : " - network"}`;
+                return `<option value="${escapeHtml(voice.voiceURI)}" ${voice.voiceURI === current ? "selected" : ""}>${escapeHtml(label)}</option>`;
+            })
+        ].join("");
+
+        if (current && !voices.some((voice) => voice.voiceURI === current)) {
+            select.value = "";
+        } else if (current) {
+            select.value = current;
+        }
+    }
+
+    function startInterfaceTour(state) {
+        const steps = [
+            {
+                selector: ".xana-searcher",
+                title: "Start anywhere",
+                body: "Search is the front door. Type a person, claim, source, idea, or protocol address and the graph will pull matching nodes into view."
+            },
+            {
+                selector: ".xana-depth-row",
+                title: "Choose your focus",
+                body: "Near, mid, and deep change how much neighborhood context you see around the selected node."
+            },
+            {
+                selector: "#xana-stage",
+                title: "Navigate the substrate",
+                body: "Each node is a typed knowledge object. Click one to travel through meaning, not just pages."
+            },
+            {
+                selector: ".xana-controls-strip",
+                title: "Graph tools",
+                body: "These controls zoom, fit, filter, audit, compare paths, run the node tour, and open display or narration settings."
+            },
+            {
+                selector: "#xana-panel",
+                title: "Read with context",
+                body: "The content panel shows the selected node, media, source metadata, stable addresses, and typed relationships."
+            },
+            {
+                selector: ".xana-connections",
+                title: "Follow relationships",
+                body: "Connections explain why nodes are linked. This is where evidence, disagreement, lineage, and trails become navigable."
+            },
+            {
+                selector: "[data-settings-toggle]",
+                title: "Make it yours",
+                body: "Settings let readers choose theme, density, graph atmosphere, and narrated tours."
+            }
+        ];
+
+        let index = 0;
+        renderInterfaceTourStep();
+
+        function renderInterfaceTourStep() {
+            document.querySelectorAll(".xana-interface-tour, .xana-tour-spotlight").forEach((el) => el.remove());
+            document.querySelectorAll(".xana-tour-target").forEach((el) => el.classList.remove("xana-tour-target"));
+
+            const step = steps[index];
+            const target = document.querySelector(step.selector);
+            if (target) target.classList.add("xana-tour-target");
+
+            const overlay = document.createElement("div");
+            overlay.className = "xana-interface-tour";
+            overlay.setAttribute("data-tts-skip", "");
+            overlay.innerHTML = `
+                <div class="xana-interface-tour-card">
+                    <div class="xana-interface-tour-count">${index + 1} / ${steps.length}</div>
+                    <h2>${escapeHtml(step.title)}</h2>
+                    <p>${escapeHtml(step.body)}</p>
+                    <div class="xana-interface-tour-actions">
+                        <button type="button" data-tour-close>Close</button>
+                        <button type="button" data-tour-prev ${index === 0 ? "disabled" : ""}>Back</button>
+                        <button type="button" data-tour-next>${index === steps.length - 1 ? "Done" : "Next"}</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+
+            overlay.querySelector("[data-tour-close]")?.addEventListener("click", closeInterfaceTour);
+            overlay.querySelector("[data-tour-prev]")?.addEventListener("click", () => {
+                index = Math.max(0, index - 1);
+                renderInterfaceTourStep();
+            });
+            overlay.querySelector("[data-tour-next]")?.addEventListener("click", () => {
+                if (index >= steps.length - 1) {
+                    closeInterfaceTour();
+                    return;
+                }
+                index += 1;
+                renderInterfaceTourStep();
+            });
+        }
+
+        function closeInterfaceTour() {
+            document.querySelectorAll(".xana-interface-tour").forEach((el) => el.remove());
+            document.querySelectorAll(".xana-tour-target").forEach((el) => el.classList.remove("xana-tour-target"));
+        }
+    }
+
+    function renderPanelImage(node, state) {
         if (!node.image) return "";
 
         const mediaType = node.primary_media_node?.media_type || "";
@@ -1794,7 +2847,7 @@
             return `
                 <a
                     class="xana-node-image-link"
-                    href="/node/${encodeURIComponent(node.primary_media_node.id)}"
+                    href="${escapeHtml(nodeHref(node.primary_media_node, state))}"
                     data-node-jump="${escapeHtml(node.primary_media_node.id)}"
                 >
                     <img
@@ -1825,7 +2878,7 @@
         return `
             <div class="xana-media-credit">
                 <a
-                    href="/node/${encodeURIComponent(media.id)}"
+                    href="${escapeHtml(nodeHref(media, { allNodes: [media] }))}"
                     data-node-jump="${escapeHtml(media.id)}"
                 >
                     ${escapeHtml(media.title || "Media node")}
@@ -1891,7 +2944,7 @@
 
             return `
                 <li class="xana-rel-item">
-                    <a class="xana-rel-link" href="/node/${encodeURIComponent(other.id)}" data-node-jump="${escapeHtml(other.id)}">
+                    <a class="xana-rel-link" href="${escapeHtml(nodeHref(other, { allNodes }))}" data-node-jump="${escapeHtml(other.id)}">
                         <span class="xana-rel-title">${escapeHtml(other.title || other.id)}</span>
                         <span class="xana-rel-meta">
                             ${renderTypeBadge(other.type, "xana-type-badge--sm")}
@@ -2555,25 +3608,57 @@
             if (!href || href.startsWith("#")) return;
             if (link.hasAttribute("data-node-jump")) return;
 
+            const protocolTarget = resolveProtocolAddress(href, state);
+            if (protocolTarget) {
+                link.setAttribute("href", nodeHref(protocolTarget.nodeId, state));
+                link.dataset.nodeJump = protocolTarget.nodeId;
+                if (protocolTarget.fragmentId) {
+                    link.dataset.fragmentJump = protocolTarget.fragmentId;
+                }
+
+                link.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    closeTransientUi(state, { clearSearch: true });
+                    state.pendingFragmentHighlight = protocolTarget.fragmentId
+                        ? {
+                            nodeId: protocolTarget.nodeId,
+                            fragmentId: protocolTarget.fragmentId,
+                            fragment: protocolTarget.fragment
+                        }
+                        : null;
+                    travelToNode(protocolTarget.nodeId, state, true);
+                    if (protocolTarget.nodeId === state.focusId) {
+                        highlightPendingFragment(state);
+                    }
+                });
+                return;
+            }
+
             // Primary match: compare normalized URL paths (works for absolute hrefs).
             let matchingNode = state.allNodes.find((node) => {
                 return normalizePath(node.url) === normalizePath(href);
             });
 
-            // Fallback: treat the href as a "node/<id>" pattern (written in markdown
-            // as relative links like `node/provenance` or `/node/provenance`).
-            // Strip any leading slash, strip the "node/" prefix, and look up by id.
+            // Fallback: treat type-aware routes and old "node/<id>" routes as
+            // local node links.
             if (!matchingNode) {
-                const stripped = href.replace(/^\//, "").replace(/^node\//, "").replace(/\/$/, "");
-                matchingNode = nodeById.get(stripped);
+                const stripped = href.replace(/^\//, "").replace(/\/$/, "");
+                const routeParts = stripped.split("/");
+                const candidateId = routeParts.length >= 2 ? routeParts.at(-1) : stripped;
+                matchingNode = nodeById.get(candidateId);
             }
 
             if (matchingNode) {
-                link.setAttribute("href", `/node/${encodeURIComponent(matchingNode.id)}`);
+                link.setAttribute("href", nodeHref(matchingNode, state));
 
                 link.addEventListener("click", (event) => {
                     event.preventDefault();
+                    closeTransientUi(state, { clearSearch: true });
+                    state.pendingFragmentHighlight = fragmentHighlightFromHref(matchingNode.id, href, state);
                     travelToNode(matchingNode.id, state, true);
+                    if (matchingNode.id === state.focusId) {
+                        highlightPendingFragment(state);
+                    }
                 });
 
                 return;
@@ -2590,6 +3675,7 @@
                 event.preventDefault();
 
                 const id = link.getAttribute("data-node-jump");
+                closeTransientUi(state, { clearSearch: true });
                 travelToNode(id, state, true);
             });
         });
@@ -2752,8 +3838,9 @@
     function updateUrl(nodeId, replace) {
         if (!nodeId) return;
 
+        const node = window.__xanaAllNodes?.find((candidate) => candidate.id === nodeId);
         const url = new URL(window.location.href);
-        url.pathname = `/node/${encodeURIComponent(nodeId)}`;
+        url.pathname = nodeHref(node || { id: nodeId, type: "node" }, { allNodes: window.__xanaAllNodes || [] });
         url.search = "";
 
         if (replace) {
@@ -2772,16 +3859,35 @@
             source: "xananode-preview",
             type: "node-selected",
             nodeId,
-            path: `/node/${encodeURIComponent(nodeId)}`,
+            path: nodeHref(window.__xanaAllNodes?.find((node) => node.id === nodeId) || { id: nodeId, type: "node" }, { allNodes: window.__xanaAllNodes || [] }),
             url: window.location.href
         }, "*");
     }
 
-    function nodeIdFromUrl() {
+    function nodeIdFromUrl(allNodes = []) {
         const pathname = window.location.pathname.replace(/\/$/, "");
+        const protocolPath = pathname.replace(/^\//, "");
+        if (/^[a-z][a-z0-9_-]*(\.[a-z][a-z0-9_-]*)*:[a-z][a-z0-9_-]*\/.+/i.test(protocolPath)) {
+            return `${protocolPath}${window.location.hash || ""}`;
+        }
         const match = pathname.match(/^\/node\/(.+)$/);
         if (match) return decodeURIComponent(match[1]);
-        return new URLSearchParams(window.location.search).get("node");
+        const matchingNode = allNodes.find((node) => normalizePath(node.url) === normalizePath(pathname));
+        if (matchingNode) return matchingNode.id;
+
+        const parts = pathname.replace(/^\//, "").split("/");
+        if (parts.length >= 2) {
+            try {
+                const candidateId = decodeURIComponent(parts.at(-1));
+                if (allNodes.some((node) => node.id === candidateId)) return candidateId;
+            } catch {
+                const candidateId = parts.at(-1);
+                if (allNodes.some((node) => node.id === candidateId)) return candidateId;
+            }
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        return params.get("node") || params.get("ref");
     }
 
     function getFitPadding() {
@@ -2807,6 +3913,27 @@
         } catch {
             return String(path || "").replace(/\/$/, "");
         }
+    }
+
+    function nodeHref(nodeOrId, state = {}) {
+        const id = typeof nodeOrId === "string" ? nodeOrId : nodeOrId?.id;
+        if (!id) return "/";
+
+        const node = typeof nodeOrId === "string"
+            ? state.allNodes?.find((candidate) => candidate.id === nodeOrId)
+            : nodeOrId;
+
+        if (node?.url) return node.url;
+        const typeSegment = slugSegment(node?.type || "node");
+        return `/${typeSegment}/${encodeURIComponent(id)}/`;
+    }
+
+    function slugSegment(value) {
+        return String(value || "node")
+            .trim()
+            .toLowerCase()
+            .replace(/[^a-z0-9._-]+/g, "-")
+            .replace(/^-+|-+$/g, "") || "node";
     }
 
     function normalizeSearchText(value) {
@@ -2885,6 +4012,122 @@
         } catch {
             return fallback;
         }
+    }
+
+    function loadDisplaySettings() {
+        const tourMode = loadSetting(STORAGE_KEYS.tourMode, DISPLAY_DEFAULTS.tourMode);
+        return {
+            colorTheme: loadSetting(STORAGE_KEYS.colorTheme, DISPLAY_DEFAULTS.colorTheme),
+            uiDensity: loadSetting(STORAGE_KEYS.uiDensity, DISPLAY_DEFAULTS.uiDensity),
+            readerFontScale: clampNumber(loadSetting(STORAGE_KEYS.readerFontScale, DISPLAY_DEFAULTS.readerFontScale), 85, 150, DISPLAY_DEFAULTS.readerFontScale),
+            graphAtmosphere: loadSetting(STORAGE_KEYS.graphAtmosphere, DISPLAY_DEFAULTS.graphAtmosphere),
+            tourMode,
+            ttsNarrator: tourMode === "narration" ? loadSetting(STORAGE_KEYS.ttsNarrator, DISPLAY_DEFAULTS.ttsNarrator) : false,
+            ttsVoice: loadSetting(STORAGE_KEYS.ttsVoice, DISPLAY_DEFAULTS.ttsVoice),
+            ttsRate: clampNumber(loadSetting(STORAGE_KEYS.ttsRate, DISPLAY_DEFAULTS.ttsRate), 0.65, 1.35, DISPLAY_DEFAULTS.ttsRate),
+            ttsPitch: clampNumber(loadSetting(STORAGE_KEYS.ttsPitch, DISPLAY_DEFAULTS.ttsPitch), 0.75, 1.35, DISPLAY_DEFAULTS.ttsPitch),
+            ttsDetail: loadSetting(STORAGE_KEYS.ttsDetail, DISPLAY_DEFAULTS.ttsDetail)
+        };
+    }
+
+    function clampNumber(value, min, max, fallback) {
+        const number = Number(value);
+        if (!Number.isFinite(number)) return fallback;
+        return Math.min(max, Math.max(min, number));
+    }
+
+    function applyDisplaySettings(settings) {
+        const resolved = { ...DISPLAY_DEFAULTS, ...(settings || {}) };
+        document.documentElement.dataset.xanaTheme = resolved.colorTheme;
+        document.documentElement.dataset.xanaDensity = resolved.uiDensity;
+        document.documentElement.dataset.xanaAtmosphere = resolved.graphAtmosphere;
+        graphEl.dataset.tourMode = resolved.tourMode;
+        document.documentElement.style.setProperty("--xana-reader-scale", `${clampNumber(resolved.readerFontScale, 85, 150, 100) / 100}`);
+    }
+
+    function updateDisplaySettingButtons(state) {
+        const settings = { ...DISPLAY_DEFAULTS, ...(state.displaySettings || {}) };
+        graphEl.querySelectorAll("[data-display-setting]").forEach((button) => {
+            const key = button.getAttribute("data-display-setting");
+            const value = button.getAttribute("data-value");
+            const active = settings[key] === value;
+            button.classList.toggle("active", active);
+            button.setAttribute("aria-pressed", active ? "true" : "false");
+        });
+    }
+
+    function clearSearchUi(state) {
+        const input = graphEl.querySelector("#xana-search-input");
+        const clearButton = graphEl.querySelector("[data-search-clear]");
+        const searchWrap = graphEl.querySelector(".xana-search-wrap");
+
+        state.searchQuery = "";
+        state.searchResults = [];
+        saveSetting(STORAGE_KEYS.searchQuery, "");
+        if (input) input.value = "";
+        if (clearButton) clearButton.hidden = true;
+        if (searchWrap) searchWrap.classList.remove("has-value");
+        renderSearchResults(state);
+    }
+
+    function closeTransientUi(state, options = {}) {
+        const settingsPanel = graphEl.querySelector(".xana-settings-panel");
+        const settingsToggle = graphEl.querySelector("[data-settings-toggle]");
+        const filterPanel = graphEl.querySelector(".xana-filter-popover");
+        const filterToggle = graphEl.querySelector("[data-filter-toggle]");
+        const pathStage = graphEl.querySelector("#xana-path-stage");
+        const stage = graphEl.querySelector("#xana-stage");
+
+        if (options.clearSearch) clearSearchUi(state);
+        if (settingsPanel) settingsPanel.hidden = true;
+        if (settingsToggle) settingsToggle.classList.remove("active");
+        if (filterPanel) filterPanel.hidden = true;
+        if (filterToggle) filterToggle.classList.remove("active");
+
+        if (state.pathExplorer) {
+            state.pathExplorer.active = false;
+            state.pathExplorer.results = [];
+            state.pathExplorer.summary = "";
+        }
+
+        if (pathStage) {
+            pathStage.hidden = true;
+            pathStage.innerHTML = "";
+        }
+        if (stage && !state.auditMode) stage.hidden = false;
+    }
+
+    function startSearchVerbRotation() {
+        const input = graphEl.querySelector("#xana-search-input");
+        const promptText = graphEl.querySelector("[data-search-prompt-text]");
+        if (!input || !promptText || input.dataset.verbRotation === "1") return;
+
+        input.dataset.verbRotation = "1";
+        let promptIndex = 0;
+        let charIndex = SEARCH_PROMPTS[0].length;
+        let direction = -1;
+        let pauseUntil = performance.now() + 1500;
+        window.setInterval(() => {
+            if (document.activeElement === input || input.value.trim()) return;
+
+            const now = performance.now();
+            if (now < pauseUntil) return;
+
+            const prompt = SEARCH_PROMPTS[promptIndex];
+            charIndex += direction;
+            const visiblePrompt = prompt.slice(0, Math.max(0, charIndex));
+            promptText.textContent = visiblePrompt;
+            input.setAttribute("aria-label", visiblePrompt || SEARCH_PROMPTS[promptIndex]);
+
+            if (charIndex <= 0) {
+                direction = 1;
+                promptIndex = (promptIndex + 1) % SEARCH_PROMPTS.length;
+                pauseUntil = now + 260;
+            } else if (charIndex >= SEARCH_PROMPTS[promptIndex].length) {
+                direction = -1;
+                pauseUntil = now + 1600;
+            }
+        }, 48);
     }
 
     function escapeHtml(value) {
@@ -3025,6 +4268,17 @@
                 }
             },
             {
+                selector: ".distance-4",
+                style: {
+                    width: 38,
+                    height: 38,
+                    "font-size": 6,
+                    "text-max-width": 42,
+                    opacity: 0.16,
+                    "z-index": 1
+                }
+            },
+            {
                 selector: ".search-match",
                 style: {
                     "border-color": "#ffd166",
@@ -3120,6 +4374,14 @@
                     width: 118,
                     height: 118,
                     opacity: 0.82
+                }
+            },
+            {
+                selector: ".distance-4.has-image",
+                style: {
+                    width: 84,
+                    height: 84,
+                    opacity: 0.46
                 }
             },
             {
@@ -3227,6 +4489,10 @@
                 selector: ".distance-3.claim",
                 style: { width: 75, height: 32 }
             },
+            {
+                selector: ".distance-4.claim",
+                style: { width: 54, height: 26 }
+            },
             // Same compound overrides for source and organization
             {
                 selector: ".focused-node.source, .focused-node.organization",
@@ -3243,6 +4509,10 @@
             {
                 selector: ".distance-3.source, .distance-3.organization",
                 style: { width: 64, height: 34 }
+            },
+            {
+                selector: ".distance-4.source, .distance-4.organization",
+                style: { width: 52, height: 30 }
             },
             {
                 selector: ".event",

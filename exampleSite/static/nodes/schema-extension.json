@@ -6,61 +6,61 @@
   "summary": "The ability for a substrate to add custom node or relationship types while remaining compatible with XanaNode Core.",
   "relationships": [
     {
-      "id": "xananode.example:rel/xananode-core-schema-enables-schema-extension-36",
+      "id": "xananode.example:rel/xananode-core-schema-enables-schema-extension-59",
       "type": "enables",
       "source": "xananode.example:schema/xananode-core-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/schema-extension-requires-namespace-schema-48",
+      "id": "xananode.example:rel/schema-extension-requires-namespace-schema-71",
       "type": "requires",
       "target": "xananode.example:schema/namespace-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/namespacing-enables-schema-extension-118",
+      "id": "xananode.example:rel/namespacing-enables-schema-extension-141",
       "type": "enables",
       "source": "xananode.example:concept/namespacing",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/schema-extension-requires-xananode-core-schema-119",
+      "id": "xananode.example:rel/schema-extension-requires-xananode-core-schema-142",
       "type": "requires",
       "target": "xananode.example:schema/xananode-core-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-schema-extension-120",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-schema-extension-143",
       "type": "requires",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/namespacing-clarifies-schema-extension-130",
+      "id": "xananode.example:rel/namespacing-clarifies-schema-extension-153",
       "type": "clarifies",
       "source": "xananode.example:concept/namespacing",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/schema-extension-requires-namespace-registry-132",
+      "id": "xananode.example:rel/schema-extension-requires-namespace-registry-155",
       "type": "requires",
       "target": "xananode.example:concept/namespace-registry",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/merge-validation-requires-schema-extension-138",
+      "id": "xananode.example:rel/merge-validation-requires-schema-extension-161",
       "type": "requires",
       "source": "xananode.example:concept/merge-validation",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/custom-extension-substrate-demonstrates-schema-extension-175",
+      "id": "xananode.example:rel/custom-extension-substrate-demonstrates-schema-extension-198",
       "type": "demonstrates",
       "source": "xananode.example:concept/custom-extension-substrate",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/canonical-type-policy-context_for-schema-extension-188",
+      "id": "xananode.example:rel/canonical-type-policy-context_for-schema-extension-211",
       "type": "context_for",
       "source": "xananode.example:concept/canonical-type-policy",
       "direction": "incoming"

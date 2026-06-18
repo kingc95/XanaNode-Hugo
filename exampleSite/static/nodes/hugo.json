@@ -6,13 +6,19 @@
   "summary": "A static site generator used by the example implementation to compile content into a public substrate viewer.",
   "relationships": [
     {
-      "id": "xananode.example:rel/hugo-implements-static-publishing-17",
+      "id": "xananode.example:rel/hugo-implements-static-publishing-26",
       "type": "implements",
       "target": "xananode.example:technology/static-publishing",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-hugo-theme-uses-hugo-56",
+      "id": "xananode.example:rel/xananode-hugo-repo-uses-hugo-37",
+      "type": "uses",
+      "source": "xananode.example:source/xananode-hugo-repo",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-hugo-theme-uses-hugo-79",
       "type": "uses",
       "source": "xananode.example:project/xananode-hugo-theme",
       "direction": "incoming"

@@ -27,8 +27,6 @@
 
   <div class="xana-list-grid">
     {{ range .RegularPages.ByTitle }}
-      {{ $nodeID := .Params.node_id | default .File.ContentBaseName }}
-      {{ $viewerURL := printf "/node/%s" ($nodeID | urlquery) }}
       <article class="xana-list-card">
         <div class="xana-list-card-topline">
           <span class="xana-list-type">{{ .Params.node_type | default .Params.type | default .Section }}</span>
@@ -37,7 +35,7 @@
           {{ end }}
         </div>
 
-        <h2><a href="{{ $viewerURL }}">{{ .Title }}</a></h2>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
 
         {{ with .Params.summary }}
           <p>{{ . }}</p>
@@ -46,7 +44,7 @@
         {{ end }}
 
         <div class="xana-list-card-footer">
-          <a href="{{ $viewerURL }}">Open node</a>
+          <a href="{{ .RelPermalink }}">Open node</a>
         </div>
       </article>
     {{ end }}

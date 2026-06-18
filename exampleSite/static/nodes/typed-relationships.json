@@ -6,37 +6,37 @@
   "summary": "Explicit relationship meanings that explain why two nodes are connected.",
   "relationships": [
     {
-      "id": "xananode.example:rel/xananode-relationship-types-defines-typed-relationships-28",
+      "id": "xananode.example:rel/xananode-relationship-types-defines-typed-relationships-51",
       "type": "defines",
       "source": "xananode.example:schema/xananode-relationship-types",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/typed-relationships-contrasts_with-unlabeled-hyperlink-100",
+      "id": "xananode.example:rel/typed-relationships-contrasts_with-unlabeled-hyperlink-123",
       "type": "contrasts_with",
       "target": "xananode.example:concept/unlabeled-hyperlink",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/typed-relationships-supports-claim-relationships-preserve-context-101",
+      "id": "xananode.example:rel/typed-relationships-supports-claim-relationships-preserve-context-124",
       "type": "supports",
       "target": "xananode.example:claim/claim-relationships-preserve-context",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/review-suggestions-uses-typed-relationships-121",
+      "id": "xananode.example:rel/review-suggestions-uses-typed-relationships-144",
       "type": "uses",
       "source": "xananode.example:concept/review-suggestions",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/knowledge-substrate-requires-typed-relationships-149",
+      "id": "xananode.example:rel/knowledge-substrate-requires-typed-relationships-172",
       "type": "requires",
       "source": "xananode.example:concept/knowledge-substrate",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/typed-relationships-has_claim-claim-relationships-preserve-context-191",
+      "id": "xananode.example:rel/typed-relationships-has_claim-claim-relationships-preserve-context-214",
       "type": "has_claim",
       "target": "xananode.example:claim/claim-relationships-preserve-context",
       "direction": "outgoing"

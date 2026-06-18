@@ -6,37 +6,37 @@
   "summary": "Persistent, location-independent addressing for nodes, relationships, revisions, and fragments inside a substrate.",
   "relationships": [
     {
-      "id": "xananode.example:rel/tumbler-addressing-enables-transclusion-102",
+      "id": "xananode.example:rel/tumbler-addressing-enables-transclusion-125",
       "type": "enables",
       "target": "xananode.example:concept/transclusion",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/tumbler-addressing-enables-deep-linking-103",
+      "id": "xananode.example:rel/tumbler-addressing-enables-deep-linking-126",
       "type": "enables",
       "target": "xananode.example:concept/deep-linking",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/tumbler-addressing-preserves-provenance-104",
+      "id": "xananode.example:rel/tumbler-addressing-preserves-provenance-127",
       "type": "preserves",
       "target": "xananode.example:concept/provenance",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/tumbler-addressing-enables-fragment-node-105",
+      "id": "xananode.example:rel/tumbler-addressing-enables-fragment-node-128",
       "type": "enables",
       "target": "xananode.example:concept/fragment-node",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-extends-tumbler-addressing-106",
+      "id": "xananode.example:rel/xananode-extends-tumbler-addressing-129",
       "type": "extends",
       "source": "xananode.example:concept/xananode",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/tumbler-addressing-deep_links_to-as-we-may-think-107",
+      "id": "xananode.example:rel/tumbler-addressing-deep_links_to-as-we-may-think-130",
       "type": "deep_links_to",
       "target": "xananode.example:source/as-we-may-think",
       "direction": "outgoing"

@@ -2,11 +2,11 @@ name = "XanaNode Hugo"
 license = "MIT"
 licenselink = "https://opensource.org/licenses/MIT"
 description = "A relationship-first Hugo theme for essays, concepts, sources, evidence, claims, and trails."
-homepage = "https://builtbybots.com/"
+homepage = "https://xananode.com/"
 tags = ["knowledge", "graph", "hypertext", "xanadu", "provenance", "digital garden"]
 features = ["relationship graph", "concept nodes", "source cards", "claim blocks", "trail pages", "JSON graph export"]
 min_version = "0.120.0"
 
 [author]
-  name = "Built By Bots"
-  homepage = "https://builtbybots.com/"
+  name = "XanaNode"
+  homepage = "https://xananode.com/"

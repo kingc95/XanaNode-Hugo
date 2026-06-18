@@ -6,25 +6,25 @@
   "summary": "An example substrate that defines namespaced domain-specific node and relationship types while preserving compatibility with XanaNode Core.",
   "relationships": [
     {
-      "id": "xananode.example:rel/custom-extension-substrate-demonstrates-schema-extension-175",
+      "id": "xananode.example:rel/custom-extension-substrate-demonstrates-schema-extension-198",
       "type": "demonstrates",
       "target": "xananode.example:concept/schema-extension",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/custom-extension-substrate-requires-namespace-registry-176",
+      "id": "xananode.example:rel/custom-extension-substrate-requires-namespace-registry-199",
       "type": "requires",
       "target": "xananode.example:concept/namespace-registry",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/custom-extension-substrate-uses-substrate-manifest-177",
+      "id": "xananode.example:rel/custom-extension-substrate-uses-substrate-manifest-200",
       "type": "uses",
       "target": "xananode.example:concept/substrate-manifest",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/custom-extension-substrate-features-canonical-type-policy-178",
+      "id": "xananode.example:rel/custom-extension-substrate-features-canonical-type-policy-201",
       "type": "features",
       "target": "xananode.example:concept/canonical-type-policy",
       "direction": "outgoing"

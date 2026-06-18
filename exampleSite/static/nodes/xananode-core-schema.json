@@ -7,91 +7,121 @@
   "summary": "The canonical core node and relationship vocabulary used to make independent substrates interoperable.",
   "relationships": [
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-xananode-node-types-30",
+      "id": "xananode.example:rel/xananode-workspace-repo-uses-xananode-core-schema-28",
+      "type": "uses",
+      "source": "xananode.example:source/xananode-workspace-repo",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-studio-repo-uses-xananode-core-schema-30",
+      "type": "uses",
+      "source": "xananode.example:source/xananode-studio-repo",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-protocol-repo-defines-xananode-core-schema-34",
+      "type": "defines",
+      "source": "xananode.example:source/xananode-protocol-repo",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-hugo-repo-uses-xananode-core-schema-38",
+      "type": "uses",
+      "source": "xananode.example:source/xananode-hugo-repo",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-core-sdk-repo-implements-xananode-core-schema-39",
+      "type": "implements",
+      "source": "xananode.example:source/xananode-core-sdk-repo",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-core-schema-defines-xananode-node-types-53",
       "type": "defines",
       "target": "xananode.example:schema/xananode-node-types",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-xananode-relationship-types-31",
+      "id": "xananode.example:rel/xananode-core-schema-defines-xananode-relationship-types-54",
       "type": "defines",
       "target": "xananode.example:schema/xananode-relationship-types",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-manifest-schema-32",
+      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-manifest-schema-55",
       "type": "defines",
       "target": "xananode.example:schema/substrate-manifest-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-node-schema-33",
+      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-node-schema-56",
       "type": "defines",
       "target": "xananode.example:schema/substrate-node-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-relationships-schema-34",
+      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-relationships-schema-57",
       "type": "defines",
       "target": "xananode.example:schema/substrate-relationships-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-xananode-core-schema-35",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-xananode-core-schema-58",
       "type": "requires",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-enables-schema-extension-36",
+      "id": "xananode.example:rel/xananode-core-schema-enables-schema-extension-59",
       "type": "enables",
       "target": "xananode.example:concept/schema-extension",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-contains-substrate-relationships-schema-39",
+      "id": "xananode.example:rel/xananode-core-schema-contains-substrate-relationships-schema-62",
       "type": "contains",
       "target": "xananode.example:schema/substrate-relationships-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-contains-substrate-node-schema-42",
+      "id": "xananode.example:rel/xananode-core-schema-contains-substrate-node-schema-65",
       "type": "contains",
       "target": "xananode.example:schema/substrate-node-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-contains-substrate-manifest-schema-44",
+      "id": "xananode.example:rel/xananode-core-schema-contains-substrate-manifest-schema-67",
       "type": "contains",
       "target": "xananode.example:schema/substrate-manifest-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-requires-xananode-core-schema-95",
+      "id": "xananode.example:rel/xananode-requires-xananode-core-schema-118",
       "type": "requires",
       "source": "xananode.example:concept/xananode",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/schema-extension-requires-xananode-core-schema-119",
+      "id": "xananode.example:rel/schema-extension-requires-xananode-core-schema-142",
       "type": "requires",
       "source": "xananode.example:concept/schema-extension",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-protocol-artifacts-124",
+      "id": "xananode.example:rel/xananode-core-schema-defines-protocol-artifacts-147",
       "type": "defines",
       "target": "xananode.example:concept/protocol-artifacts",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-enables-knowledge-substrate-150",
+      "id": "xananode.example:rel/xananode-core-schema-enables-knowledge-substrate-173",
       "type": "enables",
       "target": "xananode.example:concept/knowledge-substrate",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-supports-claim-merge-without-collapse-194",
+      "id": "xananode.example:rel/xananode-core-schema-supports-claim-merge-without-collapse-217",
       "type": "supports",
       "target": "xananode.example:claim/claim-merge-without-collapse",
       "direction": "outgoing"

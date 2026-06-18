@@ -7,19 +7,19 @@
   "summary": "The JSON Schema that validates compatibility reports between tools and substrates.",
   "relationships": [
     {
-      "id": "xananode.example:rel/compatibility-report-schema-defines-compatibility-report-52",
+      "id": "xananode.example:rel/compatibility-report-schema-defines-compatibility-report-75",
       "type": "defines",
       "target": "xananode.example:concept/compatibility-report",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/compatibility-report-schema-documents-compatibility-levels-53",
+      "id": "xananode.example:rel/compatibility-report-schema-documents-compatibility-levels-76",
       "type": "documents",
       "target": "xananode.example:concept/compatibility-levels",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-example-requires-compatibility-report-schema-54",
+      "id": "xananode.example:rel/federation-example-requires-compatibility-report-schema-77",
       "type": "requires",
       "source": "xananode.example:concept/federation-example",
       "direction": "incoming"

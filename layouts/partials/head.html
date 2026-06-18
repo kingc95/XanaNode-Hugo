@@ -1,7 +1,60 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ if .Title }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+{{ $description := .Description | default .Params.summary | default site.Params.description | default site.Title }}
+{{ $title := cond .IsHome site.Title (printf "%s | %s" .Title site.Title) }}
+{{ $canonical := .Permalink }}
+{{ $image := site.Params.image | default "xananode-icon.svg" | absURL }}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $description }}">
+<link rel="canonical" href="{{ $canonical }}">
+<meta name="robots" content="{{ site.Params.robots | default "index, follow" }}">
+<meta name="theme-color" content="{{ site.Params.themeColor | default "#55d6be" }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ $canonical }}">
+<meta property="og:image" content="{{ $image }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+<meta name="twitter:image" content="{{ $image }}">
+{{ with site.Params.keywords }}
+<meta name="keywords" content="{{ delimit . ", " }}">
+{{ end }}
+<script>
+  (function () {
+    try {
+      var theme = JSON.parse(localStorage.getItem("xananode.colorTheme") || "\"dark\"");
+      var density = JSON.parse(localStorage.getItem("xananode.uiDensity") || "\"comfortable\"");
+      var readerFontScale = JSON.parse(localStorage.getItem("xananode.readerFontScale") || "100");
+      var atmosphere = JSON.parse(localStorage.getItem("xananode.graphAtmosphere") || "\"alive\"");
+      document.documentElement.dataset.xanaTheme = theme;
+      document.documentElement.dataset.xanaDensity = density;
+      document.documentElement.dataset.xanaAtmosphere = atmosphere;
+      document.documentElement.style.setProperty("--xana-reader-scale", String(Math.min(150, Math.max(85, Number(readerFontScale) || 100)) / 100));
+    } catch (_) {}
+  })();
+</script>
+{{- $xanaParams := site.Params.xananode | default dict -}}
+{{- $brandParams := index $xanaParams "brand" | default dict -}}
+{{- $brandConfig := dict
+  "name" (index $brandParams "name" | default "XanaNode")
+  "tagline" (index $brandParams "tagline" | default (site.Params.tagline | default "Relationships preserve knowledge"))
+  "icon" (index $brandParams "icon" | default "xananode-icon.svg" | relURL)
+  "homeLabel" (index $brandParams "homeLabel" | default "Go to home node")
+  "attributionLabel" (index $brandParams "attributionLabel" | default "XanaNode")
+  "attributionText" (index $brandParams "attributionText" | default "xananode.com")
+  "attributionUrl" (index $brandParams "attributionUrl" | default "https://xananode.com")
+-}}
+{{- $themeConfig := dict
+  "brand" $brandConfig
+  "homeNode" (index $xanaParams "homeNode" | default "start-here")
+  "searchPrompts" (index $xanaParams "searchPrompts" | default slice)
+-}}
+<script>
+  window.XanaNodeTheme = {{ $themeConfig | jsonify | safeJS }};
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Fraunces:wght@700&display=swap">
@@ -9,4 +62,18 @@
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 <!-- SVG favicon from static/xananode-icon.svg -->
 <link rel="icon" type="image/svg+xml" href="{{ "xananode-icon.svg" | relURL }}">
-
+{{ with site.Params.analytics.gtag }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "{{ . }}", { anonymize_ip: true });
+</script>
+{{ end }}
+{{ with site.Params.analytics.plausibleDomain }}
+<script defer data-domain="{{ . }}" src="{{ site.Params.analytics.plausibleSrc | default "https://plausible.io/js/script.js" }}"></script>
+{{ end }}
+{{ with site.Params.headExtra }}
+{{ . | safeHTML }}
+{{ end }}

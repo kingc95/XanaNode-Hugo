@@ -7,25 +7,25 @@
   "summary": "The canonical relationship type registry for XanaNode substrates.",
   "relationships": [
     {
-      "id": "xananode.example:rel/xananode-relationship-types-defines-typed-relationships-28",
+      "id": "xananode.example:rel/xananode-relationship-types-defines-typed-relationships-51",
       "type": "defines",
       "target": "xananode.example:concept/typed-relationships",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-xananode-relationship-types-31",
+      "id": "xananode.example:rel/xananode-core-schema-defines-xananode-relationship-types-54",
       "type": "defines",
       "source": "xananode.example:schema/xananode-core-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-relationships-schema-uses-xananode-relationship-types-38",
+      "id": "xananode.example:rel/substrate-relationships-schema-uses-xananode-relationship-types-61",
       "type": "uses",
       "source": "xananode.example:schema/substrate-relationships-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-relationship-list-uses-xananode-relationship-types-110",
+      "id": "xananode.example:rel/substrate-relationship-list-uses-xananode-relationship-types-133",
       "type": "uses",
       "source": "xananode.example:concept/substrate-relationship-list",
       "direction": "incoming"

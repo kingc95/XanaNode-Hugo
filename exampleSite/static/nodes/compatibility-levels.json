@@ -6,43 +6,43 @@
   "summary": "A staged way to describe how much of a substrate another implementation can recognize, validate, extend, merge, or federate.",
   "relationships": [
     {
-      "id": "xananode.example:rel/protocol-artifacts-trail-continues_to-compatibility-levels-10",
+      "id": "xananode.example:rel/protocol-artifacts-trail-continues_to-compatibility-levels-15",
       "type": "continues_to",
       "source": "xananode.example:trail/protocol-artifacts-trail",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/compatibility-report-schema-documents-compatibility-levels-53",
+      "id": "xananode.example:rel/compatibility-report-schema-documents-compatibility-levels-76",
       "type": "documents",
       "source": "xananode.example:schema/compatibility-report-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/known-implementations-registry-supports-compatibility-levels-146",
+      "id": "xananode.example:rel/known-implementations-registry-supports-compatibility-levels-169",
       "type": "supports",
       "source": "xananode.example:concept/known-implementations-registry",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/compatibility-report-documents-compatibility-levels-179",
+      "id": "xananode.example:rel/compatibility-report-documents-compatibility-levels-202",
       "type": "documents",
       "source": "xananode.example:concept/compatibility-report",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/compatibility-levels-uses-compatibility-report-181",
+      "id": "xananode.example:rel/compatibility-levels-uses-compatibility-report-204",
       "type": "uses",
       "target": "xananode.example:concept/compatibility-report",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/compatibility-levels-requires-substrate-manifest-182",
+      "id": "xananode.example:rel/compatibility-levels-requires-substrate-manifest-205",
       "type": "requires",
       "target": "xananode.example:concept/substrate-manifest",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-compatibility-levels-183",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-compatibility-levels-206",
       "type": "requires",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "incoming"

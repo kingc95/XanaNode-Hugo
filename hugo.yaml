@@ -1,13 +1,28 @@
-baseURL: "https://builtbybots.com/"
+baseURL: "https://xananode.com/"
 languageCode: "en-us"
-title: "Built By Bots"
+title: "XanaNode"
 contentDir: "exampleSite/content"
 dataDir: "exampleSite/data"
 
 params:
-  description: "A living investigation into intelligence, memory, provenance, and the systems we build to remember things."
-  author: "Christian Siefen"
-  tagline: "Investigating how humans, machines, and civilizations remember things."
+  description: "A relationship-first knowledge substrate for publishing connected nodes, sources, claims, trails, and protocol artifacts."
+  author: "XanaNode Contributors"
+  tagline: "Relationships preserve knowledge."
+  keywords:
+    - knowledge graph
+    - digital garden
+    - provenance
+    - hypertext
+    - semantic publishing
+    - XanaNode
+  themeColor: "#55d6be"
+  image: "xananode-icon.svg"
+  analytics:
+    gtag: ""
+    plausibleDomain: ""
+    plausibleSrc: "https://plausible.io/js/script.js"
+  xananode:
+    namespace: "xananode.example"
 
 markup:
   goldmark:
@@ -18,3 +33,17 @@ outputs:
   home:
     - HTML
     - JSON
+
+permalinks:
+  page:
+    claims: "/claim/:slug/"
+    concepts: "/concept/:slug/"
+    essays: "/essay/:slug/"
+    media: "/media/:slug/"
+    observations: "/observation/:slug/"
+    people: "/person/:slug/"
+    projects: "/project/:slug/"
+    schemas: "/schema/:slug/"
+    sources: "/source/:slug/"
+    technologies: "/technology/:slug/"
+    trails: "/trail/:slug/"
