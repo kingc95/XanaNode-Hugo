@@ -6,37 +6,37 @@
   "summary": "The root metadata file that identifies a substrate, its namespace, version, schema version, imports, maintainers, and extension declarations.",
   "relationships": [
     {
-      "id": "xananode.example:rel/protocol-artifacts-trail-continues_to-substrate-manifest-7",
+      "id": "xananode.example:rel/protocol-artifacts-trail-continues_to-substrate-manifest-12",
       "type": "continues_to",
       "source": "xananode.example:trail/protocol-artifacts-trail",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-manifest-schema-defines-substrate-manifest-43",
+      "id": "xananode.example:rel/substrate-manifest-schema-defines-substrate-manifest-62",
       "type": "defines",
       "source": "xananode.example:schema/substrate-manifest-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-manifest-requires-namespacing-114",
+      "id": "xananode.example:rel/substrate-manifest-requires-namespacing-133",
       "type": "requires",
       "target": "xananode.example:concept/namespacing",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-manifest-125",
+      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-manifest-144",
       "type": "contains",
       "source": "xananode.example:concept/protocol-artifacts",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/custom-extension-substrate-uses-substrate-manifest-177",
+      "id": "xananode.example:rel/custom-extension-substrate-uses-substrate-manifest-196",
       "type": "uses",
       "source": "xananode.example:concept/custom-extension-substrate",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/compatibility-levels-requires-substrate-manifest-182",
+      "id": "xananode.example:rel/compatibility-levels-requires-substrate-manifest-201",
       "type": "requires",
       "source": "xananode.example:concept/compatibility-levels",
       "direction": "incoming"

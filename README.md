@@ -37,7 +37,7 @@ themes/xananode-hugo/
   layouts/                    Hugo templates and JSON export
   static/js/xananode.js       Cytoscape-powered graph viewer
   static/schemas/             Bundled XanaNode schemas and registries
-  tools/prepare-xananode.mjs  Validator, protocol artifact generator, fragment generator, suggestion scanner
+  tools/prepare-xananode.mjs  Hugo adapter that prepares Core-validated artifacts
   vendor/xananode-core/       Core SDK submodule used for protocol validation
   exampleSite/                Self-hosting example substrate
   package.json                Validation/build scripts for the example
@@ -46,6 +46,8 @@ themes/xananode-hugo/
 ## Protocol Alignment
 
 The build tool validates generated substrate artifacts with `@xananode/core`. It also copies the latest protocol schemas from the Core SDK submodule into the example site's static output so the published Hugo site and the machine-readable artifacts stay aligned.
+
+`tools/prepare-xananode.mjs` intentionally remains in this repository because it is Hugo-specific glue. It reads Hugo Markdown/front matter conventions, resolves Hugo shortcodes, writes files into Hugo's `data/` and `static/` folders, and prepares the viewer feed used by the theme. Protocol rules should live in Core; renderer concerns should stay here. If this script needs a protocol rule that Core does not expose, that rule belongs upstream in Core rather than being reimplemented permanently in Hugo.
 
 Current generated protocol files include:
 

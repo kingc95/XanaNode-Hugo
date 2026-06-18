@@ -6,43 +6,43 @@
   "summary": "A protocol example showing two independently authored substrates being compared through compatibility and merge reports.",
   "relationships": [
     {
-      "id": "xananode.example:rel/protocol-artifacts-trail-arrives_at-federation-example-11",
+      "id": "xananode.example:rel/protocol-artifacts-trail-arrives_at-federation-example-16",
       "type": "arrives_at",
       "source": "xananode.example:trail/protocol-artifacts-trail",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/federation-example-requires-merge-report-schema-51",
+      "id": "xananode.example:rel/federation-example-requires-merge-report-schema-70",
       "type": "requires",
       "target": "xananode.example:schema/merge-report-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-example-requires-compatibility-report-schema-54",
+      "id": "xananode.example:rel/federation-example-requires-compatibility-report-schema-73",
       "type": "requires",
       "target": "xananode.example:schema/compatibility-report-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-example-demonstrates-federated-knowledge-substrates-160",
+      "id": "xananode.example:rel/federation-example-demonstrates-federated-knowledge-substrates-179",
       "type": "demonstrates",
       "target": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-example-uses-compatibility-report-161",
+      "id": "xananode.example:rel/federation-example-uses-compatibility-report-180",
       "type": "uses",
       "target": "xananode.example:concept/compatibility-report",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-example-uses-merge-report-162",
+      "id": "xananode.example:rel/federation-example-uses-merge-report-181",
       "type": "uses",
       "target": "xananode.example:concept/merge-report",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-example-preserves-independent-moderation-163",
+      "id": "xananode.example:rel/federation-example-preserves-independent-moderation-182",
       "type": "preserves",
       "target": "xananode.example:concept/independent-moderation",
       "direction": "outgoing"

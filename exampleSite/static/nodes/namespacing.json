@@ -6,49 +6,49 @@
   "summary": "A way to identify which substrate or schema owns a node type, relationship type, node, or fragment.",
   "relationships": [
     {
-      "id": "xananode.example:rel/namespace-schema-supports-namespacing-47",
+      "id": "xananode.example:rel/namespace-schema-supports-namespacing-66",
       "type": "supports",
       "source": "xananode.example:schema/namespace-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-manifest-requires-namespacing-114",
+      "id": "xananode.example:rel/substrate-manifest-requires-namespacing-133",
       "type": "requires",
       "source": "xananode.example:concept/substrate-manifest",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/namespacing-enables-schema-extension-118",
+      "id": "xananode.example:rel/namespacing-enables-schema-extension-137",
       "type": "enables",
       "target": "xananode.example:concept/schema-extension",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/namespacing-clarifies-schema-extension-130",
+      "id": "xananode.example:rel/namespacing-clarifies-schema-extension-149",
       "type": "clarifies",
       "target": "xananode.example:concept/schema-extension",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/namespace-registry-implements-namespacing-131",
+      "id": "xananode.example:rel/namespace-registry-implements-namespacing-150",
       "type": "implements",
       "source": "xananode.example:concept/namespace-registry",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/merge-validation-requires-namespacing-136",
+      "id": "xananode.example:rel/merge-validation-requires-namespacing-155",
       "type": "requires",
       "source": "xananode.example:concept/merge-validation",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-namespacing-164",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-namespacing-183",
       "type": "requires",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/canonical-type-policy-requires-namespacing-189",
+      "id": "xananode.example:rel/canonical-type-policy-requires-namespacing-208",
       "type": "requires",
       "source": "xananode.example:concept/canonical-type-policy",
       "direction": "incoming"

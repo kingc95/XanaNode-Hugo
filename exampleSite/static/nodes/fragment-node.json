@@ -6,37 +6,37 @@
   "summary": "A node representing a stable addressable portion of another source, publication, media object, or node.",
   "relationships": [
     {
-      "id": "xananode.example:rel/tumbler-addressing-enables-fragment-node-105",
+      "id": "xananode.example:rel/tumbler-addressing-enables-fragment-node-124",
       "type": "enables",
       "source": "xananode.example:concept/tumbler-addressing",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/transclusion-uses-fragment-node-109",
+      "id": "xananode.example:rel/transclusion-uses-fragment-node-128",
       "type": "uses",
       "source": "xananode.example:concept/transclusion",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-node-record-contains-fragment-node-113",
+      "id": "xananode.example:rel/substrate-node-record-contains-fragment-node-132",
       "type": "contains",
       "source": "xananode.example:concept/substrate-node-record",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/transclusion-requires-fragment-node-153",
+      "id": "xananode.example:rel/transclusion-requires-fragment-node-172",
       "type": "requires",
       "source": "xananode.example:concept/transclusion",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/fragment-node-preserves-provenance-154",
+      "id": "xananode.example:rel/fragment-node-preserves-provenance-173",
       "type": "preserves",
       "target": "xananode.example:concept/provenance",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/fragment-node-deep_links_to-mother-of-all-demos-155",
+      "id": "xananode.example:rel/fragment-node-deep_links_to-mother-of-all-demos-174",
       "type": "deep_links_to",
       "target": "xananode.example:source/mother-of-all-demos",
       "direction": "outgoing"

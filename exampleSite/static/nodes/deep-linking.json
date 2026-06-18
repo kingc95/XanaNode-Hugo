@@ -6,19 +6,19 @@
   "summary": "Pointing to a specific addressable fragment rather than only to a whole document or node.",
   "relationships": [
     {
-      "id": "xananode.example:rel/tumbler-addressing-enables-deep-linking-103",
+      "id": "xananode.example:rel/tumbler-addressing-enables-deep-linking-122",
       "type": "enables",
       "source": "xananode.example:concept/tumbler-addressing",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/deep-linking-enables-transclusion-173",
+      "id": "xananode.example:rel/deep-linking-enables-transclusion-192",
       "type": "enables",
       "target": "xananode.example:concept/transclusion",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/deep-linking-contrasts_with-unlabeled-hyperlink-174",
+      "id": "xananode.example:rel/deep-linking-contrasts_with-unlabeled-hyperlink-193",
       "type": "contrasts_with",
       "target": "xananode.example:concept/unlabeled-hyperlink",
       "direction": "outgoing"

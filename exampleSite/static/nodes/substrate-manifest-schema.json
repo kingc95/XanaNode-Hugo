@@ -7,25 +7,25 @@
   "summary": "The JSON Schema that validates a XanaNode substrate manifest.",
   "relationships": [
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-manifest-schema-32",
+      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-manifest-schema-51",
       "type": "defines",
       "source": "xananode.example:schema/xananode-core-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-manifest-schema-defines-substrate-manifest-43",
+      "id": "xananode.example:rel/substrate-manifest-schema-defines-substrate-manifest-62",
       "type": "defines",
       "target": "xananode.example:concept/substrate-manifest",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-contains-substrate-manifest-schema-44",
+      "id": "xananode.example:rel/xananode-core-schema-contains-substrate-manifest-schema-63",
       "type": "contains",
       "source": "xananode.example:schema/xananode-core-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/compatibility-report-requires-substrate-manifest-schema-45",
+      "id": "xananode.example:rel/compatibility-report-requires-substrate-manifest-schema-64",
       "type": "requires",
       "source": "xananode.example:concept/compatibility-report",
       "direction": "incoming"

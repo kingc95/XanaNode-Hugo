@@ -1,0 +1,35 @@
+{
+  "id": "xananode.example:source/xananode-core-sdk-repo",
+  "title": "XanaNode Core SDK Repository",
+  "type": "source",
+  "importance": 5,
+  "summary": "The reusable Core SDK repository for building, validating, and exporting XanaNode protocol artifacts across renderers and tools.",
+  "source_url": "https://github.com/kingc95/XanaNode-Core-SDK",
+  "rights_status": "open-source",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-implementation-stack-trail-continues_to-xananode-core-sdk-repo-2",
+      "type": "continues_to",
+      "source": "xananode.example:trail/xananode-implementation-stack-trail",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/xananode-core-sdk-repo-implements-xananode-core-schema-35",
+      "type": "implements",
+      "target": "xananode.example:schema/xananode-core-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-core-sdk-repo-uses-substrate-node-record-36",
+      "type": "uses",
+      "target": "xananode.example:concept/substrate-node-record",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-core-sdk-repo-uses-substrate-relationship-list-37",
+      "type": "uses",
+      "target": "xananode.example:concept/substrate-relationship-list",
+      "direction": "outgoing"
+    }
+  ]
+}

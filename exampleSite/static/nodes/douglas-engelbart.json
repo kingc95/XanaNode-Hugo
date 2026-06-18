@@ -6,25 +6,25 @@
   "summary": "Computer pioneer focused on augmenting human intellect through interactive computing.",
   "relationships": [
     {
-      "id": "xananode.example:rel/historical-lineage-trail-continues_to-douglas-engelbart-13",
+      "id": "xananode.example:rel/historical-lineage-trail-continues_to-douglas-engelbart-18",
       "type": "continues_to",
       "source": "xananode.example:trail/historical-lineage-trail",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/douglas-engelbart-created-nls-72",
+      "id": "xananode.example:rel/douglas-engelbart-created-nls-91",
       "type": "created",
       "target": "xananode.example:project/nls",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/douglas-engelbart-presented-mother-of-all-demos-73",
+      "id": "xananode.example:rel/douglas-engelbart-presented-mother-of-all-demos-92",
       "type": "presented",
       "target": "xananode.example:source/mother-of-all-demos",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-extends-douglas-engelbart-74",
+      "id": "xananode.example:rel/xananode-extends-douglas-engelbart-93",
       "type": "extends",
       "source": "xananode.example:concept/xananode",
       "direction": "incoming"

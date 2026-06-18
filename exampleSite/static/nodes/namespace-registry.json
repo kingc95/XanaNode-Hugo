@@ -6,25 +6,25 @@
   "summary": "A registry of known namespace identifiers used to avoid collisions and help tools recognize who owns a substrate, schema, or extension vocabulary.",
   "relationships": [
     {
-      "id": "xananode.example:rel/namespace-schema-defines-namespace-registry-46",
+      "id": "xananode.example:rel/namespace-schema-defines-namespace-registry-65",
       "type": "defines",
       "source": "xananode.example:schema/namespace-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/namespace-registry-implements-namespacing-131",
+      "id": "xananode.example:rel/namespace-registry-implements-namespacing-150",
       "type": "implements",
       "target": "xananode.example:concept/namespacing",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/schema-extension-requires-namespace-registry-132",
+      "id": "xananode.example:rel/schema-extension-requires-namespace-registry-151",
       "type": "requires",
       "source": "xananode.example:concept/schema-extension",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/custom-extension-substrate-requires-namespace-registry-176",
+      "id": "xananode.example:rel/custom-extension-substrate-requires-namespace-registry-195",
       "type": "requires",
       "source": "xananode.example:concept/custom-extension-substrate",
       "direction": "incoming"

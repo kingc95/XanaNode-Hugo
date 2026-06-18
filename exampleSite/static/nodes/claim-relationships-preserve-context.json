@@ -7,37 +7,37 @@
   "summary": "Typed relationships preserve why nodes are connected, while ordinary hyperlinks usually preserve only that a connection exists.",
   "relationships": [
     {
-      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-relationships-preserve-context-21",
+      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-relationships-preserve-context-40",
       "type": "supports",
       "source": "xananode.example:source/xanadu-document-interconnection",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/source-code-link-decay-study-supports-claim-relationships-preserve-context-23",
+      "id": "xananode.example:rel/source-code-link-decay-study-supports-claim-relationships-preserve-context-42",
       "type": "supports",
       "source": "xananode.example:source/source-code-link-decay-study",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/typed-relationships-supports-claim-relationships-preserve-context-101",
+      "id": "xananode.example:rel/typed-relationships-supports-claim-relationships-preserve-context-120",
       "type": "supports",
       "source": "xananode.example:concept/typed-relationships",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/claim-relationships-preserve-context-evidence_for-provenance-123",
+      "id": "xananode.example:rel/claim-relationships-preserve-context-evidence_for-provenance-142",
       "type": "evidence_for",
       "target": "xananode.example:concept/provenance",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/typed-relationships-has_claim-claim-relationships-preserve-context-191",
+      "id": "xananode.example:rel/typed-relationships-has_claim-claim-relationships-preserve-context-210",
       "type": "has_claim",
       "source": "xananode.example:concept/typed-relationships",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/claim-relationships-preserve-context-contrasts_with-unlabeled-hyperlink-192",
+      "id": "xananode.example:rel/claim-relationships-preserve-context-contrasts_with-unlabeled-hyperlink-211",
       "type": "contrasts_with",
       "target": "xananode.example:concept/unlabeled-hyperlink",
       "direction": "outgoing"

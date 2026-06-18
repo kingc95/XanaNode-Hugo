@@ -6,31 +6,31 @@
   "summary": "A failure mode where references embedded in digital artifacts decay, move, disappear, or lose context over time.",
   "relationships": [
     {
-      "id": "xananode.example:rel/source-code-link-decay-study-documents-link-rot-22",
+      "id": "xananode.example:rel/source-code-link-decay-study-documents-link-rot-41",
       "type": "documents",
       "source": "xananode.example:source/source-code-link-decay-study",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/link-rot-demonstrates-unlabeled-hyperlink-75",
+      "id": "xananode.example:rel/link-rot-demonstrates-unlabeled-hyperlink-94",
       "type": "demonstrates",
       "target": "xananode.example:concept/unlabeled-hyperlink",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/link-rot-threatens-provenance-76",
+      "id": "xananode.example:rel/link-rot-threatens-provenance-95",
       "type": "threatens",
       "target": "xananode.example:concept/provenance",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/source-code-link-decay-study-supports-link-rot-77",
+      "id": "xananode.example:rel/source-code-link-decay-study-supports-link-rot-96",
       "type": "supports",
       "source": "xananode.example:source/source-code-link-decay-study",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/knowledge-substrate-explains-link-rot-78",
+      "id": "xananode.example:rel/knowledge-substrate-explains-link-rot-97",
       "type": "explains",
       "source": "xananode.example:concept/knowledge-substrate",
       "direction": "incoming"

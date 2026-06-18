@@ -7,19 +7,19 @@
   "summary": "A knowledge substrate is not the information itself; it is the structure that determines how information relates, persists, and can be understood.",
   "relationships": [
     {
-      "id": "xananode.example:rel/as-we-may-think-supports-claim-substrate-is-structure-27",
+      "id": "xananode.example:rel/as-we-may-think-supports-claim-substrate-is-structure-46",
       "type": "supports",
       "source": "xananode.example:source/as-we-may-think",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/knowledge-substrate-has_claim-claim-substrate-is-structure-147",
+      "id": "xananode.example:rel/knowledge-substrate-has_claim-claim-substrate-is-structure-166",
       "type": "has_claim",
       "source": "xananode.example:concept/knowledge-substrate",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-substrate-is-structure-190",
+      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-substrate-is-structure-209",
       "type": "supports",
       "source": "xananode.example:source/xanadu-document-interconnection",
       "direction": "incoming"

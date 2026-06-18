@@ -6,31 +6,31 @@
   "summary": "A governance process for preserving contested claims, identity matches, relationships, and moderation decisions without pretending disagreement has disappeared.",
   "relationships": [
     {
-      "id": "xananode.example:rel/moderation-model-context_for-dispute-resolution-135",
+      "id": "xananode.example:rel/moderation-model-context_for-dispute-resolution-154",
       "type": "context_for",
       "source": "xananode.example:concept/moderation-model",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/dispute-resolution-requires-provenance-169",
+      "id": "xananode.example:rel/dispute-resolution-requires-provenance-188",
       "type": "requires",
       "target": "xananode.example:concept/provenance",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/dispute-resolution-supports-claim-merge-without-collapse-170",
+      "id": "xananode.example:rel/dispute-resolution-supports-claim-merge-without-collapse-189",
       "type": "supports",
       "target": "xananode.example:claim/claim-merge-without-collapse",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/dispute-resolution-context_for-merge-report-171",
+      "id": "xananode.example:rel/dispute-resolution-context_for-merge-report-190",
       "type": "context_for",
       "target": "xananode.example:concept/merge-report",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-rules-requires-dispute-resolution-172",
+      "id": "xananode.example:rel/federation-rules-requires-dispute-resolution-191",
       "type": "requires",
       "source": "xananode.example:concept/federation-rules",
       "direction": "incoming"

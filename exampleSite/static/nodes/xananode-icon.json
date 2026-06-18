@@ -8,19 +8,19 @@
   "rights_status": "open-source",
   "relationships": [
     {
-      "id": "xananode.example:rel/xananode-hugo-theme-has_primary_media-xananode-icon-79",
+      "id": "xananode.example:rel/xananode-hugo-theme-has_primary_media-xananode-icon-98",
       "type": "has_primary_media",
       "source": "xananode.example:project/xananode-hugo-theme",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-icon-depicts-xananode-hugo-theme-80",
+      "id": "xananode.example:rel/xananode-icon-depicts-xananode-hugo-theme-99",
       "type": "depicts",
       "target": "xananode.example:project/xananode-hugo-theme",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-icon-represents-xananode-81",
+      "id": "xananode.example:rel/xananode-icon-represents-xananode-100",
       "type": "represents",
       "target": "xananode.example:concept/xananode",
       "direction": "outgoing"

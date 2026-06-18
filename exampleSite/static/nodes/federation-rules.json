@@ -6,43 +6,43 @@
   "summary": "The rules for exchanging, comparing, and preserving independently governed substrates without collapsing them into one authority.",
   "relationships": [
     {
-      "id": "xananode.example:rel/federation-rules-requires-moderation-model-134",
+      "id": "xananode.example:rel/federation-rules-requires-moderation-model-153",
       "type": "requires",
       "target": "xananode.example:concept/moderation-model",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-rules-defines-federated-knowledge-substrates-156",
+      "id": "xananode.example:rel/federation-rules-defines-federated-knowledge-substrates-175",
       "type": "defines",
       "target": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-rules-preserves-independent-moderation-157",
+      "id": "xananode.example:rel/federation-rules-preserves-independent-moderation-176",
       "type": "preserves",
       "target": "xananode.example:concept/independent-moderation",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-rules-requires-compatibility-report-158",
+      "id": "xananode.example:rel/federation-rules-requires-compatibility-report-177",
       "type": "requires",
       "target": "xananode.example:concept/compatibility-report",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-rules-requires-merge-report-159",
+      "id": "xananode.example:rel/federation-rules-requires-merge-report-178",
       "type": "requires",
       "target": "xananode.example:concept/merge-report",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-federation-rules-166",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-federation-rules-185",
       "type": "requires",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/federation-rules-requires-dispute-resolution-172",
+      "id": "xananode.example:rel/federation-rules-requires-dispute-resolution-191",
       "type": "requires",
       "target": "xananode.example:concept/dispute-resolution",
       "direction": "outgoing"

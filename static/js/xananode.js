@@ -49,7 +49,14 @@
         ttsDetail: "full"
     });
 
-    const SEARCH_VERBS = ["Explore", "Map", "Trace", "Search", "Navigate", "Follow", "Question", "Compare"];
+    const SEARCH_PROMPTS = [
+        "explore the knowledge substrate",
+        "trace an idea across sources",
+        "follow a claim to evidence",
+        "compare connected nodes",
+        "search for provenance",
+        "map a trail through context"
+    ];
 
     const DEFAULT_TYPES = [
         "essay",
@@ -215,16 +222,17 @@
                 return res.json();
             }),
             fetch("/schemas/xananode-node-types.json").then((r) => r.json()).catch(() => null),
-            fetch("/schemas/xananode-relationship-types.json").then((r) => r.json()).catch(() => null)
+            fetch("/schemas/xananode-relationship-types.json").then((r) => r.json()).catch(() => null),
+            fetch("/xananode-fragments.json").then((r) => r.json()).catch(() => null)
         ]))
-        .then(([data, nodeSchema, relSchema]) => {
+        .then(([data, nodeSchema, relSchema, fragmentsData]) => {
             if (nodeSchema?.node_types) {
                 VALID_NODE_TYPES = new Set(nodeSchema.node_types.map((t) => t.type));
             }
             if (relSchema?.relationship_types) {
                 VALID_RELATIONSHIP_TYPES = new Set(relSchema.relationship_types.map((t) => t.type));
             }
-            init(data, nodeSchema);
+            init(data, nodeSchema, fragmentsData);
         })
         .catch((err) => {
             graphEl.innerHTML = `<p class="xana-error">${escapeHtml(err.message)}</p>`;
@@ -288,7 +296,7 @@
         `;
     }
 
-    function init(data, nodeTypesData) {
+    function init(data, nodeTypesData, fragmentsData) {
         const allNodes = Array.isArray(data.nodes) ? data.nodes : [];
         const nodeTypeColors = buildTypeColorMap(nodeTypesData);
         const nodeIds = new Set(allNodes.map((node) => node.id));
@@ -362,13 +370,31 @@
             tourIndex: 0,
             tourVisited: new Set(),
             tourRecent: [],
+            activeTrail: null,
             cy: null,
             allNodes,
             nodeIds,
             allEdges,
             allEdgesRaw,
+            fragmentsData: fragmentsData || {},
+            pendingFragmentHighlight: null,
             displaySettings
         };
+
+        if (rawRequested && !requestedNode) {
+            const protocolTarget = resolveProtocolAddress(rawRequested, state);
+            if (protocolTarget) {
+                state.focusId = protocolTarget.nodeId;
+                state.pendingFragmentHighlight = protocolTarget.fragmentId
+                    ? {
+                        nodeId: protocolTarget.nodeId,
+                        fragmentId: protocolTarget.fragmentId,
+                        fragment: protocolTarget.fragment
+                    }
+                    : null;
+                state.pathExplorer.sourceQuery = protocolTarget.nodeId;
+            }
+        }
 
         if (state.focusId) {
             updateUrl(state.focusId, true);
@@ -418,10 +444,18 @@
 
         window.addEventListener("popstate", () => {
             const nodeFromUrl = nodeIdFromUrl(allNodes);
+            const protocolTarget = nodeFromUrl ? resolveProtocolAddress(nodeFromUrl, state) : null;
 
-            if (nodeFromUrl && allNodes.some((node) => node.id === nodeFromUrl)) {
+            if (protocolTarget || (nodeFromUrl && allNodes.some((node) => node.id === nodeFromUrl))) {
                 state.previousFocusId = state.focusId;
-                state.focusId = nodeFromUrl;
+                state.focusId = protocolTarget?.nodeId || nodeFromUrl;
+                state.pendingFragmentHighlight = protocolTarget?.fragmentId
+                    ? {
+                        nodeId: protocolTarget.nodeId,
+                        fragmentId: protocolTarget.fragmentId,
+                        fragment: protocolTarget.fragment
+                    }
+                    : null;
                 renderVisibleGraph(state, {
                     updateUrl: false,
                     stagedReveal: true,
@@ -483,7 +517,7 @@
                             type="search"
                             autocomplete="off"
                             spellcheck="false"
-                            placeholder="${escapeHtml(SEARCH_VERBS[0])} the knowledge substrate..."
+                            placeholder="${escapeHtml(SEARCH_PROMPTS[0])}"
                             value="${escapeHtml(state.searchQuery)}"
                         >
                         <button
@@ -517,6 +551,7 @@
                 <span class="xana-ctrl-sep"></span>
                 <button class="xana-ctrl-btn" data-tour-toggle aria-label="Guided tour" title="Guided tour">&#x25B6;</button>
                 <button class="xana-ctrl-btn" data-settings-toggle aria-label="Display and narration settings" title="Settings">&#9881;</button>
+                <button class="xana-ctrl-btn" data-interface-tour aria-label="Interface tour" title="Interface tour">?</button>
                 <input
                     type="number"
                     class="xana-ctrl-speed"
@@ -771,6 +806,7 @@
         const detailSelect = graphEl.querySelector("[data-tts-detail]");
         const rateInput = graphEl.querySelector("[data-tts-rate]");
         const pitchInput = graphEl.querySelector("[data-tts-pitch]");
+        const interfaceTourButton = graphEl.querySelector("[data-interface-tour]");
 
         updateDisplaySettingButtons(state);
         populateVoiceOptions(state);
@@ -789,6 +825,10 @@
         settingsClose?.addEventListener("click", () => {
             if (settingsPanel) settingsPanel.hidden = true;
             settingsToggle?.classList.remove("active");
+        });
+
+        interfaceTourButton?.addEventListener("click", () => {
+            startInterfaceTour(state);
         });
 
         graphEl.querySelectorAll("[data-display-setting]").forEach((button) => {
@@ -1110,6 +1150,53 @@
             Array.isArray(node.tags) ? node.tags.join(" ") : "",
             Array.isArray(node.aliases) ? node.aliases.join(" ") : ""
         ].filter(Boolean).join(" "));
+    }
+
+    function resolveProtocolAddress(value, state) {
+        const raw = decodeURIComponent(String(value || "").trim()).replace(/^xana:\/\//, "");
+        if (!raw) return null;
+
+        const nodes = state.allNodes || [];
+        const fragmentMatch = raw.match(/^(.*?)(?:@[^#]+)?#fragment\/([A-Za-z0-9._-]+)(?:@.+)?$/);
+        const nodeAddress = fragmentMatch ? fragmentMatch[1] : raw.replace(/@[^/#]+$/, "");
+        const fragmentId = fragmentMatch?.[2] || "";
+
+        const node = nodes.find((candidate) => {
+            return candidate.id === nodeAddress ||
+                candidate.protocol_id === nodeAddress ||
+                candidate.tumbler === nodeAddress;
+        });
+
+        if (!node) return null;
+        if (!fragmentId) return { nodeId: node.id, fragmentId: "", fragment: null };
+
+        const fragment = findFragmentRecord(node.id, fragmentId, raw, state);
+        return { nodeId: node.id, fragmentId, fragment };
+    }
+
+    function findFragmentRecord(nodeId, fragmentId, rawAddress, state) {
+        const versions = state.fragmentsData?.nodes?.[nodeId]?.versions || {};
+        for (const version of Object.values(versions)) {
+            const metadata = version?.metadata || {};
+            for (const fragment of Object.values(metadata)) {
+                if (!fragment) continue;
+                const tumblerNoVersion = String(fragment.tumbler || "").replace(/@[^#]+(?=#fragment\/)/, "").replace(/@[^@#]+$/, "");
+                const rawNoVersion = rawAddress.replace(/@[^#]+(?=#fragment\/)/, "").replace(/@[^@#]+$/, "");
+                if (
+                    fragment.id === fragmentId ||
+                    fragment.fragment_id === fragmentId ||
+                    fragment.protocol_id === rawAddress ||
+                    fragment.tumbler === rawAddress ||
+                    (tumblerNoVersion && tumblerNoVersion === rawNoVersion)
+                ) {
+                    return {
+                        ...fragment,
+                        text: version.fragments?.[fragment.id || fragmentId] || ""
+                    };
+                }
+            }
+        }
+        return null;
     }
 
     function scoreSearchResult(node, haystack, normalizedQuery, queryTokens) {
@@ -1683,6 +1770,7 @@
         state.tourIndex = 0;
         state.tourVisited = new Set([state.focusId].filter(Boolean));
         state.tourRecent = [state.focusId].filter(Boolean);
+        state.activeTrail = buildActiveTrail(state);
         graphEl.dataset.tourActive = "1";
         updateTourButton();
         panelEl.scrollTop = 0;
@@ -1694,6 +1782,7 @@
 
     function stopTour(state) {
         state.tourActive = false;
+        state.activeTrail = null;
         graphEl.dataset.tourActive = "0";
         clearTourTimers();
         stopNarration();
@@ -1734,6 +1823,9 @@
     }
 
     function pickNextTourNode(state) {
+        const trailNext = pickNextTrailNode(state);
+        if (trailNext) return trailNext;
+
         const cy = state.cy;
         if (!cy) return null;
 
@@ -1758,6 +1850,34 @@
 
         const nextId = next?.id() || null;
         if (nextId) rememberTourVisit(nextId, state);
+        return nextId;
+    }
+
+    function buildActiveTrail(state) {
+        const focusNode = state.allNodes.find((node) => node.id === state.focusId);
+        const trailNodes = Array.isArray(focusNode?.trail_nodes)
+            ? focusNode.trail_nodes.filter((id) => state.nodeIds.has(id))
+            : [];
+        if (!trailNodes.length) return null;
+        return {
+            trailId: focusNode.id,
+            nodes: trailNodes,
+            index: 0
+        };
+    }
+
+    function pickNextTrailNode(state) {
+        const trail = state.activeTrail;
+        if (!trail?.nodes?.length) return null;
+        const currentIndex = trail.nodes.indexOf(state.focusId);
+        const nextIndex = currentIndex >= 0 ? currentIndex + 1 : trail.index;
+        const nextId = trail.nodes[nextIndex];
+        trail.index = nextIndex + 1;
+        if (!nextId) {
+            state.activeTrail = null;
+            return null;
+        }
+        rememberTourVisit(nextId, state);
         return nextId;
     }
 
@@ -1912,6 +2032,10 @@
 
             ${renderSourceInfo(node)}
 
+            ${renderProtocolFooter(node)}
+
+            ${renderTrailPlaylist(node, state)}
+
             <details class="xana-connections" ${loadSetting(STORAGE_KEYS.connectionsOpen, false) ? "open" : ""}>
                 <summary class="xana-connections-summary">
                     <span>Connections</span>
@@ -1940,6 +2064,8 @@
         }
 
         normalizePanelLinks(state);
+        bindTrailPlaylist(state);
+        highlightPendingFragment(state);
 
         // Tour: reset scroll and restart both the panel-scroll loop and the
         // countdown ring animation so both are in sync with the new node's dwell.
@@ -1952,13 +2078,127 @@
         }
     }
 
+    function renderTrailPlaylist(node, state) {
+        if (!Array.isArray(node.trail_nodes) || !node.trail_nodes.length) return "";
+        const items = node.trail_nodes
+            .map((id, index) => {
+                const target = state.allNodes.find((candidate) => candidate.id === id);
+                if (!target) return "";
+                return `
+                    <button type="button" data-trail-jump="${escapeHtml(target.id)}">
+                        <span>${index + 1}</span>
+                        <strong>${escapeHtml(target.title || target.id)}</strong>
+                        <em>${escapeHtml(target.type || "node")}</em>
+                    </button>
+                `;
+            })
+            .filter(Boolean)
+            .join("");
+
+        if (!items) return "";
+        return `
+            <section class="xana-trail-playlist" data-tts-skip>
+                <div class="xana-trail-playlist-head">
+                    <span>Trail playlist</span>
+                    <button type="button" data-trail-start="${escapeHtml(node.id)}">Play trail</button>
+                </div>
+                <div class="xana-trail-playlist-items">${items}</div>
+            </section>
+        `;
+    }
+
+    function bindTrailPlaylist(state) {
+        panelEl.querySelectorAll("[data-trail-jump]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const id = button.getAttribute("data-trail-jump");
+                state.activeTrail = {
+                    trailId: state.focusId,
+                    nodes: [...(state.allNodes.find((node) => node.id === state.focusId)?.trail_nodes || [])],
+                    index: 0
+                };
+                travelToNode(id, state, true);
+            });
+        });
+
+        panelEl.querySelector("[data-trail-start]")?.addEventListener("click", () => {
+            state.activeTrail = buildActiveTrail(state);
+            const nextId = pickNextTrailNode(state);
+            if (nextId) travelToNode(nextId, state, true);
+        });
+    }
+
+    function renderProtocolFooter(node) {
+        const rows = [
+            node.protocol_id ? ["Protocol", node.protocol_id] : null,
+            node.tumbler ? ["Tumbler", node.tumbler] : null
+        ].filter(Boolean);
+
+        if (!rows.length) return "";
+
+        return `
+            <footer class="xana-protocol-footer" data-tts-skip aria-hidden="true">
+                ${rows.map(([label, value]) => `
+                    <div>
+                        <span>${escapeHtml(label)}</span>
+                        <code>${escapeHtml(value)}</code>
+                    </div>
+                `).join("")}
+            </footer>
+        `;
+    }
+
+    function highlightPendingFragment(state) {
+        const pending = state.pendingFragmentHighlight;
+        if (!pending || pending.nodeId !== state.focusId) return;
+
+        panelEl.querySelectorAll(".xana-fragment-highlight").forEach((el) => {
+            el.classList.remove("xana-fragment-highlight");
+        });
+        panelEl.querySelectorAll(".xana-fragment-note").forEach((el) => el.remove());
+
+        const text = normalizeFragmentText(pending.fragment?.text || "");
+        const candidates = [...panelEl.querySelectorAll(".xana-node-content p, .xana-node-content li, .xana-node-content blockquote, .xana-node-content pre")];
+        const target = candidates.find((el) => {
+            const candidate = normalizeFragmentText(el.textContent || "");
+            if (!candidate || !text) return false;
+            return candidate.includes(text) || text.includes(candidate) || candidate.includes(text.slice(0, 80));
+        });
+
+        if (target) {
+            target.classList.add("xana-fragment-highlight");
+            target.scrollIntoView({ block: "center", behavior: "smooth" });
+            state.pendingFragmentHighlight = null;
+            return;
+        }
+
+        const note = document.createElement("aside");
+        note.className = "xana-fragment-note";
+        note.setAttribute("data-tts-skip", "");
+        note.setAttribute("aria-hidden", "true");
+        note.innerHTML = `
+            <span>Fragment address</span>
+            <code>${escapeHtml(pending.fragment?.tumbler || `${state.allNodes.find((node) => node.id === pending.nodeId)?.protocol_id || pending.nodeId}#fragment/${pending.fragmentId}`)}</code>
+        `;
+        const content = panelEl.querySelector(".xana-node-content");
+        if (content) content.prepend(note);
+        note.scrollIntoView({ block: "center", behavior: "smooth" });
+        state.pendingFragmentHighlight = null;
+    }
+
+    function normalizeFragmentText(value) {
+        return stripHtml(value)
+            .replace(/\s+/g, " ")
+            .trim()
+            .toLowerCase();
+    }
+
     function narrateNode(node, state) {
         if (!node || !state?.displaySettings?.ttsNarrator) return false;
         if (!canNarrate()) return false;
 
         const title = node.title || node.id || "Untitled node";
         const summary = stripHtml(node.summary || "").replace(/\s+/g, " ").trim();
-        const content = stripHtml(node.content || node.html || "").replace(/\s+/g, " ").trim();
+        const content = stripHtml(node.html || node.content || "").replace(/\s+/g, " ").trim();
         const wantsFull = state.displaySettings.ttsDetail !== "summary";
         const readableContent = wantsFull && content && content !== summary
             ? content
@@ -2023,6 +2263,94 @@
 
         if (current && !voices.some((voice) => voice.voiceURI === current)) {
             select.value = "";
+        }
+    }
+
+    function startInterfaceTour(state) {
+        const steps = [
+            {
+                selector: ".xana-searcher",
+                title: "Start anywhere",
+                body: "Search is the front door. Type a person, claim, source, idea, or protocol address and the graph will pull matching nodes into view."
+            },
+            {
+                selector: ".xana-depth-row",
+                title: "Choose your focus",
+                body: "Near, mid, and deep change how much neighborhood context you see around the selected node."
+            },
+            {
+                selector: "#xana-stage",
+                title: "Navigate the substrate",
+                body: "Each node is a typed knowledge object. Click one to travel through meaning, not just pages."
+            },
+            {
+                selector: ".xana-controls-strip",
+                title: "Graph tools",
+                body: "These controls zoom, fit, filter, audit, compare paths, run the node tour, and open display or narration settings."
+            },
+            {
+                selector: "#xana-panel",
+                title: "Read with context",
+                body: "The content panel shows the selected node, media, source metadata, stable addresses, and typed relationships."
+            },
+            {
+                selector: ".xana-connections",
+                title: "Follow relationships",
+                body: "Connections explain why nodes are linked. This is where evidence, disagreement, lineage, and trails become navigable."
+            },
+            {
+                selector: "[data-settings-toggle]",
+                title: "Make it yours",
+                body: "Settings let readers choose theme, density, graph atmosphere, and narrated tours."
+            }
+        ];
+
+        let index = 0;
+        renderInterfaceTourStep();
+
+        function renderInterfaceTourStep() {
+            graphEl.querySelectorAll(".xana-interface-tour, .xana-tour-spotlight").forEach((el) => el.remove());
+            document.querySelectorAll(".xana-tour-target").forEach((el) => el.classList.remove("xana-tour-target"));
+
+            const step = steps[index];
+            const target = document.querySelector(step.selector);
+            if (target) target.classList.add("xana-tour-target");
+
+            const overlay = document.createElement("div");
+            overlay.className = "xana-interface-tour";
+            overlay.setAttribute("data-tts-skip", "");
+            overlay.innerHTML = `
+                <div class="xana-interface-tour-card">
+                    <div class="xana-interface-tour-count">${index + 1} / ${steps.length}</div>
+                    <h2>${escapeHtml(step.title)}</h2>
+                    <p>${escapeHtml(step.body)}</p>
+                    <div class="xana-interface-tour-actions">
+                        <button type="button" data-tour-close>Close</button>
+                        <button type="button" data-tour-prev ${index === 0 ? "disabled" : ""}>Back</button>
+                        <button type="button" data-tour-next>${index === steps.length - 1 ? "Done" : "Next"}</button>
+                    </div>
+                </div>
+            `;
+            graphEl.appendChild(overlay);
+
+            overlay.querySelector("[data-tour-close]")?.addEventListener("click", closeInterfaceTour);
+            overlay.querySelector("[data-tour-prev]")?.addEventListener("click", () => {
+                index = Math.max(0, index - 1);
+                renderInterfaceTourStep();
+            });
+            overlay.querySelector("[data-tour-next]")?.addEventListener("click", () => {
+                if (index >= steps.length - 1) {
+                    closeInterfaceTour();
+                    return;
+                }
+                index += 1;
+                renderInterfaceTourStep();
+            });
+        }
+
+        function closeInterfaceTour() {
+            graphEl.querySelectorAll(".xana-interface-tour").forEach((el) => el.remove());
+            document.querySelectorAll(".xana-tour-target").forEach((el) => el.classList.remove("xana-tour-target"));
         }
     }
 
@@ -2828,6 +3156,32 @@
             if (!href || href.startsWith("#")) return;
             if (link.hasAttribute("data-node-jump")) return;
 
+            const protocolTarget = resolveProtocolAddress(href, state);
+            if (protocolTarget) {
+                link.setAttribute("href", nodeHref(protocolTarget.nodeId, state));
+                link.dataset.nodeJump = protocolTarget.nodeId;
+                if (protocolTarget.fragmentId) {
+                    link.dataset.fragmentJump = protocolTarget.fragmentId;
+                }
+
+                link.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    closeTransientUi(state, { clearSearch: true });
+                    state.pendingFragmentHighlight = protocolTarget.fragmentId
+                        ? {
+                            nodeId: protocolTarget.nodeId,
+                            fragmentId: protocolTarget.fragmentId,
+                            fragment: protocolTarget.fragment
+                        }
+                        : null;
+                    travelToNode(protocolTarget.nodeId, state, true);
+                    if (protocolTarget.nodeId === state.focusId) {
+                        highlightPendingFragment(state);
+                    }
+                });
+                return;
+            }
+
             // Primary match: compare normalized URL paths (works for absolute hrefs).
             let matchingNode = state.allNodes.find((node) => {
                 return normalizePath(node.url) === normalizePath(href);
@@ -3056,6 +3410,10 @@
 
     function nodeIdFromUrl(allNodes = []) {
         const pathname = window.location.pathname.replace(/\/$/, "");
+        const protocolPath = pathname.replace(/^\//, "");
+        if (/^[a-z][a-z0-9_-]*(\.[a-z][a-z0-9_-]*)*:[a-z][a-z0-9_-]*\/.+/i.test(protocolPath)) {
+            return `${protocolPath}${window.location.hash || ""}`;
+        }
         const match = pathname.match(/^\/node\/(.+)$/);
         if (match) return decodeURIComponent(match[1]);
         const matchingNode = allNodes.find((node) => normalizePath(node.url) === normalizePath(pathname));
@@ -3072,7 +3430,8 @@
             }
         }
 
-        return new URLSearchParams(window.location.search).get("node");
+        const params = new URLSearchParams(window.location.search);
+        return params.get("node") || params.get("ref");
     }
 
     function getFitPadding() {
@@ -3280,12 +3639,29 @@
         if (!input || input.dataset.verbRotation === "1") return;
 
         input.dataset.verbRotation = "1";
-        let index = 0;
+        let promptIndex = 0;
+        let charIndex = SEARCH_PROMPTS[0].length;
+        let direction = -1;
+        let pauseUntil = performance.now() + 1500;
         window.setInterval(() => {
             if (document.activeElement === input || input.value.trim()) return;
-            index = (index + 1) % SEARCH_VERBS.length;
-            input.setAttribute("placeholder", `${SEARCH_VERBS[index]} the knowledge substrate...`);
-        }, 2400);
+
+            const now = performance.now();
+            if (now < pauseUntil) return;
+
+            const prompt = SEARCH_PROMPTS[promptIndex];
+            charIndex += direction;
+            input.setAttribute("placeholder", prompt.slice(0, Math.max(0, charIndex)));
+
+            if (charIndex <= 0) {
+                direction = 1;
+                promptIndex = (promptIndex + 1) % SEARCH_PROMPTS.length;
+                pauseUntil = now + 260;
+            } else if (charIndex >= SEARCH_PROMPTS[promptIndex].length) {
+                direction = -1;
+                pauseUntil = now + 1600;
+            }
+        }, 48);
     }
 
     function escapeHtml(value) {

@@ -6,43 +6,43 @@
   "summary": "A curated path through the concrete JSON files, reports, registries, and governance documents that make a XanaNode substrate interoperable.",
   "relationships": [
     {
-      "id": "xananode.example:rel/protocol-artifacts-trail-starts_with-protocol-artifacts-6",
+      "id": "xananode.example:rel/protocol-artifacts-trail-starts_with-protocol-artifacts-11",
       "type": "starts_with",
       "target": "xananode.example:concept/protocol-artifacts",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-trail-continues_to-substrate-manifest-7",
+      "id": "xananode.example:rel/protocol-artifacts-trail-continues_to-substrate-manifest-12",
       "type": "continues_to",
       "target": "xananode.example:concept/substrate-manifest",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-trail-continues_to-substrate-node-record-8",
+      "id": "xananode.example:rel/protocol-artifacts-trail-continues_to-substrate-node-record-13",
       "type": "continues_to",
       "target": "xananode.example:concept/substrate-node-record",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-trail-continues_to-substrate-relationship-list-9",
+      "id": "xananode.example:rel/protocol-artifacts-trail-continues_to-substrate-relationship-list-14",
       "type": "continues_to",
       "target": "xananode.example:concept/substrate-relationship-list",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-trail-continues_to-compatibility-levels-10",
+      "id": "xananode.example:rel/protocol-artifacts-trail-continues_to-compatibility-levels-15",
       "type": "continues_to",
       "target": "xananode.example:concept/compatibility-levels",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-trail-arrives_at-federation-example-11",
+      "id": "xananode.example:rel/protocol-artifacts-trail-arrives_at-federation-example-16",
       "type": "arrives_at",
       "target": "xananode.example:concept/federation-example",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/start-here-continues_to-protocol-artifacts-trail-92",
+      "id": "xananode.example:rel/start-here-continues_to-protocol-artifacts-trail-111",
       "type": "continues_to",
       "source": "xananode.example:essay/start-here",
       "direction": "incoming"

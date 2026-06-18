@@ -6,25 +6,25 @@
   "summary": "Engineer and science administrator whose Memex proposal described associative trails as a response to information overload.",
   "relationships": [
     {
-      "id": "xananode.example:rel/historical-lineage-trail-starts_with-vannevar-bush-12",
+      "id": "xananode.example:rel/historical-lineage-trail-starts_with-vannevar-bush-17",
       "type": "starts_with",
       "source": "xananode.example:trail/historical-lineage-trail",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/vannevar-bush-authored-as-we-may-think-65",
+      "id": "xananode.example:rel/vannevar-bush-authored-as-we-may-think-84",
       "type": "authored",
       "target": "xananode.example:source/as-we-may-think",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/vannevar-bush-proposed-memex-66",
+      "id": "xananode.example:rel/vannevar-bush-proposed-memex-85",
       "type": "proposed",
       "target": "xananode.example:project/memex",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/vannevar-bush-anticipated-knowledge-substrate-67",
+      "id": "xananode.example:rel/vannevar-bush-anticipated-knowledge-substrate-86",
       "type": "anticipated",
       "target": "xananode.example:concept/knowledge-substrate",
       "direction": "outgoing"

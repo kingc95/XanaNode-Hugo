@@ -1,6 +1,52 @@
 {
-  "generated_at": "2026-06-18T03:17:03.791Z",
+  "generated_at": "2026-06-18T04:24:11.885Z",
   "nodes": {
+    "xananode-implementation-stack-trail": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "This trail orders the active XanaNode implementation repositories by dependency and responsibility.\n\nThe protocol repository defines the canonical rules.\n\nThe Core SDK repository consumes those rules and exposes reusable validation, fragment, graph, and artifact APIs.\n\nThe Hugo repository adapts Hugo content and static publishing to Core-validated protocol artifacts.\n\nThe Workspace repository manages multiple local substrates and their operational workflows.\n\nThe Studio repository provides the desktop workbench for editing, previewing, validating, and navigating those substrates.\n\n{{< node ref=\"xananode-protocol-repo\" >}} {{< node ref=\"xananode-core-sdk-repo\" >}} {{< node ref=\"xananode-hugo-repo\" >}} {{< node ref=\"xananode-workspace-repo\" >}} {{< node ref=\"xananode-studio-repo\" >}}",
+            "1.1": "This trail orders the active XanaNode implementation repositories by dependency and responsibility.",
+            "1.1.1": "This trail orders the active XanaNode implementation repositories by dependency and responsibility.",
+            "1.2": "The protocol repository defines the canonical rules.",
+            "1.2.1": "The protocol repository defines the canonical rules.",
+            "1.3": "The Core SDK repository consumes those rules and exposes reusable validation, fragment, graph, and artifact APIs.",
+            "1.3.1": "The Core SDK repository consumes those rules and exposes reusable validation, fragment, graph, and artifact APIs.",
+            "1.4": "The Hugo repository adapts Hugo content and static publishing to Core-validated protocol artifacts.",
+            "1.4.1": "The Hugo repository adapts Hugo content and static publishing to Core-validated protocol artifacts.",
+            "1.5": "The Workspace repository manages multiple local substrates and their operational workflows.",
+            "1.5.1": "The Workspace repository manages multiple local substrates and their operational workflows.",
+            "1.6": "The Studio repository provides the desktop workbench for editing, previewing, validating, and navigating those substrates.",
+            "1.6.1": "The Studio repository provides the desktop workbench for editing, previewing, validating, and navigating those substrates.",
+            "1.7": "{{< node ref=\"xananode-protocol-repo\" >}} {{< node ref=\"xananode-core-sdk-repo\" >}} {{< node ref=\"xananode-hugo-repo\" >}} {{< node ref=\"xananode-workspace-repo\" >}} {{< node ref=\"xananode-studio-repo\" >}}",
+            "1.7.1": "{{< node ref=\"xananode-protocol-repo\" >}} {{< node ref=\"xananode-core-sdk-repo\" >}} {{< node ref=\"xananode-hugo-repo\" >}} {{< node ref=\"xananode-workspace-repo\" >}} {{< node ref=\"xananode-studio-repo\" >}}"
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "This trail orders the active XanaNode implementation repositories by dependency and responsibility.\n\nThe protocol repository defines the canonical rules.\n\nThe Core SDK repository consumes those rules and exposes reusable validation, fragment, graph, and artifact APIs.\n\nThe Hugo repository adapts Hugo content and static publishing to Core-validated protocol artifacts.\n\nThe Workspace repository manages multiple local substrates and their operational workflows.\n\nThe Studio repository provides the desktop workbench for editing, previewing, validating, and navigating those substrates.\n\n{{< node ref=\"xananode-protocol-repo\" >}} {{< node ref=\"xananode-core-sdk-repo\" >}} {{< node ref=\"xananode-hugo-repo\" >}} {{< node ref=\"xananode-workspace-repo\" >}} {{< node ref=\"xananode-studio-repo\" >}}",
+            "1.1": "This trail orders the active XanaNode implementation repositories by dependency and responsibility.",
+            "1.1.1": "This trail orders the active XanaNode implementation repositories by dependency and responsibility.",
+            "1.2": "The protocol repository defines the canonical rules.",
+            "1.2.1": "The protocol repository defines the canonical rules.",
+            "1.3": "The Core SDK repository consumes those rules and exposes reusable validation, fragment, graph, and artifact APIs.",
+            "1.3.1": "The Core SDK repository consumes those rules and exposes reusable validation, fragment, graph, and artifact APIs.",
+            "1.4": "The Hugo repository adapts Hugo content and static publishing to Core-validated protocol artifacts.",
+            "1.4.1": "The Hugo repository adapts Hugo content and static publishing to Core-validated protocol artifacts.",
+            "1.5": "The Workspace repository manages multiple local substrates and their operational workflows.",
+            "1.5.1": "The Workspace repository manages multiple local substrates and their operational workflows.",
+            "1.6": "The Studio repository provides the desktop workbench for editing, previewing, validating, and navigating those substrates.",
+            "1.6.1": "The Studio repository provides the desktop workbench for editing, previewing, validating, and navigating those substrates.",
+            "1.7": "{{< node ref=\"xananode-protocol-repo\" >}} {{< node ref=\"xananode-core-sdk-repo\" >}} {{< node ref=\"xananode-hugo-repo\" >}} {{< node ref=\"xananode-workspace-repo\" >}} {{< node ref=\"xananode-studio-repo\" >}}",
+            "1.7.1": "{{< node ref=\"xananode-protocol-repo\" >}} {{< node ref=\"xananode-core-sdk-repo\" >}} {{< node ref=\"xananode-hugo-repo\" >}} {{< node ref=\"xananode-workspace-repo\" >}} {{< node ref=\"xananode-studio-repo\" >}}"
+          },
+          "metadata": {}
+        }
+      },
+      "title": "XanaNode Implementation Stack Trail",
+      "type": "trail"
+    },
     "xananode-core-trail": {
       "versions": {
         "v1": {
@@ -152,6 +198,118 @@
       },
       "title": "Cytoscape.js",
       "type": "technology"
+    },
+    "xananode-workspace-repo": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "The Workspace repository manages multiple substrates and their operational lifecycle: folder layout, imports, Git state, builds, and health checks.",
+            "1.1": "The Workspace repository manages multiple substrates and their operational lifecycle: folder layout, imports, Git state, builds, and health checks.",
+            "1.1.1": "The Workspace repository manages multiple substrates and their operational lifecycle: folder layout, imports, Git state, builds, and health checks."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "The Workspace repository manages multiple substrates and their operational lifecycle: folder layout, imports, Git state, builds, and health checks.",
+            "1.1": "The Workspace repository manages multiple substrates and their operational lifecycle: folder layout, imports, Git state, builds, and health checks.",
+            "1.1.1": "The Workspace repository manages multiple substrates and their operational lifecycle: folder layout, imports, Git state, builds, and health checks."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "XanaNode Workspace Repository",
+      "type": "source"
+    },
+    "xananode-studio-repo": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "The Studio repository provides the local-first desktop workbench for editing nodes, previewing Hugo output, validating substrates, and managing author workflows.",
+            "1.1": "The Studio repository provides the local-first desktop workbench for editing nodes, previewing Hugo output, validating substrates, and managing author workflows.",
+            "1.1.1": "The Studio repository provides the local-first desktop workbench for editing nodes, previewing Hugo output, validating substrates, and managing author workflows."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "The Studio repository provides the local-first desktop workbench for editing nodes, previewing Hugo output, validating substrates, and managing author workflows.",
+            "1.1": "The Studio repository provides the local-first desktop workbench for editing nodes, previewing Hugo output, validating substrates, and managing author workflows.",
+            "1.1.1": "The Studio repository provides the local-first desktop workbench for editing nodes, previewing Hugo output, validating substrates, and managing author workflows."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "XanaNode Studio Repository",
+      "type": "source"
+    },
+    "xananode-protocol-repo": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "The protocol repository is the source of truth for XanaNode schemas, registries, specs, examples, governance, and proposals.",
+            "1.1": "The protocol repository is the source of truth for XanaNode schemas, registries, specs, examples, governance, and proposals.",
+            "1.1.1": "The protocol repository is the source of truth for XanaNode schemas, registries, specs, examples, governance, and proposals."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "The protocol repository is the source of truth for XanaNode schemas, registries, specs, examples, governance, and proposals.",
+            "1.1": "The protocol repository is the source of truth for XanaNode schemas, registries, specs, examples, governance, and proposals.",
+            "1.1.1": "The protocol repository is the source of truth for XanaNode schemas, registries, specs, examples, governance, and proposals."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "XanaNode Protocol Repository",
+      "type": "source"
+    },
+    "xananode-hugo-repo": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "The Hugo repository is the static-site renderer and example substrate. It adapts Hugo content, shortcodes, and assets into Core-validated XanaNode artifacts.",
+            "1.1": "The Hugo repository is the static-site renderer and example substrate. It adapts Hugo content, shortcodes, and assets into Core-validated XanaNode artifacts.",
+            "1.1.1": "The Hugo repository is the static-site renderer and example substrate.",
+            "1.1.2": "It adapts Hugo content, shortcodes, and assets into Core-validated XanaNode artifacts."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "The Hugo repository is the static-site renderer and example substrate. It adapts Hugo content, shortcodes, and assets into Core-validated XanaNode artifacts.",
+            "1.1": "The Hugo repository is the static-site renderer and example substrate. It adapts Hugo content, shortcodes, and assets into Core-validated XanaNode artifacts.",
+            "1.1.1": "The Hugo repository is the static-site renderer and example substrate.",
+            "1.1.2": "It adapts Hugo content, shortcodes, and assets into Core-validated XanaNode artifacts."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "XanaNode Hugo Repository",
+      "type": "source"
+    },
+    "xananode-core-sdk-repo": {
+      "versions": {
+        "v1": {
+          "fragments": {
+            "1": "The Core SDK is the shared implementation layer for protocol validation, fragment handling, relationship normalization, graph construction, and artifact export.",
+            "1.1": "The Core SDK is the shared implementation layer for protocol validation, fragment handling, relationship normalization, graph construction, and artifact export.",
+            "1.1.1": "The Core SDK is the shared implementation layer for protocol validation, fragment handling, relationship normalization, graph construction, and artifact export."
+          },
+          "metadata": {}
+        },
+        "latest": {
+          "fragments": {
+            "1": "The Core SDK is the shared implementation layer for protocol validation, fragment handling, relationship normalization, graph construction, and artifact export.",
+            "1.1": "The Core SDK is the shared implementation layer for protocol validation, fragment handling, relationship normalization, graph construction, and artifact export.",
+            "1.1.1": "The Core SDK is the shared implementation layer for protocol validation, fragment handling, relationship normalization, graph construction, and artifact export."
+          },
+          "metadata": {}
+        }
+      },
+      "title": "XanaNode Core SDK Repository",
+      "type": "source"
     },
     "xanadu-document-interconnection": {
       "versions": {

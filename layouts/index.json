@@ -14,6 +14,7 @@
         "type": {{ $nodeType | jsonify }},
         "section": {{ $p.Section | jsonify }},
         "importance": {{ ($p.Params.importance | default 3) | jsonify }},
+        "trail_nodes": {{ ($p.Params.nodes | default slice) | jsonify }},
 
         "url": {{ $p.RelPermalink | jsonify }},
         "summary": {{ ($p.Params.summary | default "") | jsonify }},

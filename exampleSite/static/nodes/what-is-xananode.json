@@ -6,31 +6,31 @@
   "summary": "XanaNode is a protocol for interoperable knowledge substrates, not merely a graph viewer or static site theme.",
   "relationships": [
     {
-      "id": "xananode.example:rel/what-is-xananode-defines-xananode-82",
+      "id": "xananode.example:rel/what-is-xananode-defines-xananode-101",
       "type": "defines",
       "target": "xananode.example:concept/xananode",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/what-is-xananode-explains-xananode-hugo-theme-83",
+      "id": "xananode.example:rel/what-is-xananode-explains-xananode-hugo-theme-102",
       "type": "explains",
       "target": "xananode.example:project/xananode-hugo-theme",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/what-is-xananode-arrives_at-claim-merge-without-collapse-84",
+      "id": "xananode.example:rel/what-is-xananode-arrives_at-claim-merge-without-collapse-103",
       "type": "arrives_at",
       "target": "xananode.example:claim/claim-merge-without-collapse",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/what-is-xananode-context_for-federated-knowledge-substrates-85",
+      "id": "xananode.example:rel/what-is-xananode-context_for-federated-knowledge-substrates-104",
       "type": "context_for",
       "target": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/what-is-xananode-explains-protocol-artifacts-86",
+      "id": "xananode.example:rel/what-is-xananode-explains-protocol-artifacts-105",
       "type": "explains",
       "target": "xananode.example:concept/protocol-artifacts",
       "direction": "outgoing"

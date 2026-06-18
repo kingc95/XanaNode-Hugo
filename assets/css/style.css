@@ -411,6 +411,9 @@ body,
 }
 
 .xana-search-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   background: rgba(5, 7, 10, 0.82);
   border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 1.5rem;
@@ -429,6 +432,8 @@ body,
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  flex: 1 1 calc(100% - 1rem);
+  min-width: 0;
 }
 
 .xana-search-form input {
@@ -444,8 +449,27 @@ body,
 }
 
 .xana-search-form input::placeholder {
-  color: rgba(148, 163, 184, 0.5);
-  font-style: italic;
+  color: rgba(176, 246, 233, 0.78);
+  font-style: normal;
+}
+
+.xana-search-wrap::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 1.15em;
+  margin-left: 0.15rem;
+  background: var(--xana-accent);
+  opacity: 0.75;
+  animation: xana-caret-blink 900ms steps(2, start) infinite;
+}
+
+.xana-search-wrap:focus-within::after {
+  display: none;
+}
+
+@keyframes xana-caret-blink {
+  50% { opacity: 0; }
 }
 
 .xana-search-form input::-webkit-search-cancel-button {
@@ -475,6 +499,7 @@ body,
 }
 
 .xana-search-meta {
+  flex: 1 0 100%;
   color: #55d6be;
   font-size: 0.72rem;
   font-weight: 850;
@@ -484,6 +509,7 @@ body,
 }
 
 .xana-search-results {
+  flex: 1 0 100%;
   max-height: min(42vh, 380px);
   overflow: auto;
   margin-top: 0.4rem;
@@ -855,6 +881,84 @@ body,
 .xana-settings-range input {
   width: 100%;
   accent-color: var(--xana-accent);
+}
+
+.xana-interface-tour {
+  position: absolute;
+  inset: 0;
+  z-index: 70;
+  pointer-events: none;
+}
+
+.xana-interface-tour-card {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  width: min(360px, calc(100% - 3rem));
+  padding: 1rem;
+  border: 1px solid var(--xana-accent-border);
+  border-radius: 0.9rem;
+  background: var(--xana-panel-bg);
+  color: var(--xana-text);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+  pointer-events: auto;
+}
+
+.xana-interface-tour-count {
+  color: var(--xana-accent);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.xana-interface-tour-card h2 {
+  margin: 0.25rem 0 0.4rem;
+  font-size: 1.25rem;
+}
+
+.xana-interface-tour-card p {
+  margin: 0;
+  color: var(--xana-text-muted);
+  line-height: 1.5;
+}
+
+.xana-interface-tour-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  margin-top: 0.9rem;
+}
+
+.xana-interface-tour-actions button {
+  min-height: 32px;
+  border: 1px solid var(--xana-panel-border);
+  border-radius: 0.55rem;
+  background: var(--xana-surface-elevated);
+  color: var(--xana-text);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+}
+
+.xana-interface-tour-actions button:last-child {
+  border-color: var(--xana-accent);
+  background: var(--xana-accent-soft);
+  color: var(--xana-accent);
+}
+
+.xana-interface-tour-actions button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.xana-tour-target {
+  position: relative;
+  z-index: 72 !important;
+  outline: 3px solid rgba(85, 214, 190, 0.72);
+  outline-offset: 5px;
+  border-radius: 0.9rem;
+  box-shadow: 0 0 0 9999px rgba(2, 6, 10, 0.38), 0 0 34px rgba(85, 214, 190, 0.34);
 }
 
 html[data-xana-density="compact"] .xana-panel {
@@ -1490,6 +1594,155 @@ a.xana-type-badge-link:focus-visible {
 
 .xana-media-credit span {
   display: block;
+}
+
+.xana-protocol-footer {
+  display: grid;
+  gap: 0.45rem;
+  margin: 1.35rem 0 0;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--xana-panel-border);
+  color: var(--xana-text-muted);
+  font-size: 0.72rem;
+}
+
+.xana-protocol-footer div {
+  min-width: 0;
+}
+
+.xana-protocol-footer span {
+  display: block;
+  margin-bottom: 0.16rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.xana-protocol-footer code {
+  display: block;
+  overflow-wrap: anywhere;
+  color: var(--xana-accent);
+  font-size: 0.74rem;
+}
+
+.xana-fragment-highlight {
+  position: relative;
+  border-radius: 0.55rem;
+  outline: 2px solid rgba(255, 209, 102, 0.9);
+  background: rgba(255, 209, 102, 0.14);
+  box-shadow: 0 0 0 6px rgba(255, 209, 102, 0.08);
+}
+
+.xana-fragment-note {
+  margin: 0 0 1rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid rgba(255, 209, 102, 0.45);
+  border-radius: 0.7rem;
+  background: rgba(255, 209, 102, 0.12);
+  color: var(--xana-text);
+}
+
+.xana-fragment-note span {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--xana-text-muted);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.xana-fragment-note code {
+  overflow-wrap: anywhere;
+  color: #ffd166;
+}
+
+.xana-trail-playlist {
+  margin: 1.25rem 0;
+  padding: 0.85rem;
+  border: 1px solid var(--xana-panel-border);
+  border-radius: 0.9rem;
+  background: rgba(5, 7, 10, 0.34);
+}
+
+.xana-trail-playlist-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.xana-trail-playlist-head span {
+  color: var(--xana-text-muted);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.xana-trail-playlist-head button,
+.xana-trail-playlist-items button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.xana-trail-playlist-head button {
+  min-height: 32px;
+  border: 1px solid var(--xana-accent);
+  border-radius: 0.55rem;
+  background: var(--xana-accent-soft);
+  color: var(--xana-accent);
+  font-weight: 850;
+}
+
+.xana-trail-playlist-items {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.xana-trail-playlist-items button {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.55rem;
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.7rem;
+  background: rgba(21, 25, 34, 0.6);
+  color: var(--xana-text);
+  text-align: left;
+}
+
+.xana-trail-playlist-items button span {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--xana-accent-soft);
+  color: var(--xana-accent);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.xana-trail-playlist-items button strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.xana-trail-playlist-items button em {
+  color: var(--xana-text-muted);
+  font-size: 0.68rem;
+  font-style: normal;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.xana-trail-playlist-items button:hover {
+  border-color: var(--xana-accent);
+  background: rgba(30, 41, 59, 0.8);
 }
 
 .xana-media-warning {
@@ -2134,6 +2387,21 @@ a.xana-type-badge-link:focus-visible {
   .xana-settings-panel {
     width: 100%;
     max-height: 55svh;
+  }
+
+  .xana-interface-tour-card {
+    right: 0.75rem;
+    left: 0.75rem;
+    top: 0.75rem;
+    width: auto;
+  }
+
+  .xana-trail-playlist-items button {
+    grid-template-columns: 30px minmax(0, 1fr);
+  }
+
+  .xana-trail-playlist-items button em {
+    grid-column: 2;
   }
 
   .xana-node-header,

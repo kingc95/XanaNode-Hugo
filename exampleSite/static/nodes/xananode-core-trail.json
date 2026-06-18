@@ -6,37 +6,37 @@
   "summary": "A curated path through the core concepts that define XanaNode.",
   "relationships": [
     {
-      "id": "xananode.example:rel/xananode-core-trail-starts_with-start-here-1",
+      "id": "xananode.example:rel/xananode-core-trail-starts_with-start-here-6",
       "type": "starts_with",
       "target": "xananode.example:essay/start-here",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-trail-continues_to-xananode-2",
+      "id": "xananode.example:rel/xananode-core-trail-continues_to-xananode-7",
       "type": "continues_to",
       "target": "xananode.example:concept/xananode",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-trail-continues_to-knowledge-substrate-3",
+      "id": "xananode.example:rel/xananode-core-trail-continues_to-knowledge-substrate-8",
       "type": "continues_to",
       "target": "xananode.example:concept/knowledge-substrate",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-trail-continues_to-protocol-artifacts-4",
+      "id": "xananode.example:rel/xananode-core-trail-continues_to-protocol-artifacts-9",
       "type": "continues_to",
       "target": "xananode.example:concept/protocol-artifacts",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-trail-arrives_at-civilizational-memory-5",
+      "id": "xananode.example:rel/xananode-core-trail-arrives_at-civilizational-memory-10",
       "type": "arrives_at",
       "target": "xananode.example:concept/civilizational-memory",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/start-here-continues_to-xananode-core-trail-91",
+      "id": "xananode.example:rel/start-here-continues_to-xananode-core-trail-110",
       "type": "continues_to",
       "source": "xananode.example:essay/start-here",
       "direction": "incoming"
