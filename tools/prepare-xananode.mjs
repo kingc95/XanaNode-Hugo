@@ -6,6 +6,7 @@ import { createHash } from "node:crypto";
 import matter from "gray-matter";
 import { globSync } from "glob";
 import Ajv2020 from "ajv/dist/2020.js";
+import { validateSubstrateArtifacts as validateCoreSubstrateArtifacts } from "@xananode/core";
 
 const siteRoot = path.resolve(process.argv[2] || ".");
 const themeRootCandidates = [
@@ -19,6 +20,7 @@ const themeRootCandidates = [
 const themeRoot = themeRootCandidates.find((candidate) => fs.existsSync(path.join(candidate, "static", "schemas"))) || themeRootCandidates[0];
 const sdkRootCandidates = [
   process.env.XANANODE_SDK_ROOT,
+  path.resolve(themeRoot, "vendor", "xananode-core"),
   path.resolve(siteRoot, "..", "..", "..", "..", "XanaNode-Core-SDK"),
   path.resolve(siteRoot, "..", "..", "..", "..", "xananode-core-sdk"),
   path.resolve(themeRoot, "..", "..", "..", "XanaNode-Core-SDK"),
@@ -460,6 +462,18 @@ function renderSuggestionReport(suggestions) {
   return `${lines.join("\n")}\n`;
 }
 
+function formatCoreValidationIssue(issue) {
+  const label = issue?.label || issue?.kind || "artifact";
+  const schema = issue?.schema ? ` (${issue.schema})` : "";
+  const details = Array.isArray(issue?.errors)
+    ? issue.errors.map((error) => {
+        const instancePath = error.instancePath || "/";
+        return `${instancePath} ${error.message || "failed validation"}`.trim();
+      }).join("; ")
+    : issue?.message || JSON.stringify(issue);
+  return `${label}${schema}: ${details}`;
+}
+
 function buildReviewSuggestions(nodes, fragments) {
   const nodeList = [...nodes.values()];
   const generatedAt = new Date().toISOString();
@@ -867,10 +881,10 @@ const primaryMediaEdges = [...nodes.values()]
       id: `${substrateNamespace}:rel/${slugify(node.id, "source")}-represented-by-${slugify(node.data.primary_media, "media")}`,
       source: node.protocolId,
       target: mediaNode.protocolId,
-      type: "represented_by",
-      weight: relationshipTypeMap.get("represented_by")?.default_weight || 5,
-      visibility: relationshipTypeMap.get("represented_by")?.default_visibility || "primary",
-      summary: `${node.data.title || node.id} is represented by ${mediaNode.data.title || mediaNode.id}.`
+      type: "has_primary_media",
+      weight: relationshipTypeMap.get("has_primary_media")?.default_weight || 5,
+      visibility: relationshipTypeMap.get("has_primary_media")?.default_visibility || "primary",
+      summary: `${node.data.title || node.id} uses ${mediaNode.data.title || mediaNode.id} as its primary media.`
     };
   });
 
@@ -984,6 +998,18 @@ for (const protocolNode of protocolNodes) {
   if (!validateSubstrateNode(protocolNode)) {
     errors.push(`Generated node "${protocolNode.id}" does not match schema:\n${ajv.errorsText(validateSubstrateNode.errors, { separator: "\n" })}`);
   }
+}
+
+const coreValidation = validateCoreSubstrateArtifacts({
+  manifest: substrateManifest,
+  protocolNodes,
+  relationships: protocolEdges
+});
+for (const coreError of coreValidation.errors || []) {
+  errors.push(`Core SDK protocol validation failed: ${formatCoreValidationIssue(coreError)}`);
+}
+for (const coreWarning of coreValidation.warnings || []) {
+  warnings.push(`Core SDK protocol warning: ${formatCoreValidationIssue(coreWarning)}`);
 }
 
 reviewSuggestions = buildReviewSuggestions(nodes, fragments);

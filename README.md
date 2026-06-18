@@ -4,7 +4,7 @@ This repository is a Hugo implementation of the XanaNode protocol.
 
 The canonical protocol lives at [kingc95/xananode](https://github.com/kingc95/xananode). Use that repository as the source of truth for the core specs, schemas, governance model, registries, examples, and protocol proposals.
 
-The renderer uses [kingc95/XanaNode-Core-SDK](https://github.com/kingc95/XanaNode-Core-SDK) schemas when the SDK is available locally, with the bundled schemas kept as a fallback for standalone theme installs.
+The renderer uses [kingc95/XanaNode-Core-SDK](https://github.com/kingc95/XanaNode-Core-SDK) as a Git submodule and validates generated protocol artifacts through the Core SDK. Core carries the canonical protocol schema submodule, so standalone Hugo users get the same protocol rules as Studio and Workspace.
 
 This theme turns a Hugo content tree into a readable website plus machine-readable XanaNode substrate artifacts.
 
@@ -38,13 +38,14 @@ themes/xananode-hugo/
   static/js/xananode.js       Cytoscape-powered graph viewer
   static/schemas/             Bundled XanaNode schemas and registries
   tools/prepare-xananode.mjs  Validator, protocol artifact generator, fragment generator, suggestion scanner
+  vendor/xananode-core/       Core SDK submodule used for protocol validation
   exampleSite/                Self-hosting example substrate
   package.json                Validation/build scripts for the example
 ```
 
 ## Protocol Alignment
 
-The build tool validates the bundled core registries and generated substrate artifacts against the XanaNode schemas from the Core SDK. It looks for `XANANODE_SDK_ROOT` first, then for a sibling `XanaNode-Core-SDK` checkout, then falls back to the bundled `static/schemas` copy.
+The build tool validates generated substrate artifacts with `@xananode/core`. It also copies the latest protocol schemas from the Core SDK submodule into the example site's static output so the published Hugo site and the machine-readable artifacts stay aligned.
 
 Current generated protocol files include:
 
@@ -173,6 +174,7 @@ Every suggestion is marked `approved: false`. Apply approved changes manually or
 ## Quick Start
 
 ```bash
+git submodule update --init --recursive
 npm install
 npm run validate
 npm run example:dev
@@ -186,10 +188,11 @@ The example site is intentionally self-hosting: it explains XanaNode using XanaN
 hugo new site my-substrate
 cd my-substrate
 git init
-git submodule add https://github.com/kingc95/xananode-hugo.git themes/xananode-hugo
+git submodule add https://github.com/kingc95/XanaNode-Hugo.git themes/xananode-hugo
+git submodule update --init --recursive themes/xananode-hugo
 cp themes/xananode-hugo/exampleSite/hugo.yaml ./hugo.yaml
 npm init -y
-npm install --save-dev ajv gray-matter glob
+npm install --save-dev ./themes/xananode-hugo/vendor/xananode-core ajv gray-matter glob
 ```
 
 Add scripts to your site's `package.json`:
@@ -226,6 +229,7 @@ The static build does the enforcement:
 ## Related Repositories
 
 - Protocol source of truth: [kingc95/xananode](https://github.com/kingc95/xananode)
+- Core SDK: [kingc95/XanaNode-Core-SDK](https://github.com/kingc95/XanaNode-Core-SDK)
 - This repository: a Hugo theme and example substrate implementation of that protocol
 
 ## Philosophy

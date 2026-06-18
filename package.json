@@ -7,7 +7,13 @@
     "prepare": "node tools/prepare-xananode.mjs exampleSite",
     "validate": "node tools/prepare-xananode.mjs exampleSite",
     "example:dev": "npm run prepare && hugo server --source exampleSite --themesDir ../..",
-    "example:build": "npm run prepare && hugo --source exampleSite --themesDir ../.. --gc --minify"
+    "example:build": "npm run prepare && hugo --source exampleSite --themesDir ../.. --gc --minify",
+    "core:init": "git submodule update --init --recursive vendor/xananode-core",
+    "core:update": "git submodule update --init --remote --merge --recursive vendor/xananode-core",
+    "core:status": "git submodule status --recursive vendor/xananode-core"
+  },
+  "dependencies": {
+    "@xananode/core": "file:./vendor/xananode-core"
   },
   "devDependencies": {
     "ajv": "^8.17.1",
