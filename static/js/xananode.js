@@ -29,6 +29,7 @@
         depth: "xananode.depth",
         connectionsOpen: "xananode.connectionsOpen",
         tourSpeed: "xananode.tourSpeed",
+        tourMode: "xananode.tourMode",
         colorTheme: "xananode.colorTheme",
         uiDensity: "xananode.uiDensity",
         readerFontScale: "xananode.readerFontScale",
@@ -45,7 +46,8 @@
         uiDensity: "comfortable",
         readerFontScale: 100,
         graphAtmosphere: "alive",
-        ttsNarrator: false,
+        tourMode: "narration",
+        ttsNarrator: true,
         ttsVoice: "",
         ttsRate: 0.95,
         ttsPitch: 1,
@@ -606,17 +608,6 @@
                 <button class="xana-ctrl-btn" data-tour-toggle aria-label="Guided tour" title="Guided tour">&#x25B6;</button>
                 <button class="xana-ctrl-btn" data-settings-toggle aria-label="Display and narration settings" title="Settings">&#9881;</button>
                 <button class="xana-ctrl-btn" data-interface-tour aria-label="Interface tour" title="Interface tour">?</button>
-                <input
-                    type="number"
-                    class="xana-ctrl-speed"
-                    data-tour-speed
-                    min="3"
-                    max="120"
-                    step="1"
-                    value="${loadSetting(STORAGE_KEYS.tourSpeed, 9)}"
-                    aria-label="Tour dwell time in seconds"
-                    title="Seconds per node"
-                >
             </div>
 
             <div class="xana-settings">
@@ -647,26 +638,31 @@
                         <button type="button" data-display-setting="graphAtmosphere" data-value="still">Quiet</button>
                         <button type="button" data-display-setting="graphAtmosphere" data-value="plain">Minimal</button>
                     </div>
-                    <label class="xana-settings-toggle">
-                        <input type="checkbox" data-display-toggle="ttsNarrator" ${state.displaySettings.ttsNarrator ? "checked" : ""}>
-                        <span>Narrate guided tour</span>
+                    <div class="xana-settings-group xana-settings-group--two" role="group" aria-label="Tour advance mode">
+                        <span class="xana-settings-label">Tour</span>
+                        <button type="button" data-display-setting="tourMode" data-value="narration">Narration</button>
+                        <button type="button" data-display-setting="tourMode" data-value="timed">Timed</button>
+                    </div>
+                    <label class="xana-settings-range" data-tour-timed-control>
+                        <span>Seconds per node</span>
+                        <input type="range" min="3" max="120" step="1" data-tour-speed value="${loadSetting(STORAGE_KEYS.tourSpeed, 9)}">
                     </label>
-                    <div class="xana-settings-field">
+                    <div class="xana-settings-field" data-narration-control>
                         <label for="xana-tts-voice">Voice</label>
                         <select id="xana-tts-voice" data-tts-voice></select>
                     </div>
-                    <div class="xana-settings-field">
+                    <div class="xana-settings-field" data-narration-control>
                         <label for="xana-tts-detail">Read</label>
                         <select id="xana-tts-detail" data-tts-detail>
                             <option value="summary" ${state.displaySettings.ttsDetail === "summary" ? "selected" : ""}>Title and summary</option>
                             <option value="full" ${state.displaySettings.ttsDetail === "full" ? "selected" : ""}>Title, summary, and content</option>
                         </select>
                     </div>
-                    <label class="xana-settings-range">
+                    <label class="xana-settings-range" data-narration-control>
                         <span>Speed</span>
                         <input type="range" min="0.65" max="1.35" step="0.05" data-tts-rate value="${Number(state.displaySettings.ttsRate || 0.95)}">
                     </label>
-                    <label class="xana-settings-range">
+                    <label class="xana-settings-range" data-narration-control>
                         <span>Pitch</span>
                         <input type="range" min="0.75" max="1.35" step="0.05" data-tts-pitch value="${Number(state.displaySettings.ttsPitch || 1)}">
                     </label>
@@ -930,6 +926,21 @@
 
                 state.displaySettings[key] = value;
                 saveSetting(STORAGE_KEYS[key], value);
+                if (key === "tourMode") {
+                    state.displaySettings.ttsNarrator = value === "narration";
+                    saveSetting(STORAGE_KEYS.ttsNarrator, state.displaySettings.ttsNarrator);
+                    const narratorToggle = graphEl.querySelector("[data-display-toggle='ttsNarrator']");
+                    if (narratorToggle) narratorToggle.checked = state.displaySettings.ttsNarrator;
+                    if (state.tourActive) {
+                        clearTourTimers();
+                        stopNarration();
+                        const narrated = value === "narration"
+                            ? narrateNode(state.allNodes.find((node) => node.id === state.focusId), state)
+                            : false;
+                        restartTourRing();
+                        if (!narrated) scheduleTourAdvance(state, true);
+                    }
+                }
                 applyDisplaySettings(state.displaySettings);
                 updateDisplaySettingButtons(state);
                 if (key === "graphAtmosphere") {
@@ -945,10 +956,16 @@
 
                 state.displaySettings[key] = Boolean(input.checked);
                 saveSetting(STORAGE_KEYS[key], state.displaySettings[key]);
+                if (key === "ttsNarrator") {
+                    state.displaySettings.tourMode = state.displaySettings[key] ? "narration" : "timed";
+                    saveSetting(STORAGE_KEYS.tourMode, state.displaySettings.tourMode);
+                }
                 applyDisplaySettings(state.displaySettings);
+                updateDisplaySettingButtons(state);
 
                 if (key === "ttsNarrator" && !state.displaySettings[key]) {
                     stopNarration();
+                    if (state.tourActive) scheduleTourAdvance(state, true);
                 } else if (key === "ttsNarrator" && state.tourActive) {
                     narrateNode(state.allNodes.find((node) => node.id === state.focusId), state);
                 }
@@ -1068,14 +1085,13 @@
             const secs = Math.max(3, Math.min(120, Number(e.target.value) || 9));
             TOUR_DWELL_MS = secs * 1000;
             saveSetting(STORAGE_KEYS.tourSpeed, secs);
-            // If tour is running, reschedule with new timing
-            if (state.tourActive) {
+            if (state.tourActive && state.displaySettings?.tourMode === "timed") {
                 restartTourRing();
                 if (_tourTimer) {
                     window.clearTimeout(_tourTimer);
                     _tourTimer = null;
                 }
-                scheduleTourAdvance(state);
+                scheduleTourAdvance(state, true);
             }
         });
     }
@@ -1740,7 +1756,7 @@
             focus.position({ x: centerX, y: centerY });
         }
 
-        [1, 2, 3].forEach((distance) => {
+        [1, 2, 3, 4].forEach((distance) => {
             const nodes = cy.nodes()
                 .filter((node) => distances[node.id()] === distance)
                 .sort((a, b) => {
@@ -1755,19 +1771,30 @@
 
             const largestNodeSize = Math.max(...nodes.map((node) => Number(node.width() || 92)));
             const focusSize = focus.length ? Number(focus.width() || 160) : 160;
+            const isGlobalLayer = distance === 4 && count > 18;
 
             const baseRadius = focusSize / 2 + largestNodeSize + 90 + distance * 150;
             const radius = Math.max(baseRadius, Math.min(width, height) * (0.2 + distance * 0.18));
             const fullCircle = Math.PI * 2;
-            const angleStep = fullCircle / count;
+            const nodesPerRing = isGlobalLayer ? 22 : count;
+            const ringCount = isGlobalLayer ? Math.ceil(count / nodesPerRing) : 1;
 
             nodes.forEach((node, index) => {
                 const stagger = distance * 0.37;
-                const angle = -Math.PI / 2 + index * angleStep + stagger;
+                const ringIndex = isGlobalLayer ? Math.floor(index / nodesPerRing) : 0;
+                const indexInRing = isGlobalLayer ? index % nodesPerRing : index;
+                const ringSize = isGlobalLayer && ringIndex === ringCount - 1
+                    ? count - ringIndex * nodesPerRing
+                    : nodesPerRing;
+                const angleStep = fullCircle / Math.max(1, ringSize);
+                const ringRadius = isGlobalLayer
+                    ? radius + ringIndex * Math.max(150, largestNodeSize + 80)
+                    : radius;
+                const angle = -Math.PI / 2 + indexInRing * angleStep + stagger + ringIndex * 0.29;
 
                 node.position({
-                    x: centerX + Math.cos(angle) * radius,
-                    y: centerY + Math.sin(angle) * radius
+                    x: centerX + Math.cos(angle) * ringRadius,
+                    y: centerY + Math.sin(angle) * ringRadius
                 });
             });
         });
@@ -2045,7 +2072,6 @@
     }
 
     function startTour(state) {
-        // Load saved speed preference
         TOUR_DWELL_MS = Math.max(3000, (loadSetting(STORAGE_KEYS.tourSpeed, 9) || 9) * 1000);
         state.tourActive = true;
         state.tourIndex = 0;
@@ -2056,7 +2082,9 @@
         updateTourButton();
         panelEl.scrollTop = 0;
         startTourPanelScroll();
-        const narrated = narrateNode(state.allNodes.find((node) => node.id === state.focusId), state);
+        const narrated = state.displaySettings?.tourMode === "narration"
+            ? narrateNode(state.allNodes.find((node) => node.id === state.focusId), state)
+            : false;
         restartTourRing();
         if (!narrated) scheduleTourAdvance(state);
     }
@@ -2269,7 +2297,7 @@
 
     function scheduleTourAdvance(state, forceTimer = false) {
         if (_tourTimer) window.clearTimeout(_tourTimer);
-        if (!forceTimer && state.displaySettings?.ttsNarrator && canNarrate()) return;
+        if (!forceTimer && state.displaySettings?.tourMode === "narration" && state.displaySettings?.ttsNarrator && canNarrate()) return;
 
         _tourTimer = window.setTimeout(() => {
             if (!state.tourActive) return;
@@ -2579,7 +2607,7 @@
     }
 
     function narrateNode(node, state) {
-        if (!node || !state?.displaySettings?.ttsNarrator) return false;
+        if (!node || state?.displaySettings?.tourMode !== "narration" || !state?.displaySettings?.ttsNarrator) return false;
         if (!canNarrate()) return false;
 
         const title = node.title || node.id || "Untitled node";
@@ -2597,6 +2625,7 @@
         const utterance = new SpeechSynthesisUtterance(text);
         const voices = getAvailableVoices();
         const selectedVoice = voices.find((voice) => voice.voiceURI === state.displaySettings.ttsVoice)
+            || findPreferredNarratorVoice(voices)
             || voices.find((voice) => voice.default)
             || voices[0];
 
@@ -2634,12 +2663,25 @@
         return canNarrate() ? window.speechSynthesis.getVoices() : [];
     }
 
+    function findPreferredNarratorVoice(voices) {
+        return voices.find((voice) => /google/i.test(voice.name) && /uk|united kingdom|gb|en-gb/i.test(`${voice.name} ${voice.lang}`) && /male/i.test(voice.name))
+            || voices.find((voice) => /google/i.test(voice.name) && /en-gb/i.test(voice.lang || ""))
+            || voices.find((voice) => /en-gb/i.test(voice.lang || ""));
+    }
+
     function populateVoiceOptions(state) {
         const select = graphEl.querySelector("[data-tts-voice]");
         if (!select) return;
 
         const voices = getAvailableVoices();
-        const current = state.displaySettings.ttsVoice || "";
+        let current = state.displaySettings.ttsVoice || "";
+        if (!current && voices.length) {
+            const preferred = findPreferredNarratorVoice(voices);
+            if (preferred) current = preferred.voiceURI;
+            if (preferred && !loadSetting(STORAGE_KEYS.ttsVoice, "")) {
+                state.displaySettings.ttsVoice = preferred.voiceURI;
+            }
+        }
         select.innerHTML = [
             `<option value="">Browser default</option>`,
             ...voices.map((voice) => {
@@ -2650,6 +2692,8 @@
 
         if (current && !voices.some((voice) => voice.voiceURI === current)) {
             select.value = "";
+        } else if (current) {
+            select.value = current;
         }
     }
 
@@ -3950,12 +3994,14 @@
     }
 
     function loadDisplaySettings() {
+        const tourMode = loadSetting(STORAGE_KEYS.tourMode, DISPLAY_DEFAULTS.tourMode);
         return {
             colorTheme: loadSetting(STORAGE_KEYS.colorTheme, DISPLAY_DEFAULTS.colorTheme),
             uiDensity: loadSetting(STORAGE_KEYS.uiDensity, DISPLAY_DEFAULTS.uiDensity),
             readerFontScale: clampNumber(loadSetting(STORAGE_KEYS.readerFontScale, DISPLAY_DEFAULTS.readerFontScale), 85, 150, DISPLAY_DEFAULTS.readerFontScale),
             graphAtmosphere: loadSetting(STORAGE_KEYS.graphAtmosphere, DISPLAY_DEFAULTS.graphAtmosphere),
-            ttsNarrator: loadSetting(STORAGE_KEYS.ttsNarrator, DISPLAY_DEFAULTS.ttsNarrator),
+            tourMode,
+            ttsNarrator: tourMode === "narration" ? loadSetting(STORAGE_KEYS.ttsNarrator, DISPLAY_DEFAULTS.ttsNarrator) : false,
             ttsVoice: loadSetting(STORAGE_KEYS.ttsVoice, DISPLAY_DEFAULTS.ttsVoice),
             ttsRate: clampNumber(loadSetting(STORAGE_KEYS.ttsRate, DISPLAY_DEFAULTS.ttsRate), 0.65, 1.35, DISPLAY_DEFAULTS.ttsRate),
             ttsPitch: clampNumber(loadSetting(STORAGE_KEYS.ttsPitch, DISPLAY_DEFAULTS.ttsPitch), 0.75, 1.35, DISPLAY_DEFAULTS.ttsPitch),
@@ -3974,6 +4020,7 @@
         document.documentElement.dataset.xanaTheme = resolved.colorTheme;
         document.documentElement.dataset.xanaDensity = resolved.uiDensity;
         document.documentElement.dataset.xanaAtmosphere = resolved.graphAtmosphere;
+        graphEl.dataset.tourMode = resolved.tourMode;
         document.documentElement.style.setProperty("--xana-reader-scale", `${clampNumber(resolved.readerFontScale, 85, 150, 100) / 100}`);
     }
 

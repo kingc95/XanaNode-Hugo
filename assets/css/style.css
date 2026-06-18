@@ -832,6 +832,10 @@ body,
   margin: 0.45rem 0;
 }
 
+.xana-settings-group--two {
+  grid-template-columns: 68px repeat(2, minmax(0, 1fr));
+}
+
 .xana-settings-label {
   color: var(--xana-text-muted);
   font-size: 0.72rem;
@@ -902,6 +906,11 @@ body,
 .xana-settings-range input {
   width: 100%;
   accent-color: var(--xana-accent);
+}
+
+#xana-graph[data-tour-mode="narration"] [data-tour-timed-control],
+#xana-graph[data-tour-mode="timed"] [data-narration-control] {
+  display: none;
 }
 
 .xana-interface-tour {
