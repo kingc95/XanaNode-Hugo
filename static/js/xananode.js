@@ -587,6 +587,8 @@
                     <button data-depth="1" ${dact(1)}>Near</button>
                     <button data-depth="2" ${dact(2)}>Mid</button>
                     <button data-depth="3" ${dact(3)}>Deep</button>
+                    <button data-depth="4" ${dact(4)}>Far</button>
+                    <button data-depth="5" ${dact(5)}>All</button>
                 </div>
             </div>
 
@@ -808,7 +810,8 @@
                 saveSetting(STORAGE_KEYS.depth, state.depth);
                 renderVisibleGraph(state, {
                     updateUrl: false,
-                    preserveViewport: false
+                    preserveViewport: false,
+                    stagedReveal: true
                 });
             });
         });
@@ -1492,12 +1495,35 @@
         const settingsByDepth = {
             1: { minWeight: 5, maxFirst: 6, maxSecond: 0, maxThird: 0 },
             2: { minWeight: 4, maxFirst: 9, maxSecond: 8, maxThird: 0 },
-            3: { minWeight: 3, maxFirst: 12, maxSecond: 14, maxThird: 8 }
+            3: { minWeight: 3, maxFirst: 12, maxSecond: 14, maxThird: 8 },
+            4: { minWeight: 2, maxFirst: 18, maxSecond: 24, maxThird: 20, maxFourth: 16 },
+            5: { minWeight: 1, global: true }
         };
 
         const settings = settingsByDepth[maxDepth] || settingsByDepth[2];
         const distances = {};
         const visibleIds = new Set();
+
+        if (settings.global) {
+            allNodes.forEach((node) => {
+                visibleIds.add(node.id);
+                distances[node.id] = node.id === focusId ? 0 : 4;
+            });
+            const globalEdges = dedupeEdges(allEdges)
+                .map((edge) => ({
+                    ...edge,
+                    weight: Number(edge.weight || 1),
+                    score: scoreEdge(edge, allNodes, focusId)
+                }))
+                .filter((edge) => visibleIds.has(edge.source) && visibleIds.has(edge.target))
+                .sort((a, b) => b.score - a.score);
+
+            return {
+                nodes: allNodes,
+                edges: globalEdges,
+                distances
+            };
+        }
 
         if (focusId) {
             visibleIds.add(focusId);
@@ -1577,6 +1603,24 @@
                 if (!visibleIds.has(edge.target)) {
                     visibleIds.add(edge.target);
                     distances[edge.target] = 3;
+                }
+            });
+        }
+
+        if (maxDepth >= 4) {
+            const thirdIds = Array.from(visibleIds).filter((id) => distances[id] === 3);
+            const fourthEdges = scoredEdges
+                .filter((edge) => thirdIds.includes(edge.source) || thirdIds.includes(edge.target))
+                .slice(0, settings.maxFourth || 0);
+
+            fourthEdges.forEach((edge) => {
+                if (!visibleIds.has(edge.source)) {
+                    visibleIds.add(edge.source);
+                    distances[edge.source] = 4;
+                }
+                if (!visibleIds.has(edge.target)) {
+                    visibleIds.add(edge.target);
+                    distances[edge.target] = 4;
                 }
             });
         }
@@ -1893,27 +1937,26 @@
 
         const focus = cy.nodes(".focused-node").first();
         const focusId = focus.id();
-        const focusPos = { x: focus.position("x"), y: focus.position("y") };
 
-        // Snapshot the final computed positions before we collapse nodes to center
-        const finalPositions = {};
-        cy.nodes().forEach((n) => {
-            finalPositions[n.id()] = { x: n.position("x"), y: n.position("y") };
-        });
-
-        // Hide everything and collapse non-focus nodes onto the focus point
+        // Hide everything at its computed position, then reveal by graph layer.
+        // Keeping nodes in place avoids the "black hole" effect when depth changes.
         cy.elements().style("opacity", 0);
         focus.style("opacity", 1);
-        cy.nodes().not(focus).forEach((n) => n.position({ x: focusPos.x, y: focusPos.y }));
+        focus.style("width", "");
+        focus.style("height", "");
 
-        // Animate a node to its final position and opacity, spring-eased
-        const flyIn = (node, opacity, delay, duration) => {
+        const revealNode = (node, opacity, delay, duration) => {
             after(() => {
-                const fp = finalPositions[node.id()];
-                if (!fp) return;
+                const originalWidth = parseFloat(node.style("width")) || Number(node.data("size")) || 54;
+                const originalHeight = parseFloat(node.style("height")) || originalWidth;
+                node.style({
+                    opacity: 0,
+                    width: Math.max(18, originalWidth * 0.72),
+                    height: Math.max(18, originalHeight * 0.72)
+                });
                 node.animate(
-                    { position: fp, style: { opacity } },
-                    { duration, easing: "spring(400, 28)" }
+                    { style: { opacity, width: originalWidth, height: originalHeight } },
+                    { duration, easing: "spring(360, 30)" }
                 );
             }, delay);
         };
@@ -1935,7 +1978,7 @@
 
         if (hasPrev) {
             const prevOpacity = prevNode.hasClass("distance-1") ? 0.95 : 0.32;
-            flyIn(prevNode, prevOpacity, cursor, 360);
+            revealNode(prevNode, prevOpacity, cursor, 360);
             revealEdges(prevNode.id(), 0.6, cursor + 80, 260);
             cursor += 160;
         }
@@ -1946,7 +1989,7 @@
             .sort((a, b) => Number(b.data("importance") || 3) - Number(a.data("importance") || 3));
 
         d1.forEach((node, i) => {
-            flyIn(node, 0.95, cursor + i * 60, 420);
+            revealNode(node, 0.95, cursor + i * 60, 420);
             revealEdges(node.id(), 0.6, cursor + i * 60 + 110, 280);
         });
 
@@ -1957,14 +2000,20 @@
             .sort((a, b) => Number(b.data("importance") || 3) - Number(a.data("importance") || 3));
 
         d2.forEach((node, i) => {
-            flyIn(node, 0.32, cursor + i * 40, 500);
+            revealNode(node, 0.32, cursor + i * 40, 500);
         });
 
         cursor += Math.max(d2.length, 1) * 40 + 220;
 
         // Wave 3 — distance-3 nodes, subtle drift in
         cy.nodes(".distance-3").forEach((node, i) => {
-            flyIn(node, 0.10, cursor + i * 25, 580);
+            revealNode(node, 0.16, cursor + i * 25, 580);
+        });
+
+        cursor += Math.max(cy.nodes(".distance-3").length, 1) * 25 + 180;
+
+        cy.nodes(".distance-4").forEach((node, i) => {
+            revealNode(node, 0.08, cursor + i * 18, 620);
         });
 
         after(() => {
@@ -4151,6 +4200,17 @@
                 }
             },
             {
+                selector: ".distance-4",
+                style: {
+                    width: 38,
+                    height: 38,
+                    "font-size": 6,
+                    "text-max-width": 42,
+                    opacity: 0.16,
+                    "z-index": 1
+                }
+            },
+            {
                 selector: ".search-match",
                 style: {
                     "border-color": "#ffd166",
@@ -4246,6 +4306,14 @@
                     width: 118,
                     height: 118,
                     opacity: 0.82
+                }
+            },
+            {
+                selector: ".distance-4.has-image",
+                style: {
+                    width: 84,
+                    height: 84,
+                    opacity: 0.46
                 }
             },
             {
@@ -4353,6 +4421,10 @@
                 selector: ".distance-3.claim",
                 style: { width: 75, height: 32 }
             },
+            {
+                selector: ".distance-4.claim",
+                style: { width: 54, height: 26 }
+            },
             // Same compound overrides for source and organization
             {
                 selector: ".focused-node.source, .focused-node.organization",
@@ -4369,6 +4441,10 @@
             {
                 selector: ".distance-3.source, .distance-3.organization",
                 style: { width: 64, height: 34 }
+            },
+            {
+                selector: ".distance-4.source, .distance-4.organization",
+                style: { width: 52, height: 30 }
             },
             {
                 selector: ".event",
