@@ -7,6 +7,18 @@ params:
   description: "A self-hosting example knowledge substrate that explains XanaNode using XanaNode."
   author: "XanaNode Contributors"
   tagline: "A relationship-first static knowledge substrate."
+  keywords:
+    - XanaNode
+    - knowledge graph
+    - provenance
+    - static publishing
+    - semantic web
+  themeColor: "#55d6be"
+  image: "xananode-icon.svg"
+  analytics:
+    gtag: ""
+    plausibleDomain: ""
+    plausibleSrc: "https://plausible.io/js/script.js"
 
 markup:
   goldmark:

@@ -27,8 +27,21 @@
         enabledMediaTypes: "xananode.enabledMediaTypes",
         depth: "xananode.depth",
         connectionsOpen: "xananode.connectionsOpen",
-        tourSpeed: "xananode.tourSpeed"
+        tourSpeed: "xananode.tourSpeed",
+        colorTheme: "xananode.colorTheme",
+        uiDensity: "xananode.uiDensity",
+        graphAtmosphere: "xananode.graphAtmosphere",
+        ttsNarrator: "xananode.ttsNarrator"
     };
+
+    const DISPLAY_DEFAULTS = Object.freeze({
+        colorTheme: "dark",
+        uiDensity: "comfortable",
+        graphAtmosphere: "alive",
+        ttsNarrator: false
+    });
+
+    const SEARCH_VERBS = ["Explore", "Map", "Trace", "Search", "Navigate", "Follow", "Question", "Compare"];
 
     const DEFAULT_TYPES = [
         "essay",
@@ -310,6 +323,8 @@
         const savedTypes = loadSetting(STORAGE_KEYS.enabledTypes, null);
         const savedMediaTypes = loadSetting(STORAGE_KEYS.enabledMediaTypes, null);
         const savedDepth = loadSetting(STORAGE_KEYS.depth, 2);
+        const displaySettings = loadDisplaySettings();
+        applyDisplaySettings(displaySettings);
 
         const state = {
             focusId,
@@ -334,11 +349,14 @@
             },
             tourActive: false,
             tourIndex: 0,
+            tourVisited: new Set(),
+            tourRecent: [],
             cy: null,
             allNodes,
             nodeIds,
             allEdges,
-            allEdgesRaw
+            allEdgesRaw,
+            displaySettings
         };
 
         if (state.focusId) {
@@ -377,6 +395,7 @@
         }, 250));
 
         bindControls(state);
+        startSearchVerbRotation();
         makeResizable(state);
         restorePanelWidth(state);
 
@@ -442,7 +461,7 @@
             <!-- Attribution: bottom-right watermark -->
             <div class="xana-attribution">
                 <button class="xana-attribution-home" data-home-jump aria-label="Go to XanaNode node">XanaNode</button>
-                &middot; powered by <a href="https://builtbybots.com" target="_blank" rel="noopener noreferrer">BuiltByBots.com</a>
+                &middot; <a href="https://xananode.com" target="_blank" rel="noopener noreferrer">xananode.com</a>
             </div>
 
             <!-- Search portal: the primary navigation surface -->
@@ -454,7 +473,7 @@
                             type="search"
                             autocomplete="off"
                             spellcheck="false"
-                            placeholder="Explore the knowledge substrate\u2026"
+                            placeholder="${escapeHtml(SEARCH_VERBS[0])} the knowledge substrate..."
                             value="${escapeHtml(state.searchQuery)}"
                         >
                         <button
@@ -498,6 +517,37 @@
                     aria-label="Tour dwell time in seconds"
                     title="Seconds per node"
                 >
+            </div>
+
+            <div class="xana-settings">
+                <button class="xana-settings-fab" data-settings-toggle aria-label="Display settings" title="Display settings">&#9881;</button>
+                <div class="xana-settings-panel" hidden>
+                    <div class="xana-settings-header">
+                        <span>Display</span>
+                        <button type="button" data-settings-close aria-label="Close display settings">&#x2715;</button>
+                    </div>
+                    <div class="xana-settings-group" role="group" aria-label="Color theme">
+                        <span class="xana-settings-label">Theme</span>
+                        <button type="button" data-display-setting="colorTheme" data-value="dark">Dark</button>
+                        <button type="button" data-display-setting="colorTheme" data-value="light">Light</button>
+                        <button type="button" data-display-setting="colorTheme" data-value="classic">Classic</button>
+                    </div>
+                    <div class="xana-settings-group" role="group" aria-label="Interface density">
+                        <span class="xana-settings-label">Density</span>
+                        <button type="button" data-display-setting="uiDensity" data-value="comfortable">Roomy</button>
+                        <button type="button" data-display-setting="uiDensity" data-value="compact">Compact</button>
+                    </div>
+                    <div class="xana-settings-group" role="group" aria-label="Graph atmosphere">
+                        <span class="xana-settings-label">Graph</span>
+                        <button type="button" data-display-setting="graphAtmosphere" data-value="alive">Alive</button>
+                        <button type="button" data-display-setting="graphAtmosphere" data-value="still">Still</button>
+                        <button type="button" data-display-setting="graphAtmosphere" data-value="plain">Plain</button>
+                    </div>
+                    <label class="xana-settings-toggle">
+                        <input type="checkbox" data-display-toggle="ttsNarrator" ${state.displaySettings.ttsNarrator ? "checked" : ""}>
+                        <span>Narrate guided tour</span>
+                    </label>
+                </div>
             </div>
 
             <!-- Filter popover: types + media, opens above controls strip -->
@@ -544,6 +594,7 @@
             <!-- Audit meta: shown when audit is active -->
             <div class="xana-audit-meta" aria-live="polite" hidden></div>
 
+            <div class="xana-graph-atmosphere" aria-hidden="true"></div>
             <div id="xana-stage"></div>
             <div id="xana-audit-stage" hidden></div>
             <div id="xana-path-stage" hidden></div>
@@ -684,6 +735,54 @@
         const filterCloseBtn = graphEl.querySelector("[data-filter-close]");
         const filterPopover = graphEl.querySelector(".xana-filter-popover");
         const pathOpenButton = graphEl.querySelector("[data-path-open]");
+        const settingsToggle = graphEl.querySelector("[data-settings-toggle]");
+        const settingsPanel = graphEl.querySelector(".xana-settings-panel");
+        const settingsClose = graphEl.querySelector("[data-settings-close]");
+
+        updateDisplaySettingButtons(state);
+
+        settingsToggle?.addEventListener("click", (event) => {
+            event.stopPropagation();
+            if (!settingsPanel) return;
+            const opening = settingsPanel.hidden;
+            settingsPanel.hidden = !opening;
+            settingsToggle.classList.toggle("active", opening);
+        });
+
+        settingsClose?.addEventListener("click", () => {
+            if (settingsPanel) settingsPanel.hidden = true;
+            settingsToggle?.classList.remove("active");
+        });
+
+        graphEl.querySelectorAll("[data-display-setting]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const key = button.getAttribute("data-display-setting");
+                const value = button.getAttribute("data-value");
+                if (!key || !value || !state.displaySettings) return;
+
+                state.displaySettings[key] = value;
+                saveSetting(STORAGE_KEYS[key], value);
+                applyDisplaySettings(state.displaySettings);
+                updateDisplaySettingButtons(state);
+            });
+        });
+
+        graphEl.querySelectorAll("[data-display-toggle]").forEach((input) => {
+            input.addEventListener("change", () => {
+                const key = input.getAttribute("data-display-toggle");
+                if (!key || !state.displaySettings) return;
+
+                state.displaySettings[key] = Boolean(input.checked);
+                saveSetting(STORAGE_KEYS[key], state.displaySettings[key]);
+                applyDisplaySettings(state.displaySettings);
+
+                if (key === "ttsNarrator" && !state.displaySettings[key]) {
+                    stopNarration();
+                } else if (key === "ttsNarrator" && state.tourActive) {
+                    narrateNode(state.allNodes.find((node) => node.id === state.focusId), state);
+                }
+            });
+        });
 
         filterToggleBtn?.addEventListener("click", (event) => {
             event.stopPropagation();
@@ -701,6 +800,11 @@
         });
 
         document.addEventListener("click", (event) => {
+            if (settingsPanel && !settingsPanel.hidden && !event.target.closest(".xana-settings")) {
+                settingsPanel.hidden = true;
+                settingsToggle?.classList.remove("active");
+            }
+
             if (!filterPopover || filterPopover.hidden) return;
             if (event.target.closest(".xana-filter-popover") || event.target.closest("[data-filter-toggle]")) return;
 
@@ -916,6 +1020,7 @@
         resultsEl.querySelectorAll("[data-search-jump]").forEach((button) => {
             button.addEventListener("click", () => {
                 const id = button.getAttribute("data-search-jump");
+                clearSearchUi(state);
                 travelToNode(id, state, true);
             });
         });
@@ -1513,10 +1618,13 @@
         TOUR_DWELL_MS = Math.max(3000, (loadSetting(STORAGE_KEYS.tourSpeed, 9) || 9) * 1000);
         state.tourActive = true;
         state.tourIndex = 0;
+        state.tourVisited = new Set([state.focusId].filter(Boolean));
+        state.tourRecent = [state.focusId].filter(Boolean);
         graphEl.dataset.tourActive = "1";
         updateTourButton();
         panelEl.scrollTop = 0;
         startTourPanelScroll();
+        narrateNode(state.allNodes.find((node) => node.id === state.focusId), state);
         restartTourRing();
         scheduleTourAdvance(state);
     }
@@ -1525,6 +1633,7 @@
         state.tourActive = false;
         graphEl.dataset.tourActive = "0";
         clearTourTimers();
+        stopNarration();
         updateTourButton();
         const tourBtn = graphEl.querySelector("[data-tour-toggle]");
         if (tourBtn) tourBtn.classList.remove("tour-ring-anim");
@@ -1565,18 +1674,41 @@
         const cy = state.cy;
         if (!cy) return null;
 
-        // Distance-1 neighbours sorted by importance, skipping where we just came from
-        const d1 = cy.nodes(".distance-1")
-            .sort((a, b) => Number(b.data("importance") || 3) - Number(a.data("importance") || 3));
-        const candidates = d1.filter((n) => n.id() !== state.previousFocusId);
-        const pool = candidates.length ? candidates : d1;
+        const visibleNodes = cy.nodes().filter((node) => node.id() !== state.focusId);
+        const localNodes = visibleNodes.filter((node) => node.hasClass("distance-1") || node.hasClass("distance-2"));
+        const basePool = localNodes.length ? localNodes : visibleNodes;
+        const recent = new Set(state.tourRecent || []);
+        const fresh = basePool.filter((node) => !state.tourVisited?.has(node.id()) && !recent.has(node.id()));
+        const notRecent = basePool.filter((node) => !recent.has(node.id()) && node.id() !== state.previousFocusId);
+        const pool = (fresh.length ? fresh : notRecent.length ? notRecent : basePool)
+            .sort((a, b) => {
+                const aDistance = a.hasClass("distance-1") ? 1 : a.hasClass("distance-2") ? 2 : 3;
+                const bDistance = b.hasClass("distance-1") ? 1 : b.hasClass("distance-2") ? 2 : 3;
+                if (aDistance !== bDistance) return aDistance - bDistance;
+                return Number(b.data("importance") || 3) - Number(a.data("importance") || 3);
+            });
         if (!pool.length) return null;
 
         state.tourIndex = state.tourIndex % pool.length;
         const next = pool[state.tourIndex];
         state.tourIndex = (state.tourIndex + 1) % pool.length;
 
-        return next?.id() || null;
+        const nextId = next?.id() || null;
+        if (nextId) rememberTourVisit(nextId, state);
+        return nextId;
+    }
+
+    function rememberTourVisit(nodeId, state) {
+        state.tourVisited = state.tourVisited || new Set();
+        state.tourRecent = state.tourRecent || [];
+        state.tourVisited.add(nodeId);
+        state.tourRecent.push(nodeId);
+        state.tourRecent = state.tourRecent.slice(-7);
+
+        const visibleCount = state.cy?.nodes().length || 0;
+        if (visibleCount > 0 && state.tourVisited.size > Math.max(8, Math.floor(visibleCount * 0.7))) {
+            state.tourVisited = new Set(state.tourRecent);
+        }
     }
 
     function scheduleTourAdvance(state) {
@@ -1596,6 +1728,7 @@
         if (!nextId || nextId === state.focusId) return;
         if (state.nodeIds && !state.nodeIds.has(nextId)) return;
         if (state.isTraveling) return;
+        closeTransientUi(state, { clearSearch: true });
 
         const cy = state.cy;
         const currentId = state.focusId;
@@ -1749,7 +1882,33 @@
         if (state.tourActive) {
             panelEl.scrollTop = 0;
             startTourPanelScroll();
+            narrateNode(node, state);
             restartTourRing();
+        }
+    }
+
+    function narrateNode(node, state) {
+        if (!node || !state?.displaySettings?.ttsNarrator) return;
+        if (!("speechSynthesis" in window) || !window.SpeechSynthesisUtterance) return;
+
+        const title = node.title || node.id || "Untitled node";
+        const summary = stripHtml(node.summary || node.content || "").replace(/\s+/g, " ").trim();
+        const shortSummary = summary.length > 220 ? `${summary.slice(0, 220)}...` : summary;
+        const text = [title, shortSummary].filter(Boolean).join(". ");
+
+        if (!text) return;
+        stopNarration();
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.rate = 0.95;
+        utterance.pitch = 1;
+        utterance.volume = 0.88;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopNarration() {
+        if ("speechSynthesis" in window) {
+            window.speechSynthesis.cancel();
         }
     }
 
@@ -2573,6 +2732,7 @@
 
                 link.addEventListener("click", (event) => {
                     event.preventDefault();
+                    closeTransientUi(state, { clearSearch: true });
                     travelToNode(matchingNode.id, state, true);
                 });
 
@@ -2590,6 +2750,7 @@
                 event.preventDefault();
 
                 const id = link.getAttribute("data-node-jump");
+                closeTransientUi(state, { clearSearch: true });
                 travelToNode(id, state, true);
             });
         });
@@ -2885,6 +3046,85 @@
         } catch {
             return fallback;
         }
+    }
+
+    function loadDisplaySettings() {
+        return {
+            colorTheme: loadSetting(STORAGE_KEYS.colorTheme, DISPLAY_DEFAULTS.colorTheme),
+            uiDensity: loadSetting(STORAGE_KEYS.uiDensity, DISPLAY_DEFAULTS.uiDensity),
+            graphAtmosphere: loadSetting(STORAGE_KEYS.graphAtmosphere, DISPLAY_DEFAULTS.graphAtmosphere),
+            ttsNarrator: loadSetting(STORAGE_KEYS.ttsNarrator, DISPLAY_DEFAULTS.ttsNarrator)
+        };
+    }
+
+    function applyDisplaySettings(settings) {
+        const resolved = { ...DISPLAY_DEFAULTS, ...(settings || {}) };
+        document.documentElement.dataset.xanaTheme = resolved.colorTheme;
+        document.documentElement.dataset.xanaDensity = resolved.uiDensity;
+        document.documentElement.dataset.xanaAtmosphere = resolved.graphAtmosphere;
+    }
+
+    function updateDisplaySettingButtons(state) {
+        const settings = { ...DISPLAY_DEFAULTS, ...(state.displaySettings || {}) };
+        graphEl.querySelectorAll("[data-display-setting]").forEach((button) => {
+            const key = button.getAttribute("data-display-setting");
+            const value = button.getAttribute("data-value");
+            const active = settings[key] === value;
+            button.classList.toggle("active", active);
+            button.setAttribute("aria-pressed", active ? "true" : "false");
+        });
+    }
+
+    function clearSearchUi(state) {
+        const input = graphEl.querySelector("#xana-search-input");
+        const clearButton = graphEl.querySelector("[data-search-clear]");
+
+        state.searchQuery = "";
+        state.searchResults = [];
+        saveSetting(STORAGE_KEYS.searchQuery, "");
+        if (input) input.value = "";
+        if (clearButton) clearButton.hidden = true;
+        renderSearchResults(state);
+    }
+
+    function closeTransientUi(state, options = {}) {
+        const settingsPanel = graphEl.querySelector(".xana-settings-panel");
+        const settingsToggle = graphEl.querySelector("[data-settings-toggle]");
+        const filterPanel = graphEl.querySelector(".xana-filter-popover");
+        const filterToggle = graphEl.querySelector("[data-filter-toggle]");
+        const pathStage = graphEl.querySelector("#xana-path-stage");
+        const stage = graphEl.querySelector("#xana-stage");
+
+        if (options.clearSearch) clearSearchUi(state);
+        if (settingsPanel) settingsPanel.hidden = true;
+        if (settingsToggle) settingsToggle.classList.remove("active");
+        if (filterPanel) filterPanel.hidden = true;
+        if (filterToggle) filterToggle.classList.remove("active");
+
+        if (state.pathExplorer) {
+            state.pathExplorer.active = false;
+            state.pathExplorer.results = [];
+            state.pathExplorer.summary = "";
+        }
+
+        if (pathStage) {
+            pathStage.hidden = true;
+            pathStage.innerHTML = "";
+        }
+        if (stage && !state.auditMode) stage.hidden = false;
+    }
+
+    function startSearchVerbRotation() {
+        const input = graphEl.querySelector("#xana-search-input");
+        if (!input || input.dataset.verbRotation === "1") return;
+
+        input.dataset.verbRotation = "1";
+        let index = 0;
+        window.setInterval(() => {
+            if (document.activeElement === input || input.value.trim()) return;
+            index = (index + 1) % SEARCH_VERBS.length;
+            input.setAttribute("placeholder", `${SEARCH_VERBS[index]} the knowledge substrate...`);
+        }, 2400);
     }
 
     function escapeHtml(value) {
