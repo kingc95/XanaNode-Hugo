@@ -34,6 +34,24 @@
     } catch (_) {}
   })();
 </script>
+{{- $xanaParams := site.Params.xananode | default dict -}}
+{{- $brandParams := index $xanaParams "brand" | default dict -}}
+{{- $brandConfig := dict
+  "name" (index $brandParams "name" | default "XanaNode")
+  "tagline" (index $brandParams "tagline" | default (site.Params.tagline | default "Relationships preserve knowledge"))
+  "icon" (index $brandParams "icon" | default "xananode-icon.svg" | relURL)
+  "homeLabel" (index $brandParams "homeLabel" | default "Go to home node")
+  "attributionLabel" (index $brandParams "attributionLabel" | default "XanaNode")
+  "attributionText" (index $brandParams "attributionText" | default "xananode.com")
+  "attributionUrl" (index $brandParams "attributionUrl" | default "https://xananode.com")
+-}}
+{{- $themeConfig := dict
+  "brand" $brandConfig
+  "searchPrompts" (index $xanaParams "searchPrompts" | default slice)
+-}}
+<script>
+  window.XanaNodeTheme = {{ $themeConfig | jsonify | safeJS }};
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Fraunces:wght@700&display=swap">

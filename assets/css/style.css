@@ -58,13 +58,13 @@
 
 html[data-xana-theme="light"] {
   color-scheme: light;
-  --xana-bg: #f6f8fb;
+  --xana-bg: #f3f7fb;
   --xana-surface: #ffffff;
-  --xana-surface-elevated: #eef3f7;
-  --xana-panel-bg: rgba(255, 255, 255, 0.97);
-  --xana-panel-border: rgba(15, 23, 42, 0.12);
-  --xana-text: #111827;
-  --xana-text-muted: #526173;
+  --xana-surface-elevated: #f1f5f9;
+  --xana-panel-bg: rgba(255, 255, 255, 0.985);
+  --xana-panel-border: rgba(30, 41, 59, 0.18);
+  --xana-text: #0f172a;
+  --xana-text-muted: #475569;
   --xana-accent: #0f766e;
   --xana-accent-soft: rgba(15, 118, 110, 0.12);
   --xana-accent-border: rgba(15, 118, 110, 0.28);
@@ -77,7 +77,7 @@ html[data-xana-theme="classic"] {
   color-scheme: light;
   --xana-bg: #f8f9fa;
   --xana-surface: #ffffff;
-  --xana-surface-elevated: #eaecf0;
+  --xana-surface-elevated: #f6f6f6;
   --xana-panel-bg: #ffffff;
   --xana-panel-border: #a2a9b1;
   --xana-text: #202122;
@@ -412,6 +412,7 @@ body,
 
 .xana-search-wrap {
   display: block;
+  position: relative;
   background: rgba(5, 7, 10, 0.82);
   border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 1.5rem;
@@ -433,18 +434,9 @@ body,
   min-width: 0;
 }
 
-.xana-search-form::after {
-  content: "";
-  flex: 0 0 auto;
-  width: 1px;
-  height: 1.15em;
-  margin-left: 0.05rem;
-  background: var(--xana-accent);
-  opacity: 0.75;
-  animation: xana-caret-blink 900ms steps(2, start) infinite;
-}
-
 .xana-search-form input {
+  position: relative;
+  z-index: 1;
   flex: 1;
   min-width: 0;
   border: none;
@@ -456,14 +448,44 @@ body,
   outline: none;
 }
 
+.xana-search-prompt {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 1rem;
+  right: 3.2rem;
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  max-width: calc(100% - 4.2rem);
+  transform: translateY(-50%);
+  color: rgba(176, 246, 233, 0.84);
+  font: inherit;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  overflow: hidden;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.xana-search-caret {
+  flex: 0 0 auto;
+  width: 1px;
+  height: 1.15em;
+  margin-left: 0.18rem;
+  background: var(--xana-accent);
+  opacity: 0.8;
+  animation: xana-caret-blink 900ms steps(2, start) infinite;
+}
+
+.xana-search-wrap.is-focused .xana-search-prompt,
+.xana-search-wrap.has-value .xana-search-prompt {
+  opacity: 0;
+}
+
 .xana-search-form input::placeholder {
   color: rgba(176, 246, 233, 0.78);
   font-style: normal;
-}
-
-.xana-search-wrap:focus-within .xana-search-form::after,
-.xana-search-wrap:has(input:not(:placeholder-shown)) .xana-search-form::after {
-  display: none;
 }
 
 @keyframes xana-caret-blink {
@@ -1114,6 +1136,39 @@ html[data-xana-theme="classic"] .xana-filter-popover {
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14);
 }
 
+html[data-xana-theme="light"] .xana-search-prompt {
+  color: rgba(15, 118, 110, 0.74);
+}
+
+html[data-xana-theme="classic"] .xana-search-prompt {
+  color: #3366cc;
+}
+
+html[data-xana-theme="light"] .xana-panel,
+html[data-xana-theme="classic"] .xana-panel {
+  color: var(--xana-text);
+}
+
+html[data-xana-theme="light"] .xana-node-content,
+html[data-xana-theme="classic"] .xana-node-content {
+  color: var(--xana-text);
+}
+
+html[data-xana-theme="light"] .xana-inline-node,
+html[data-xana-theme="light"] .xana-list-card {
+  background: #ffffff;
+  border-color: rgba(30, 41, 59, 0.16);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+}
+
+html[data-xana-theme="classic"] .xana-inline-node,
+html[data-xana-theme="classic"] .xana-list-card {
+  background: #ffffff;
+  border-color: #a2a9b1;
+  border-radius: 2px;
+  box-shadow: none;
+}
+
 html[data-xana-theme="light"] .xana-search-results button,
 html[data-xana-theme="classic"] .xana-search-results button {
   background: var(--xana-surface);
@@ -1376,7 +1431,7 @@ a.xana-type-badge-link:focus-visible {
 
 .xana-node-content {
   line-height: 1.7;
-  color: #f8fafc;
+  color: var(--xana-text);
   overflow-wrap: anywhere;
 }
 
@@ -1385,7 +1440,7 @@ a.xana-type-badge-link:focus-visible {
 }
 
 .xana-node-content a {
-  color: #55d6be;
+  color: var(--xana-accent);
 }
 
 .xana-node-content a[href^="http"]::after {
@@ -1929,9 +1984,9 @@ a.xana-type-badge-link:focus-visible {
 
 .xana-inline-node,
 .xana-list-card {
-  border: 1px solid rgba(44, 52, 66, 0.95);
+  border: 1px solid var(--xana-panel-border);
   border-radius: 20px;
-  background: linear-gradient(180deg, rgba(19, 23, 31, 0.98), rgba(10, 14, 19, 0.98));
+  background: linear-gradient(180deg, color-mix(in srgb, var(--xana-surface-elevated) 92%, transparent), color-mix(in srgb, var(--xana-surface) 96%, transparent));
   box-shadow: 0 12px 34px rgba(0, 0, 0, 0.18);
 }
 

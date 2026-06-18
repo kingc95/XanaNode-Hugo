@@ -49,7 +49,7 @@
         ttsDetail: "full"
     });
 
-    const SEARCH_PROMPTS = [
+    const DEFAULT_SEARCH_PROMPTS = [
         "explore the knowledge substrate",
         "trace an idea across sources",
         "follow a claim to evidence",
@@ -57,6 +57,11 @@
         "search for provenance",
         "map a trail through context"
     ];
+
+    const THEME_CONFIG = normalizeThemeConfig(window.XanaNodeTheme);
+    const SEARCH_PROMPTS = THEME_CONFIG.searchPrompts.length
+        ? THEME_CONFIG.searchPrompts
+        : DEFAULT_SEARCH_PROMPTS;
 
     const DEFAULT_TYPES = [
         "essay",
@@ -79,6 +84,29 @@
         "revision",
         "schema"
     ];
+
+    function normalizeThemeConfig(config) {
+        const raw = config && typeof config === "object" ? config : {};
+        const brand = raw.brand && typeof raw.brand === "object" ? raw.brand : {};
+        const prompts = Array.isArray(raw.searchPrompts)
+            ? raw.searchPrompts
+                .map((prompt) => String(prompt || "").trim())
+                .filter(Boolean)
+            : [];
+
+        return {
+            brand: {
+                name: String(brand.name || "XanaNode"),
+                tagline: String(brand.tagline || "Relationships preserve knowledge"),
+                icon: String(brand.icon || "/xananode-icon.svg"),
+                homeLabel: String(brand.homeLabel || "Go to home node"),
+                attributionLabel: String(brand.attributionLabel || brand.name || "XanaNode"),
+                attributionText: String(brand.attributionText || "xananode.com"),
+                attributionUrl: String(brand.attributionUrl || "https://xananode.com")
+            },
+            searchPrompts: prompts
+        };
+    }
 
     // Fallback valid types — overridden at runtime by /schemas/xananode-node-types.json
     // Note: "artifact" is intentionally absent — existing artifact nodes will be flagged.
@@ -223,7 +251,9 @@
             }),
             fetch("/schemas/xananode-node-types.json").then((r) => r.json()).catch(() => null),
             fetch("/schemas/xananode-relationship-types.json").then((r) => r.json()).catch(() => null),
-            fetch("/xananode-fragments.json").then((r) => r.json()).catch(() => null)
+            fetch("/xananode-fragments.json")
+                .then((r) => r.ok ? r.json() : null)
+                .catch(() => null)
         ]))
         .then(([data, nodeSchema, relSchema, fragmentsData]) => {
             if (nodeSchema?.node_types) {
@@ -488,6 +518,7 @@
         const chk = (type) => t.has(type) ? "checked" : "";
         const mchk = (type) => m.has(type) ? "checked" : "";
         const dact = (n) => d === n ? "class=\"active\"" : "";
+        const brand = THEME_CONFIG.brand;
 
         // Inject navbar into the .xana-app parent (runs once; guard against duplicates)
         const appEl = graphEl.closest(".xana-app") || graphEl.parentElement;
@@ -496,11 +527,11 @@
             nav.className = "xana-navbar";
             nav.setAttribute("aria-label", "XanaNode navigation");
             nav.innerHTML = `
-                <button class="xana-brand-home" data-home-btn aria-label="Go to home node">
-                    <img src="/xananode-icon.svg" alt="" class="xana-brand-icon" aria-hidden="true">
+                <button class="xana-brand-home" data-home-btn aria-label="${escapeHtml(brand.homeLabel)}">
+                    <img src="${escapeHtml(brand.icon)}" alt="" class="xana-brand-icon" aria-hidden="true">
                     <div class="xana-brand-text">
-                        <span class="xana-brand-name">XanaNode</span>
-                        <span class="xana-brand-tagline">Relationships preserve knowledge</span>
+                        <span class="xana-brand-name">${escapeHtml(brand.name)}</span>
+                        <span class="xana-brand-tagline">${escapeHtml(brand.tagline)}</span>
                     </div>
                 </button>
             `;
@@ -510,8 +541,8 @@
         graphEl.innerHTML = `
             <!-- Attribution: bottom-right watermark -->
             <div class="xana-attribution">
-                <button class="xana-attribution-home" data-home-jump aria-label="Go to XanaNode node">XanaNode</button>
-                &middot; <a href="https://xananode.com" target="_blank" rel="noopener noreferrer">xananode.com</a>
+                <button class="xana-attribution-home" data-home-jump aria-label="Go to ${escapeHtml(brand.attributionLabel)} node">${escapeHtml(brand.attributionLabel)}</button>
+                &middot; <a href="${escapeHtml(brand.attributionUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(brand.attributionText)}</a>
             </div>
 
             <!-- Search portal: the primary navigation surface -->
@@ -523,9 +554,13 @@
                             type="search"
                             autocomplete="off"
                             spellcheck="false"
-                            placeholder="${escapeHtml(SEARCH_PROMPTS[0])}"
+                            placeholder=""
+                            aria-label="${escapeHtml(SEARCH_PROMPTS[0])}"
                             value="${escapeHtml(state.searchQuery)}"
                         >
+                        <span class="xana-search-prompt" data-search-prompt aria-hidden="true">
+                            <span data-search-prompt-text>${escapeHtml(SEARCH_PROMPTS[0])}</span><span class="xana-search-caret"></span>
+                        </span>
                         <button
                             type="button"
                             class="xana-search-clear-btn"
@@ -675,7 +710,10 @@
         const cy = state.cy;
         const searchForm = graphEl.querySelector(".xana-search-form");
         const searchInput = graphEl.querySelector("#xana-search-input");
+        const searchWrap = graphEl.querySelector(".xana-search-wrap");
         const clearSearchButton = graphEl.querySelector("[data-search-clear]");
+
+        updateSearchPromptState();
 
         searchForm?.addEventListener("submit", (event) => {
             event.preventDefault();
@@ -701,7 +739,26 @@
             });
 
             if (clearSearchButton) clearSearchButton.hidden = !query;
+            updateSearchPromptState();
         }, 180));
+
+        searchInput?.addEventListener("focus", () => {
+            if (searchInput.value.trim() || state.searchQuery.trim()) {
+                searchInput.value = "";
+                state.searchQuery = "";
+                state.searchResults = [];
+                saveSetting(STORAGE_KEYS.searchQuery, "");
+                if (clearSearchButton) clearSearchButton.hidden = true;
+                renderSearchResults(state);
+                renderVisibleGraph(state, {
+                    updateUrl: false,
+                    preserveViewport: false
+                });
+            }
+            updateSearchPromptState();
+        });
+
+        searchInput?.addEventListener("blur", updateSearchPromptState);
 
         clearSearchButton?.addEventListener("click", () => {
             searchInput.value = "";
@@ -715,7 +772,14 @@
                 preserveViewport: false
             });
             searchInput.focus();
+            updateSearchPromptState();
         });
+
+        function updateSearchPromptState() {
+            if (!searchWrap || !searchInput) return;
+            searchWrap.classList.toggle("is-focused", document.activeElement === searchInput);
+            searchWrap.classList.toggle("has-value", Boolean(searchInput.value.trim()));
+        }
 
         graphEl.querySelectorAll("[data-depth]").forEach((button) => {
             button.addEventListener("click", () => {
@@ -3738,12 +3802,14 @@
     function clearSearchUi(state) {
         const input = graphEl.querySelector("#xana-search-input");
         const clearButton = graphEl.querySelector("[data-search-clear]");
+        const searchWrap = graphEl.querySelector(".xana-search-wrap");
 
         state.searchQuery = "";
         state.searchResults = [];
         saveSetting(STORAGE_KEYS.searchQuery, "");
         if (input) input.value = "";
         if (clearButton) clearButton.hidden = true;
+        if (searchWrap) searchWrap.classList.remove("has-value");
         renderSearchResults(state);
     }
 
@@ -3776,7 +3842,8 @@
 
     function startSearchVerbRotation() {
         const input = graphEl.querySelector("#xana-search-input");
-        if (!input || input.dataset.verbRotation === "1") return;
+        const promptText = graphEl.querySelector("[data-search-prompt-text]");
+        if (!input || !promptText || input.dataset.verbRotation === "1") return;
 
         input.dataset.verbRotation = "1";
         let promptIndex = 0;
@@ -3791,7 +3858,9 @@
 
             const prompt = SEARCH_PROMPTS[promptIndex];
             charIndex += direction;
-            input.setAttribute("placeholder", prompt.slice(0, Math.max(0, charIndex)));
+            const visiblePrompt = prompt.slice(0, Math.max(0, charIndex));
+            promptText.textContent = visiblePrompt;
+            input.setAttribute("aria-label", visiblePrompt || SEARCH_PROMPTS[promptIndex]);
 
             if (charIndex <= 0) {
                 direction = 1;

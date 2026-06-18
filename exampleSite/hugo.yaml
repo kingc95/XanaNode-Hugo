@@ -21,6 +21,20 @@ params:
     plausibleSrc: "https://plausible.io/js/script.js"
   xananode:
     namespace: "xananode.example"
+    brand:
+      name: "XanaNode"
+      tagline: "Relationships preserve knowledge"
+      icon: "xananode-icon.svg"
+      attributionLabel: "XanaNode"
+      attributionText: "xananode.com"
+      attributionUrl: "https://xananode.com"
+    searchPrompts:
+      - "explore the knowledge substrate"
+      - "trace an idea across sources"
+      - "follow a claim to evidence"
+      - "compare connected nodes"
+      - "search for provenance"
+      - "map a trail through context"
 
 markup:
   goldmark:
