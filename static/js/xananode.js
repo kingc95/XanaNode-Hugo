@@ -18,6 +18,7 @@
     let _tourScrollInterval = null;
     let _aliveTimer = null;
     let TOUR_DWELL_MS = 9000;     // ms between node hops — updated by speed input
+    const NARRATION_AFTER_END_PAUSE_MS = 1200;
 
     const STORAGE_KEYS = {
         panelWidth: "xananode.panelWidth",
@@ -1480,10 +1481,9 @@
             panelEl.scrollTop = 0;
         }
 
-        // If a tour is running, reset scroll and start gentle downward drift
-        if (state.tourActive) {
+        if (state.tourActive && state.displaySettings?.tourMode === "timed") {
             panelEl.scrollTop = 0;
-            startTourPanelScroll();
+            startTourPanelScroll(TOUR_DWELL_MS);
         }
 
         if (options.updateUrl) {
@@ -2066,12 +2066,14 @@
         graphEl.dataset.tourActive = "1";
         updateTourButton();
         panelEl.scrollTop = 0;
-        startTourPanelScroll();
         const narrated = state.displaySettings?.tourMode === "narration"
             ? narrateNode(state.allNodes.find((node) => node.id === state.focusId), state)
             : false;
         restartTourRing();
-        if (!narrated) scheduleTourAdvance(state);
+        if (!narrated) {
+            startTourPanelScroll(TOUR_DWELL_MS);
+            scheduleTourAdvance(state);
+        }
     }
 
     function stopTour(state) {
@@ -2092,13 +2094,14 @@
         if (_tourScrollInterval) { window.cancelAnimationFrame(_tourScrollInterval); _tourScrollInterval = null; }
     }
 
-    function startTourPanelScroll() {
+    function startTourPanelScroll(durationMs = TOUR_DWELL_MS) {
         if (_tourScrollInterval) window.cancelAnimationFrame(_tourScrollInterval);
 
         // Measure total scrollable distance once the panel has rendered.
         // Scroll position is time-based so short content scrolls slowly and
-        // long content scrolls faster — both finish at the bottom at dwell end.
+        // long content scrolls faster. The caller decides which clock owns it.
         const startTime = performance.now();
+        const duration = Math.max(1200, Number(durationMs) || TOUR_DWELL_MS);
         const totalDistance = Math.max(0, panelEl.scrollHeight - panelEl.clientHeight);
 
         if (totalDistance === 0) return; // nothing to scroll
@@ -2106,7 +2109,7 @@
         const scroll = (now) => {
             if (!_tourScrollInterval) return;
             const elapsed = now - startTime;
-            const progress = Math.min(elapsed / TOUR_DWELL_MS, 1);
+            const progress = Math.min(elapsed / duration, 1);
             panelEl.scrollTop = totalDistance * progress;
             if (progress < 1) {
                 _tourScrollInterval = window.requestAnimationFrame(scroll);
@@ -2459,10 +2462,12 @@
         // countdown ring animation so both are in sync with the new node's dwell.
         if (state.tourActive) {
             panelEl.scrollTop = 0;
-            startTourPanelScroll();
             const narrated = narrateNode(node, state);
             restartTourRing();
-            if (!narrated) scheduleTourAdvance(state);
+            if (!narrated) {
+                startTourPanelScroll(TOUR_DWELL_MS);
+                scheduleTourAdvance(state);
+            }
         }
     }
 
@@ -2626,6 +2631,9 @@
         if (!text) return false;
         stopNarration();
 
+        const rate = clampNumber(state.displaySettings.ttsRate, 0.65, 1.35, DISPLAY_DEFAULTS.ttsRate);
+        startTourPanelScroll(estimateNarrationDurationMs(text, rate));
+
         const utterance = new SpeechSynthesisUtterance(text);
         const voices = getAvailableVoices();
         const selectedVoice = voices.find((voice) => voice.voiceURI === state.displaySettings.ttsVoice)
@@ -2634,23 +2642,32 @@
             || voices[0];
 
         if (selectedVoice) utterance.voice = selectedVoice;
-        utterance.rate = clampNumber(state.displaySettings.ttsRate, 0.65, 1.35, DISPLAY_DEFAULTS.ttsRate);
+        utterance.rate = rate;
         utterance.pitch = clampNumber(state.displaySettings.ttsPitch, 0.75, 1.35, DISPLAY_DEFAULTS.ttsPitch);
         utterance.volume = 0.88;
         utterance.onend = () => {
             if (!state.tourActive) return;
             window.setTimeout(() => {
                 if (!state.tourActive) return;
-            const nextId = pickNextTourNode(state);
-            if (nextId) travelToNode(nextId, state, false);
-            if (!nextId && !state.trailChoicePending) stopTour(state);
-        }, 450);
-    };
+                const nextId = pickNextTourNode(state);
+                if (nextId) travelToNode(nextId, state, false);
+                if (!nextId && !state.trailChoicePending) stopTour(state);
+            }, NARRATION_AFTER_END_PAUSE_MS);
+        };
         utterance.onerror = () => {
             if (state.tourActive) scheduleTourAdvance(state, true);
         };
         window.speechSynthesis.speak(utterance);
         return true;
+    }
+
+    function estimateNarrationDurationMs(text, rate) {
+        const words = String(text || "").trim().split(/\s+/).filter(Boolean).length;
+        const punctuationPauses = (String(text || "").match(/[.!?;:]/g) || []).length * 180;
+        const baseWordsPerMinute = 155;
+        const effectiveWordsPerMinute = baseWordsPerMinute * clampNumber(rate, 0.65, 1.35, DISPLAY_DEFAULTS.ttsRate);
+        const spokenMs = (words / effectiveWordsPerMinute) * 60000;
+        return Math.max(2600, spokenMs + punctuationPauses);
     }
 
     function stopNarration() {
