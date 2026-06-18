@@ -63,7 +63,7 @@
     },
     {
       "id": "xananode.example:rel/xananode-hugo-theme-represented-by-xananode-icon",
-      "type": "represented_by",
+      "type": "has_primary_media",
       "target": "xananode.example:media/xananode-icon",
       "direction": "outgoing"
     }

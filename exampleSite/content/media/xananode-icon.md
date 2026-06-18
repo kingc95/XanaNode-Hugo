@@ -8,7 +8,7 @@ file: "/xananode-icon.svg"
 alt: "An abstract X-shaped network logo with a central node and four outer nodes connected by blue and orange relationship lines."
 rights_status: "open-source"
 source_name: "XanaNode theme static asset"
-source_url: "/xananode-icon.svg"
+source_url: "https://xananode.com/xananode-icon.svg"
 license: "MIT"
 license_url: "/LICENSE"
 created_date: 2026-06-16

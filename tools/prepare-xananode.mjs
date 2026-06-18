@@ -6,6 +6,7 @@ import { createHash } from "node:crypto";
 import matter from "gray-matter";
 import { globSync } from "glob";
 import Ajv2020 from "ajv/dist/2020.js";
+import { validateSubstrateArtifacts as validateCoreSubstrateArtifacts } from "@xananode/core";
 
 const siteRoot = path.resolve(process.argv[2] || ".");
 const themeRootCandidates = [
@@ -19,6 +20,7 @@ const themeRootCandidates = [
 const themeRoot = themeRootCandidates.find((candidate) => fs.existsSync(path.join(candidate, "static", "schemas"))) || themeRootCandidates[0];
 const sdkRootCandidates = [
   process.env.XANANODE_SDK_ROOT,
+  path.resolve(themeRoot, "vendor", "xananode-core"),
   path.resolve(siteRoot, "..", "..", "..", "..", "XanaNode-Core-SDK"),
   path.resolve(siteRoot, "..", "..", "..", "..", "xananode-core-sdk"),
   path.resolve(themeRoot, "..", "..", "..", "XanaNode-Core-SDK"),
@@ -460,6 +462,18 @@ function renderSuggestionReport(suggestions) {
   return `${lines.join("\n")}\n`;
 }
 
+function formatCoreValidationIssue(issue) {
+  const label = issue?.label || issue?.kind || "artifact";
+  const schema = issue?.schema ? ` (${issue.schema})` : "";
+  const details = Array.isArray(issue?.errors)
+    ? issue.errors.map((error) => {
+        const instancePath = error.instancePath || "/";
+        return `${instancePath} ${error.message || "failed validation"}`.trim();
+      }).join("; ")
+    : issue?.message || JSON.stringify(issue);
+  return `${label}${schema}: ${details}`;
+}
+
 function buildReviewSuggestions(nodes, fragments) {
   const nodeList = [...nodes.values()];
   const generatedAt = new Date().toISOString();
@@ -707,6 +721,21 @@ for (const relativeFile of contentFiles) {
   }
 }
 
+const nodeLookup = new Map();
+for (const node of nodes.values()) {
+  nodeLookup.set(node.id, node);
+  nodeLookup.set(node.protocolId, node);
+  nodeLookup.set(node.data.protocol_id, node);
+}
+
+function resolveNodeRef(ref) {
+  return nodeLookup.get(String(ref || "").trim()) || null;
+}
+
+function resolveNodeId(ref) {
+  return resolveNodeRef(ref)?.id || String(ref || "");
+}
+
 for (const node of nodes.values()) {
   const { id, file, data, body } = node;
   const nodeType = nodeTypeMap.get(data.type);
@@ -732,7 +761,8 @@ for (const node of nodes.values()) {
     if (relationship.type && !relationshipDefinitionFor(relationship.type)) {
       errors.push(`${file}: relationship "${relationship.type}" is not in xananode-relationship-types.json.`);
     }
-    if (relationship.target && !nodes.has(relationship.target)) {
+    const targetNode = resolveNodeRef(relationship.target);
+    if (relationship.target && !targetNode) {
       errors.push(`${file}: relationship "${relationship.type}" points to missing target "${relationship.target}".`);
     }
     if (relationship.weight !== undefined && (!Number.isInteger(relationship.weight) || relationship.weight < 1 || relationship.weight > 5)) {
@@ -742,17 +772,17 @@ for (const node of nodes.values()) {
       errors.push(`${file}: relationship "${relationship.type}" has invalid visibility "${relationship.visibility}".`);
     }
     if (relationship.type && relationship.target) {
-      authoredEdges.push(normalizeAuthoredEdge({ source: id, target: relationship.target, type: relationship.type, file, relationship, index }));
+      authoredEdges.push(normalizeAuthoredEdge({ source: id, target: resolveNodeId(relationship.target), type: relationship.type, file, relationship, index }));
     }
   }
   const implicitReferenceFields = ["claims", "sources", "people", "concepts", "projects", "events", "organizations", "technologies", "observations", "media", "depicts", "nodes"];
   for (const field of implicitReferenceFields) {
     for (const target of asArray(data[field])) {
       if (typeof target !== "string") errors.push(`${file}: ${field} contains a non-string target.`);
-      else if (!nodes.has(target)) errors.push(`${file}: ${field} points to missing target "${target}".`);
+      else if (!resolveNodeRef(target)) errors.push(`${file}: ${field} points to missing target "${target}".`);
     }
   }
-  if (data.primary_media && !nodes.has(data.primary_media)) errors.push(`${file}: primary_media points to missing target "${data.primary_media}".`);
+  if (data.primary_media && !resolveNodeRef(data.primary_media)) errors.push(`${file}: primary_media points to missing target "${data.primary_media}".`);
   if (data.type === "claim" && !data.status) errors.push(`${file}: claim nodes require "status".`);
   if (data.type === "source" && !data.source_url && !data.file) warnings.push(`${file}: source node has neither source_url nor file.`);
 
@@ -851,10 +881,10 @@ const primaryMediaEdges = [...nodes.values()]
       id: `${substrateNamespace}:rel/${slugify(node.id, "source")}-represented-by-${slugify(node.data.primary_media, "media")}`,
       source: node.protocolId,
       target: mediaNode.protocolId,
-      type: "represented_by",
-      weight: relationshipTypeMap.get("represented_by")?.default_weight || 5,
-      visibility: relationshipTypeMap.get("represented_by")?.default_visibility || "primary",
-      summary: `${node.data.title || node.id} is represented by ${mediaNode.data.title || mediaNode.id}.`
+      type: "has_primary_media",
+      weight: relationshipTypeMap.get("has_primary_media")?.default_weight || 5,
+      visibility: relationshipTypeMap.get("has_primary_media")?.default_visibility || "primary",
+      summary: `${node.data.title || node.id} uses ${mediaNode.data.title || mediaNode.id} as its primary media.`
     };
   });
 
@@ -968,6 +998,18 @@ for (const protocolNode of protocolNodes) {
   if (!validateSubstrateNode(protocolNode)) {
     errors.push(`Generated node "${protocolNode.id}" does not match schema:\n${ajv.errorsText(validateSubstrateNode.errors, { separator: "\n" })}`);
   }
+}
+
+const coreValidation = validateCoreSubstrateArtifacts({
+  manifest: substrateManifest,
+  protocolNodes,
+  relationships: protocolEdges
+});
+for (const coreError of coreValidation.errors || []) {
+  errors.push(`Core SDK protocol validation failed: ${formatCoreValidationIssue(coreError)}`);
+}
+for (const coreWarning of coreValidation.warnings || []) {
+  warnings.push(`Core SDK protocol warning: ${formatCoreValidationIssue(coreWarning)}`);
 }
 
 reviewSuggestions = buildReviewSuggestions(nodes, fragments);

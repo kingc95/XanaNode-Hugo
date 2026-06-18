@@ -1789,19 +1789,19 @@
       "id": "xananode.example:rel/xananode-hugo-theme-represented-by-xananode-icon",
       "source": "xananode.example:project/xananode-hugo-theme",
       "target": "xananode.example:media/xananode-icon",
-      "type": "represented_by",
+      "type": "has_primary_media",
       "weight": 5,
       "visibility": "primary",
-      "summary": "XanaNode Hugo Theme is represented by XanaNode Icon."
+      "summary": "XanaNode Hugo Theme uses XanaNode Icon as its primary media."
     },
     {
       "id": "xananode.example:rel/xananode-represented-by-xananode-icon",
       "source": "xananode.example:concept/xananode",
       "target": "xananode.example:media/xananode-icon",
-      "type": "represented_by",
+      "type": "has_primary_media",
       "weight": 5,
       "visibility": "primary",
-      "summary": "XanaNode is represented by XanaNode Icon."
+      "summary": "XanaNode uses XanaNode Icon as its primary media."
     },
     {
       "id": "xananode.example:rel/tumbler-addressing-transcludes-0004",
