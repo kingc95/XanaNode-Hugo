@@ -1684,7 +1684,6 @@
                     classes: [
                         node.type || "node",
                         (node.image && isVisualMedia) ? "has-image" : "",
-                        (node.source_icon_svg && !(node.image && isVisualMedia)) ? "external-source" : "",
                         isContain ? "image-contain" : "",
                         searchMatchIds.has(node.id) ? "search-match" : "",
                         node.id === state.focusId ? "focused-node" : `distance-${visible.distances[node.id] || 0}`,
@@ -4711,18 +4710,6 @@
                     height: 72,
                     "text-max-width": 190
                 })
-            },
-            {
-                selector: ".external-source",
-                style: {
-                    "background-image": "data(source_icon_svg)",
-                    "background-fit": "none",
-                    "background-width": "24px",
-                    "background-height": "24px",
-                    "background-position-x": "10px",
-                    "background-position-y": "10px",
-                    "background-repeat": "no-repeat"
-                }
             },
             {
                 selector: ".person",
