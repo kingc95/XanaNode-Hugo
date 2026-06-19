@@ -261,7 +261,7 @@
     const TYPE_PALETTE = {
         essay: { bg: "#f59ec3", fg: "#1f1020", outline: "#ffe3f0" },
         concept: { bg: "#91f2a6", fg: "#062010", outline: "#dcffe4" },
-        source: { bg: "#ff9f7a", fg: "#2a1208", outline: "#ffe4d9" },
+        source: { bg: "#57707f", fg: "#eef9ff", outline: "#bdefff" },
         person: { bg: "#8bd3ff", fg: "#071827", outline: "#d8f1ff" },
         observation: { bg: "#ef476f", fg: "#2a0610", outline: "#ffd7e0" },
         trail: { bg: "#fb8500", fg: "#241100", outline: "#ffe3be" },
@@ -283,7 +283,7 @@
     const ACCESSIBLE_TYPE_PALETTE = {
         essay: { bg: "#cc79a7", fg: "#1a0712", outline: "#ffd8ed" },
         concept: { bg: "#009e73", fg: "#001f17", outline: "#bfffea" },
-        source: { bg: "#e69f00", fg: "#211500", outline: "#ffe6ad" },
+        source: { bg: "#0072b2", fg: "#eef9ff", outline: "#bdefff" },
         person: { bg: "#56b4e9", fg: "#061823", outline: "#d8f2ff" },
         observation: { bg: "#d55e00", fg: "#250d00", outline: "#ffd9c7" },
         trail: { bg: "#f0e442", fg: "#1d1a00", outline: "#fffbc5" },
@@ -4741,10 +4741,16 @@
             {
                 selector: ".source",
                 style: nodeTypeStyle("source", nodeTypeColors, {
-                    shape: "round-rectangle",
-                    width: 130,
-                    height: 72,
-                    "text-max-width": 190
+                    shape: "ellipse",
+                    width: 78,
+                    height: 78,
+                    "text-valign": "bottom",
+                    "text-margin-y": 9,
+                    "text-max-width": 132,
+                    "text-background-color": "#05070a",
+                    "text-background-opacity": 0.84,
+                    "text-background-padding": 3,
+                    "text-background-shape": "roundrectangle"
                 })
             },
             {
@@ -4938,25 +4944,48 @@
                 selector: ".distance-4.claim",
                 style: { width: 54, height: 26 }
             },
-            // Same compound overrides for source and organization
+            // Source nodes stay compact; labels live outside the marker so
+            // repositories and web sources do not read as banner ads.
             {
-                selector: ".focused-node.source, .focused-node.organization",
+                selector: ".focused-node.source",
+                style: { width: 112, height: 112, "text-max-width": 160, "font-size": 15, "text-margin-y": 10 }
+            },
+            {
+                selector: ".distance-1.source",
+                style: { width: 86, height: 86, "text-max-width": 130, "font-size": 13, "text-margin-y": 8 }
+            },
+            {
+                selector: ".distance-2.source",
+                style: { width: 64, height: 64, "text-max-width": 112, "font-size": 11, "text-margin-y": 7 }
+            },
+            {
+                selector: ".distance-3.source",
+                style: { width: 48, height: 48, "text-max-width": 96, "font-size": 10, "text-margin-y": 6 }
+            },
+            {
+                selector: ".distance-4.source",
+                style: { width: 36, height: 36, "text-max-width": 82, "font-size": 9, "text-margin-y": 5 }
+            },
+            // Organization nodes remain compact labels, but are larger than
+            // simple sources because they often name institutions.
+            {
+                selector: ".focused-node.organization",
                 style: { width: 220, height: 96, "text-max-width": 270, "font-size": 16 }
             },
             {
-                selector: ".distance-1.source, .distance-1.organization",
+                selector: ".distance-1.organization",
                 style: { width: 150, height: 82 }
             },
             {
-                selector: ".distance-2.source, .distance-2.organization",
+                selector: ".distance-2.organization",
                 style: { width: 98, height: 54 }
             },
             {
-                selector: ".distance-3.source, .distance-3.organization",
+                selector: ".distance-3.organization",
                 style: { width: 64, height: 34 }
             },
             {
-                selector: ".distance-4.source, .distance-4.organization",
+                selector: ".distance-4.organization",
                 style: { width: 52, height: 30 }
             },
             {
