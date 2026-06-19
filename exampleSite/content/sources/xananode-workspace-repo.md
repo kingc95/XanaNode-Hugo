@@ -14,4 +14,4 @@ relationships:
     target: "federated-knowledge-substrates"
 ---
 
-The Workspace repository manages multiple substrates and their operational lifecycle: folder layout, imports, Git state, builds, and health checks.
+The Workspace repository manages multiple substrates and their operational lifecycle: folder layout, imports, [Git](xananode.canonical:technology/git) state, builds, and health checks.

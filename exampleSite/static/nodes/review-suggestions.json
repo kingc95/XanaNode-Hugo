@@ -22,6 +22,12 @@
       "type": "contains",
       "source": "xananode.example:concept/protocol-artifacts",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.review:rel/fixture-context-for-review",
+      "type": "context_for",
+      "source": "xananode.review:observation/unresolved-review-fixture",
+      "direction": "incoming"
     }
   ]
 }

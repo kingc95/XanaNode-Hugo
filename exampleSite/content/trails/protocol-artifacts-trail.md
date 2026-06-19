@@ -37,17 +37,17 @@ This trail follows the artifacts a [XanaNode](/node/xananode) implementation pub
 
 It begins with the manifest, node records, and relationship list, then moves through compatibility reports, merge reports, registries, extension policy, custom extensions, federation examples, and governance rules.
 
-{{< node ref="protocol-artifacts" >}}
-{{< node ref="substrate-manifest" >}}
-{{< node ref="substrate-node-record" >}}
-{{< node ref="substrate-relationship-list" >}}
-{{< node ref="compatibility-levels" >}}
-{{< node ref="compatibility-report" >}}
-{{< node ref="merge-report" >}}
-{{< node ref="namespace-registry" >}}
-{{< node ref="known-implementations-registry" >}}
-{{< node ref="review-suggestions" >}}
-{{< node ref="canonical-type-policy" >}}
-{{< node ref="custom-extension-substrate" >}}
-{{< node ref="federation-example" >}}
-{{< node ref="federation-rules" >}}
+{{< node ref="[protocol-artifacts](protocol-artifacts)" >}}
+{{< node ref="[substrate-manifest](substrate-manifest)" >}}
+{{< node ref="[substrate-node-record](substrate-node-record)" >}}
+{{< node ref="[substrate-relationship-list](substrate-relationship-list)" >}}
+{{< node ref="[compatibility-levels](compatibility-levels)" >}}
+{{< node ref="[compatibility-report](compatibility-report)" >}}
+{{< node ref="[merge-report](merge-report)" >}}
+{{< node ref="[namespace-registry](namespace-registry)" >}}
+{{< node ref="[known-implementations-registry](known-implementations-registry)" >}}
+{{< node ref="[review-suggestions](review-suggestions)" >}}
+{{< node ref="[canonical-type-policy](canonical-type-policy)" >}}
+{{< node ref="[custom-extension-substrate](custom-extension-substrate)" >}}
+{{< node ref="[federation-example](federation-example)" >}}
+{{< node ref="[federation-rules](federation-rules)" >}}

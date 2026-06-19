@@ -6784,6 +6784,15 @@
       "weight": 5,
       "visibility": "primary",
       "summary": "The imported lineage trail arrives at XanaNode."
+    },
+    {
+      "id": "xananode.review:rel/fixture-context-for-review",
+      "source": "xananode.review:observation/unresolved-review-fixture",
+      "target": "xananode.example:concept/review-suggestions",
+      "type": "context_for",
+      "weight": 1,
+      "visibility": "background",
+      "summary": "The fixture exists to demonstrate pending review suggestions without polluting canonical or lineage packs."
     }
   ]
 }

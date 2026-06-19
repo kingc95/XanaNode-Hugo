@@ -736,6 +736,24 @@ function buildCoreReviewSuggestions(nodes, protocolNodes, protocolEdges, authore
     file: node.file,
     body_start_line: node.body_start_line
   }));
+  const reviewFixtureNodes = importedNodes
+    .filter((node) => node.review_fixture === true || node.data?.review_fixture === true)
+    .map((node) => ({
+      id: node.local_id || node.id,
+      protocolId: node.id,
+      protocol_id: node.id,
+      title: node.title || node.id,
+      type: node.type,
+      body: node.content || node.body || node.summary || "",
+      data: {
+        ...node,
+        aliases: nodeAliases(node)
+      },
+      file: node.source_file || node.id,
+      body_start_line: 1,
+      review_fixture: true
+    }));
+  const suggestionSourceNodes = [...coreNodes, ...reviewFixtureNodes];
   const coreFragments = authoredFragmentNodes.map((fragment) => ({
     protocol_id: fragment.protocol_id,
     source_node: fragment.sourceProtocolId,
@@ -743,7 +761,7 @@ function buildCoreReviewSuggestions(nodes, protocolNodes, protocolEdges, authore
     generated: false
   }));
   const analysis = analyzeSubstrateIntake({
-    nodes: coreNodes,
+    nodes: suggestionSourceNodes,
     protocolNodes,
     relationships: protocolEdges,
     fragments: coreFragments
@@ -751,7 +769,7 @@ function buildCoreReviewSuggestions(nodes, protocolNodes, protocolEdges, authore
     nodes: importedNodes,
     relationships: importedRelationships
   });
-  const localByProtocol = new Map(coreNodes.map((node) => [node.protocolId, node]));
+  const localByProtocol = new Map(suggestionSourceNodes.map((node) => [node.protocolId, node]));
   const targetByProtocol = new Map([
     ...protocolNodes.map((node) => [node.id, node]),
     ...importedNodes.map((node) => [node.id, node])

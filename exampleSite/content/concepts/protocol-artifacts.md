@@ -22,4 +22,4 @@ The protocol is not only a set of ideas. It is a set of publishable artifacts.
 
 A published substrate can expose those artifacts as static JSON: `substrate.json`, `relationships.json`, one JSON record per node, schema files, fragment data, and pending [review suggestions](/node/review-suggestions).
 
-Human pages make the substrate readable. Protocol artifacts make it inspectable, validatable, comparable, and federatable by other tools.
+Human pages make the substrate readable. [Protocol artifacts](xananode.canonical:concept/protocol-artifacts) make it inspectable, validatable, comparable, and federatable by other tools.

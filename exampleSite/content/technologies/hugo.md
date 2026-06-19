@@ -8,4 +8,4 @@ relationships:
     target: "static-publishing"
 ---
 
-Hugo provides the [static publishing](/node/static-publishing) layer for XanaNode sites.
+[Hugo](xananode.canonical:technology/hugo) provides the [static publishing](/node/static-publishing) layer for [XanaNode](xananode) sites.

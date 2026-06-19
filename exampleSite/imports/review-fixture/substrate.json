@@ -1,0 +1,12 @@
+{
+  "id": "xananode.review-fixture",
+  "name": "XanaNode Review Fixture",
+  "version": "0.1.0",
+  "namespace": "xananode.review",
+  "description": "A deliberately incomplete substrate pack used to demonstrate Core review suggestions without dirtying canonical or lineage packs.",
+  "repository": {
+    "type": "local",
+    "url": "exampleSite/imports/review-fixture",
+    "default_branch": "main"
+  }
+}

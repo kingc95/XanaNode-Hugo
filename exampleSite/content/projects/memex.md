@@ -10,4 +10,4 @@ relationships:
     target: "xananode"
 ---
 
-The Memex is an ancestor concept for associative trails and human-centered knowledge navigation.
+The Memex is an ancestor concept for [associative trails](example.minimal:concept/associative-trails) and human-centered knowledge navigation.

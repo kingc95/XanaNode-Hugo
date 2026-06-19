@@ -25,10 +25,10 @@ relationships:
 
 A page can say something. A graph can show where that statement came from, what supports it, what challenges it, what it depends on, and how it changed.
 
-This substrate explains XanaNode using XanaNode itself. Each page is a node, and the graph around it carries the claims, sources, lineage, and relationships that make the page understandable.
+This substrate explains [XanaNode](xananode.canonical:concept/xananode) using [XanaNode](xananode.canonical:concept/xananode) itself. Each page is a node, and the graph around it carries the claims, sources, lineage, and relationships that make the page understandable.
 
 Follow the core trail from the problem of isolated documents, through [typed relationships](/node/typed-relationships), [provenance](/node/provenance), [transclusion](/node/transclusion), [namespacing](/node/namespacing), [merge validation](/node/merge-validation), and federation.
 
 Then follow the [protocol artifacts trail](/node/protocol-artifacts-trail) to see the manifest, node records, relationship list, schemas, registries, extension examples, reports, and governance rules that make federation concrete.
 
-If you are building a Hugo site from existing protocol JSON, read [Using Hugo with Protocol JSON](/node/using-hugo-with-protocol-json).
+If you are building a [Hugo](hugo) site from existing protocol JSON, read [Using Hugo with Protocol JSON](/node/using-hugo-with-protocol-json).

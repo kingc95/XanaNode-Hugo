@@ -16,4 +16,4 @@ relationships:
     target: "protocol-artifacts"
 ---
 
-The protocol repository is the source of truth for XanaNode schemas, registries, specs, examples, governance, and proposals.
+The protocol repository is the source of truth for [XanaNode](xananode) schemas, registries, specs, examples, governance, and proposals.

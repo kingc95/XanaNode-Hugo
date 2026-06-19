@@ -24,4 +24,4 @@ relationships:
     target: "xananode"
 ---
 
-This trail follows the historical lineage behind [XanaNode](/node/xananode): Bush's associative trails, Engelbart's augmentation work, Nelson's [transclusion](/node/transclusion) and visible interconnection, and the protocol's current focus on [typed relationships](/node/typed-relationships) and stable fragments.
+This trail follows the historical lineage behind [XanaNode](/node/xananode): Bush's [associative trails](example.minimal:concept/associative-trails), Engelbart's augmentation work, Nelson's [transclusion](/node/transclusion) and visible interconnection, and the protocol's current focus on [typed relationships](/node/typed-relationships) and stable fragments.

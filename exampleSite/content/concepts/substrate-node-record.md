@@ -12,6 +12,6 @@ relationships:
 
 A node record is the machine-readable counterpart to a human-readable page.
 
-It preserves the protocol id, title, type, importance, summary, [provenance](/node/provenance) fields, and incoming or outgoing relationship summaries needed for tools to traverse the substrate without scraping HTML.
+It preserves the protocol id, title, type, importance, summary, [provenance](/node/provenance) fields, and incoming or outgoing relationship summaries needed for tools to traverse the substrate without scraping [HTML](xananode.lineage:technology/html).
 
 Addressable fragments can also be published as protocol `fragment` node records with `source_node`, `fragment_id`, `tumbler`, and `selector` metadata.

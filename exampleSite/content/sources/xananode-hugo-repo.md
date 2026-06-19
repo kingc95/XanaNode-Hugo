@@ -16,4 +16,4 @@ relationships:
     target: "xananode-core-schema"
 ---
 
-The Hugo repository contains the public-site theme, example substrate, and graph viewer for publishing XanaNode substrates on a static host.
+The [Hugo](hugo) repository contains the public-site theme, example substrate, and graph viewer for publishing [XanaNode](xananode) substrates on a static host.

@@ -22,20 +22,20 @@ relationships:
     target: "xananode-studio-repo"
 ---
 
-This trail orders the active XanaNode implementation repositories by dependency and responsibility.
+This trail orders the active [XanaNode](xananode) implementation repositories by dependency and responsibility.
 
 The [protocol repository](/source/xananode-protocol-repository/) defines the canonical rules.
 
 The [Core SDK repository](/source/xananode-core-sdk-repository/) consumes those rules and exposes reusable validation, fragment, graph, and artifact APIs.
 
-The [Hugo repository](/source/xananode-hugo-repository/) adapts Hugo content and static publishing to Core-validated protocol artifacts.
+The [Hugo repository](/source/xananode-hugo-repository/) adapts [Hugo](hugo) content and [static publishing](static-publishing) to Core-validated [protocol artifacts](protocol-artifacts).
 
 The [Workspace repository](/source/xananode-workspace-repository/) manages multiple local substrates and their operational workflows.
 
 The [Studio repository](/source/xananode-studio-repository/) provides the desktop workbench for editing, previewing, validating, and navigating those substrates.
 
-{{< node ref="xananode-protocol-repo" >}}
-{{< node ref="xananode-core-sdk-repo" >}}
-{{< node ref="xananode-hugo-repo" >}}
-{{< node ref="xananode-workspace-repo" >}}
-{{< node ref="xananode-studio-repo" >}}
+{{< node ref="[xananode-protocol-repo](xananode-protocol-repo)" >}}
+{{< node ref="[xananode-core-sdk-repo](xananode-core-sdk-repo)" >}}
+{{< node ref="[xananode-hugo-repo](xananode-hugo-repo)" >}}
+{{< node ref="[xananode-workspace-repo](xananode-workspace-repo)" >}}
+{{< node ref="[xananode-studio-repo](xananode-studio-repo)" >}}

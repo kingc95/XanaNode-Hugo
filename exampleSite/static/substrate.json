@@ -30,6 +30,11 @@
       "mode": "mounted",
       "id": "imports:lineage",
       "source": "imports/lineage"
+    },
+    {
+      "mode": "mounted",
+      "id": "imports:review-fixture",
+      "source": "imports/review-fixture"
     }
   ]
 }

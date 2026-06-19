@@ -19,7 +19,7 @@ relationships:
     target: "memex"
 ---
 
-XanaNode is a protocol, ontology, and publishing architecture for interoperable knowledge substrates.
+[XanaNode](xananode.canonical:concept/xananode) is a protocol, ontology, and publishing architecture for interoperable knowledge substrates.
 
 It treats relationships as first-class structures, not decoration around documents. Claims, sources, people, events, media, trails, schemas, fragments, and revisions become addressable nodes connected by [typed relationships](/node/typed-relationships).
 
