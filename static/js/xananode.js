@@ -542,6 +542,7 @@
             auditResults: [],
             auditMode: false,
             isTraveling: false,
+            hasRenderedGraph: false,
             pathExplorer: {
                 active: false,
                 sourceQuery: focusId || "",
@@ -642,7 +643,7 @@
             if (!state.cy) return;
 
             state.cy.resize();
-            state.cy.fit(undefined, getFitPadding());
+            fitReadableNeighborhood(state.cy);
         }, 180));
 
         window.addEventListener("popstate", () => {
@@ -1048,7 +1049,7 @@
                 }
 
                 if (action === "fit") {
-                    cy.fit(undefined, getFitPadding());
+                    fitReadableNeighborhood(cy);
                 }
 
                 saveSetting(STORAGE_KEYS.graphZoom, cy.zoom());
@@ -1763,11 +1764,13 @@
 
         trackNodeView(focusNode);
 
-        if (options.preserveViewport) {
-            applySavedViewportOrFit(cy);
+        if (options.preserveViewport && state.hasRenderedGraph) {
+            // Cytoscape keeps pan/zoom across element replacement; preserve it
+            // during live filtering/search instead of forcing a camera jump.
         } else {
-            cy.fit(undefined, getFitPadding());
+            fitReadableNeighborhood(cy);
         }
+        state.hasRenderedGraph = true;
 
         if (options.stagedReveal) {
             stagedReveal(cy, state.previousFocusId);
@@ -3425,7 +3428,7 @@
 
         if (state.cy) {
             state.cy.resize();
-            state.cy.fit(undefined, getFitPadding());
+            fitReadableNeighborhood(state.cy);
         }
     }
 
@@ -3864,7 +3867,7 @@
 
             if (state.cy) {
                 state.cy.resize();
-                state.cy.fit(undefined, getFitPadding());
+                fitReadableNeighborhood(state.cy);
             }
 
             return;
@@ -3986,7 +3989,7 @@
 
             if (state.cy) {
                 state.cy.resize();
-                state.cy.fit(undefined, getFitPadding());
+                fitReadableNeighborhood(state.cy);
             }
         });
     }
@@ -4170,7 +4173,7 @@
 
             if (state.cy) {
                 state.cy.resize();
-                state.cy.fit(undefined, getFitPadding());
+                fitReadableNeighborhood(state.cy);
             }
         });
 
@@ -4204,26 +4207,19 @@
         window.setTimeout(() => {
             if (state.cy) {
                 state.cy.resize();
-                state.cy.fit(undefined, getFitPadding());
+                fitReadableNeighborhood(state.cy);
             }
         }, 50);
     }
 
-    function applySavedViewportOrFit(cy) {
-        const savedZoom = loadSetting(STORAGE_KEYS.graphZoom, null);
-        const savedPan = loadSetting(STORAGE_KEYS.graphPan, null);
+    function fitReadableNeighborhood(cy) {
+        if (!cy || cy.destroyed?.()) return;
 
-        if (
-            savedZoom &&
-            savedPan &&
-            typeof savedPan.x === "number" &&
-            typeof savedPan.y === "number" &&
-            !isMobileLayout()
-        ) {
-            cy.zoom(savedZoom);
-            cy.pan(savedPan);
-        } else {
-            cy.fit(undefined, getFitPadding());
+        const readableNodes = cy.nodes(".focused-node, .distance-1");
+        const target = readableNodes.length ? readableNodes : cy.nodes();
+
+        if (target.length) {
+            cy.fit(target, getFitPadding());
         }
     }
 
@@ -4618,10 +4614,14 @@
                     "text-halign": "center",
                     color: "#f8fafc",
                     "font-family": "IBM Plex Sans, Segoe UI, sans-serif",
-                    "font-size": 13,
-                    "font-weight": 600,
-                    "text-outline-width": 3,
+                    "font-size": 14,
+                    "font-weight": 800,
+                    "text-outline-width": 4,
                     "text-outline-color": "#05070a",
+                    "text-background-color": "#05070a",
+                    "text-background-opacity": 0.72,
+                    "text-background-padding": 4,
+                    "text-background-shape": "roundrectangle",
                     "background-color": "#55d6be",
                     "border-width": 3,
                     "border-color": "#dffcf6",
@@ -4645,9 +4645,6 @@
                     "border-width": 4,
                     "text-valign": "bottom",
                     "text-margin-y": 8,
-                    "text-background-color": "#05070a",
-                    "text-background-opacity": 0.78,
-                    "text-background-padding": 4,
                     "text-background-shape": "roundrectangle"
                 }
             },
@@ -4664,8 +4661,11 @@
                 style: {
                     width: 160,
                     height: 160,
-                    "font-size": 16,
-                    "text-max-width": 150,
+                    "font-size": 19,
+                    "text-max-width": 170,
+                    "text-outline-width": 5,
+                    "text-background-opacity": 0.82,
+                    "text-background-padding": 5,
                     "border-width": 8,
                     "border-color": "#ffffff",
                     "z-index": 999
@@ -4676,8 +4676,10 @@
                 style: {
                     width: 118,
                     height: 118,
-                    "font-size": 13,
-                    "text-max-width": 112,
+                    "font-size": 15,
+                    "text-max-width": 128,
+                    "text-outline-width": 4,
+                    "text-background-opacity": 0.76,
                     opacity: 0.95,
                     "z-index": 500
                 }
@@ -4687,9 +4689,11 @@
                 style: {
                     width: 78,
                     height: 78,
-                    "font-size": 10,
-                    "text-max-width": 74,
-                    opacity: 0.58,
+                    "font-size": 12,
+                    "text-max-width": 96,
+                    "text-outline-width": 3,
+                    "text-background-opacity": 0.58,
+                    opacity: 0.62,
                     "z-index": 100
                 }
             },
@@ -4698,9 +4702,11 @@
                 style: {
                     width: 52,
                     height: 52,
-                    "font-size": 8,
-                    "text-max-width": 50,
-                    opacity: 0.28,
+                    "font-size": 10,
+                    "text-max-width": 80,
+                    "text-outline-width": 3,
+                    "text-background-opacity": 0.42,
+                    opacity: 0.32,
                     "z-index": 10
                 }
             },
@@ -4709,9 +4715,11 @@
                 style: {
                     width: 38,
                     height: 38,
-                    "font-size": 6,
-                    "text-max-width": 42,
-                    opacity: 0.16,
+                    "font-size": 9,
+                    "text-max-width": 70,
+                    "text-outline-width": 2,
+                    "text-background-opacity": 0.28,
+                    opacity: 0.18,
                     "z-index": 1
                 }
             },
