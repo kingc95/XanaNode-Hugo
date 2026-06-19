@@ -12,37 +12,37 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/compatibility-report-schema-documents-compatibility-levels-76",
+      "id": "xananode.example:rel/compatibility-report-schema-documents-compatibility-levels-97",
       "type": "documents",
       "source": "xananode.example:schema/compatibility-report-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/known-implementations-registry-supports-compatibility-levels-174",
+      "id": "xananode.example:rel/known-implementations-registry-supports-compatibility-levels-195",
       "type": "supports",
       "source": "xananode.example:concept/known-implementations-registry",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/compatibility-report-documents-compatibility-levels-207",
+      "id": "xananode.example:rel/compatibility-report-documents-compatibility-levels-228",
       "type": "documents",
       "source": "xananode.example:concept/compatibility-report",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/compatibility-levels-uses-compatibility-report-209",
+      "id": "xananode.example:rel/compatibility-levels-uses-compatibility-report-230",
       "type": "uses",
       "target": "xananode.example:concept/compatibility-report",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/compatibility-levels-requires-substrate-manifest-210",
+      "id": "xananode.example:rel/compatibility-levels-requires-substrate-manifest-231",
       "type": "requires",
       "target": "xananode.example:concept/substrate-manifest",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-compatibility-levels-211",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-compatibility-levels-232",
       "type": "requires",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "incoming"

@@ -1,0 +1,34 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/cc-by-example-of-attribution-license",
+      "type": "example_of",
+      "target": "xananode.canonical:concept/attribution-license",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/cc-by-requires-attribution-to-contributors",
+      "type": "requires_attribution",
+      "target": "xananode.canonical:community/xananode-contributors",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-docs-licensed-under-cc-by",
+      "type": "licensed_under",
+      "source": "xananode.canonical:claim/protocol-docs-licensed-cc-by-4-0",
+      "direction": "incoming"
+    }
+  ],
+  "id": "xananode.canonical:source/cc-by-4-0-license",
+  "title": "Creative Commons Attribution 4.0 International",
+  "type": "source",
+  "subtype": "license",
+  "importance": 5,
+  "summary": "The Creative Commons license used for XanaNode protocol documentation, allowing sharing and adaptation with attribution.",
+  "source_url": "https://creativecommons.org/licenses/by/4.0/",
+  "rights_status": "external",
+  "license": "CC-BY-4.0",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

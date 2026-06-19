@@ -1,0 +1,49 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-asked_by",
+  "title": "Asked By Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The asked_by inverse relationship term derived from asked.",
+  "version": "0.5.0",
+  "registry_type": "asked_by",
+  "registry_namespace": "xananode",
+  "category": "communication",
+  "inverse": "asked",
+  "color": "#bae6fd",
+  "inverse_color": "#38bdf8",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "derived_inverse": true,
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-asked_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-asked_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-communication",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-asked_by-related_to-schema-relationship-type-asked-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-asked",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-asked-related_to-schema-relationship-type-asked_by-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-asked",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

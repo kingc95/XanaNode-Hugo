@@ -1,0 +1,74 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-uncertainty",
+  "title": "Uncertainty Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The uncertainty category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "uncertainty",
+  "registry_namespace": "xananode",
+  "color": "#d946ef",
+  "inverse_color": "#f5d0fe",
+  "line_style": "dotted",
+  "inverse_line_style": "dotted",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-uncertainty-contains-schema-relationship-type-evidence_insufficient_for",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-evidence_insufficient_for",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-uncertainty-contains-schema-relationship-type-insufficient_evidence",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-insufficient_evidence",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-uncertainty-contains-schema-relationship-type-reviewed_under",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-reviewed_under",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-uncertainty-contains-schema-relationship-type-speculated_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-speculated_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-uncertainty-contains-schema-relationship-type-speculative",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-speculative",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-uncertainty-contains-schema-relationship-type-under_review",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-under_review",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-uncertainty-contains-schema-relationship-type-unresolved",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-unresolved",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-uncertainty-contains-schema-relationship-type-unresolved_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-unresolved_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-uncertainty",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

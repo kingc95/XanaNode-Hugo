@@ -41,10 +41,100 @@
   },
   "relationships": [
     {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-relationship-69",
+      "type": "contains",
+      "source": "xananode.example:schema/xananode-node-types",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-relationship",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-relationship-citation-extension_of-schema-node-type-relationship",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-relationship-citation",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-relationship-collaboration-extension_of-schema-node-type-relationship",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-relationship-collaboration",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-relationship-dependency-extension_of-schema-node-type-relationship",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-relationship-dependency",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-relationship-dispute-extension_of-schema-node-type-relationship",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-relationship-dispute",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-relationship-friendship-extension_of-schema-node-type-relationship",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-relationship-friendship",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-relationship-influence-extension_of-schema-node-type-relationship",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-relationship-influence",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-relationship-lineage-extension_of-schema-node-type-relationship",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-relationship-lineage",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-relationship-contains-schema-node-subtype-relationship-citation",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-relationship-citation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-relationship-contains-schema-node-subtype-relationship-collaboration",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-relationship-collaboration",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-relationship-contains-schema-node-subtype-relationship-dependency",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-relationship-dependency",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-relationship-contains-schema-node-subtype-relationship-dispute",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-relationship-dispute",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-relationship-contains-schema-node-subtype-relationship-friendship",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-relationship-friendship",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-relationship-contains-schema-node-subtype-relationship-influence",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-relationship-influence",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-relationship-contains-schema-node-subtype-relationship-lineage",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-relationship-lineage",
+      "direction": "outgoing"
     }
   ],
   "imported_from": "nodes.json",

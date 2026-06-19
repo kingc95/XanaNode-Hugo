@@ -18,31 +18,31 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-node-schema-defines-substrate-node-record-63",
+      "id": "xananode.example:rel/substrate-node-schema-defines-substrate-node-record-84",
       "type": "defines",
       "source": "xananode.example:schema/substrate-node-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/using-hugo-with-protocol-json-explains-substrate-node-record-111",
+      "id": "xananode.example:rel/using-hugo-with-protocol-json-explains-substrate-node-record-132",
       "type": "explains",
       "source": "xananode.example:essay/using-hugo-with-protocol-json",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-node-record-uses-xananode-node-types-140",
+      "id": "xananode.example:rel/substrate-node-record-uses-xananode-node-types-161",
       "type": "uses",
       "target": "xananode.example:schema/xananode-node-types",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/substrate-node-record-contains-fragment-node-141",
+      "id": "xananode.example:rel/substrate-node-record-contains-fragment-node-162",
       "type": "contains",
       "target": "xananode.example:concept/fragment-node",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-node-record-154",
+      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-node-record-175",
       "type": "contains",
       "source": "xananode.example:concept/protocol-artifacts",
       "direction": "incoming"

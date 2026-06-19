@@ -1,0 +1,46 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/protocol-governed-by-trademark-policy",
+      "type": "governed_by",
+      "source": "xananode.canonical:project/xananode-protocol",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/trademark-claim-supported-by-policy",
+      "type": "supports",
+      "target": "xananode.canonical:claim/xananode-name-and-logo-are-trademarked",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/trademark-policy-defines-trademark",
+      "type": "defines",
+      "target": "xananode.canonical:concept/trademark",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-logo-trademarked-by-policy",
+      "type": "trademarked_by",
+      "source": "xananode.canonical:media/xananode-icon",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-name-trademarked-by-policy",
+      "type": "trademarked_by",
+      "source": "xananode.canonical:concept/xananode",
+      "direction": "incoming"
+    }
+  ],
+  "id": "xananode.canonical:source/xananode-trademark-policy",
+  "title": "XanaNode Trademark Policy",
+  "type": "source",
+  "subtype": "trademark_policy",
+  "importance": 5,
+  "summary": "The policy that governs use of the XanaNode name, logo, and related brand assets.",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/TRADEMARK.md",
+  "rights_status": "canonical-public",
+  "license": "CC-BY-4.0",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

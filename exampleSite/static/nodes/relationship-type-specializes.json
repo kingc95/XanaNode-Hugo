@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-specializes",
+  "title": "Specializes",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source is a more specific case of the target.",
+  "version": "0.5.0",
+  "registry_type": "specializes",
+  "registry_namespace": "xananode",
+  "category": "cognition",
+  "inverse": "generalized_by",
+  "color": "#7c3aed",
+  "inverse_color": "#ddd6fe",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-specializes",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-cognition-contains-schema-relationship-type-specializes",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-cognition",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-generalized_by-related_to-schema-relationship-type-specializes-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-generalized_by",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-specializes-related_to-schema-relationship-type-generalized_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-generalized_by",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

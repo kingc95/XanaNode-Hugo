@@ -1,0 +1,74 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-influence",
+  "title": "Influence Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The influence category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "influence",
+  "registry_namespace": "xananode",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-influence-contains-schema-relationship-type-anticipated",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-anticipated",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-influence-contains-schema-relationship-type-anticipated_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-anticipated_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-influence-contains-schema-relationship-type-influenced",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-influenced",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-influence-contains-schema-relationship-type-influenced_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-influenced_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-influence-contains-schema-relationship-type-popularized",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-popularized",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-influence-contains-schema-relationship-type-popularized_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-popularized_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-influence-contains-schema-relationship-type-shaped_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-shaped_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-influence-contains-schema-relationship-type-shapes",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-shapes",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-influence",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "color": "#14b8a6",
+  "inverse_color": "#99f6e4",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

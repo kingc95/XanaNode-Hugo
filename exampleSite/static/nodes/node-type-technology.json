@@ -38,10 +38,112 @@
   },
   "relationships": [
     {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-technology-66",
+      "type": "contains",
+      "source": "xananode.example:schema/xananode-node-types",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-technology",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-technology-algorithm-extension_of-schema-node-type-technology",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-technology-algorithm",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-technology-architecture-extension_of-schema-node-type-technology",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-technology-architecture",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-technology-format-extension_of-schema-node-type-technology",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-technology-format",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-technology-language-extension_of-schema-node-type-technology",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-technology-language",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-technology-model-extension_of-schema-node-type-technology",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-technology-model",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-technology-platform-extension_of-schema-node-type-technology",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-technology-platform",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-technology-protocol-extension_of-schema-node-type-technology",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-technology-protocol",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-technology-tool-extension_of-schema-node-type-technology",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-technology-tool",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-technology-contains-schema-node-subtype-technology-algorithm",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-technology-algorithm",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-technology-contains-schema-node-subtype-technology-architecture",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-technology-architecture",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-technology-contains-schema-node-subtype-technology-format",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-technology-format",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-technology-contains-schema-node-subtype-technology-language",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-technology-language",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-technology-contains-schema-node-subtype-technology-model",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-technology-model",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-technology-contains-schema-node-subtype-technology-platform",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-technology-platform",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-technology-contains-schema-node-subtype-technology-protocol",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-technology-protocol",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-technology-contains-schema-node-subtype-technology-tool",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-technology-tool",
+      "direction": "outgoing"
     }
   ],
   "imported_from": "nodes.json",

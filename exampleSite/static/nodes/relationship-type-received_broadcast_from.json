@@ -1,0 +1,49 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-received_broadcast_from",
+  "title": "Received Broadcast From Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The received_broadcast_from inverse relationship term derived from broadcast_to.",
+  "version": "0.5.0",
+  "registry_type": "received_broadcast_from",
+  "registry_namespace": "xananode",
+  "category": "communication",
+  "inverse": "broadcast_to",
+  "color": "#bae6fd",
+  "inverse_color": "#38bdf8",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "derived_inverse": true,
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-received_broadcast_from",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-received_broadcast_from",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-communication",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-broadcast_to-related_to-schema-relationship-type-received_broadcast_from-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-broadcast_to",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-received_broadcast_from-related_to-schema-relationship-type-broadcast_to-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-broadcast_to",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

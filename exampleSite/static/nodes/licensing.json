@@ -1,0 +1,31 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/license-policy-defines-licensing",
+      "type": "defines",
+      "source": "xananode.canonical:source/xananode-license-policy",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/licensing-defines-open-license",
+      "type": "defines",
+      "target": "xananode.canonical:concept/open-license",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/notice-documents-licensing",
+      "type": "documents",
+      "source": "xananode.canonical:source/xananode-notice",
+      "direction": "incoming"
+    }
+  ],
+  "id": "xananode.canonical:concept/licensing",
+  "title": "Licensing",
+  "type": "concept",
+  "subtype": "governance",
+  "importance": 5,
+  "summary": "The legal layer that describes how documents, schemas, code, media, and names may be copied, reused, attributed, modified, or governed.",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

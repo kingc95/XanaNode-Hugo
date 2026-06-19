@@ -1,0 +1,49 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-inquiry_motivated_by",
+  "title": "Inquiry Motivated By Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The inquiry_motivated_by inverse relationship term derived from motivates_inquiry.",
+  "version": "0.5.0",
+  "registry_type": "inquiry_motivated_by",
+  "registry_namespace": "xananode",
+  "category": "inquiry",
+  "inverse": "motivates_inquiry",
+  "color": "#99f6e4",
+  "inverse_color": "#2dd4bf",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "derived_inverse": true,
+  "default_weight": 3,
+  "default_visibility": "secondary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-inquiry_motivated_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-inquiry_motivated_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-inquiry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-inquiry_motivated_by-related_to-schema-relationship-type-motivates_inquiry-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-motivates_inquiry",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-motivates_inquiry-related_to-schema-relationship-type-inquiry_motivated_by-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-motivates_inquiry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

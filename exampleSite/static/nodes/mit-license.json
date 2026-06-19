@@ -1,0 +1,22 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/mit-example-of-permissive-license",
+      "type": "example_of",
+      "target": "xananode.canonical:concept/permissive-open-source-license",
+      "direction": "outgoing"
+    }
+  ],
+  "id": "xananode.canonical:source/mit-license",
+  "title": "MIT License",
+  "type": "source",
+  "subtype": "license",
+  "importance": 3,
+  "summary": "A widely used permissive open source license included as a comparative licensing concept.",
+  "source_url": "https://opensource.org/license/mit/",
+  "rights_status": "external",
+  "license": "MIT",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

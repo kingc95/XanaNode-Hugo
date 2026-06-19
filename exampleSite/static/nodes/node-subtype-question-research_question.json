@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-question-research_question",
+  "title": "Question subtype: research question",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "research_question is an allowed subtype of the question node type.",
+  "version": "0.3.0",
+  "registry_type": "research_question",
+  "registry_namespace": "xananode",
+  "parent_node_type": "question",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-question-research_question-extension_of-schema-node-type-question",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-question",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-question-contains-schema-node-subtype-question-research_question",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-question",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

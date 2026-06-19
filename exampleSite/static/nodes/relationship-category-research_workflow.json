@@ -1,0 +1,62 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-research_workflow",
+  "title": "Research Workflow Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The research_workflow category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "research_workflow",
+  "registry_namespace": "xananode",
+  "color": "#0ea5e9",
+  "inverse_color": "#7dd3fc",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-research_workflow-contains-schema-relationship-type-falsified_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-falsified_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-research_workflow-contains-schema-relationship-type-falsifies",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-falsifies",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-research_workflow-contains-schema-relationship-type-tested_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-tested_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-research_workflow-contains-schema-relationship-type-tests",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-tests",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-research_workflow-contains-schema-relationship-type-validated_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-validated_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-research_workflow-contains-schema-relationship-type-validates",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-validates",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-research_workflow",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

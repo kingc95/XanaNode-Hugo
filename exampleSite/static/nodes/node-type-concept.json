@@ -38,10 +38,100 @@
   },
   "relationships": [
     {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-concept-56",
+      "type": "contains",
+      "source": "xananode.example:schema/xananode-node-types",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-concept",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-concept-distinction-extension_of-schema-node-type-concept",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-concept-distinction",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-concept-failure_mode-extension_of-schema-node-type-concept",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-concept-failure_mode",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-concept-frame-extension_of-schema-node-type-concept",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-concept-frame",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-concept-method-extension_of-schema-node-type-concept",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-concept-method",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-concept-pattern-extension_of-schema-node-type-concept",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-concept-pattern",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-concept-principle-extension_of-schema-node-type-concept",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-concept-principle",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-concept-theory-extension_of-schema-node-type-concept",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-concept-theory",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-concept-contains-schema-node-subtype-concept-distinction",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-concept-distinction",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-concept-contains-schema-node-subtype-concept-failure_mode",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-concept-failure_mode",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-concept-contains-schema-node-subtype-concept-frame",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-concept-frame",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-concept-contains-schema-node-subtype-concept-method",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-concept-method",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-concept-contains-schema-node-subtype-concept-pattern",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-concept-pattern",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-concept-contains-schema-node-subtype-concept-principle",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-concept-principle",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-concept-contains-schema-node-subtype-concept-theory",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-concept-theory",
+      "direction": "outgoing"
     }
   ],
   "imported_from": "nodes.json",

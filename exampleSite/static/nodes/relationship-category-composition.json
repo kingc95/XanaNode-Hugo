@@ -1,0 +1,134 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-composition",
+  "title": "Composition Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The composition category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "composition",
+  "registry_namespace": "xananode",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-contains",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-contains",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-dependency_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-dependency_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-depends_on",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-depends_on",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-enabled_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-enabled_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-enables",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-enables",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-implemented_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-implemented_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-implements",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-implements",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-included_in",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-included_in",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-includes",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-includes",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-part_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-part_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-preserved_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-preserved_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-preserves",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-preserves",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-required_for",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-required_for",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-requires",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-requires",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-trained_on",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-trained_on",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-used_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-used_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-used_to_train",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-used_to_train",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-uses",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-uses",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-composition",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "color": "#22c55e",
+  "inverse_color": "#86efac",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

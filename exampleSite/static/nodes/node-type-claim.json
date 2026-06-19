@@ -40,10 +40,100 @@
   },
   "relationships": [
     {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-claim-57",
+      "type": "contains",
+      "source": "xananode.example:schema/xananode-node-types",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-claim",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-claim-causal-extension_of-schema-node-type-claim",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-claim-causal",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-claim-comparative-extension_of-schema-node-type-claim",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-claim-comparative",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-claim-definition-extension_of-schema-node-type-claim",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-claim-definition",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-claim-historical-extension_of-schema-node-type-claim",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-claim-historical",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-claim-interpretive-extension_of-schema-node-type-claim",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-claim-interpretive",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-claim-normative-extension_of-schema-node-type-claim",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-claim-normative",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-claim-predictive-extension_of-schema-node-type-claim",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-claim-predictive",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-claim-contains-schema-node-subtype-claim-causal",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-claim-causal",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-claim-contains-schema-node-subtype-claim-comparative",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-claim-comparative",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-claim-contains-schema-node-subtype-claim-definition",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-claim-definition",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-claim-contains-schema-node-subtype-claim-historical",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-claim-historical",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-claim-contains-schema-node-subtype-claim-interpretive",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-claim-interpretive",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-claim-contains-schema-node-subtype-claim-normative",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-claim-normative",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-claim-contains-schema-node-subtype-claim-predictive",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-claim-predictive",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-property-currency_value-uses-schema-node-type-claim",

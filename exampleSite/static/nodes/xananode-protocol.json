@@ -7,14 +7,50 @@
     "protocol"
   ],
   "status": "active",
-  "importance": 5,
-  "summary": "The specification layer that defines substrate artifacts, node types, relationship types, addressing, pack ingress, federation, governance, and validation rules.",
+  "importance": 4,
+  "summary": "Canonical XanaNode protocol repository containing schemas, registries, specs, governance, examples, branding, and proposals.",
   "relationships": [
     {
       "id": "xananode.canonical:rel/core-implements-protocol",
       "type": "implements",
       "source": "xananode.canonical:project/xananode-core-sdk",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-protocol-implements-concept-substrate-projection-layer",
+      "type": "implements",
+      "target": "xananode.canonical:concept/substrate-projection-layer",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-protocol-uses-schema-protocol-artifact-examples-minimal-substrate-artifact-4",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-protocol-uses-schema-protocol-artifact-governance-artifact-3",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-governance",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-protocol-uses-schema-protocol-artifact-registry-artifact-1",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-registry",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-protocol-uses-schema-protocol-artifact-schemas-artifact-0",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-protocol-uses-schema-protocol-artifact-specs-artifact-2",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-specs",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/protocol-contains-author-profile-schema",
@@ -101,11 +137,99 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/protocol-governed-by-license-policy",
+      "type": "governed_by",
+      "target": "xananode.canonical:source/xananode-license-policy",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-governed-by-trademark-policy",
+      "type": "governed_by",
+      "target": "xananode.canonical:source/xananode-trademark-policy",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/protocol-uses-python",
       "type": "uses",
       "target": "xananode.canonical:technology/python",
       "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-uses-site-webmanifest",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-media-web-manifests-site.webmanifest",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-uses-xananode-android-chrome-192",
+      "type": "uses",
+      "target": "xananode.canonical:media/xananode-android-chrome-192",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-uses-xananode-android-chrome-512",
+      "type": "uses",
+      "target": "xananode.canonical:media/xananode-android-chrome-512",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-uses-xananode-apple-touch-icon",
+      "type": "uses",
+      "target": "xananode.canonical:media/xananode-apple-touch-icon",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-uses-xananode-favicon-16",
+      "type": "uses",
+      "target": "xananode.canonical:media/xananode-favicon-16",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-uses-xananode-favicon-32",
+      "type": "uses",
+      "target": "xananode.canonical:media/xananode-favicon-32",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-uses-xananode-favicon-ico",
+      "type": "uses",
+      "target": "xananode.canonical:media/xananode-favicon-ico",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-known-implementations-registry-contains-project-xananode-protocol",
+      "type": "contains",
+      "source": "xananode.canonical:schema/known-implementations-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/source-repository-kingc95-xananode-documents-project-xananode-protocol",
+      "type": "documents",
+      "source": "xananode.canonical:source/repository-kingc95-xananode",
+      "direction": "incoming"
     }
+  ],
+  "subtype": "protocol",
+  "source_url": "https://github.com/kingc95/XanaNode",
+  "repository": "kingc95/XanaNode",
+  "protocol_role": "schema-and-governance-source",
+  "software_version": "",
+  "build_metadata": {
+    "version": "",
+    "repository": "kingc95/XanaNode",
+    "generated_at": "2026-06-19T20:40:39.329Z",
+    "built_by": "@xananode/core",
+    "git_commit": "",
+    "git_branch": "",
+    "dependencies": []
+  },
+  "consumes": [],
+  "related_protocol_artifacts": [
+    "../schemas/",
+    "../registry/",
+    "../specs/",
+    "../governance/",
+    "../examples/minimal-substrate/"
   ],
   "imported_from": "nodes.json",
   "pack_id": "xananode.canonical",

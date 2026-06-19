@@ -1,0 +1,49 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-trademark_holder_for",
+  "title": "Trademark Holder For Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The trademark_holder_for inverse relationship term derived from trademarked_by.",
+  "version": "0.5.0",
+  "registry_type": "trademark_holder_for",
+  "registry_namespace": "xananode",
+  "category": "governance",
+  "inverse": "trademarked_by",
+  "color": "#fde047",
+  "inverse_color": "#eab308",
+  "line_style": "dashed",
+  "inverse_line_style": "double",
+  "derived_inverse": true,
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-trademark_holder_for",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-trademark_holder_for",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-governance",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-trademark_holder_for-related_to-schema-relationship-type-trademarked_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-trademarked_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-trademarked_by-related_to-schema-relationship-type-trademark_holder_for-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-trademarked_by",
+      "direction": "incoming"
+    }
+  ],
+  "default_weight": 4,
+  "default_visibility": "secondary",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

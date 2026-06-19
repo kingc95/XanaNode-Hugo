@@ -21,6 +21,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-evidence-contains-schema-relationship-type-documented_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-evidence",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-documented_by-related_to-schema-relationship-type-documents-inverse",
       "type": "related_to",
       "target": "xananode.canonical:schema/relationship-type-documents",
@@ -33,6 +39,10 @@
       "direction": "incoming"
     }
   ],
+  "color": "#6ee7b7",
+  "inverse_color": "#10b981",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
   "imported_from": "nodes.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"

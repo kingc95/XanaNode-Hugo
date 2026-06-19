@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-schema-namespace_record",
+  "title": "Schema subtype: namespace record",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "namespace_record is an allowed subtype of the schema node type.",
+  "version": "0.3.0",
+  "registry_type": "namespace_record",
+  "registry_namespace": "xananode",
+  "parent_node_type": "schema",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-namespace_record-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-namespace_record",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-schema",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

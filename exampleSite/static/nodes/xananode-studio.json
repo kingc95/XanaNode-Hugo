@@ -1,0 +1,125 @@
+{
+  "id": "xananode.canonical:project/xananode-studio",
+  "title": "XanaNode Studio",
+  "type": "project",
+  "subtype": "desktop-authoring-application",
+  "importance": 4,
+  "summary": "Electron authoring workbench for creating nodes, editing protocol metadata, navigating graph context, and previewing projection layers.",
+  "status": "active",
+  "source_url": "https://github.com/kingc95/XanaNode-Studio",
+  "repository": "kingc95/XanaNode-Studio",
+  "protocol_role": "desktop-authoring-interface",
+  "software_version": "",
+  "build_metadata": {
+    "version": "",
+    "repository": "kingc95/XanaNode-Studio",
+    "generated_at": "2026-06-19T20:40:39.583Z",
+    "built_by": "@xananode/core",
+    "dependencies": [
+      {
+        "name": "Workspace APIs",
+        "relationship": "consumes"
+      },
+      {
+        "name": "Core SDK APIs",
+        "relationship": "consumes"
+      },
+      {
+        "name": "protocol registries",
+        "relationship": "consumes"
+      },
+      {
+        "name": "protocol branding",
+        "relationship": "consumes"
+      }
+    ]
+  },
+  "consumes": [
+    "Workspace APIs",
+    "Core SDK APIs",
+    "protocol registries",
+    "protocol branding"
+  ],
+  "related_protocol_artifacts": [
+    "../schemas/xananode-node-types.v0.3.0.json",
+    "../schemas/xananode-relationship-types.v0.5.0.json",
+    "../media/images/xananode-icon.svg"
+  ],
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/project-xananode-studio-implements-concept-substrate-projection-layer",
+      "type": "implements",
+      "target": "xananode.canonical:concept/substrate-projection-layer",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-studio-uses-schema-protocol-artifact-media-images-xananode-icon.svg-artifact-2",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-media-images-xananode-icon.svg",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-studio-uses-schema-protocol-artifact-schemas-xananode-node-types.v0.3.0.json-artifact-0",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas-xananode-node-types.v0.3.0.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-studio-uses-schema-protocol-artifact-schemas-xananode-relationship-types.v0.5.0.json-artifact-1",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas-xananode-relationship-types.v0.5.0.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-studio-uses-technology-xananode-studio-component-core-sdk-apis-component-1",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-studio-component-core-sdk-apis",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-studio-uses-technology-xananode-studio-component-protocol-branding-component-3",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-studio-component-protocol-branding",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-studio-uses-technology-xananode-studio-component-protocol-registries-component-2",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-studio-component-protocol-registries",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-studio-uses-technology-xananode-studio-component-workspace-apis-component-0",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-studio-component-workspace-apis",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-known-implementations-registry-contains-project-xananode-studio",
+      "type": "contains",
+      "source": "xananode.canonical:schema/known-implementations-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/source-repository-kingc95-xananode-studio-documents-project-xananode-studio",
+      "type": "documents",
+      "source": "xananode.canonical:source/repository-kingc95-xananode-studio",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-studio-identifies-compatibility",
+      "type": "governed_by",
+      "target": "xananode.canonical:concept/compatibility-attribution",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-studio-licensed-under-apache",
+      "type": "licensed_under",
+      "target": "xananode.canonical:source/apache-2-0-license",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

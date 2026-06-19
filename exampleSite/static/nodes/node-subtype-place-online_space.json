@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-place-online_space",
+  "title": "Place subtype: online space",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "online_space is an allowed subtype of the place node type.",
+  "version": "0.3.0",
+  "registry_type": "online_space",
+  "registry_namespace": "xananode",
+  "parent_node_type": "place",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-place-online_space-extension_of-schema-node-type-place",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-place",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-place-contains-schema-node-subtype-place-online_space",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-place",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

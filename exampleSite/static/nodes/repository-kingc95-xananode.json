@@ -1,0 +1,22 @@
+{
+  "id": "xananode.canonical:source/repository-kingc95-xananode",
+  "title": "XanaNode Protocol Repository",
+  "type": "source",
+  "subtype": "git_repository",
+  "importance": 4,
+  "summary": "Public Git repository for XanaNode Protocol.",
+  "source_url": "https://github.com/kingc95/XanaNode",
+  "repository": "kingc95/XanaNode",
+  "rights_status": "external",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/source-repository-kingc95-xananode-documents-project-xananode-protocol",
+      "type": "documents",
+      "target": "xananode.canonical:project/xananode-protocol",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

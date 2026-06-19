@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-abstraction_of",
+  "title": "Abstraction of",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source abstracts away details from the target while preserving a relevant structure.",
+  "version": "0.5.0",
+  "registry_type": "abstraction_of",
+  "registry_namespace": "xananode",
+  "category": "cognition",
+  "inverse": "concrete_example_of",
+  "color": "#7c3aed",
+  "inverse_color": "#ddd6fe",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-abstraction_of",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-cognition-contains-schema-relationship-type-abstraction_of",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-cognition",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-abstraction_of-related_to-schema-relationship-type-concrete_example_of-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-concrete_example_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-concrete_example_of-related_to-schema-relationship-type-abstraction_of-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-concrete_example_of",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

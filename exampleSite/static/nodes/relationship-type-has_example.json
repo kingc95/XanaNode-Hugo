@@ -1,0 +1,49 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-has_example",
+  "title": "Has Example Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The has_example inverse relationship term derived from example_of.",
+  "version": "0.5.0",
+  "registry_type": "has_example",
+  "registry_namespace": "xananode",
+  "category": "cognition",
+  "inverse": "example_of",
+  "color": "#ddd6fe",
+  "inverse_color": "#7c3aed",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "derived_inverse": true,
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-has_example",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-cognition-contains-schema-relationship-type-has_example",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-cognition",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-example_of-related_to-schema-relationship-type-has_example-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-example_of",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-has_example-related_to-schema-relationship-type-example_of-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-example_of",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

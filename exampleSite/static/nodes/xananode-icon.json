@@ -29,10 +29,52 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/xananode-android-chrome-192-derived-from-icon",
+      "type": "derived_from",
+      "source": "xananode.canonical:media/xananode-android-chrome-192",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-android-chrome-512-derived-from-icon",
+      "type": "derived_from",
+      "source": "xananode.canonical:media/xananode-android-chrome-512",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-apple-touch-icon-derived-from-icon",
+      "type": "derived_from",
+      "source": "xananode.canonical:media/xananode-apple-touch-icon",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-favicon-16-derived-from-icon",
+      "type": "derived_from",
+      "source": "xananode.canonical:media/xananode-favicon-16",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-favicon-32-derived-from-icon",
+      "type": "derived_from",
+      "source": "xananode.canonical:media/xananode-favicon-32",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-favicon-ico-derived-from-icon",
+      "type": "derived_from",
+      "source": "xananode.canonical:media/xananode-favicon-ico",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/xananode-has-primary-media-icon",
       "type": "has_primary_media",
       "source": "xananode.canonical:concept/xananode",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-logo-trademarked-by-policy",
+      "type": "trademarked_by",
+      "target": "xananode.canonical:source/xananode-trademark-policy",
+      "direction": "outgoing"
     }
   ],
   "imported_from": "nodes.json",

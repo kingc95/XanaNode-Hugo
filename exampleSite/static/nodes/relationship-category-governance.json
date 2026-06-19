@@ -1,0 +1,110 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-governance",
+  "title": "Governance Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The governance category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "governance",
+  "registry_namespace": "xananode",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-approved",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-approved",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-approved_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-approved_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-attribution_required_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-attribution_required_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-disputed_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-disputed_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-disputes",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-disputes",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-governed_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-governed_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-governs",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-governs",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-license_for",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-license_for",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-licensed_under",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-licensed_under",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-requires_attribution",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-requires_attribution",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-threatened_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-threatened_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-threatens",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-threatens",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-trademark_holder_for",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-trademark_holder_for",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-trademarked_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-trademarked_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-governance",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "color": "#eab308",
+  "inverse_color": "#fde047",
+  "line_style": "double",
+  "inverse_line_style": "double",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

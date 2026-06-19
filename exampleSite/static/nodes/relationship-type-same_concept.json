@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-same_concept",
+  "title": "Same concept",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source and target represent the same concept across substrates, namespaces, versions, or local identifiers.",
+  "version": "0.5.0",
+  "registry_type": "same_concept",
+  "registry_namespace": "xananode",
+  "category": "identity",
+  "inverse": "same_concept",
+  "color": "#f472b6",
+  "inverse_color": "#fbcfe8",
+  "line_style": "double",
+  "inverse_line_style": "double",
+  "default_weight": 5,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-same_concept",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-identity-contains-schema-relationship-type-same_concept",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-identity",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-same_concept-related_to-schema-relationship-type-same_concept-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-same_concept",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-same_concept-related_to-schema-relationship-type-same_concept-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-same_concept",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

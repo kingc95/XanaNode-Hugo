@@ -1,0 +1,37 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/cc0-example-of-open-license",
+      "type": "example_of",
+      "source": "xananode.canonical:source/cc0-1-0-public-domain-dedication",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/licensing-defines-open-license",
+      "type": "defines",
+      "source": "xananode.canonical:concept/licensing",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/open-license-includes-content-license",
+      "type": "contains",
+      "target": "xananode.canonical:concept/content-license",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/open-license-includes-software-license",
+      "type": "contains",
+      "target": "xananode.canonical:concept/software-license",
+      "direction": "outgoing"
+    }
+  ],
+  "id": "xananode.canonical:concept/open-license",
+  "title": "Open License",
+  "type": "concept",
+  "subtype": "principle",
+  "importance": 4,
+  "summary": "A license that grants broad public permission to use, share, adapt, or implement a work while preserving stated conditions such as attribution or notices.",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

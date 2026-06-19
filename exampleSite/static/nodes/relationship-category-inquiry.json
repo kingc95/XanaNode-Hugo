@@ -1,0 +1,98 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-inquiry",
+  "title": "Inquiry Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The inquiry category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "inquiry",
+  "registry_namespace": "xananode",
+  "color": "#2dd4bf",
+  "inverse_color": "#99f6e4",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-answered_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-answered_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-answers",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-answers",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-fails_to_answer",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-fails_to_answer",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-inquiry_motivated_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-inquiry_motivated_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-investigated_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-investigated_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-investigates",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-investigates",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-motivates_inquiry",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-motivates_inquiry",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-not_answered_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-not_answered_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-partially_answered_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-partially_answered_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-partially_answers",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-partially_answers",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-raised_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-raised_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-raises",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-raises",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-inquiry",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

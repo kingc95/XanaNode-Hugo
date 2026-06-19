@@ -37,10 +37,100 @@
   },
   "relationships": [
     {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-community-68",
+      "type": "contains",
+      "source": "xananode.example:schema/xananode-node-types",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-community",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-community-fan-extension_of-schema-node-type-community",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-community-fan",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-community-forum-extension_of-schema-node-type-community",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-community-forum",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-community-local-extension_of-schema-node-type-community",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-community-local",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-community-online-extension_of-schema-node-type-community",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-community-online",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-community-open_source-extension_of-schema-node-type-community",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-community-open_source",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-community-professional-extension_of-schema-node-type-community",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-community-professional",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-community-research-extension_of-schema-node-type-community",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-community-research",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-community-contains-schema-node-subtype-community-fan",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-community-fan",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-community-contains-schema-node-subtype-community-forum",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-community-forum",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-community-contains-schema-node-subtype-community-local",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-community-local",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-community-contains-schema-node-subtype-community-online",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-community-online",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-community-contains-schema-node-subtype-community-open_source",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-community-open_source",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-community-contains-schema-node-subtype-community-professional",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-community-professional",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-community-contains-schema-node-subtype-community-research",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-community-research",
+      "direction": "outgoing"
     }
   ],
   "imported_from": "nodes.json",

@@ -1,0 +1,123 @@
+{
+  "id": "xananode.canonical:schema/node-type-problem",
+  "title": "Problem",
+  "type": "schema",
+  "subtype": "node_type_schema",
+  "importance": 5,
+  "summary": "A difficulty, failure mode, design challenge, risk, or open need that organizes inquiry and work.",
+  "version": "0.3.0",
+  "registry_type": "problem",
+  "registry_namespace": "xananode",
+  "allowed_subtypes": [
+    "research_problem",
+    "design_problem",
+    "implementation_problem",
+    "governance_problem",
+    "risk",
+    "failure_mode"
+  ],
+  "required_frontmatter": [
+    "title",
+    "type",
+    "importance",
+    "summary",
+    "status",
+    "relationships"
+  ],
+  "recommended_frontmatter": [
+    "research_priority",
+    "requires_information",
+    "claims",
+    "questions",
+    "projects",
+    "sources"
+  ],
+  "color": {
+    "bg": "#f97316",
+    "fg": "#211006",
+    "outline": "#ffedd5"
+  },
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-problem",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-problem-design_problem-extension_of-schema-node-type-problem",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-problem-design_problem",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-problem-failure_mode-extension_of-schema-node-type-problem",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-problem-failure_mode",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-problem-governance_problem-extension_of-schema-node-type-problem",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-problem-governance_problem",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-problem-implementation_problem-extension_of-schema-node-type-problem",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-problem-implementation_problem",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-problem-research_problem-extension_of-schema-node-type-problem",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-problem-research_problem",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-problem-risk-extension_of-schema-node-type-problem",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-problem-risk",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-problem-contains-schema-node-subtype-problem-design_problem",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-problem-design_problem",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-problem-contains-schema-node-subtype-problem-failure_mode",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-problem-failure_mode",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-problem-contains-schema-node-subtype-problem-governance_problem",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-problem-governance_problem",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-problem-contains-schema-node-subtype-problem-implementation_problem",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-problem-implementation_problem",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-problem-contains-schema-node-subtype-problem-research_problem",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-problem-research_problem",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-problem-contains-schema-node-subtype-problem-risk",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-problem-risk",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-question-diagnostic_question",
+  "title": "Question subtype: diagnostic question",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "diagnostic_question is an allowed subtype of the question node type.",
+  "version": "0.3.0",
+  "registry_type": "diagnostic_question",
+  "registry_namespace": "xananode",
+  "parent_node_type": "question",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-question-diagnostic_question-extension_of-schema-node-type-question",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-question",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-question-contains-schema-node-subtype-question-diagnostic_question",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-question",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

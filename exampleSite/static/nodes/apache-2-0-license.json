@@ -1,0 +1,52 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/apache-2-0-example-of-permissive-license",
+      "type": "example_of",
+      "target": "xananode.canonical:concept/permissive-open-source-license",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/code-schemas-licensed-under-apache",
+      "type": "licensed_under",
+      "source": "xananode.canonical:claim/schemas-validators-reference-code-apache-2-0",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-core-sdk-licensed-under-apache",
+      "type": "licensed_under",
+      "source": "xananode.canonical:project/xananode-core-sdk",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-hugo-theme-licensed-under-apache",
+      "type": "licensed_under",
+      "source": "xananode.canonical:project/xananode-hugo-theme",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-studio-licensed-under-apache",
+      "type": "licensed_under",
+      "source": "xananode.canonical:project/xananode-studio",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-workspace-licensed-under-apache",
+      "type": "licensed_under",
+      "source": "xananode.canonical:project/xananode-workspace",
+      "direction": "incoming"
+    }
+  ],
+  "id": "xananode.canonical:source/apache-2-0-license",
+  "title": "Apache License 2.0",
+  "type": "source",
+  "subtype": "license",
+  "importance": 5,
+  "summary": "The permissive open source license used for XanaNode schemas, validators, tooling, and reference implementation code.",
+  "source_url": "https://www.apache.org/licenses/LICENSE-2.0",
+  "rights_status": "external",
+  "license": "Apache-2.0",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

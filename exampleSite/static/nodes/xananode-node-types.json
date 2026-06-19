@@ -7,25 +7,145 @@
   "summary": "The canonical node type registry for XanaNode substrates.",
   "relationships": [
     {
-      "id": "xananode.example:rel/xananode-node-types-defines-xananode-52",
+      "id": "xananode.example:rel/xananode-node-types-defines-xananode-53",
       "type": "defines",
       "target": "xananode.example:concept/xananode",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-xananode-node-types-53",
+      "id": "xananode.example:rel/xananode-node-types-equivalent_to-node-type-registry-54",
+      "type": "equivalent_to",
+      "target": "xananode.canonical:schema/node-type-registry",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-person-55",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-person",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-concept-56",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-concept",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-claim-57",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-claim",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-source-58",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-source",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-essay-59",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-essay",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-observation-60",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-observation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-media-61",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-media",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-event-62",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-event",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-place-63",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-place",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-organization-64",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-organization",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-project-65",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-project",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-technology-66",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-technology",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-publication-67",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-publication",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-community-68",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-community",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-relationship-69",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-relationship",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-revision-70",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-revision",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-trail-71",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-trail",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-schema-72",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-fragment-73",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-fragment",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-core-schema-defines-xananode-node-types-74",
       "type": "defines",
       "source": "xananode.example:schema/xananode-core-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-node-schema-uses-xananode-node-types-64",
+      "id": "xananode.example:rel/substrate-node-schema-uses-xananode-node-types-85",
       "type": "uses",
       "source": "xananode.example:schema/substrate-node-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-node-record-uses-xananode-node-types-140",
+      "id": "xananode.example:rel/substrate-node-record-uses-xananode-node-types-161",
       "type": "uses",
       "source": "xananode.example:concept/substrate-node-record",
       "direction": "incoming"

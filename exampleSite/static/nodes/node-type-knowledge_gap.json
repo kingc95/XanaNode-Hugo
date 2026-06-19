@@ -1,0 +1,124 @@
+{
+  "id": "xananode.canonical:schema/node-type-knowledge_gap",
+  "title": "Knowledge Gap",
+  "type": "schema",
+  "subtype": "node_type_schema",
+  "importance": 5,
+  "summary": "A known absence, uncertainty, missing source, missing citation, lost document, unknown author, or unresolved area in a substrate.",
+  "version": "0.3.0",
+  "registry_type": "knowledge_gap",
+  "registry_namespace": "xananode",
+  "allowed_subtypes": [
+    "missing_source",
+    "missing_citation",
+    "unknown_author",
+    "lost_document",
+    "historical_uncertainty",
+    "incomplete_context"
+  ],
+  "required_frontmatter": [
+    "title",
+    "type",
+    "importance",
+    "summary",
+    "status",
+    "relationships"
+  ],
+  "recommended_frontmatter": [
+    "uncertainty_level",
+    "review_status",
+    "research_priority",
+    "requires_source",
+    "requires_context",
+    "questions",
+    "sources"
+  ],
+  "color": {
+    "bg": "#64748b",
+    "fg": "#f8fafc",
+    "outline": "#cbd5e1"
+  },
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-knowledge_gap",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-knowledge_gap-historical_uncertainty-extension_of-schema-node-type-knowledge_gap",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-knowledge_gap-historical_uncertainty",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-knowledge_gap-incomplete_context-extension_of-schema-node-type-knowledge_gap",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-knowledge_gap-incomplete_context",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-knowledge_gap-lost_document-extension_of-schema-node-type-knowledge_gap",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-knowledge_gap-lost_document",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-knowledge_gap-missing_citation-extension_of-schema-node-type-knowledge_gap",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-knowledge_gap-missing_citation",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-knowledge_gap-missing_source-extension_of-schema-node-type-knowledge_gap",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-knowledge_gap-missing_source",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-knowledge_gap-unknown_author-extension_of-schema-node-type-knowledge_gap",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-knowledge_gap-unknown_author",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-knowledge_gap-contains-schema-node-subtype-knowledge_gap-historical_uncertainty",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-knowledge_gap-historical_uncertainty",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-knowledge_gap-contains-schema-node-subtype-knowledge_gap-incomplete_context",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-knowledge_gap-incomplete_context",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-knowledge_gap-contains-schema-node-subtype-knowledge_gap-lost_document",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-knowledge_gap-lost_document",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-knowledge_gap-contains-schema-node-subtype-knowledge_gap-missing_citation",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-knowledge_gap-missing_citation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-knowledge_gap-contains-schema-node-subtype-knowledge_gap-missing_source",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-knowledge_gap-missing_source",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-knowledge_gap-contains-schema-node-subtype-knowledge_gap-unknown_author",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-knowledge_gap-unknown_author",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-observation-news_event",
+  "title": "Observation subtype: news event",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "news_event is an allowed subtype of the observation node type.",
+  "version": "0.3.0",
+  "registry_type": "news_event",
+  "registry_namespace": "xananode",
+  "parent_node_type": "observation",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-observation-news_event-extension_of-schema-node-type-observation",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-observation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-observation-contains-schema-node-subtype-observation-news_event",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-observation",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,19 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/open-license-includes-content-license",
+      "type": "contains",
+      "source": "xananode.canonical:concept/open-license",
+      "direction": "incoming"
+    }
+  ],
+  "id": "xananode.canonical:concept/content-license",
+  "title": "Content License",
+  "type": "concept",
+  "subtype": "distinction",
+  "importance": 4,
+  "summary": "A license applied to authored text, documentation, examples, or explanatory material rather than executable reference code.",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

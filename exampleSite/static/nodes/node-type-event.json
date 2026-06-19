@@ -40,10 +40,100 @@
   },
   "relationships": [
     {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-event-62",
+      "type": "contains",
+      "source": "xananode.example:schema/xananode-node-types",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-event",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-event-conference-extension_of-schema-node-type-event",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-event-conference",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-event-historical_event-extension_of-schema-node-type-event",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-event-historical_event",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-event-incident-extension_of-schema-node-type-event",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-event-incident",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-event-meeting-extension_of-schema-node-type-event",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-event-meeting",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-event-publication_event-extension_of-schema-node-type-event",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-event-publication_event",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-event-release-extension_of-schema-node-type-event",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-event-release",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-event-talk-extension_of-schema-node-type-event",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-event-talk",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-event-contains-schema-node-subtype-event-conference",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-event-conference",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-event-contains-schema-node-subtype-event-historical_event",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-event-historical_event",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-event-contains-schema-node-subtype-event-incident",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-event-incident",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-event-contains-schema-node-subtype-event-meeting",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-event-meeting",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-event-contains-schema-node-subtype-event-publication_event",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-event-publication_event",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-event-contains-schema-node-subtype-event-release",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-event-release",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-event-contains-schema-node-subtype-event-talk",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-event-talk",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-property-geo_coordinates-uses-schema-node-type-event",

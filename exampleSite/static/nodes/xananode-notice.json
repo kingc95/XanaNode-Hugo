@@ -1,0 +1,22 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/notice-documents-licensing",
+      "type": "documents",
+      "target": "xananode.canonical:concept/licensing",
+      "direction": "outgoing"
+    }
+  ],
+  "id": "xananode.canonical:source/xananode-notice",
+  "title": "XanaNode NOTICE",
+  "type": "source",
+  "subtype": "notice",
+  "importance": 4,
+  "summary": "The attribution notice summarizing XanaNode protocol copyright, licensing, and trademark status.",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/NOTICE",
+  "rights_status": "canonical-public",
+  "license": "CC-BY-4.0",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-media-branding_icon",
+  "title": "Media subtype: branding icon",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "branding_icon is an allowed subtype of the media node type.",
+  "version": "0.3.0",
+  "registry_type": "branding_icon",
+  "registry_namespace": "xananode",
+  "parent_node_type": "media",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-media-branding_icon-extension_of-schema-node-type-media",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-media",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-media-contains-schema-node-subtype-media-branding_icon",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-media",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

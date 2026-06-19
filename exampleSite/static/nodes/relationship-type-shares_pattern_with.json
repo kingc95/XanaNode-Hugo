@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-shares_pattern_with",
+  "title": "Shares pattern with",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source shares a recognizable structure, behavior, or pattern with the target.",
+  "version": "0.5.0",
+  "registry_type": "shares_pattern_with",
+  "registry_namespace": "xananode",
+  "category": "discovery",
+  "inverse": "shares_pattern_with",
+  "color": "#34d399",
+  "inverse_color": "#a7f3d0",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "default_weight": 3,
+  "default_visibility": "secondary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-shares_pattern_with",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-discovery-contains-schema-relationship-type-shares_pattern_with",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-discovery",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-shares_pattern_with-related_to-schema-relationship-type-shares_pattern_with-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-shares_pattern_with",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-shares_pattern_with-related_to-schema-relationship-type-shares_pattern_with-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-shares_pattern_with",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

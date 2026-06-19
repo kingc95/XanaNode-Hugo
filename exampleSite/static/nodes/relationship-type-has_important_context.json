@@ -1,0 +1,49 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-has_important_context",
+  "title": "Has Important Context Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The has_important_context inverse relationship term derived from important_for.",
+  "version": "0.5.0",
+  "registry_type": "has_important_context",
+  "registry_namespace": "xananode",
+  "category": "attention",
+  "inverse": "important_for",
+  "color": "#fde68a",
+  "inverse_color": "#fbbf24",
+  "line_style": "dotted",
+  "inverse_line_style": "dotted",
+  "derived_inverse": true,
+  "default_weight": 3,
+  "default_visibility": "secondary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-has_important_context",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-attention-contains-schema-relationship-type-has_important_context",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-attention",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-has_important_context-related_to-schema-relationship-type-important_for-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-important_for",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-important_for-related_to-schema-relationship-type-has_important_context-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-important_for",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

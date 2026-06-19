@@ -1,0 +1,216 @@
+{
+  "id": "xananode.canonical:schema/node-type-communication",
+  "title": "Communication",
+  "type": "schema",
+  "subtype": "node_type_schema",
+  "importance": 5,
+  "summary": "A first-class communication event or artifact whose topology, directionality, participants, and pattern affect how knowledge moved.",
+  "version": "0.3.0",
+  "registry_type": "communication",
+  "registry_namespace": "xananode",
+  "allowed_subtypes": [
+    "conversation",
+    "message",
+    "broadcast",
+    "publication",
+    "discussion",
+    "debate",
+    "interview",
+    "presentation",
+    "meeting",
+    "thread",
+    "forum",
+    "chat",
+    "announcement"
+  ],
+  "required_frontmatter": [
+    "title",
+    "type",
+    "importance",
+    "summary",
+    "communication_model",
+    "relationships"
+  ],
+  "recommended_frontmatter": [
+    "communication_pattern",
+    "participants",
+    "audience",
+    "medium",
+    "start_date",
+    "end_date",
+    "source_url",
+    "sources"
+  ],
+  "color": {
+    "bg": "#22d3ee",
+    "fg": "#04131a",
+    "outline": "#cffafe"
+  },
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-communication",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-communication-announcement-extension_of-schema-node-type-communication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-communication-announcement",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-communication-broadcast-extension_of-schema-node-type-communication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-communication-broadcast",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-communication-chat-extension_of-schema-node-type-communication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-communication-chat",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-communication-conversation-extension_of-schema-node-type-communication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-communication-conversation",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-communication-debate-extension_of-schema-node-type-communication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-communication-debate",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-communication-discussion-extension_of-schema-node-type-communication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-communication-discussion",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-communication-forum-extension_of-schema-node-type-communication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-communication-forum",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-communication-interview-extension_of-schema-node-type-communication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-communication-interview",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-communication-meeting-extension_of-schema-node-type-communication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-communication-meeting",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-communication-message-extension_of-schema-node-type-communication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-communication-message",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-communication-presentation-extension_of-schema-node-type-communication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-communication-presentation",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-communication-publication-extension_of-schema-node-type-communication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-communication-publication",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-communication-thread-extension_of-schema-node-type-communication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-communication-thread",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-communication-contains-schema-node-subtype-communication-announcement",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-communication-announcement",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-communication-contains-schema-node-subtype-communication-broadcast",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-communication-broadcast",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-communication-contains-schema-node-subtype-communication-chat",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-communication-chat",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-communication-contains-schema-node-subtype-communication-conversation",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-communication-conversation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-communication-contains-schema-node-subtype-communication-debate",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-communication-debate",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-communication-contains-schema-node-subtype-communication-discussion",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-communication-discussion",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-communication-contains-schema-node-subtype-communication-forum",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-communication-forum",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-communication-contains-schema-node-subtype-communication-interview",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-communication-interview",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-communication-contains-schema-node-subtype-communication-meeting",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-communication-meeting",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-communication-contains-schema-node-subtype-communication-message",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-communication-message",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-communication-contains-schema-node-subtype-communication-presentation",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-communication-presentation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-communication-contains-schema-node-subtype-communication-publication",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-communication-publication",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-communication-contains-schema-node-subtype-communication-thread",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-communication-thread",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

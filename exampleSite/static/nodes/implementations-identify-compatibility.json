@@ -1,0 +1,20 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/compatibility-claim-supported-by-spec",
+      "type": "supports",
+      "source": "xananode.canonical:schema/protocol-artifact-specs-implementation-compatibility.md",
+      "direction": "incoming"
+    }
+  ],
+  "id": "xananode.canonical:claim/implementations-identify-compatibility",
+  "title": "Implementations Identify XanaNode Compatibility",
+  "type": "claim",
+  "subtype": "normative",
+  "status": "asserted",
+  "importance": 5,
+  "summary": "Implementations should identify themselves as XanaNode-compatible and reference the canonical specification without implying official ownership.",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

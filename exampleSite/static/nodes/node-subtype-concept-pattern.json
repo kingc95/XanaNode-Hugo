@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-concept-pattern",
+  "title": "Concept subtype: pattern",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "pattern is an allowed subtype of the concept node type.",
+  "version": "0.3.0",
+  "registry_type": "pattern",
+  "registry_namespace": "xananode",
+  "parent_node_type": "concept",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-concept-pattern-extension_of-schema-node-type-concept",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-concept",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-concept-contains-schema-node-subtype-concept-pattern",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-concept",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

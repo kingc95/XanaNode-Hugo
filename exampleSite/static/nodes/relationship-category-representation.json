@@ -1,0 +1,98 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-representation",
+  "title": "Representation Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The representation category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "representation",
+  "registry_namespace": "xananode",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-representation-contains-schema-relationship-type-alias_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-alias_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-representation-contains-schema-relationship-type-deep_linked_from",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-deep_linked_from",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-representation-contains-schema-relationship-type-deep_links_to",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-deep_links_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-representation-contains-schema-relationship-type-depicted_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-depicted_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-representation-contains-schema-relationship-type-depicts",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-depicts",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-representation-contains-schema-relationship-type-has_alias",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-has_alias",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-representation-contains-schema-relationship-type-has_primary_media",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-has_primary_media",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-representation-contains-schema-relationship-type-represented_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-represented_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-representation-contains-schema-relationship-type-represents",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-represents",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-representation-contains-schema-relationship-type-transcluded_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-transcluded_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-representation-contains-schema-relationship-type-transcludes",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-transcludes",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-representation-contains-schema-relationship-type-used_as_primary_media_for",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-used_as_primary_media_for",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-representation",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "color": "#f59e0b",
+  "inverse_color": "#fcd34d",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

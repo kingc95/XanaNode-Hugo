@@ -1,0 +1,49 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-falsified_by",
+  "title": "Falsified By Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The falsified_by inverse relationship term derived from falsifies.",
+  "version": "0.5.0",
+  "registry_type": "falsified_by",
+  "registry_namespace": "xananode",
+  "category": "research_workflow",
+  "inverse": "falsifies",
+  "color": "#7dd3fc",
+  "inverse_color": "#0ea5e9",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "derived_inverse": true,
+  "default_weight": 5,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-falsified_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-research_workflow-contains-schema-relationship-type-falsified_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-research_workflow",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-falsified_by-related_to-schema-relationship-type-falsifies-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-falsifies",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-falsifies-related_to-schema-relationship-type-falsified_by-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-falsifies",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

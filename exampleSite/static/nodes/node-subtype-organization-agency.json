@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-organization-agency",
+  "title": "Organization subtype: agency",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "agency is an allowed subtype of the organization node type.",
+  "version": "0.3.0",
+  "registry_type": "agency",
+  "registry_namespace": "xananode",
+  "parent_node_type": "organization",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-organization-agency-extension_of-schema-node-type-organization",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-organization",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-organization-contains-schema-node-subtype-organization-agency",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-organization",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

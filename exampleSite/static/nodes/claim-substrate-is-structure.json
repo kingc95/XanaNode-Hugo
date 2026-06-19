@@ -13,13 +13,13 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/knowledge-substrate-has_claim-claim-substrate-is-structure-175",
+      "id": "xananode.example:rel/knowledge-substrate-has_claim-claim-substrate-is-structure-196",
       "type": "has_claim",
       "source": "xananode.example:concept/knowledge-substrate",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-substrate-is-structure-218",
+      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-substrate-is-structure-239",
       "type": "supports",
       "source": "xananode.example:source/xanadu-document-interconnection",
       "direction": "incoming"

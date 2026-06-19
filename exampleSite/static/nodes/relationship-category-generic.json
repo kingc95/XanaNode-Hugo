@@ -1,0 +1,32 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-generic",
+  "title": "Generic Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The generic category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "generic",
+  "registry_namespace": "xananode",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-generic-contains-schema-relationship-type-related_to",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-related_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-generic",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "color": "#94a3b8",
+  "inverse_color": "#cbd5e1",
+  "line_style": "dotted",
+  "inverse_line_style": "dotted",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -2,10 +2,10 @@
   "id": "xananode.canonical:project/xananode-hugo-theme",
   "title": "XanaNode Hugo Theme",
   "type": "project",
-  "subtype": "software",
+  "subtype": "static-site-reference-implementation",
   "status": "active",
-  "importance": 5,
-  "summary": "A static website projection layer that uses Hugo to read XanaNode protocol artifacts and present pages, graph navigation, trails, sources, media, fragments, and review utilities.",
+  "importance": 4,
+  "summary": "Static-site renderer and graph viewer for XanaNode-compatible substrates.",
   "primary_media": "xananode.canonical:media/xananode-icon",
   "relationships": [
     {
@@ -45,11 +45,117 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/project-xananode-hugo-theme-uses-schema-protocol-artifact-examples-minimal-substrate-artifact-3",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-hugo-theme-uses-schema-protocol-artifact-schemas-substrate-manifest.schema.json-artifact-0",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas-substrate-manifest.schema.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-hugo-theme-uses-schema-protocol-artifact-schemas-substrate-node.schema.json-artifact-1",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas-substrate-node.schema.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-hugo-theme-uses-schema-protocol-artifact-schemas-substrate-relationships.schema.json-artifact-2",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas-substrate-relationships.schema.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-hugo-theme-uses-technology-xananode-hugo-theme-component-node-files-component-1",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-hugo-theme-component-node-files",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-hugo-theme-uses-technology-xananode-hugo-theme-component-relationship-files-component-2",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-hugo-theme-component-relationship-files",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-hugo-theme-uses-technology-xananode-hugo-theme-component-schema-registries-component-3",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-hugo-theme-component-schema-registries",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-hugo-theme-uses-technology-xananode-hugo-theme-component-substrate-manifests-component-0",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-hugo-theme-component-substrate-manifests",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-known-implementations-registry-contains-project-xananode-hugo-theme",
       "type": "contains",
       "source": "xananode.canonical:schema/known-implementations-registry",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/source-repository-kingc95-xananode-hugo-documents-project-xananode-hugo-theme",
+      "type": "documents",
+      "source": "xananode.canonical:source/repository-kingc95-xananode-hugo",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-hugo-theme-identifies-compatibility",
+      "type": "governed_by",
+      "target": "xananode.canonical:concept/compatibility-attribution",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-hugo-theme-licensed-under-apache",
+      "type": "licensed_under",
+      "target": "xananode.canonical:source/apache-2-0-license",
+      "direction": "outgoing"
     }
+  ],
+  "source_url": "https://github.com/kingc95/xananode-hugo",
+  "repository": "kingc95/xananode-hugo",
+  "protocol_role": "reference-renderer",
+  "software_version": "",
+  "build_metadata": {
+    "version": "",
+    "repository": "kingc95/xananode-hugo",
+    "generated_at": "2026-06-19T20:40:39.582Z",
+    "built_by": "@xananode/core",
+    "dependencies": [
+      {
+        "name": "substrate manifests",
+        "relationship": "consumes"
+      },
+      {
+        "name": "node files",
+        "relationship": "consumes"
+      },
+      {
+        "name": "relationship files",
+        "relationship": "consumes"
+      },
+      {
+        "name": "schema registries",
+        "relationship": "consumes"
+      }
+    ]
+  },
+  "consumes": [
+    "substrate manifests",
+    "node files",
+    "relationship files",
+    "schema registries"
+  ],
+  "related_protocol_artifacts": [
+    "../schemas/substrate-manifest.schema.json",
+    "../schemas/substrate-node.schema.json",
+    "../schemas/substrate-relationships.schema.json",
+    "../examples/minimal-substrate/"
   ],
   "imported_from": "nodes.json",
   "pack_id": "xananode.canonical",

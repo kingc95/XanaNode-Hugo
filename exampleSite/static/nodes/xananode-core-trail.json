@@ -52,7 +52,7 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/start-here-continues_to-xananode-core-trail-118",
+      "id": "xananode.example:rel/start-here-continues_to-xananode-core-trail-139",
       "type": "continues_to",
       "source": "xananode.example:essay/start-here",
       "direction": "incoming"

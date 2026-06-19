@@ -1,0 +1,27 @@
+{
+  "id": "xananode.canonical:schema/protocol-artifact-schemas-xananode-relationship-types.v0.5.0.json",
+  "title": "schemas/xananode-relationship-types.v0.5.0.json",
+  "type": "schema",
+  "subtype": "protocol_artifact",
+  "importance": 4,
+  "summary": "XanaNode Studio references the protocol artifact schemas/xananode-relationship-types.v0.5.0.json.",
+  "artifact_path": "schemas/xananode-relationship-types.v0.5.0.json",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/xananode-relationship-types.v0.5.0.json",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/project-xananode-core-sdk-uses-schema-protocol-artifact-schemas-xananode-relationship-types.v0.5.0.json-artifact-4",
+      "type": "uses",
+      "source": "xananode.canonical:project/xananode-core-sdk",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-studio-uses-schema-protocol-artifact-schemas-xananode-relationship-types.v0.5.0.json-artifact-1",
+      "type": "uses",
+      "source": "xananode.canonical:project/xananode-studio",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

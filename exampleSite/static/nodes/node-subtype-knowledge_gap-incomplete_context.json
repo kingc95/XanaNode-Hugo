@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-knowledge_gap-incomplete_context",
+  "title": "Knowledge Gap subtype: incomplete context",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "incomplete_context is an allowed subtype of the knowledge_gap node type.",
+  "version": "0.3.0",
+  "registry_type": "incomplete_context",
+  "registry_namespace": "xananode",
+  "parent_node_type": "knowledge_gap",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-knowledge_gap-incomplete_context-extension_of-schema-node-type-knowledge_gap",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-knowledge_gap",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-knowledge_gap-contains-schema-node-subtype-knowledge_gap-incomplete_context",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-knowledge_gap",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

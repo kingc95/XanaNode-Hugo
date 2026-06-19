@@ -1,0 +1,43 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/compatibility-spec-defines-compatibility-attribution",
+      "type": "defines",
+      "source": "xananode.canonical:schema/protocol-artifact-specs-implementation-compatibility.md",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-core-sdk-identifies-compatibility",
+      "type": "governed_by",
+      "source": "xananode.canonical:project/xananode-core-sdk",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-hugo-theme-identifies-compatibility",
+      "type": "governed_by",
+      "source": "xananode.canonical:project/xananode-hugo-theme",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-studio-identifies-compatibility",
+      "type": "governed_by",
+      "source": "xananode.canonical:project/xananode-studio",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-workspace-identifies-compatibility",
+      "type": "governed_by",
+      "source": "xananode.canonical:project/xananode-workspace",
+      "direction": "incoming"
+    }
+  ],
+  "id": "xananode.canonical:concept/compatibility-attribution",
+  "title": "Compatibility Attribution",
+  "type": "concept",
+  "subtype": "principle",
+  "importance": 5,
+  "summary": "The convention that implementations should identify themselves as XanaNode-compatible and point to the canonical specification without implying ownership or endorsement.",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

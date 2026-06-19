@@ -40,10 +40,112 @@
   },
   "relationships": [
     {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-publication-67",
+      "type": "contains",
+      "source": "xananode.example:schema/xananode-node-types",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-publication",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-article-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-article",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-book-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-book",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-episode-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-episode",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-film-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-film",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-paper-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-paper",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-podcast-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-podcast",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-talk-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-talk",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-webpage-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-webpage",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-article",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-article",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-book",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-book",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-episode",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-episode",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-film",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-film",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-paper",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-paper",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-podcast",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-podcast",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-talk",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-talk",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-webpage",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-webpage",
+      "direction": "outgoing"
     }
   ],
   "imported_from": "nodes.json",

@@ -1,0 +1,25 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/gpl-example-of-copyleft-context",
+      "type": "example_of",
+      "source": "xananode.canonical:source/gpl-3-0-license",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/open-license-includes-software-license",
+      "type": "contains",
+      "source": "xananode.canonical:concept/open-license",
+      "direction": "incoming"
+    }
+  ],
+  "id": "xananode.canonical:concept/software-license",
+  "title": "Software License",
+  "type": "concept",
+  "subtype": "distinction",
+  "importance": 4,
+  "summary": "A license applied to source code, validators, tooling, schemas, and implementation artifacts.",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

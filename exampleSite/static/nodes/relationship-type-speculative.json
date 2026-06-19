@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-speculative",
+  "title": "Speculative",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source marks the target as speculative, provisional, or not yet established.",
+  "version": "0.5.0",
+  "registry_type": "speculative",
+  "registry_namespace": "xananode",
+  "category": "uncertainty",
+  "inverse": "speculated_by",
+  "color": "#d946ef",
+  "inverse_color": "#f5d0fe",
+  "line_style": "dotted",
+  "inverse_line_style": "dotted",
+  "default_weight": 2,
+  "default_visibility": "background",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-speculative",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-uncertainty-contains-schema-relationship-type-speculative",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-uncertainty",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-speculated_by-related_to-schema-relationship-type-speculative-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-speculated_by",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-speculative-related_to-schema-relationship-type-speculated_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-speculated_by",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

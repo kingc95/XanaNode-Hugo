@@ -7,9 +7,33 @@
   "summary": "The protocol registry of tools, renderers, validators, and substrates that declare XanaNode compatibility.",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/schema-known-implementations-registry-contains-project-xananode-core-sdk",
+      "type": "contains",
+      "target": "xananode.canonical:project/xananode-core-sdk",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-known-implementations-registry-contains-project-xananode-hugo-theme",
       "type": "contains",
       "target": "xananode.canonical:project/xananode-hugo-theme",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-known-implementations-registry-contains-project-xananode-protocol",
+      "type": "contains",
+      "target": "xananode.canonical:project/xananode-protocol",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-known-implementations-registry-contains-project-xananode-studio",
+      "type": "contains",
+      "target": "xananode.canonical:project/xananode-studio",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-known-implementations-registry-contains-project-xananode-workspace",
+      "type": "contains",
+      "target": "xananode.canonical:project/xananode-workspace",
       "direction": "outgoing"
     }
   ],

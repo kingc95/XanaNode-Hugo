@@ -20,6 +20,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-causation-contains-schema-relationship-type-motivated_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-causation",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-motivated_by-related_to-schema-relationship-type-motivates-inverse",
       "type": "related_to",
       "target": "xananode.canonical:schema/relationship-type-motivates",
@@ -32,6 +38,10 @@
       "direction": "incoming"
     }
   ],
+  "color": "#f97316",
+  "inverse_color": "#fdba74",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
   "imported_from": "nodes.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"

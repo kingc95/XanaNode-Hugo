@@ -1,0 +1,32 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-historical",
+  "title": "Historical Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The historical category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "historical",
+  "registry_namespace": "xananode",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-historical-contains-schema-relationship-type-anticipates",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-anticipates",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-historical",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "color": "#c084fc",
+  "inverse_color": "#e9d5ff",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

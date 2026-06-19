@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-hypothesis-diagnostic",
+  "title": "Hypothesis subtype: diagnostic",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "diagnostic is an allowed subtype of the hypothesis node type.",
+  "version": "0.3.0",
+  "registry_type": "diagnostic",
+  "registry_namespace": "xananode",
+  "parent_node_type": "hypothesis",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-hypothesis-diagnostic-extension_of-schema-node-type-hypothesis",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-hypothesis",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-hypothesis-contains-schema-node-subtype-hypothesis-diagnostic",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-hypothesis",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

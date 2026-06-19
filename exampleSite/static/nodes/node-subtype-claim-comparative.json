@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-claim-comparative",
+  "title": "Claim subtype: comparative",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "comparative is an allowed subtype of the claim node type.",
+  "version": "0.3.0",
+  "registry_type": "comparative",
+  "registry_namespace": "xananode",
+  "parent_node_type": "claim",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-claim-comparative-extension_of-schema-node-type-claim",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-claim",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-claim-contains-schema-node-subtype-claim-comparative",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-claim",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

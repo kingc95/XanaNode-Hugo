@@ -1,0 +1,62 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-identity",
+  "title": "Identity Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The identity category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "identity",
+  "registry_namespace": "xananode",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-identity-contains-schema-relationship-type-disputed_identity",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-disputed_identity",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-identity-contains-schema-relationship-type-possible_match",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-possible_match",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-identity-contains-schema-relationship-type-same_concept",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-same_concept",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-identity-contains-schema-relationship-type-same_entity",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-same_entity",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-identity-contains-schema-relationship-type-same_person",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-same_person",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-identity-contains-schema-relationship-type-same_source",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-same_source",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-identity",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "color": "#f472b6",
+  "inverse_color": "#fbcfe8",
+  "line_style": "double",
+  "inverse_line_style": "double",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

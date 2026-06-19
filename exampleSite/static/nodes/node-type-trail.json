@@ -37,10 +37,88 @@
   },
   "relationships": [
     {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-trail-71",
+      "type": "contains",
+      "source": "xananode.example:schema/xananode-node-types",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-trail",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-trail-argument-extension_of-schema-node-type-trail",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-trail-argument",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-trail-dispute_path-extension_of-schema-node-type-trail",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-trail-dispute_path",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-trail-evidence_path-extension_of-schema-node-type-trail",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-trail-evidence_path",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-trail-historical-extension_of-schema-node-type-trail",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-trail-historical",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-trail-introductory-extension_of-schema-node-type-trail",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-trail-introductory",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-trail-teaching_path-extension_of-schema-node-type-trail",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-trail-teaching_path",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-trail-contains-schema-node-subtype-trail-argument",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-trail-argument",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-trail-contains-schema-node-subtype-trail-dispute_path",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-trail-dispute_path",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-trail-contains-schema-node-subtype-trail-evidence_path",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-trail-evidence_path",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-trail-contains-schema-node-subtype-trail-historical",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-trail-historical",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-trail-contains-schema-node-subtype-trail-introductory",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-trail-introductory",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-trail-contains-schema-node-subtype-trail-teaching_path",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-trail-teaching_path",
+      "direction": "outgoing"
     }
   ],
   "imported_from": "nodes.json",

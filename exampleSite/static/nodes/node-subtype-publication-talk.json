@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-publication-talk",
+  "title": "Publication subtype: talk",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "talk is an allowed subtype of the publication node type.",
+  "version": "0.3.0",
+  "registry_type": "talk",
+  "registry_namespace": "xananode",
+  "parent_node_type": "publication",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-talk-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-publication",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-talk",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-publication",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-location",
+  "title": "Location Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The location category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "location",
+  "registry_namespace": "xananode",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-location-contains-schema-relationship-type-occurred_at",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-occurred_at",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-location-contains-schema-relationship-type-site_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-site_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-location",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "color": "#84cc16",
+  "inverse_color": "#bef264",
+  "line_style": "dotted",
+  "inverse_line_style": "dotted",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

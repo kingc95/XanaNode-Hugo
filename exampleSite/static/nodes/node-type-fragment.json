@@ -46,10 +46,112 @@
   },
   "relationships": [
     {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-fragment-73",
+      "type": "contains",
+      "source": "xananode.example:schema/xananode-node-types",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-fragment",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-fragment-code_block-extension_of-schema-node-type-fragment",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-fragment-code_block",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-fragment-data_range-extension_of-schema-node-type-fragment",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-fragment-data_range",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-fragment-image_region-extension_of-schema-node-type-fragment",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-fragment-image_region",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-fragment-media_segment-extension_of-schema-node-type-fragment",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-fragment-media_segment",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-fragment-paragraph-extension_of-schema-node-type-fragment",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-fragment-paragraph",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-fragment-quote-extension_of-schema-node-type-fragment",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-fragment-quote",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-fragment-section-extension_of-schema-node-type-fragment",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-fragment-section",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-fragment-sentence-extension_of-schema-node-type-fragment",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-fragment-sentence",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-fragment-contains-schema-node-subtype-fragment-code_block",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-fragment-code_block",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-fragment-contains-schema-node-subtype-fragment-data_range",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-fragment-data_range",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-fragment-contains-schema-node-subtype-fragment-image_region",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-fragment-image_region",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-fragment-contains-schema-node-subtype-fragment-media_segment",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-fragment-media_segment",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-fragment-contains-schema-node-subtype-fragment-paragraph",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-fragment-paragraph",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-fragment-contains-schema-node-subtype-fragment-quote",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-fragment-quote",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-fragment-contains-schema-node-subtype-fragment-section",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-fragment-section",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-fragment-contains-schema-node-subtype-fragment-sentence",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-fragment-sentence",
+      "direction": "outgoing"
     }
   ],
   "imported_from": "nodes.json",

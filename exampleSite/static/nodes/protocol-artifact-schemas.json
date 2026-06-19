@@ -1,0 +1,21 @@
+{
+  "id": "xananode.canonical:schema/protocol-artifact-schemas",
+  "title": "schemas/",
+  "type": "schema",
+  "subtype": "protocol_artifact",
+  "importance": 4,
+  "summary": "XanaNode Protocol references the protocol artifact schemas/.",
+  "artifact_path": "schemas/",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/project-xananode-protocol-uses-schema-protocol-artifact-schemas-artifact-0",
+      "type": "uses",
+      "source": "xananode.canonical:project/xananode-protocol",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

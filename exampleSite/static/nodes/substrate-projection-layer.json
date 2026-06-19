@@ -16,9 +16,33 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/project-xananode-core-sdk-implements-concept-substrate-projection-layer",
+      "type": "implements",
+      "source": "xananode.canonical:project/xananode-core-sdk",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/project-xananode-hugo-theme-implements-concept-substrate-projection-layer",
       "type": "implements",
       "source": "xananode.canonical:project/xananode-hugo-theme",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-protocol-implements-concept-substrate-projection-layer",
+      "type": "implements",
+      "source": "xananode.canonical:project/xananode-protocol",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-studio-implements-concept-substrate-projection-layer",
+      "type": "implements",
+      "source": "xananode.canonical:project/xananode-studio",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-workspace-implements-concept-substrate-projection-layer",
+      "type": "implements",
+      "source": "xananode.canonical:project/xananode-workspace",
       "direction": "incoming"
     },
     {

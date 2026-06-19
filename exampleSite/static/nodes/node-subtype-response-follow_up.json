@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-response-follow_up",
+  "title": "Response subtype: follow up",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "follow_up is an allowed subtype of the response node type.",
+  "version": "0.3.0",
+  "registry_type": "follow_up",
+  "registry_namespace": "xananode",
+  "parent_node_type": "response",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-response-follow_up-extension_of-schema-node-type-response",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-response",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-response-contains-schema-node-subtype-response-follow_up",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-response",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

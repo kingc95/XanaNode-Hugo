@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-asked_in",
+  "title": "Asked in",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source question was asked in the target communication context.",
+  "version": "0.5.0",
+  "registry_type": "asked_in",
+  "registry_namespace": "xananode",
+  "category": "communication",
+  "inverse": "had_question",
+  "color": "#38bdf8",
+  "inverse_color": "#bae6fd",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-asked_in",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-asked_in",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-communication",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-asked_in-related_to-schema-relationship-type-had_question-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-had_question",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-had_question-related_to-schema-relationship-type-asked_in-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-had_question",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

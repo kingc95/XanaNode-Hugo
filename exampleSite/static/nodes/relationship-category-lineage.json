@@ -1,0 +1,50 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-lineage",
+  "title": "Lineage Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The lineage category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "lineage",
+  "registry_namespace": "xananode",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-lineage-contains-schema-relationship-type-derived_from",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-derived_from",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-lineage-contains-schema-relationship-type-derived_into",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-derived_into",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-lineage-contains-schema-relationship-type-extended_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-extended_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-lineage-contains-schema-relationship-type-extends",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-extends",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-lineage",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "color": "#8b5cf6",
+  "inverse_color": "#c4b5fd",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

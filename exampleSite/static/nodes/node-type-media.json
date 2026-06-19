@@ -20,7 +20,11 @@
     "logo",
     "thumbnail",
     "web_snapshot",
-    "source_snapshot"
+    "source_snapshot",
+    "favicon",
+    "touch_icon",
+    "app_icon",
+    "branding_icon"
   ],
   "required_frontmatter": [
     "title",
@@ -53,10 +57,208 @@
   },
   "relationships": [
     {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-media-61",
+      "type": "contains",
+      "source": "xananode.example:schema/xananode-node-types",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-media",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-media-app_icon-extension_of-schema-node-type-media",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-media-app_icon",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-media-audio-extension_of-schema-node-type-media",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-media-audio",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-media-branding_icon-extension_of-schema-node-type-media",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-media-branding_icon",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-media-clip-extension_of-schema-node-type-media",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-media-clip",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-media-diagram-extension_of-schema-node-type-media",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-media-diagram",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-media-document-extension_of-schema-node-type-media",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-media-document",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-media-favicon-extension_of-schema-node-type-media",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-media-favicon",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-media-image-extension_of-schema-node-type-media",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-media-image",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-media-logo-extension_of-schema-node-type-media",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-media-logo",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-media-scan-extension_of-schema-node-type-media",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-media-scan",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-media-screenshot-extension_of-schema-node-type-media",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-media-screenshot",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-media-source_snapshot-extension_of-schema-node-type-media",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-media-source_snapshot",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-media-thumbnail-extension_of-schema-node-type-media",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-media-thumbnail",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-media-touch_icon-extension_of-schema-node-type-media",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-media-touch_icon",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-media-video-extension_of-schema-node-type-media",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-media-video",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-media-web_snapshot-extension_of-schema-node-type-media",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-media-web_snapshot",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-media-contains-schema-node-subtype-media-app_icon",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-media-app_icon",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-media-contains-schema-node-subtype-media-audio",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-media-audio",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-media-contains-schema-node-subtype-media-branding_icon",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-media-branding_icon",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-media-contains-schema-node-subtype-media-clip",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-media-clip",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-media-contains-schema-node-subtype-media-diagram",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-media-diagram",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-media-contains-schema-node-subtype-media-document",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-media-document",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-media-contains-schema-node-subtype-media-favicon",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-media-favicon",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-media-contains-schema-node-subtype-media-image",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-media-image",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-media-contains-schema-node-subtype-media-logo",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-media-logo",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-media-contains-schema-node-subtype-media-scan",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-media-scan",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-media-contains-schema-node-subtype-media-screenshot",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-media-screenshot",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-media-contains-schema-node-subtype-media-source_snapshot",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-media-source_snapshot",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-media-contains-schema-node-subtype-media-thumbnail",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-media-thumbnail",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-media-contains-schema-node-subtype-media-touch_icon",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-media-touch_icon",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-media-contains-schema-node-subtype-media-video",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-media-video",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-media-contains-schema-node-subtype-media-web_snapshot",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-media-web_snapshot",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-property-geo_coordinates-uses-schema-node-type-media",

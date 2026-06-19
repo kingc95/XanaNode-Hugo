@@ -1,0 +1,21 @@
+{
+  "id": "xananode.canonical:schema/protocol-artifact-media-images-xananode-icon.svg",
+  "title": "media/images/xananode-icon.svg",
+  "type": "schema",
+  "subtype": "protocol_artifact",
+  "importance": 3,
+  "summary": "XanaNode Studio references the protocol artifact media/images/xananode-icon.svg.",
+  "artifact_path": "media/images/xananode-icon.svg",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/images/xananode-icon.svg",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/project-xananode-studio-uses-schema-protocol-artifact-media-images-xananode-icon.svg-artifact-2",
+      "type": "uses",
+      "source": "xananode.canonical:project/xananode-studio",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

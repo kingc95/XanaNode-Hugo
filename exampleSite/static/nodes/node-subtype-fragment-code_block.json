@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-fragment-code_block",
+  "title": "Fragment subtype: code block",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 3,
+  "summary": "code_block is an allowed subtype of the fragment node type.",
+  "version": "0.3.0",
+  "registry_type": "code_block",
+  "registry_namespace": "xananode",
+  "parent_node_type": "fragment",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-fragment-code_block-extension_of-schema-node-type-fragment",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-fragment",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-fragment-contains-schema-node-subtype-fragment-code_block",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-fragment",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

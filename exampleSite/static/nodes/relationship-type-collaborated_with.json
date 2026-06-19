@@ -20,6 +20,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-collaborated_with",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-social",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-collaborated_with-related_to-schema-relationship-type-collaborated_with-inverse",
       "type": "related_to",
       "target": "xananode.canonical:schema/relationship-type-collaborated_with",
@@ -32,6 +38,10 @@
       "direction": "incoming"
     }
   ],
+  "color": "#fb7185",
+  "inverse_color": "#fecdd3",
+  "line_style": "dotted",
+  "inverse_line_style": "dotted",
   "imported_from": "nodes.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
