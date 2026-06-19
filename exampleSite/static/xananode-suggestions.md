@@ -7,8 +7,8 @@ These suggestions are not auto-applied. Review each replacement before editing c
 Autolinks: 235
 Pending transclusions: 0
 Implemented transclusions: 4
-Merge candidates: 2442
-Imported relationships touching existing nodes: 465
+Merge candidates: 2464
+Imported relationships touching existing nodes: 473
 
 ## Autolinks
 
@@ -3911,14637 +3911,14791 @@ No transclusion suggestions.
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-352. Lost Lineage of Human Knowledge Augmentation
+352. Authored Substrate Overlap
+   - Existing: Authored Substrate Overlap (xananode.lineage:concept/authored-substrate-overlap)
+   - Incoming: Authored Substrate Overlap (xananode.lineage:concept/authored-substrate-overlap)
+   - Confidence: 1
+   - Reason: Incoming node has the same protocol id as an existing node.
+   - Approved: false
+
+353. Overlap is a Federation Signal
+   - Existing: Overlap is a Federation Signal (xananode.lineage:claim/overlap-is-federation-signal)
+   - Incoming: Overlap is a Federation Signal (xananode.lineage:claim/overlap-is-federation-signal)
+   - Confidence: 1
+   - Reason: Incoming node has the same protocol id as an existing node.
+   - Approved: false
+
+354. Merge is Authored Interpretation
+   - Existing: Merge is Authored Interpretation (xananode.lineage:claim/merge-is-authored-interpretation)
+   - Incoming: Merge is Authored Interpretation (xananode.lineage:claim/merge-is-authored-interpretation)
+   - Confidence: 1
+   - Reason: Incoming node has the same protocol id as an existing node.
+   - Approved: false
+
+355. Lineage Packs Can Overlap Canonical Packs
+   - Existing: Lineage Packs Can Overlap Canonical Packs (xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack)
+   - Incoming: Lineage Packs Can Overlap Canonical Packs (xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack)
+   - Confidence: 1
+   - Reason: Incoming node has the same protocol id as an existing node.
+   - Approved: false
+
+356. Lost Lineage of Human Knowledge Augmentation
    - Existing: Lost Lineage of Human Knowledge Augmentation (xananode.lineage:concept/lost-lineage-human-knowledge-augmentation)
    - Incoming: Lost Lineage of Human Knowledge Augmentation (xananode.lineage:concept/lost-lineage-human-knowledge-augmentation)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-353. Paul Otlet
+357. Paul Otlet
    - Existing: Paul Otlet (xananode.lineage:person/paul-otlet)
    - Incoming: Paul Otlet (xananode.lineage:person/paul-otlet)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-354. H. G. Wells
+358. H. G. Wells
    - Existing: H. G. Wells (xananode.lineage:person/h-g-wells)
    - Incoming: H. G. Wells (xananode.lineage:person/h-g-wells)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-355. Douglas Adams
+359. Douglas Adams
    - Existing: Douglas Adams (xananode.lineage:person/douglas-adams)
    - Incoming: Douglas Adams (xananode.lineage:person/douglas-adams)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-356. Hyperland
+360. Hyperland
    - Existing: Hyperland (xananode.lineage:publication/hyperland)
    - Incoming: Hyperland (xananode.lineage:publication/hyperland)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-357. Tom Baker
+361. Tom Baker
    - Existing: Tom Baker (xananode.lineage:person/tom-baker)
    - Incoming: Tom Baker (xananode.lineage:person/tom-baker)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-358. Max Whitby
+362. Max Whitby
    - Existing: Max Whitby (xananode.lineage:person/max-whitby)
    - Incoming: Max Whitby (xananode.lineage:person/max-whitby)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-359. TED2
+363. TED2
    - Existing: TED2 (xananode.lineage:event/ted2-1990)
    - Incoming: TED2 (xananode.lineage:event/ted2-1990)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-360. Monterey, California
+364. Monterey, California
    - Existing: Monterey, California (xananode.lineage:place/monterey-california)
    - Incoming: Monterey, California (xananode.lineage:place/monterey-california)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-361. Bob Stein
+365. Bob Stein
    - Existing: Bob Stein (xananode.lineage:person/bob-stein)
    - Incoming: Bob Stein (xananode.lineage:person/bob-stein)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-362. Voyager Company
+366. Voyager Company
    - Existing: Voyager Company (xananode.lineage:organization/voyager-company)
    - Incoming: Voyager Company (xananode.lineage:organization/voyager-company)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-363. Alan Kay
+367. Alan Kay
    - Existing: Alan Kay (xananode.lineage:person/alan-kay)
    - Incoming: Alan Kay (xananode.lineage:person/alan-kay)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-364. Xerox PARC
+368. Xerox PARC
    - Existing: Xerox PARC (xananode.lineage:organization/xerox-parc)
    - Incoming: Xerox PARC (xananode.lineage:organization/xerox-parc)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-365. HyperCard
+369. HyperCard
    - Existing: HyperCard (xananode.lineage:technology/hypercard)
    - Incoming: HyperCard (xananode.lineage:technology/hypercard)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-366. Tim Berners-Lee
+370. Tim Berners-Lee
    - Existing: Tim Berners-Lee (xananode.lineage:person/tim-berners-lee)
    - Incoming: Tim Berners-Lee (xananode.lineage:person/tim-berners-lee)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-367. World Wide Web
+371. World Wide Web
    - Existing: World Wide Web (xananode.canonical:place/world-wide-web)
    - Incoming: World Wide Web (xananode.lineage:technology/world-wide-web)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-368. World Wide Web
+372. World Wide Web
    - Existing: World Wide Web (xananode.lineage:technology/world-wide-web)
    - Incoming: World Wide Web (xananode.lineage:technology/world-wide-web)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-369. Aspen Movie Map
+373. Aspen Movie Map
    - Existing: Aspen Movie Map (xananode.lineage:project/aspen-movie-map)
    - Incoming: Aspen Movie Map (xananode.lineage:project/aspen-movie-map)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-370. Lost Lineage Intertwingled Trail
+374. Lost Lineage Intertwingled Trail
    - Existing: Lost Lineage Intertwingled Trail (xananode.lineage:trail/lost-lineage-intertwingled-trail)
    - Incoming: Lost Lineage Intertwingled Trail (xananode.lineage:trail/lost-lineage-intertwingled-trail)
    - Confidence: 1
    - Reason: Incoming node has the same protocol id as an existing node.
    - Approved: false
 
-371. A knowledge substrate is structure, not just information
+375. A knowledge substrate is structure, not just information
    - Existing: Knowledge Substrate (xananode.example:concept/knowledge-substrate)
    - Incoming: A knowledge substrate is structure, not just information (example.minimal:claim/substrate-is-structure)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-372. A knowledge substrate is structure, not just information
+376. A knowledge substrate is structure, not just information
    - Existing: A knowledge substrate is structure, not information (xananode.example:claim/claim-substrate-is-structure)
    - Incoming: A knowledge substrate is structure, not just information (example.minimal:claim/substrate-is-structure)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-373. A knowledge substrate is structure, not just information
+377. A knowledge substrate is structure, not just information
    - Existing: Knowledge Substrate (example.minimal:concept/knowledge-substrate)
    - Incoming: A knowledge substrate is structure, not just information (example.minimal:claim/substrate-is-structure)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-374. A knowledge substrate is structure, not just information
+378. A knowledge substrate is structure, not just information
    - Existing: Knowledge Substrate (xananode.canonical:concept/knowledge-substrate)
    - Incoming: A knowledge substrate is structure, not just information (example.minimal:claim/substrate-is-structure)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-375. Associative Trails
+379. Associative Trails
    - Existing: Concept (xananode.canonical:schema/node-type-concept)
    - Incoming: Associative Trails (example.minimal:concept/associative-trails)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-376. Associative Trails
+380. Associative Trails
    - Existing: Associative Trails Fragment (xananode.example:fragment/as-we-may-think-0004)
    - Incoming: Associative Trails (example.minimal:concept/associative-trails)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-377. Relationship Navigation Intro
+381. Relationship Navigation Intro
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Relationship Navigation Intro (example.minimal:essay/relationship-navigation-intro)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-378. As We May Think Fragment 0004
+382. As We May Think Fragment 0004
    - Existing: As We May Think (xananode.example:source/as-we-may-think)
    - Incoming: As We May Think Fragment 0004 (example.minimal:fragment/as-we-may-think-0004)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-379. As We May Think Fragment 0004
+383. As We May Think Fragment 0004
    - Existing: As We May Think (example.minimal:source/as-we-may-think)
    - Incoming: As We May Think Fragment 0004 (example.minimal:fragment/as-we-may-think-0004)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-380. As We May Think Fragment 0004
+384. As We May Think Fragment 0004
    - Existing: Fragment (xananode.canonical:schema/node-type-fragment)
    - Incoming: As We May Think Fragment 0004 (example.minimal:fragment/as-we-may-think-0004)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-381. Knowledge Substrate
+385. Knowledge Substrate
    - Existing: Federated Knowledge Substrates (xananode.example:concept/federated-knowledge-substrates)
    - Incoming: Knowledge Substrate (example.minimal:concept/knowledge-substrate)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-382. Knowledge Substrate
+386. Knowledge Substrate
    - Existing: A knowledge substrate is structure, not information (xananode.example:claim/claim-substrate-is-structure)
    - Incoming: Knowledge Substrate (example.minimal:concept/knowledge-substrate)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-383. Knowledge Substrate
+387. Knowledge Substrate
    - Existing: A knowledge substrate is structure, not just information (example.minimal:claim/substrate-is-structure)
    - Incoming: Knowledge Substrate (example.minimal:concept/knowledge-substrate)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-384. Knowledge Substrate
+388. Knowledge Substrate
    - Existing: Concept (xananode.canonical:schema/node-type-concept)
    - Incoming: Knowledge Substrate (example.minimal:concept/knowledge-substrate)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-385. Example Maintainer
+389. Example Maintainer
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Example Maintainer (example.minimal:person/example-maintainer)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-386. As We May Think
+390. As We May Think
    - Existing: As We May Think Fragment 0004 (example.minimal:fragment/as-we-may-think-0004)
    - Incoming: As We May Think (example.minimal:source/as-we-may-think)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-387. As We May Think
+391. As We May Think
    - Existing: Source (xananode.canonical:schema/node-type-source)
    - Incoming: As We May Think (example.minimal:source/as-we-may-think)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-388. As We May Think
+392. As We May Think
    - Existing: Associative Trails Fragment (xananode.example:fragment/as-we-may-think-0004)
    - Incoming: As We May Think (example.minimal:source/as-we-may-think)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-389. Relationships Preserve Knowledge
+393. Relationships Preserve Knowledge
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Relationships Preserve Knowledge (xananode.canonical:claim/relationships-preserve-knowledge)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-390. Relationships Preserve Knowledge
+394. Relationships Preserve Knowledge
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Relationships Preserve Knowledge (xananode.canonical:claim/relationships-preserve-knowledge)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-391. Relationships Preserve Knowledge
+395. Relationships Preserve Knowledge
    - Existing: Relationships Preserve Knowledge Sentence (xananode.canonical:fragment/relationships-preserve-knowledge-sentence)
    - Incoming: Relationships Preserve Knowledge (xananode.canonical:claim/relationships-preserve-knowledge)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-392. Relationships Preserve Knowledge
+396. Relationships Preserve Knowledge
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Relationships Preserve Knowledge (xananode.canonical:claim/relationships-preserve-knowledge)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-393. XanaNode Contributors
+397. XanaNode Contributors
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XanaNode Contributors (xananode.canonical:community/xananode-contributors)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-394. XanaNode Contributors
+398. XanaNode Contributors
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XanaNode Contributors (xananode.canonical:community/xananode-contributors)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-395. XanaNode Contributors
+399. XanaNode Contributors
    - Existing: Community (xananode.canonical:schema/node-type-community)
    - Incoming: XanaNode Contributors (xananode.canonical:community/xananode-contributors)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-396. Knowledge Substrate
-   - Existing: XanaNode (xananode.example:concept/xananode)
-   - Incoming: Knowledge Substrate (xananode.canonical:concept/knowledge-substrate)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-397. Knowledge Substrate
-   - Existing: Federated Knowledge Substrates (xananode.example:concept/federated-knowledge-substrates)
-   - Incoming: Knowledge Substrate (xananode.canonical:concept/knowledge-substrate)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-398. Knowledge Substrate
-   - Existing: A knowledge substrate is structure, not information (xananode.example:claim/claim-substrate-is-structure)
-   - Incoming: Knowledge Substrate (xananode.canonical:concept/knowledge-substrate)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-399. Knowledge Substrate
-   - Existing: A knowledge substrate is structure, not just information (example.minimal:claim/substrate-is-structure)
-   - Incoming: Knowledge Substrate (xananode.canonical:concept/knowledge-substrate)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
 400. Knowledge Substrate
-   - Existing: XanaNode (xananode.canonical:concept/xananode)
+   - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Knowledge Substrate (xananode.canonical:concept/knowledge-substrate)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 401. Knowledge Substrate
+   - Existing: Federated Knowledge Substrates (xananode.example:concept/federated-knowledge-substrates)
+   - Incoming: Knowledge Substrate (xananode.canonical:concept/knowledge-substrate)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+402. Knowledge Substrate
+   - Existing: A knowledge substrate is structure, not information (xananode.example:claim/claim-substrate-is-structure)
+   - Incoming: Knowledge Substrate (xananode.canonical:concept/knowledge-substrate)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+403. Knowledge Substrate
+   - Existing: A knowledge substrate is structure, not just information (example.minimal:claim/substrate-is-structure)
+   - Incoming: Knowledge Substrate (xananode.canonical:concept/knowledge-substrate)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+404. Knowledge Substrate
+   - Existing: XanaNode (xananode.canonical:concept/xananode)
+   - Incoming: Knowledge Substrate (xananode.canonical:concept/knowledge-substrate)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+405. Knowledge Substrate
    - Existing: Concept (xananode.canonical:schema/node-type-concept)
    - Incoming: Knowledge Substrate (xananode.canonical:concept/knowledge-substrate)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-402. Protocol Artifacts
+406. Protocol Artifacts
    - Existing: Protocol Artifacts Trail (xananode.example:trail/protocol-artifacts-trail)
    - Incoming: Protocol Artifacts (xananode.canonical:concept/protocol-artifacts)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-403. Protocol Artifacts
+407. Protocol Artifacts
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Protocol Artifacts (xananode.canonical:concept/protocol-artifacts)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-404. Protocol Artifacts
+408. Protocol Artifacts
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Protocol Artifacts (xananode.canonical:concept/protocol-artifacts)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-405. Protocol Artifacts
+409. Protocol Artifacts
    - Existing: Concept (xananode.canonical:schema/node-type-concept)
    - Incoming: Protocol Artifacts (xananode.canonical:concept/protocol-artifacts)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-406. Substrate Projection Layer
+410. Substrate Projection Layer
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Substrate Projection Layer (xananode.canonical:concept/substrate-projection-layer)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-407. Substrate Projection Layer
+411. Substrate Projection Layer
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Substrate Projection Layer (xananode.canonical:concept/substrate-projection-layer)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-408. Substrate Projection Layer
+412. Substrate Projection Layer
    - Existing: Concept (xananode.canonical:schema/node-type-concept)
    - Incoming: Substrate Projection Layer (xananode.canonical:concept/substrate-projection-layer)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-409. Substrate Projection Layer
+413. Substrate Projection Layer
    - Existing: Project (xananode.canonical:schema/node-type-project)
    - Incoming: Substrate Projection Layer (xananode.canonical:concept/substrate-projection-layer)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-410. XanaNode
+414. XanaNode
    - Existing: XanaNode Implementation Stack Trail (xananode.example:trail/xananode-implementation-stack-trail)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-411. XanaNode
-   - Existing: XanaNode Core Trail (xananode.example:trail/xananode-core-trail)
-   - Incoming: XanaNode (xananode.canonical:concept/xananode)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-412. XanaNode
-   - Existing: Protocol Artifacts Trail (xananode.example:trail/protocol-artifacts-trail)
-   - Incoming: XanaNode (xananode.canonical:concept/xananode)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-413. XanaNode
-   - Existing: Historical Lineage Trail (xananode.example:trail/historical-lineage-trail)
-   - Incoming: XanaNode (xananode.canonical:concept/xananode)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-414. XanaNode
-   - Existing: Branching Orientation Trail (xananode.example:trail/branching-orientation-trail)
-   - Incoming: XanaNode (xananode.canonical:concept/xananode)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
 415. XanaNode
-   - Existing: Static Publishing (xananode.example:technology/static-publishing)
+   - Existing: XanaNode Core Trail (xananode.example:trail/xananode-core-trail)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 416. XanaNode
-   - Existing: Hugo (xananode.example:technology/hugo)
+   - Existing: Protocol Artifacts Trail (xananode.example:trail/protocol-artifacts-trail)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 417. XanaNode
-   - Existing: Cytoscape.js (xananode.example:technology/cytoscape-js)
+   - Existing: Historical Lineage Trail (xananode.example:trail/historical-lineage-trail)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 418. XanaNode
-   - Existing: XanaNode Workspace Repository (xananode.example:source/xananode-workspace-repo)
+   - Existing: Branching Orientation Trail (xananode.example:trail/branching-orientation-trail)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 419. XanaNode
-   - Existing: XanaNode Studio Repository (xananode.example:source/xananode-studio-repo)
+   - Existing: Static Publishing (xananode.example:technology/static-publishing)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 420. XanaNode
-   - Existing: XanaNode Protocol Repository (xananode.example:source/xananode-protocol-repo)
+   - Existing: Hugo (xananode.example:technology/hugo)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 421. XanaNode
-   - Existing: XanaNode Hugo Repository (xananode.example:source/xananode-hugo-repo)
+   - Existing: Cytoscape.js (xananode.example:technology/cytoscape-js)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 422. XanaNode
-   - Existing: XanaNode Core SDK Repository (xananode.example:source/xananode-core-sdk-repo)
+   - Existing: XanaNode Workspace Repository (xananode.example:source/xananode-workspace-repo)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 423. XanaNode
-   - Existing: Xanadu: Document Interconnection Enabling Re-use (xananode.example:source/xanadu-document-interconnection)
+   - Existing: XanaNode Studio Repository (xananode.example:source/xananode-studio-repo)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 424. XanaNode
-   - Existing: 9.6 Million Links in Source Code Comments (xananode.example:source/source-code-link-decay-study)
+   - Existing: XanaNode Protocol Repository (xananode.example:source/xananode-protocol-repo)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 425. XanaNode
-   - Existing: Mother of All Demos (xananode.example:source/mother-of-all-demos)
+   - Existing: XanaNode Hugo Repository (xananode.example:source/xananode-hugo-repo)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 426. XanaNode
-   - Existing: As We May Think (xananode.example:source/as-we-may-think)
+   - Existing: XanaNode Core SDK Repository (xananode.example:source/xananode-core-sdk-repo)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 427. XanaNode
-   - Existing: XanaNode Relationship Types (xananode.example:schema/xananode-relationship-types)
+   - Existing: Xanadu: Document Interconnection Enabling Re-use (xananode.example:source/xanadu-document-interconnection)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 428. XanaNode
-   - Existing: XanaNode Node Types (xananode.example:schema/xananode-node-types)
+   - Existing: 9.6 Million Links in Source Code Comments (xananode.example:source/source-code-link-decay-study)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 429. XanaNode
-   - Existing: XanaNode Core Schema (xananode.example:schema/xananode-core-schema)
+   - Existing: Mother of All Demos (xananode.example:source/mother-of-all-demos)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 430. XanaNode
-   - Existing: Substrate Relationships Schema (xananode.example:schema/substrate-relationships-schema)
+   - Existing: As We May Think (xananode.example:source/as-we-may-think)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 431. XanaNode
-   - Existing: Substrate Node Schema (xananode.example:schema/substrate-node-schema)
+   - Existing: XanaNode Relationship Types (xananode.example:schema/xananode-relationship-types)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 432. XanaNode
-   - Existing: Substrate Manifest Schema (xananode.example:schema/substrate-manifest-schema)
+   - Existing: XanaNode Node Types (xananode.example:schema/xananode-node-types)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 433. XanaNode
-   - Existing: Namespace Schema (xananode.example:schema/namespace-schema)
+   - Existing: XanaNode Core Schema (xananode.example:schema/xananode-core-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 434. XanaNode
-   - Existing: Merge Report Schema (xananode.example:schema/merge-report-schema)
+   - Existing: Substrate Relationships Schema (xananode.example:schema/substrate-relationships-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 435. XanaNode
-   - Existing: Compatibility Report Schema (xananode.example:schema/compatibility-report-schema)
+   - Existing: Substrate Node Schema (xananode.example:schema/substrate-node-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 436. XanaNode
-   - Existing: XanaNode Hugo Theme (xananode.example:project/xananode-hugo-theme)
+   - Existing: Substrate Manifest Schema (xananode.example:schema/substrate-manifest-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 437. XanaNode
-   - Existing: Project Xanadu (xananode.example:project/project-xanadu)
+   - Existing: Namespace Schema (xananode.example:schema/namespace-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 438. XanaNode
-   - Existing: NLS (xananode.example:project/nls)
+   - Existing: Merge Report Schema (xananode.example:schema/merge-report-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 439. XanaNode
-   - Existing: Memex (xananode.example:project/memex)
+   - Existing: Compatibility Report Schema (xananode.example:schema/compatibility-report-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 440. XanaNode
-   - Existing: Vannevar Bush (xananode.example:person/vannevar-bush)
+   - Existing: XanaNode Hugo Theme (xananode.example:project/xananode-hugo-theme)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 441. XanaNode
-   - Existing: Ted Nelson (xananode.example:person/ted-nelson)
+   - Existing: Project Xanadu (xananode.example:project/project-xanadu)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 442. XanaNode
-   - Existing: Douglas Engelbart (xananode.example:person/douglas-engelbart)
+   - Existing: NLS (xananode.example:project/nls)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 443. XanaNode
-   - Existing: Link Rot (xananode.example:observation/link-rot)
+   - Existing: Memex (xananode.example:project/memex)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 444. XanaNode
-   - Existing: XanaNode Icon (xananode.example:media/xananode-icon)
+   - Existing: Vannevar Bush (xananode.example:person/vannevar-bush)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 445. XanaNode
-   - Existing: What Is XanaNode? (xananode.example:essay/what-is-xananode)
+   - Existing: Ted Nelson (xananode.example:person/ted-nelson)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 446. XanaNode
-   - Existing: Using Hugo with Protocol JSON (xananode.example:essay/using-hugo-with-protocol-json)
+   - Existing: Douglas Engelbart (xananode.example:person/douglas-engelbart)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 447. XanaNode
-   - Existing: Start Here (xananode.example:essay/start-here)
+   - Existing: Link Rot (xananode.example:observation/link-rot)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 448. XanaNode
-   - Existing: Unlabeled Hyperlink (xananode.example:concept/unlabeled-hyperlink)
+   - Existing: XanaNode Icon (xananode.example:media/xananode-icon)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 449. XanaNode
-   - Existing: Typed Relationships (xananode.example:concept/typed-relationships)
+   - Existing: What Is XanaNode? (xananode.example:essay/what-is-xananode)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 450. XanaNode
-   - Existing: Tumbler Addressing (xananode.example:concept/tumbler-addressing)
+   - Existing: Using Hugo with Protocol JSON (xananode.example:essay/using-hugo-with-protocol-json)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 451. XanaNode
-   - Existing: Transclusion (xananode.example:concept/transclusion)
+   - Existing: Start Here (xananode.example:essay/start-here)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 452. XanaNode
-   - Existing: Substrate Relationship List (xananode.example:concept/substrate-relationship-list)
+   - Existing: Unlabeled Hyperlink (xananode.example:concept/unlabeled-hyperlink)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 453. XanaNode
-   - Existing: Substrate Node Record (xananode.example:concept/substrate-node-record)
+   - Existing: Typed Relationships (xananode.example:concept/typed-relationships)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 454. XanaNode
-   - Existing: Substrate Manifest (xananode.example:concept/substrate-manifest)
+   - Existing: Tumbler Addressing (xananode.example:concept/tumbler-addressing)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 455. XanaNode
-   - Existing: Single Source of Truth (xananode.example:concept/single-source-of-truth)
+   - Existing: Transclusion (xananode.example:concept/transclusion)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 456. XanaNode
-   - Existing: Schema Extension (xananode.example:concept/schema-extension)
+   - Existing: Substrate Relationship List (xananode.example:concept/substrate-relationship-list)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 457. XanaNode
-   - Existing: Review Suggestions (xananode.example:concept/review-suggestions)
+   - Existing: Substrate Node Record (xananode.example:concept/substrate-node-record)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 458. XanaNode
-   - Existing: Provenance (xananode.example:concept/provenance)
+   - Existing: Substrate Manifest (xananode.example:concept/substrate-manifest)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 459. XanaNode
-   - Existing: Protocol Artifacts (xananode.example:concept/protocol-artifacts)
+   - Existing: Single Source of Truth (xananode.example:concept/single-source-of-truth)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 460. XanaNode
-   - Existing: Namespacing (xananode.example:concept/namespacing)
+   - Existing: Schema Extension (xananode.example:concept/schema-extension)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 461. XanaNode
-   - Existing: Namespace Registry (xananode.example:concept/namespace-registry)
+   - Existing: Review Suggestions (xananode.example:concept/review-suggestions)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 462. XanaNode
-   - Existing: Moderation Model (xananode.example:concept/moderation-model)
+   - Existing: Provenance (xananode.example:concept/provenance)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 463. XanaNode
-   - Existing: Merge Validation (xananode.example:concept/merge-validation)
+   - Existing: Protocol Artifacts (xananode.example:concept/protocol-artifacts)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 464. XanaNode
-   - Existing: Merge Report (xananode.example:concept/merge-report)
+   - Existing: Namespacing (xananode.example:concept/namespacing)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 465. XanaNode
-   - Existing: Known Implementations Registry (xananode.example:concept/known-implementations-registry)
+   - Existing: Namespace Registry (xananode.example:concept/namespace-registry)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 466. XanaNode
-   - Existing: Knowledge Substrate (xananode.example:concept/knowledge-substrate)
+   - Existing: Moderation Model (xananode.example:concept/moderation-model)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 467. XanaNode
-   - Existing: Independent Moderation (xananode.example:concept/independent-moderation)
+   - Existing: Merge Validation (xananode.example:concept/merge-validation)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 468. XanaNode
-   - Existing: Fragment Node (xananode.example:concept/fragment-node)
+   - Existing: Merge Report (xananode.example:concept/merge-report)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 469. XanaNode
-   - Existing: Federation Rules (xananode.example:concept/federation-rules)
+   - Existing: Known Implementations Registry (xananode.example:concept/known-implementations-registry)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 470. XanaNode
-   - Existing: Federation Example (xananode.example:concept/federation-example)
+   - Existing: Knowledge Substrate (xananode.example:concept/knowledge-substrate)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 471. XanaNode
-   - Existing: Federated Knowledge Substrates (xananode.example:concept/federated-knowledge-substrates)
+   - Existing: Independent Moderation (xananode.example:concept/independent-moderation)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 472. XanaNode
-   - Existing: Dispute Resolution (xananode.example:concept/dispute-resolution)
+   - Existing: Fragment Node (xananode.example:concept/fragment-node)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 473. XanaNode
-   - Existing: Deep Linking (xananode.example:concept/deep-linking)
+   - Existing: Federation Rules (xananode.example:concept/federation-rules)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 474. XanaNode
-   - Existing: Custom Extension Substrate (xananode.example:concept/custom-extension-substrate)
+   - Existing: Federation Example (xananode.example:concept/federation-example)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 475. XanaNode
-   - Existing: Compatibility Report (xananode.example:concept/compatibility-report)
+   - Existing: Federated Knowledge Substrates (xananode.example:concept/federated-knowledge-substrates)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 476. XanaNode
-   - Existing: Compatibility Levels (xananode.example:concept/compatibility-levels)
+   - Existing: Dispute Resolution (xananode.example:concept/dispute-resolution)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 477. XanaNode
-   - Existing: Civilizational Memory (xananode.example:concept/civilizational-memory)
+   - Existing: Deep Linking (xananode.example:concept/deep-linking)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 478. XanaNode
-   - Existing: Canonical Type Policy (xananode.example:concept/canonical-type-policy)
+   - Existing: Custom Extension Substrate (xananode.example:concept/custom-extension-substrate)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 479. XanaNode
-   - Existing: A knowledge substrate is structure, not information (xananode.example:claim/claim-substrate-is-structure)
+   - Existing: Compatibility Report (xananode.example:concept/compatibility-report)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 480. XanaNode
-   - Existing: Typed relationships preserve context that hyperlinks lose (xananode.example:claim/claim-relationships-preserve-context)
+   - Existing: Compatibility Levels (xananode.example:concept/compatibility-levels)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 481. XanaNode
-   - Existing: Substrates should merge without collapsing disagreement (xananode.example:claim/claim-merge-without-collapse)
+   - Existing: Civilizational Memory (xananode.example:concept/civilizational-memory)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 482. XanaNode
-   - Existing: GitHub (xananode.example:source/source-github)
+   - Existing: Canonical Type Policy (xananode.example:concept/canonical-type-policy)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 483. XanaNode
-   - Existing: Support (xananode.example:source/source-support)
+   - Existing: A knowledge substrate is structure, not information (xananode.example:claim/claim-substrate-is-structure)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 484. XanaNode
-   - Existing: Relationships Preserve Knowledge (xananode.canonical:claim/relationships-preserve-knowledge)
+   - Existing: Typed relationships preserve context that hyperlinks lose (xananode.example:claim/claim-relationships-preserve-context)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 485. XanaNode
-   - Existing: XanaNode Contributors (xananode.canonical:community/xananode-contributors)
+   - Existing: Substrates should merge without collapsing disagreement (xananode.example:claim/claim-merge-without-collapse)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 486. XanaNode
-   - Existing: Knowledge Substrate (xananode.canonical:concept/knowledge-substrate)
+   - Existing: GitHub (xananode.example:source/source-github)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 487. XanaNode
-   - Existing: Protocol Artifacts (xananode.canonical:concept/protocol-artifacts)
+   - Existing: Support (xananode.example:source/source-support)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 488. XanaNode
-   - Existing: Substrate Projection Layer (xananode.canonical:concept/substrate-projection-layer)
+   - Existing: Relationships Preserve Knowledge (xananode.canonical:claim/relationships-preserve-knowledge)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 489. XanaNode
-   - Existing: What Is XanaNode? (xananode.canonical:essay/what-is-xananode)
+   - Existing: XanaNode Contributors (xananode.canonical:community/xananode-contributors)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 490. XanaNode
-   - Existing: XanaNode Canonical Pack Bootstrap (xananode.canonical:event/xananode-canonical-pack-bootstrap)
+   - Existing: Knowledge Substrate (xananode.canonical:concept/knowledge-substrate)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 491. XanaNode
-   - Existing: Relationships Preserve Knowledge Sentence (xananode.canonical:fragment/relationships-preserve-knowledge-sentence)
+   - Existing: Protocol Artifacts (xananode.canonical:concept/protocol-artifacts)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 492. XanaNode
-   - Existing: XanaNode Icon (xananode.canonical:media/xananode-icon)
+   - Existing: Substrate Projection Layer (xananode.canonical:concept/substrate-projection-layer)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 493. XanaNode
-   - Existing: Markdown Recreation Friction (xananode.canonical:observation/markdown-recreation-friction)
+   - Existing: What Is XanaNode? (xananode.canonical:essay/what-is-xananode)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 494. XanaNode
-   - Existing: Built By Bots (xananode.canonical:organization/built-by-bots)
+   - Existing: XanaNode Canonical Pack Bootstrap (xananode.canonical:event/xananode-canonical-pack-bootstrap)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 495. XanaNode
-   - Existing: Cytoscape Consortium (xananode.canonical:organization/cytoscape-consortium)
+   - Existing: Relationships Preserve Knowledge Sentence (xananode.canonical:fragment/relationships-preserve-knowledge-sentence)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 496. XanaNode
-   - Existing: Hugo Authors (xananode.canonical:organization/hugo-authors)
+   - Existing: XanaNode Icon (xananode.canonical:media/xananode-icon)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 497. XanaNode
-   - Existing: Christian Siefen (xananode.canonical:person/christian-siefen)
+   - Existing: Markdown Recreation Friction (xananode.canonical:observation/markdown-recreation-friction)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 498. XanaNode
-   - Existing: World Wide Web (xananode.canonical:place/world-wide-web)
+   - Existing: Built By Bots (xananode.canonical:organization/built-by-bots)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 499. XanaNode
-   - Existing: XanaNode Core SDK (xananode.canonical:project/xananode-core-sdk)
+   - Existing: Cytoscape Consortium (xananode.canonical:organization/cytoscape-consortium)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 500. XanaNode
-   - Existing: XanaNode Hugo Theme (xananode.canonical:project/xananode-hugo-theme)
+   - Existing: Hugo Authors (xananode.canonical:organization/hugo-authors)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 501. XanaNode
-   - Existing: XanaNode Protocol (xananode.canonical:project/xananode-protocol)
+   - Existing: Christian Siefen (xananode.canonical:person/christian-siefen)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 502. XanaNode
-   - Existing: XanaNode Workspace (xananode.canonical:project/xananode-workspace)
+   - Existing: World Wide Web (xananode.canonical:place/world-wide-web)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 503. XanaNode
-   - Existing: XNP-0004 Merge Validation (xananode.canonical:publication/xnp-0004-merge-validation)
+   - Existing: XanaNode Core SDK (xananode.canonical:project/xananode-core-sdk)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 504. XanaNode
-   - Existing: Protocol Implements Relationship Preservation (xananode.canonical:relationship/protocol-implements-claim)
+   - Existing: XanaNode Hugo Theme (xananode.canonical:project/xananode-hugo-theme)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 505. XanaNode
-   - Existing: Canonical Pack v0.1.0 (xananode.canonical:revision/canonical-pack-v0-1-0)
+   - Existing: XanaNode Protocol (xananode.canonical:project/xananode-protocol)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 506. XanaNode
-   - Existing: Author Profile Schema (xananode.canonical:schema/author-profile-schema)
+   - Existing: XanaNode Workspace (xananode.canonical:project/xananode-workspace)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 507. XanaNode
-   - Existing: Author Profile Schema (xananode.canonical:schema/canonical-schema-author-profile)
+   - Existing: XNP-0004 Merge Validation (xananode.canonical:publication/xnp-0004-merge-validation)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 508. XanaNode
-   - Existing: Compatibility Report Schema (xananode.canonical:schema/canonical-schema-compatibility-report)
+   - Existing: Protocol Implements Relationship Preservation (xananode.canonical:relationship/protocol-implements-claim)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 509. XanaNode
-   - Existing: Merge Report Schema (xananode.canonical:schema/canonical-schema-merge-report)
+   - Existing: Canonical Pack v0.1.0 (xananode.canonical:revision/canonical-pack-v0-1-0)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 510. XanaNode
-   - Existing: Nanopublication Schema (xananode.canonical:schema/canonical-schema-nanopublication)
+   - Existing: Author Profile Schema (xananode.canonical:schema/author-profile-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 511. XanaNode
-   - Existing: Ro Crate Metadata Schema (xananode.canonical:schema/canonical-schema-ro-crate-metadata)
+   - Existing: Author Profile Schema (xananode.canonical:schema/canonical-schema-author-profile)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 512. XanaNode
-   - Existing: Substrate Diff Schema (xananode.canonical:schema/canonical-schema-substrate-diff)
+   - Existing: Compatibility Report Schema (xananode.canonical:schema/canonical-schema-compatibility-report)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 513. XanaNode
-   - Existing: Substrate Manifest Schema (xananode.canonical:schema/canonical-schema-substrate-manifest)
+   - Existing: Merge Report Schema (xananode.canonical:schema/canonical-schema-merge-report)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 514. XanaNode
-   - Existing: Substrate Node Schema (xananode.canonical:schema/canonical-schema-substrate-node)
+   - Existing: Nanopublication Schema (xananode.canonical:schema/canonical-schema-nanopublication)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 515. XanaNode
-   - Existing: Substrate Relationships Schema (xananode.canonical:schema/canonical-schema-substrate-relationships)
+   - Existing: Ro Crate Metadata Schema (xananode.canonical:schema/canonical-schema-ro-crate-metadata)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 516. XanaNode
-   - Existing: Xananode Node Types Schema (xananode.canonical:schema/canonical-schema-xananode-node-types)
+   - Existing: Substrate Diff Schema (xananode.canonical:schema/canonical-schema-substrate-diff)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 517. XanaNode
-   - Existing: Xananode Property Registry Schema (xananode.canonical:schema/canonical-schema-xananode-property-registry)
+   - Existing: Substrate Manifest Schema (xananode.canonical:schema/canonical-schema-substrate-manifest)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 518. XanaNode
-   - Existing: Xananode Relationship Types Schema (xananode.canonical:schema/canonical-schema-xananode-relationship-types)
+   - Existing: Substrate Node Schema (xananode.canonical:schema/canonical-schema-substrate-node)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 519. XanaNode
-   - Existing: Canonical Schemas Registry (xananode.canonical:schema/canonical-schemas-registry)
+   - Existing: Substrate Relationships Schema (xananode.canonical:schema/canonical-schema-substrate-relationships)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 520. XanaNode
-   - Existing: Compatibility Report Schema (xananode.canonical:schema/compatibility-report-schema)
+   - Existing: Xananode Node Types Schema (xananode.canonical:schema/canonical-schema-xananode-node-types)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 521. XanaNode
-   - Existing: Known Implementations Registry (xananode.canonical:schema/known-implementations-registry)
+   - Existing: Xananode Property Registry Schema (xananode.canonical:schema/canonical-schema-xananode-property-registry)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 522. XanaNode
-   - Existing: Merge Report Schema (xananode.canonical:schema/merge-report-schema)
+   - Existing: Xananode Relationship Types Schema (xananode.canonical:schema/canonical-schema-xananode-relationship-types)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 523. XanaNode
-   - Existing: Federation Merge Report Example Namespace (xananode.canonical:schema/namespace-example.merge)
+   - Existing: Canonical Schemas Registry (xananode.canonical:schema/canonical-schemas-registry)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 524. XanaNode
-   - Existing: Minimal Example Namespace (xananode.canonical:schema/namespace-example.minimal)
+   - Existing: Compatibility Report Schema (xananode.canonical:schema/compatibility-report-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 525. XanaNode
-   - Existing: Museum Extension Example Namespace (xananode.canonical:schema/namespace-example.museum)
+   - Existing: Known Implementations Registry (xananode.canonical:schema/known-implementations-registry)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 526. XanaNode
-   - Existing: Federation Example A Namespace (xananode.canonical:schema/namespace-example.researcher_a)
+   - Existing: Merge Report Schema (xananode.canonical:schema/merge-report-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 527. XanaNode
-   - Existing: Federation Example B Namespace (xananode.canonical:schema/namespace-example.researcher_b)
+   - Existing: Federation Merge Report Example Namespace (xananode.canonical:schema/namespace-example.merge)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 528. XanaNode
-   - Existing: Namespace Registry (xananode.canonical:schema/namespace-registry)
+   - Existing: Minimal Example Namespace (xananode.canonical:schema/namespace-example.minimal)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 529. XanaNode
-   - Existing: Namespace Schema (xananode.canonical:schema/namespace-schema)
+   - Existing: Museum Extension Example Namespace (xananode.canonical:schema/namespace-example.museum)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 530. XanaNode
-   - Existing: XanaNode Core (xananode.canonical:schema/namespace-xananode)
+   - Existing: Federation Example A Namespace (xananode.canonical:schema/namespace-example.researcher_a)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 531. XanaNode
-   - Existing: Nanopublication Schema (xananode.canonical:schema/nanopublication-schema)
+   - Existing: Federation Example B Namespace (xananode.canonical:schema/namespace-example.researcher_b)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 532. XanaNode
-   - Existing: Claim (xananode.canonical:schema/node-type-claim)
+   - Existing: Namespace Registry (xananode.canonical:schema/namespace-registry)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 533. XanaNode
-   - Existing: Community (xananode.canonical:schema/node-type-community)
+   - Existing: Namespace Schema (xananode.canonical:schema/namespace-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 534. XanaNode
-   - Existing: Concept (xananode.canonical:schema/node-type-concept)
+   - Existing: XanaNode Core (xananode.canonical:schema/namespace-xananode)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 535. XanaNode
-   - Existing: Essay (xananode.canonical:schema/node-type-essay)
+   - Existing: Nanopublication Schema (xananode.canonical:schema/nanopublication-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 536. XanaNode
-   - Existing: Event (xananode.canonical:schema/node-type-event)
+   - Existing: Claim (xananode.canonical:schema/node-type-claim)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 537. XanaNode
-   - Existing: Fragment (xananode.canonical:schema/node-type-fragment)
+   - Existing: Community (xananode.canonical:schema/node-type-community)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 538. XanaNode
-   - Existing: Media (xananode.canonical:schema/node-type-media)
+   - Existing: Concept (xananode.canonical:schema/node-type-concept)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 539. XanaNode
-   - Existing: Observation (xananode.canonical:schema/node-type-observation)
+   - Existing: Essay (xananode.canonical:schema/node-type-essay)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 540. XanaNode
-   - Existing: Organization (xananode.canonical:schema/node-type-organization)
+   - Existing: Event (xananode.canonical:schema/node-type-event)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 541. XanaNode
-   - Existing: Person (xananode.canonical:schema/node-type-person)
+   - Existing: Fragment (xananode.canonical:schema/node-type-fragment)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 542. XanaNode
-   - Existing: Place (xananode.canonical:schema/node-type-place)
+   - Existing: Media (xananode.canonical:schema/node-type-media)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 543. XanaNode
-   - Existing: Project (xananode.canonical:schema/node-type-project)
+   - Existing: Observation (xananode.canonical:schema/node-type-observation)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 544. XanaNode
-   - Existing: Publication (xananode.canonical:schema/node-type-publication)
+   - Existing: Organization (xananode.canonical:schema/node-type-organization)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 545. XanaNode
-   - Existing: Node Type Registry (xananode.canonical:schema/node-type-registry)
+   - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 546. XanaNode
-   - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
+   - Existing: Place (xananode.canonical:schema/node-type-place)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 547. XanaNode
-   - Existing: Revision (xananode.canonical:schema/node-type-revision)
+   - Existing: Project (xananode.canonical:schema/node-type-project)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 548. XanaNode
-   - Existing: Schema (xananode.canonical:schema/node-type-schema)
+   - Existing: Publication (xananode.canonical:schema/node-type-publication)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 549. XanaNode
-   - Existing: Source (xananode.canonical:schema/node-type-source)
+   - Existing: Node Type Registry (xananode.canonical:schema/node-type-registry)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 550. XanaNode
-   - Existing: Technology (xananode.canonical:schema/node-type-technology)
+   - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 551. XanaNode
-   - Existing: Trail (xananode.canonical:schema/node-type-trail)
+   - Existing: Revision (xananode.canonical:schema/node-type-revision)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 552. XanaNode
-   - Existing: Birth date (xananode.canonical:schema/property-birth_date)
+   - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 553. XanaNode
-   - Existing: Currency value (xananode.canonical:schema/property-currency_value)
+   - Existing: Source (xananode.canonical:schema/node-type-source)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 554. XanaNode
-   - Existing: External identifier (xananode.canonical:schema/property-external_identifier)
+   - Existing: Technology (xananode.canonical:schema/node-type-technology)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 555. XanaNode
-   - Existing: Geographic coordinates (xananode.canonical:schema/property-geo_coordinates)
+   - Existing: Trail (xananode.canonical:schema/node-type-trail)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 556. XanaNode
-   - Existing: SI measurement (xananode.canonical:schema/property-measurement_si)
+   - Existing: Birth date (xananode.canonical:schema/property-birth_date)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 557. XanaNode
-   - Existing: Property Registry (xananode.canonical:schema/property-registry)
+   - Existing: Currency value (xananode.canonical:schema/property-currency_value)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 558. XanaNode
-   - Existing: Property Registry Schema (xananode.canonical:schema/property-registry-schema)
+   - Existing: External identifier (xananode.canonical:schema/property-external_identifier)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 559. XanaNode
-   - Existing: Alias of (xananode.canonical:schema/relationship-type-alias_of)
+   - Existing: Geographic coordinates (xananode.canonical:schema/property-geo_coordinates)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 560. XanaNode
-   - Existing: Alternative to (xananode.canonical:schema/relationship-type-alternative_to)
+   - Existing: SI measurement (xananode.canonical:schema/property-measurement_si)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 561. XanaNode
-   - Existing: Anticipated (xananode.canonical:schema/relationship-type-anticipated)
+   - Existing: Property Registry (xananode.canonical:schema/property-registry)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 562. XanaNode
-   - Existing: Anticipated By Relationship Term (xananode.canonical:schema/relationship-type-anticipated_by)
+   - Existing: Property Registry Schema (xananode.canonical:schema/property-registry-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 563. XanaNode
-   - Existing: Anticipates (xananode.canonical:schema/relationship-type-anticipates)
+   - Existing: Alias of (xananode.canonical:schema/relationship-type-alias_of)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 564. XanaNode
-   - Existing: Appears in (xananode.canonical:schema/relationship-type-appears_in)
+   - Existing: Alternative to (xananode.canonical:schema/relationship-type-alternative_to)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 565. XanaNode
-   - Existing: Approved (xananode.canonical:schema/relationship-type-approved)
+   - Existing: Anticipated (xananode.canonical:schema/relationship-type-anticipated)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 566. XanaNode
-   - Existing: Approved By Relationship Term (xananode.canonical:schema/relationship-type-approved_by)
+   - Existing: Anticipated By Relationship Term (xananode.canonical:schema/relationship-type-anticipated_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 567. XanaNode
-   - Existing: Arrived From Relationship Term (xananode.canonical:schema/relationship-type-arrived_from)
+   - Existing: Anticipates (xananode.canonical:schema/relationship-type-anticipates)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 568. XanaNode
-   - Existing: Arrives at (xananode.canonical:schema/relationship-type-arrives_at)
+   - Existing: Appears in (xananode.canonical:schema/relationship-type-appears_in)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 569. XanaNode
-   - Existing: Authored (xananode.canonical:schema/relationship-type-authored)
+   - Existing: Approved (xananode.canonical:schema/relationship-type-approved)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 570. XanaNode
-   - Existing: Authored By Relationship Term (xananode.canonical:schema/relationship-type-authored_by)
+   - Existing: Approved By Relationship Term (xananode.canonical:schema/relationship-type-approved_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 571. XanaNode
-   - Existing: Broader than (xananode.canonical:schema/relationship-type-broader_than)
+   - Existing: Arrived From Relationship Term (xananode.canonical:schema/relationship-type-arrived_from)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 572. XanaNode
-   - Existing: Cited By Relationship Term (xananode.canonical:schema/relationship-type-cited_by)
+   - Existing: Arrives at (xananode.canonical:schema/relationship-type-arrives_at)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 573. XanaNode
-   - Existing: Cites (xananode.canonical:schema/relationship-type-cites)
+   - Existing: Authored (xananode.canonical:schema/relationship-type-authored)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 574. XanaNode
-   - Existing: Claim Of Relationship Term (xananode.canonical:schema/relationship-type-claim_of)
+   - Existing: Authored By Relationship Term (xananode.canonical:schema/relationship-type-authored_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 575. XanaNode
-   - Existing: Clarified By Relationship Term (xananode.canonical:schema/relationship-type-clarified_by)
+   - Existing: Broader than (xananode.canonical:schema/relationship-type-broader_than)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 576. XanaNode
-   - Existing: Clarifies (xananode.canonical:schema/relationship-type-clarifies)
+   - Existing: Cited By Relationship Term (xananode.canonical:schema/relationship-type-cited_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 577. XanaNode
-   - Existing: Coined (xananode.canonical:schema/relationship-type-coined)
+   - Existing: Cites (xananode.canonical:schema/relationship-type-cites)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 578. XanaNode
-   - Existing: Coined By Relationship Term (xananode.canonical:schema/relationship-type-coined_by)
+   - Existing: Claim Of Relationship Term (xananode.canonical:schema/relationship-type-claim_of)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 579. XanaNode
-   - Existing: Collaborated with (xananode.canonical:schema/relationship-type-collaborated_with)
+   - Existing: Clarified By Relationship Term (xananode.canonical:schema/relationship-type-clarified_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 580. XanaNode
-   - Existing: Compatible with (xananode.canonical:schema/relationship-type-compatible_with)
+   - Existing: Clarifies (xananode.canonical:schema/relationship-type-clarifies)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 581. XanaNode
-   - Existing: Contains (xananode.canonical:schema/relationship-type-contains)
+   - Existing: Coined (xananode.canonical:schema/relationship-type-coined)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 582. XanaNode
-   - Existing: Contemporary of (xananode.canonical:schema/relationship-type-contemporary_of)
+   - Existing: Coined By Relationship Term (xananode.canonical:schema/relationship-type-coined_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 583. XanaNode
-   - Existing: Context for (xananode.canonical:schema/relationship-type-context_for)
+   - Existing: Collaborated with (xananode.canonical:schema/relationship-type-collaborated_with)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 584. XanaNode
-   - Existing: Continued From Relationship Term (xananode.canonical:schema/relationship-type-continued_from)
+   - Existing: Compatible with (xananode.canonical:schema/relationship-type-compatible_with)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 585. XanaNode
-   - Existing: Continues to (xananode.canonical:schema/relationship-type-continues_to)
+   - Existing: Contains (xananode.canonical:schema/relationship-type-contains)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 586. XanaNode
-   - Existing: Contradicted By Relationship Term (xananode.canonical:schema/relationship-type-contradicted_by)
+   - Existing: Contemporary of (xananode.canonical:schema/relationship-type-contemporary_of)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 587. XanaNode
-   - Existing: Contradicts (xananode.canonical:schema/relationship-type-contradicts)
+   - Existing: Context for (xananode.canonical:schema/relationship-type-context_for)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 588. XanaNode
-   - Existing: Contrasts with (xananode.canonical:schema/relationship-type-contrasts_with)
+   - Existing: Continued From Relationship Term (xananode.canonical:schema/relationship-type-continued_from)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 589. XanaNode
-   - Existing: Created (xananode.canonical:schema/relationship-type-created)
+   - Existing: Continues to (xananode.canonical:schema/relationship-type-continues_to)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 590. XanaNode
-   - Existing: Created By Relationship Term (xananode.canonical:schema/relationship-type-created_by)
+   - Existing: Contradicted By Relationship Term (xananode.canonical:schema/relationship-type-contradicted_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 591. XanaNode
-   - Existing: Deep Linked From Relationship Term (xananode.canonical:schema/relationship-type-deep_linked_from)
+   - Existing: Contradicts (xananode.canonical:schema/relationship-type-contradicts)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 592. XanaNode
-   - Existing: Deep links to (xananode.canonical:schema/relationship-type-deep_links_to)
+   - Existing: Contrasts with (xananode.canonical:schema/relationship-type-contrasts_with)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 593. XanaNode
-   - Existing: Defined By Relationship Term (xananode.canonical:schema/relationship-type-defined_by)
+   - Existing: Created (xananode.canonical:schema/relationship-type-created)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 594. XanaNode
-   - Existing: Defines (xananode.canonical:schema/relationship-type-defines)
+   - Existing: Created By Relationship Term (xananode.canonical:schema/relationship-type-created_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 595. XanaNode
-   - Existing: Demonstrated By Relationship Term (xananode.canonical:schema/relationship-type-demonstrated_by)
+   - Existing: Deep Linked From Relationship Term (xananode.canonical:schema/relationship-type-deep_linked_from)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 596. XanaNode
-   - Existing: Demonstrates (xananode.canonical:schema/relationship-type-demonstrates)
+   - Existing: Deep links to (xananode.canonical:schema/relationship-type-deep_links_to)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 597. XanaNode
-   - Existing: Dependency Of Relationship Term (xananode.canonical:schema/relationship-type-dependency_of)
+   - Existing: Defined By Relationship Term (xananode.canonical:schema/relationship-type-defined_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 598. XanaNode
-   - Existing: Depends on (xananode.canonical:schema/relationship-type-depends_on)
+   - Existing: Defines (xananode.canonical:schema/relationship-type-defines)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 599. XanaNode
-   - Existing: Depicted By Relationship Term (xananode.canonical:schema/relationship-type-depicted_by)
+   - Existing: Demonstrated By Relationship Term (xananode.canonical:schema/relationship-type-demonstrated_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 600. XanaNode
-   - Existing: Depicts (xananode.canonical:schema/relationship-type-depicts)
+   - Existing: Demonstrates (xananode.canonical:schema/relationship-type-demonstrates)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 601. XanaNode
-   - Existing: Derived from (xananode.canonical:schema/relationship-type-derived_from)
+   - Existing: Dependency Of Relationship Term (xananode.canonical:schema/relationship-type-dependency_of)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 602. XanaNode
-   - Existing: Derived Into Relationship Term (xananode.canonical:schema/relationship-type-derived_into)
+   - Existing: Depends on (xananode.canonical:schema/relationship-type-depends_on)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 603. XanaNode
-   - Existing: Discussed In Relationship Term (xananode.canonical:schema/relationship-type-discussed_in)
+   - Existing: Depicted By Relationship Term (xananode.canonical:schema/relationship-type-depicted_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 604. XanaNode
-   - Existing: Discusses (xananode.canonical:schema/relationship-type-discusses)
+   - Existing: Depicts (xananode.canonical:schema/relationship-type-depicts)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 605. XanaNode
-   - Existing: Disputed By Relationship Term (xananode.canonical:schema/relationship-type-disputed_by)
+   - Existing: Derived from (xananode.canonical:schema/relationship-type-derived_from)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 606. XanaNode
-   - Existing: Disputed identity (xananode.canonical:schema/relationship-type-disputed_identity)
+   - Existing: Derived Into Relationship Term (xananode.canonical:schema/relationship-type-derived_into)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 607. XanaNode
-   - Existing: Disputes (xananode.canonical:schema/relationship-type-disputes)
+   - Existing: Discussed In Relationship Term (xananode.canonical:schema/relationship-type-discussed_in)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 608. XanaNode
-   - Existing: Documented By Relationship Term (xananode.canonical:schema/relationship-type-documented_by)
+   - Existing: Discusses (xananode.canonical:schema/relationship-type-discusses)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 609. XanaNode
-   - Existing: Documents (xananode.canonical:schema/relationship-type-documents)
+   - Existing: Disputed By Relationship Term (xananode.canonical:schema/relationship-type-disputed_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 610. XanaNode
-   - Existing: Enabled By Relationship Term (xananode.canonical:schema/relationship-type-enabled_by)
+   - Existing: Disputed identity (xananode.canonical:schema/relationship-type-disputed_identity)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 611. XanaNode
-   - Existing: Enables (xananode.canonical:schema/relationship-type-enables)
+   - Existing: Disputes (xananode.canonical:schema/relationship-type-disputes)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 612. XanaNode
-   - Existing: Equivalent to (xananode.canonical:schema/relationship-type-equivalent_to)
+   - Existing: Documented By Relationship Term (xananode.canonical:schema/relationship-type-documented_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 613. XanaNode
-   - Existing: Evidence for (xananode.canonical:schema/relationship-type-evidence_for)
+   - Existing: Documents (xananode.canonical:schema/relationship-type-documents)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 614. XanaNode
-   - Existing: Explained By Relationship Term (xananode.canonical:schema/relationship-type-explained_by)
+   - Existing: Enabled By Relationship Term (xananode.canonical:schema/relationship-type-enabled_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 615. XanaNode
-   - Existing: Explains (xananode.canonical:schema/relationship-type-explains)
+   - Existing: Enables (xananode.canonical:schema/relationship-type-enables)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 616. XanaNode
-   - Existing: Extended By Relationship Term (xananode.canonical:schema/relationship-type-extended_by)
+   - Existing: Equivalent to (xananode.canonical:schema/relationship-type-equivalent_to)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 617. XanaNode
-   - Existing: Extends (xananode.canonical:schema/relationship-type-extends)
+   - Existing: Evidence for (xananode.canonical:schema/relationship-type-evidence_for)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 618. XanaNode
-   - Existing: Extension of (xananode.canonical:schema/relationship-type-extension_of)
+   - Existing: Explained By Relationship Term (xananode.canonical:schema/relationship-type-explained_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 619. XanaNode
-   - Existing: Featured In Relationship Term (xananode.canonical:schema/relationship-type-featured_in)
+   - Existing: Explains (xananode.canonical:schema/relationship-type-explains)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 620. XanaNode
-   - Existing: Featured Speaker Relationship Term (xananode.canonical:schema/relationship-type-featured_speaker)
+   - Existing: Extended By Relationship Term (xananode.canonical:schema/relationship-type-extended_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 621. XanaNode
-   - Existing: Features (xananode.canonical:schema/relationship-type-features)
+   - Existing: Extends (xananode.canonical:schema/relationship-type-extends)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 622. XanaNode
-   - Existing: Followed Relationship Term (xananode.canonical:schema/relationship-type-followed)
+   - Existing: Extension of (xananode.canonical:schema/relationship-type-extension_of)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 623. XanaNode
-   - Existing: Friend of (xananode.canonical:schema/relationship-type-friend_of)
+   - Existing: Featured In Relationship Term (xananode.canonical:schema/relationship-type-featured_in)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 624. XanaNode
-   - Existing: Had Participant Relationship Term (xananode.canonical:schema/relationship-type-had_participant)
+   - Existing: Featured Speaker Relationship Term (xananode.canonical:schema/relationship-type-featured_speaker)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 625. XanaNode
-   - Existing: Has Alias Relationship Term (xananode.canonical:schema/relationship-type-has_alias)
+   - Existing: Features (xananode.canonical:schema/relationship-type-features)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 626. XanaNode
-   - Existing: Has Appearance Relationship Term (xananode.canonical:schema/relationship-type-has_appearance)
+   - Existing: Followed Relationship Term (xananode.canonical:schema/relationship-type-followed)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 627. XanaNode
-   - Existing: Has claim (xananode.canonical:schema/relationship-type-has_claim)
+   - Existing: Friend of (xananode.canonical:schema/relationship-type-friend_of)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 628. XanaNode
-   - Existing: Has Context Relationship Term (xananode.canonical:schema/relationship-type-has_context)
+   - Existing: Had Participant Relationship Term (xananode.canonical:schema/relationship-type-had_participant)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 629. XanaNode
-   - Existing: Has Evidence Relationship Term (xananode.canonical:schema/relationship-type-has_evidence)
+   - Existing: Has Alias Relationship Term (xananode.canonical:schema/relationship-type-has_alias)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 630. XanaNode
-   - Existing: Has Extension Relationship Term (xananode.canonical:schema/relationship-type-has_extension)
+   - Existing: Has Appearance Relationship Term (xananode.canonical:schema/relationship-type-has_appearance)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 631. XanaNode
-   - Existing: Has primary media (xananode.canonical:schema/relationship-type-has_primary_media)
+   - Existing: Has claim (xananode.canonical:schema/relationship-type-has_claim)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 632. XanaNode
-   - Existing: Identified (xananode.canonical:schema/relationship-type-identified)
+   - Existing: Has Context Relationship Term (xananode.canonical:schema/relationship-type-has_context)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 633. XanaNode
-   - Existing: Identified By Relationship Term (xananode.canonical:schema/relationship-type-identified_by)
+   - Existing: Has Evidence Relationship Term (xananode.canonical:schema/relationship-type-has_evidence)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 634. XanaNode
-   - Existing: Implemented By Relationship Term (xananode.canonical:schema/relationship-type-implemented_by)
+   - Existing: Has Extension Relationship Term (xananode.canonical:schema/relationship-type-has_extension)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 635. XanaNode
-   - Existing: Implements (xananode.canonical:schema/relationship-type-implements)
+   - Existing: Has primary media (xananode.canonical:schema/relationship-type-has_primary_media)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 636. XanaNode
-   - Existing: Included In Relationship Term (xananode.canonical:schema/relationship-type-included_in)
+   - Existing: Identified (xananode.canonical:schema/relationship-type-identified)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 637. XanaNode
-   - Existing: Includes (xananode.canonical:schema/relationship-type-includes)
+   - Existing: Identified By Relationship Term (xananode.canonical:schema/relationship-type-identified_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 638. XanaNode
-   - Existing: Influenced (xananode.canonical:schema/relationship-type-influenced)
+   - Existing: Implemented By Relationship Term (xananode.canonical:schema/relationship-type-implemented_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 639. XanaNode
-   - Existing: Influenced By Relationship Term (xananode.canonical:schema/relationship-type-influenced_by)
+   - Existing: Implements (xananode.canonical:schema/relationship-type-implements)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 640. XanaNode
-   - Existing: Interviewed (xananode.canonical:schema/relationship-type-interviewed)
+   - Existing: Included In Relationship Term (xananode.canonical:schema/relationship-type-included_in)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 641. XanaNode
-   - Existing: Interviewed By Relationship Term (xananode.canonical:schema/relationship-type-interviewed_by)
+   - Existing: Includes (xananode.canonical:schema/relationship-type-includes)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 642. XanaNode
-   - Existing: Introduced (xananode.canonical:schema/relationship-type-introduced)
+   - Existing: Influenced (xananode.canonical:schema/relationship-type-influenced)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 643. XanaNode
-   - Existing: Introduced By Relationship Term (xananode.canonical:schema/relationship-type-introduced_by)
+   - Existing: Influenced By Relationship Term (xananode.canonical:schema/relationship-type-influenced_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 644. XanaNode
-   - Existing: Introduced in (xananode.canonical:schema/relationship-type-introduced_in)
+   - Existing: Interviewed (xananode.canonical:schema/relationship-type-interviewed)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 645. XanaNode
-   - Existing: Introduction Venue Of Relationship Term (xananode.canonical:schema/relationship-type-introduction_venue_of)
+   - Existing: Interviewed By Relationship Term (xananode.canonical:schema/relationship-type-interviewed_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 646. XanaNode
-   - Existing: Is Start Of Relationship Term (xananode.canonical:schema/relationship-type-is_start_of)
+   - Existing: Introduced (xananode.canonical:schema/relationship-type-introduced)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 647. XanaNode
-   - Existing: Mapped From Relationship Term (xananode.canonical:schema/relationship-type-mapped_from)
+   - Existing: Introduced By Relationship Term (xananode.canonical:schema/relationship-type-introduced_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 648. XanaNode
-   - Existing: Maps to (xananode.canonical:schema/relationship-type-maps_to)
+   - Existing: Introduced in (xananode.canonical:schema/relationship-type-introduced_in)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 649. XanaNode
-   - Existing: Memorialized By Relationship Term (xananode.canonical:schema/relationship-type-memorialized_by)
+   - Existing: Introduction Venue Of Relationship Term (xananode.canonical:schema/relationship-type-introduction_venue_of)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 650. XanaNode
-   - Existing: Memorializes (xananode.canonical:schema/relationship-type-memorializes)
+   - Existing: Is Start Of Relationship Term (xananode.canonical:schema/relationship-type-is_start_of)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 651. XanaNode
-   - Existing: Mentioned By Relationship Term (xananode.canonical:schema/relationship-type-mentioned_by)
+   - Existing: Mapped From Relationship Term (xananode.canonical:schema/relationship-type-mapped_from)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 652. XanaNode
-   - Existing: Mentions (xananode.canonical:schema/relationship-type-mentions)
+   - Existing: Maps to (xananode.canonical:schema/relationship-type-maps_to)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 653. XanaNode
-   - Existing: Motivated by (xananode.canonical:schema/relationship-type-motivated_by)
+   - Existing: Memorialized By Relationship Term (xananode.canonical:schema/relationship-type-memorialized_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 654. XanaNode
-   - Existing: Motivates Relationship Term (xananode.canonical:schema/relationship-type-motivates)
+   - Existing: Memorializes (xananode.canonical:schema/relationship-type-memorializes)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 655. XanaNode
-   - Existing: Narrower Than Relationship Term (xananode.canonical:schema/relationship-type-narrower_than)
+   - Existing: Mentioned By Relationship Term (xananode.canonical:schema/relationship-type-mentioned_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 656. XanaNode
-   - Existing: Occurred at (xananode.canonical:schema/relationship-type-occurred_at)
+   - Existing: Mentions (xananode.canonical:schema/relationship-type-mentions)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 657. XanaNode
-   - Existing: Parallel to (xananode.canonical:schema/relationship-type-parallel_to)
+   - Existing: Motivated by (xananode.canonical:schema/relationship-type-motivated_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 658. XanaNode
-   - Existing: Part Of Relationship Term (xananode.canonical:schema/relationship-type-part_of)
+   - Existing: Motivates Relationship Term (xananode.canonical:schema/relationship-type-motivates)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 659. XanaNode
-   - Existing: Participated in (xananode.canonical:schema/relationship-type-participated_in)
+   - Existing: Narrower Than Relationship Term (xananode.canonical:schema/relationship-type-narrower_than)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 660. XanaNode
-   - Existing: Popularized (xananode.canonical:schema/relationship-type-popularized)
+   - Existing: Occurred at (xananode.canonical:schema/relationship-type-occurred_at)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 661. XanaNode
-   - Existing: Popularized By Relationship Term (xananode.canonical:schema/relationship-type-popularized_by)
+   - Existing: Parallel to (xananode.canonical:schema/relationship-type-parallel_to)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 662. XanaNode
-   - Existing: Possible match (xananode.canonical:schema/relationship-type-possible_match)
+   - Existing: Part Of Relationship Term (xananode.canonical:schema/relationship-type-part_of)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 663. XanaNode
-   - Existing: Preceded (xananode.canonical:schema/relationship-type-preceded)
+   - Existing: Participated in (xananode.canonical:schema/relationship-type-participated_in)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 664. XanaNode
-   - Existing: Presented (xananode.canonical:schema/relationship-type-presented)
+   - Existing: Popularized (xananode.canonical:schema/relationship-type-popularized)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 665. XanaNode
-   - Existing: Presented By Relationship Term (xananode.canonical:schema/relationship-type-presented_by)
+   - Existing: Popularized By Relationship Term (xananode.canonical:schema/relationship-type-popularized_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 666. XanaNode
-   - Existing: Preserved By Relationship Term (xananode.canonical:schema/relationship-type-preserved_by)
+   - Existing: Possible match (xananode.canonical:schema/relationship-type-possible_match)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 667. XanaNode
-   - Existing: Preserves (xananode.canonical:schema/relationship-type-preserves)
+   - Existing: Preceded (xananode.canonical:schema/relationship-type-preceded)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 668. XanaNode
-   - Existing: Produces Relationship Term (xananode.canonical:schema/relationship-type-produces)
+   - Existing: Presented (xananode.canonical:schema/relationship-type-presented)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 669. XanaNode
-   - Existing: Proposed (xananode.canonical:schema/relationship-type-proposed)
+   - Existing: Presented By Relationship Term (xananode.canonical:schema/relationship-type-presented_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 670. XanaNode
-   - Existing: Proposed By Relationship Term (xananode.canonical:schema/relationship-type-proposed_by)
+   - Existing: Preserved By Relationship Term (xananode.canonical:schema/relationship-type-preserved_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 671. XanaNode
-   - Existing: Quoted By Relationship Term (xananode.canonical:schema/relationship-type-quoted_by)
+   - Existing: Preserves (xananode.canonical:schema/relationship-type-preserves)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 672. XanaNode
-   - Existing: Quotes (xananode.canonical:schema/relationship-type-quotes)
+   - Existing: Produces Relationship Term (xananode.canonical:schema/relationship-type-produces)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 673. XanaNode
-   - Existing: Refined By Relationship Term (xananode.canonical:schema/relationship-type-refined_by)
+   - Existing: Proposed (xananode.canonical:schema/relationship-type-proposed)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 674. XanaNode
-   - Existing: Refines (xananode.canonical:schema/relationship-type-refines)
+   - Existing: Proposed By Relationship Term (xananode.canonical:schema/relationship-type-proposed_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 675. XanaNode
-   - Existing: Relationship Type Registry (xananode.canonical:schema/relationship-type-registry)
+   - Existing: Quoted By Relationship Term (xananode.canonical:schema/relationship-type-quoted_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 676. XanaNode
-   - Existing: Related to (xananode.canonical:schema/relationship-type-related_to)
+   - Existing: Quotes (xananode.canonical:schema/relationship-type-quotes)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 677. XanaNode
-   - Existing: Represented By Relationship Term (xananode.canonical:schema/relationship-type-represented_by)
+   - Existing: Refined By Relationship Term (xananode.canonical:schema/relationship-type-refined_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 678. XanaNode
-   - Existing: Represents (xananode.canonical:schema/relationship-type-represents)
+   - Existing: Refines (xananode.canonical:schema/relationship-type-refines)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 679. XanaNode
-   - Existing: Required For Relationship Term (xananode.canonical:schema/relationship-type-required_for)
+   - Existing: Relationship Type Registry (xananode.canonical:schema/relationship-type-registry)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 680. XanaNode
-   - Existing: Requires (xananode.canonical:schema/relationship-type-requires)
+   - Existing: Related to (xananode.canonical:schema/relationship-type-related_to)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 681. XanaNode
-   - Existing: Results from (xananode.canonical:schema/relationship-type-results_from)
+   - Existing: Represented By Relationship Term (xananode.canonical:schema/relationship-type-represented_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 682. XanaNode
-   - Existing: Same entity (xananode.canonical:schema/relationship-type-same_entity)
+   - Existing: Represents (xananode.canonical:schema/relationship-type-represents)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 683. XanaNode
-   - Existing: Shaped By Relationship Term (xananode.canonical:schema/relationship-type-shaped_by)
+   - Existing: Required For Relationship Term (xananode.canonical:schema/relationship-type-required_for)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 684. XanaNode
-   - Existing: Shapes (xananode.canonical:schema/relationship-type-shapes)
+   - Existing: Requires (xananode.canonical:schema/relationship-type-requires)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 685. XanaNode
-   - Existing: Site Of Relationship Term (xananode.canonical:schema/relationship-type-site_of)
+   - Existing: Results from (xananode.canonical:schema/relationship-type-results_from)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 686. XanaNode
-   - Existing: Spoke at (xananode.canonical:schema/relationship-type-spoke_at)
+   - Existing: Same entity (xananode.canonical:schema/relationship-type-same_entity)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 687. XanaNode
-   - Existing: Starts with (xananode.canonical:schema/relationship-type-starts_with)
+   - Existing: Shaped By Relationship Term (xananode.canonical:schema/relationship-type-shaped_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 688. XanaNode
-   - Existing: Superseded By Relationship Term (xananode.canonical:schema/relationship-type-superseded_by)
+   - Existing: Shapes (xananode.canonical:schema/relationship-type-shapes)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 689. XanaNode
-   - Existing: Supersedes (xananode.canonical:schema/relationship-type-supersedes)
+   - Existing: Site Of Relationship Term (xananode.canonical:schema/relationship-type-site_of)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 690. XanaNode
-   - Existing: Supported By Relationship Term (xananode.canonical:schema/relationship-type-supported_by)
+   - Existing: Spoke at (xananode.canonical:schema/relationship-type-spoke_at)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 691. XanaNode
-   - Existing: Supports (xananode.canonical:schema/relationship-type-supports)
+   - Existing: Starts with (xananode.canonical:schema/relationship-type-starts_with)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 692. XanaNode
-   - Existing: Threatened By Relationship Term (xananode.canonical:schema/relationship-type-threatened_by)
+   - Existing: Superseded By Relationship Term (xananode.canonical:schema/relationship-type-superseded_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 693. XanaNode
-   - Existing: Threatens (xananode.canonical:schema/relationship-type-threatens)
+   - Existing: Supersedes (xananode.canonical:schema/relationship-type-supersedes)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 694. XanaNode
-   - Existing: Trained on (xananode.canonical:schema/relationship-type-trained_on)
+   - Existing: Supported By Relationship Term (xananode.canonical:schema/relationship-type-supported_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 695. XanaNode
-   - Existing: Transcluded By Relationship Term (xananode.canonical:schema/relationship-type-transcluded_by)
+   - Existing: Supports (xananode.canonical:schema/relationship-type-supports)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 696. XanaNode
-   - Existing: Transcludes (xananode.canonical:schema/relationship-type-transcludes)
+   - Existing: Threatened By Relationship Term (xananode.canonical:schema/relationship-type-threatened_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 697. XanaNode
-   - Existing: Used As Primary Media For Relationship Term (xananode.canonical:schema/relationship-type-used_as_primary_media_for)
+   - Existing: Threatens (xananode.canonical:schema/relationship-type-threatens)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 698. XanaNode
-   - Existing: Used By Relationship Term (xananode.canonical:schema/relationship-type-used_by)
+   - Existing: Trained on (xananode.canonical:schema/relationship-type-trained_on)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 699. XanaNode
-   - Existing: Used To Train Relationship Term (xananode.canonical:schema/relationship-type-used_to_train)
+   - Existing: Transcluded By Relationship Term (xananode.canonical:schema/relationship-type-transcluded_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 700. XanaNode
-   - Existing: Uses (xananode.canonical:schema/relationship-type-uses)
+   - Existing: Transcludes (xananode.canonical:schema/relationship-type-transcludes)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 701. XanaNode
-   - Existing: RO-Crate Metadata Schema (xananode.canonical:schema/ro-crate-metadata-schema)
+   - Existing: Used As Primary Media For Relationship Term (xananode.canonical:schema/relationship-type-used_as_primary_media_for)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 702. XanaNode
-   - Existing: Substrate Diff Schema (xananode.canonical:schema/substrate-diff-schema)
+   - Existing: Used By Relationship Term (xananode.canonical:schema/relationship-type-used_by)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 703. XanaNode
-   - Existing: Substrate Manifest Schema (xananode.canonical:schema/substrate-manifest-schema)
+   - Existing: Used To Train Relationship Term (xananode.canonical:schema/relationship-type-used_to_train)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 704. XanaNode
-   - Existing: Substrate Node Schema (xananode.canonical:schema/substrate-node-schema)
+   - Existing: Uses (xananode.canonical:schema/relationship-type-uses)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 705. XanaNode
-   - Existing: Substrate Relationships Schema (xananode.canonical:schema/substrate-relationships-schema)
+   - Existing: RO-Crate Metadata Schema (xananode.canonical:schema/ro-crate-metadata-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 706. XanaNode
-   - Existing: GitHub Profile (xananode.canonical:source/github-profile)
+   - Existing: Substrate Diff Schema (xananode.canonical:schema/substrate-diff-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 707. XanaNode
-   - Existing: Hugo Official Site (xananode.canonical:source/hugo-official-site)
+   - Existing: Substrate Manifest Schema (xananode.canonical:schema/substrate-manifest-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 708. XanaNode
-   - Existing: Support XanaNode (xananode.canonical:source/support-xananode)
+   - Existing: Substrate Node Schema (xananode.canonical:schema/substrate-node-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 709. XanaNode
-   - Existing: XanaNode.com (xananode.canonical:source/xananode-com-domain)
+   - Existing: Substrate Relationships Schema (xananode.canonical:schema/substrate-relationships-schema)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 710. XanaNode
-   - Existing: XanaNode Core SDK Repository (xananode.canonical:source/xananode-core-sdk-repository)
+   - Existing: GitHub Profile (xananode.canonical:source/github-profile)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 711. XanaNode
-   - Existing: XanaNode Hugo Repository (xananode.canonical:source/xananode-hugo-repository)
+   - Existing: Hugo Official Site (xananode.canonical:source/hugo-official-site)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 712. XanaNode
-   - Existing: XanaNode.net (xananode.canonical:source/xananode-net-domain)
+   - Existing: Support XanaNode (xananode.canonical:source/support-xananode)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 713. XanaNode
-   - Existing: XanaNode.org (xananode.canonical:source/xananode-org-domain)
+   - Existing: XanaNode.com (xananode.canonical:source/xananode-com-domain)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 714. XanaNode
-   - Existing: XanaNode Protocol Repository (xananode.canonical:source/xananode-protocol-repository)
+   - Existing: XanaNode Core SDK Repository (xananode.canonical:source/xananode-core-sdk-repository)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 715. XanaNode
-   - Existing: XanaNode Studio Repository (xananode.canonical:source/xananode-studio-repository)
+   - Existing: XanaNode Hugo Repository (xananode.canonical:source/xananode-hugo-repository)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 716. XanaNode
-   - Existing: XanaNode Workspace Repository (xananode.canonical:source/xananode-workspace-repository)
+   - Existing: XanaNode.net (xananode.canonical:source/xananode-net-domain)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 717. XanaNode
-   - Existing: Cytoscape.js (xananode.canonical:technology/cytoscape-js)
+   - Existing: XanaNode.org (xananode.canonical:source/xananode-org-domain)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 718. XanaNode
-   - Existing: Git (xananode.canonical:technology/git)
+   - Existing: XanaNode Protocol Repository (xananode.canonical:source/xananode-protocol-repository)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 719. XanaNode
-   - Existing: Hugo (xananode.canonical:technology/hugo)
+   - Existing: XanaNode Studio Repository (xananode.canonical:source/xananode-studio-repository)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 720. XanaNode
-   - Existing: Node.js (xananode.canonical:technology/nodejs)
+   - Existing: XanaNode Workspace Repository (xananode.canonical:source/xananode-workspace-repository)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 721. XanaNode
-   - Existing: Python (xananode.canonical:technology/python)
+   - Existing: Cytoscape.js (xananode.canonical:technology/cytoscape-js)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 722. XanaNode
-   - Existing: XanaNode Stack Trail (xananode.canonical:trail/xananode-stack-trail)
+   - Existing: Git (xananode.canonical:technology/git)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 723. XanaNode
-   - Existing: Gottfried Wilhelm Leibniz (xananode.lineage:person/gottfried-wilhelm-leibniz)
+   - Existing: Hugo (xananode.canonical:technology/hugo)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 724. XanaNode
-   - Existing: Wilhelm Ostwald (xananode.lineage:person/wilhelm-ostwald)
+   - Existing: Node.js (xananode.canonical:technology/nodejs)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 725. XanaNode
-   - Existing: Jorge Luis Borges (xananode.lineage:person/jorge-luis-borges)
+   - Existing: Python (xananode.canonical:technology/python)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 726. XanaNode
-   - Existing: The Garden of Forking Paths (xananode.lineage:publication/the-garden-of-forking-paths)
+   - Existing: XanaNode Stack Trail (xananode.canonical:trail/xananode-stack-trail)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 727. XanaNode
-   - Existing: Andries van Dam (xananode.lineage:person/andries-van-dam)
+   - Existing: Gottfried Wilhelm Leibniz (xananode.lineage:person/gottfried-wilhelm-leibniz)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 728. XanaNode
-   - Existing: Brown University (xananode.lineage:place/brown-university)
+   - Existing: Wilhelm Ostwald (xananode.lineage:person/wilhelm-ostwald)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 729. XanaNode
-   - Existing: Hypertext Editing System (xananode.lineage:project/hypertext-editing-system)
+   - Existing: Jorge Luis Borges (xananode.lineage:person/jorge-luis-borges)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 730. XanaNode
-   - Existing: FRESS (xananode.lineage:project/fress)
+   - Existing: The Garden of Forking Paths (xananode.lineage:publication/the-garden-of-forking-paths)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 731. XanaNode
-   - Existing: Intermedia (xananode.lineage:project/intermedia)
+   - Existing: Andries van Dam (xananode.lineage:person/andries-van-dam)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 732. XanaNode
-   - Existing: Nicholas Negroponte (xananode.lineage:person/nicholas-negroponte)
+   - Existing: Brown University (xananode.lineage:place/brown-university)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 733. XanaNode
-   - Existing: Seymour Papert (xananode.lineage:person/seymour-papert)
+   - Existing: Hypertext Editing System (xananode.lineage:project/hypertext-editing-system)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 734. XanaNode
-   - Existing: Marvin Minsky (xananode.lineage:person/marvin-minsky)
+   - Existing: FRESS (xananode.lineage:project/fress)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 735. XanaNode
-   - Existing: MIT Media Lab (xananode.lineage:organization/mit-media-lab)
+   - Existing: Intermedia (xananode.lineage:project/intermedia)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 736. XanaNode
-   - Existing: Hans Peter Brondmo (xananode.lineage:person/hans-peter-brondmo)
+   - Existing: Nicholas Negroponte (xananode.lineage:person/nicholas-negroponte)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 737. XanaNode
-   - Existing: Micons (xananode.lineage:technology/micons)
+   - Existing: Seymour Papert (xananode.lineage:person/seymour-papert)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 738. XanaNode
-   - Existing: Robert Winter (xananode.lineage:person/robert-winter)
+   - Existing: Marvin Minsky (xananode.lineage:person/marvin-minsky)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 739. XanaNode
-   - Existing: Interactive Beethoven's Ninth (xananode.lineage:project/interactive-beethoven-ninth)
+   - Existing: MIT Media Lab (xananode.lineage:organization/mit-media-lab)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 740. XanaNode
-   - Existing: Robert Abel (xananode.lineage:person/robert-abel)
+   - Existing: Hans Peter Brondmo (xananode.lineage:person/hans-peter-brondmo)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 741. XanaNode
-   - Existing: Interactive Guernica (xananode.lineage:project/interactive-guernica)
+   - Existing: Micons (xananode.lineage:technology/micons)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 742. XanaNode
-   - Existing: Ivan Sutherland (xananode.lineage:person/ivan-sutherland)
+   - Existing: Robert Winter (xananode.lineage:person/robert-winter)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 743. XanaNode
-   - Existing: Jaron Lanier (xananode.lineage:person/jaron-lanier)
+   - Existing: Interactive Beethoven's Ninth (xananode.lineage:project/interactive-beethoven-ninth)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 744. XanaNode
-   - Existing: VPL Research (xananode.lineage:organization/vpl-research)
+   - Existing: Robert Abel (xananode.lineage:person/robert-abel)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 745. XanaNode
-   - Existing: Scott Fisher (xananode.lineage:person/scott-fisher)
+   - Existing: Interactive Guernica (xananode.lineage:project/interactive-guernica)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 746. XanaNode
-   - Existing: NASA (xananode.lineage:organization/nasa)
+   - Existing: Ivan Sutherland (xananode.lineage:person/ivan-sutherland)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 747. XanaNode
-   - Existing: Dirk Gently's Holistic Detective Agency (xananode.lineage:publication/dirk-gentlys-holistic-detective-agency)
+   - Existing: Jaron Lanier (xananode.lineage:person/jaron-lanier)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 748. XanaNode
-   - Existing: BBC Two (xananode.lineage:organization/bbc-two)
+   - Existing: VPL Research (xananode.lineage:organization/vpl-research)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 749. XanaNode
-   - Existing: Richard Saul Wurman (xananode.lineage:person/richard-saul-wurman)
+   - Existing: Scott Fisher (xananode.lineage:person/scott-fisher)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 750. XanaNode
-   - Existing: Harry Marks (xananode.lineage:person/harry-marks)
+   - Existing: NASA (xananode.lineage:organization/nasa)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 751. XanaNode
-   - Existing: John Sculley (xananode.lineage:person/john-sculley)
+   - Existing: Dirk Gently's Holistic Detective Agency (xananode.lineage:publication/dirk-gentlys-holistic-detective-agency)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 752. XanaNode
-   - Existing: Apple Knowledge Navigator (xananode.lineage:technology/apple-knowledge-navigator)
+   - Existing: BBC Two (xananode.lineage:organization/bbc-two)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 753. XanaNode
-   - Existing: Bill Atkinson (xananode.lineage:person/bill-atkinson)
+   - Existing: Richard Saul Wurman (xananode.lineage:person/richard-saul-wurman)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 754. XanaNode
-   - Existing: Herbie Hancock (xananode.lineage:person/herbie-hancock)
+   - Existing: Harry Marks (xananode.lineage:person/harry-marks)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 755. XanaNode
-   - Existing: Nigel Holmes (xananode.lineage:person/nigel-holmes)
+   - Existing: John Sculley (xananode.lineage:person/john-sculley)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 756. XanaNode
-   - Existing: Laurie Anderson (xananode.lineage:person/laurie-anderson)
+   - Existing: Apple Knowledge Navigator (xananode.lineage:technology/apple-knowledge-navigator)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 757. XanaNode
-   - Existing: Bran Ferren (xananode.lineage:person/bran-ferren)
+   - Existing: Bill Atkinson (xananode.lineage:person/bill-atkinson)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 758. XanaNode
-   - Existing: Robert Cailliau (xananode.lineage:person/robert-cailliau)
+   - Existing: Herbie Hancock (xananode.lineage:person/herbie-hancock)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 759. XanaNode
-   - Existing: CERN (xananode.lineage:place/cern)
+   - Existing: Nigel Holmes (xananode.lineage:person/nigel-holmes)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 760. XanaNode
-   - Existing: HTML (xananode.lineage:technology/html)
+   - Existing: Laurie Anderson (xananode.lineage:person/laurie-anderson)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 761. XanaNode
-   - Existing: URL/URI (xananode.lineage:technology/url-uri)
+   - Existing: Bran Ferren (xananode.lineage:person/bran-ferren)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 762. XanaNode
-   - Existing: HTTP (xananode.lineage:technology/http)
+   - Existing: Robert Cailliau (xananode.lineage:person/robert-cailliau)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 763. XanaNode
-   - Existing: NCSA (xananode.lineage:organization/ncsa)
+   - Existing: CERN (xananode.lineage:place/cern)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 764. XanaNode
-   - Existing: Marc Andreessen (xananode.lineage:person/marc-andreessen)
+   - Existing: HTML (xananode.lineage:technology/html)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 765. XanaNode
-   - Existing: Mosaic (xananode.lineage:technology/mosaic)
+   - Existing: URL/URI (xananode.lineage:technology/url-uri)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 766. XanaNode
-   - Existing: The Web as Incomplete Hypertext (xananode.lineage:concept/web-as-incomplete-hypertext)
+   - Existing: HTTP (xananode.lineage:technology/http)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 767. XanaNode
-   - Existing: Guide (xananode.lineage:technology/guide)
+   - Existing: NCSA (xananode.lineage:organization/ncsa)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 768. XanaNode
-   - Existing: Storyspace (xananode.lineage:project/storyspace)
+   - Existing: Marc Andreessen (xananode.lineage:person/marc-andreessen)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 769. XanaNode
-   - Existing: ZOG/KMS (xananode.lineage:project/zog-kms)
+   - Existing: Mosaic (xananode.lineage:technology/mosaic)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 770. XanaNode
-   - Existing: Xanadu at Autodesk (xananode.lineage:project/xanadu-at-autodesk)
+   - Existing: The Web as Incomplete Hypertext (xananode.lineage:concept/web-as-incomplete-hypertext)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 771. XanaNode
-   - Existing: Conflict and Disputed Identity (xananode.lineage:concept/conflict-disputed-identity)
+   - Existing: Guide (xananode.lineage:technology/guide)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 772. XanaNode
-   - Existing: Git-backed Substrate (xananode.lineage:technology/git-backed-substrate)
+   - Existing: Storyspace (xananode.lineage:project/storyspace)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 773. XanaNode
-   - Existing: Babel (xananode.lineage:tool/babel)
+   - Existing: ZOG/KMS (xananode.lineage:project/zog-kms)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 774. XanaNode
-   - Existing: Hyperland VR (xananode.lineage:tool/hyperland-vr)
+   - Existing: Xanadu at Autodesk (xananode.lineage:project/xanadu-at-autodesk)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 775. XanaNode
-   - Existing: Lost Lineage of Human Knowledge Augmentation (xananode.lineage:concept/lost-lineage-human-knowledge-augmentation)
+   - Existing: Conflict and Disputed Identity (xananode.lineage:concept/conflict-disputed-identity)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 776. XanaNode
-   - Existing: Paul Otlet (xananode.lineage:person/paul-otlet)
+   - Existing: Git-backed Substrate (xananode.lineage:technology/git-backed-substrate)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 777. XanaNode
-   - Existing: H. G. Wells (xananode.lineage:person/h-g-wells)
+   - Existing: Babel (xananode.lineage:tool/babel)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 778. XanaNode
-   - Existing: Douglas Adams (xananode.lineage:person/douglas-adams)
+   - Existing: Hyperland VR (xananode.lineage:tool/hyperland-vr)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 779. XanaNode
-   - Existing: Hyperland (xananode.lineage:publication/hyperland)
+   - Existing: Authored Substrate Overlap (xananode.lineage:concept/authored-substrate-overlap)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 780. XanaNode
-   - Existing: Tom Baker (xananode.lineage:person/tom-baker)
+   - Existing: Overlap is a Federation Signal (xananode.lineage:claim/overlap-is-federation-signal)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 781. XanaNode
-   - Existing: Max Whitby (xananode.lineage:person/max-whitby)
+   - Existing: Merge is Authored Interpretation (xananode.lineage:claim/merge-is-authored-interpretation)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 782. XanaNode
-   - Existing: TED2 (xananode.lineage:event/ted2-1990)
+   - Existing: Lineage Packs Can Overlap Canonical Packs (xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 783. XanaNode
-   - Existing: Monterey, California (xananode.lineage:place/monterey-california)
+   - Existing: Lost Lineage of Human Knowledge Augmentation (xananode.lineage:concept/lost-lineage-human-knowledge-augmentation)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 784. XanaNode
-   - Existing: Bob Stein (xananode.lineage:person/bob-stein)
+   - Existing: Paul Otlet (xananode.lineage:person/paul-otlet)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 785. XanaNode
-   - Existing: Voyager Company (xananode.lineage:organization/voyager-company)
+   - Existing: H. G. Wells (xananode.lineage:person/h-g-wells)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 786. XanaNode
-   - Existing: Alan Kay (xananode.lineage:person/alan-kay)
+   - Existing: Douglas Adams (xananode.lineage:person/douglas-adams)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 787. XanaNode
-   - Existing: Xerox PARC (xananode.lineage:organization/xerox-parc)
+   - Existing: Hyperland (xananode.lineage:publication/hyperland)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 788. XanaNode
-   - Existing: HyperCard (xananode.lineage:technology/hypercard)
+   - Existing: Tom Baker (xananode.lineage:person/tom-baker)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 789. XanaNode
-   - Existing: Tim Berners-Lee (xananode.lineage:person/tim-berners-lee)
+   - Existing: Max Whitby (xananode.lineage:person/max-whitby)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 790. XanaNode
-   - Existing: World Wide Web (xananode.lineage:technology/world-wide-web)
+   - Existing: TED2 (xananode.lineage:event/ted2-1990)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 791. XanaNode
-   - Existing: Aspen Movie Map (xananode.lineage:project/aspen-movie-map)
+   - Existing: Monterey, California (xananode.lineage:place/monterey-california)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 792. XanaNode
-   - Existing: Lost Lineage Intertwingled Trail (xananode.lineage:trail/lost-lineage-intertwingled-trail)
+   - Existing: Bob Stein (xananode.lineage:person/bob-stein)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 793. XanaNode
-   - Existing: Reusable Media Fragment (xananode.example:fragment/xanadu-document-interconnection-0001)
+   - Existing: Voyager Company (xananode.lineage:organization/voyager-company)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 794. XanaNode
-   - Existing: Augmenting Human Intelligence Fragment (xananode.example:fragment/mother-of-all-demos-0001)
+   - Existing: Alan Kay (xananode.lineage:person/alan-kay)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 795. XanaNode
+   - Existing: Xerox PARC (xananode.lineage:organization/xerox-parc)
+   - Incoming: XanaNode (xananode.canonical:concept/xananode)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+796. XanaNode
+   - Existing: HyperCard (xananode.lineage:technology/hypercard)
+   - Incoming: XanaNode (xananode.canonical:concept/xananode)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+797. XanaNode
+   - Existing: Tim Berners-Lee (xananode.lineage:person/tim-berners-lee)
+   - Incoming: XanaNode (xananode.canonical:concept/xananode)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+798. XanaNode
+   - Existing: World Wide Web (xananode.lineage:technology/world-wide-web)
+   - Incoming: XanaNode (xananode.canonical:concept/xananode)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+799. XanaNode
+   - Existing: Aspen Movie Map (xananode.lineage:project/aspen-movie-map)
+   - Incoming: XanaNode (xananode.canonical:concept/xananode)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+800. XanaNode
+   - Existing: Lost Lineage Intertwingled Trail (xananode.lineage:trail/lost-lineage-intertwingled-trail)
+   - Incoming: XanaNode (xananode.canonical:concept/xananode)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+801. XanaNode
+   - Existing: Reusable Media Fragment (xananode.example:fragment/xanadu-document-interconnection-0001)
+   - Incoming: XanaNode (xananode.canonical:concept/xananode)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+802. XanaNode
+   - Existing: Augmenting Human Intelligence Fragment (xananode.example:fragment/mother-of-all-demos-0001)
+   - Incoming: XanaNode (xananode.canonical:concept/xananode)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+803. XanaNode
    - Existing: Associative Trails Fragment (xananode.example:fragment/as-we-may-think-0004)
    - Incoming: XanaNode (xananode.canonical:concept/xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-796. What Is XanaNode?
+804. What Is XanaNode?
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: What Is XanaNode? (xananode.canonical:essay/what-is-xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-797. What Is XanaNode?
+805. What Is XanaNode?
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: What Is XanaNode? (xananode.canonical:essay/what-is-xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-798. XanaNode Canonical Pack Bootstrap
+806. XanaNode Canonical Pack Bootstrap
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XanaNode Canonical Pack Bootstrap (xananode.canonical:event/xananode-canonical-pack-bootstrap)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-799. XanaNode Canonical Pack Bootstrap
+807. XanaNode Canonical Pack Bootstrap
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XanaNode Canonical Pack Bootstrap (xananode.canonical:event/xananode-canonical-pack-bootstrap)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-800. Relationships Preserve Knowledge Sentence
+808. Relationships Preserve Knowledge Sentence
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Relationships Preserve Knowledge Sentence (xananode.canonical:fragment/relationships-preserve-knowledge-sentence)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-801. Relationships Preserve Knowledge Sentence
+809. Relationships Preserve Knowledge Sentence
    - Existing: Relationships Preserve Knowledge (xananode.canonical:claim/relationships-preserve-knowledge)
    - Incoming: Relationships Preserve Knowledge Sentence (xananode.canonical:fragment/relationships-preserve-knowledge-sentence)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-802. Relationships Preserve Knowledge Sentence
+810. Relationships Preserve Knowledge Sentence
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Relationships Preserve Knowledge Sentence (xananode.canonical:fragment/relationships-preserve-knowledge-sentence)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-803. Relationships Preserve Knowledge Sentence
+811. Relationships Preserve Knowledge Sentence
    - Existing: Fragment (xananode.canonical:schema/node-type-fragment)
    - Incoming: Relationships Preserve Knowledge Sentence (xananode.canonical:fragment/relationships-preserve-knowledge-sentence)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-804. Relationships Preserve Knowledge Sentence
+812. Relationships Preserve Knowledge Sentence
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Relationships Preserve Knowledge Sentence (xananode.canonical:fragment/relationships-preserve-knowledge-sentence)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-805. XanaNode Icon
+813. XanaNode Icon
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XanaNode Icon (xananode.canonical:media/xananode-icon)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-806. XanaNode Icon
+814. XanaNode Icon
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XanaNode Icon (xananode.canonical:media/xananode-icon)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-807. Markdown Recreation Friction
+815. Markdown Recreation Friction
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Markdown Recreation Friction (xananode.canonical:observation/markdown-recreation-friction)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-808. Markdown Recreation Friction
+816. Markdown Recreation Friction
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Markdown Recreation Friction (xananode.canonical:observation/markdown-recreation-friction)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-809. Markdown Recreation Friction
+817. Markdown Recreation Friction
    - Existing: Observation (xananode.canonical:schema/node-type-observation)
    - Incoming: Markdown Recreation Friction (xananode.canonical:observation/markdown-recreation-friction)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-810. Built By Bots
+818. Built By Bots
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Built By Bots (xananode.canonical:organization/built-by-bots)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-811. Built By Bots
+819. Built By Bots
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Built By Bots (xananode.canonical:organization/built-by-bots)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-812. Built By Bots
+820. Built By Bots
    - Existing: Organization (xananode.canonical:schema/node-type-organization)
    - Incoming: Built By Bots (xananode.canonical:organization/built-by-bots)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-813. Cytoscape Consortium
+821. Cytoscape Consortium
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Cytoscape Consortium (xananode.canonical:organization/cytoscape-consortium)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-814. Cytoscape Consortium
+822. Cytoscape Consortium
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Cytoscape Consortium (xananode.canonical:organization/cytoscape-consortium)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-815. Cytoscape Consortium
+823. Cytoscape Consortium
    - Existing: Organization (xananode.canonical:schema/node-type-organization)
    - Incoming: Cytoscape Consortium (xananode.canonical:organization/cytoscape-consortium)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-816. Hugo Authors
+824. Hugo Authors
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Hugo Authors (xananode.canonical:organization/hugo-authors)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-817. Hugo Authors
+825. Hugo Authors
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Hugo Authors (xananode.canonical:organization/hugo-authors)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-818. Hugo Authors
+826. Hugo Authors
    - Existing: Organization (xananode.canonical:schema/node-type-organization)
    - Incoming: Hugo Authors (xananode.canonical:organization/hugo-authors)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-819. Christian Siefen
+827. Christian Siefen
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Christian Siefen (xananode.canonical:person/christian-siefen)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-820. Christian Siefen
+828. Christian Siefen
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Christian Siefen (xananode.canonical:person/christian-siefen)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-821. Christian Siefen
+829. Christian Siefen
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Christian Siefen (xananode.canonical:person/christian-siefen)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-822. World Wide Web
+830. World Wide Web
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: World Wide Web (xananode.canonical:place/world-wide-web)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-823. World Wide Web
+831. World Wide Web
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: World Wide Web (xananode.canonical:place/world-wide-web)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-824. XanaNode Core SDK
+832. XanaNode Core SDK
    - Existing: XanaNode Core SDK Repository (xananode.example:source/xananode-core-sdk-repo)
    - Incoming: XanaNode Core SDK (xananode.canonical:project/xananode-core-sdk)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-825. XanaNode Core SDK
+833. XanaNode Core SDK
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XanaNode Core SDK (xananode.canonical:project/xananode-core-sdk)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-826. XanaNode Core SDK
+834. XanaNode Core SDK
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XanaNode Core SDK (xananode.canonical:project/xananode-core-sdk)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-827. XanaNode Core SDK
+835. XanaNode Core SDK
    - Existing: XanaNode Core (xananode.canonical:schema/namespace-xananode)
    - Incoming: XanaNode Core SDK (xananode.canonical:project/xananode-core-sdk)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-828. XanaNode Core SDK
+836. XanaNode Core SDK
    - Existing: Project (xananode.canonical:schema/node-type-project)
    - Incoming: XanaNode Core SDK (xananode.canonical:project/xananode-core-sdk)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-829. XanaNode Core SDK
+837. XanaNode Core SDK
    - Existing: XanaNode Core SDK Repository (xananode.canonical:source/xananode-core-sdk-repository)
    - Incoming: XanaNode Core SDK (xananode.canonical:project/xananode-core-sdk)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-830. XanaNode Hugo Theme
+838. XanaNode Hugo Theme
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XanaNode Hugo Theme (xananode.canonical:project/xananode-hugo-theme)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-831. XanaNode Hugo Theme
+839. XanaNode Hugo Theme
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XanaNode Hugo Theme (xananode.canonical:project/xananode-hugo-theme)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-832. XanaNode Hugo Theme
+840. XanaNode Hugo Theme
    - Existing: Project (xananode.canonical:schema/node-type-project)
    - Incoming: XanaNode Hugo Theme (xananode.canonical:project/xananode-hugo-theme)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-833. XanaNode Protocol
+841. XanaNode Protocol
    - Existing: XanaNode Protocol Repository (xananode.example:source/xananode-protocol-repo)
    - Incoming: XanaNode Protocol (xananode.canonical:project/xananode-protocol)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-834. XanaNode Protocol
+842. XanaNode Protocol
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XanaNode Protocol (xananode.canonical:project/xananode-protocol)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-835. XanaNode Protocol
+843. XanaNode Protocol
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XanaNode Protocol (xananode.canonical:project/xananode-protocol)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-836. XanaNode Protocol
+844. XanaNode Protocol
    - Existing: Project (xananode.canonical:schema/node-type-project)
    - Incoming: XanaNode Protocol (xananode.canonical:project/xananode-protocol)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-837. XanaNode Protocol
+845. XanaNode Protocol
    - Existing: XanaNode Protocol Repository (xananode.canonical:source/xananode-protocol-repository)
    - Incoming: XanaNode Protocol (xananode.canonical:project/xananode-protocol)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-838. XanaNode Workspace
+846. XanaNode Workspace
    - Existing: XanaNode Workspace Repository (xananode.example:source/xananode-workspace-repo)
    - Incoming: XanaNode Workspace (xananode.canonical:project/xananode-workspace)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-839. XanaNode Workspace
+847. XanaNode Workspace
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XanaNode Workspace (xananode.canonical:project/xananode-workspace)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-840. XanaNode Workspace
+848. XanaNode Workspace
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XanaNode Workspace (xananode.canonical:project/xananode-workspace)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-841. XanaNode Workspace
+849. XanaNode Workspace
    - Existing: Project (xananode.canonical:schema/node-type-project)
    - Incoming: XanaNode Workspace (xananode.canonical:project/xananode-workspace)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-842. XanaNode Workspace
+850. XanaNode Workspace
    - Existing: XanaNode Workspace Repository (xananode.canonical:source/xananode-workspace-repository)
    - Incoming: XanaNode Workspace (xananode.canonical:project/xananode-workspace)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-843. XNP-0004 Merge Validation
+851. XNP-0004 Merge Validation
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XNP-0004 Merge Validation (xananode.canonical:publication/xnp-0004-merge-validation)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-844. XNP-0004 Merge Validation
+852. XNP-0004 Merge Validation
    - Existing: Merge Validation (xananode.example:concept/merge-validation)
    - Incoming: XNP-0004 Merge Validation (xananode.canonical:publication/xnp-0004-merge-validation)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-845. XNP-0004 Merge Validation
+853. XNP-0004 Merge Validation
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XNP-0004 Merge Validation (xananode.canonical:publication/xnp-0004-merge-validation)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-846. XNP-0004 Merge Validation
+854. XNP-0004 Merge Validation
    - Existing: Publication (xananode.canonical:schema/node-type-publication)
    - Incoming: XNP-0004 Merge Validation (xananode.canonical:publication/xnp-0004-merge-validation)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-847. Protocol Implements Relationship Preservation
+855. Protocol Implements Relationship Preservation
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Protocol Implements Relationship Preservation (xananode.canonical:relationship/protocol-implements-claim)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-848. Protocol Implements Relationship Preservation
+856. Protocol Implements Relationship Preservation
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Protocol Implements Relationship Preservation (xananode.canonical:relationship/protocol-implements-claim)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-849. Protocol Implements Relationship Preservation
+857. Protocol Implements Relationship Preservation
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Protocol Implements Relationship Preservation (xananode.canonical:relationship/protocol-implements-claim)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-850. Protocol Implements Relationship Preservation
+858. Protocol Implements Relationship Preservation
    - Existing: Implements (xananode.canonical:schema/relationship-type-implements)
    - Incoming: Protocol Implements Relationship Preservation (xananode.canonical:relationship/protocol-implements-claim)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-851. Canonical Pack v0.1.0
+859. Canonical Pack v0.1.0
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Canonical Pack v0.1.0 (xananode.canonical:revision/canonical-pack-v0-1-0)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-852. Canonical Pack v0.1.0
+860. Canonical Pack v0.1.0
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Canonical Pack v0.1.0 (xananode.canonical:revision/canonical-pack-v0-1-0)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-853. Canonical Pack v0.1.0
+861. Canonical Pack v0.1.0
    - Existing: Revision (xananode.canonical:schema/node-type-revision)
    - Incoming: Canonical Pack v0.1.0 (xananode.canonical:revision/canonical-pack-v0-1-0)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-854. Author Profile Schema
+862. Author Profile Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Author Profile Schema (xananode.canonical:schema/author-profile-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-855. Author Profile Schema
+863. Author Profile Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Author Profile Schema (xananode.canonical:schema/author-profile-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-856. Author Profile Schema
+864. Author Profile Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Author Profile Schema (xananode.canonical:schema/author-profile-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-857. Author Profile Schema
+865. Author Profile Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Author Profile Schema (xananode.canonical:schema/canonical-schema-author-profile)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-858. Author Profile Schema
+866. Author Profile Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Author Profile Schema (xananode.canonical:schema/canonical-schema-author-profile)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-859. Author Profile Schema
+867. Author Profile Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Author Profile Schema (xananode.canonical:schema/canonical-schema-author-profile)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-860. Compatibility Report Schema
+868. Compatibility Report Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Compatibility Report Schema (xananode.canonical:schema/canonical-schema-compatibility-report)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-861. Compatibility Report Schema
+869. Compatibility Report Schema
    - Existing: Compatibility Report (xananode.example:concept/compatibility-report)
    - Incoming: Compatibility Report Schema (xananode.canonical:schema/canonical-schema-compatibility-report)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-862. Compatibility Report Schema
+870. Compatibility Report Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Compatibility Report Schema (xananode.canonical:schema/canonical-schema-compatibility-report)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-863. Compatibility Report Schema
+871. Compatibility Report Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Compatibility Report Schema (xananode.canonical:schema/canonical-schema-compatibility-report)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-864. Merge Report Schema
+872. Merge Report Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Merge Report Schema (xananode.canonical:schema/canonical-schema-merge-report)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-865. Merge Report Schema
+873. Merge Report Schema
    - Existing: Merge Report (xananode.example:concept/merge-report)
    - Incoming: Merge Report Schema (xananode.canonical:schema/canonical-schema-merge-report)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-866. Merge Report Schema
+874. Merge Report Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Merge Report Schema (xananode.canonical:schema/canonical-schema-merge-report)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-867. Merge Report Schema
+875. Merge Report Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Merge Report Schema (xananode.canonical:schema/canonical-schema-merge-report)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-868. Nanopublication Schema
+876. Nanopublication Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Nanopublication Schema (xananode.canonical:schema/canonical-schema-nanopublication)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-869. Nanopublication Schema
+877. Nanopublication Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Nanopublication Schema (xananode.canonical:schema/canonical-schema-nanopublication)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-870. Nanopublication Schema
+878. Nanopublication Schema
    - Existing: Publication (xananode.canonical:schema/node-type-publication)
    - Incoming: Nanopublication Schema (xananode.canonical:schema/canonical-schema-nanopublication)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-871. Nanopublication Schema
+879. Nanopublication Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Nanopublication Schema (xananode.canonical:schema/canonical-schema-nanopublication)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-872. Ro Crate Metadata Schema
+880. Ro Crate Metadata Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Ro Crate Metadata Schema (xananode.canonical:schema/canonical-schema-ro-crate-metadata)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-873. Ro Crate Metadata Schema
+881. Ro Crate Metadata Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Ro Crate Metadata Schema (xananode.canonical:schema/canonical-schema-ro-crate-metadata)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-874. Ro Crate Metadata Schema
+882. Ro Crate Metadata Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Ro Crate Metadata Schema (xananode.canonical:schema/canonical-schema-ro-crate-metadata)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-875. Substrate Diff Schema
+883. Substrate Diff Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Substrate Diff Schema (xananode.canonical:schema/canonical-schema-substrate-diff)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-876. Substrate Diff Schema
+884. Substrate Diff Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Substrate Diff Schema (xananode.canonical:schema/canonical-schema-substrate-diff)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-877. Substrate Diff Schema
+885. Substrate Diff Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Substrate Diff Schema (xananode.canonical:schema/canonical-schema-substrate-diff)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-878. Substrate Manifest Schema
+886. Substrate Manifest Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Substrate Manifest Schema (xananode.canonical:schema/canonical-schema-substrate-manifest)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-879. Substrate Manifest Schema
+887. Substrate Manifest Schema
    - Existing: Substrate Manifest (xananode.example:concept/substrate-manifest)
    - Incoming: Substrate Manifest Schema (xananode.canonical:schema/canonical-schema-substrate-manifest)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-880. Substrate Manifest Schema
+888. Substrate Manifest Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Substrate Manifest Schema (xananode.canonical:schema/canonical-schema-substrate-manifest)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-881. Substrate Manifest Schema
+889. Substrate Manifest Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Substrate Manifest Schema (xananode.canonical:schema/canonical-schema-substrate-manifest)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-882. Substrate Node Schema
+890. Substrate Node Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Substrate Node Schema (xananode.canonical:schema/canonical-schema-substrate-node)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-883. Substrate Node Schema
+891. Substrate Node Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Substrate Node Schema (xananode.canonical:schema/canonical-schema-substrate-node)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-884. Substrate Node Schema
+892. Substrate Node Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Substrate Node Schema (xananode.canonical:schema/canonical-schema-substrate-node)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-885. Substrate Relationships Schema
+893. Substrate Relationships Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Substrate Relationships Schema (xananode.canonical:schema/canonical-schema-substrate-relationships)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-886. Substrate Relationships Schema
+894. Substrate Relationships Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Substrate Relationships Schema (xananode.canonical:schema/canonical-schema-substrate-relationships)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-887. Substrate Relationships Schema
+895. Substrate Relationships Schema
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Substrate Relationships Schema (xananode.canonical:schema/canonical-schema-substrate-relationships)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-888. Substrate Relationships Schema
+896. Substrate Relationships Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Substrate Relationships Schema (xananode.canonical:schema/canonical-schema-substrate-relationships)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-889. Xananode Node Types Schema
+897. Xananode Node Types Schema
    - Existing: XanaNode Node Types (xananode.example:schema/xananode-node-types)
    - Incoming: Xananode Node Types Schema (xananode.canonical:schema/canonical-schema-xananode-node-types)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-890. Xananode Node Types Schema
+898. Xananode Node Types Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Xananode Node Types Schema (xananode.canonical:schema/canonical-schema-xananode-node-types)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-891. Xananode Node Types Schema
+899. Xananode Node Types Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Xananode Node Types Schema (xananode.canonical:schema/canonical-schema-xananode-node-types)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-892. Xananode Node Types Schema
+900. Xananode Node Types Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Xananode Node Types Schema (xananode.canonical:schema/canonical-schema-xananode-node-types)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-893. Xananode Property Registry Schema
+901. Xananode Property Registry Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Xananode Property Registry Schema (xananode.canonical:schema/canonical-schema-xananode-property-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-894. Xananode Property Registry Schema
+902. Xananode Property Registry Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Xananode Property Registry Schema (xananode.canonical:schema/canonical-schema-xananode-property-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-895. Xananode Property Registry Schema
+903. Xananode Property Registry Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Xananode Property Registry Schema (xananode.canonical:schema/canonical-schema-xananode-property-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-896. Xananode Property Registry Schema
+904. Xananode Property Registry Schema
    - Existing: Property Registry (xananode.canonical:schema/property-registry)
    - Incoming: Xananode Property Registry Schema (xananode.canonical:schema/canonical-schema-xananode-property-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-897. Xananode Property Registry Schema
+905. Xananode Property Registry Schema
    - Existing: Property Registry Schema (xananode.canonical:schema/property-registry-schema)
    - Incoming: Xananode Property Registry Schema (xananode.canonical:schema/canonical-schema-xananode-property-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-898. Xananode Relationship Types Schema
+906. Xananode Relationship Types Schema
    - Existing: XanaNode Relationship Types (xananode.example:schema/xananode-relationship-types)
    - Incoming: Xananode Relationship Types Schema (xananode.canonical:schema/canonical-schema-xananode-relationship-types)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-899. Xananode Relationship Types Schema
+907. Xananode Relationship Types Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Xananode Relationship Types Schema (xananode.canonical:schema/canonical-schema-xananode-relationship-types)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-900. Xananode Relationship Types Schema
+908. Xananode Relationship Types Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Xananode Relationship Types Schema (xananode.canonical:schema/canonical-schema-xananode-relationship-types)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-901. Xananode Relationship Types Schema
+909. Xananode Relationship Types Schema
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Xananode Relationship Types Schema (xananode.canonical:schema/canonical-schema-xananode-relationship-types)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-902. Xananode Relationship Types Schema
+910. Xananode Relationship Types Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Xananode Relationship Types Schema (xananode.canonical:schema/canonical-schema-xananode-relationship-types)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-903. Canonical Schemas Registry
+911. Canonical Schemas Registry
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Canonical Schemas Registry (xananode.canonical:schema/canonical-schemas-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-904. Canonical Schemas Registry
+912. Canonical Schemas Registry
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Canonical Schemas Registry (xananode.canonical:schema/canonical-schemas-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-905. Canonical Schemas Registry
+913. Canonical Schemas Registry
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Canonical Schemas Registry (xananode.canonical:schema/canonical-schemas-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-906. Compatibility Report Schema
+914. Compatibility Report Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Compatibility Report Schema (xananode.canonical:schema/compatibility-report-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-907. Compatibility Report Schema
+915. Compatibility Report Schema
    - Existing: Compatibility Report (xananode.example:concept/compatibility-report)
    - Incoming: Compatibility Report Schema (xananode.canonical:schema/compatibility-report-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-908. Compatibility Report Schema
+916. Compatibility Report Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Compatibility Report Schema (xananode.canonical:schema/compatibility-report-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-909. Compatibility Report Schema
+917. Compatibility Report Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Compatibility Report Schema (xananode.canonical:schema/compatibility-report-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-910. Known Implementations Registry
+918. Known Implementations Registry
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Known Implementations Registry (xananode.canonical:schema/known-implementations-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-911. Known Implementations Registry
+919. Known Implementations Registry
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Known Implementations Registry (xananode.canonical:schema/known-implementations-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-912. Known Implementations Registry
+920. Known Implementations Registry
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Known Implementations Registry (xananode.canonical:schema/known-implementations-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-913. Merge Report Schema
+921. Merge Report Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Merge Report Schema (xananode.canonical:schema/merge-report-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-914. Merge Report Schema
+922. Merge Report Schema
    - Existing: Merge Report (xananode.example:concept/merge-report)
    - Incoming: Merge Report Schema (xananode.canonical:schema/merge-report-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-915. Merge Report Schema
+923. Merge Report Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Merge Report Schema (xananode.canonical:schema/merge-report-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-916. Merge Report Schema
+924. Merge Report Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Merge Report Schema (xananode.canonical:schema/merge-report-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-917. Federation Merge Report Example Namespace
+925. Federation Merge Report Example Namespace
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Federation Merge Report Example Namespace (xananode.canonical:schema/namespace-example.merge)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-918. Federation Merge Report Example Namespace
+926. Federation Merge Report Example Namespace
    - Existing: Merge Report (xananode.example:concept/merge-report)
    - Incoming: Federation Merge Report Example Namespace (xananode.canonical:schema/namespace-example.merge)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-919. Federation Merge Report Example Namespace
+927. Federation Merge Report Example Namespace
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Federation Merge Report Example Namespace (xananode.canonical:schema/namespace-example.merge)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-920. Federation Merge Report Example Namespace
+928. Federation Merge Report Example Namespace
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Federation Merge Report Example Namespace (xananode.canonical:schema/namespace-example.merge)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-921. Minimal Example Namespace
+929. Minimal Example Namespace
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Minimal Example Namespace (xananode.canonical:schema/namespace-example.minimal)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-922. Minimal Example Namespace
+930. Minimal Example Namespace
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Minimal Example Namespace (xananode.canonical:schema/namespace-example.minimal)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-923. Minimal Example Namespace
+931. Minimal Example Namespace
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Minimal Example Namespace (xananode.canonical:schema/namespace-example.minimal)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-924. Museum Extension Example Namespace
+932. Museum Extension Example Namespace
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Museum Extension Example Namespace (xananode.canonical:schema/namespace-example.museum)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-925. Museum Extension Example Namespace
+933. Museum Extension Example Namespace
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Museum Extension Example Namespace (xananode.canonical:schema/namespace-example.museum)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-926. Museum Extension Example Namespace
+934. Museum Extension Example Namespace
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Museum Extension Example Namespace (xananode.canonical:schema/namespace-example.museum)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-927. Federation Example A Namespace
+935. Federation Example A Namespace
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Federation Example A Namespace (xananode.canonical:schema/namespace-example.researcher_a)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-928. Federation Example A Namespace
+936. Federation Example A Namespace
    - Existing: Federation Example (xananode.example:concept/federation-example)
    - Incoming: Federation Example A Namespace (xananode.canonical:schema/namespace-example.researcher_a)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-929. Federation Example A Namespace
+937. Federation Example A Namespace
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Federation Example A Namespace (xananode.canonical:schema/namespace-example.researcher_a)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-930. Federation Example A Namespace
+938. Federation Example A Namespace
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Federation Example A Namespace (xananode.canonical:schema/namespace-example.researcher_a)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-931. Federation Example B Namespace
+939. Federation Example B Namespace
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Federation Example B Namespace (xananode.canonical:schema/namespace-example.researcher_b)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-932. Federation Example B Namespace
+940. Federation Example B Namespace
    - Existing: Federation Example (xananode.example:concept/federation-example)
    - Incoming: Federation Example B Namespace (xananode.canonical:schema/namespace-example.researcher_b)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-933. Federation Example B Namespace
+941. Federation Example B Namespace
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Federation Example B Namespace (xananode.canonical:schema/namespace-example.researcher_b)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-934. Federation Example B Namespace
+942. Federation Example B Namespace
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Federation Example B Namespace (xananode.canonical:schema/namespace-example.researcher_b)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-935. Namespace Registry
+943. Namespace Registry
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Namespace Registry (xananode.canonical:schema/namespace-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-936. Namespace Registry
+944. Namespace Registry
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Namespace Registry (xananode.canonical:schema/namespace-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-937. Namespace Registry
+945. Namespace Registry
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Namespace Registry (xananode.canonical:schema/namespace-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-938. Namespace Schema
+946. Namespace Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Namespace Schema (xananode.canonical:schema/namespace-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-939. Namespace Schema
+947. Namespace Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Namespace Schema (xananode.canonical:schema/namespace-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-940. Namespace Schema
+948. Namespace Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Namespace Schema (xananode.canonical:schema/namespace-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-941. XanaNode Core
+949. XanaNode Core
    - Existing: XanaNode Core Trail (xananode.example:trail/xananode-core-trail)
    - Incoming: XanaNode Core (xananode.canonical:schema/namespace-xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-942. XanaNode Core
+950. XanaNode Core
    - Existing: XanaNode Core SDK Repository (xananode.example:source/xananode-core-sdk-repo)
    - Incoming: XanaNode Core (xananode.canonical:schema/namespace-xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-943. XanaNode Core
+951. XanaNode Core
    - Existing: XanaNode Core Schema (xananode.example:schema/xananode-core-schema)
    - Incoming: XanaNode Core (xananode.canonical:schema/namespace-xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-944. XanaNode Core
+952. XanaNode Core
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XanaNode Core (xananode.canonical:schema/namespace-xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-945. XanaNode Core
+953. XanaNode Core
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XanaNode Core (xananode.canonical:schema/namespace-xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-946. XanaNode Core
+954. XanaNode Core
    - Existing: XanaNode Core SDK (xananode.canonical:project/xananode-core-sdk)
    - Incoming: XanaNode Core (xananode.canonical:schema/namespace-xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-947. XanaNode Core
+955. XanaNode Core
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: XanaNode Core (xananode.canonical:schema/namespace-xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-948. XanaNode Core
+956. XanaNode Core
    - Existing: XanaNode Core SDK Repository (xananode.canonical:source/xananode-core-sdk-repository)
    - Incoming: XanaNode Core (xananode.canonical:schema/namespace-xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-949. Nanopublication Schema
+957. Nanopublication Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Nanopublication Schema (xananode.canonical:schema/nanopublication-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-950. Nanopublication Schema
+958. Nanopublication Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Nanopublication Schema (xananode.canonical:schema/nanopublication-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-951. Nanopublication Schema
+959. Nanopublication Schema
    - Existing: Publication (xananode.canonical:schema/node-type-publication)
    - Incoming: Nanopublication Schema (xananode.canonical:schema/nanopublication-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-952. Nanopublication Schema
+960. Nanopublication Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Nanopublication Schema (xananode.canonical:schema/nanopublication-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-953. Claim
+961. Claim
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Claim (xananode.canonical:schema/node-type-claim)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-954. Claim
+962. Claim
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Claim (xananode.canonical:schema/node-type-claim)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-955. Claim
+963. Claim
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Claim (xananode.canonical:schema/node-type-claim)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-956. Community
+964. Community
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Community (xananode.canonical:schema/node-type-community)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-957. Community
+965. Community
    - Existing: XanaNode Contributors (xananode.canonical:community/xananode-contributors)
    - Incoming: Community (xananode.canonical:schema/node-type-community)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-958. Community
+966. Community
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Community (xananode.canonical:schema/node-type-community)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-959. Community
+967. Community
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Community (xananode.canonical:schema/node-type-community)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-960. Concept
-   - Existing: XanaNode (xananode.example:concept/xananode)
-   - Incoming: Concept (xananode.canonical:schema/node-type-concept)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-961. Concept
-   - Existing: Unlabeled Hyperlink (xananode.example:concept/unlabeled-hyperlink)
-   - Incoming: Concept (xananode.canonical:schema/node-type-concept)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-962. Concept
-   - Existing: Typed Relationships (xananode.example:concept/typed-relationships)
-   - Incoming: Concept (xananode.canonical:schema/node-type-concept)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-963. Concept
-   - Existing: Tumbler Addressing (xananode.example:concept/tumbler-addressing)
-   - Incoming: Concept (xananode.canonical:schema/node-type-concept)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-964. Concept
-   - Existing: Transclusion (xananode.example:concept/transclusion)
-   - Incoming: Concept (xananode.canonical:schema/node-type-concept)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-965. Concept
-   - Existing: Substrate Relationship List (xananode.example:concept/substrate-relationship-list)
-   - Incoming: Concept (xananode.canonical:schema/node-type-concept)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-966. Concept
-   - Existing: Substrate Node Record (xananode.example:concept/substrate-node-record)
-   - Incoming: Concept (xananode.canonical:schema/node-type-concept)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-967. Concept
-   - Existing: Substrate Manifest (xananode.example:concept/substrate-manifest)
-   - Incoming: Concept (xananode.canonical:schema/node-type-concept)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
 968. Concept
-   - Existing: Single Source of Truth (xananode.example:concept/single-source-of-truth)
+   - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 969. Concept
-   - Existing: Schema Extension (xananode.example:concept/schema-extension)
+   - Existing: Unlabeled Hyperlink (xananode.example:concept/unlabeled-hyperlink)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 970. Concept
-   - Existing: Review Suggestions (xananode.example:concept/review-suggestions)
+   - Existing: Typed Relationships (xananode.example:concept/typed-relationships)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 971. Concept
-   - Existing: Provenance (xananode.example:concept/provenance)
+   - Existing: Tumbler Addressing (xananode.example:concept/tumbler-addressing)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 972. Concept
-   - Existing: Protocol Artifacts (xananode.example:concept/protocol-artifacts)
+   - Existing: Transclusion (xananode.example:concept/transclusion)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 973. Concept
-   - Existing: Namespacing (xananode.example:concept/namespacing)
+   - Existing: Substrate Relationship List (xananode.example:concept/substrate-relationship-list)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 974. Concept
-   - Existing: Namespace Registry (xananode.example:concept/namespace-registry)
+   - Existing: Substrate Node Record (xananode.example:concept/substrate-node-record)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 975. Concept
-   - Existing: Moderation Model (xananode.example:concept/moderation-model)
+   - Existing: Substrate Manifest (xananode.example:concept/substrate-manifest)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 976. Concept
-   - Existing: Merge Validation (xananode.example:concept/merge-validation)
+   - Existing: Single Source of Truth (xananode.example:concept/single-source-of-truth)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 977. Concept
-   - Existing: Merge Report (xananode.example:concept/merge-report)
+   - Existing: Schema Extension (xananode.example:concept/schema-extension)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 978. Concept
-   - Existing: Known Implementations Registry (xananode.example:concept/known-implementations-registry)
+   - Existing: Review Suggestions (xananode.example:concept/review-suggestions)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 979. Concept
-   - Existing: Knowledge Substrate (xananode.example:concept/knowledge-substrate)
+   - Existing: Provenance (xananode.example:concept/provenance)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 980. Concept
-   - Existing: Independent Moderation (xananode.example:concept/independent-moderation)
+   - Existing: Protocol Artifacts (xananode.example:concept/protocol-artifacts)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 981. Concept
-   - Existing: Fragment Node (xananode.example:concept/fragment-node)
+   - Existing: Namespacing (xananode.example:concept/namespacing)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 982. Concept
-   - Existing: Federation Rules (xananode.example:concept/federation-rules)
+   - Existing: Namespace Registry (xananode.example:concept/namespace-registry)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 983. Concept
-   - Existing: Federation Example (xananode.example:concept/federation-example)
+   - Existing: Moderation Model (xananode.example:concept/moderation-model)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 984. Concept
-   - Existing: Federated Knowledge Substrates (xananode.example:concept/federated-knowledge-substrates)
+   - Existing: Merge Validation (xananode.example:concept/merge-validation)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 985. Concept
-   - Existing: Dispute Resolution (xananode.example:concept/dispute-resolution)
+   - Existing: Merge Report (xananode.example:concept/merge-report)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 986. Concept
-   - Existing: Deep Linking (xananode.example:concept/deep-linking)
+   - Existing: Known Implementations Registry (xananode.example:concept/known-implementations-registry)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 987. Concept
-   - Existing: Custom Extension Substrate (xananode.example:concept/custom-extension-substrate)
+   - Existing: Knowledge Substrate (xananode.example:concept/knowledge-substrate)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 988. Concept
-   - Existing: Compatibility Report (xananode.example:concept/compatibility-report)
+   - Existing: Independent Moderation (xananode.example:concept/independent-moderation)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 989. Concept
-   - Existing: Compatibility Levels (xananode.example:concept/compatibility-levels)
+   - Existing: Fragment Node (xananode.example:concept/fragment-node)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 990. Concept
-   - Existing: Civilizational Memory (xananode.example:concept/civilizational-memory)
+   - Existing: Federation Rules (xananode.example:concept/federation-rules)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 991. Concept
-   - Existing: Canonical Type Policy (xananode.example:concept/canonical-type-policy)
+   - Existing: Federation Example (xananode.example:concept/federation-example)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 992. Concept
-   - Existing: Associative Trails (example.minimal:concept/associative-trails)
+   - Existing: Federated Knowledge Substrates (xananode.example:concept/federated-knowledge-substrates)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 993. Concept
-   - Existing: Knowledge Substrate (example.minimal:concept/knowledge-substrate)
+   - Existing: Dispute Resolution (xananode.example:concept/dispute-resolution)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 994. Concept
-   - Existing: Knowledge Substrate (xananode.canonical:concept/knowledge-substrate)
+   - Existing: Deep Linking (xananode.example:concept/deep-linking)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 995. Concept
-   - Existing: Protocol Artifacts (xananode.canonical:concept/protocol-artifacts)
+   - Existing: Custom Extension Substrate (xananode.example:concept/custom-extension-substrate)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 996. Concept
-   - Existing: Substrate Projection Layer (xananode.canonical:concept/substrate-projection-layer)
+   - Existing: Compatibility Report (xananode.example:concept/compatibility-report)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 997. Concept
-   - Existing: XanaNode (xananode.canonical:concept/xananode)
+   - Existing: Compatibility Levels (xananode.example:concept/compatibility-levels)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 998. Concept
-   - Existing: Schema (xananode.canonical:schema/node-type-schema)
+   - Existing: Civilizational Memory (xananode.example:concept/civilizational-memory)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 999. Concept
-   - Existing: The Web as Incomplete Hypertext (xananode.lineage:concept/web-as-incomplete-hypertext)
+   - Existing: Canonical Type Policy (xananode.example:concept/canonical-type-policy)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1000. Concept
-   - Existing: Conflict and Disputed Identity (xananode.lineage:concept/conflict-disputed-identity)
+   - Existing: Associative Trails (example.minimal:concept/associative-trails)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1001. Concept
+   - Existing: Knowledge Substrate (example.minimal:concept/knowledge-substrate)
+   - Incoming: Concept (xananode.canonical:schema/node-type-concept)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1002. Concept
+   - Existing: Knowledge Substrate (xananode.canonical:concept/knowledge-substrate)
+   - Incoming: Concept (xananode.canonical:schema/node-type-concept)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1003. Concept
+   - Existing: Protocol Artifacts (xananode.canonical:concept/protocol-artifacts)
+   - Incoming: Concept (xananode.canonical:schema/node-type-concept)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1004. Concept
+   - Existing: Substrate Projection Layer (xananode.canonical:concept/substrate-projection-layer)
+   - Incoming: Concept (xananode.canonical:schema/node-type-concept)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1005. Concept
+   - Existing: XanaNode (xananode.canonical:concept/xananode)
+   - Incoming: Concept (xananode.canonical:schema/node-type-concept)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1006. Concept
+   - Existing: Schema (xananode.canonical:schema/node-type-schema)
+   - Incoming: Concept (xananode.canonical:schema/node-type-concept)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1007. Concept
+   - Existing: The Web as Incomplete Hypertext (xananode.lineage:concept/web-as-incomplete-hypertext)
+   - Incoming: Concept (xananode.canonical:schema/node-type-concept)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1008. Concept
+   - Existing: Conflict and Disputed Identity (xananode.lineage:concept/conflict-disputed-identity)
+   - Incoming: Concept (xananode.canonical:schema/node-type-concept)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1009. Concept
+   - Existing: Authored Substrate Overlap (xananode.lineage:concept/authored-substrate-overlap)
+   - Incoming: Concept (xananode.canonical:schema/node-type-concept)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1010. Concept
    - Existing: Lost Lineage of Human Knowledge Augmentation (xananode.lineage:concept/lost-lineage-human-knowledge-augmentation)
    - Incoming: Concept (xananode.canonical:schema/node-type-concept)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1002. Essay
+1011. Essay
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Essay (xananode.canonical:schema/node-type-essay)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1003. Essay
+1012. Essay
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Essay (xananode.canonical:schema/node-type-essay)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1004. Essay
+1013. Essay
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Essay (xananode.canonical:schema/node-type-essay)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1005. Event
+1014. Event
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Event (xananode.canonical:schema/node-type-event)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1006. Event
+1015. Event
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Event (xananode.canonical:schema/node-type-event)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1007. Event
+1016. Event
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Event (xananode.canonical:schema/node-type-event)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1008. Fragment
+1017. Fragment
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Fragment (xananode.canonical:schema/node-type-fragment)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1009. Fragment
+1018. Fragment
    - Existing: Fragment Node (xananode.example:concept/fragment-node)
    - Incoming: Fragment (xananode.canonical:schema/node-type-fragment)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1010. Fragment
+1019. Fragment
    - Existing: As We May Think Fragment 0004 (example.minimal:fragment/as-we-may-think-0004)
    - Incoming: Fragment (xananode.canonical:schema/node-type-fragment)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1011. Fragment
+1020. Fragment
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Fragment (xananode.canonical:schema/node-type-fragment)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1012. Fragment
+1021. Fragment
    - Existing: Relationships Preserve Knowledge Sentence (xananode.canonical:fragment/relationships-preserve-knowledge-sentence)
    - Incoming: Fragment (xananode.canonical:schema/node-type-fragment)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1013. Fragment
+1022. Fragment
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Fragment (xananode.canonical:schema/node-type-fragment)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1014. Fragment
+1023. Fragment
    - Existing: Reusable Media Fragment (xananode.example:fragment/xanadu-document-interconnection-0001)
    - Incoming: Fragment (xananode.canonical:schema/node-type-fragment)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1015. Fragment
+1024. Fragment
    - Existing: Augmenting Human Intelligence Fragment (xananode.example:fragment/mother-of-all-demos-0001)
    - Incoming: Fragment (xananode.canonical:schema/node-type-fragment)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1016. Fragment
+1025. Fragment
    - Existing: Associative Trails Fragment (xananode.example:fragment/as-we-may-think-0004)
    - Incoming: Fragment (xananode.canonical:schema/node-type-fragment)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1017. Media
+1026. Media
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Media (xananode.canonical:schema/node-type-media)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1018. Media
+1027. Media
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Media (xananode.canonical:schema/node-type-media)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1019. Media
+1028. Media
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Media (xananode.canonical:schema/node-type-media)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1020. Observation
+1029. Observation
    - Existing: Link Rot (xananode.example:observation/link-rot)
    - Incoming: Observation (xananode.canonical:schema/node-type-observation)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1021. Observation
+1030. Observation
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Observation (xananode.canonical:schema/node-type-observation)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1022. Observation
+1031. Observation
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Observation (xananode.canonical:schema/node-type-observation)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1023. Observation
+1032. Observation
    - Existing: Markdown Recreation Friction (xananode.canonical:observation/markdown-recreation-friction)
    - Incoming: Observation (xananode.canonical:schema/node-type-observation)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1024. Observation
+1033. Observation
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Observation (xananode.canonical:schema/node-type-observation)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1025. Organization
-   - Existing: XanaNode (xananode.example:concept/xananode)
-   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1026. Organization
-   - Existing: XanaNode (xananode.canonical:concept/xananode)
-   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1027. Organization
-   - Existing: Built By Bots (xananode.canonical:organization/built-by-bots)
-   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1028. Organization
-   - Existing: Cytoscape Consortium (xananode.canonical:organization/cytoscape-consortium)
-   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1029. Organization
-   - Existing: Hugo Authors (xananode.canonical:organization/hugo-authors)
-   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1030. Organization
-   - Existing: Schema (xananode.canonical:schema/node-type-schema)
-   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1031. Organization
-   - Existing: MIT Media Lab (xananode.lineage:organization/mit-media-lab)
-   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1032. Organization
-   - Existing: VPL Research (xananode.lineage:organization/vpl-research)
-   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1033. Organization
-   - Existing: NASA (xananode.lineage:organization/nasa)
-   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
 1034. Organization
-   - Existing: BBC Two (xananode.lineage:organization/bbc-two)
+   - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Organization (xananode.canonical:schema/node-type-organization)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1035. Organization
-   - Existing: NCSA (xananode.lineage:organization/ncsa)
+   - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Organization (xananode.canonical:schema/node-type-organization)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1036. Organization
-   - Existing: Voyager Company (xananode.lineage:organization/voyager-company)
+   - Existing: Built By Bots (xananode.canonical:organization/built-by-bots)
    - Incoming: Organization (xananode.canonical:schema/node-type-organization)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1037. Organization
+   - Existing: Cytoscape Consortium (xananode.canonical:organization/cytoscape-consortium)
+   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1038. Organization
+   - Existing: Hugo Authors (xananode.canonical:organization/hugo-authors)
+   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1039. Organization
+   - Existing: Schema (xananode.canonical:schema/node-type-schema)
+   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1040. Organization
+   - Existing: MIT Media Lab (xananode.lineage:organization/mit-media-lab)
+   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1041. Organization
+   - Existing: VPL Research (xananode.lineage:organization/vpl-research)
+   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1042. Organization
+   - Existing: NASA (xananode.lineage:organization/nasa)
+   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1043. Organization
+   - Existing: BBC Two (xananode.lineage:organization/bbc-two)
+   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1044. Organization
+   - Existing: NCSA (xananode.lineage:organization/ncsa)
+   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1045. Organization
+   - Existing: Voyager Company (xananode.lineage:organization/voyager-company)
+   - Incoming: Organization (xananode.canonical:schema/node-type-organization)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1046. Organization
    - Existing: Xerox PARC (xananode.lineage:organization/xerox-parc)
    - Incoming: Organization (xananode.canonical:schema/node-type-organization)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1038. Person
+1047. Person
    - Existing: Vannevar Bush (xananode.example:person/vannevar-bush)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1039. Person
+1048. Person
    - Existing: Ted Nelson (xananode.example:person/ted-nelson)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1040. Person
+1049. Person
    - Existing: Douglas Engelbart (xananode.example:person/douglas-engelbart)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1041. Person
-   - Existing: XanaNode (xananode.example:concept/xananode)
-   - Incoming: Person (xananode.canonical:schema/node-type-person)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1042. Person
-   - Existing: Example Maintainer (example.minimal:person/example-maintainer)
-   - Incoming: Person (xananode.canonical:schema/node-type-person)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1043. Person
-   - Existing: XanaNode (xananode.canonical:concept/xananode)
-   - Incoming: Person (xananode.canonical:schema/node-type-person)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1044. Person
-   - Existing: Christian Siefen (xananode.canonical:person/christian-siefen)
-   - Incoming: Person (xananode.canonical:schema/node-type-person)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1045. Person
-   - Existing: Schema (xananode.canonical:schema/node-type-schema)
-   - Incoming: Person (xananode.canonical:schema/node-type-person)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1046. Person
-   - Existing: Gottfried Wilhelm Leibniz (xananode.lineage:person/gottfried-wilhelm-leibniz)
-   - Incoming: Person (xananode.canonical:schema/node-type-person)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1047. Person
-   - Existing: Wilhelm Ostwald (xananode.lineage:person/wilhelm-ostwald)
-   - Incoming: Person (xananode.canonical:schema/node-type-person)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1048. Person
-   - Existing: Jorge Luis Borges (xananode.lineage:person/jorge-luis-borges)
-   - Incoming: Person (xananode.canonical:schema/node-type-person)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1049. Person
-   - Existing: Andries van Dam (xananode.lineage:person/andries-van-dam)
-   - Incoming: Person (xananode.canonical:schema/node-type-person)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
 1050. Person
-   - Existing: Nicholas Negroponte (xananode.lineage:person/nicholas-negroponte)
+   - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1051. Person
-   - Existing: Seymour Papert (xananode.lineage:person/seymour-papert)
+   - Existing: Example Maintainer (example.minimal:person/example-maintainer)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1052. Person
-   - Existing: Marvin Minsky (xananode.lineage:person/marvin-minsky)
+   - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1053. Person
-   - Existing: Hans Peter Brondmo (xananode.lineage:person/hans-peter-brondmo)
+   - Existing: Christian Siefen (xananode.canonical:person/christian-siefen)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1054. Person
-   - Existing: Robert Winter (xananode.lineage:person/robert-winter)
+   - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1055. Person
-   - Existing: Robert Abel (xananode.lineage:person/robert-abel)
+   - Existing: Gottfried Wilhelm Leibniz (xananode.lineage:person/gottfried-wilhelm-leibniz)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1056. Person
-   - Existing: Ivan Sutherland (xananode.lineage:person/ivan-sutherland)
+   - Existing: Wilhelm Ostwald (xananode.lineage:person/wilhelm-ostwald)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1057. Person
-   - Existing: Jaron Lanier (xananode.lineage:person/jaron-lanier)
+   - Existing: Jorge Luis Borges (xananode.lineage:person/jorge-luis-borges)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1058. Person
-   - Existing: Scott Fisher (xananode.lineage:person/scott-fisher)
+   - Existing: Andries van Dam (xananode.lineage:person/andries-van-dam)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1059. Person
-   - Existing: Richard Saul Wurman (xananode.lineage:person/richard-saul-wurman)
+   - Existing: Nicholas Negroponte (xananode.lineage:person/nicholas-negroponte)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1060. Person
-   - Existing: Harry Marks (xananode.lineage:person/harry-marks)
+   - Existing: Seymour Papert (xananode.lineage:person/seymour-papert)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1061. Person
-   - Existing: John Sculley (xananode.lineage:person/john-sculley)
+   - Existing: Marvin Minsky (xananode.lineage:person/marvin-minsky)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1062. Person
-   - Existing: Bill Atkinson (xananode.lineage:person/bill-atkinson)
+   - Existing: Hans Peter Brondmo (xananode.lineage:person/hans-peter-brondmo)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1063. Person
-   - Existing: Herbie Hancock (xananode.lineage:person/herbie-hancock)
+   - Existing: Robert Winter (xananode.lineage:person/robert-winter)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1064. Person
-   - Existing: Nigel Holmes (xananode.lineage:person/nigel-holmes)
+   - Existing: Robert Abel (xananode.lineage:person/robert-abel)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1065. Person
-   - Existing: Laurie Anderson (xananode.lineage:person/laurie-anderson)
+   - Existing: Ivan Sutherland (xananode.lineage:person/ivan-sutherland)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1066. Person
-   - Existing: Bran Ferren (xananode.lineage:person/bran-ferren)
+   - Existing: Jaron Lanier (xananode.lineage:person/jaron-lanier)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1067. Person
-   - Existing: Robert Cailliau (xananode.lineage:person/robert-cailliau)
+   - Existing: Scott Fisher (xananode.lineage:person/scott-fisher)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1068. Person
-   - Existing: Marc Andreessen (xananode.lineage:person/marc-andreessen)
+   - Existing: Richard Saul Wurman (xananode.lineage:person/richard-saul-wurman)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1069. Person
-   - Existing: Paul Otlet (xananode.lineage:person/paul-otlet)
+   - Existing: Harry Marks (xananode.lineage:person/harry-marks)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1070. Person
-   - Existing: H. G. Wells (xananode.lineage:person/h-g-wells)
+   - Existing: John Sculley (xananode.lineage:person/john-sculley)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1071. Person
-   - Existing: Douglas Adams (xananode.lineage:person/douglas-adams)
+   - Existing: Bill Atkinson (xananode.lineage:person/bill-atkinson)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1072. Person
-   - Existing: Tom Baker (xananode.lineage:person/tom-baker)
+   - Existing: Herbie Hancock (xananode.lineage:person/herbie-hancock)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1073. Person
-   - Existing: Max Whitby (xananode.lineage:person/max-whitby)
+   - Existing: Nigel Holmes (xananode.lineage:person/nigel-holmes)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1074. Person
-   - Existing: Bob Stein (xananode.lineage:person/bob-stein)
+   - Existing: Laurie Anderson (xananode.lineage:person/laurie-anderson)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1075. Person
-   - Existing: Alan Kay (xananode.lineage:person/alan-kay)
+   - Existing: Bran Ferren (xananode.lineage:person/bran-ferren)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1076. Person
+   - Existing: Robert Cailliau (xananode.lineage:person/robert-cailliau)
+   - Incoming: Person (xananode.canonical:schema/node-type-person)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1077. Person
+   - Existing: Marc Andreessen (xananode.lineage:person/marc-andreessen)
+   - Incoming: Person (xananode.canonical:schema/node-type-person)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1078. Person
+   - Existing: Paul Otlet (xananode.lineage:person/paul-otlet)
+   - Incoming: Person (xananode.canonical:schema/node-type-person)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1079. Person
+   - Existing: H. G. Wells (xananode.lineage:person/h-g-wells)
+   - Incoming: Person (xananode.canonical:schema/node-type-person)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1080. Person
+   - Existing: Douglas Adams (xananode.lineage:person/douglas-adams)
+   - Incoming: Person (xananode.canonical:schema/node-type-person)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1081. Person
+   - Existing: Tom Baker (xananode.lineage:person/tom-baker)
+   - Incoming: Person (xananode.canonical:schema/node-type-person)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1082. Person
+   - Existing: Max Whitby (xananode.lineage:person/max-whitby)
+   - Incoming: Person (xananode.canonical:schema/node-type-person)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1083. Person
+   - Existing: Bob Stein (xananode.lineage:person/bob-stein)
+   - Incoming: Person (xananode.canonical:schema/node-type-person)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1084. Person
+   - Existing: Alan Kay (xananode.lineage:person/alan-kay)
+   - Incoming: Person (xananode.canonical:schema/node-type-person)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1085. Person
    - Existing: Tim Berners-Lee (xananode.lineage:person/tim-berners-lee)
    - Incoming: Person (xananode.canonical:schema/node-type-person)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1077. Place
+1086. Place
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Place (xananode.canonical:schema/node-type-place)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1078. Place
+1087. Place
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Place (xananode.canonical:schema/node-type-place)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1079. Place
+1088. Place
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Place (xananode.canonical:schema/node-type-place)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1080. Project
+1089. Project
    - Existing: XanaNode Hugo Theme (xananode.example:project/xananode-hugo-theme)
    - Incoming: Project (xananode.canonical:schema/node-type-project)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1081. Project
-   - Existing: Project Xanadu (xananode.example:project/project-xanadu)
-   - Incoming: Project (xananode.canonical:schema/node-type-project)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1082. Project
-   - Existing: NLS (xananode.example:project/nls)
-   - Incoming: Project (xananode.canonical:schema/node-type-project)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1083. Project
-   - Existing: Memex (xananode.example:project/memex)
-   - Incoming: Project (xananode.canonical:schema/node-type-project)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1084. Project
-   - Existing: XanaNode (xananode.example:concept/xananode)
-   - Incoming: Project (xananode.canonical:schema/node-type-project)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1085. Project
-   - Existing: Substrate Projection Layer (xananode.canonical:concept/substrate-projection-layer)
-   - Incoming: Project (xananode.canonical:schema/node-type-project)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1086. Project
-   - Existing: XanaNode (xananode.canonical:concept/xananode)
-   - Incoming: Project (xananode.canonical:schema/node-type-project)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1087. Project
-   - Existing: XanaNode Core SDK (xananode.canonical:project/xananode-core-sdk)
-   - Incoming: Project (xananode.canonical:schema/node-type-project)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1088. Project
-   - Existing: XanaNode Hugo Theme (xananode.canonical:project/xananode-hugo-theme)
-   - Incoming: Project (xananode.canonical:schema/node-type-project)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1089. Project
-   - Existing: XanaNode Protocol (xananode.canonical:project/xananode-protocol)
-   - Incoming: Project (xananode.canonical:schema/node-type-project)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
 1090. Project
-   - Existing: XanaNode Workspace (xananode.canonical:project/xananode-workspace)
+   - Existing: Project Xanadu (xananode.example:project/project-xanadu)
    - Incoming: Project (xananode.canonical:schema/node-type-project)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1091. Project
-   - Existing: Schema (xananode.canonical:schema/node-type-schema)
+   - Existing: NLS (xananode.example:project/nls)
    - Incoming: Project (xananode.canonical:schema/node-type-project)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1092. Project
-   - Existing: Hypertext Editing System (xananode.lineage:project/hypertext-editing-system)
+   - Existing: Memex (xananode.example:project/memex)
    - Incoming: Project (xananode.canonical:schema/node-type-project)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1093. Project
-   - Existing: FRESS (xananode.lineage:project/fress)
+   - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Project (xananode.canonical:schema/node-type-project)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1094. Project
-   - Existing: Intermedia (xananode.lineage:project/intermedia)
+   - Existing: Substrate Projection Layer (xananode.canonical:concept/substrate-projection-layer)
    - Incoming: Project (xananode.canonical:schema/node-type-project)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1095. Project
-   - Existing: Interactive Beethoven's Ninth (xananode.lineage:project/interactive-beethoven-ninth)
+   - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Project (xananode.canonical:schema/node-type-project)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1096. Project
-   - Existing: Interactive Guernica (xananode.lineage:project/interactive-guernica)
+   - Existing: XanaNode Core SDK (xananode.canonical:project/xananode-core-sdk)
    - Incoming: Project (xananode.canonical:schema/node-type-project)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1097. Project
-   - Existing: Storyspace (xananode.lineage:project/storyspace)
+   - Existing: XanaNode Hugo Theme (xananode.canonical:project/xananode-hugo-theme)
    - Incoming: Project (xananode.canonical:schema/node-type-project)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1098. Project
-   - Existing: ZOG/KMS (xananode.lineage:project/zog-kms)
+   - Existing: XanaNode Protocol (xananode.canonical:project/xananode-protocol)
    - Incoming: Project (xananode.canonical:schema/node-type-project)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1099. Project
-   - Existing: Xanadu at Autodesk (xananode.lineage:project/xanadu-at-autodesk)
+   - Existing: XanaNode Workspace (xananode.canonical:project/xananode-workspace)
    - Incoming: Project (xananode.canonical:schema/node-type-project)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1100. Project
+   - Existing: Schema (xananode.canonical:schema/node-type-schema)
+   - Incoming: Project (xananode.canonical:schema/node-type-project)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1101. Project
+   - Existing: Hypertext Editing System (xananode.lineage:project/hypertext-editing-system)
+   - Incoming: Project (xananode.canonical:schema/node-type-project)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1102. Project
+   - Existing: FRESS (xananode.lineage:project/fress)
+   - Incoming: Project (xananode.canonical:schema/node-type-project)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1103. Project
+   - Existing: Intermedia (xananode.lineage:project/intermedia)
+   - Incoming: Project (xananode.canonical:schema/node-type-project)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1104. Project
+   - Existing: Interactive Beethoven's Ninth (xananode.lineage:project/interactive-beethoven-ninth)
+   - Incoming: Project (xananode.canonical:schema/node-type-project)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1105. Project
+   - Existing: Interactive Guernica (xananode.lineage:project/interactive-guernica)
+   - Incoming: Project (xananode.canonical:schema/node-type-project)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1106. Project
+   - Existing: Storyspace (xananode.lineage:project/storyspace)
+   - Incoming: Project (xananode.canonical:schema/node-type-project)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1107. Project
+   - Existing: ZOG/KMS (xananode.lineage:project/zog-kms)
+   - Incoming: Project (xananode.canonical:schema/node-type-project)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1108. Project
+   - Existing: Xanadu at Autodesk (xananode.lineage:project/xanadu-at-autodesk)
+   - Incoming: Project (xananode.canonical:schema/node-type-project)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1109. Project
    - Existing: Aspen Movie Map (xananode.lineage:project/aspen-movie-map)
    - Incoming: Project (xananode.canonical:schema/node-type-project)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1101. Publication
+1110. Publication
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Publication (xananode.canonical:schema/node-type-publication)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1102. Publication
+1111. Publication
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Publication (xananode.canonical:schema/node-type-publication)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1103. Publication
+1112. Publication
    - Existing: XNP-0004 Merge Validation (xananode.canonical:publication/xnp-0004-merge-validation)
    - Incoming: Publication (xananode.canonical:schema/node-type-publication)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1104. Publication
+1113. Publication
    - Existing: Nanopublication Schema (xananode.canonical:schema/canonical-schema-nanopublication)
    - Incoming: Publication (xananode.canonical:schema/node-type-publication)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1105. Publication
+1114. Publication
    - Existing: Nanopublication Schema (xananode.canonical:schema/nanopublication-schema)
    - Incoming: Publication (xananode.canonical:schema/node-type-publication)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1106. Publication
+1115. Publication
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Publication (xananode.canonical:schema/node-type-publication)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1107. Publication
+1116. Publication
    - Existing: The Garden of Forking Paths (xananode.lineage:publication/the-garden-of-forking-paths)
    - Incoming: Publication (xananode.canonical:schema/node-type-publication)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1108. Publication
+1117. Publication
    - Existing: Dirk Gently's Holistic Detective Agency (xananode.lineage:publication/dirk-gentlys-holistic-detective-agency)
    - Incoming: Publication (xananode.canonical:schema/node-type-publication)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1109. Publication
+1118. Publication
    - Existing: Hyperland (xananode.lineage:publication/hyperland)
    - Incoming: Publication (xananode.canonical:schema/node-type-publication)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1110. Node Type Registry
+1119. Node Type Registry
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Node Type Registry (xananode.canonical:schema/node-type-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1111. Node Type Registry
+1120. Node Type Registry
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Node Type Registry (xananode.canonical:schema/node-type-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1112. Node Type Registry
+1121. Node Type Registry
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Node Type Registry (xananode.canonical:schema/node-type-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1113. Relationship
-   - Existing: XanaNode Relationship Types (xananode.example:schema/xananode-relationship-types)
-   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1114. Relationship
-   - Existing: Substrate Relationships Schema (xananode.example:schema/substrate-relationships-schema)
-   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1115. Relationship
-   - Existing: XanaNode (xananode.example:concept/xananode)
-   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1116. Relationship
-   - Existing: Typed Relationships (xananode.example:concept/typed-relationships)
-   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1117. Relationship
-   - Existing: Substrate Relationship List (xananode.example:concept/substrate-relationship-list)
-   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1118. Relationship
-   - Existing: Typed relationships preserve context that hyperlinks lose (xananode.example:claim/claim-relationships-preserve-context)
-   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1119. Relationship
-   - Existing: Relationship Navigation Intro (example.minimal:essay/relationship-navigation-intro)
-   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1120. Relationship
-   - Existing: Relationships Preserve Knowledge (xananode.canonical:claim/relationships-preserve-knowledge)
-   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1121. Relationship
-   - Existing: XanaNode (xananode.canonical:concept/xananode)
-   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
 1122. Relationship
-   - Existing: Relationships Preserve Knowledge Sentence (xananode.canonical:fragment/relationships-preserve-knowledge-sentence)
+   - Existing: XanaNode Relationship Types (xananode.example:schema/xananode-relationship-types)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1123. Relationship
-   - Existing: Protocol Implements Relationship Preservation (xananode.canonical:relationship/protocol-implements-claim)
+   - Existing: Substrate Relationships Schema (xananode.example:schema/substrate-relationships-schema)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1124. Relationship
-   - Existing: Substrate Relationships Schema (xananode.canonical:schema/canonical-schema-substrate-relationships)
+   - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1125. Relationship
-   - Existing: Xananode Relationship Types Schema (xananode.canonical:schema/canonical-schema-xananode-relationship-types)
+   - Existing: Typed Relationships (xananode.example:concept/typed-relationships)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1126. Relationship
-   - Existing: Schema (xananode.canonical:schema/node-type-schema)
+   - Existing: Substrate Relationship List (xananode.example:concept/substrate-relationship-list)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1127. Relationship
-   - Existing: Alias of (xananode.canonical:schema/relationship-type-alias_of)
+   - Existing: Typed relationships preserve context that hyperlinks lose (xananode.example:claim/claim-relationships-preserve-context)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1128. Relationship
-   - Existing: Alternative to (xananode.canonical:schema/relationship-type-alternative_to)
+   - Existing: Relationship Navigation Intro (example.minimal:essay/relationship-navigation-intro)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1129. Relationship
-   - Existing: Anticipated (xananode.canonical:schema/relationship-type-anticipated)
+   - Existing: Relationships Preserve Knowledge (xananode.canonical:claim/relationships-preserve-knowledge)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1130. Relationship
-   - Existing: Anticipated By Relationship Term (xananode.canonical:schema/relationship-type-anticipated_by)
+   - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1131. Relationship
-   - Existing: Anticipates (xananode.canonical:schema/relationship-type-anticipates)
+   - Existing: Relationships Preserve Knowledge Sentence (xananode.canonical:fragment/relationships-preserve-knowledge-sentence)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1132. Relationship
-   - Existing: Appears in (xananode.canonical:schema/relationship-type-appears_in)
+   - Existing: Protocol Implements Relationship Preservation (xananode.canonical:relationship/protocol-implements-claim)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1133. Relationship
-   - Existing: Approved (xananode.canonical:schema/relationship-type-approved)
+   - Existing: Substrate Relationships Schema (xananode.canonical:schema/canonical-schema-substrate-relationships)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1134. Relationship
-   - Existing: Approved By Relationship Term (xananode.canonical:schema/relationship-type-approved_by)
+   - Existing: Xananode Relationship Types Schema (xananode.canonical:schema/canonical-schema-xananode-relationship-types)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1135. Relationship
-   - Existing: Arrived From Relationship Term (xananode.canonical:schema/relationship-type-arrived_from)
+   - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1136. Relationship
-   - Existing: Arrives at (xananode.canonical:schema/relationship-type-arrives_at)
+   - Existing: Alias of (xananode.canonical:schema/relationship-type-alias_of)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1137. Relationship
-   - Existing: Authored (xananode.canonical:schema/relationship-type-authored)
+   - Existing: Alternative to (xananode.canonical:schema/relationship-type-alternative_to)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1138. Relationship
-   - Existing: Authored By Relationship Term (xananode.canonical:schema/relationship-type-authored_by)
+   - Existing: Anticipated (xananode.canonical:schema/relationship-type-anticipated)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1139. Relationship
-   - Existing: Broader than (xananode.canonical:schema/relationship-type-broader_than)
+   - Existing: Anticipated By Relationship Term (xananode.canonical:schema/relationship-type-anticipated_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1140. Relationship
-   - Existing: Cited By Relationship Term (xananode.canonical:schema/relationship-type-cited_by)
+   - Existing: Anticipates (xananode.canonical:schema/relationship-type-anticipates)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1141. Relationship
-   - Existing: Cites (xananode.canonical:schema/relationship-type-cites)
+   - Existing: Appears in (xananode.canonical:schema/relationship-type-appears_in)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1142. Relationship
-   - Existing: Claim Of Relationship Term (xananode.canonical:schema/relationship-type-claim_of)
+   - Existing: Approved (xananode.canonical:schema/relationship-type-approved)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1143. Relationship
-   - Existing: Clarified By Relationship Term (xananode.canonical:schema/relationship-type-clarified_by)
+   - Existing: Approved By Relationship Term (xananode.canonical:schema/relationship-type-approved_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1144. Relationship
-   - Existing: Clarifies (xananode.canonical:schema/relationship-type-clarifies)
+   - Existing: Arrived From Relationship Term (xananode.canonical:schema/relationship-type-arrived_from)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1145. Relationship
-   - Existing: Coined (xananode.canonical:schema/relationship-type-coined)
+   - Existing: Arrives at (xananode.canonical:schema/relationship-type-arrives_at)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1146. Relationship
-   - Existing: Coined By Relationship Term (xananode.canonical:schema/relationship-type-coined_by)
+   - Existing: Authored (xananode.canonical:schema/relationship-type-authored)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1147. Relationship
-   - Existing: Collaborated with (xananode.canonical:schema/relationship-type-collaborated_with)
+   - Existing: Authored By Relationship Term (xananode.canonical:schema/relationship-type-authored_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1148. Relationship
-   - Existing: Compatible with (xananode.canonical:schema/relationship-type-compatible_with)
+   - Existing: Broader than (xananode.canonical:schema/relationship-type-broader_than)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1149. Relationship
-   - Existing: Contains (xananode.canonical:schema/relationship-type-contains)
+   - Existing: Cited By Relationship Term (xananode.canonical:schema/relationship-type-cited_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1150. Relationship
-   - Existing: Contemporary of (xananode.canonical:schema/relationship-type-contemporary_of)
+   - Existing: Cites (xananode.canonical:schema/relationship-type-cites)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1151. Relationship
-   - Existing: Context for (xananode.canonical:schema/relationship-type-context_for)
+   - Existing: Claim Of Relationship Term (xananode.canonical:schema/relationship-type-claim_of)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1152. Relationship
-   - Existing: Continued From Relationship Term (xananode.canonical:schema/relationship-type-continued_from)
+   - Existing: Clarified By Relationship Term (xananode.canonical:schema/relationship-type-clarified_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1153. Relationship
-   - Existing: Continues to (xananode.canonical:schema/relationship-type-continues_to)
+   - Existing: Clarifies (xananode.canonical:schema/relationship-type-clarifies)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1154. Relationship
-   - Existing: Contradicted By Relationship Term (xananode.canonical:schema/relationship-type-contradicted_by)
+   - Existing: Coined (xananode.canonical:schema/relationship-type-coined)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1155. Relationship
-   - Existing: Contradicts (xananode.canonical:schema/relationship-type-contradicts)
+   - Existing: Coined By Relationship Term (xananode.canonical:schema/relationship-type-coined_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1156. Relationship
-   - Existing: Contrasts with (xananode.canonical:schema/relationship-type-contrasts_with)
+   - Existing: Collaborated with (xananode.canonical:schema/relationship-type-collaborated_with)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1157. Relationship
-   - Existing: Created (xananode.canonical:schema/relationship-type-created)
+   - Existing: Compatible with (xananode.canonical:schema/relationship-type-compatible_with)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1158. Relationship
-   - Existing: Created By Relationship Term (xananode.canonical:schema/relationship-type-created_by)
+   - Existing: Contains (xananode.canonical:schema/relationship-type-contains)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1159. Relationship
-   - Existing: Deep Linked From Relationship Term (xananode.canonical:schema/relationship-type-deep_linked_from)
+   - Existing: Contemporary of (xananode.canonical:schema/relationship-type-contemporary_of)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1160. Relationship
-   - Existing: Deep links to (xananode.canonical:schema/relationship-type-deep_links_to)
+   - Existing: Context for (xananode.canonical:schema/relationship-type-context_for)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1161. Relationship
-   - Existing: Defined By Relationship Term (xananode.canonical:schema/relationship-type-defined_by)
+   - Existing: Continued From Relationship Term (xananode.canonical:schema/relationship-type-continued_from)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1162. Relationship
-   - Existing: Defines (xananode.canonical:schema/relationship-type-defines)
+   - Existing: Continues to (xananode.canonical:schema/relationship-type-continues_to)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1163. Relationship
-   - Existing: Demonstrated By Relationship Term (xananode.canonical:schema/relationship-type-demonstrated_by)
+   - Existing: Contradicted By Relationship Term (xananode.canonical:schema/relationship-type-contradicted_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1164. Relationship
-   - Existing: Demonstrates (xananode.canonical:schema/relationship-type-demonstrates)
+   - Existing: Contradicts (xananode.canonical:schema/relationship-type-contradicts)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1165. Relationship
-   - Existing: Dependency Of Relationship Term (xananode.canonical:schema/relationship-type-dependency_of)
+   - Existing: Contrasts with (xananode.canonical:schema/relationship-type-contrasts_with)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1166. Relationship
-   - Existing: Depends on (xananode.canonical:schema/relationship-type-depends_on)
+   - Existing: Created (xananode.canonical:schema/relationship-type-created)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1167. Relationship
-   - Existing: Depicted By Relationship Term (xananode.canonical:schema/relationship-type-depicted_by)
+   - Existing: Created By Relationship Term (xananode.canonical:schema/relationship-type-created_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1168. Relationship
-   - Existing: Depicts (xananode.canonical:schema/relationship-type-depicts)
+   - Existing: Deep Linked From Relationship Term (xananode.canonical:schema/relationship-type-deep_linked_from)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1169. Relationship
-   - Existing: Derived from (xananode.canonical:schema/relationship-type-derived_from)
+   - Existing: Deep links to (xananode.canonical:schema/relationship-type-deep_links_to)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1170. Relationship
-   - Existing: Derived Into Relationship Term (xananode.canonical:schema/relationship-type-derived_into)
+   - Existing: Defined By Relationship Term (xananode.canonical:schema/relationship-type-defined_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1171. Relationship
-   - Existing: Discussed In Relationship Term (xananode.canonical:schema/relationship-type-discussed_in)
+   - Existing: Defines (xananode.canonical:schema/relationship-type-defines)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1172. Relationship
-   - Existing: Discusses (xananode.canonical:schema/relationship-type-discusses)
+   - Existing: Demonstrated By Relationship Term (xananode.canonical:schema/relationship-type-demonstrated_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1173. Relationship
-   - Existing: Disputed By Relationship Term (xananode.canonical:schema/relationship-type-disputed_by)
+   - Existing: Demonstrates (xananode.canonical:schema/relationship-type-demonstrates)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1174. Relationship
-   - Existing: Disputed identity (xananode.canonical:schema/relationship-type-disputed_identity)
+   - Existing: Dependency Of Relationship Term (xananode.canonical:schema/relationship-type-dependency_of)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1175. Relationship
-   - Existing: Disputes (xananode.canonical:schema/relationship-type-disputes)
+   - Existing: Depends on (xananode.canonical:schema/relationship-type-depends_on)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1176. Relationship
-   - Existing: Documented By Relationship Term (xananode.canonical:schema/relationship-type-documented_by)
+   - Existing: Depicted By Relationship Term (xananode.canonical:schema/relationship-type-depicted_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1177. Relationship
-   - Existing: Documents (xananode.canonical:schema/relationship-type-documents)
+   - Existing: Depicts (xananode.canonical:schema/relationship-type-depicts)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1178. Relationship
-   - Existing: Enabled By Relationship Term (xananode.canonical:schema/relationship-type-enabled_by)
+   - Existing: Derived from (xananode.canonical:schema/relationship-type-derived_from)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1179. Relationship
-   - Existing: Enables (xananode.canonical:schema/relationship-type-enables)
+   - Existing: Derived Into Relationship Term (xananode.canonical:schema/relationship-type-derived_into)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1180. Relationship
-   - Existing: Equivalent to (xananode.canonical:schema/relationship-type-equivalent_to)
+   - Existing: Discussed In Relationship Term (xananode.canonical:schema/relationship-type-discussed_in)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1181. Relationship
-   - Existing: Evidence for (xananode.canonical:schema/relationship-type-evidence_for)
+   - Existing: Discusses (xananode.canonical:schema/relationship-type-discusses)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1182. Relationship
-   - Existing: Explained By Relationship Term (xananode.canonical:schema/relationship-type-explained_by)
+   - Existing: Disputed By Relationship Term (xananode.canonical:schema/relationship-type-disputed_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1183. Relationship
-   - Existing: Explains (xananode.canonical:schema/relationship-type-explains)
+   - Existing: Disputed identity (xananode.canonical:schema/relationship-type-disputed_identity)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1184. Relationship
-   - Existing: Extended By Relationship Term (xananode.canonical:schema/relationship-type-extended_by)
+   - Existing: Disputes (xananode.canonical:schema/relationship-type-disputes)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1185. Relationship
-   - Existing: Extends (xananode.canonical:schema/relationship-type-extends)
+   - Existing: Documented By Relationship Term (xananode.canonical:schema/relationship-type-documented_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1186. Relationship
-   - Existing: Extension of (xananode.canonical:schema/relationship-type-extension_of)
+   - Existing: Documents (xananode.canonical:schema/relationship-type-documents)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1187. Relationship
-   - Existing: Featured In Relationship Term (xananode.canonical:schema/relationship-type-featured_in)
+   - Existing: Enabled By Relationship Term (xananode.canonical:schema/relationship-type-enabled_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1188. Relationship
-   - Existing: Featured Speaker Relationship Term (xananode.canonical:schema/relationship-type-featured_speaker)
+   - Existing: Enables (xananode.canonical:schema/relationship-type-enables)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1189. Relationship
-   - Existing: Features (xananode.canonical:schema/relationship-type-features)
+   - Existing: Equivalent to (xananode.canonical:schema/relationship-type-equivalent_to)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1190. Relationship
-   - Existing: Followed Relationship Term (xananode.canonical:schema/relationship-type-followed)
+   - Existing: Evidence for (xananode.canonical:schema/relationship-type-evidence_for)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1191. Relationship
-   - Existing: Friend of (xananode.canonical:schema/relationship-type-friend_of)
+   - Existing: Explained By Relationship Term (xananode.canonical:schema/relationship-type-explained_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1192. Relationship
-   - Existing: Had Participant Relationship Term (xananode.canonical:schema/relationship-type-had_participant)
+   - Existing: Explains (xananode.canonical:schema/relationship-type-explains)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1193. Relationship
-   - Existing: Has Alias Relationship Term (xananode.canonical:schema/relationship-type-has_alias)
+   - Existing: Extended By Relationship Term (xananode.canonical:schema/relationship-type-extended_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1194. Relationship
-   - Existing: Has Appearance Relationship Term (xananode.canonical:schema/relationship-type-has_appearance)
+   - Existing: Extends (xananode.canonical:schema/relationship-type-extends)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1195. Relationship
-   - Existing: Has claim (xananode.canonical:schema/relationship-type-has_claim)
+   - Existing: Extension of (xananode.canonical:schema/relationship-type-extension_of)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1196. Relationship
-   - Existing: Has Context Relationship Term (xananode.canonical:schema/relationship-type-has_context)
+   - Existing: Featured In Relationship Term (xananode.canonical:schema/relationship-type-featured_in)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1197. Relationship
-   - Existing: Has Evidence Relationship Term (xananode.canonical:schema/relationship-type-has_evidence)
+   - Existing: Featured Speaker Relationship Term (xananode.canonical:schema/relationship-type-featured_speaker)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1198. Relationship
-   - Existing: Has Extension Relationship Term (xananode.canonical:schema/relationship-type-has_extension)
+   - Existing: Features (xananode.canonical:schema/relationship-type-features)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1199. Relationship
-   - Existing: Has primary media (xananode.canonical:schema/relationship-type-has_primary_media)
+   - Existing: Followed Relationship Term (xananode.canonical:schema/relationship-type-followed)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1200. Relationship
-   - Existing: Identified (xananode.canonical:schema/relationship-type-identified)
+   - Existing: Friend of (xananode.canonical:schema/relationship-type-friend_of)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1201. Relationship
-   - Existing: Identified By Relationship Term (xananode.canonical:schema/relationship-type-identified_by)
+   - Existing: Had Participant Relationship Term (xananode.canonical:schema/relationship-type-had_participant)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1202. Relationship
-   - Existing: Implemented By Relationship Term (xananode.canonical:schema/relationship-type-implemented_by)
+   - Existing: Has Alias Relationship Term (xananode.canonical:schema/relationship-type-has_alias)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1203. Relationship
-   - Existing: Implements (xananode.canonical:schema/relationship-type-implements)
+   - Existing: Has Appearance Relationship Term (xananode.canonical:schema/relationship-type-has_appearance)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1204. Relationship
-   - Existing: Included In Relationship Term (xananode.canonical:schema/relationship-type-included_in)
+   - Existing: Has claim (xananode.canonical:schema/relationship-type-has_claim)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1205. Relationship
-   - Existing: Includes (xananode.canonical:schema/relationship-type-includes)
+   - Existing: Has Context Relationship Term (xananode.canonical:schema/relationship-type-has_context)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1206. Relationship
-   - Existing: Influenced (xananode.canonical:schema/relationship-type-influenced)
+   - Existing: Has Evidence Relationship Term (xananode.canonical:schema/relationship-type-has_evidence)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1207. Relationship
-   - Existing: Influenced By Relationship Term (xananode.canonical:schema/relationship-type-influenced_by)
+   - Existing: Has Extension Relationship Term (xananode.canonical:schema/relationship-type-has_extension)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1208. Relationship
-   - Existing: Interviewed (xananode.canonical:schema/relationship-type-interviewed)
+   - Existing: Has primary media (xananode.canonical:schema/relationship-type-has_primary_media)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1209. Relationship
-   - Existing: Interviewed By Relationship Term (xananode.canonical:schema/relationship-type-interviewed_by)
+   - Existing: Identified (xananode.canonical:schema/relationship-type-identified)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1210. Relationship
-   - Existing: Introduced (xananode.canonical:schema/relationship-type-introduced)
+   - Existing: Identified By Relationship Term (xananode.canonical:schema/relationship-type-identified_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1211. Relationship
-   - Existing: Introduced By Relationship Term (xananode.canonical:schema/relationship-type-introduced_by)
+   - Existing: Implemented By Relationship Term (xananode.canonical:schema/relationship-type-implemented_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1212. Relationship
-   - Existing: Introduced in (xananode.canonical:schema/relationship-type-introduced_in)
+   - Existing: Implements (xananode.canonical:schema/relationship-type-implements)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1213. Relationship
-   - Existing: Introduction Venue Of Relationship Term (xananode.canonical:schema/relationship-type-introduction_venue_of)
+   - Existing: Included In Relationship Term (xananode.canonical:schema/relationship-type-included_in)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1214. Relationship
-   - Existing: Is Start Of Relationship Term (xananode.canonical:schema/relationship-type-is_start_of)
+   - Existing: Includes (xananode.canonical:schema/relationship-type-includes)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1215. Relationship
-   - Existing: Mapped From Relationship Term (xananode.canonical:schema/relationship-type-mapped_from)
+   - Existing: Influenced (xananode.canonical:schema/relationship-type-influenced)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1216. Relationship
-   - Existing: Maps to (xananode.canonical:schema/relationship-type-maps_to)
+   - Existing: Influenced By Relationship Term (xananode.canonical:schema/relationship-type-influenced_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1217. Relationship
-   - Existing: Memorialized By Relationship Term (xananode.canonical:schema/relationship-type-memorialized_by)
+   - Existing: Interviewed (xananode.canonical:schema/relationship-type-interviewed)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1218. Relationship
-   - Existing: Memorializes (xananode.canonical:schema/relationship-type-memorializes)
+   - Existing: Interviewed By Relationship Term (xananode.canonical:schema/relationship-type-interviewed_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1219. Relationship
-   - Existing: Mentioned By Relationship Term (xananode.canonical:schema/relationship-type-mentioned_by)
+   - Existing: Introduced (xananode.canonical:schema/relationship-type-introduced)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1220. Relationship
-   - Existing: Mentions (xananode.canonical:schema/relationship-type-mentions)
+   - Existing: Introduced By Relationship Term (xananode.canonical:schema/relationship-type-introduced_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1221. Relationship
-   - Existing: Motivated by (xananode.canonical:schema/relationship-type-motivated_by)
+   - Existing: Introduced in (xananode.canonical:schema/relationship-type-introduced_in)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1222. Relationship
-   - Existing: Motivates Relationship Term (xananode.canonical:schema/relationship-type-motivates)
+   - Existing: Introduction Venue Of Relationship Term (xananode.canonical:schema/relationship-type-introduction_venue_of)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1223. Relationship
-   - Existing: Narrower Than Relationship Term (xananode.canonical:schema/relationship-type-narrower_than)
+   - Existing: Is Start Of Relationship Term (xananode.canonical:schema/relationship-type-is_start_of)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1224. Relationship
-   - Existing: Occurred at (xananode.canonical:schema/relationship-type-occurred_at)
+   - Existing: Mapped From Relationship Term (xananode.canonical:schema/relationship-type-mapped_from)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1225. Relationship
-   - Existing: Parallel to (xananode.canonical:schema/relationship-type-parallel_to)
+   - Existing: Maps to (xananode.canonical:schema/relationship-type-maps_to)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1226. Relationship
-   - Existing: Part Of Relationship Term (xananode.canonical:schema/relationship-type-part_of)
+   - Existing: Memorialized By Relationship Term (xananode.canonical:schema/relationship-type-memorialized_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1227. Relationship
-   - Existing: Participated in (xananode.canonical:schema/relationship-type-participated_in)
+   - Existing: Memorializes (xananode.canonical:schema/relationship-type-memorializes)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1228. Relationship
-   - Existing: Popularized (xananode.canonical:schema/relationship-type-popularized)
+   - Existing: Mentioned By Relationship Term (xananode.canonical:schema/relationship-type-mentioned_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1229. Relationship
-   - Existing: Popularized By Relationship Term (xananode.canonical:schema/relationship-type-popularized_by)
+   - Existing: Mentions (xananode.canonical:schema/relationship-type-mentions)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1230. Relationship
-   - Existing: Possible match (xananode.canonical:schema/relationship-type-possible_match)
+   - Existing: Motivated by (xananode.canonical:schema/relationship-type-motivated_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1231. Relationship
-   - Existing: Preceded (xananode.canonical:schema/relationship-type-preceded)
+   - Existing: Motivates Relationship Term (xananode.canonical:schema/relationship-type-motivates)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1232. Relationship
-   - Existing: Presented (xananode.canonical:schema/relationship-type-presented)
+   - Existing: Narrower Than Relationship Term (xananode.canonical:schema/relationship-type-narrower_than)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1233. Relationship
-   - Existing: Presented By Relationship Term (xananode.canonical:schema/relationship-type-presented_by)
+   - Existing: Occurred at (xananode.canonical:schema/relationship-type-occurred_at)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1234. Relationship
-   - Existing: Preserved By Relationship Term (xananode.canonical:schema/relationship-type-preserved_by)
+   - Existing: Parallel to (xananode.canonical:schema/relationship-type-parallel_to)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1235. Relationship
-   - Existing: Preserves (xananode.canonical:schema/relationship-type-preserves)
+   - Existing: Part Of Relationship Term (xananode.canonical:schema/relationship-type-part_of)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1236. Relationship
-   - Existing: Produces Relationship Term (xananode.canonical:schema/relationship-type-produces)
+   - Existing: Participated in (xananode.canonical:schema/relationship-type-participated_in)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1237. Relationship
-   - Existing: Proposed (xananode.canonical:schema/relationship-type-proposed)
+   - Existing: Popularized (xananode.canonical:schema/relationship-type-popularized)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1238. Relationship
-   - Existing: Proposed By Relationship Term (xananode.canonical:schema/relationship-type-proposed_by)
+   - Existing: Popularized By Relationship Term (xananode.canonical:schema/relationship-type-popularized_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1239. Relationship
-   - Existing: Quoted By Relationship Term (xananode.canonical:schema/relationship-type-quoted_by)
+   - Existing: Possible match (xananode.canonical:schema/relationship-type-possible_match)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1240. Relationship
-   - Existing: Quotes (xananode.canonical:schema/relationship-type-quotes)
+   - Existing: Preceded (xananode.canonical:schema/relationship-type-preceded)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1241. Relationship
-   - Existing: Refined By Relationship Term (xananode.canonical:schema/relationship-type-refined_by)
+   - Existing: Presented (xananode.canonical:schema/relationship-type-presented)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1242. Relationship
-   - Existing: Refines (xananode.canonical:schema/relationship-type-refines)
+   - Existing: Presented By Relationship Term (xananode.canonical:schema/relationship-type-presented_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1243. Relationship
-   - Existing: Relationship Type Registry (xananode.canonical:schema/relationship-type-registry)
+   - Existing: Preserved By Relationship Term (xananode.canonical:schema/relationship-type-preserved_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1244. Relationship
-   - Existing: Related to (xananode.canonical:schema/relationship-type-related_to)
+   - Existing: Preserves (xananode.canonical:schema/relationship-type-preserves)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1245. Relationship
-   - Existing: Represented By Relationship Term (xananode.canonical:schema/relationship-type-represented_by)
+   - Existing: Produces Relationship Term (xananode.canonical:schema/relationship-type-produces)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1246. Relationship
-   - Existing: Represents (xananode.canonical:schema/relationship-type-represents)
+   - Existing: Proposed (xananode.canonical:schema/relationship-type-proposed)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1247. Relationship
-   - Existing: Required For Relationship Term (xananode.canonical:schema/relationship-type-required_for)
+   - Existing: Proposed By Relationship Term (xananode.canonical:schema/relationship-type-proposed_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1248. Relationship
-   - Existing: Requires (xananode.canonical:schema/relationship-type-requires)
+   - Existing: Quoted By Relationship Term (xananode.canonical:schema/relationship-type-quoted_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1249. Relationship
-   - Existing: Results from (xananode.canonical:schema/relationship-type-results_from)
+   - Existing: Quotes (xananode.canonical:schema/relationship-type-quotes)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1250. Relationship
-   - Existing: Same entity (xananode.canonical:schema/relationship-type-same_entity)
+   - Existing: Refined By Relationship Term (xananode.canonical:schema/relationship-type-refined_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1251. Relationship
-   - Existing: Shaped By Relationship Term (xananode.canonical:schema/relationship-type-shaped_by)
+   - Existing: Refines (xananode.canonical:schema/relationship-type-refines)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1252. Relationship
-   - Existing: Shapes (xananode.canonical:schema/relationship-type-shapes)
+   - Existing: Relationship Type Registry (xananode.canonical:schema/relationship-type-registry)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1253. Relationship
-   - Existing: Site Of Relationship Term (xananode.canonical:schema/relationship-type-site_of)
+   - Existing: Related to (xananode.canonical:schema/relationship-type-related_to)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1254. Relationship
-   - Existing: Spoke at (xananode.canonical:schema/relationship-type-spoke_at)
+   - Existing: Represented By Relationship Term (xananode.canonical:schema/relationship-type-represented_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1255. Relationship
-   - Existing: Starts with (xananode.canonical:schema/relationship-type-starts_with)
+   - Existing: Represents (xananode.canonical:schema/relationship-type-represents)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1256. Relationship
-   - Existing: Superseded By Relationship Term (xananode.canonical:schema/relationship-type-superseded_by)
+   - Existing: Required For Relationship Term (xananode.canonical:schema/relationship-type-required_for)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1257. Relationship
-   - Existing: Supersedes (xananode.canonical:schema/relationship-type-supersedes)
+   - Existing: Requires (xananode.canonical:schema/relationship-type-requires)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1258. Relationship
-   - Existing: Supported By Relationship Term (xananode.canonical:schema/relationship-type-supported_by)
+   - Existing: Results from (xananode.canonical:schema/relationship-type-results_from)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1259. Relationship
-   - Existing: Supports (xananode.canonical:schema/relationship-type-supports)
+   - Existing: Same entity (xananode.canonical:schema/relationship-type-same_entity)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1260. Relationship
-   - Existing: Threatened By Relationship Term (xananode.canonical:schema/relationship-type-threatened_by)
+   - Existing: Shaped By Relationship Term (xananode.canonical:schema/relationship-type-shaped_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1261. Relationship
-   - Existing: Threatens (xananode.canonical:schema/relationship-type-threatens)
+   - Existing: Shapes (xananode.canonical:schema/relationship-type-shapes)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1262. Relationship
-   - Existing: Trained on (xananode.canonical:schema/relationship-type-trained_on)
+   - Existing: Site Of Relationship Term (xananode.canonical:schema/relationship-type-site_of)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1263. Relationship
-   - Existing: Transcluded By Relationship Term (xananode.canonical:schema/relationship-type-transcluded_by)
+   - Existing: Spoke at (xananode.canonical:schema/relationship-type-spoke_at)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1264. Relationship
-   - Existing: Transcludes (xananode.canonical:schema/relationship-type-transcludes)
+   - Existing: Starts with (xananode.canonical:schema/relationship-type-starts_with)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1265. Relationship
-   - Existing: Used As Primary Media For Relationship Term (xananode.canonical:schema/relationship-type-used_as_primary_media_for)
+   - Existing: Superseded By Relationship Term (xananode.canonical:schema/relationship-type-superseded_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1266. Relationship
-   - Existing: Used By Relationship Term (xananode.canonical:schema/relationship-type-used_by)
+   - Existing: Supersedes (xananode.canonical:schema/relationship-type-supersedes)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1267. Relationship
-   - Existing: Used To Train Relationship Term (xananode.canonical:schema/relationship-type-used_to_train)
+   - Existing: Supported By Relationship Term (xananode.canonical:schema/relationship-type-supported_by)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1268. Relationship
-   - Existing: Uses (xananode.canonical:schema/relationship-type-uses)
+   - Existing: Supports (xananode.canonical:schema/relationship-type-supports)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1269. Relationship
+   - Existing: Threatened By Relationship Term (xananode.canonical:schema/relationship-type-threatened_by)
+   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1270. Relationship
+   - Existing: Threatens (xananode.canonical:schema/relationship-type-threatens)
+   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1271. Relationship
+   - Existing: Trained on (xananode.canonical:schema/relationship-type-trained_on)
+   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1272. Relationship
+   - Existing: Transcluded By Relationship Term (xananode.canonical:schema/relationship-type-transcluded_by)
+   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1273. Relationship
+   - Existing: Transcludes (xananode.canonical:schema/relationship-type-transcludes)
+   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1274. Relationship
+   - Existing: Used As Primary Media For Relationship Term (xananode.canonical:schema/relationship-type-used_as_primary_media_for)
+   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1275. Relationship
+   - Existing: Used By Relationship Term (xananode.canonical:schema/relationship-type-used_by)
+   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1276. Relationship
+   - Existing: Used To Train Relationship Term (xananode.canonical:schema/relationship-type-used_to_train)
+   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1277. Relationship
+   - Existing: Uses (xananode.canonical:schema/relationship-type-uses)
+   - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1278. Relationship
    - Existing: Substrate Relationships Schema (xananode.canonical:schema/substrate-relationships-schema)
    - Incoming: Relationship (xananode.canonical:schema/node-type-relationship)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1270. Revision
+1279. Revision
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Revision (xananode.canonical:schema/node-type-revision)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1271. Revision
+1280. Revision
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Revision (xananode.canonical:schema/node-type-revision)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1272. Revision
+1281. Revision
    - Existing: Canonical Pack v0.1.0 (xananode.canonical:revision/canonical-pack-v0-1-0)
    - Incoming: Revision (xananode.canonical:schema/node-type-revision)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1273. Revision
+1282. Revision
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Revision (xananode.canonical:schema/node-type-revision)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1274. Schema
+1283. Schema
    - Existing: XanaNode Relationship Types (xananode.example:schema/xananode-relationship-types)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1275. Schema
+1284. Schema
    - Existing: XanaNode Node Types (xananode.example:schema/xananode-node-types)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1276. Schema
+1285. Schema
    - Existing: XanaNode Core Schema (xananode.example:schema/xananode-core-schema)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1277. Schema
+1286. Schema
    - Existing: Substrate Relationships Schema (xananode.example:schema/substrate-relationships-schema)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1278. Schema
+1287. Schema
    - Existing: Substrate Node Schema (xananode.example:schema/substrate-node-schema)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1279. Schema
+1288. Schema
    - Existing: Substrate Manifest Schema (xananode.example:schema/substrate-manifest-schema)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1280. Schema
+1289. Schema
    - Existing: Namespace Schema (xananode.example:schema/namespace-schema)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1281. Schema
+1290. Schema
    - Existing: Merge Report Schema (xananode.example:schema/merge-report-schema)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1282. Schema
+1291. Schema
    - Existing: Compatibility Report Schema (xananode.example:schema/compatibility-report-schema)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1283. Schema
-   - Existing: XanaNode (xananode.example:concept/xananode)
-   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1284. Schema
-   - Existing: Schema Extension (xananode.example:concept/schema-extension)
-   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1285. Schema
-   - Existing: XanaNode (xananode.canonical:concept/xananode)
-   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1286. Schema
-   - Existing: Author Profile Schema (xananode.canonical:schema/author-profile-schema)
-   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1287. Schema
-   - Existing: Author Profile Schema (xananode.canonical:schema/canonical-schema-author-profile)
-   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1288. Schema
-   - Existing: Compatibility Report Schema (xananode.canonical:schema/canonical-schema-compatibility-report)
-   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1289. Schema
-   - Existing: Merge Report Schema (xananode.canonical:schema/canonical-schema-merge-report)
-   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1290. Schema
-   - Existing: Nanopublication Schema (xananode.canonical:schema/canonical-schema-nanopublication)
-   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1291. Schema
-   - Existing: Ro Crate Metadata Schema (xananode.canonical:schema/canonical-schema-ro-crate-metadata)
-   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
 1292. Schema
-   - Existing: Substrate Diff Schema (xananode.canonical:schema/canonical-schema-substrate-diff)
+   - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1293. Schema
-   - Existing: Substrate Manifest Schema (xananode.canonical:schema/canonical-schema-substrate-manifest)
+   - Existing: Schema Extension (xananode.example:concept/schema-extension)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1294. Schema
-   - Existing: Substrate Node Schema (xananode.canonical:schema/canonical-schema-substrate-node)
+   - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1295. Schema
-   - Existing: Substrate Relationships Schema (xananode.canonical:schema/canonical-schema-substrate-relationships)
+   - Existing: Author Profile Schema (xananode.canonical:schema/author-profile-schema)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1296. Schema
-   - Existing: Xananode Node Types Schema (xananode.canonical:schema/canonical-schema-xananode-node-types)
+   - Existing: Author Profile Schema (xananode.canonical:schema/canonical-schema-author-profile)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1297. Schema
-   - Existing: Xananode Property Registry Schema (xananode.canonical:schema/canonical-schema-xananode-property-registry)
+   - Existing: Compatibility Report Schema (xananode.canonical:schema/canonical-schema-compatibility-report)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1298. Schema
-   - Existing: Xananode Relationship Types Schema (xananode.canonical:schema/canonical-schema-xananode-relationship-types)
+   - Existing: Merge Report Schema (xananode.canonical:schema/canonical-schema-merge-report)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1299. Schema
-   - Existing: Canonical Schemas Registry (xananode.canonical:schema/canonical-schemas-registry)
+   - Existing: Nanopublication Schema (xananode.canonical:schema/canonical-schema-nanopublication)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1300. Schema
-   - Existing: Compatibility Report Schema (xananode.canonical:schema/compatibility-report-schema)
+   - Existing: Ro Crate Metadata Schema (xananode.canonical:schema/canonical-schema-ro-crate-metadata)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1301. Schema
-   - Existing: Known Implementations Registry (xananode.canonical:schema/known-implementations-registry)
+   - Existing: Substrate Diff Schema (xananode.canonical:schema/canonical-schema-substrate-diff)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1302. Schema
-   - Existing: Merge Report Schema (xananode.canonical:schema/merge-report-schema)
+   - Existing: Substrate Manifest Schema (xananode.canonical:schema/canonical-schema-substrate-manifest)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1303. Schema
-   - Existing: Federation Merge Report Example Namespace (xananode.canonical:schema/namespace-example.merge)
+   - Existing: Substrate Node Schema (xananode.canonical:schema/canonical-schema-substrate-node)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1304. Schema
-   - Existing: Minimal Example Namespace (xananode.canonical:schema/namespace-example.minimal)
+   - Existing: Substrate Relationships Schema (xananode.canonical:schema/canonical-schema-substrate-relationships)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1305. Schema
-   - Existing: Museum Extension Example Namespace (xananode.canonical:schema/namespace-example.museum)
+   - Existing: Xananode Node Types Schema (xananode.canonical:schema/canonical-schema-xananode-node-types)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1306. Schema
-   - Existing: Federation Example A Namespace (xananode.canonical:schema/namespace-example.researcher_a)
+   - Existing: Xananode Property Registry Schema (xananode.canonical:schema/canonical-schema-xananode-property-registry)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1307. Schema
-   - Existing: Federation Example B Namespace (xananode.canonical:schema/namespace-example.researcher_b)
+   - Existing: Xananode Relationship Types Schema (xananode.canonical:schema/canonical-schema-xananode-relationship-types)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1308. Schema
-   - Existing: Namespace Registry (xananode.canonical:schema/namespace-registry)
+   - Existing: Canonical Schemas Registry (xananode.canonical:schema/canonical-schemas-registry)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1309. Schema
-   - Existing: Namespace Schema (xananode.canonical:schema/namespace-schema)
+   - Existing: Compatibility Report Schema (xananode.canonical:schema/compatibility-report-schema)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1310. Schema
-   - Existing: XanaNode Core (xananode.canonical:schema/namespace-xananode)
+   - Existing: Known Implementations Registry (xananode.canonical:schema/known-implementations-registry)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1311. Schema
-   - Existing: Nanopublication Schema (xananode.canonical:schema/nanopublication-schema)
+   - Existing: Merge Report Schema (xananode.canonical:schema/merge-report-schema)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1312. Schema
-   - Existing: Claim (xananode.canonical:schema/node-type-claim)
+   - Existing: Federation Merge Report Example Namespace (xananode.canonical:schema/namespace-example.merge)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1313. Schema
-   - Existing: Community (xananode.canonical:schema/node-type-community)
+   - Existing: Minimal Example Namespace (xananode.canonical:schema/namespace-example.minimal)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1314. Schema
-   - Existing: Concept (xananode.canonical:schema/node-type-concept)
+   - Existing: Museum Extension Example Namespace (xananode.canonical:schema/namespace-example.museum)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1315. Schema
-   - Existing: Essay (xananode.canonical:schema/node-type-essay)
+   - Existing: Federation Example A Namespace (xananode.canonical:schema/namespace-example.researcher_a)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1316. Schema
-   - Existing: Event (xananode.canonical:schema/node-type-event)
+   - Existing: Federation Example B Namespace (xananode.canonical:schema/namespace-example.researcher_b)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1317. Schema
-   - Existing: Fragment (xananode.canonical:schema/node-type-fragment)
+   - Existing: Namespace Registry (xananode.canonical:schema/namespace-registry)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1318. Schema
-   - Existing: Media (xananode.canonical:schema/node-type-media)
+   - Existing: Namespace Schema (xananode.canonical:schema/namespace-schema)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1319. Schema
-   - Existing: Observation (xananode.canonical:schema/node-type-observation)
+   - Existing: XanaNode Core (xananode.canonical:schema/namespace-xananode)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1320. Schema
-   - Existing: Organization (xananode.canonical:schema/node-type-organization)
+   - Existing: Nanopublication Schema (xananode.canonical:schema/nanopublication-schema)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1321. Schema
-   - Existing: Person (xananode.canonical:schema/node-type-person)
+   - Existing: Claim (xananode.canonical:schema/node-type-claim)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1322. Schema
-   - Existing: Place (xananode.canonical:schema/node-type-place)
+   - Existing: Community (xananode.canonical:schema/node-type-community)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1323. Schema
-   - Existing: Project (xananode.canonical:schema/node-type-project)
+   - Existing: Concept (xananode.canonical:schema/node-type-concept)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1324. Schema
-   - Existing: Publication (xananode.canonical:schema/node-type-publication)
+   - Existing: Essay (xananode.canonical:schema/node-type-essay)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1325. Schema
-   - Existing: Node Type Registry (xananode.canonical:schema/node-type-registry)
+   - Existing: Event (xananode.canonical:schema/node-type-event)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1326. Schema
-   - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
+   - Existing: Fragment (xananode.canonical:schema/node-type-fragment)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1327. Schema
-   - Existing: Revision (xananode.canonical:schema/node-type-revision)
+   - Existing: Media (xananode.canonical:schema/node-type-media)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1328. Schema
-   - Existing: Source (xananode.canonical:schema/node-type-source)
+   - Existing: Observation (xananode.canonical:schema/node-type-observation)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1329. Schema
-   - Existing: Technology (xananode.canonical:schema/node-type-technology)
+   - Existing: Organization (xananode.canonical:schema/node-type-organization)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1330. Schema
-   - Existing: Trail (xananode.canonical:schema/node-type-trail)
+   - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1331. Schema
-   - Existing: Birth date (xananode.canonical:schema/property-birth_date)
+   - Existing: Place (xananode.canonical:schema/node-type-place)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1332. Schema
-   - Existing: Currency value (xananode.canonical:schema/property-currency_value)
+   - Existing: Project (xananode.canonical:schema/node-type-project)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1333. Schema
-   - Existing: External identifier (xananode.canonical:schema/property-external_identifier)
+   - Existing: Publication (xananode.canonical:schema/node-type-publication)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1334. Schema
-   - Existing: Geographic coordinates (xananode.canonical:schema/property-geo_coordinates)
+   - Existing: Node Type Registry (xananode.canonical:schema/node-type-registry)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1335. Schema
-   - Existing: SI measurement (xananode.canonical:schema/property-measurement_si)
+   - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1336. Schema
-   - Existing: Property Registry (xananode.canonical:schema/property-registry)
+   - Existing: Revision (xananode.canonical:schema/node-type-revision)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1337. Schema
-   - Existing: Property Registry Schema (xananode.canonical:schema/property-registry-schema)
+   - Existing: Source (xananode.canonical:schema/node-type-source)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1338. Schema
-   - Existing: Alias of (xananode.canonical:schema/relationship-type-alias_of)
+   - Existing: Technology (xananode.canonical:schema/node-type-technology)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1339. Schema
-   - Existing: Alternative to (xananode.canonical:schema/relationship-type-alternative_to)
+   - Existing: Trail (xananode.canonical:schema/node-type-trail)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1340. Schema
-   - Existing: Anticipated (xananode.canonical:schema/relationship-type-anticipated)
+   - Existing: Birth date (xananode.canonical:schema/property-birth_date)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1341. Schema
-   - Existing: Anticipated By Relationship Term (xananode.canonical:schema/relationship-type-anticipated_by)
+   - Existing: Currency value (xananode.canonical:schema/property-currency_value)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1342. Schema
-   - Existing: Anticipates (xananode.canonical:schema/relationship-type-anticipates)
+   - Existing: External identifier (xananode.canonical:schema/property-external_identifier)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1343. Schema
-   - Existing: Appears in (xananode.canonical:schema/relationship-type-appears_in)
+   - Existing: Geographic coordinates (xananode.canonical:schema/property-geo_coordinates)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1344. Schema
-   - Existing: Approved (xananode.canonical:schema/relationship-type-approved)
+   - Existing: SI measurement (xananode.canonical:schema/property-measurement_si)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1345. Schema
-   - Existing: Approved By Relationship Term (xananode.canonical:schema/relationship-type-approved_by)
+   - Existing: Property Registry (xananode.canonical:schema/property-registry)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1346. Schema
-   - Existing: Arrived From Relationship Term (xananode.canonical:schema/relationship-type-arrived_from)
+   - Existing: Property Registry Schema (xananode.canonical:schema/property-registry-schema)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1347. Schema
-   - Existing: Arrives at (xananode.canonical:schema/relationship-type-arrives_at)
+   - Existing: Alias of (xananode.canonical:schema/relationship-type-alias_of)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1348. Schema
-   - Existing: Authored (xananode.canonical:schema/relationship-type-authored)
+   - Existing: Alternative to (xananode.canonical:schema/relationship-type-alternative_to)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1349. Schema
-   - Existing: Authored By Relationship Term (xananode.canonical:schema/relationship-type-authored_by)
+   - Existing: Anticipated (xananode.canonical:schema/relationship-type-anticipated)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1350. Schema
-   - Existing: Broader than (xananode.canonical:schema/relationship-type-broader_than)
+   - Existing: Anticipated By Relationship Term (xananode.canonical:schema/relationship-type-anticipated_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1351. Schema
-   - Existing: Cited By Relationship Term (xananode.canonical:schema/relationship-type-cited_by)
+   - Existing: Anticipates (xananode.canonical:schema/relationship-type-anticipates)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1352. Schema
-   - Existing: Cites (xananode.canonical:schema/relationship-type-cites)
+   - Existing: Appears in (xananode.canonical:schema/relationship-type-appears_in)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1353. Schema
-   - Existing: Claim Of Relationship Term (xananode.canonical:schema/relationship-type-claim_of)
+   - Existing: Approved (xananode.canonical:schema/relationship-type-approved)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1354. Schema
-   - Existing: Clarified By Relationship Term (xananode.canonical:schema/relationship-type-clarified_by)
+   - Existing: Approved By Relationship Term (xananode.canonical:schema/relationship-type-approved_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1355. Schema
-   - Existing: Clarifies (xananode.canonical:schema/relationship-type-clarifies)
+   - Existing: Arrived From Relationship Term (xananode.canonical:schema/relationship-type-arrived_from)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1356. Schema
-   - Existing: Coined (xananode.canonical:schema/relationship-type-coined)
+   - Existing: Arrives at (xananode.canonical:schema/relationship-type-arrives_at)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1357. Schema
-   - Existing: Coined By Relationship Term (xananode.canonical:schema/relationship-type-coined_by)
+   - Existing: Authored (xananode.canonical:schema/relationship-type-authored)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1358. Schema
-   - Existing: Collaborated with (xananode.canonical:schema/relationship-type-collaborated_with)
+   - Existing: Authored By Relationship Term (xananode.canonical:schema/relationship-type-authored_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1359. Schema
-   - Existing: Compatible with (xananode.canonical:schema/relationship-type-compatible_with)
+   - Existing: Broader than (xananode.canonical:schema/relationship-type-broader_than)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1360. Schema
-   - Existing: Contains (xananode.canonical:schema/relationship-type-contains)
+   - Existing: Cited By Relationship Term (xananode.canonical:schema/relationship-type-cited_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1361. Schema
-   - Existing: Contemporary of (xananode.canonical:schema/relationship-type-contemporary_of)
+   - Existing: Cites (xananode.canonical:schema/relationship-type-cites)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1362. Schema
-   - Existing: Context for (xananode.canonical:schema/relationship-type-context_for)
+   - Existing: Claim Of Relationship Term (xananode.canonical:schema/relationship-type-claim_of)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1363. Schema
-   - Existing: Continued From Relationship Term (xananode.canonical:schema/relationship-type-continued_from)
+   - Existing: Clarified By Relationship Term (xananode.canonical:schema/relationship-type-clarified_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1364. Schema
-   - Existing: Continues to (xananode.canonical:schema/relationship-type-continues_to)
+   - Existing: Clarifies (xananode.canonical:schema/relationship-type-clarifies)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1365. Schema
-   - Existing: Contradicted By Relationship Term (xananode.canonical:schema/relationship-type-contradicted_by)
+   - Existing: Coined (xananode.canonical:schema/relationship-type-coined)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1366. Schema
-   - Existing: Contradicts (xananode.canonical:schema/relationship-type-contradicts)
+   - Existing: Coined By Relationship Term (xananode.canonical:schema/relationship-type-coined_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1367. Schema
-   - Existing: Contrasts with (xananode.canonical:schema/relationship-type-contrasts_with)
+   - Existing: Collaborated with (xananode.canonical:schema/relationship-type-collaborated_with)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1368. Schema
-   - Existing: Created (xananode.canonical:schema/relationship-type-created)
+   - Existing: Compatible with (xananode.canonical:schema/relationship-type-compatible_with)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1369. Schema
-   - Existing: Created By Relationship Term (xananode.canonical:schema/relationship-type-created_by)
+   - Existing: Contains (xananode.canonical:schema/relationship-type-contains)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1370. Schema
-   - Existing: Deep Linked From Relationship Term (xananode.canonical:schema/relationship-type-deep_linked_from)
+   - Existing: Contemporary of (xananode.canonical:schema/relationship-type-contemporary_of)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1371. Schema
-   - Existing: Deep links to (xananode.canonical:schema/relationship-type-deep_links_to)
+   - Existing: Context for (xananode.canonical:schema/relationship-type-context_for)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1372. Schema
-   - Existing: Defined By Relationship Term (xananode.canonical:schema/relationship-type-defined_by)
+   - Existing: Continued From Relationship Term (xananode.canonical:schema/relationship-type-continued_from)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1373. Schema
-   - Existing: Defines (xananode.canonical:schema/relationship-type-defines)
+   - Existing: Continues to (xananode.canonical:schema/relationship-type-continues_to)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1374. Schema
-   - Existing: Demonstrated By Relationship Term (xananode.canonical:schema/relationship-type-demonstrated_by)
+   - Existing: Contradicted By Relationship Term (xananode.canonical:schema/relationship-type-contradicted_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1375. Schema
-   - Existing: Demonstrates (xananode.canonical:schema/relationship-type-demonstrates)
+   - Existing: Contradicts (xananode.canonical:schema/relationship-type-contradicts)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1376. Schema
-   - Existing: Dependency Of Relationship Term (xananode.canonical:schema/relationship-type-dependency_of)
+   - Existing: Contrasts with (xananode.canonical:schema/relationship-type-contrasts_with)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1377. Schema
-   - Existing: Depends on (xananode.canonical:schema/relationship-type-depends_on)
+   - Existing: Created (xananode.canonical:schema/relationship-type-created)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1378. Schema
-   - Existing: Depicted By Relationship Term (xananode.canonical:schema/relationship-type-depicted_by)
+   - Existing: Created By Relationship Term (xananode.canonical:schema/relationship-type-created_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1379. Schema
-   - Existing: Depicts (xananode.canonical:schema/relationship-type-depicts)
+   - Existing: Deep Linked From Relationship Term (xananode.canonical:schema/relationship-type-deep_linked_from)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1380. Schema
-   - Existing: Derived from (xananode.canonical:schema/relationship-type-derived_from)
+   - Existing: Deep links to (xananode.canonical:schema/relationship-type-deep_links_to)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1381. Schema
-   - Existing: Derived Into Relationship Term (xananode.canonical:schema/relationship-type-derived_into)
+   - Existing: Defined By Relationship Term (xananode.canonical:schema/relationship-type-defined_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1382. Schema
-   - Existing: Discussed In Relationship Term (xananode.canonical:schema/relationship-type-discussed_in)
+   - Existing: Defines (xananode.canonical:schema/relationship-type-defines)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1383. Schema
-   - Existing: Discusses (xananode.canonical:schema/relationship-type-discusses)
+   - Existing: Demonstrated By Relationship Term (xananode.canonical:schema/relationship-type-demonstrated_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1384. Schema
-   - Existing: Disputed By Relationship Term (xananode.canonical:schema/relationship-type-disputed_by)
+   - Existing: Demonstrates (xananode.canonical:schema/relationship-type-demonstrates)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1385. Schema
-   - Existing: Disputed identity (xananode.canonical:schema/relationship-type-disputed_identity)
+   - Existing: Dependency Of Relationship Term (xananode.canonical:schema/relationship-type-dependency_of)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1386. Schema
-   - Existing: Disputes (xananode.canonical:schema/relationship-type-disputes)
+   - Existing: Depends on (xananode.canonical:schema/relationship-type-depends_on)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1387. Schema
-   - Existing: Documented By Relationship Term (xananode.canonical:schema/relationship-type-documented_by)
+   - Existing: Depicted By Relationship Term (xananode.canonical:schema/relationship-type-depicted_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1388. Schema
-   - Existing: Documents (xananode.canonical:schema/relationship-type-documents)
+   - Existing: Depicts (xananode.canonical:schema/relationship-type-depicts)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1389. Schema
-   - Existing: Enabled By Relationship Term (xananode.canonical:schema/relationship-type-enabled_by)
+   - Existing: Derived from (xananode.canonical:schema/relationship-type-derived_from)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1390. Schema
-   - Existing: Enables (xananode.canonical:schema/relationship-type-enables)
+   - Existing: Derived Into Relationship Term (xananode.canonical:schema/relationship-type-derived_into)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1391. Schema
-   - Existing: Equivalent to (xananode.canonical:schema/relationship-type-equivalent_to)
+   - Existing: Discussed In Relationship Term (xananode.canonical:schema/relationship-type-discussed_in)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1392. Schema
-   - Existing: Evidence for (xananode.canonical:schema/relationship-type-evidence_for)
+   - Existing: Discusses (xananode.canonical:schema/relationship-type-discusses)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1393. Schema
-   - Existing: Explained By Relationship Term (xananode.canonical:schema/relationship-type-explained_by)
+   - Existing: Disputed By Relationship Term (xananode.canonical:schema/relationship-type-disputed_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1394. Schema
-   - Existing: Explains (xananode.canonical:schema/relationship-type-explains)
+   - Existing: Disputed identity (xananode.canonical:schema/relationship-type-disputed_identity)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1395. Schema
-   - Existing: Extended By Relationship Term (xananode.canonical:schema/relationship-type-extended_by)
+   - Existing: Disputes (xananode.canonical:schema/relationship-type-disputes)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1396. Schema
-   - Existing: Extends (xananode.canonical:schema/relationship-type-extends)
+   - Existing: Documented By Relationship Term (xananode.canonical:schema/relationship-type-documented_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1397. Schema
-   - Existing: Extension of (xananode.canonical:schema/relationship-type-extension_of)
+   - Existing: Documents (xananode.canonical:schema/relationship-type-documents)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1398. Schema
-   - Existing: Featured In Relationship Term (xananode.canonical:schema/relationship-type-featured_in)
+   - Existing: Enabled By Relationship Term (xananode.canonical:schema/relationship-type-enabled_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1399. Schema
-   - Existing: Featured Speaker Relationship Term (xananode.canonical:schema/relationship-type-featured_speaker)
+   - Existing: Enables (xananode.canonical:schema/relationship-type-enables)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1400. Schema
-   - Existing: Features (xananode.canonical:schema/relationship-type-features)
+   - Existing: Equivalent to (xananode.canonical:schema/relationship-type-equivalent_to)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1401. Schema
-   - Existing: Followed Relationship Term (xananode.canonical:schema/relationship-type-followed)
+   - Existing: Evidence for (xananode.canonical:schema/relationship-type-evidence_for)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1402. Schema
-   - Existing: Friend of (xananode.canonical:schema/relationship-type-friend_of)
+   - Existing: Explained By Relationship Term (xananode.canonical:schema/relationship-type-explained_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1403. Schema
-   - Existing: Had Participant Relationship Term (xananode.canonical:schema/relationship-type-had_participant)
+   - Existing: Explains (xananode.canonical:schema/relationship-type-explains)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1404. Schema
-   - Existing: Has Alias Relationship Term (xananode.canonical:schema/relationship-type-has_alias)
+   - Existing: Extended By Relationship Term (xananode.canonical:schema/relationship-type-extended_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1405. Schema
-   - Existing: Has Appearance Relationship Term (xananode.canonical:schema/relationship-type-has_appearance)
+   - Existing: Extends (xananode.canonical:schema/relationship-type-extends)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1406. Schema
-   - Existing: Has claim (xananode.canonical:schema/relationship-type-has_claim)
+   - Existing: Extension of (xananode.canonical:schema/relationship-type-extension_of)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1407. Schema
-   - Existing: Has Context Relationship Term (xananode.canonical:schema/relationship-type-has_context)
+   - Existing: Featured In Relationship Term (xananode.canonical:schema/relationship-type-featured_in)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1408. Schema
-   - Existing: Has Evidence Relationship Term (xananode.canonical:schema/relationship-type-has_evidence)
+   - Existing: Featured Speaker Relationship Term (xananode.canonical:schema/relationship-type-featured_speaker)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1409. Schema
-   - Existing: Has Extension Relationship Term (xananode.canonical:schema/relationship-type-has_extension)
+   - Existing: Features (xananode.canonical:schema/relationship-type-features)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1410. Schema
-   - Existing: Has primary media (xananode.canonical:schema/relationship-type-has_primary_media)
+   - Existing: Followed Relationship Term (xananode.canonical:schema/relationship-type-followed)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1411. Schema
-   - Existing: Identified (xananode.canonical:schema/relationship-type-identified)
+   - Existing: Friend of (xananode.canonical:schema/relationship-type-friend_of)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1412. Schema
-   - Existing: Identified By Relationship Term (xananode.canonical:schema/relationship-type-identified_by)
+   - Existing: Had Participant Relationship Term (xananode.canonical:schema/relationship-type-had_participant)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1413. Schema
-   - Existing: Implemented By Relationship Term (xananode.canonical:schema/relationship-type-implemented_by)
+   - Existing: Has Alias Relationship Term (xananode.canonical:schema/relationship-type-has_alias)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1414. Schema
-   - Existing: Implements (xananode.canonical:schema/relationship-type-implements)
+   - Existing: Has Appearance Relationship Term (xananode.canonical:schema/relationship-type-has_appearance)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1415. Schema
-   - Existing: Included In Relationship Term (xananode.canonical:schema/relationship-type-included_in)
+   - Existing: Has claim (xananode.canonical:schema/relationship-type-has_claim)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1416. Schema
-   - Existing: Includes (xananode.canonical:schema/relationship-type-includes)
+   - Existing: Has Context Relationship Term (xananode.canonical:schema/relationship-type-has_context)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1417. Schema
-   - Existing: Influenced (xananode.canonical:schema/relationship-type-influenced)
+   - Existing: Has Evidence Relationship Term (xananode.canonical:schema/relationship-type-has_evidence)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1418. Schema
-   - Existing: Influenced By Relationship Term (xananode.canonical:schema/relationship-type-influenced_by)
+   - Existing: Has Extension Relationship Term (xananode.canonical:schema/relationship-type-has_extension)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1419. Schema
-   - Existing: Interviewed (xananode.canonical:schema/relationship-type-interviewed)
+   - Existing: Has primary media (xananode.canonical:schema/relationship-type-has_primary_media)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1420. Schema
-   - Existing: Interviewed By Relationship Term (xananode.canonical:schema/relationship-type-interviewed_by)
+   - Existing: Identified (xananode.canonical:schema/relationship-type-identified)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1421. Schema
-   - Existing: Introduced (xananode.canonical:schema/relationship-type-introduced)
+   - Existing: Identified By Relationship Term (xananode.canonical:schema/relationship-type-identified_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1422. Schema
-   - Existing: Introduced By Relationship Term (xananode.canonical:schema/relationship-type-introduced_by)
+   - Existing: Implemented By Relationship Term (xananode.canonical:schema/relationship-type-implemented_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1423. Schema
-   - Existing: Introduced in (xananode.canonical:schema/relationship-type-introduced_in)
+   - Existing: Implements (xananode.canonical:schema/relationship-type-implements)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1424. Schema
-   - Existing: Introduction Venue Of Relationship Term (xananode.canonical:schema/relationship-type-introduction_venue_of)
+   - Existing: Included In Relationship Term (xananode.canonical:schema/relationship-type-included_in)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1425. Schema
-   - Existing: Is Start Of Relationship Term (xananode.canonical:schema/relationship-type-is_start_of)
+   - Existing: Includes (xananode.canonical:schema/relationship-type-includes)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1426. Schema
-   - Existing: Mapped From Relationship Term (xananode.canonical:schema/relationship-type-mapped_from)
+   - Existing: Influenced (xananode.canonical:schema/relationship-type-influenced)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1427. Schema
-   - Existing: Maps to (xananode.canonical:schema/relationship-type-maps_to)
+   - Existing: Influenced By Relationship Term (xananode.canonical:schema/relationship-type-influenced_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1428. Schema
-   - Existing: Memorialized By Relationship Term (xananode.canonical:schema/relationship-type-memorialized_by)
+   - Existing: Interviewed (xananode.canonical:schema/relationship-type-interviewed)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1429. Schema
-   - Existing: Memorializes (xananode.canonical:schema/relationship-type-memorializes)
+   - Existing: Interviewed By Relationship Term (xananode.canonical:schema/relationship-type-interviewed_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1430. Schema
-   - Existing: Mentioned By Relationship Term (xananode.canonical:schema/relationship-type-mentioned_by)
+   - Existing: Introduced (xananode.canonical:schema/relationship-type-introduced)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1431. Schema
-   - Existing: Mentions (xananode.canonical:schema/relationship-type-mentions)
+   - Existing: Introduced By Relationship Term (xananode.canonical:schema/relationship-type-introduced_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1432. Schema
-   - Existing: Motivated by (xananode.canonical:schema/relationship-type-motivated_by)
+   - Existing: Introduced in (xananode.canonical:schema/relationship-type-introduced_in)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1433. Schema
-   - Existing: Motivates Relationship Term (xananode.canonical:schema/relationship-type-motivates)
+   - Existing: Introduction Venue Of Relationship Term (xananode.canonical:schema/relationship-type-introduction_venue_of)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1434. Schema
-   - Existing: Narrower Than Relationship Term (xananode.canonical:schema/relationship-type-narrower_than)
+   - Existing: Is Start Of Relationship Term (xananode.canonical:schema/relationship-type-is_start_of)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1435. Schema
-   - Existing: Occurred at (xananode.canonical:schema/relationship-type-occurred_at)
+   - Existing: Mapped From Relationship Term (xananode.canonical:schema/relationship-type-mapped_from)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1436. Schema
-   - Existing: Parallel to (xananode.canonical:schema/relationship-type-parallel_to)
+   - Existing: Maps to (xananode.canonical:schema/relationship-type-maps_to)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1437. Schema
-   - Existing: Part Of Relationship Term (xananode.canonical:schema/relationship-type-part_of)
+   - Existing: Memorialized By Relationship Term (xananode.canonical:schema/relationship-type-memorialized_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1438. Schema
-   - Existing: Participated in (xananode.canonical:schema/relationship-type-participated_in)
+   - Existing: Memorializes (xananode.canonical:schema/relationship-type-memorializes)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1439. Schema
-   - Existing: Popularized (xananode.canonical:schema/relationship-type-popularized)
+   - Existing: Mentioned By Relationship Term (xananode.canonical:schema/relationship-type-mentioned_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1440. Schema
-   - Existing: Popularized By Relationship Term (xananode.canonical:schema/relationship-type-popularized_by)
+   - Existing: Mentions (xananode.canonical:schema/relationship-type-mentions)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1441. Schema
-   - Existing: Possible match (xananode.canonical:schema/relationship-type-possible_match)
+   - Existing: Motivated by (xananode.canonical:schema/relationship-type-motivated_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1442. Schema
-   - Existing: Preceded (xananode.canonical:schema/relationship-type-preceded)
+   - Existing: Motivates Relationship Term (xananode.canonical:schema/relationship-type-motivates)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1443. Schema
-   - Existing: Presented (xananode.canonical:schema/relationship-type-presented)
+   - Existing: Narrower Than Relationship Term (xananode.canonical:schema/relationship-type-narrower_than)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1444. Schema
-   - Existing: Presented By Relationship Term (xananode.canonical:schema/relationship-type-presented_by)
+   - Existing: Occurred at (xananode.canonical:schema/relationship-type-occurred_at)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1445. Schema
-   - Existing: Preserved By Relationship Term (xananode.canonical:schema/relationship-type-preserved_by)
+   - Existing: Parallel to (xananode.canonical:schema/relationship-type-parallel_to)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1446. Schema
-   - Existing: Preserves (xananode.canonical:schema/relationship-type-preserves)
+   - Existing: Part Of Relationship Term (xananode.canonical:schema/relationship-type-part_of)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1447. Schema
-   - Existing: Produces Relationship Term (xananode.canonical:schema/relationship-type-produces)
+   - Existing: Participated in (xananode.canonical:schema/relationship-type-participated_in)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1448. Schema
-   - Existing: Proposed (xananode.canonical:schema/relationship-type-proposed)
+   - Existing: Popularized (xananode.canonical:schema/relationship-type-popularized)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1449. Schema
-   - Existing: Proposed By Relationship Term (xananode.canonical:schema/relationship-type-proposed_by)
+   - Existing: Popularized By Relationship Term (xananode.canonical:schema/relationship-type-popularized_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1450. Schema
-   - Existing: Quoted By Relationship Term (xananode.canonical:schema/relationship-type-quoted_by)
+   - Existing: Possible match (xananode.canonical:schema/relationship-type-possible_match)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1451. Schema
-   - Existing: Quotes (xananode.canonical:schema/relationship-type-quotes)
+   - Existing: Preceded (xananode.canonical:schema/relationship-type-preceded)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1452. Schema
-   - Existing: Refined By Relationship Term (xananode.canonical:schema/relationship-type-refined_by)
+   - Existing: Presented (xananode.canonical:schema/relationship-type-presented)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1453. Schema
-   - Existing: Refines (xananode.canonical:schema/relationship-type-refines)
+   - Existing: Presented By Relationship Term (xananode.canonical:schema/relationship-type-presented_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1454. Schema
-   - Existing: Relationship Type Registry (xananode.canonical:schema/relationship-type-registry)
+   - Existing: Preserved By Relationship Term (xananode.canonical:schema/relationship-type-preserved_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1455. Schema
-   - Existing: Related to (xananode.canonical:schema/relationship-type-related_to)
+   - Existing: Preserves (xananode.canonical:schema/relationship-type-preserves)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1456. Schema
-   - Existing: Represented By Relationship Term (xananode.canonical:schema/relationship-type-represented_by)
+   - Existing: Produces Relationship Term (xananode.canonical:schema/relationship-type-produces)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1457. Schema
-   - Existing: Represents (xananode.canonical:schema/relationship-type-represents)
+   - Existing: Proposed (xananode.canonical:schema/relationship-type-proposed)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1458. Schema
-   - Existing: Required For Relationship Term (xananode.canonical:schema/relationship-type-required_for)
+   - Existing: Proposed By Relationship Term (xananode.canonical:schema/relationship-type-proposed_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1459. Schema
-   - Existing: Requires (xananode.canonical:schema/relationship-type-requires)
+   - Existing: Quoted By Relationship Term (xananode.canonical:schema/relationship-type-quoted_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1460. Schema
-   - Existing: Results from (xananode.canonical:schema/relationship-type-results_from)
+   - Existing: Quotes (xananode.canonical:schema/relationship-type-quotes)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1461. Schema
-   - Existing: Same entity (xananode.canonical:schema/relationship-type-same_entity)
+   - Existing: Refined By Relationship Term (xananode.canonical:schema/relationship-type-refined_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1462. Schema
-   - Existing: Shaped By Relationship Term (xananode.canonical:schema/relationship-type-shaped_by)
+   - Existing: Refines (xananode.canonical:schema/relationship-type-refines)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1463. Schema
-   - Existing: Shapes (xananode.canonical:schema/relationship-type-shapes)
+   - Existing: Relationship Type Registry (xananode.canonical:schema/relationship-type-registry)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1464. Schema
-   - Existing: Site Of Relationship Term (xananode.canonical:schema/relationship-type-site_of)
+   - Existing: Related to (xananode.canonical:schema/relationship-type-related_to)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1465. Schema
-   - Existing: Spoke at (xananode.canonical:schema/relationship-type-spoke_at)
+   - Existing: Represented By Relationship Term (xananode.canonical:schema/relationship-type-represented_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1466. Schema
-   - Existing: Starts with (xananode.canonical:schema/relationship-type-starts_with)
+   - Existing: Represents (xananode.canonical:schema/relationship-type-represents)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1467. Schema
-   - Existing: Superseded By Relationship Term (xananode.canonical:schema/relationship-type-superseded_by)
+   - Existing: Required For Relationship Term (xananode.canonical:schema/relationship-type-required_for)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1468. Schema
-   - Existing: Supersedes (xananode.canonical:schema/relationship-type-supersedes)
+   - Existing: Requires (xananode.canonical:schema/relationship-type-requires)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1469. Schema
-   - Existing: Supported By Relationship Term (xananode.canonical:schema/relationship-type-supported_by)
+   - Existing: Results from (xananode.canonical:schema/relationship-type-results_from)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1470. Schema
-   - Existing: Supports (xananode.canonical:schema/relationship-type-supports)
+   - Existing: Same entity (xananode.canonical:schema/relationship-type-same_entity)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1471. Schema
-   - Existing: Threatened By Relationship Term (xananode.canonical:schema/relationship-type-threatened_by)
+   - Existing: Shaped By Relationship Term (xananode.canonical:schema/relationship-type-shaped_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1472. Schema
-   - Existing: Threatens (xananode.canonical:schema/relationship-type-threatens)
+   - Existing: Shapes (xananode.canonical:schema/relationship-type-shapes)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1473. Schema
-   - Existing: Trained on (xananode.canonical:schema/relationship-type-trained_on)
+   - Existing: Site Of Relationship Term (xananode.canonical:schema/relationship-type-site_of)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1474. Schema
-   - Existing: Transcluded By Relationship Term (xananode.canonical:schema/relationship-type-transcluded_by)
+   - Existing: Spoke at (xananode.canonical:schema/relationship-type-spoke_at)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1475. Schema
-   - Existing: Transcludes (xananode.canonical:schema/relationship-type-transcludes)
+   - Existing: Starts with (xananode.canonical:schema/relationship-type-starts_with)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1476. Schema
-   - Existing: Used As Primary Media For Relationship Term (xananode.canonical:schema/relationship-type-used_as_primary_media_for)
+   - Existing: Superseded By Relationship Term (xananode.canonical:schema/relationship-type-superseded_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1477. Schema
-   - Existing: Used By Relationship Term (xananode.canonical:schema/relationship-type-used_by)
+   - Existing: Supersedes (xananode.canonical:schema/relationship-type-supersedes)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1478. Schema
-   - Existing: Used To Train Relationship Term (xananode.canonical:schema/relationship-type-used_to_train)
+   - Existing: Supported By Relationship Term (xananode.canonical:schema/relationship-type-supported_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1479. Schema
-   - Existing: Uses (xananode.canonical:schema/relationship-type-uses)
+   - Existing: Supports (xananode.canonical:schema/relationship-type-supports)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1480. Schema
-   - Existing: RO-Crate Metadata Schema (xananode.canonical:schema/ro-crate-metadata-schema)
+   - Existing: Threatened By Relationship Term (xananode.canonical:schema/relationship-type-threatened_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1481. Schema
-   - Existing: Substrate Diff Schema (xananode.canonical:schema/substrate-diff-schema)
+   - Existing: Threatens (xananode.canonical:schema/relationship-type-threatens)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1482. Schema
-   - Existing: Substrate Manifest Schema (xananode.canonical:schema/substrate-manifest-schema)
+   - Existing: Trained on (xananode.canonical:schema/relationship-type-trained_on)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1483. Schema
-   - Existing: Substrate Node Schema (xananode.canonical:schema/substrate-node-schema)
+   - Existing: Transcluded By Relationship Term (xananode.canonical:schema/relationship-type-transcluded_by)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1484. Schema
+   - Existing: Transcludes (xananode.canonical:schema/relationship-type-transcludes)
+   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1485. Schema
+   - Existing: Used As Primary Media For Relationship Term (xananode.canonical:schema/relationship-type-used_as_primary_media_for)
+   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1486. Schema
+   - Existing: Used By Relationship Term (xananode.canonical:schema/relationship-type-used_by)
+   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1487. Schema
+   - Existing: Used To Train Relationship Term (xananode.canonical:schema/relationship-type-used_to_train)
+   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1488. Schema
+   - Existing: Uses (xananode.canonical:schema/relationship-type-uses)
+   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1489. Schema
+   - Existing: RO-Crate Metadata Schema (xananode.canonical:schema/ro-crate-metadata-schema)
+   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1490. Schema
+   - Existing: Substrate Diff Schema (xananode.canonical:schema/substrate-diff-schema)
+   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1491. Schema
+   - Existing: Substrate Manifest Schema (xananode.canonical:schema/substrate-manifest-schema)
+   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1492. Schema
+   - Existing: Substrate Node Schema (xananode.canonical:schema/substrate-node-schema)
+   - Incoming: Schema (xananode.canonical:schema/node-type-schema)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1493. Schema
    - Existing: Substrate Relationships Schema (xananode.canonical:schema/substrate-relationships-schema)
    - Incoming: Schema (xananode.canonical:schema/node-type-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1485. Source
+1494. Source
    - Existing: XanaNode Workspace Repository (xananode.example:source/xananode-workspace-repo)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1486. Source
+1495. Source
    - Existing: XanaNode Studio Repository (xananode.example:source/xananode-studio-repo)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1487. Source
+1496. Source
    - Existing: XanaNode Protocol Repository (xananode.example:source/xananode-protocol-repo)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1488. Source
+1497. Source
    - Existing: XanaNode Hugo Repository (xananode.example:source/xananode-hugo-repo)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1489. Source
+1498. Source
    - Existing: XanaNode Core SDK Repository (xananode.example:source/xananode-core-sdk-repo)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1490. Source
+1499. Source
    - Existing: Xanadu: Document Interconnection Enabling Re-use (xananode.example:source/xanadu-document-interconnection)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1491. Source
+1500. Source
    - Existing: 9.6 Million Links in Source Code Comments (xananode.example:source/source-code-link-decay-study)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1492. Source
+1501. Source
    - Existing: Mother of All Demos (xananode.example:source/mother-of-all-demos)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1493. Source
+1502. Source
    - Existing: As We May Think (xananode.example:source/as-we-may-think)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1494. Source
-   - Existing: XanaNode (xananode.example:concept/xananode)
-   - Incoming: Source (xananode.canonical:schema/node-type-source)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1495. Source
-   - Existing: Single Source of Truth (xananode.example:concept/single-source-of-truth)
-   - Incoming: Source (xananode.canonical:schema/node-type-source)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1496. Source
-   - Existing: GitHub (xananode.example:source/source-github)
-   - Incoming: Source (xananode.canonical:schema/node-type-source)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1497. Source
-   - Existing: Support (xananode.example:source/source-support)
-   - Incoming: Source (xananode.canonical:schema/node-type-source)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1498. Source
-   - Existing: As We May Think (example.minimal:source/as-we-may-think)
-   - Incoming: Source (xananode.canonical:schema/node-type-source)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1499. Source
-   - Existing: XanaNode (xananode.canonical:concept/xananode)
-   - Incoming: Source (xananode.canonical:schema/node-type-source)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1500. Source
-   - Existing: Schema (xananode.canonical:schema/node-type-schema)
-   - Incoming: Source (xananode.canonical:schema/node-type-source)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1501. Source
-   - Existing: GitHub Profile (xananode.canonical:source/github-profile)
-   - Incoming: Source (xananode.canonical:schema/node-type-source)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1502. Source
-   - Existing: Hugo Official Site (xananode.canonical:source/hugo-official-site)
-   - Incoming: Source (xananode.canonical:schema/node-type-source)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
 1503. Source
-   - Existing: Support XanaNode (xananode.canonical:source/support-xananode)
+   - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1504. Source
-   - Existing: XanaNode.com (xananode.canonical:source/xananode-com-domain)
+   - Existing: Single Source of Truth (xananode.example:concept/single-source-of-truth)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1505. Source
-   - Existing: XanaNode Core SDK Repository (xananode.canonical:source/xananode-core-sdk-repository)
+   - Existing: GitHub (xananode.example:source/source-github)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1506. Source
-   - Existing: XanaNode Hugo Repository (xananode.canonical:source/xananode-hugo-repository)
+   - Existing: Support (xananode.example:source/source-support)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1507. Source
-   - Existing: XanaNode.net (xananode.canonical:source/xananode-net-domain)
+   - Existing: As We May Think (example.minimal:source/as-we-may-think)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1508. Source
-   - Existing: XanaNode.org (xananode.canonical:source/xananode-org-domain)
+   - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1509. Source
-   - Existing: XanaNode Protocol Repository (xananode.canonical:source/xananode-protocol-repository)
+   - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1510. Source
-   - Existing: XanaNode Studio Repository (xananode.canonical:source/xananode-studio-repository)
+   - Existing: GitHub Profile (xananode.canonical:source/github-profile)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1511. Source
+   - Existing: Hugo Official Site (xananode.canonical:source/hugo-official-site)
+   - Incoming: Source (xananode.canonical:schema/node-type-source)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1512. Source
+   - Existing: Support XanaNode (xananode.canonical:source/support-xananode)
+   - Incoming: Source (xananode.canonical:schema/node-type-source)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1513. Source
+   - Existing: XanaNode.com (xananode.canonical:source/xananode-com-domain)
+   - Incoming: Source (xananode.canonical:schema/node-type-source)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1514. Source
+   - Existing: XanaNode Core SDK Repository (xananode.canonical:source/xananode-core-sdk-repository)
+   - Incoming: Source (xananode.canonical:schema/node-type-source)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1515. Source
+   - Existing: XanaNode Hugo Repository (xananode.canonical:source/xananode-hugo-repository)
+   - Incoming: Source (xananode.canonical:schema/node-type-source)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1516. Source
+   - Existing: XanaNode.net (xananode.canonical:source/xananode-net-domain)
+   - Incoming: Source (xananode.canonical:schema/node-type-source)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1517. Source
+   - Existing: XanaNode.org (xananode.canonical:source/xananode-org-domain)
+   - Incoming: Source (xananode.canonical:schema/node-type-source)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1518. Source
+   - Existing: XanaNode Protocol Repository (xananode.canonical:source/xananode-protocol-repository)
+   - Incoming: Source (xananode.canonical:schema/node-type-source)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1519. Source
+   - Existing: XanaNode Studio Repository (xananode.canonical:source/xananode-studio-repository)
+   - Incoming: Source (xananode.canonical:schema/node-type-source)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1520. Source
    - Existing: XanaNode Workspace Repository (xananode.canonical:source/xananode-workspace-repository)
    - Incoming: Source (xananode.canonical:schema/node-type-source)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1512. Technology
+1521. Technology
    - Existing: Static Publishing (xananode.example:technology/static-publishing)
    - Incoming: Technology (xananode.canonical:schema/node-type-technology)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1513. Technology
+1522. Technology
    - Existing: Hugo (xananode.example:technology/hugo)
    - Incoming: Technology (xananode.canonical:schema/node-type-technology)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1514. Technology
+1523. Technology
    - Existing: Cytoscape.js (xananode.example:technology/cytoscape-js)
    - Incoming: Technology (xananode.canonical:schema/node-type-technology)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1515. Technology
-   - Existing: XanaNode (xananode.example:concept/xananode)
-   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1516. Technology
-   - Existing: XanaNode (xananode.canonical:concept/xananode)
-   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1517. Technology
-   - Existing: Schema (xananode.canonical:schema/node-type-schema)
-   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1518. Technology
-   - Existing: Cytoscape.js (xananode.canonical:technology/cytoscape-js)
-   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1519. Technology
-   - Existing: Git (xananode.canonical:technology/git)
-   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1520. Technology
-   - Existing: Hugo (xananode.canonical:technology/hugo)
-   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1521. Technology
-   - Existing: Node.js (xananode.canonical:technology/nodejs)
-   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1522. Technology
-   - Existing: Python (xananode.canonical:technology/python)
-   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
-1523. Technology
-   - Existing: Micons (xananode.lineage:technology/micons)
-   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
-   - Confidence: 0.78
-   - Reason: Incoming node title or alias closely matches an existing node.
-   - Approved: false
-
 1524. Technology
-   - Existing: Apple Knowledge Navigator (xananode.lineage:technology/apple-knowledge-navigator)
+   - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Technology (xananode.canonical:schema/node-type-technology)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1525. Technology
-   - Existing: HTML (xananode.lineage:technology/html)
+   - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Technology (xananode.canonical:schema/node-type-technology)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1526. Technology
-   - Existing: URL/URI (xananode.lineage:technology/url-uri)
+   - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Technology (xananode.canonical:schema/node-type-technology)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1527. Technology
-   - Existing: HTTP (xananode.lineage:technology/http)
+   - Existing: Cytoscape.js (xananode.canonical:technology/cytoscape-js)
    - Incoming: Technology (xananode.canonical:schema/node-type-technology)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1528. Technology
-   - Existing: Mosaic (xananode.lineage:technology/mosaic)
+   - Existing: Git (xananode.canonical:technology/git)
    - Incoming: Technology (xananode.canonical:schema/node-type-technology)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1529. Technology
-   - Existing: Guide (xananode.lineage:technology/guide)
+   - Existing: Hugo (xananode.canonical:technology/hugo)
    - Incoming: Technology (xananode.canonical:schema/node-type-technology)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1530. Technology
-   - Existing: Git-backed Substrate (xananode.lineage:technology/git-backed-substrate)
+   - Existing: Node.js (xananode.canonical:technology/nodejs)
    - Incoming: Technology (xananode.canonical:schema/node-type-technology)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1531. Technology
-   - Existing: HyperCard (xananode.lineage:technology/hypercard)
+   - Existing: Python (xananode.canonical:technology/python)
    - Incoming: Technology (xananode.canonical:schema/node-type-technology)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
 1532. Technology
+   - Existing: Micons (xananode.lineage:technology/micons)
+   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1533. Technology
+   - Existing: Apple Knowledge Navigator (xananode.lineage:technology/apple-knowledge-navigator)
+   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1534. Technology
+   - Existing: HTML (xananode.lineage:technology/html)
+   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1535. Technology
+   - Existing: URL/URI (xananode.lineage:technology/url-uri)
+   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1536. Technology
+   - Existing: HTTP (xananode.lineage:technology/http)
+   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1537. Technology
+   - Existing: Mosaic (xananode.lineage:technology/mosaic)
+   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1538. Technology
+   - Existing: Guide (xananode.lineage:technology/guide)
+   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1539. Technology
+   - Existing: Git-backed Substrate (xananode.lineage:technology/git-backed-substrate)
+   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1540. Technology
+   - Existing: HyperCard (xananode.lineage:technology/hypercard)
+   - Incoming: Technology (xananode.canonical:schema/node-type-technology)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1541. Technology
    - Existing: World Wide Web (xananode.lineage:technology/world-wide-web)
    - Incoming: Technology (xananode.canonical:schema/node-type-technology)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1533. Trail
+1542. Trail
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Trail (xananode.canonical:schema/node-type-trail)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1534. Trail
+1543. Trail
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Trail (xananode.canonical:schema/node-type-trail)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1535. Trail
+1544. Trail
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Trail (xananode.canonical:schema/node-type-trail)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1536. Birth date
+1545. Birth date
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Birth date (xananode.canonical:schema/property-birth_date)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1537. Birth date
+1546. Birth date
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Birth date (xananode.canonical:schema/property-birth_date)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1538. Birth date
+1547. Birth date
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Birth date (xananode.canonical:schema/property-birth_date)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1539. Currency value
+1548. Currency value
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Currency value (xananode.canonical:schema/property-currency_value)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1540. Currency value
+1549. Currency value
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Currency value (xananode.canonical:schema/property-currency_value)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1541. Currency value
+1550. Currency value
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Currency value (xananode.canonical:schema/property-currency_value)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1542. External identifier
+1551. External identifier
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: External identifier (xananode.canonical:schema/property-external_identifier)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1543. External identifier
+1552. External identifier
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: External identifier (xananode.canonical:schema/property-external_identifier)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1544. External identifier
+1553. External identifier
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: External identifier (xananode.canonical:schema/property-external_identifier)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1545. Geographic coordinates
+1554. Geographic coordinates
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Geographic coordinates (xananode.canonical:schema/property-geo_coordinates)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1546. Geographic coordinates
+1555. Geographic coordinates
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Geographic coordinates (xananode.canonical:schema/property-geo_coordinates)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1547. Geographic coordinates
+1556. Geographic coordinates
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Geographic coordinates (xananode.canonical:schema/property-geo_coordinates)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1548. SI measurement
+1557. SI measurement
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: SI measurement (xananode.canonical:schema/property-measurement_si)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1549. SI measurement
+1558. SI measurement
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: SI measurement (xananode.canonical:schema/property-measurement_si)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1550. SI measurement
+1559. SI measurement
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: SI measurement (xananode.canonical:schema/property-measurement_si)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1551. Property Registry
+1560. Property Registry
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Property Registry (xananode.canonical:schema/property-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1552. Property Registry
+1561. Property Registry
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Property Registry (xananode.canonical:schema/property-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1553. Property Registry
+1562. Property Registry
    - Existing: Xananode Property Registry Schema (xananode.canonical:schema/canonical-schema-xananode-property-registry)
    - Incoming: Property Registry (xananode.canonical:schema/property-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1554. Property Registry
+1563. Property Registry
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Property Registry (xananode.canonical:schema/property-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1555. Property Registry
+1564. Property Registry
    - Existing: Property Registry Schema (xananode.canonical:schema/property-registry-schema)
    - Incoming: Property Registry (xananode.canonical:schema/property-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1556. Property Registry Schema
+1565. Property Registry Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Property Registry Schema (xananode.canonical:schema/property-registry-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1557. Property Registry Schema
+1566. Property Registry Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Property Registry Schema (xananode.canonical:schema/property-registry-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1558. Property Registry Schema
+1567. Property Registry Schema
    - Existing: Xananode Property Registry Schema (xananode.canonical:schema/canonical-schema-xananode-property-registry)
    - Incoming: Property Registry Schema (xananode.canonical:schema/property-registry-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1559. Property Registry Schema
+1568. Property Registry Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Property Registry Schema (xananode.canonical:schema/property-registry-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1560. Property Registry Schema
+1569. Property Registry Schema
    - Existing: Property Registry (xananode.canonical:schema/property-registry)
    - Incoming: Property Registry Schema (xananode.canonical:schema/property-registry-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1561. Alias of
+1570. Alias of
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Alias of (xananode.canonical:schema/relationship-type-alias_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1562. Alias of
+1571. Alias of
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Alias of (xananode.canonical:schema/relationship-type-alias_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1563. Alias of
+1572. Alias of
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Alias of (xananode.canonical:schema/relationship-type-alias_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1564. Alias of
+1573. Alias of
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Alias of (xananode.canonical:schema/relationship-type-alias_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1565. Alternative to
+1574. Alternative to
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Alternative to (xananode.canonical:schema/relationship-type-alternative_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1566. Alternative to
+1575. Alternative to
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Alternative to (xananode.canonical:schema/relationship-type-alternative_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1567. Alternative to
+1576. Alternative to
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Alternative to (xananode.canonical:schema/relationship-type-alternative_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1568. Alternative to
+1577. Alternative to
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Alternative to (xananode.canonical:schema/relationship-type-alternative_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1569. Anticipated
+1578. Anticipated
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Anticipated (xananode.canonical:schema/relationship-type-anticipated)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1570. Anticipated
+1579. Anticipated
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Anticipated (xananode.canonical:schema/relationship-type-anticipated)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1571. Anticipated
+1580. Anticipated
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Anticipated (xananode.canonical:schema/relationship-type-anticipated)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1572. Anticipated
+1581. Anticipated
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Anticipated (xananode.canonical:schema/relationship-type-anticipated)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1573. Anticipated
+1582. Anticipated
    - Existing: Anticipated By Relationship Term (xananode.canonical:schema/relationship-type-anticipated_by)
    - Incoming: Anticipated (xananode.canonical:schema/relationship-type-anticipated)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1574. Anticipated By Relationship Term
+1583. Anticipated By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Anticipated By Relationship Term (xananode.canonical:schema/relationship-type-anticipated_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1575. Anticipated By Relationship Term
+1584. Anticipated By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Anticipated By Relationship Term (xananode.canonical:schema/relationship-type-anticipated_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1576. Anticipated By Relationship Term
+1585. Anticipated By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Anticipated By Relationship Term (xananode.canonical:schema/relationship-type-anticipated_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1577. Anticipated By Relationship Term
+1586. Anticipated By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Anticipated By Relationship Term (xananode.canonical:schema/relationship-type-anticipated_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1578. Anticipated By Relationship Term
+1587. Anticipated By Relationship Term
    - Existing: Anticipated (xananode.canonical:schema/relationship-type-anticipated)
    - Incoming: Anticipated By Relationship Term (xananode.canonical:schema/relationship-type-anticipated_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1579. Anticipates
+1588. Anticipates
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Anticipates (xananode.canonical:schema/relationship-type-anticipates)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1580. Anticipates
+1589. Anticipates
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Anticipates (xananode.canonical:schema/relationship-type-anticipates)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1581. Anticipates
+1590. Anticipates
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Anticipates (xananode.canonical:schema/relationship-type-anticipates)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1582. Anticipates
+1591. Anticipates
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Anticipates (xananode.canonical:schema/relationship-type-anticipates)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1583. Appears in
+1592. Appears in
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Appears in (xananode.canonical:schema/relationship-type-appears_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1584. Appears in
+1593. Appears in
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Appears in (xananode.canonical:schema/relationship-type-appears_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1585. Appears in
+1594. Appears in
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Appears in (xananode.canonical:schema/relationship-type-appears_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1586. Appears in
+1595. Appears in
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Appears in (xananode.canonical:schema/relationship-type-appears_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1587. Approved
+1596. Approved
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Approved (xananode.canonical:schema/relationship-type-approved)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1588. Approved
+1597. Approved
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Approved (xananode.canonical:schema/relationship-type-approved)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1589. Approved
+1598. Approved
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Approved (xananode.canonical:schema/relationship-type-approved)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1590. Approved
+1599. Approved
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Approved (xananode.canonical:schema/relationship-type-approved)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1591. Approved
+1600. Approved
    - Existing: Approved By Relationship Term (xananode.canonical:schema/relationship-type-approved_by)
    - Incoming: Approved (xananode.canonical:schema/relationship-type-approved)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1592. Approved By Relationship Term
+1601. Approved By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Approved By Relationship Term (xananode.canonical:schema/relationship-type-approved_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1593. Approved By Relationship Term
+1602. Approved By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Approved By Relationship Term (xananode.canonical:schema/relationship-type-approved_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1594. Approved By Relationship Term
+1603. Approved By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Approved By Relationship Term (xananode.canonical:schema/relationship-type-approved_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1595. Approved By Relationship Term
+1604. Approved By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Approved By Relationship Term (xananode.canonical:schema/relationship-type-approved_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1596. Approved By Relationship Term
+1605. Approved By Relationship Term
    - Existing: Approved (xananode.canonical:schema/relationship-type-approved)
    - Incoming: Approved By Relationship Term (xananode.canonical:schema/relationship-type-approved_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1597. Arrived From Relationship Term
+1606. Arrived From Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Arrived From Relationship Term (xananode.canonical:schema/relationship-type-arrived_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1598. Arrived From Relationship Term
+1607. Arrived From Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Arrived From Relationship Term (xananode.canonical:schema/relationship-type-arrived_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1599. Arrived From Relationship Term
+1608. Arrived From Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Arrived From Relationship Term (xananode.canonical:schema/relationship-type-arrived_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1600. Arrived From Relationship Term
+1609. Arrived From Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Arrived From Relationship Term (xananode.canonical:schema/relationship-type-arrived_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1601. Arrives at
+1610. Arrives at
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Arrives at (xananode.canonical:schema/relationship-type-arrives_at)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1602. Arrives at
+1611. Arrives at
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Arrives at (xananode.canonical:schema/relationship-type-arrives_at)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1603. Arrives at
+1612. Arrives at
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Arrives at (xananode.canonical:schema/relationship-type-arrives_at)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1604. Arrives at
+1613. Arrives at
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Arrives at (xananode.canonical:schema/relationship-type-arrives_at)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1605. Authored
+1614. Authored
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Authored (xananode.canonical:schema/relationship-type-authored)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1606. Authored
+1615. Authored
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Authored (xananode.canonical:schema/relationship-type-authored)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1607. Authored
+1616. Authored
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Authored (xananode.canonical:schema/relationship-type-authored)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1608. Authored
+1617. Authored
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Authored (xananode.canonical:schema/relationship-type-authored)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1609. Authored
+1618. Authored
    - Existing: Authored By Relationship Term (xananode.canonical:schema/relationship-type-authored_by)
    - Incoming: Authored (xananode.canonical:schema/relationship-type-authored)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1610. Authored By Relationship Term
+1619. Authored
+   - Existing: Authored Substrate Overlap (xananode.lineage:concept/authored-substrate-overlap)
+   - Incoming: Authored (xananode.canonical:schema/relationship-type-authored)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1620. Authored
+   - Existing: Merge is Authored Interpretation (xananode.lineage:claim/merge-is-authored-interpretation)
+   - Incoming: Authored (xananode.canonical:schema/relationship-type-authored)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+1621. Authored By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Authored By Relationship Term (xananode.canonical:schema/relationship-type-authored_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1611. Authored By Relationship Term
+1622. Authored By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Authored By Relationship Term (xananode.canonical:schema/relationship-type-authored_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1612. Authored By Relationship Term
+1623. Authored By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Authored By Relationship Term (xananode.canonical:schema/relationship-type-authored_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1613. Authored By Relationship Term
+1624. Authored By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Authored By Relationship Term (xananode.canonical:schema/relationship-type-authored_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1614. Authored By Relationship Term
+1625. Authored By Relationship Term
    - Existing: Authored (xananode.canonical:schema/relationship-type-authored)
    - Incoming: Authored By Relationship Term (xananode.canonical:schema/relationship-type-authored_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1615. Broader than
+1626. Broader than
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Broader than (xananode.canonical:schema/relationship-type-broader_than)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1616. Broader than
+1627. Broader than
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Broader than (xananode.canonical:schema/relationship-type-broader_than)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1617. Broader than
+1628. Broader than
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Broader than (xananode.canonical:schema/relationship-type-broader_than)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1618. Broader than
+1629. Broader than
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Broader than (xananode.canonical:schema/relationship-type-broader_than)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1619. Cited By Relationship Term
+1630. Cited By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Cited By Relationship Term (xananode.canonical:schema/relationship-type-cited_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1620. Cited By Relationship Term
+1631. Cited By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Cited By Relationship Term (xananode.canonical:schema/relationship-type-cited_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1621. Cited By Relationship Term
+1632. Cited By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Cited By Relationship Term (xananode.canonical:schema/relationship-type-cited_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1622. Cited By Relationship Term
+1633. Cited By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Cited By Relationship Term (xananode.canonical:schema/relationship-type-cited_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1623. Cites
+1634. Cites
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Cites (xananode.canonical:schema/relationship-type-cites)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1624. Cites
+1635. Cites
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Cites (xananode.canonical:schema/relationship-type-cites)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1625. Cites
+1636. Cites
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Cites (xananode.canonical:schema/relationship-type-cites)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1626. Cites
+1637. Cites
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Cites (xananode.canonical:schema/relationship-type-cites)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1627. Claim Of Relationship Term
+1638. Claim Of Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Claim Of Relationship Term (xananode.canonical:schema/relationship-type-claim_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1628. Claim Of Relationship Term
+1639. Claim Of Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Claim Of Relationship Term (xananode.canonical:schema/relationship-type-claim_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1629. Claim Of Relationship Term
+1640. Claim Of Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Claim Of Relationship Term (xananode.canonical:schema/relationship-type-claim_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1630. Claim Of Relationship Term
+1641. Claim Of Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Claim Of Relationship Term (xananode.canonical:schema/relationship-type-claim_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1631. Clarified By Relationship Term
+1642. Clarified By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Clarified By Relationship Term (xananode.canonical:schema/relationship-type-clarified_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1632. Clarified By Relationship Term
+1643. Clarified By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Clarified By Relationship Term (xananode.canonical:schema/relationship-type-clarified_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1633. Clarified By Relationship Term
+1644. Clarified By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Clarified By Relationship Term (xananode.canonical:schema/relationship-type-clarified_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1634. Clarified By Relationship Term
+1645. Clarified By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Clarified By Relationship Term (xananode.canonical:schema/relationship-type-clarified_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1635. Clarifies
+1646. Clarifies
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Clarifies (xananode.canonical:schema/relationship-type-clarifies)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1636. Clarifies
+1647. Clarifies
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Clarifies (xananode.canonical:schema/relationship-type-clarifies)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1637. Clarifies
+1648. Clarifies
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Clarifies (xananode.canonical:schema/relationship-type-clarifies)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1638. Clarifies
+1649. Clarifies
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Clarifies (xananode.canonical:schema/relationship-type-clarifies)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1639. Coined
+1650. Coined
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Coined (xananode.canonical:schema/relationship-type-coined)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1640. Coined
+1651. Coined
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Coined (xananode.canonical:schema/relationship-type-coined)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1641. Coined
+1652. Coined
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Coined (xananode.canonical:schema/relationship-type-coined)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1642. Coined
+1653. Coined
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Coined (xananode.canonical:schema/relationship-type-coined)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1643. Coined
+1654. Coined
    - Existing: Coined By Relationship Term (xananode.canonical:schema/relationship-type-coined_by)
    - Incoming: Coined (xananode.canonical:schema/relationship-type-coined)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1644. Coined By Relationship Term
+1655. Coined By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Coined By Relationship Term (xananode.canonical:schema/relationship-type-coined_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1645. Coined By Relationship Term
+1656. Coined By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Coined By Relationship Term (xananode.canonical:schema/relationship-type-coined_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1646. Coined By Relationship Term
+1657. Coined By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Coined By Relationship Term (xananode.canonical:schema/relationship-type-coined_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1647. Coined By Relationship Term
+1658. Coined By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Coined By Relationship Term (xananode.canonical:schema/relationship-type-coined_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1648. Coined By Relationship Term
+1659. Coined By Relationship Term
    - Existing: Coined (xananode.canonical:schema/relationship-type-coined)
    - Incoming: Coined By Relationship Term (xananode.canonical:schema/relationship-type-coined_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1649. Collaborated with
+1660. Collaborated with
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Collaborated with (xananode.canonical:schema/relationship-type-collaborated_with)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1650. Collaborated with
+1661. Collaborated with
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Collaborated with (xananode.canonical:schema/relationship-type-collaborated_with)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1651. Collaborated with
+1662. Collaborated with
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Collaborated with (xananode.canonical:schema/relationship-type-collaborated_with)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1652. Collaborated with
+1663. Collaborated with
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Collaborated with (xananode.canonical:schema/relationship-type-collaborated_with)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1653. Compatible with
+1664. Compatible with
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Compatible with (xananode.canonical:schema/relationship-type-compatible_with)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1654. Compatible with
+1665. Compatible with
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Compatible with (xananode.canonical:schema/relationship-type-compatible_with)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1655. Compatible with
+1666. Compatible with
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Compatible with (xananode.canonical:schema/relationship-type-compatible_with)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1656. Compatible with
+1667. Compatible with
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Compatible with (xananode.canonical:schema/relationship-type-compatible_with)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1657. Contains
+1668. Contains
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Contains (xananode.canonical:schema/relationship-type-contains)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1658. Contains
+1669. Contains
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Contains (xananode.canonical:schema/relationship-type-contains)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1659. Contains
+1670. Contains
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Contains (xananode.canonical:schema/relationship-type-contains)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1660. Contains
+1671. Contains
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Contains (xananode.canonical:schema/relationship-type-contains)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1661. Contemporary of
+1672. Contemporary of
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Contemporary of (xananode.canonical:schema/relationship-type-contemporary_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1662. Contemporary of
+1673. Contemporary of
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Contemporary of (xananode.canonical:schema/relationship-type-contemporary_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1663. Contemporary of
+1674. Contemporary of
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Contemporary of (xananode.canonical:schema/relationship-type-contemporary_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1664. Contemporary of
+1675. Contemporary of
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Contemporary of (xananode.canonical:schema/relationship-type-contemporary_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1665. Context for
+1676. Context for
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Context for (xananode.canonical:schema/relationship-type-context_for)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1666. Context for
+1677. Context for
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Context for (xananode.canonical:schema/relationship-type-context_for)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1667. Context for
+1678. Context for
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Context for (xananode.canonical:schema/relationship-type-context_for)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1668. Context for
+1679. Context for
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Context for (xananode.canonical:schema/relationship-type-context_for)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1669. Continued From Relationship Term
+1680. Continued From Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Continued From Relationship Term (xananode.canonical:schema/relationship-type-continued_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1670. Continued From Relationship Term
+1681. Continued From Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Continued From Relationship Term (xananode.canonical:schema/relationship-type-continued_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1671. Continued From Relationship Term
+1682. Continued From Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Continued From Relationship Term (xananode.canonical:schema/relationship-type-continued_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1672. Continued From Relationship Term
+1683. Continued From Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Continued From Relationship Term (xananode.canonical:schema/relationship-type-continued_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1673. Continues to
+1684. Continues to
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Continues to (xananode.canonical:schema/relationship-type-continues_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1674. Continues to
+1685. Continues to
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Continues to (xananode.canonical:schema/relationship-type-continues_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1675. Continues to
+1686. Continues to
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Continues to (xananode.canonical:schema/relationship-type-continues_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1676. Continues to
+1687. Continues to
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Continues to (xananode.canonical:schema/relationship-type-continues_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1677. Contradicted By Relationship Term
+1688. Contradicted By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Contradicted By Relationship Term (xananode.canonical:schema/relationship-type-contradicted_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1678. Contradicted By Relationship Term
+1689. Contradicted By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Contradicted By Relationship Term (xananode.canonical:schema/relationship-type-contradicted_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1679. Contradicted By Relationship Term
+1690. Contradicted By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Contradicted By Relationship Term (xananode.canonical:schema/relationship-type-contradicted_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1680. Contradicted By Relationship Term
+1691. Contradicted By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Contradicted By Relationship Term (xananode.canonical:schema/relationship-type-contradicted_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1681. Contradicts
+1692. Contradicts
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Contradicts (xananode.canonical:schema/relationship-type-contradicts)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1682. Contradicts
+1693. Contradicts
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Contradicts (xananode.canonical:schema/relationship-type-contradicts)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1683. Contradicts
+1694. Contradicts
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Contradicts (xananode.canonical:schema/relationship-type-contradicts)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1684. Contradicts
+1695. Contradicts
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Contradicts (xananode.canonical:schema/relationship-type-contradicts)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1685. Contrasts with
+1696. Contrasts with
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Contrasts with (xananode.canonical:schema/relationship-type-contrasts_with)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1686. Contrasts with
+1697. Contrasts with
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Contrasts with (xananode.canonical:schema/relationship-type-contrasts_with)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1687. Contrasts with
+1698. Contrasts with
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Contrasts with (xananode.canonical:schema/relationship-type-contrasts_with)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1688. Contrasts with
+1699. Contrasts with
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Contrasts with (xananode.canonical:schema/relationship-type-contrasts_with)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1689. Created
+1700. Created
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Created (xananode.canonical:schema/relationship-type-created)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1690. Created
+1701. Created
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Created (xananode.canonical:schema/relationship-type-created)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1691. Created
+1702. Created
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Created (xananode.canonical:schema/relationship-type-created)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1692. Created
+1703. Created
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Created (xananode.canonical:schema/relationship-type-created)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1693. Created
+1704. Created
    - Existing: Created By Relationship Term (xananode.canonical:schema/relationship-type-created_by)
    - Incoming: Created (xananode.canonical:schema/relationship-type-created)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1694. Created By Relationship Term
+1705. Created By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Created By Relationship Term (xananode.canonical:schema/relationship-type-created_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1695. Created By Relationship Term
+1706. Created By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Created By Relationship Term (xananode.canonical:schema/relationship-type-created_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1696. Created By Relationship Term
+1707. Created By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Created By Relationship Term (xananode.canonical:schema/relationship-type-created_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1697. Created By Relationship Term
+1708. Created By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Created By Relationship Term (xananode.canonical:schema/relationship-type-created_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1698. Created By Relationship Term
+1709. Created By Relationship Term
    - Existing: Created (xananode.canonical:schema/relationship-type-created)
    - Incoming: Created By Relationship Term (xananode.canonical:schema/relationship-type-created_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1699. Deep Linked From Relationship Term
+1710. Deep Linked From Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Deep Linked From Relationship Term (xananode.canonical:schema/relationship-type-deep_linked_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1700. Deep Linked From Relationship Term
+1711. Deep Linked From Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Deep Linked From Relationship Term (xananode.canonical:schema/relationship-type-deep_linked_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1701. Deep Linked From Relationship Term
+1712. Deep Linked From Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Deep Linked From Relationship Term (xananode.canonical:schema/relationship-type-deep_linked_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1702. Deep Linked From Relationship Term
+1713. Deep Linked From Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Deep Linked From Relationship Term (xananode.canonical:schema/relationship-type-deep_linked_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1703. Deep links to
+1714. Deep links to
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Deep links to (xananode.canonical:schema/relationship-type-deep_links_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1704. Deep links to
+1715. Deep links to
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Deep links to (xananode.canonical:schema/relationship-type-deep_links_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1705. Deep links to
+1716. Deep links to
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Deep links to (xananode.canonical:schema/relationship-type-deep_links_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1706. Deep links to
+1717. Deep links to
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Deep links to (xananode.canonical:schema/relationship-type-deep_links_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1707. Defined By Relationship Term
+1718. Defined By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Defined By Relationship Term (xananode.canonical:schema/relationship-type-defined_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1708. Defined By Relationship Term
+1719. Defined By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Defined By Relationship Term (xananode.canonical:schema/relationship-type-defined_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1709. Defined By Relationship Term
+1720. Defined By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Defined By Relationship Term (xananode.canonical:schema/relationship-type-defined_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1710. Defined By Relationship Term
+1721. Defined By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Defined By Relationship Term (xananode.canonical:schema/relationship-type-defined_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1711. Defines
+1722. Defines
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Defines (xananode.canonical:schema/relationship-type-defines)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1712. Defines
+1723. Defines
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Defines (xananode.canonical:schema/relationship-type-defines)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1713. Defines
+1724. Defines
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Defines (xananode.canonical:schema/relationship-type-defines)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1714. Defines
+1725. Defines
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Defines (xananode.canonical:schema/relationship-type-defines)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1715. Demonstrated By Relationship Term
+1726. Demonstrated By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Demonstrated By Relationship Term (xananode.canonical:schema/relationship-type-demonstrated_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1716. Demonstrated By Relationship Term
+1727. Demonstrated By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Demonstrated By Relationship Term (xananode.canonical:schema/relationship-type-demonstrated_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1717. Demonstrated By Relationship Term
+1728. Demonstrated By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Demonstrated By Relationship Term (xananode.canonical:schema/relationship-type-demonstrated_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1718. Demonstrated By Relationship Term
+1729. Demonstrated By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Demonstrated By Relationship Term (xananode.canonical:schema/relationship-type-demonstrated_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1719. Demonstrates
+1730. Demonstrates
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Demonstrates (xananode.canonical:schema/relationship-type-demonstrates)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1720. Demonstrates
+1731. Demonstrates
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Demonstrates (xananode.canonical:schema/relationship-type-demonstrates)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1721. Demonstrates
+1732. Demonstrates
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Demonstrates (xananode.canonical:schema/relationship-type-demonstrates)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1722. Demonstrates
+1733. Demonstrates
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Demonstrates (xananode.canonical:schema/relationship-type-demonstrates)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1723. Dependency Of Relationship Term
+1734. Dependency Of Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Dependency Of Relationship Term (xananode.canonical:schema/relationship-type-dependency_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1724. Dependency Of Relationship Term
+1735. Dependency Of Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Dependency Of Relationship Term (xananode.canonical:schema/relationship-type-dependency_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1725. Dependency Of Relationship Term
+1736. Dependency Of Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Dependency Of Relationship Term (xananode.canonical:schema/relationship-type-dependency_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1726. Dependency Of Relationship Term
+1737. Dependency Of Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Dependency Of Relationship Term (xananode.canonical:schema/relationship-type-dependency_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1727. Depends on
+1738. Depends on
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Depends on (xananode.canonical:schema/relationship-type-depends_on)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1728. Depends on
+1739. Depends on
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Depends on (xananode.canonical:schema/relationship-type-depends_on)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1729. Depends on
+1740. Depends on
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Depends on (xananode.canonical:schema/relationship-type-depends_on)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1730. Depends on
+1741. Depends on
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Depends on (xananode.canonical:schema/relationship-type-depends_on)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1731. Depicted By Relationship Term
+1742. Depicted By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Depicted By Relationship Term (xananode.canonical:schema/relationship-type-depicted_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1732. Depicted By Relationship Term
+1743. Depicted By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Depicted By Relationship Term (xananode.canonical:schema/relationship-type-depicted_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1733. Depicted By Relationship Term
+1744. Depicted By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Depicted By Relationship Term (xananode.canonical:schema/relationship-type-depicted_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1734. Depicted By Relationship Term
+1745. Depicted By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Depicted By Relationship Term (xananode.canonical:schema/relationship-type-depicted_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1735. Depicts
+1746. Depicts
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Depicts (xananode.canonical:schema/relationship-type-depicts)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1736. Depicts
+1747. Depicts
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Depicts (xananode.canonical:schema/relationship-type-depicts)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1737. Depicts
+1748. Depicts
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Depicts (xananode.canonical:schema/relationship-type-depicts)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1738. Depicts
+1749. Depicts
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Depicts (xananode.canonical:schema/relationship-type-depicts)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1739. Derived from
+1750. Derived from
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Derived from (xananode.canonical:schema/relationship-type-derived_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1740. Derived from
+1751. Derived from
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Derived from (xananode.canonical:schema/relationship-type-derived_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1741. Derived from
+1752. Derived from
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Derived from (xananode.canonical:schema/relationship-type-derived_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1742. Derived from
+1753. Derived from
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Derived from (xananode.canonical:schema/relationship-type-derived_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1743. Derived Into Relationship Term
+1754. Derived Into Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Derived Into Relationship Term (xananode.canonical:schema/relationship-type-derived_into)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1744. Derived Into Relationship Term
+1755. Derived Into Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Derived Into Relationship Term (xananode.canonical:schema/relationship-type-derived_into)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1745. Derived Into Relationship Term
+1756. Derived Into Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Derived Into Relationship Term (xananode.canonical:schema/relationship-type-derived_into)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1746. Derived Into Relationship Term
+1757. Derived Into Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Derived Into Relationship Term (xananode.canonical:schema/relationship-type-derived_into)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1747. Discussed In Relationship Term
+1758. Discussed In Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Discussed In Relationship Term (xananode.canonical:schema/relationship-type-discussed_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1748. Discussed In Relationship Term
+1759. Discussed In Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Discussed In Relationship Term (xananode.canonical:schema/relationship-type-discussed_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1749. Discussed In Relationship Term
+1760. Discussed In Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Discussed In Relationship Term (xananode.canonical:schema/relationship-type-discussed_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1750. Discussed In Relationship Term
+1761. Discussed In Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Discussed In Relationship Term (xananode.canonical:schema/relationship-type-discussed_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1751. Discusses
+1762. Discusses
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Discusses (xananode.canonical:schema/relationship-type-discusses)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1752. Discusses
+1763. Discusses
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Discusses (xananode.canonical:schema/relationship-type-discusses)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1753. Discusses
+1764. Discusses
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Discusses (xananode.canonical:schema/relationship-type-discusses)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1754. Discusses
+1765. Discusses
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Discusses (xananode.canonical:schema/relationship-type-discusses)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1755. Disputed By Relationship Term
+1766. Disputed By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Disputed By Relationship Term (xananode.canonical:schema/relationship-type-disputed_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1756. Disputed By Relationship Term
+1767. Disputed By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Disputed By Relationship Term (xananode.canonical:schema/relationship-type-disputed_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1757. Disputed By Relationship Term
+1768. Disputed By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Disputed By Relationship Term (xananode.canonical:schema/relationship-type-disputed_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1758. Disputed By Relationship Term
+1769. Disputed By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Disputed By Relationship Term (xananode.canonical:schema/relationship-type-disputed_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1759. Disputed identity
+1770. Disputed identity
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Disputed identity (xananode.canonical:schema/relationship-type-disputed_identity)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1760. Disputed identity
+1771. Disputed identity
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Disputed identity (xananode.canonical:schema/relationship-type-disputed_identity)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1761. Disputed identity
+1772. Disputed identity
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Disputed identity (xananode.canonical:schema/relationship-type-disputed_identity)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1762. Disputed identity
+1773. Disputed identity
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Disputed identity (xananode.canonical:schema/relationship-type-disputed_identity)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1763. Disputed identity
+1774. Disputed identity
    - Existing: Conflict and Disputed Identity (xananode.lineage:concept/conflict-disputed-identity)
    - Incoming: Disputed identity (xananode.canonical:schema/relationship-type-disputed_identity)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1764. Disputes
+1775. Disputes
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Disputes (xananode.canonical:schema/relationship-type-disputes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1765. Disputes
+1776. Disputes
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Disputes (xananode.canonical:schema/relationship-type-disputes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1766. Disputes
+1777. Disputes
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Disputes (xananode.canonical:schema/relationship-type-disputes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1767. Disputes
+1778. Disputes
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Disputes (xananode.canonical:schema/relationship-type-disputes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1768. Documented By Relationship Term
+1779. Documented By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Documented By Relationship Term (xananode.canonical:schema/relationship-type-documented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1769. Documented By Relationship Term
+1780. Documented By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Documented By Relationship Term (xananode.canonical:schema/relationship-type-documented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1770. Documented By Relationship Term
+1781. Documented By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Documented By Relationship Term (xananode.canonical:schema/relationship-type-documented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1771. Documented By Relationship Term
+1782. Documented By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Documented By Relationship Term (xananode.canonical:schema/relationship-type-documented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1772. Documents
+1783. Documents
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Documents (xananode.canonical:schema/relationship-type-documents)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1773. Documents
+1784. Documents
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Documents (xananode.canonical:schema/relationship-type-documents)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1774. Documents
+1785. Documents
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Documents (xananode.canonical:schema/relationship-type-documents)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1775. Documents
+1786. Documents
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Documents (xananode.canonical:schema/relationship-type-documents)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1776. Enabled By Relationship Term
+1787. Enabled By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Enabled By Relationship Term (xananode.canonical:schema/relationship-type-enabled_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1777. Enabled By Relationship Term
+1788. Enabled By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Enabled By Relationship Term (xananode.canonical:schema/relationship-type-enabled_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1778. Enabled By Relationship Term
+1789. Enabled By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Enabled By Relationship Term (xananode.canonical:schema/relationship-type-enabled_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1779. Enabled By Relationship Term
+1790. Enabled By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Enabled By Relationship Term (xananode.canonical:schema/relationship-type-enabled_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1780. Enables
+1791. Enables
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Enables (xananode.canonical:schema/relationship-type-enables)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1781. Enables
+1792. Enables
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Enables (xananode.canonical:schema/relationship-type-enables)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1782. Enables
+1793. Enables
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Enables (xananode.canonical:schema/relationship-type-enables)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1783. Enables
+1794. Enables
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Enables (xananode.canonical:schema/relationship-type-enables)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1784. Equivalent to
+1795. Equivalent to
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Equivalent to (xananode.canonical:schema/relationship-type-equivalent_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1785. Equivalent to
+1796. Equivalent to
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Equivalent to (xananode.canonical:schema/relationship-type-equivalent_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1786. Equivalent to
+1797. Equivalent to
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Equivalent to (xananode.canonical:schema/relationship-type-equivalent_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1787. Equivalent to
+1798. Equivalent to
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Equivalent to (xananode.canonical:schema/relationship-type-equivalent_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1788. Evidence for
+1799. Evidence for
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Evidence for (xananode.canonical:schema/relationship-type-evidence_for)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1789. Evidence for
+1800. Evidence for
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Evidence for (xananode.canonical:schema/relationship-type-evidence_for)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1790. Evidence for
+1801. Evidence for
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Evidence for (xananode.canonical:schema/relationship-type-evidence_for)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1791. Evidence for
+1802. Evidence for
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Evidence for (xananode.canonical:schema/relationship-type-evidence_for)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1792. Explained By Relationship Term
+1803. Explained By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Explained By Relationship Term (xananode.canonical:schema/relationship-type-explained_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1793. Explained By Relationship Term
+1804. Explained By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Explained By Relationship Term (xananode.canonical:schema/relationship-type-explained_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1794. Explained By Relationship Term
+1805. Explained By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Explained By Relationship Term (xananode.canonical:schema/relationship-type-explained_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1795. Explained By Relationship Term
+1806. Explained By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Explained By Relationship Term (xananode.canonical:schema/relationship-type-explained_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1796. Explains
+1807. Explains
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Explains (xananode.canonical:schema/relationship-type-explains)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1797. Explains
+1808. Explains
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Explains (xananode.canonical:schema/relationship-type-explains)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1798. Explains
+1809. Explains
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Explains (xananode.canonical:schema/relationship-type-explains)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1799. Explains
+1810. Explains
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Explains (xananode.canonical:schema/relationship-type-explains)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1800. Extended By Relationship Term
+1811. Extended By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Extended By Relationship Term (xananode.canonical:schema/relationship-type-extended_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1801. Extended By Relationship Term
+1812. Extended By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Extended By Relationship Term (xananode.canonical:schema/relationship-type-extended_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1802. Extended By Relationship Term
+1813. Extended By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Extended By Relationship Term (xananode.canonical:schema/relationship-type-extended_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1803. Extended By Relationship Term
+1814. Extended By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Extended By Relationship Term (xananode.canonical:schema/relationship-type-extended_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1804. Extends
+1815. Extends
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Extends (xananode.canonical:schema/relationship-type-extends)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1805. Extends
+1816. Extends
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Extends (xananode.canonical:schema/relationship-type-extends)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1806. Extends
+1817. Extends
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Extends (xananode.canonical:schema/relationship-type-extends)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1807. Extends
+1818. Extends
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Extends (xananode.canonical:schema/relationship-type-extends)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1808. Extension of
+1819. Extension of
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Extension of (xananode.canonical:schema/relationship-type-extension_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1809. Extension of
+1820. Extension of
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Extension of (xananode.canonical:schema/relationship-type-extension_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1810. Extension of
+1821. Extension of
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Extension of (xananode.canonical:schema/relationship-type-extension_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1811. Extension of
+1822. Extension of
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Extension of (xananode.canonical:schema/relationship-type-extension_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1812. Featured In Relationship Term
+1823. Featured In Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Featured In Relationship Term (xananode.canonical:schema/relationship-type-featured_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1813. Featured In Relationship Term
+1824. Featured In Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Featured In Relationship Term (xananode.canonical:schema/relationship-type-featured_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1814. Featured In Relationship Term
+1825. Featured In Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Featured In Relationship Term (xananode.canonical:schema/relationship-type-featured_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1815. Featured In Relationship Term
+1826. Featured In Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Featured In Relationship Term (xananode.canonical:schema/relationship-type-featured_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1816. Featured Speaker Relationship Term
+1827. Featured Speaker Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Featured Speaker Relationship Term (xananode.canonical:schema/relationship-type-featured_speaker)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1817. Featured Speaker Relationship Term
+1828. Featured Speaker Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Featured Speaker Relationship Term (xananode.canonical:schema/relationship-type-featured_speaker)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1818. Featured Speaker Relationship Term
+1829. Featured Speaker Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Featured Speaker Relationship Term (xananode.canonical:schema/relationship-type-featured_speaker)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1819. Featured Speaker Relationship Term
+1830. Featured Speaker Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Featured Speaker Relationship Term (xananode.canonical:schema/relationship-type-featured_speaker)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1820. Features
+1831. Features
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Features (xananode.canonical:schema/relationship-type-features)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1821. Features
+1832. Features
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Features (xananode.canonical:schema/relationship-type-features)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1822. Features
+1833. Features
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Features (xananode.canonical:schema/relationship-type-features)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1823. Features
+1834. Features
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Features (xananode.canonical:schema/relationship-type-features)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1824. Followed Relationship Term
+1835. Followed Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Followed Relationship Term (xananode.canonical:schema/relationship-type-followed)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1825. Followed Relationship Term
+1836. Followed Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Followed Relationship Term (xananode.canonical:schema/relationship-type-followed)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1826. Followed Relationship Term
+1837. Followed Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Followed Relationship Term (xananode.canonical:schema/relationship-type-followed)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1827. Followed Relationship Term
+1838. Followed Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Followed Relationship Term (xananode.canonical:schema/relationship-type-followed)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1828. Friend of
+1839. Friend of
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Friend of (xananode.canonical:schema/relationship-type-friend_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1829. Friend of
+1840. Friend of
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Friend of (xananode.canonical:schema/relationship-type-friend_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1830. Friend of
+1841. Friend of
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Friend of (xananode.canonical:schema/relationship-type-friend_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1831. Friend of
+1842. Friend of
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Friend of (xananode.canonical:schema/relationship-type-friend_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1832. Had Participant Relationship Term
+1843. Had Participant Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Had Participant Relationship Term (xananode.canonical:schema/relationship-type-had_participant)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1833. Had Participant Relationship Term
+1844. Had Participant Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Had Participant Relationship Term (xananode.canonical:schema/relationship-type-had_participant)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1834. Had Participant Relationship Term
+1845. Had Participant Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Had Participant Relationship Term (xananode.canonical:schema/relationship-type-had_participant)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1835. Had Participant Relationship Term
+1846. Had Participant Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Had Participant Relationship Term (xananode.canonical:schema/relationship-type-had_participant)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1836. Has Alias Relationship Term
+1847. Has Alias Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Has Alias Relationship Term (xananode.canonical:schema/relationship-type-has_alias)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1837. Has Alias Relationship Term
+1848. Has Alias Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Has Alias Relationship Term (xananode.canonical:schema/relationship-type-has_alias)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1838. Has Alias Relationship Term
+1849. Has Alias Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Has Alias Relationship Term (xananode.canonical:schema/relationship-type-has_alias)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1839. Has Alias Relationship Term
+1850. Has Alias Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Has Alias Relationship Term (xananode.canonical:schema/relationship-type-has_alias)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1840. Has Appearance Relationship Term
+1851. Has Appearance Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Has Appearance Relationship Term (xananode.canonical:schema/relationship-type-has_appearance)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1841. Has Appearance Relationship Term
+1852. Has Appearance Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Has Appearance Relationship Term (xananode.canonical:schema/relationship-type-has_appearance)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1842. Has Appearance Relationship Term
+1853. Has Appearance Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Has Appearance Relationship Term (xananode.canonical:schema/relationship-type-has_appearance)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1843. Has Appearance Relationship Term
+1854. Has Appearance Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Has Appearance Relationship Term (xananode.canonical:schema/relationship-type-has_appearance)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1844. Has claim
+1855. Has claim
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Has claim (xananode.canonical:schema/relationship-type-has_claim)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1845. Has claim
+1856. Has claim
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Has claim (xananode.canonical:schema/relationship-type-has_claim)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1846. Has claim
+1857. Has claim
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Has claim (xananode.canonical:schema/relationship-type-has_claim)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1847. Has claim
+1858. Has claim
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Has claim (xananode.canonical:schema/relationship-type-has_claim)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1848. Has Context Relationship Term
+1859. Has Context Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Has Context Relationship Term (xananode.canonical:schema/relationship-type-has_context)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1849. Has Context Relationship Term
+1860. Has Context Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Has Context Relationship Term (xananode.canonical:schema/relationship-type-has_context)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1850. Has Context Relationship Term
+1861. Has Context Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Has Context Relationship Term (xananode.canonical:schema/relationship-type-has_context)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1851. Has Context Relationship Term
+1862. Has Context Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Has Context Relationship Term (xananode.canonical:schema/relationship-type-has_context)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1852. Has Evidence Relationship Term
+1863. Has Evidence Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Has Evidence Relationship Term (xananode.canonical:schema/relationship-type-has_evidence)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1853. Has Evidence Relationship Term
+1864. Has Evidence Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Has Evidence Relationship Term (xananode.canonical:schema/relationship-type-has_evidence)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1854. Has Evidence Relationship Term
+1865. Has Evidence Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Has Evidence Relationship Term (xananode.canonical:schema/relationship-type-has_evidence)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1855. Has Evidence Relationship Term
+1866. Has Evidence Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Has Evidence Relationship Term (xananode.canonical:schema/relationship-type-has_evidence)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1856. Has Extension Relationship Term
+1867. Has Extension Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Has Extension Relationship Term (xananode.canonical:schema/relationship-type-has_extension)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1857. Has Extension Relationship Term
+1868. Has Extension Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Has Extension Relationship Term (xananode.canonical:schema/relationship-type-has_extension)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1858. Has Extension Relationship Term
+1869. Has Extension Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Has Extension Relationship Term (xananode.canonical:schema/relationship-type-has_extension)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1859. Has Extension Relationship Term
+1870. Has Extension Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Has Extension Relationship Term (xananode.canonical:schema/relationship-type-has_extension)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1860. Has primary media
+1871. Has primary media
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Has primary media (xananode.canonical:schema/relationship-type-has_primary_media)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1861. Has primary media
+1872. Has primary media
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Has primary media (xananode.canonical:schema/relationship-type-has_primary_media)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1862. Has primary media
+1873. Has primary media
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Has primary media (xananode.canonical:schema/relationship-type-has_primary_media)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1863. Has primary media
+1874. Has primary media
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Has primary media (xananode.canonical:schema/relationship-type-has_primary_media)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1864. Identified
+1875. Identified
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Identified (xananode.canonical:schema/relationship-type-identified)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1865. Identified
+1876. Identified
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Identified (xananode.canonical:schema/relationship-type-identified)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1866. Identified
+1877. Identified
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Identified (xananode.canonical:schema/relationship-type-identified)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1867. Identified
+1878. Identified
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Identified (xananode.canonical:schema/relationship-type-identified)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1868. Identified
+1879. Identified
    - Existing: Identified By Relationship Term (xananode.canonical:schema/relationship-type-identified_by)
    - Incoming: Identified (xananode.canonical:schema/relationship-type-identified)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1869. Identified By Relationship Term
+1880. Identified By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Identified By Relationship Term (xananode.canonical:schema/relationship-type-identified_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1870. Identified By Relationship Term
+1881. Identified By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Identified By Relationship Term (xananode.canonical:schema/relationship-type-identified_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1871. Identified By Relationship Term
+1882. Identified By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Identified By Relationship Term (xananode.canonical:schema/relationship-type-identified_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1872. Identified By Relationship Term
+1883. Identified By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Identified By Relationship Term (xananode.canonical:schema/relationship-type-identified_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1873. Identified By Relationship Term
+1884. Identified By Relationship Term
    - Existing: Identified (xananode.canonical:schema/relationship-type-identified)
    - Incoming: Identified By Relationship Term (xananode.canonical:schema/relationship-type-identified_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1874. Implemented By Relationship Term
+1885. Implemented By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Implemented By Relationship Term (xananode.canonical:schema/relationship-type-implemented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1875. Implemented By Relationship Term
+1886. Implemented By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Implemented By Relationship Term (xananode.canonical:schema/relationship-type-implemented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1876. Implemented By Relationship Term
+1887. Implemented By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Implemented By Relationship Term (xananode.canonical:schema/relationship-type-implemented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1877. Implemented By Relationship Term
+1888. Implemented By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Implemented By Relationship Term (xananode.canonical:schema/relationship-type-implemented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1878. Implements
+1889. Implements
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Implements (xananode.canonical:schema/relationship-type-implements)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1879. Implements
+1890. Implements
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Implements (xananode.canonical:schema/relationship-type-implements)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1880. Implements
+1891. Implements
    - Existing: Protocol Implements Relationship Preservation (xananode.canonical:relationship/protocol-implements-claim)
    - Incoming: Implements (xananode.canonical:schema/relationship-type-implements)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1881. Implements
+1892. Implements
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Implements (xananode.canonical:schema/relationship-type-implements)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1882. Implements
+1893. Implements
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Implements (xananode.canonical:schema/relationship-type-implements)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1883. Included In Relationship Term
+1894. Included In Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Included In Relationship Term (xananode.canonical:schema/relationship-type-included_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1884. Included In Relationship Term
+1895. Included In Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Included In Relationship Term (xananode.canonical:schema/relationship-type-included_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1885. Included In Relationship Term
+1896. Included In Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Included In Relationship Term (xananode.canonical:schema/relationship-type-included_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1886. Included In Relationship Term
+1897. Included In Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Included In Relationship Term (xananode.canonical:schema/relationship-type-included_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1887. Includes
+1898. Includes
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Includes (xananode.canonical:schema/relationship-type-includes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1888. Includes
+1899. Includes
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Includes (xananode.canonical:schema/relationship-type-includes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1889. Includes
+1900. Includes
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Includes (xananode.canonical:schema/relationship-type-includes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1890. Includes
+1901. Includes
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Includes (xananode.canonical:schema/relationship-type-includes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1891. Influenced
+1902. Influenced
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Influenced (xananode.canonical:schema/relationship-type-influenced)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1892. Influenced
+1903. Influenced
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Influenced (xananode.canonical:schema/relationship-type-influenced)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1893. Influenced
+1904. Influenced
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Influenced (xananode.canonical:schema/relationship-type-influenced)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1894. Influenced
+1905. Influenced
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Influenced (xananode.canonical:schema/relationship-type-influenced)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1895. Influenced
+1906. Influenced
    - Existing: Influenced By Relationship Term (xananode.canonical:schema/relationship-type-influenced_by)
    - Incoming: Influenced (xananode.canonical:schema/relationship-type-influenced)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1896. Influenced By Relationship Term
+1907. Influenced By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Influenced By Relationship Term (xananode.canonical:schema/relationship-type-influenced_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1897. Influenced By Relationship Term
+1908. Influenced By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Influenced By Relationship Term (xananode.canonical:schema/relationship-type-influenced_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1898. Influenced By Relationship Term
+1909. Influenced By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Influenced By Relationship Term (xananode.canonical:schema/relationship-type-influenced_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1899. Influenced By Relationship Term
+1910. Influenced By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Influenced By Relationship Term (xananode.canonical:schema/relationship-type-influenced_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1900. Influenced By Relationship Term
+1911. Influenced By Relationship Term
    - Existing: Influenced (xananode.canonical:schema/relationship-type-influenced)
    - Incoming: Influenced By Relationship Term (xananode.canonical:schema/relationship-type-influenced_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1901. Interviewed
+1912. Interviewed
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Interviewed (xananode.canonical:schema/relationship-type-interviewed)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1902. Interviewed
+1913. Interviewed
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Interviewed (xananode.canonical:schema/relationship-type-interviewed)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1903. Interviewed
+1914. Interviewed
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Interviewed (xananode.canonical:schema/relationship-type-interviewed)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1904. Interviewed
+1915. Interviewed
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Interviewed (xananode.canonical:schema/relationship-type-interviewed)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1905. Interviewed
+1916. Interviewed
    - Existing: Interviewed By Relationship Term (xananode.canonical:schema/relationship-type-interviewed_by)
    - Incoming: Interviewed (xananode.canonical:schema/relationship-type-interviewed)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1906. Interviewed By Relationship Term
+1917. Interviewed By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Interviewed By Relationship Term (xananode.canonical:schema/relationship-type-interviewed_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1907. Interviewed By Relationship Term
+1918. Interviewed By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Interviewed By Relationship Term (xananode.canonical:schema/relationship-type-interviewed_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1908. Interviewed By Relationship Term
+1919. Interviewed By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Interviewed By Relationship Term (xananode.canonical:schema/relationship-type-interviewed_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1909. Interviewed By Relationship Term
+1920. Interviewed By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Interviewed By Relationship Term (xananode.canonical:schema/relationship-type-interviewed_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1910. Interviewed By Relationship Term
+1921. Interviewed By Relationship Term
    - Existing: Interviewed (xananode.canonical:schema/relationship-type-interviewed)
    - Incoming: Interviewed By Relationship Term (xananode.canonical:schema/relationship-type-interviewed_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1911. Introduced
+1922. Introduced
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Introduced (xananode.canonical:schema/relationship-type-introduced)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1912. Introduced
+1923. Introduced
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Introduced (xananode.canonical:schema/relationship-type-introduced)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1913. Introduced
+1924. Introduced
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Introduced (xananode.canonical:schema/relationship-type-introduced)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1914. Introduced
+1925. Introduced
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Introduced (xananode.canonical:schema/relationship-type-introduced)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1915. Introduced
+1926. Introduced
    - Existing: Introduced By Relationship Term (xananode.canonical:schema/relationship-type-introduced_by)
    - Incoming: Introduced (xananode.canonical:schema/relationship-type-introduced)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1916. Introduced
+1927. Introduced
    - Existing: Introduced in (xananode.canonical:schema/relationship-type-introduced_in)
    - Incoming: Introduced (xananode.canonical:schema/relationship-type-introduced)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1917. Introduced By Relationship Term
+1928. Introduced By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Introduced By Relationship Term (xananode.canonical:schema/relationship-type-introduced_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1918. Introduced By Relationship Term
+1929. Introduced By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Introduced By Relationship Term (xananode.canonical:schema/relationship-type-introduced_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1919. Introduced By Relationship Term
+1930. Introduced By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Introduced By Relationship Term (xananode.canonical:schema/relationship-type-introduced_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1920. Introduced By Relationship Term
+1931. Introduced By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Introduced By Relationship Term (xananode.canonical:schema/relationship-type-introduced_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1921. Introduced By Relationship Term
+1932. Introduced By Relationship Term
    - Existing: Introduced (xananode.canonical:schema/relationship-type-introduced)
    - Incoming: Introduced By Relationship Term (xananode.canonical:schema/relationship-type-introduced_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1922. Introduced in
+1933. Introduced in
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Introduced in (xananode.canonical:schema/relationship-type-introduced_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1923. Introduced in
+1934. Introduced in
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Introduced in (xananode.canonical:schema/relationship-type-introduced_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1924. Introduced in
+1935. Introduced in
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Introduced in (xananode.canonical:schema/relationship-type-introduced_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1925. Introduced in
+1936. Introduced in
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Introduced in (xananode.canonical:schema/relationship-type-introduced_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1926. Introduced in
+1937. Introduced in
    - Existing: Introduced (xananode.canonical:schema/relationship-type-introduced)
    - Incoming: Introduced in (xananode.canonical:schema/relationship-type-introduced_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1927. Introduction Venue Of Relationship Term
+1938. Introduction Venue Of Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Introduction Venue Of Relationship Term (xananode.canonical:schema/relationship-type-introduction_venue_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1928. Introduction Venue Of Relationship Term
+1939. Introduction Venue Of Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Introduction Venue Of Relationship Term (xananode.canonical:schema/relationship-type-introduction_venue_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1929. Introduction Venue Of Relationship Term
+1940. Introduction Venue Of Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Introduction Venue Of Relationship Term (xananode.canonical:schema/relationship-type-introduction_venue_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1930. Introduction Venue Of Relationship Term
+1941. Introduction Venue Of Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Introduction Venue Of Relationship Term (xananode.canonical:schema/relationship-type-introduction_venue_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1931. Is Start Of Relationship Term
+1942. Is Start Of Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Is Start Of Relationship Term (xananode.canonical:schema/relationship-type-is_start_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1932. Is Start Of Relationship Term
+1943. Is Start Of Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Is Start Of Relationship Term (xananode.canonical:schema/relationship-type-is_start_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1933. Is Start Of Relationship Term
+1944. Is Start Of Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Is Start Of Relationship Term (xananode.canonical:schema/relationship-type-is_start_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1934. Is Start Of Relationship Term
+1945. Is Start Of Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Is Start Of Relationship Term (xananode.canonical:schema/relationship-type-is_start_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1935. Mapped From Relationship Term
+1946. Mapped From Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Mapped From Relationship Term (xananode.canonical:schema/relationship-type-mapped_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1936. Mapped From Relationship Term
+1947. Mapped From Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Mapped From Relationship Term (xananode.canonical:schema/relationship-type-mapped_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1937. Mapped From Relationship Term
+1948. Mapped From Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Mapped From Relationship Term (xananode.canonical:schema/relationship-type-mapped_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1938. Mapped From Relationship Term
+1949. Mapped From Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Mapped From Relationship Term (xananode.canonical:schema/relationship-type-mapped_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1939. Maps to
+1950. Maps to
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Maps to (xananode.canonical:schema/relationship-type-maps_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1940. Maps to
+1951. Maps to
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Maps to (xananode.canonical:schema/relationship-type-maps_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1941. Maps to
+1952. Maps to
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Maps to (xananode.canonical:schema/relationship-type-maps_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1942. Maps to
+1953. Maps to
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Maps to (xananode.canonical:schema/relationship-type-maps_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1943. Memorialized By Relationship Term
+1954. Memorialized By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Memorialized By Relationship Term (xananode.canonical:schema/relationship-type-memorialized_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1944. Memorialized By Relationship Term
+1955. Memorialized By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Memorialized By Relationship Term (xananode.canonical:schema/relationship-type-memorialized_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1945. Memorialized By Relationship Term
+1956. Memorialized By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Memorialized By Relationship Term (xananode.canonical:schema/relationship-type-memorialized_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1946. Memorialized By Relationship Term
+1957. Memorialized By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Memorialized By Relationship Term (xananode.canonical:schema/relationship-type-memorialized_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1947. Memorializes
+1958. Memorializes
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Memorializes (xananode.canonical:schema/relationship-type-memorializes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1948. Memorializes
+1959. Memorializes
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Memorializes (xananode.canonical:schema/relationship-type-memorializes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1949. Memorializes
+1960. Memorializes
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Memorializes (xananode.canonical:schema/relationship-type-memorializes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1950. Memorializes
+1961. Memorializes
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Memorializes (xananode.canonical:schema/relationship-type-memorializes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1951. Mentioned By Relationship Term
+1962. Mentioned By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Mentioned By Relationship Term (xananode.canonical:schema/relationship-type-mentioned_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1952. Mentioned By Relationship Term
+1963. Mentioned By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Mentioned By Relationship Term (xananode.canonical:schema/relationship-type-mentioned_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1953. Mentioned By Relationship Term
+1964. Mentioned By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Mentioned By Relationship Term (xananode.canonical:schema/relationship-type-mentioned_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1954. Mentioned By Relationship Term
+1965. Mentioned By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Mentioned By Relationship Term (xananode.canonical:schema/relationship-type-mentioned_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1955. Mentions
+1966. Mentions
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Mentions (xananode.canonical:schema/relationship-type-mentions)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1956. Mentions
+1967. Mentions
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Mentions (xananode.canonical:schema/relationship-type-mentions)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1957. Mentions
+1968. Mentions
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Mentions (xananode.canonical:schema/relationship-type-mentions)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1958. Mentions
+1969. Mentions
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Mentions (xananode.canonical:schema/relationship-type-mentions)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1959. Motivated by
+1970. Motivated by
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Motivated by (xananode.canonical:schema/relationship-type-motivated_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1960. Motivated by
+1971. Motivated by
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Motivated by (xananode.canonical:schema/relationship-type-motivated_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1961. Motivated by
+1972. Motivated by
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Motivated by (xananode.canonical:schema/relationship-type-motivated_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1962. Motivated by
+1973. Motivated by
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Motivated by (xananode.canonical:schema/relationship-type-motivated_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1963. Motivates Relationship Term
+1974. Motivates Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Motivates Relationship Term (xananode.canonical:schema/relationship-type-motivates)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1964. Motivates Relationship Term
+1975. Motivates Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Motivates Relationship Term (xananode.canonical:schema/relationship-type-motivates)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1965. Motivates Relationship Term
+1976. Motivates Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Motivates Relationship Term (xananode.canonical:schema/relationship-type-motivates)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1966. Motivates Relationship Term
+1977. Motivates Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Motivates Relationship Term (xananode.canonical:schema/relationship-type-motivates)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1967. Narrower Than Relationship Term
+1978. Narrower Than Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Narrower Than Relationship Term (xananode.canonical:schema/relationship-type-narrower_than)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1968. Narrower Than Relationship Term
+1979. Narrower Than Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Narrower Than Relationship Term (xananode.canonical:schema/relationship-type-narrower_than)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1969. Narrower Than Relationship Term
+1980. Narrower Than Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Narrower Than Relationship Term (xananode.canonical:schema/relationship-type-narrower_than)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1970. Narrower Than Relationship Term
+1981. Narrower Than Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Narrower Than Relationship Term (xananode.canonical:schema/relationship-type-narrower_than)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1971. Occurred at
+1982. Occurred at
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Occurred at (xananode.canonical:schema/relationship-type-occurred_at)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1972. Occurred at
+1983. Occurred at
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Occurred at (xananode.canonical:schema/relationship-type-occurred_at)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1973. Occurred at
+1984. Occurred at
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Occurred at (xananode.canonical:schema/relationship-type-occurred_at)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1974. Occurred at
+1985. Occurred at
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Occurred at (xananode.canonical:schema/relationship-type-occurred_at)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1975. Parallel to
+1986. Parallel to
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Parallel to (xananode.canonical:schema/relationship-type-parallel_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1976. Parallel to
+1987. Parallel to
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Parallel to (xananode.canonical:schema/relationship-type-parallel_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1977. Parallel to
+1988. Parallel to
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Parallel to (xananode.canonical:schema/relationship-type-parallel_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1978. Parallel to
+1989. Parallel to
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Parallel to (xananode.canonical:schema/relationship-type-parallel_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1979. Part Of Relationship Term
+1990. Part Of Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Part Of Relationship Term (xananode.canonical:schema/relationship-type-part_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1980. Part Of Relationship Term
+1991. Part Of Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Part Of Relationship Term (xananode.canonical:schema/relationship-type-part_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1981. Part Of Relationship Term
+1992. Part Of Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Part Of Relationship Term (xananode.canonical:schema/relationship-type-part_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1982. Part Of Relationship Term
+1993. Part Of Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Part Of Relationship Term (xananode.canonical:schema/relationship-type-part_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1983. Participated in
+1994. Participated in
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Participated in (xananode.canonical:schema/relationship-type-participated_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1984. Participated in
+1995. Participated in
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Participated in (xananode.canonical:schema/relationship-type-participated_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1985. Participated in
+1996. Participated in
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Participated in (xananode.canonical:schema/relationship-type-participated_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1986. Participated in
+1997. Participated in
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Participated in (xananode.canonical:schema/relationship-type-participated_in)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1987. Popularized
+1998. Popularized
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Popularized (xananode.canonical:schema/relationship-type-popularized)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1988. Popularized
+1999. Popularized
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Popularized (xananode.canonical:schema/relationship-type-popularized)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1989. Popularized
+2000. Popularized
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Popularized (xananode.canonical:schema/relationship-type-popularized)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1990. Popularized
+2001. Popularized
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Popularized (xananode.canonical:schema/relationship-type-popularized)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1991. Popularized
+2002. Popularized
    - Existing: Popularized By Relationship Term (xananode.canonical:schema/relationship-type-popularized_by)
    - Incoming: Popularized (xananode.canonical:schema/relationship-type-popularized)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1992. Popularized By Relationship Term
+2003. Popularized By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Popularized By Relationship Term (xananode.canonical:schema/relationship-type-popularized_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1993. Popularized By Relationship Term
+2004. Popularized By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Popularized By Relationship Term (xananode.canonical:schema/relationship-type-popularized_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1994. Popularized By Relationship Term
+2005. Popularized By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Popularized By Relationship Term (xananode.canonical:schema/relationship-type-popularized_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1995. Popularized By Relationship Term
+2006. Popularized By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Popularized By Relationship Term (xananode.canonical:schema/relationship-type-popularized_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1996. Popularized By Relationship Term
+2007. Popularized By Relationship Term
    - Existing: Popularized (xananode.canonical:schema/relationship-type-popularized)
    - Incoming: Popularized By Relationship Term (xananode.canonical:schema/relationship-type-popularized_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1997. Possible match
+2008. Possible match
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Possible match (xananode.canonical:schema/relationship-type-possible_match)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1998. Possible match
+2009. Possible match
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Possible match (xananode.canonical:schema/relationship-type-possible_match)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-1999. Possible match
+2010. Possible match
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Possible match (xananode.canonical:schema/relationship-type-possible_match)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2000. Possible match
+2011. Possible match
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Possible match (xananode.canonical:schema/relationship-type-possible_match)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2001. Preceded
+2012. Preceded
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Preceded (xananode.canonical:schema/relationship-type-preceded)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2002. Preceded
+2013. Preceded
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Preceded (xananode.canonical:schema/relationship-type-preceded)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2003. Preceded
+2014. Preceded
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Preceded (xananode.canonical:schema/relationship-type-preceded)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2004. Preceded
+2015. Preceded
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Preceded (xananode.canonical:schema/relationship-type-preceded)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2005. Presented
+2016. Presented
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Presented (xananode.canonical:schema/relationship-type-presented)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2006. Presented
+2017. Presented
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Presented (xananode.canonical:schema/relationship-type-presented)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2007. Presented
+2018. Presented
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Presented (xananode.canonical:schema/relationship-type-presented)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2008. Presented
+2019. Presented
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Presented (xananode.canonical:schema/relationship-type-presented)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2009. Presented
+2020. Presented
    - Existing: Presented By Relationship Term (xananode.canonical:schema/relationship-type-presented_by)
    - Incoming: Presented (xananode.canonical:schema/relationship-type-presented)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2010. Presented
+2021. Presented
    - Existing: Represented By Relationship Term (xananode.canonical:schema/relationship-type-represented_by)
    - Incoming: Presented (xananode.canonical:schema/relationship-type-presented)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2011. Presented By Relationship Term
+2022. Presented By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Presented By Relationship Term (xananode.canonical:schema/relationship-type-presented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2012. Presented By Relationship Term
+2023. Presented By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Presented By Relationship Term (xananode.canonical:schema/relationship-type-presented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2013. Presented By Relationship Term
+2024. Presented By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Presented By Relationship Term (xananode.canonical:schema/relationship-type-presented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2014. Presented By Relationship Term
+2025. Presented By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Presented By Relationship Term (xananode.canonical:schema/relationship-type-presented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2015. Presented By Relationship Term
+2026. Presented By Relationship Term
    - Existing: Presented (xananode.canonical:schema/relationship-type-presented)
    - Incoming: Presented By Relationship Term (xananode.canonical:schema/relationship-type-presented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2016. Presented By Relationship Term
+2027. Presented By Relationship Term
    - Existing: Represented By Relationship Term (xananode.canonical:schema/relationship-type-represented_by)
    - Incoming: Presented By Relationship Term (xananode.canonical:schema/relationship-type-presented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2017. Preserved By Relationship Term
+2028. Preserved By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Preserved By Relationship Term (xananode.canonical:schema/relationship-type-preserved_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2018. Preserved By Relationship Term
+2029. Preserved By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Preserved By Relationship Term (xananode.canonical:schema/relationship-type-preserved_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2019. Preserved By Relationship Term
+2030. Preserved By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Preserved By Relationship Term (xananode.canonical:schema/relationship-type-preserved_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2020. Preserved By Relationship Term
+2031. Preserved By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Preserved By Relationship Term (xananode.canonical:schema/relationship-type-preserved_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2021. Preserves
+2032. Preserves
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Preserves (xananode.canonical:schema/relationship-type-preserves)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2022. Preserves
+2033. Preserves
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Preserves (xananode.canonical:schema/relationship-type-preserves)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2023. Preserves
+2034. Preserves
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Preserves (xananode.canonical:schema/relationship-type-preserves)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2024. Preserves
+2035. Preserves
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Preserves (xananode.canonical:schema/relationship-type-preserves)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2025. Produces Relationship Term
+2036. Produces Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Produces Relationship Term (xananode.canonical:schema/relationship-type-produces)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2026. Produces Relationship Term
+2037. Produces Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Produces Relationship Term (xananode.canonical:schema/relationship-type-produces)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2027. Produces Relationship Term
+2038. Produces Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Produces Relationship Term (xananode.canonical:schema/relationship-type-produces)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2028. Produces Relationship Term
+2039. Produces Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Produces Relationship Term (xananode.canonical:schema/relationship-type-produces)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2029. Proposed
+2040. Proposed
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Proposed (xananode.canonical:schema/relationship-type-proposed)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2030. Proposed
+2041. Proposed
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Proposed (xananode.canonical:schema/relationship-type-proposed)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2031. Proposed
+2042. Proposed
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Proposed (xananode.canonical:schema/relationship-type-proposed)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2032. Proposed
+2043. Proposed
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Proposed (xananode.canonical:schema/relationship-type-proposed)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2033. Proposed
+2044. Proposed
    - Existing: Proposed By Relationship Term (xananode.canonical:schema/relationship-type-proposed_by)
    - Incoming: Proposed (xananode.canonical:schema/relationship-type-proposed)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2034. Proposed By Relationship Term
+2045. Proposed By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Proposed By Relationship Term (xananode.canonical:schema/relationship-type-proposed_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2035. Proposed By Relationship Term
+2046. Proposed By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Proposed By Relationship Term (xananode.canonical:schema/relationship-type-proposed_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2036. Proposed By Relationship Term
+2047. Proposed By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Proposed By Relationship Term (xananode.canonical:schema/relationship-type-proposed_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2037. Proposed By Relationship Term
+2048. Proposed By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Proposed By Relationship Term (xananode.canonical:schema/relationship-type-proposed_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2038. Proposed By Relationship Term
+2049. Proposed By Relationship Term
    - Existing: Proposed (xananode.canonical:schema/relationship-type-proposed)
    - Incoming: Proposed By Relationship Term (xananode.canonical:schema/relationship-type-proposed_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2039. Quoted By Relationship Term
+2050. Quoted By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Quoted By Relationship Term (xananode.canonical:schema/relationship-type-quoted_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2040. Quoted By Relationship Term
+2051. Quoted By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Quoted By Relationship Term (xananode.canonical:schema/relationship-type-quoted_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2041. Quoted By Relationship Term
+2052. Quoted By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Quoted By Relationship Term (xananode.canonical:schema/relationship-type-quoted_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2042. Quoted By Relationship Term
+2053. Quoted By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Quoted By Relationship Term (xananode.canonical:schema/relationship-type-quoted_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2043. Quotes
+2054. Quotes
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Quotes (xananode.canonical:schema/relationship-type-quotes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2044. Quotes
+2055. Quotes
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Quotes (xananode.canonical:schema/relationship-type-quotes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2045. Quotes
+2056. Quotes
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Quotes (xananode.canonical:schema/relationship-type-quotes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2046. Quotes
+2057. Quotes
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Quotes (xananode.canonical:schema/relationship-type-quotes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2047. Refined By Relationship Term
+2058. Refined By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Refined By Relationship Term (xananode.canonical:schema/relationship-type-refined_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2048. Refined By Relationship Term
+2059. Refined By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Refined By Relationship Term (xananode.canonical:schema/relationship-type-refined_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2049. Refined By Relationship Term
+2060. Refined By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Refined By Relationship Term (xananode.canonical:schema/relationship-type-refined_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2050. Refined By Relationship Term
+2061. Refined By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Refined By Relationship Term (xananode.canonical:schema/relationship-type-refined_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2051. Refines
+2062. Refines
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Refines (xananode.canonical:schema/relationship-type-refines)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2052. Refines
+2063. Refines
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Refines (xananode.canonical:schema/relationship-type-refines)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2053. Refines
+2064. Refines
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Refines (xananode.canonical:schema/relationship-type-refines)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2054. Refines
+2065. Refines
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Refines (xananode.canonical:schema/relationship-type-refines)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2055. Relationship Type Registry
+2066. Relationship Type Registry
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Relationship Type Registry (xananode.canonical:schema/relationship-type-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2056. Relationship Type Registry
+2067. Relationship Type Registry
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Relationship Type Registry (xananode.canonical:schema/relationship-type-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2057. Relationship Type Registry
+2068. Relationship Type Registry
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Relationship Type Registry (xananode.canonical:schema/relationship-type-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2058. Relationship Type Registry
+2069. Relationship Type Registry
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Relationship Type Registry (xananode.canonical:schema/relationship-type-registry)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2059. Related to
+2070. Related to
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Related to (xananode.canonical:schema/relationship-type-related_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2060. Related to
+2071. Related to
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Related to (xananode.canonical:schema/relationship-type-related_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2061. Related to
+2072. Related to
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Related to (xananode.canonical:schema/relationship-type-related_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2062. Related to
+2073. Related to
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Related to (xananode.canonical:schema/relationship-type-related_to)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2063. Represented By Relationship Term
+2074. Represented By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Represented By Relationship Term (xananode.canonical:schema/relationship-type-represented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2064. Represented By Relationship Term
+2075. Represented By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Represented By Relationship Term (xananode.canonical:schema/relationship-type-represented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2065. Represented By Relationship Term
+2076. Represented By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Represented By Relationship Term (xananode.canonical:schema/relationship-type-represented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2066. Represented By Relationship Term
+2077. Represented By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Represented By Relationship Term (xananode.canonical:schema/relationship-type-represented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2067. Represented By Relationship Term
+2078. Represented By Relationship Term
    - Existing: Presented (xananode.canonical:schema/relationship-type-presented)
    - Incoming: Represented By Relationship Term (xananode.canonical:schema/relationship-type-represented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2068. Represented By Relationship Term
+2079. Represented By Relationship Term
    - Existing: Presented By Relationship Term (xananode.canonical:schema/relationship-type-presented_by)
    - Incoming: Represented By Relationship Term (xananode.canonical:schema/relationship-type-represented_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2069. Represents
+2080. Represents
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Represents (xananode.canonical:schema/relationship-type-represents)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2070. Represents
+2081. Represents
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Represents (xananode.canonical:schema/relationship-type-represents)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2071. Represents
+2082. Represents
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Represents (xananode.canonical:schema/relationship-type-represents)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2072. Represents
+2083. Represents
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Represents (xananode.canonical:schema/relationship-type-represents)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2073. Required For Relationship Term
+2084. Required For Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Required For Relationship Term (xananode.canonical:schema/relationship-type-required_for)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2074. Required For Relationship Term
+2085. Required For Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Required For Relationship Term (xananode.canonical:schema/relationship-type-required_for)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2075. Required For Relationship Term
+2086. Required For Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Required For Relationship Term (xananode.canonical:schema/relationship-type-required_for)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2076. Required For Relationship Term
+2087. Required For Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Required For Relationship Term (xananode.canonical:schema/relationship-type-required_for)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2077. Requires
+2088. Requires
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Requires (xananode.canonical:schema/relationship-type-requires)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2078. Requires
+2089. Requires
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Requires (xananode.canonical:schema/relationship-type-requires)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2079. Requires
+2090. Requires
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Requires (xananode.canonical:schema/relationship-type-requires)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2080. Requires
+2091. Requires
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Requires (xananode.canonical:schema/relationship-type-requires)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2081. Results from
+2092. Results from
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Results from (xananode.canonical:schema/relationship-type-results_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2082. Results from
+2093. Results from
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Results from (xananode.canonical:schema/relationship-type-results_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2083. Results from
+2094. Results from
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Results from (xananode.canonical:schema/relationship-type-results_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2084. Results from
+2095. Results from
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Results from (xananode.canonical:schema/relationship-type-results_from)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2085. Same entity
+2096. Same entity
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Same entity (xananode.canonical:schema/relationship-type-same_entity)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2086. Same entity
+2097. Same entity
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Same entity (xananode.canonical:schema/relationship-type-same_entity)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2087. Same entity
+2098. Same entity
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Same entity (xananode.canonical:schema/relationship-type-same_entity)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2088. Same entity
+2099. Same entity
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Same entity (xananode.canonical:schema/relationship-type-same_entity)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2089. Shaped By Relationship Term
+2100. Shaped By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Shaped By Relationship Term (xananode.canonical:schema/relationship-type-shaped_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2090. Shaped By Relationship Term
+2101. Shaped By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Shaped By Relationship Term (xananode.canonical:schema/relationship-type-shaped_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2091. Shaped By Relationship Term
+2102. Shaped By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Shaped By Relationship Term (xananode.canonical:schema/relationship-type-shaped_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2092. Shaped By Relationship Term
+2103. Shaped By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Shaped By Relationship Term (xananode.canonical:schema/relationship-type-shaped_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2093. Shapes
+2104. Shapes
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Shapes (xananode.canonical:schema/relationship-type-shapes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2094. Shapes
+2105. Shapes
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Shapes (xananode.canonical:schema/relationship-type-shapes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2095. Shapes
+2106. Shapes
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Shapes (xananode.canonical:schema/relationship-type-shapes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2096. Shapes
+2107. Shapes
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Shapes (xananode.canonical:schema/relationship-type-shapes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2097. Site Of Relationship Term
+2108. Site Of Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Site Of Relationship Term (xananode.canonical:schema/relationship-type-site_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2098. Site Of Relationship Term
+2109. Site Of Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Site Of Relationship Term (xananode.canonical:schema/relationship-type-site_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2099. Site Of Relationship Term
+2110. Site Of Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Site Of Relationship Term (xananode.canonical:schema/relationship-type-site_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2100. Site Of Relationship Term
+2111. Site Of Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Site Of Relationship Term (xananode.canonical:schema/relationship-type-site_of)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2101. Spoke at
+2112. Spoke at
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Spoke at (xananode.canonical:schema/relationship-type-spoke_at)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2102. Spoke at
+2113. Spoke at
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Spoke at (xananode.canonical:schema/relationship-type-spoke_at)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2103. Spoke at
+2114. Spoke at
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Spoke at (xananode.canonical:schema/relationship-type-spoke_at)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2104. Spoke at
+2115. Spoke at
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Spoke at (xananode.canonical:schema/relationship-type-spoke_at)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2105. Starts with
+2116. Starts with
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Starts with (xananode.canonical:schema/relationship-type-starts_with)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2106. Starts with
+2117. Starts with
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Starts with (xananode.canonical:schema/relationship-type-starts_with)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2107. Starts with
+2118. Starts with
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Starts with (xananode.canonical:schema/relationship-type-starts_with)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2108. Starts with
+2119. Starts with
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Starts with (xananode.canonical:schema/relationship-type-starts_with)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2109. Superseded By Relationship Term
+2120. Superseded By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Superseded By Relationship Term (xananode.canonical:schema/relationship-type-superseded_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2110. Superseded By Relationship Term
+2121. Superseded By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Superseded By Relationship Term (xananode.canonical:schema/relationship-type-superseded_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2111. Superseded By Relationship Term
+2122. Superseded By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Superseded By Relationship Term (xananode.canonical:schema/relationship-type-superseded_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2112. Superseded By Relationship Term
+2123. Superseded By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Superseded By Relationship Term (xananode.canonical:schema/relationship-type-superseded_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2113. Supersedes
+2124. Supersedes
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Supersedes (xananode.canonical:schema/relationship-type-supersedes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2114. Supersedes
+2125. Supersedes
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Supersedes (xananode.canonical:schema/relationship-type-supersedes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2115. Supersedes
+2126. Supersedes
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Supersedes (xananode.canonical:schema/relationship-type-supersedes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2116. Supersedes
+2127. Supersedes
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Supersedes (xananode.canonical:schema/relationship-type-supersedes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2117. Supported By Relationship Term
+2128. Supported By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Supported By Relationship Term (xananode.canonical:schema/relationship-type-supported_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2118. Supported By Relationship Term
+2129. Supported By Relationship Term
    - Existing: Support (xananode.example:source/source-support)
    - Incoming: Supported By Relationship Term (xananode.canonical:schema/relationship-type-supported_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2119. Supported By Relationship Term
+2130. Supported By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Supported By Relationship Term (xananode.canonical:schema/relationship-type-supported_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2120. Supported By Relationship Term
+2131. Supported By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Supported By Relationship Term (xananode.canonical:schema/relationship-type-supported_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2121. Supported By Relationship Term
+2132. Supported By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Supported By Relationship Term (xananode.canonical:schema/relationship-type-supported_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2122. Supports
+2133. Supports
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Supports (xananode.canonical:schema/relationship-type-supports)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2123. Supports
+2134. Supports
    - Existing: Support (xananode.example:source/source-support)
    - Incoming: Supports (xananode.canonical:schema/relationship-type-supports)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2124. Supports
+2135. Supports
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Supports (xananode.canonical:schema/relationship-type-supports)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2125. Supports
+2136. Supports
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Supports (xananode.canonical:schema/relationship-type-supports)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2126. Supports
+2137. Supports
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Supports (xananode.canonical:schema/relationship-type-supports)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2127. Threatened By Relationship Term
+2138. Threatened By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Threatened By Relationship Term (xananode.canonical:schema/relationship-type-threatened_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2128. Threatened By Relationship Term
+2139. Threatened By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Threatened By Relationship Term (xananode.canonical:schema/relationship-type-threatened_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2129. Threatened By Relationship Term
+2140. Threatened By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Threatened By Relationship Term (xananode.canonical:schema/relationship-type-threatened_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2130. Threatened By Relationship Term
+2141. Threatened By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Threatened By Relationship Term (xananode.canonical:schema/relationship-type-threatened_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2131. Threatens
+2142. Threatens
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Threatens (xananode.canonical:schema/relationship-type-threatens)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2132. Threatens
+2143. Threatens
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Threatens (xananode.canonical:schema/relationship-type-threatens)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2133. Threatens
+2144. Threatens
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Threatens (xananode.canonical:schema/relationship-type-threatens)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2134. Threatens
+2145. Threatens
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Threatens (xananode.canonical:schema/relationship-type-threatens)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2135. Trained on
+2146. Trained on
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Trained on (xananode.canonical:schema/relationship-type-trained_on)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2136. Trained on
+2147. Trained on
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Trained on (xananode.canonical:schema/relationship-type-trained_on)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2137. Trained on
+2148. Trained on
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Trained on (xananode.canonical:schema/relationship-type-trained_on)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2138. Trained on
+2149. Trained on
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Trained on (xananode.canonical:schema/relationship-type-trained_on)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2139. Transcluded By Relationship Term
+2150. Transcluded By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Transcluded By Relationship Term (xananode.canonical:schema/relationship-type-transcluded_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2140. Transcluded By Relationship Term
+2151. Transcluded By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Transcluded By Relationship Term (xananode.canonical:schema/relationship-type-transcluded_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2141. Transcluded By Relationship Term
+2152. Transcluded By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Transcluded By Relationship Term (xananode.canonical:schema/relationship-type-transcluded_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2142. Transcluded By Relationship Term
+2153. Transcluded By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Transcluded By Relationship Term (xananode.canonical:schema/relationship-type-transcluded_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2143. Transcludes
+2154. Transcludes
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Transcludes (xananode.canonical:schema/relationship-type-transcludes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2144. Transcludes
+2155. Transcludes
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Transcludes (xananode.canonical:schema/relationship-type-transcludes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2145. Transcludes
+2156. Transcludes
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Transcludes (xananode.canonical:schema/relationship-type-transcludes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2146. Transcludes
+2157. Transcludes
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Transcludes (xananode.canonical:schema/relationship-type-transcludes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2147. Used As Primary Media For Relationship Term
+2158. Used As Primary Media For Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Used As Primary Media For Relationship Term (xananode.canonical:schema/relationship-type-used_as_primary_media_for)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2148. Used As Primary Media For Relationship Term
+2159. Used As Primary Media For Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Used As Primary Media For Relationship Term (xananode.canonical:schema/relationship-type-used_as_primary_media_for)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2149. Used As Primary Media For Relationship Term
+2160. Used As Primary Media For Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Used As Primary Media For Relationship Term (xananode.canonical:schema/relationship-type-used_as_primary_media_for)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2150. Used As Primary Media For Relationship Term
+2161. Used As Primary Media For Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Used As Primary Media For Relationship Term (xananode.canonical:schema/relationship-type-used_as_primary_media_for)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2151. Used By Relationship Term
+2162. Used By Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Used By Relationship Term (xananode.canonical:schema/relationship-type-used_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2152. Used By Relationship Term
+2163. Used By Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Used By Relationship Term (xananode.canonical:schema/relationship-type-used_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2153. Used By Relationship Term
+2164. Used By Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Used By Relationship Term (xananode.canonical:schema/relationship-type-used_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2154. Used By Relationship Term
+2165. Used By Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Used By Relationship Term (xananode.canonical:schema/relationship-type-used_by)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2155. Used To Train Relationship Term
+2166. Used To Train Relationship Term
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Used To Train Relationship Term (xananode.canonical:schema/relationship-type-used_to_train)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2156. Used To Train Relationship Term
+2167. Used To Train Relationship Term
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Used To Train Relationship Term (xananode.canonical:schema/relationship-type-used_to_train)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2157. Used To Train Relationship Term
+2168. Used To Train Relationship Term
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Used To Train Relationship Term (xananode.canonical:schema/relationship-type-used_to_train)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2158. Used To Train Relationship Term
+2169. Used To Train Relationship Term
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Used To Train Relationship Term (xananode.canonical:schema/relationship-type-used_to_train)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2159. Uses
+2170. Uses
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Uses (xananode.canonical:schema/relationship-type-uses)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2160. Uses
+2171. Uses
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Uses (xananode.canonical:schema/relationship-type-uses)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2161. Uses
+2172. Uses
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Uses (xananode.canonical:schema/relationship-type-uses)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2162. Uses
+2173. Uses
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Uses (xananode.canonical:schema/relationship-type-uses)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2163. RO-Crate Metadata Schema
+2174. RO-Crate Metadata Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: RO-Crate Metadata Schema (xananode.canonical:schema/ro-crate-metadata-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2164. RO-Crate Metadata Schema
+2175. RO-Crate Metadata Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: RO-Crate Metadata Schema (xananode.canonical:schema/ro-crate-metadata-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2165. RO-Crate Metadata Schema
+2176. RO-Crate Metadata Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: RO-Crate Metadata Schema (xananode.canonical:schema/ro-crate-metadata-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2166. Substrate Diff Schema
+2177. Substrate Diff Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Substrate Diff Schema (xananode.canonical:schema/substrate-diff-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2167. Substrate Diff Schema
+2178. Substrate Diff Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Substrate Diff Schema (xananode.canonical:schema/substrate-diff-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2168. Substrate Diff Schema
+2179. Substrate Diff Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Substrate Diff Schema (xananode.canonical:schema/substrate-diff-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2169. Substrate Manifest Schema
+2180. Substrate Manifest Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Substrate Manifest Schema (xananode.canonical:schema/substrate-manifest-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2170. Substrate Manifest Schema
+2181. Substrate Manifest Schema
    - Existing: Substrate Manifest (xananode.example:concept/substrate-manifest)
    - Incoming: Substrate Manifest Schema (xananode.canonical:schema/substrate-manifest-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2171. Substrate Manifest Schema
+2182. Substrate Manifest Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Substrate Manifest Schema (xananode.canonical:schema/substrate-manifest-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2172. Substrate Manifest Schema
+2183. Substrate Manifest Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Substrate Manifest Schema (xananode.canonical:schema/substrate-manifest-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2173. Substrate Node Schema
+2184. Substrate Node Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Substrate Node Schema (xananode.canonical:schema/substrate-node-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2174. Substrate Node Schema
+2185. Substrate Node Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Substrate Node Schema (xananode.canonical:schema/substrate-node-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2175. Substrate Node Schema
+2186. Substrate Node Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Substrate Node Schema (xananode.canonical:schema/substrate-node-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2176. Substrate Relationships Schema
+2187. Substrate Relationships Schema
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Substrate Relationships Schema (xananode.canonical:schema/substrate-relationships-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2177. Substrate Relationships Schema
+2188. Substrate Relationships Schema
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Substrate Relationships Schema (xananode.canonical:schema/substrate-relationships-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2178. Substrate Relationships Schema
+2189. Substrate Relationships Schema
    - Existing: Relationship (xananode.canonical:schema/node-type-relationship)
    - Incoming: Substrate Relationships Schema (xananode.canonical:schema/substrate-relationships-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2179. Substrate Relationships Schema
+2190. Substrate Relationships Schema
    - Existing: Schema (xananode.canonical:schema/node-type-schema)
    - Incoming: Substrate Relationships Schema (xananode.canonical:schema/substrate-relationships-schema)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2180. GitHub Profile
+2191. GitHub Profile
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: GitHub Profile (xananode.canonical:source/github-profile)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2181. GitHub Profile
+2192. GitHub Profile
    - Existing: GitHub (xananode.example:source/source-github)
    - Incoming: GitHub Profile (xananode.canonical:source/github-profile)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2182. GitHub Profile
+2193. GitHub Profile
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: GitHub Profile (xananode.canonical:source/github-profile)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2183. GitHub Profile
+2194. GitHub Profile
    - Existing: Source (xananode.canonical:schema/node-type-source)
    - Incoming: GitHub Profile (xananode.canonical:source/github-profile)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2184. Hugo Official Site
+2195. Hugo Official Site
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Hugo Official Site (xananode.canonical:source/hugo-official-site)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2185. Hugo Official Site
+2196. Hugo Official Site
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Hugo Official Site (xananode.canonical:source/hugo-official-site)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2186. Hugo Official Site
+2197. Hugo Official Site
    - Existing: Source (xananode.canonical:schema/node-type-source)
    - Incoming: Hugo Official Site (xananode.canonical:source/hugo-official-site)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2187. Support XanaNode
+2198. Support XanaNode
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Support XanaNode (xananode.canonical:source/support-xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2188. Support XanaNode
+2199. Support XanaNode
    - Existing: Support (xananode.example:source/source-support)
    - Incoming: Support XanaNode (xananode.canonical:source/support-xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2189. Support XanaNode
+2200. Support XanaNode
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Support XanaNode (xananode.canonical:source/support-xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2190. Support XanaNode
+2201. Support XanaNode
    - Existing: Source (xananode.canonical:schema/node-type-source)
    - Incoming: Support XanaNode (xananode.canonical:source/support-xananode)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2191. XanaNode.com
+2202. XanaNode.com
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XanaNode.com (xananode.canonical:source/xananode-com-domain)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2192. XanaNode.com
+2203. XanaNode.com
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XanaNode.com (xananode.canonical:source/xananode-com-domain)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2193. XanaNode.com
+2204. XanaNode.com
    - Existing: Source (xananode.canonical:schema/node-type-source)
    - Incoming: XanaNode.com (xananode.canonical:source/xananode-com-domain)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2194. XanaNode Core SDK Repository
+2205. XanaNode Core SDK Repository
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XanaNode Core SDK Repository (xananode.canonical:source/xananode-core-sdk-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2195. XanaNode Core SDK Repository
+2206. XanaNode Core SDK Repository
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XanaNode Core SDK Repository (xananode.canonical:source/xananode-core-sdk-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2196. XanaNode Core SDK Repository
+2207. XanaNode Core SDK Repository
    - Existing: XanaNode Core SDK (xananode.canonical:project/xananode-core-sdk)
    - Incoming: XanaNode Core SDK Repository (xananode.canonical:source/xananode-core-sdk-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2197. XanaNode Core SDK Repository
+2208. XanaNode Core SDK Repository
    - Existing: XanaNode Core (xananode.canonical:schema/namespace-xananode)
    - Incoming: XanaNode Core SDK Repository (xananode.canonical:source/xananode-core-sdk-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2198. XanaNode Core SDK Repository
+2209. XanaNode Core SDK Repository
    - Existing: Source (xananode.canonical:schema/node-type-source)
    - Incoming: XanaNode Core SDK Repository (xananode.canonical:source/xananode-core-sdk-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2199. XanaNode Hugo Repository
+2210. XanaNode Hugo Repository
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XanaNode Hugo Repository (xananode.canonical:source/xananode-hugo-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2200. XanaNode Hugo Repository
+2211. XanaNode Hugo Repository
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XanaNode Hugo Repository (xananode.canonical:source/xananode-hugo-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2201. XanaNode Hugo Repository
+2212. XanaNode Hugo Repository
    - Existing: Source (xananode.canonical:schema/node-type-source)
    - Incoming: XanaNode Hugo Repository (xananode.canonical:source/xananode-hugo-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2202. XanaNode.net
+2213. XanaNode.net
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XanaNode.net (xananode.canonical:source/xananode-net-domain)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2203. XanaNode.net
+2214. XanaNode.net
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XanaNode.net (xananode.canonical:source/xananode-net-domain)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2204. XanaNode.net
+2215. XanaNode.net
    - Existing: Source (xananode.canonical:schema/node-type-source)
    - Incoming: XanaNode.net (xananode.canonical:source/xananode-net-domain)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2205. XanaNode.org
+2216. XanaNode.org
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XanaNode.org (xananode.canonical:source/xananode-org-domain)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2206. XanaNode.org
+2217. XanaNode.org
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XanaNode.org (xananode.canonical:source/xananode-org-domain)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2207. XanaNode.org
+2218. XanaNode.org
    - Existing: Source (xananode.canonical:schema/node-type-source)
    - Incoming: XanaNode.org (xananode.canonical:source/xananode-org-domain)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2208. XanaNode Protocol Repository
+2219. XanaNode Protocol Repository
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XanaNode Protocol Repository (xananode.canonical:source/xananode-protocol-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2209. XanaNode Protocol Repository
+2220. XanaNode Protocol Repository
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XanaNode Protocol Repository (xananode.canonical:source/xananode-protocol-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2210. XanaNode Protocol Repository
+2221. XanaNode Protocol Repository
    - Existing: XanaNode Protocol (xananode.canonical:project/xananode-protocol)
    - Incoming: XanaNode Protocol Repository (xananode.canonical:source/xananode-protocol-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2211. XanaNode Protocol Repository
+2222. XanaNode Protocol Repository
    - Existing: Source (xananode.canonical:schema/node-type-source)
    - Incoming: XanaNode Protocol Repository (xananode.canonical:source/xananode-protocol-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2212. XanaNode Studio Repository
+2223. XanaNode Studio Repository
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XanaNode Studio Repository (xananode.canonical:source/xananode-studio-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2213. XanaNode Studio Repository
+2224. XanaNode Studio Repository
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XanaNode Studio Repository (xananode.canonical:source/xananode-studio-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2214. XanaNode Studio Repository
+2225. XanaNode Studio Repository
    - Existing: Source (xananode.canonical:schema/node-type-source)
    - Incoming: XanaNode Studio Repository (xananode.canonical:source/xananode-studio-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2215. XanaNode Workspace Repository
+2226. XanaNode Workspace Repository
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XanaNode Workspace Repository (xananode.canonical:source/xananode-workspace-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2216. XanaNode Workspace Repository
+2227. XanaNode Workspace Repository
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XanaNode Workspace Repository (xananode.canonical:source/xananode-workspace-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2217. XanaNode Workspace Repository
+2228. XanaNode Workspace Repository
    - Existing: XanaNode Workspace (xananode.canonical:project/xananode-workspace)
    - Incoming: XanaNode Workspace Repository (xananode.canonical:source/xananode-workspace-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2218. XanaNode Workspace Repository
+2229. XanaNode Workspace Repository
    - Existing: Source (xananode.canonical:schema/node-type-source)
    - Incoming: XanaNode Workspace Repository (xananode.canonical:source/xananode-workspace-repository)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2219. Cytoscape.js
+2230. Cytoscape.js
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Cytoscape.js (xananode.canonical:technology/cytoscape-js)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2220. Cytoscape.js
+2231. Cytoscape.js
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Cytoscape.js (xananode.canonical:technology/cytoscape-js)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2221. Cytoscape.js
+2232. Cytoscape.js
    - Existing: Technology (xananode.canonical:schema/node-type-technology)
    - Incoming: Cytoscape.js (xananode.canonical:technology/cytoscape-js)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2222. Git
+2233. Git
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Git (xananode.canonical:technology/git)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2223. Git
+2234. Git
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Git (xananode.canonical:technology/git)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2224. Git
+2235. Git
    - Existing: Technology (xananode.canonical:schema/node-type-technology)
    - Incoming: Git (xananode.canonical:technology/git)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2225. Hugo
+2236. Hugo
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Hugo (xananode.canonical:technology/hugo)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2226. Hugo
+2237. Hugo
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Hugo (xananode.canonical:technology/hugo)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2227. Hugo
+2238. Hugo
    - Existing: Technology (xananode.canonical:schema/node-type-technology)
    - Incoming: Hugo (xananode.canonical:technology/hugo)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2228. Node.js
+2239. Node.js
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Node.js (xananode.canonical:technology/nodejs)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2229. Node.js
+2240. Node.js
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Node.js (xananode.canonical:technology/nodejs)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2230. Node.js
+2241. Node.js
    - Existing: Technology (xananode.canonical:schema/node-type-technology)
    - Incoming: Node.js (xananode.canonical:technology/nodejs)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2231. Python
+2242. Python
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Python (xananode.canonical:technology/python)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2232. Python
+2243. Python
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Python (xananode.canonical:technology/python)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2233. Python
+2244. Python
    - Existing: Technology (xananode.canonical:schema/node-type-technology)
    - Incoming: Python (xananode.canonical:technology/python)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2234. XanaNode Stack Trail
+2245. XanaNode Stack Trail
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: XanaNode Stack Trail (xananode.canonical:trail/xananode-stack-trail)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2235. XanaNode Stack Trail
+2246. XanaNode Stack Trail
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: XanaNode Stack Trail (xananode.canonical:trail/xananode-stack-trail)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2236. Gottfried Wilhelm Leibniz
+2247. Gottfried Wilhelm Leibniz
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Gottfried Wilhelm Leibniz (xananode.lineage:person/gottfried-wilhelm-leibniz)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2237. Gottfried Wilhelm Leibniz
+2248. Gottfried Wilhelm Leibniz
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Gottfried Wilhelm Leibniz (xananode.lineage:person/gottfried-wilhelm-leibniz)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2238. Gottfried Wilhelm Leibniz
+2249. Gottfried Wilhelm Leibniz
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Gottfried Wilhelm Leibniz (xananode.lineage:person/gottfried-wilhelm-leibniz)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2239. Wilhelm Ostwald
+2250. Wilhelm Ostwald
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Wilhelm Ostwald (xananode.lineage:person/wilhelm-ostwald)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2240. Wilhelm Ostwald
+2251. Wilhelm Ostwald
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Wilhelm Ostwald (xananode.lineage:person/wilhelm-ostwald)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2241. Wilhelm Ostwald
+2252. Wilhelm Ostwald
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Wilhelm Ostwald (xananode.lineage:person/wilhelm-ostwald)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2242. Jorge Luis Borges
+2253. Jorge Luis Borges
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Jorge Luis Borges (xananode.lineage:person/jorge-luis-borges)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2243. Jorge Luis Borges
+2254. Jorge Luis Borges
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Jorge Luis Borges (xananode.lineage:person/jorge-luis-borges)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2244. Jorge Luis Borges
+2255. Jorge Luis Borges
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Jorge Luis Borges (xananode.lineage:person/jorge-luis-borges)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2245. The Garden of Forking Paths
+2256. The Garden of Forking Paths
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: The Garden of Forking Paths (xananode.lineage:publication/the-garden-of-forking-paths)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2246. The Garden of Forking Paths
+2257. The Garden of Forking Paths
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: The Garden of Forking Paths (xananode.lineage:publication/the-garden-of-forking-paths)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2247. The Garden of Forking Paths
+2258. The Garden of Forking Paths
    - Existing: Publication (xananode.canonical:schema/node-type-publication)
    - Incoming: The Garden of Forking Paths (xananode.lineage:publication/the-garden-of-forking-paths)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2248. Andries van Dam
+2259. Andries van Dam
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Andries van Dam (xananode.lineage:person/andries-van-dam)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2249. Andries van Dam
+2260. Andries van Dam
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Andries van Dam (xananode.lineage:person/andries-van-dam)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2250. Andries van Dam
+2261. Andries van Dam
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Andries van Dam (xananode.lineage:person/andries-van-dam)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2251. Brown University
+2262. Brown University
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Brown University (xananode.lineage:place/brown-university)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2252. Brown University
+2263. Brown University
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Brown University (xananode.lineage:place/brown-university)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2253. Hypertext Editing System
+2264. Hypertext Editing System
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Hypertext Editing System (xananode.lineage:project/hypertext-editing-system)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2254. Hypertext Editing System
+2265. Hypertext Editing System
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Hypertext Editing System (xananode.lineage:project/hypertext-editing-system)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2255. Hypertext Editing System
+2266. Hypertext Editing System
    - Existing: Project (xananode.canonical:schema/node-type-project)
    - Incoming: Hypertext Editing System (xananode.lineage:project/hypertext-editing-system)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2256. FRESS
+2267. FRESS
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: FRESS (xananode.lineage:project/fress)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2257. FRESS
+2268. FRESS
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: FRESS (xananode.lineage:project/fress)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2258. FRESS
+2269. FRESS
    - Existing: Project (xananode.canonical:schema/node-type-project)
    - Incoming: FRESS (xananode.lineage:project/fress)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2259. Intermedia
+2270. Intermedia
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Intermedia (xananode.lineage:project/intermedia)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2260. Intermedia
+2271. Intermedia
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Intermedia (xananode.lineage:project/intermedia)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2261. Intermedia
+2272. Intermedia
    - Existing: Project (xananode.canonical:schema/node-type-project)
    - Incoming: Intermedia (xananode.lineage:project/intermedia)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2262. Nicholas Negroponte
+2273. Nicholas Negroponte
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Nicholas Negroponte (xananode.lineage:person/nicholas-negroponte)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2263. Nicholas Negroponte
+2274. Nicholas Negroponte
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Nicholas Negroponte (xananode.lineage:person/nicholas-negroponte)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2264. Nicholas Negroponte
+2275. Nicholas Negroponte
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Nicholas Negroponte (xananode.lineage:person/nicholas-negroponte)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2265. Seymour Papert
+2276. Seymour Papert
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Seymour Papert (xananode.lineage:person/seymour-papert)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2266. Seymour Papert
+2277. Seymour Papert
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Seymour Papert (xananode.lineage:person/seymour-papert)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2267. Seymour Papert
+2278. Seymour Papert
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Seymour Papert (xananode.lineage:person/seymour-papert)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2268. Marvin Minsky
+2279. Marvin Minsky
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Marvin Minsky (xananode.lineage:person/marvin-minsky)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2269. Marvin Minsky
+2280. Marvin Minsky
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Marvin Minsky (xananode.lineage:person/marvin-minsky)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2270. Marvin Minsky
+2281. Marvin Minsky
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Marvin Minsky (xananode.lineage:person/marvin-minsky)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2271. MIT Media Lab
+2282. MIT Media Lab
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: MIT Media Lab (xananode.lineage:organization/mit-media-lab)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2272. MIT Media Lab
+2283. MIT Media Lab
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: MIT Media Lab (xananode.lineage:organization/mit-media-lab)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2273. MIT Media Lab
+2284. MIT Media Lab
    - Existing: Organization (xananode.canonical:schema/node-type-organization)
    - Incoming: MIT Media Lab (xananode.lineage:organization/mit-media-lab)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2274. Hans Peter Brondmo
+2285. Hans Peter Brondmo
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Hans Peter Brondmo (xananode.lineage:person/hans-peter-brondmo)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2275. Hans Peter Brondmo
+2286. Hans Peter Brondmo
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Hans Peter Brondmo (xananode.lineage:person/hans-peter-brondmo)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2276. Hans Peter Brondmo
+2287. Hans Peter Brondmo
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Hans Peter Brondmo (xananode.lineage:person/hans-peter-brondmo)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2277. Micons
+2288. Micons
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Micons (xananode.lineage:technology/micons)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2278. Micons
+2289. Micons
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Micons (xananode.lineage:technology/micons)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2279. Micons
+2290. Micons
    - Existing: Technology (xananode.canonical:schema/node-type-technology)
    - Incoming: Micons (xananode.lineage:technology/micons)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2280. Robert Winter
+2291. Robert Winter
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Robert Winter (xananode.lineage:person/robert-winter)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2281. Robert Winter
+2292. Robert Winter
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Robert Winter (xananode.lineage:person/robert-winter)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2282. Robert Winter
+2293. Robert Winter
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Robert Winter (xananode.lineage:person/robert-winter)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2283. Interactive Beethoven's Ninth
+2294. Interactive Beethoven's Ninth
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Interactive Beethoven's Ninth (xananode.lineage:project/interactive-beethoven-ninth)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2284. Interactive Beethoven's Ninth
+2295. Interactive Beethoven's Ninth
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Interactive Beethoven's Ninth (xananode.lineage:project/interactive-beethoven-ninth)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2285. Interactive Beethoven's Ninth
+2296. Interactive Beethoven's Ninth
    - Existing: Project (xananode.canonical:schema/node-type-project)
    - Incoming: Interactive Beethoven's Ninth (xananode.lineage:project/interactive-beethoven-ninth)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2286. Robert Abel
+2297. Robert Abel
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Robert Abel (xananode.lineage:person/robert-abel)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2287. Robert Abel
+2298. Robert Abel
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Robert Abel (xananode.lineage:person/robert-abel)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2288. Robert Abel
+2299. Robert Abel
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Robert Abel (xananode.lineage:person/robert-abel)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2289. Interactive Guernica
+2300. Interactive Guernica
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Interactive Guernica (xananode.lineage:project/interactive-guernica)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2290. Interactive Guernica
+2301. Interactive Guernica
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Interactive Guernica (xananode.lineage:project/interactive-guernica)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2291. Interactive Guernica
+2302. Interactive Guernica
    - Existing: Project (xananode.canonical:schema/node-type-project)
    - Incoming: Interactive Guernica (xananode.lineage:project/interactive-guernica)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2292. Ivan Sutherland
+2303. Ivan Sutherland
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Ivan Sutherland (xananode.lineage:person/ivan-sutherland)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2293. Ivan Sutherland
+2304. Ivan Sutherland
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Ivan Sutherland (xananode.lineage:person/ivan-sutherland)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2294. Ivan Sutherland
+2305. Ivan Sutherland
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Ivan Sutherland (xananode.lineage:person/ivan-sutherland)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2295. Jaron Lanier
+2306. Jaron Lanier
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Jaron Lanier (xananode.lineage:person/jaron-lanier)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2296. Jaron Lanier
+2307. Jaron Lanier
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Jaron Lanier (xananode.lineage:person/jaron-lanier)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2297. Jaron Lanier
+2308. Jaron Lanier
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Jaron Lanier (xananode.lineage:person/jaron-lanier)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2298. VPL Research
+2309. VPL Research
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: VPL Research (xananode.lineage:organization/vpl-research)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2299. VPL Research
+2310. VPL Research
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: VPL Research (xananode.lineage:organization/vpl-research)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2300. VPL Research
+2311. VPL Research
    - Existing: Organization (xananode.canonical:schema/node-type-organization)
    - Incoming: VPL Research (xananode.lineage:organization/vpl-research)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2301. Scott Fisher
+2312. Scott Fisher
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Scott Fisher (xananode.lineage:person/scott-fisher)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2302. Scott Fisher
+2313. Scott Fisher
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Scott Fisher (xananode.lineage:person/scott-fisher)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2303. Scott Fisher
+2314. Scott Fisher
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Scott Fisher (xananode.lineage:person/scott-fisher)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2304. NASA
+2315. NASA
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: NASA (xananode.lineage:organization/nasa)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2305. NASA
+2316. NASA
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: NASA (xananode.lineage:organization/nasa)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2306. NASA
+2317. NASA
    - Existing: Organization (xananode.canonical:schema/node-type-organization)
    - Incoming: NASA (xananode.lineage:organization/nasa)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2307. Dirk Gently's Holistic Detective Agency
+2318. Dirk Gently's Holistic Detective Agency
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Dirk Gently's Holistic Detective Agency (xananode.lineage:publication/dirk-gentlys-holistic-detective-agency)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2308. Dirk Gently's Holistic Detective Agency
+2319. Dirk Gently's Holistic Detective Agency
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Dirk Gently's Holistic Detective Agency (xananode.lineage:publication/dirk-gentlys-holistic-detective-agency)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2309. Dirk Gently's Holistic Detective Agency
+2320. Dirk Gently's Holistic Detective Agency
    - Existing: Publication (xananode.canonical:schema/node-type-publication)
    - Incoming: Dirk Gently's Holistic Detective Agency (xananode.lineage:publication/dirk-gentlys-holistic-detective-agency)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2310. BBC Two
+2321. BBC Two
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: BBC Two (xananode.lineage:organization/bbc-two)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2311. BBC Two
+2322. BBC Two
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: BBC Two (xananode.lineage:organization/bbc-two)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2312. BBC Two
+2323. BBC Two
    - Existing: Organization (xananode.canonical:schema/node-type-organization)
    - Incoming: BBC Two (xananode.lineage:organization/bbc-two)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2313. Richard Saul Wurman
+2324. Richard Saul Wurman
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Richard Saul Wurman (xananode.lineage:person/richard-saul-wurman)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2314. Richard Saul Wurman
+2325. Richard Saul Wurman
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Richard Saul Wurman (xananode.lineage:person/richard-saul-wurman)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2315. Richard Saul Wurman
+2326. Richard Saul Wurman
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Richard Saul Wurman (xananode.lineage:person/richard-saul-wurman)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2316. Harry Marks
+2327. Harry Marks
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Harry Marks (xananode.lineage:person/harry-marks)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2317. Harry Marks
+2328. Harry Marks
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Harry Marks (xananode.lineage:person/harry-marks)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2318. Harry Marks
+2329. Harry Marks
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Harry Marks (xananode.lineage:person/harry-marks)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2319. John Sculley
+2330. John Sculley
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: John Sculley (xananode.lineage:person/john-sculley)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2320. John Sculley
+2331. John Sculley
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: John Sculley (xananode.lineage:person/john-sculley)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2321. John Sculley
+2332. John Sculley
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: John Sculley (xananode.lineage:person/john-sculley)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2322. Apple Knowledge Navigator
+2333. Apple Knowledge Navigator
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Apple Knowledge Navigator (xananode.lineage:technology/apple-knowledge-navigator)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2323. Apple Knowledge Navigator
+2334. Apple Knowledge Navigator
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Apple Knowledge Navigator (xananode.lineage:technology/apple-knowledge-navigator)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2324. Apple Knowledge Navigator
+2335. Apple Knowledge Navigator
    - Existing: Technology (xananode.canonical:schema/node-type-technology)
    - Incoming: Apple Knowledge Navigator (xananode.lineage:technology/apple-knowledge-navigator)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2325. Bill Atkinson
+2336. Bill Atkinson
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Bill Atkinson (xananode.lineage:person/bill-atkinson)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2326. Bill Atkinson
+2337. Bill Atkinson
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Bill Atkinson (xananode.lineage:person/bill-atkinson)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2327. Bill Atkinson
+2338. Bill Atkinson
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Bill Atkinson (xananode.lineage:person/bill-atkinson)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2328. Herbie Hancock
+2339. Herbie Hancock
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Herbie Hancock (xananode.lineage:person/herbie-hancock)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2329. Herbie Hancock
+2340. Herbie Hancock
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Herbie Hancock (xananode.lineage:person/herbie-hancock)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2330. Herbie Hancock
+2341. Herbie Hancock
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Herbie Hancock (xananode.lineage:person/herbie-hancock)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2331. Nigel Holmes
+2342. Nigel Holmes
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Nigel Holmes (xananode.lineage:person/nigel-holmes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2332. Nigel Holmes
+2343. Nigel Holmes
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Nigel Holmes (xananode.lineage:person/nigel-holmes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2333. Nigel Holmes
+2344. Nigel Holmes
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Nigel Holmes (xananode.lineage:person/nigel-holmes)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2334. Laurie Anderson
+2345. Laurie Anderson
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Laurie Anderson (xananode.lineage:person/laurie-anderson)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2335. Laurie Anderson
+2346. Laurie Anderson
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Laurie Anderson (xananode.lineage:person/laurie-anderson)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2336. Laurie Anderson
+2347. Laurie Anderson
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Laurie Anderson (xananode.lineage:person/laurie-anderson)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2337. Bran Ferren
+2348. Bran Ferren
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Bran Ferren (xananode.lineage:person/bran-ferren)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2338. Bran Ferren
+2349. Bran Ferren
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Bran Ferren (xananode.lineage:person/bran-ferren)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2339. Bran Ferren
+2350. Bran Ferren
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Bran Ferren (xananode.lineage:person/bran-ferren)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2340. Robert Cailliau
+2351. Robert Cailliau
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Robert Cailliau (xananode.lineage:person/robert-cailliau)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2341. Robert Cailliau
+2352. Robert Cailliau
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Robert Cailliau (xananode.lineage:person/robert-cailliau)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2342. Robert Cailliau
+2353. Robert Cailliau
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Robert Cailliau (xananode.lineage:person/robert-cailliau)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2343. CERN
+2354. CERN
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: CERN (xananode.lineage:place/cern)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2344. CERN
+2355. CERN
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: CERN (xananode.lineage:place/cern)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2345. HTML
+2356. HTML
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: HTML (xananode.lineage:technology/html)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2346. HTML
+2357. HTML
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: HTML (xananode.lineage:technology/html)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2347. HTML
+2358. HTML
    - Existing: Technology (xananode.canonical:schema/node-type-technology)
    - Incoming: HTML (xananode.lineage:technology/html)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2348. URL/URI
+2359. URL/URI
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: URL/URI (xananode.lineage:technology/url-uri)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2349. URL/URI
+2360. URL/URI
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: URL/URI (xananode.lineage:technology/url-uri)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2350. URL/URI
+2361. URL/URI
    - Existing: Technology (xananode.canonical:schema/node-type-technology)
    - Incoming: URL/URI (xananode.lineage:technology/url-uri)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2351. HTTP
+2362. HTTP
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: HTTP (xananode.lineage:technology/http)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2352. HTTP
+2363. HTTP
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: HTTP (xananode.lineage:technology/http)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2353. HTTP
+2364. HTTP
    - Existing: Technology (xananode.canonical:schema/node-type-technology)
    - Incoming: HTTP (xananode.lineage:technology/http)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2354. NCSA
+2365. NCSA
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: NCSA (xananode.lineage:organization/ncsa)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2355. NCSA
+2366. NCSA
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: NCSA (xananode.lineage:organization/ncsa)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2356. NCSA
+2367. NCSA
    - Existing: Organization (xananode.canonical:schema/node-type-organization)
    - Incoming: NCSA (xananode.lineage:organization/ncsa)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2357. Marc Andreessen
+2368. Marc Andreessen
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Marc Andreessen (xananode.lineage:person/marc-andreessen)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2358. Marc Andreessen
+2369. Marc Andreessen
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Marc Andreessen (xananode.lineage:person/marc-andreessen)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2359. Marc Andreessen
+2370. Marc Andreessen
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Marc Andreessen (xananode.lineage:person/marc-andreessen)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2360. Mosaic
+2371. Mosaic
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Mosaic (xananode.lineage:technology/mosaic)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2361. Mosaic
+2372. Mosaic
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Mosaic (xananode.lineage:technology/mosaic)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2362. Mosaic
+2373. Mosaic
    - Existing: Technology (xananode.canonical:schema/node-type-technology)
    - Incoming: Mosaic (xananode.lineage:technology/mosaic)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2363. The Web as Incomplete Hypertext
+2374. The Web as Incomplete Hypertext
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: The Web as Incomplete Hypertext (xananode.lineage:concept/web-as-incomplete-hypertext)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2364. The Web as Incomplete Hypertext
+2375. The Web as Incomplete Hypertext
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: The Web as Incomplete Hypertext (xananode.lineage:concept/web-as-incomplete-hypertext)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2365. The Web as Incomplete Hypertext
+2376. The Web as Incomplete Hypertext
    - Existing: Concept (xananode.canonical:schema/node-type-concept)
    - Incoming: The Web as Incomplete Hypertext (xananode.lineage:concept/web-as-incomplete-hypertext)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2366. Guide
+2377. Guide
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Guide (xananode.lineage:technology/guide)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2367. Guide
+2378. Guide
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Guide (xananode.lineage:technology/guide)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2368. Guide
+2379. Guide
    - Existing: Technology (xananode.canonical:schema/node-type-technology)
    - Incoming: Guide (xananode.lineage:technology/guide)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2369. Storyspace
+2380. Storyspace
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Storyspace (xananode.lineage:project/storyspace)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2370. Storyspace
+2381. Storyspace
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Storyspace (xananode.lineage:project/storyspace)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2371. Storyspace
+2382. Storyspace
    - Existing: Project (xananode.canonical:schema/node-type-project)
    - Incoming: Storyspace (xananode.lineage:project/storyspace)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2372. ZOG/KMS
+2383. ZOG/KMS
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: ZOG/KMS (xananode.lineage:project/zog-kms)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2373. ZOG/KMS
+2384. ZOG/KMS
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: ZOG/KMS (xananode.lineage:project/zog-kms)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2374. ZOG/KMS
+2385. ZOG/KMS
    - Existing: Project (xananode.canonical:schema/node-type-project)
    - Incoming: ZOG/KMS (xananode.lineage:project/zog-kms)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2375. Xanadu at Autodesk
+2386. Xanadu at Autodesk
    - Existing: Project Xanadu (xananode.example:project/project-xanadu)
    - Incoming: Xanadu at Autodesk (xananode.lineage:project/xanadu-at-autodesk)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2376. Xanadu at Autodesk
+2387. Xanadu at Autodesk
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Xanadu at Autodesk (xananode.lineage:project/xanadu-at-autodesk)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2377. Xanadu at Autodesk
+2388. Xanadu at Autodesk
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Xanadu at Autodesk (xananode.lineage:project/xanadu-at-autodesk)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2378. Xanadu at Autodesk
+2389. Xanadu at Autodesk
    - Existing: Project (xananode.canonical:schema/node-type-project)
    - Incoming: Xanadu at Autodesk (xananode.lineage:project/xanadu-at-autodesk)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2379. Conflict and Disputed Identity
+2390. Conflict and Disputed Identity
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Conflict and Disputed Identity (xananode.lineage:concept/conflict-disputed-identity)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2380. Conflict and Disputed Identity
+2391. Conflict and Disputed Identity
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Conflict and Disputed Identity (xananode.lineage:concept/conflict-disputed-identity)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2381. Conflict and Disputed Identity
+2392. Conflict and Disputed Identity
    - Existing: Concept (xananode.canonical:schema/node-type-concept)
    - Incoming: Conflict and Disputed Identity (xananode.lineage:concept/conflict-disputed-identity)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2382. Conflict and Disputed Identity
+2393. Conflict and Disputed Identity
    - Existing: Disputed identity (xananode.canonical:schema/relationship-type-disputed_identity)
    - Incoming: Conflict and Disputed Identity (xananode.lineage:concept/conflict-disputed-identity)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2383. Git-backed Substrate
+2394. Git-backed Substrate
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Git-backed Substrate (xananode.lineage:technology/git-backed-substrate)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2384. Git-backed Substrate
+2395. Git-backed Substrate
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Git-backed Substrate (xananode.lineage:technology/git-backed-substrate)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2385. Git-backed Substrate
+2396. Git-backed Substrate
    - Existing: Technology (xananode.canonical:schema/node-type-technology)
    - Incoming: Git-backed Substrate (xananode.lineage:technology/git-backed-substrate)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2386. Babel
+2397. Babel
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Babel (xananode.lineage:tool/babel)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2387. Babel
+2398. Babel
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Babel (xananode.lineage:tool/babel)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2388. Hyperland VR
+2399. Hyperland VR
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Hyperland VR (xananode.lineage:tool/hyperland-vr)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2389. Hyperland VR
+2400. Hyperland VR
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Hyperland VR (xananode.lineage:tool/hyperland-vr)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2390. Hyperland VR
+2401. Hyperland VR
    - Existing: Hyperland (xananode.lineage:publication/hyperland)
    - Incoming: Hyperland VR (xananode.lineage:tool/hyperland-vr)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2391. Lost Lineage of Human Knowledge Augmentation
+2402. Authored Substrate Overlap
+   - Existing: XanaNode (xananode.example:concept/xananode)
+   - Incoming: Authored Substrate Overlap (xananode.lineage:concept/authored-substrate-overlap)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+2403. Authored Substrate Overlap
+   - Existing: XanaNode (xananode.canonical:concept/xananode)
+   - Incoming: Authored Substrate Overlap (xananode.lineage:concept/authored-substrate-overlap)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+2404. Authored Substrate Overlap
+   - Existing: Concept (xananode.canonical:schema/node-type-concept)
+   - Incoming: Authored Substrate Overlap (xananode.lineage:concept/authored-substrate-overlap)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+2405. Authored Substrate Overlap
+   - Existing: Authored (xananode.canonical:schema/relationship-type-authored)
+   - Incoming: Authored Substrate Overlap (xananode.lineage:concept/authored-substrate-overlap)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+2406. Overlap is a Federation Signal
+   - Existing: XanaNode (xananode.example:concept/xananode)
+   - Incoming: Overlap is a Federation Signal (xananode.lineage:claim/overlap-is-federation-signal)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+2407. Overlap is a Federation Signal
+   - Existing: XanaNode (xananode.canonical:concept/xananode)
+   - Incoming: Overlap is a Federation Signal (xananode.lineage:claim/overlap-is-federation-signal)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+2408. Merge is Authored Interpretation
+   - Existing: XanaNode (xananode.example:concept/xananode)
+   - Incoming: Merge is Authored Interpretation (xananode.lineage:claim/merge-is-authored-interpretation)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+2409. Merge is Authored Interpretation
+   - Existing: XanaNode (xananode.canonical:concept/xananode)
+   - Incoming: Merge is Authored Interpretation (xananode.lineage:claim/merge-is-authored-interpretation)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+2410. Merge is Authored Interpretation
+   - Existing: Authored (xananode.canonical:schema/relationship-type-authored)
+   - Incoming: Merge is Authored Interpretation (xananode.lineage:claim/merge-is-authored-interpretation)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+2411. Lineage Packs Can Overlap Canonical Packs
+   - Existing: XanaNode (xananode.example:concept/xananode)
+   - Incoming: Lineage Packs Can Overlap Canonical Packs (xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+2412. Lineage Packs Can Overlap Canonical Packs
+   - Existing: XanaNode (xananode.canonical:concept/xananode)
+   - Incoming: Lineage Packs Can Overlap Canonical Packs (xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack)
+   - Confidence: 0.78
+   - Reason: Incoming node title or alias closely matches an existing node.
+   - Approved: false
+
+2413. Lost Lineage of Human Knowledge Augmentation
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Lost Lineage of Human Knowledge Augmentation (xananode.lineage:concept/lost-lineage-human-knowledge-augmentation)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2392. Lost Lineage of Human Knowledge Augmentation
+2414. Lost Lineage of Human Knowledge Augmentation
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Lost Lineage of Human Knowledge Augmentation (xananode.lineage:concept/lost-lineage-human-knowledge-augmentation)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2393. Lost Lineage of Human Knowledge Augmentation
+2415. Lost Lineage of Human Knowledge Augmentation
    - Existing: Concept (xananode.canonical:schema/node-type-concept)
    - Incoming: Lost Lineage of Human Knowledge Augmentation (xananode.lineage:concept/lost-lineage-human-knowledge-augmentation)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2394. Paul Otlet
+2416. Paul Otlet
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Paul Otlet (xananode.lineage:person/paul-otlet)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2395. Paul Otlet
+2417. Paul Otlet
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Paul Otlet (xananode.lineage:person/paul-otlet)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2396. Paul Otlet
+2418. Paul Otlet
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Paul Otlet (xananode.lineage:person/paul-otlet)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2397. H. G. Wells
+2419. H. G. Wells
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: H. G. Wells (xananode.lineage:person/h-g-wells)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2398. H. G. Wells
+2420. H. G. Wells
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: H. G. Wells (xananode.lineage:person/h-g-wells)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2399. H. G. Wells
+2421. H. G. Wells
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: H. G. Wells (xananode.lineage:person/h-g-wells)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2400. Douglas Adams
+2422. Douglas Adams
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Douglas Adams (xananode.lineage:person/douglas-adams)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2401. Douglas Adams
+2423. Douglas Adams
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Douglas Adams (xananode.lineage:person/douglas-adams)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2402. Douglas Adams
+2424. Douglas Adams
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Douglas Adams (xananode.lineage:person/douglas-adams)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2403. Hyperland
+2425. Hyperland
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Hyperland (xananode.lineage:publication/hyperland)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2404. Hyperland
+2426. Hyperland
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Hyperland (xananode.lineage:publication/hyperland)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2405. Hyperland
+2427. Hyperland
    - Existing: Publication (xananode.canonical:schema/node-type-publication)
    - Incoming: Hyperland (xananode.lineage:publication/hyperland)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2406. Hyperland
+2428. Hyperland
    - Existing: Hyperland VR (xananode.lineage:tool/hyperland-vr)
    - Incoming: Hyperland (xananode.lineage:publication/hyperland)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2407. Tom Baker
+2429. Tom Baker
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Tom Baker (xananode.lineage:person/tom-baker)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2408. Tom Baker
+2430. Tom Baker
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Tom Baker (xananode.lineage:person/tom-baker)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2409. Tom Baker
+2431. Tom Baker
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Tom Baker (xananode.lineage:person/tom-baker)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2410. Max Whitby
+2432. Max Whitby
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Max Whitby (xananode.lineage:person/max-whitby)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2411. Max Whitby
+2433. Max Whitby
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Max Whitby (xananode.lineage:person/max-whitby)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2412. Max Whitby
+2434. Max Whitby
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Max Whitby (xananode.lineage:person/max-whitby)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2413. TED2
+2435. TED2
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: TED2 (xananode.lineage:event/ted2-1990)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2414. TED2
+2436. TED2
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: TED2 (xananode.lineage:event/ted2-1990)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2415. Monterey, California
+2437. Monterey, California
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Monterey, California (xananode.lineage:place/monterey-california)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2416. Monterey, California
+2438. Monterey, California
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Monterey, California (xananode.lineage:place/monterey-california)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2417. Bob Stein
+2439. Bob Stein
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Bob Stein (xananode.lineage:person/bob-stein)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2418. Bob Stein
+2440. Bob Stein
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Bob Stein (xananode.lineage:person/bob-stein)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2419. Bob Stein
+2441. Bob Stein
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Bob Stein (xananode.lineage:person/bob-stein)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2420. Voyager Company
+2442. Voyager Company
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Voyager Company (xananode.lineage:organization/voyager-company)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2421. Voyager Company
+2443. Voyager Company
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Voyager Company (xananode.lineage:organization/voyager-company)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2422. Voyager Company
+2444. Voyager Company
    - Existing: Organization (xananode.canonical:schema/node-type-organization)
    - Incoming: Voyager Company (xananode.lineage:organization/voyager-company)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2423. Alan Kay
+2445. Alan Kay
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Alan Kay (xananode.lineage:person/alan-kay)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2424. Alan Kay
+2446. Alan Kay
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Alan Kay (xananode.lineage:person/alan-kay)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2425. Alan Kay
+2447. Alan Kay
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Alan Kay (xananode.lineage:person/alan-kay)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2426. Xerox PARC
+2448. Xerox PARC
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Xerox PARC (xananode.lineage:organization/xerox-parc)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2427. Xerox PARC
+2449. Xerox PARC
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Xerox PARC (xananode.lineage:organization/xerox-parc)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2428. Xerox PARC
+2450. Xerox PARC
    - Existing: Organization (xananode.canonical:schema/node-type-organization)
    - Incoming: Xerox PARC (xananode.lineage:organization/xerox-parc)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2429. HyperCard
+2451. HyperCard
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: HyperCard (xananode.lineage:technology/hypercard)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2430. HyperCard
+2452. HyperCard
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: HyperCard (xananode.lineage:technology/hypercard)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2431. HyperCard
+2453. HyperCard
    - Existing: Technology (xananode.canonical:schema/node-type-technology)
    - Incoming: HyperCard (xananode.lineage:technology/hypercard)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2432. Tim Berners-Lee
+2454. Tim Berners-Lee
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Tim Berners-Lee (xananode.lineage:person/tim-berners-lee)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2433. Tim Berners-Lee
+2455. Tim Berners-Lee
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Tim Berners-Lee (xananode.lineage:person/tim-berners-lee)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2434. Tim Berners-Lee
+2456. Tim Berners-Lee
    - Existing: Person (xananode.canonical:schema/node-type-person)
    - Incoming: Tim Berners-Lee (xananode.lineage:person/tim-berners-lee)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2435. World Wide Web
+2457. World Wide Web
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: World Wide Web (xananode.lineage:technology/world-wide-web)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2436. World Wide Web
+2458. World Wide Web
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: World Wide Web (xananode.lineage:technology/world-wide-web)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2437. World Wide Web
+2459. World Wide Web
    - Existing: Technology (xananode.canonical:schema/node-type-technology)
    - Incoming: World Wide Web (xananode.lineage:technology/world-wide-web)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2438. Aspen Movie Map
+2460. Aspen Movie Map
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Aspen Movie Map (xananode.lineage:project/aspen-movie-map)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2439. Aspen Movie Map
+2461. Aspen Movie Map
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Aspen Movie Map (xananode.lineage:project/aspen-movie-map)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2440. Aspen Movie Map
+2462. Aspen Movie Map
    - Existing: Project (xananode.canonical:schema/node-type-project)
    - Incoming: Aspen Movie Map (xananode.lineage:project/aspen-movie-map)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2441. Lost Lineage Intertwingled Trail
+2463. Lost Lineage Intertwingled Trail
    - Existing: XanaNode (xananode.example:concept/xananode)
    - Incoming: Lost Lineage Intertwingled Trail (xananode.lineage:trail/lost-lineage-intertwingled-trail)
    - Confidence: 0.78
    - Reason: Incoming node title or alias closely matches an existing node.
    - Approved: false
 
-2442. Lost Lineage Intertwingled Trail
+2464. Lost Lineage Intertwingled Trail
    - Existing: XanaNode (xananode.canonical:concept/xananode)
    - Incoming: Lost Lineage Intertwingled Trail (xananode.lineage:trail/lost-lineage-intertwingled-trail)
    - Confidence: 0.78
@@ -21658,147 +21812,203 @@ No transclusion suggestions.
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-445. xananode.lineage:rel/lost-lineage-context-for-xananode
+445. xananode.lineage:rel/overlap-context-for-federation
+   - Type: context_for
+   - Source: xananode.lineage:concept/authored-substrate-overlap
+   - Target: xananode.example:concept/federated-knowledge-substrates
+   - Reason: Incoming relationship references at least one node already present in the substrate.
+   - Approved: false
+
+446. xananode.lineage:rel/overlap-has-federation-signal-claim
+   - Type: has_claim
+   - Source: xananode.lineage:concept/authored-substrate-overlap
+   - Target: xananode.lineage:claim/overlap-is-federation-signal
+   - Reason: Incoming relationship references at least one node already present in the substrate.
+   - Approved: false
+
+447. xananode.lineage:rel/overlap-has-merge-claim
+   - Type: has_claim
+   - Source: xananode.lineage:concept/authored-substrate-overlap
+   - Target: xananode.lineage:claim/merge-is-authored-interpretation
+   - Reason: Incoming relationship references at least one node already present in the substrate.
+   - Approved: false
+
+448. xananode.lineage:rel/overlap-has-lineage-pack-claim
+   - Type: has_claim
+   - Source: xananode.lineage:concept/authored-substrate-overlap
+   - Target: xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack
+   - Reason: Incoming relationship references at least one node already present in the substrate.
+   - Approved: false
+
+449. xananode.lineage:rel/overlap-preserves-disputed-identity
+   - Type: preserves
+   - Source: xananode.lineage:concept/authored-substrate-overlap
+   - Target: xananode.lineage:concept/conflict-disputed-identity
+   - Reason: Incoming relationship references at least one node already present in the substrate.
+   - Approved: false
+
+450. xananode.lineage:rel/federation-signal-supports-xananode
+   - Type: supports
+   - Source: xananode.lineage:claim/overlap-is-federation-signal
+   - Target: xananode.example:concept/xananode
+   - Reason: Incoming relationship references at least one node already present in the substrate.
+   - Approved: false
+
+451. xananode.lineage:rel/merge-claim-refines-conflict
+   - Type: refines
+   - Source: xananode.lineage:claim/merge-is-authored-interpretation
+   - Target: xananode.lineage:concept/conflict-disputed-identity
+   - Reason: Incoming relationship references at least one node already present in the substrate.
+   - Approved: false
+
+452. xananode.lineage:rel/lineage-overlap-claim-explains-pack-boundary
+   - Type: explains
+   - Source: xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack
+   - Target: xananode.lineage:concept/lost-lineage-human-knowledge-augmentation
+   - Reason: Incoming relationship references at least one node already present in the substrate.
+   - Approved: false
+
+453. xananode.lineage:rel/lost-lineage-context-for-xananode
    - Type: context_for
    - Source: xananode.lineage:concept/lost-lineage-human-knowledge-augmentation
    - Target: xananode.example:concept/xananode
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-446. xananode.lineage:rel/otlet-anticipated-knowledge-systems
+454. xananode.lineage:rel/otlet-anticipated-knowledge-systems
    - Type: anticipated
    - Source: xananode.lineage:person/paul-otlet
    - Target: xananode.lineage:concept/lost-lineage-human-knowledge-augmentation
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-447. xananode.lineage:rel/wells-proposed-world-brain
+455. xananode.lineage:rel/wells-proposed-world-brain
    - Type: proposed
    - Source: xananode.lineage:person/h-g-wells
    - Target: xananode.lineage:concept/lost-lineage-human-knowledge-augmentation
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-448. xananode.lineage:rel/bush-influenced-adams-lineage
+456. xananode.lineage:rel/bush-influenced-adams-lineage
    - Type: influenced
    - Source: xananode.example:person/vannevar-bush
    - Target: xananode.lineage:person/douglas-adams
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-449. xananode.lineage:rel/nelson-influenced-hyperland
+457. xananode.lineage:rel/nelson-influenced-hyperland
    - Type: influenced
    - Source: xananode.example:person/ted-nelson
    - Target: xananode.lineage:publication/hyperland
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-450. xananode.lineage:rel/adams-authored-hyperland
+458. xananode.lineage:rel/adams-authored-hyperland
    - Type: authored
    - Source: xananode.lineage:person/douglas-adams
    - Target: xananode.lineage:publication/hyperland
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-451. xananode.lineage:rel/whitby-created-hyperland
+459. xananode.lineage:rel/whitby-created-hyperland
    - Type: created
    - Source: xananode.lineage:person/max-whitby
    - Target: xananode.lineage:publication/hyperland
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-452. xananode.lineage:rel/hyperland-features-tom-baker
+460. xananode.lineage:rel/hyperland-features-tom-baker
    - Type: features
    - Source: xananode.lineage:publication/hyperland
    - Target: xananode.lineage:person/tom-baker
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-453. xananode.lineage:rel/hyperland-contemporary-of-ted2
+461. xananode.lineage:rel/hyperland-contemporary-of-ted2
    - Type: contemporary_of
    - Source: xananode.lineage:publication/hyperland
    - Target: xananode.lineage:event/ted2-1990
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-454. xananode.lineage:rel/ted2-occurred-at-monterey
+462. xananode.lineage:rel/ted2-occurred-at-monterey
    - Type: occurred_at
    - Source: xananode.lineage:event/ted2-1990
    - Target: xananode.lineage:place/monterey-california
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-455. xananode.lineage:rel/ted2-features-adams
+463. xananode.lineage:rel/ted2-features-adams
    - Type: features
    - Source: xananode.lineage:event/ted2-1990
    - Target: xananode.lineage:person/douglas-adams
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-456. xananode.lineage:rel/ted2-features-bob-stein
+464. xananode.lineage:rel/ted2-features-bob-stein
    - Type: features
    - Source: xananode.lineage:event/ted2-1990
    - Target: xananode.lineage:person/bob-stein
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-457. xananode.lineage:rel/bob-stein-created-voyager
+465. xananode.lineage:rel/bob-stein-created-voyager
    - Type: created
    - Source: xananode.lineage:person/bob-stein
    - Target: xananode.lineage:organization/voyager-company
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-458. xananode.lineage:rel/ted2-features-alan-kay
+466. xananode.lineage:rel/ted2-features-alan-kay
    - Type: features
    - Source: xananode.lineage:event/ted2-1990
    - Target: xananode.lineage:person/alan-kay
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-459. xananode.lineage:rel/alan-kay-shaped-dynamic-media
+467. xananode.lineage:rel/alan-kay-shaped-dynamic-media
    - Type: shapes
    - Source: xananode.lineage:person/alan-kay
    - Target: xananode.lineage:organization/xerox-parc
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-460. xananode.lineage:rel/hypercard-popularized-hypermedia
+468. xananode.lineage:rel/hypercard-popularized-hypermedia
    - Type: popularized
    - Source: xananode.lineage:technology/hypercard
    - Target: xananode.lineage:concept/lost-lineage-human-knowledge-augmentation
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-461. xananode.lineage:rel/berners-lee-implemented-web
+469. xananode.lineage:rel/berners-lee-implemented-web
    - Type: implements
    - Source: xananode.lineage:person/tim-berners-lee
    - Target: xananode.lineage:technology/world-wide-web
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-462. xananode.lineage:rel/web-contrasts-with-xananode
+470. xananode.lineage:rel/web-contrasts-with-xananode
    - Type: contrasts_with
    - Source: xananode.lineage:technology/world-wide-web
    - Target: xananode.example:concept/xananode
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-463. xananode.lineage:rel/aspen-anticipated-spatial-media
+471. xananode.lineage:rel/aspen-anticipated-spatial-media
    - Type: anticipated
    - Source: xananode.lineage:project/aspen-movie-map
    - Target: xananode.lineage:publication/hyperland
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-464. xananode.lineage:rel/trail-starts-with-lost-lineage
+472. xananode.lineage:rel/trail-starts-with-lost-lineage
    - Type: starts_with
    - Source: xananode.lineage:trail/lost-lineage-intertwingled-trail
    - Target: xananode.lineage:concept/lost-lineage-human-knowledge-augmentation
    - Reason: Incoming relationship references at least one node already present in the substrate.
    - Approved: false
 
-465. xananode.lineage:rel/trail-arrives-at-xananode
+473. xananode.lineage:rel/trail-arrives-at-xananode
    - Type: arrives_at
    - Source: xananode.lineage:trail/lost-lineage-intertwingled-trail
    - Target: xananode.example:concept/xananode

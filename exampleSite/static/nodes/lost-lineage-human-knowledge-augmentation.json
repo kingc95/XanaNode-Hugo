@@ -48,6 +48,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.lineage:rel/lineage-overlap-claim-explains-pack-boundary",
+      "type": "explains",
+      "source": "xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.lineage:rel/lost-lineage-context-for-xananode",
       "type": "context_for",
       "target": "xananode.example:concept/xananode",

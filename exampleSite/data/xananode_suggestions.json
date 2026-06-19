@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T08:55:14.706Z",
+  "generated_at": "2026-06-19T09:03:47.046Z",
   "status": "pending_user_approval",
   "note": "These suggestions are not auto-applied. Review each replacement before editing content.",
   "implemented_transclusions": [
@@ -6511,6 +6511,42 @@
     },
     {
       "kind": "same_id",
+      "existing": "xananode.lineage:concept/authored-substrate-overlap",
+      "incoming": "xananode.lineage:concept/authored-substrate-overlap",
+      "existing_title": "Authored Substrate Overlap",
+      "incoming_title": "Authored Substrate Overlap",
+      "confidence": 1,
+      "reason": "Incoming node has the same protocol id as an existing node."
+    },
+    {
+      "kind": "same_id",
+      "existing": "xananode.lineage:claim/overlap-is-federation-signal",
+      "incoming": "xananode.lineage:claim/overlap-is-federation-signal",
+      "existing_title": "Overlap is a Federation Signal",
+      "incoming_title": "Overlap is a Federation Signal",
+      "confidence": 1,
+      "reason": "Incoming node has the same protocol id as an existing node."
+    },
+    {
+      "kind": "same_id",
+      "existing": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "incoming": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "existing_title": "Merge is Authored Interpretation",
+      "incoming_title": "Merge is Authored Interpretation",
+      "confidence": 1,
+      "reason": "Incoming node has the same protocol id as an existing node."
+    },
+    {
+      "kind": "same_id",
+      "existing": "xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack",
+      "incoming": "xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack",
+      "existing_title": "Lineage Packs Can Overlap Canonical Packs",
+      "incoming_title": "Lineage Packs Can Overlap Canonical Packs",
+      "confidence": 1,
+      "reason": "Incoming node has the same protocol id as an existing node."
+    },
+    {
+      "kind": "same_id",
       "existing": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
       "incoming": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
       "existing_title": "Lost Lineage of Human Knowledge Augmentation",
@@ -10318,6 +10354,42 @@
     },
     {
       "kind": "possible_same_entity",
+      "existing": "xananode.lineage:concept/authored-substrate-overlap",
+      "incoming": "xananode.canonical:concept/xananode",
+      "existing_title": "Authored Substrate Overlap",
+      "incoming_title": "XanaNode",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.lineage:claim/overlap-is-federation-signal",
+      "incoming": "xananode.canonical:concept/xananode",
+      "existing_title": "Overlap is a Federation Signal",
+      "incoming_title": "XanaNode",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "incoming": "xananode.canonical:concept/xananode",
+      "existing_title": "Merge is Authored Interpretation",
+      "incoming_title": "XanaNode",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack",
+      "incoming": "xananode.canonical:concept/xananode",
+      "existing_title": "Lineage Packs Can Overlap Canonical Packs",
+      "incoming_title": "XanaNode",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
       "existing": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
       "incoming": "xananode.canonical:concept/xananode",
       "existing_title": "Lost Lineage of Human Knowledge Augmentation",
@@ -12346,6 +12418,15 @@
       "existing": "xananode.lineage:concept/conflict-disputed-identity",
       "incoming": "xananode.canonical:schema/node-type-concept",
       "existing_title": "Conflict and Disputed Identity",
+      "incoming_title": "Concept",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.lineage:concept/authored-substrate-overlap",
+      "incoming": "xananode.canonical:schema/node-type-concept",
+      "existing_title": "Authored Substrate Overlap",
       "incoming_title": "Concept",
       "confidence": 0.78,
       "reason": "Incoming node title or alias closely matches an existing node."
@@ -17833,6 +17914,24 @@
     },
     {
       "kind": "possible_same_entity",
+      "existing": "xananode.lineage:concept/authored-substrate-overlap",
+      "incoming": "xananode.canonical:schema/relationship-type-authored",
+      "existing_title": "Authored Substrate Overlap",
+      "incoming_title": "Authored",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "incoming": "xananode.canonical:schema/relationship-type-authored",
+      "existing_title": "Merge is Authored Interpretation",
+      "incoming_title": "Authored",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
       "existing": "xananode.example:concept/xananode",
       "incoming": "xananode.canonical:schema/relationship-type-authored_by",
       "existing_title": "XanaNode",
@@ -24857,6 +24956,105 @@
       "incoming": "xananode.lineage:tool/hyperland-vr",
       "existing_title": "Hyperland",
       "incoming_title": "Hyperland VR",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.example:concept/xananode",
+      "incoming": "xananode.lineage:concept/authored-substrate-overlap",
+      "existing_title": "XanaNode",
+      "incoming_title": "Authored Substrate Overlap",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.canonical:concept/xananode",
+      "incoming": "xananode.lineage:concept/authored-substrate-overlap",
+      "existing_title": "XanaNode",
+      "incoming_title": "Authored Substrate Overlap",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.canonical:schema/node-type-concept",
+      "incoming": "xananode.lineage:concept/authored-substrate-overlap",
+      "existing_title": "Concept",
+      "incoming_title": "Authored Substrate Overlap",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.canonical:schema/relationship-type-authored",
+      "incoming": "xananode.lineage:concept/authored-substrate-overlap",
+      "existing_title": "Authored",
+      "incoming_title": "Authored Substrate Overlap",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.example:concept/xananode",
+      "incoming": "xananode.lineage:claim/overlap-is-federation-signal",
+      "existing_title": "XanaNode",
+      "incoming_title": "Overlap is a Federation Signal",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.canonical:concept/xananode",
+      "incoming": "xananode.lineage:claim/overlap-is-federation-signal",
+      "existing_title": "XanaNode",
+      "incoming_title": "Overlap is a Federation Signal",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.example:concept/xananode",
+      "incoming": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "existing_title": "XanaNode",
+      "incoming_title": "Merge is Authored Interpretation",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.canonical:concept/xananode",
+      "incoming": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "existing_title": "XanaNode",
+      "incoming_title": "Merge is Authored Interpretation",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.canonical:schema/relationship-type-authored",
+      "incoming": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "existing_title": "Authored",
+      "incoming_title": "Merge is Authored Interpretation",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.example:concept/xananode",
+      "incoming": "xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack",
+      "existing_title": "XanaNode",
+      "incoming_title": "Lineage Packs Can Overlap Canonical Packs",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.canonical:concept/xananode",
+      "incoming": "xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack",
+      "existing_title": "XanaNode",
+      "incoming_title": "Lineage Packs Can Overlap Canonical Packs",
       "confidence": 0.78,
       "reason": "Incoming node title or alias closely matches an existing node."
     },
@@ -30653,6 +30851,102 @@
       "target": "xananode.example:concept/federated-knowledge-substrates",
       "type": "implements",
       "summary": "Hyperland VR imagines spatial navigation across federated substrates.",
+      "touches_source": true,
+      "touches_target": true,
+      "confidence": 0.9,
+      "reason": "Incoming relationship references at least one node already present in the substrate."
+    },
+    {
+      "kind": "incoming_relationship_touches_existing_node",
+      "relationship": "xananode.lineage:rel/overlap-context-for-federation",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "type": "context_for",
+      "summary": "Authored overlap is the practical reason federated substrates need identity comparison and governed merge behavior.",
+      "touches_source": true,
+      "touches_target": true,
+      "confidence": 0.9,
+      "reason": "Incoming relationship references at least one node already present in the substrate."
+    },
+    {
+      "kind": "incoming_relationship_touches_existing_node",
+      "relationship": "xananode.lineage:rel/overlap-has-federation-signal-claim",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "target": "xananode.lineage:claim/overlap-is-federation-signal",
+      "type": "has_claim",
+      "summary": "The overlap concept claims that overlapping records are federation signals.",
+      "touches_source": true,
+      "touches_target": true,
+      "confidence": 0.9,
+      "reason": "Incoming relationship references at least one node already present in the substrate."
+    },
+    {
+      "kind": "incoming_relationship_touches_existing_node",
+      "relationship": "xananode.lineage:rel/overlap-has-merge-claim",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "target": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "type": "has_claim",
+      "summary": "The overlap concept claims that merge decisions are authored interpretations.",
+      "touches_source": true,
+      "touches_target": true,
+      "confidence": 0.9,
+      "reason": "Incoming relationship references at least one node already present in the substrate."
+    },
+    {
+      "kind": "incoming_relationship_touches_existing_node",
+      "relationship": "xananode.lineage:rel/overlap-has-lineage-pack-claim",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "target": "xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack",
+      "type": "has_claim",
+      "summary": "The overlap concept claims that the lineage pack can overlap the canonical pack without becoming the same substrate.",
+      "touches_source": true,
+      "touches_target": true,
+      "confidence": 0.9,
+      "reason": "Incoming relationship references at least one node already present in the substrate."
+    },
+    {
+      "kind": "incoming_relationship_touches_existing_node",
+      "relationship": "xananode.lineage:rel/overlap-preserves-disputed-identity",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "target": "xananode.lineage:concept/conflict-disputed-identity",
+      "type": "preserves",
+      "summary": "Authored overlap preserves possible identity conflicts until a merge decision is justified.",
+      "touches_source": true,
+      "touches_target": true,
+      "confidence": 0.9,
+      "reason": "Incoming relationship references at least one node already present in the substrate."
+    },
+    {
+      "kind": "incoming_relationship_touches_existing_node",
+      "relationship": "xananode.lineage:rel/federation-signal-supports-xananode",
+      "source": "xananode.lineage:claim/overlap-is-federation-signal",
+      "target": "xananode.example:concept/xananode",
+      "type": "supports",
+      "summary": "Treating overlap as a signal supports XanaNode's relationship-first federation model.",
+      "touches_source": true,
+      "touches_target": true,
+      "confidence": 0.9,
+      "reason": "Incoming relationship references at least one node already present in the substrate."
+    },
+    {
+      "kind": "incoming_relationship_touches_existing_node",
+      "relationship": "xananode.lineage:rel/merge-claim-refines-conflict",
+      "source": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "target": "xananode.lineage:concept/conflict-disputed-identity",
+      "type": "refines",
+      "summary": "The merge claim refines disputed identity by making identity resolution attributable and reversible.",
+      "touches_source": true,
+      "touches_target": true,
+      "confidence": 0.9,
+      "reason": "Incoming relationship references at least one node already present in the substrate."
+    },
+    {
+      "kind": "incoming_relationship_touches_existing_node",
+      "relationship": "xananode.lineage:rel/lineage-overlap-claim-explains-pack-boundary",
+      "source": "xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "explains",
+      "summary": "The lineage pack may name canonical XanaNode ideas when explaining the path that led to them.",
       "touches_source": true,
       "touches_target": true,
       "confidence": 0.9,

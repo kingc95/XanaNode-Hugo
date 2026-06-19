@@ -118,6 +118,12 @@
       "type": "implements",
       "source": "xananode.lineage:tool/hyperland-vr",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/overlap-context-for-federation",
+      "type": "context_for",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "direction": "incoming"
     }
   ]
 }

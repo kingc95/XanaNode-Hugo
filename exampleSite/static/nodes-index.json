@@ -2627,6 +2627,34 @@
       "imported": true
     },
     {
+      "id": "xananode.lineage:concept/authored-substrate-overlap",
+      "path": "nodes/authored-substrate-overlap.json",
+      "title": "Authored Substrate Overlap",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:claim/overlap-is-federation-signal",
+      "path": "nodes/overlap-is-federation-signal.json",
+      "title": "Overlap is a Federation Signal",
+      "type": "claim",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "path": "nodes/merge-is-authored-interpretation.json",
+      "title": "Merge is Authored Interpretation",
+      "type": "claim",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack",
+      "path": "nodes/lineage-pack-can-overlap-canonical-pack.json",
+      "title": "Lineage Packs Can Overlap Canonical Packs",
+      "type": "claim",
+      "imported": true
+    },
+    {
       "id": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
       "path": "nodes/lost-lineage-human-knowledge-augmentation.json",
       "title": "Lost Lineage of Human Knowledge Augmentation",

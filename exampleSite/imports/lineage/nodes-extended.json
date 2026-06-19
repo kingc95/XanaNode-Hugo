@@ -415,6 +415,39 @@
       "importance": 3,
       "summary": "A future interface idea for spatial navigation of federated substrates.",
       "relationships": []
+    },
+    {
+      "id": "xananode.lineage:concept/authored-substrate-overlap",
+      "title": "Authored Substrate Overlap",
+      "type": "concept",
+      "importance": 5,
+      "summary": "Independently authored substrates will naturally describe some of the same entities, claims, works, and sources without meaning one substrate should erase the other.",
+      "content": "Overlap is expected when people, organizations, and projects author their own substrates. Two packs may both mention XanaNode, Douglas Adams, Hyperland, the Web, or transclusion because those things matter from more than one point of view. XanaNode treats that overlap as a federation signal: keep the authored records, preserve their provenance, compare their identifiers and claims, and only merge when the substrate can explain why the records refer to the same thing.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:claim/overlap-is-federation-signal",
+      "title": "Overlap is a Federation Signal",
+      "type": "claim",
+      "importance": 5,
+      "summary": "When independently authored substrates overlap, the overlap should trigger comparison, provenance review, and possible merge rather than automatic deletion.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "title": "Merge is Authored Interpretation",
+      "type": "claim",
+      "importance": 5,
+      "summary": "A merge decision is itself a claim about identity and should remain inspectable, reversible, and attributable.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack",
+      "title": "Lineage Packs Can Overlap Canonical Packs",
+      "type": "claim",
+      "importance": 4,
+      "summary": "The XanaNode lineage pack may overlap the canonical XanaNode pack because one explains origin and influence while the other defines protocol vocabulary and project structure.",
+      "relationships": []
     }
   ]
 }

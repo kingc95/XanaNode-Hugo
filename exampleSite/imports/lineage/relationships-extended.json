@@ -431,6 +431,78 @@
       "weight": 3,
       "visibility": "background",
       "summary": "Hyperland VR imagines spatial navigation across federated substrates."
+    },
+    {
+      "id": "xananode.lineage:rel/overlap-context-for-federation",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "type": "context_for",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "Authored overlap is the practical reason federated substrates need identity comparison and governed merge behavior."
+    },
+    {
+      "id": "xananode.lineage:rel/overlap-has-federation-signal-claim",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "target": "xananode.lineage:claim/overlap-is-federation-signal",
+      "type": "has_claim",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "The overlap concept claims that overlapping records are federation signals."
+    },
+    {
+      "id": "xananode.lineage:rel/overlap-has-merge-claim",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "target": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "type": "has_claim",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "The overlap concept claims that merge decisions are authored interpretations."
+    },
+    {
+      "id": "xananode.lineage:rel/overlap-has-lineage-pack-claim",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "target": "xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack",
+      "type": "has_claim",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "The overlap concept claims that the lineage pack can overlap the canonical pack without becoming the same substrate."
+    },
+    {
+      "id": "xananode.lineage:rel/overlap-preserves-disputed-identity",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "target": "xananode.lineage:concept/conflict-disputed-identity",
+      "type": "preserves",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Authored overlap preserves possible identity conflicts until a merge decision is justified."
+    },
+    {
+      "id": "xananode.lineage:rel/federation-signal-supports-xananode",
+      "source": "xananode.lineage:claim/overlap-is-federation-signal",
+      "target": "xananode.example:concept/xananode",
+      "type": "supports",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Treating overlap as a signal supports XanaNode's relationship-first federation model."
+    },
+    {
+      "id": "xananode.lineage:rel/merge-claim-refines-conflict",
+      "source": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "target": "xananode.lineage:concept/conflict-disputed-identity",
+      "type": "refines",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "The merge claim refines disputed identity by making identity resolution attributable and reversible."
+    },
+    {
+      "id": "xananode.lineage:rel/lineage-overlap-claim-explains-pack-boundary",
+      "source": "xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "explains",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "The lineage pack may name canonical XanaNode ideas when explaining the path that led to them."
     }
   ]
 }
