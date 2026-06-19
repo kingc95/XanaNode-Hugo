@@ -4,7 +4,14 @@
   "type": "project",
   "importance": 4,
   "summary": "An early usable hypertext system developed at Brown University.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/brown-site-of-hes",
+      "type": "occurred_at",
+      "source": "xananode.lineage:place/brown-university",
+      "direction": "incoming"
+    }
+  ],
   "imported_from": "nodes-extended.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

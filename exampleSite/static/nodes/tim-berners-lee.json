@@ -4,7 +4,20 @@
   "type": "person",
   "importance": 5,
   "summary": "Inventor of the World Wide Web, a simpler distributed hypertext branch that solved broad publishing and retrieval.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/berners-lee-collaborated-with-cailliau",
+      "type": "collaborated_with",
+      "target": "xananode.lineage:person/robert-cailliau",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/berners-lee-implemented-web",
+      "type": "implements",
+      "target": "xananode.lineage:technology/world-wide-web",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

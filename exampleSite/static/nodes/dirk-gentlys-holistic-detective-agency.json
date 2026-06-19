@@ -4,7 +4,14 @@
   "type": "publication",
   "importance": 4,
   "summary": "Douglas Adams novel foregrounding the fundamental interconnectedness of all things before the public Web.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/dirk-gently-anticipated-hyperland",
+      "type": "anticipated",
+      "target": "xananode.lineage:publication/hyperland",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes-extended.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

@@ -4,7 +4,14 @@
   "type": "place",
   "importance": 4,
   "summary": "Birthplace of the Web proposal and early Web implementation.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/cern-context-for-web",
+      "type": "context_for",
+      "target": "xananode.lineage:technology/world-wide-web",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes-extended.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

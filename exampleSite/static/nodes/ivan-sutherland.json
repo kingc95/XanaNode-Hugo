@@ -4,7 +4,14 @@
   "type": "person",
   "importance": 5,
   "summary": "Sketchpad and head-mounted display pioneer who anticipated visual and spatial computing.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/sutherland-anticipated-spatial-computing",
+      "type": "anticipated",
+      "target": "xananode.lineage:tool/hyperland-vr",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes-extended.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

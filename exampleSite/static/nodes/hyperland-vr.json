@@ -4,7 +4,20 @@
   "type": "technology",
   "importance": 3,
   "summary": "A future interface idea for spatial navigation of federated substrates.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/sutherland-anticipated-spatial-computing",
+      "type": "anticipated",
+      "source": "xananode.lineage:person/ivan-sutherland",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/hyperland-vr-implements-spatial-navigation",
+      "type": "implements",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes-extended.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

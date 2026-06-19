@@ -4,7 +4,20 @@
   "type": "person",
   "importance": 4,
   "summary": "Interactive publishing pioneer associated with Criterion, Voyager, and early electronic books.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/ted2-features-bob-stein",
+      "type": "features",
+      "source": "xananode.lineage:event/ted2-1990",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/bob-stein-created-voyager",
+      "type": "created",
+      "target": "xananode.lineage:organization/voyager-company",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

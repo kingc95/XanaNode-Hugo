@@ -4,7 +4,38 @@
   "type": "person",
   "importance": 5,
   "summary": "Computing pioneer associated with Dynabook, Smalltalk, personal dynamic media, and computers as tools for improving thought.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/alan-kay-extends-engelbart",
+      "type": "extends",
+      "target": "xananode.example:person/douglas-engelbart",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/xerox-parc-context-for-kay",
+      "type": "context_for",
+      "source": "xananode.lineage:organization/xerox-parc",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/papert-parallel-to-kay",
+      "type": "parallel_to",
+      "source": "xananode.lineage:person/seymour-papert",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-alan-kay",
+      "type": "features",
+      "source": "xananode.lineage:event/ted2-1990",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/alan-kay-shaped-dynamic-media",
+      "type": "shapes",
+      "target": "xananode.lineage:organization/xerox-parc",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

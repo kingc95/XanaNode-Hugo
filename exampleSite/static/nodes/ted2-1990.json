@@ -4,7 +4,62 @@
   "type": "event",
   "importance": 5,
   "summary": "The February 1990 TED conference in Monterey where hypertext, interactive media, virtual reality, design, and knowledge-navigation ideas converged.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/wurman-created-ted-context",
+      "type": "created",
+      "source": "xananode.lineage:person/richard-saul-wurman",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/harry-marks-participated-in-ted2",
+      "type": "participated_in",
+      "source": "xananode.lineage:person/harry-marks",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-robert-abel",
+      "type": "features",
+      "target": "xananode.lineage:person/robert-abel",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-bill-atkinson",
+      "type": "features",
+      "target": "xananode.lineage:person/bill-atkinson",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/hyperland-contemporary-of-ted2",
+      "type": "contemporary_of",
+      "source": "xananode.lineage:publication/hyperland",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-occurred-at-monterey",
+      "type": "occurred_at",
+      "target": "xananode.lineage:place/monterey-california",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-adams",
+      "type": "features",
+      "target": "xananode.lineage:person/douglas-adams",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-bob-stein",
+      "type": "features",
+      "target": "xananode.lineage:person/bob-stein",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-alan-kay",
+      "type": "features",
+      "target": "xananode.lineage:person/alan-kay",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

@@ -4,7 +4,14 @@
   "type": "person",
   "importance": 4,
   "summary": "Philosopher and mathematician associated with universal symbolic reasoning and the calculus of thought.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/leibniz-anticipated-semantic-computation",
+      "type": "anticipated",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes-extended.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

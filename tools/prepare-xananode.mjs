@@ -1328,7 +1328,10 @@ for (const importedNode of importedNodes) {
     warnings.push(`Imported node "${importedNode.id}" duplicates a generated node and was ignored.`);
     continue;
   }
-  protocolNodes.push(importedNode);
+  protocolNodes.push({
+    ...importedNode,
+    relationships: protocolRelationshipsByNode.get(importedNode.id) || importedNode.relationships || []
+  });
   importedNodeIds.add(importedNode.id);
 }
 

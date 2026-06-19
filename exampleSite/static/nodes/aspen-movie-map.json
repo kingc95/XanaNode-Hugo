@@ -4,7 +4,14 @@
   "type": "project",
   "importance": 4,
   "summary": "An early navigable spatial media project often treated as part of the hypermedia and virtual environment lineage.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/aspen-anticipated-spatial-media",
+      "type": "anticipated",
+      "target": "xananode.lineage:publication/hyperland",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

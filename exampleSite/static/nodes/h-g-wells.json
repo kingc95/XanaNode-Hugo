@@ -4,7 +4,14 @@
   "type": "person",
   "importance": 4,
   "summary": "Writer and futurist who proposed a World Brain as a planetary knowledge memory.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/wells-proposed-world-brain",
+      "type": "proposed",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

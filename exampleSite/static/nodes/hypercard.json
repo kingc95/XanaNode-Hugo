@@ -4,7 +4,20 @@
   "type": "technology",
   "importance": 4,
   "summary": "Apple hypermedia authoring system that popularized personal card-based linking and scripting.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/bill-atkinson-implemented-hypercard",
+      "type": "implements",
+      "source": "xananode.lineage:person/bill-atkinson",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/hypercard-popularized-hypermedia",
+      "type": "popularized",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

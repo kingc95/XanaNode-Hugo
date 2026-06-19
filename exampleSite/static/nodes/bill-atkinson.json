@@ -4,7 +4,20 @@
   "type": "person",
   "importance": 4,
   "summary": "Creator associated with HyperCard and MacPaint, bringing accessible hypermedia authoring to personal computers.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/bill-atkinson-implemented-hypercard",
+      "type": "implements",
+      "target": "xananode.lineage:technology/hypercard",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-bill-atkinson",
+      "type": "features",
+      "source": "xananode.lineage:event/ted2-1990",
+      "direction": "incoming"
+    }
+  ],
   "imported_from": "nodes-extended.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

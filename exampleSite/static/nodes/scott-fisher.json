@@ -4,7 +4,14 @@
   "type": "person",
   "importance": 3,
   "summary": "Virtual environment researcher associated with NASA VR demonstrations.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/fisher-demonstrated-nasa-vr",
+      "type": "demonstrates",
+      "target": "xananode.lineage:organization/nasa",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes-extended.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

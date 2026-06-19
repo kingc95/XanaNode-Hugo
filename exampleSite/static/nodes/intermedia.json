@@ -4,7 +4,14 @@
   "type": "project",
   "importance": 4,
   "summary": "A scholarly hypermedia system associated with Brown University.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/intermedia-implemented-scholarly-hypermedia",
+      "type": "implements",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes-extended.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

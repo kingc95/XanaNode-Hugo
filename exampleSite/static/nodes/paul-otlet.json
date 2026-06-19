@@ -4,7 +4,20 @@
   "type": "person",
   "importance": 4,
   "summary": "Documentalist associated with the Mundaneum, universal bibliography, and early visions of networked document access.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/ostwald-parallel-to-otlet",
+      "type": "parallel_to",
+      "source": "xananode.lineage:person/wilhelm-ostwald",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/otlet-anticipated-knowledge-systems",
+      "type": "anticipated",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

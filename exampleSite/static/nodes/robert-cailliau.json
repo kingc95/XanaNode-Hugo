@@ -4,7 +4,14 @@
   "type": "person",
   "importance": 4,
   "summary": "Collaborator and promoter of the World Wide Web proposal.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/berners-lee-collaborated-with-cailliau",
+      "type": "collaborated_with",
+      "source": "xananode.lineage:person/tim-berners-lee",
+      "direction": "incoming"
+    }
+  ],
   "imported_from": "nodes-extended.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

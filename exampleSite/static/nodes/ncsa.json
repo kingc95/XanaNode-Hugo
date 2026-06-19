@@ -4,7 +4,14 @@
   "type": "organization",
   "importance": 4,
   "summary": "Organization associated with Mosaic and the popularization of Web browsing.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/ncsa-popularized-mosaic",
+      "type": "popularized",
+      "target": "xananode.lineage:technology/mosaic",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes-extended.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

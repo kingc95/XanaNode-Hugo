@@ -4,7 +4,14 @@
   "type": "person",
   "importance": 4,
   "summary": "Media Lab figure associated with intelligent media and interactive information spaces.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/negroponte-shapes-media-lab",
+      "type": "shapes",
+      "target": "xananode.lineage:organization/mit-media-lab",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes-extended.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

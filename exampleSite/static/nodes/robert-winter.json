@@ -4,7 +4,14 @@
   "type": "person",
   "importance": 3,
   "summary": "Music scholar associated with interactive exploration of Beethoven's Ninth.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/winter-demonstrated-interactive-music",
+      "type": "demonstrates",
+      "target": "xananode.lineage:project/interactive-beethoven-ninth",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes-extended.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

@@ -4,7 +4,20 @@
   "type": "publication",
   "importance": 4,
   "summary": "A Borges story frequently read as a literary ancestor of nonlinear textual structures.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/borges-authored-forking-paths",
+      "type": "authored",
+      "source": "xananode.lineage:person/jorge-luis-borges",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/forking-paths-anticipated-nonlinear-text",
+      "type": "anticipated",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes-extended.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

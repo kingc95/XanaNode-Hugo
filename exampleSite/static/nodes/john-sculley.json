@@ -4,7 +4,14 @@
   "type": "person",
   "importance": 4,
   "summary": "Apple executive who presented From Multimedia to Interactive Media and the Knowledge Navigator future.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/sculley-presented-knowledge-navigator",
+      "type": "presented",
+      "target": "xananode.lineage:technology/apple-knowledge-navigator",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes-extended.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

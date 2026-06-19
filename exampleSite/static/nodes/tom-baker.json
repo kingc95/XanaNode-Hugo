@@ -4,7 +4,20 @@
   "type": "person",
   "importance": 3,
   "summary": "Actor who appears in Hyperland as a software-agent persona guiding knowledge navigation.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/knowledge-navigator-parallel-to-hyperland-agent",
+      "type": "parallel_to",
+      "source": "xananode.lineage:technology/apple-knowledge-navigator",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/hyperland-features-tom-baker",
+      "type": "features",
+      "source": "xananode.lineage:publication/hyperland",
+      "direction": "incoming"
+    }
+  ],
   "imported_from": "nodes.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

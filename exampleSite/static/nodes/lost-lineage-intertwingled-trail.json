@@ -16,7 +16,20 @@
     "xananode.lineage:technology/world-wide-web",
     "xananode.example:concept/xananode"
   ],
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/trail-starts-with-lost-lineage",
+      "type": "starts_with",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/trail-arrives-at-xananode",
+      "type": "arrives_at",
+      "target": "xananode.example:concept/xananode",
+      "direction": "outgoing"
+    }
+  ],
   "imported_from": "nodes.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"

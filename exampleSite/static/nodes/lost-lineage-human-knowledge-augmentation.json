@@ -4,7 +4,80 @@
   "type": "concept",
   "importance": 5,
   "summary": "A parallel history of computing tried to preserve human understanding as connected, navigable, attributable knowledge.",
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/leibniz-anticipated-semantic-computation",
+      "type": "anticipated",
+      "source": "xananode.lineage:person/gottfried-wilhelm-leibniz",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/forking-paths-anticipated-nonlinear-text",
+      "type": "anticipated",
+      "source": "xananode.lineage:publication/the-garden-of-forking-paths",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/intermedia-implemented-scholarly-hypermedia",
+      "type": "implements",
+      "source": "xananode.lineage:project/intermedia",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/guide-implemented-pc-hypertext",
+      "type": "implements",
+      "source": "xananode.lineage:technology/guide",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/storyspace-implemented-hypertext-literature",
+      "type": "implements",
+      "source": "xananode.lineage:project/storyspace",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/zog-kms-implemented-frame-navigation",
+      "type": "implements",
+      "source": "xananode.lineage:project/zog-kms",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/xananode-preserves-lost-lineage",
+      "type": "preserves",
+      "source": "xananode.example:concept/xananode",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/lost-lineage-context-for-xananode",
+      "type": "context_for",
+      "target": "xananode.example:concept/xananode",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/otlet-anticipated-knowledge-systems",
+      "type": "anticipated",
+      "source": "xananode.lineage:person/paul-otlet",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/wells-proposed-world-brain",
+      "type": "proposed",
+      "source": "xananode.lineage:person/h-g-wells",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/hypercard-popularized-hypermedia",
+      "type": "popularized",
+      "source": "xananode.lineage:technology/hypercard",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/trail-starts-with-lost-lineage",
+      "type": "starts_with",
+      "source": "xananode.lineage:trail/lost-lineage-intertwingled-trail",
+      "direction": "incoming"
+    }
+  ],
   "imported_from": "nodes.json",
   "pack_id": "imports:lineage",
   "pack_mode": "mounted"
