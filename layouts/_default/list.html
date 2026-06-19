@@ -1,6 +1,6 @@
 {{ define "main" }}
 <section class="xana-list-page" data-section="{{ .Section }}">
-  <a class="xana-back-home" href="/">← Return to node explorer</a>
+  <a class="xana-back-home" href="/">&lt;- Return to node explorer</a>
 
   <header class="xana-list-hero">
     <div class="xana-list-kicker">{{ .Section }}</div>
@@ -27,24 +27,103 @@
 
   <div class="xana-list-grid">
     {{ range .RegularPages.ByTitle }}
-      <article class="xana-list-card">
-        <div class="xana-list-card-topline">
-          <span class="xana-list-type">{{ .Params.node_type | default .Params.type | default .Section }}</span>
-          {{ with .Params.importance }}
-            <span class="xana-list-importance">importance {{ . }}</span>
-          {{ end }}
-        </div>
-
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-
-        {{ with .Params.summary }}
-          <p>{{ . }}</p>
+      {{ $nodeType := .Params.node_type | default .Params.type | default .Section }}
+      {{ $subtypes := slice }}
+      {{ with .Params.subtype }}{{ $subtypes = $subtypes | append . }}{{ end }}
+      {{ with .Params.subtypes }}
+        {{ if reflect.IsSlice . }}
+          {{ $subtypes = $subtypes | append . }}
         {{ else }}
-          <p class="xana-list-empty">No summary available.</p>
+          {{ $subtypes = $subtypes | append (split . ",") }}
         {{ end }}
+      {{ end }}
+      {{ $sourceURL := .Params.source_url | default .Params.url }}
+      {{ $sourceHost := "" }}
+      {{ with $sourceURL }}
+        {{ $parsed := urls.Parse . }}
+        {{ $sourceHost = $parsed.Host }}
+      {{ end }}
 
-        <div class="xana-list-card-footer">
-          <a href="{{ .RelPermalink }}">Open node</a>
+      <article class="xana-list-card{{ if eq $nodeType "source" }} xana-list-card--source{{ end }}">
+        <div class="xana-list-card-main">
+          {{ with .Params.image }}
+            <a class="xana-list-card-media" href="{{ $.RelPermalink }}" aria-label="Open {{ $.Title }}">
+              <img src="{{ . | relURL }}" alt="{{ $.Params.image_alt | default $.Title }}">
+            </a>
+          {{ end }}
+
+          <div class="xana-list-card-body">
+            <div class="xana-list-card-topline">
+              <div class="xana-list-badges">
+                <span class="xana-list-type">{{ $nodeType }}</span>
+                {{ range $subtypes }}
+                  {{ $subtype := trim . " " }}
+                  {{ if $subtype }}
+                    <span class="xana-list-subtype">{{ replace $subtype "_" " " }}</span>
+                  {{ end }}
+                {{ end }}
+              </div>
+              {{ with .Params.importance }}
+                <span class="xana-list-importance">importance {{ . }}</span>
+              {{ end }}
+            </div>
+
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+
+            {{ with .Params.summary }}
+              <p>{{ . }}</p>
+            {{ else }}
+              <p class="xana-list-empty">No summary available.</p>
+            {{ end }}
+
+            {{ if or $sourceURL .Params.author .Params.year .Params.rights_status .Params.license .Params.protocol_id }}
+              <dl class="xana-list-mini-meta">
+                {{ with $sourceURL }}
+                  <div>
+                    <dt>URL</dt>
+                    <dd><a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ $sourceHost | default . }}</a></dd>
+                  </div>
+                {{ end }}
+                {{ with .Params.author }}
+                  <div>
+                    <dt>Author</dt>
+                    <dd>{{ . }}</dd>
+                  </div>
+                {{ end }}
+                {{ with .Params.year }}
+                  <div>
+                    <dt>Year</dt>
+                    <dd>{{ . }}</dd>
+                  </div>
+                {{ end }}
+                {{ with .Params.rights_status }}
+                  <div>
+                    <dt>Rights</dt>
+                    <dd>{{ . }}</dd>
+                  </div>
+                {{ end }}
+                {{ with .Params.license }}
+                  <div>
+                    <dt>License</dt>
+                    <dd>{{ . }}</dd>
+                  </div>
+                {{ end }}
+                {{ with .Params.protocol_id }}
+                  <div>
+                    <dt>Protocol</dt>
+                    <dd><code>{{ . }}</code></dd>
+                  </div>
+                {{ end }}
+              </dl>
+            {{ end }}
+
+            <div class="xana-list-card-footer">
+              <a href="{{ .RelPermalink }}">Open node</a>
+              {{ with $sourceURL }}
+                <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Open source</a>
+              {{ end }}
+            </div>
+          </div>
         </div>
       </article>
     {{ end }}
