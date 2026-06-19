@@ -2,10 +2,10 @@
   "id": "xananode.canonical:project/xananode-core-sdk",
   "title": "XanaNode Core SDK",
   "type": "project",
-  "subtype": "software",
+  "subtype": "core-sdk",
   "status": "active",
-  "importance": 5,
-  "summary": "The renderer-independent SDK that validates substrates, resolves mounted packs, analyzes intake, builds fragments, generates suggestions, and exports protocol artifacts.",
+  "importance": 4,
+  "summary": "Renderer-independent parser, validator, graph builder, fragment engine, pack composer, suggestion engine, and exporter for XanaNode substrates.",
   "relationships": [
     {
       "id": "xananode.canonical:rel/core-builds-protocol-artifacts",
@@ -38,11 +38,157 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/project-xananode-core-sdk-implements-concept-substrate-projection-layer",
+      "type": "implements",
+      "target": "xananode.canonical:concept/substrate-projection-layer",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-core-sdk-uses-schema-protocol-artifact-schemas-substrate-manifest.schema.json-artifact-0",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas-substrate-manifest.schema.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-core-sdk-uses-schema-protocol-artifact-schemas-substrate-node.schema.json-artifact-1",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas-substrate-node.schema.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-core-sdk-uses-schema-protocol-artifact-schemas-substrate-relationships.schema.json-artifact-2",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas-substrate-relationships.schema.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-core-sdk-uses-schema-protocol-artifact-schemas-xananode-node-types.v0.3.0.json-artifact-3",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas-xananode-node-types.v0.3.0.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-core-sdk-uses-schema-protocol-artifact-schemas-xananode-relationship-types.v0.5.0.json-artifact-4",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas-xananode-relationship-types.v0.5.0.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-core-sdk-uses-technology-xananode-core-sdk-component-node-files-component-1",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-core-sdk-component-node-files",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-core-sdk-uses-technology-xananode-core-sdk-component-protocol-schemas-component-0",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-core-sdk-component-protocol-schemas",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-core-sdk-uses-technology-xananode-core-sdk-component-relationship-files-component-2",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-core-sdk-component-relationship-files",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-core-sdk-uses-technology-xananode-core-sdk-component-substrate-manifests-component-3",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-core-sdk-component-substrate-manifests",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-core-sdk-uses-technology-xananode-core-sdk-component-substrate-packs-component-4",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-core-sdk-component-substrate-packs",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-known-implementations-registry-contains-project-xananode-core-sdk",
+      "type": "contains",
+      "source": "xananode.canonical:schema/known-implementations-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/source-repository-kingc95-xananode-core-sdk-documents-project-xananode-core-sdk",
+      "type": "documents",
+      "source": "xananode.canonical:source/repository-kingc95-xananode-core-sdk",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/workspace-uses-core",
       "type": "uses",
       "source": "xananode.canonical:project/xananode-workspace",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-core-sdk-identifies-compatibility",
+      "type": "governed_by",
+      "target": "xananode.canonical:concept/compatibility-attribution",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-core-sdk-licensed-under-apache",
+      "type": "licensed_under",
+      "target": "xananode.canonical:source/apache-2-0-license",
+      "direction": "outgoing"
     }
+  ],
+  "source_url": "https://github.com/kingc95/XanaNode-Core-SDK",
+  "repository": "kingc95/XanaNode-Core-SDK",
+  "protocol_role": "reference-core-engine",
+  "software_version": "",
+  "build_metadata": {
+    "version": "0.1.0",
+    "repository": "kingc95/XanaNode-Core-SDK",
+    "generated_at": "2026-06-19T20:40:39.490Z",
+    "built_by": "@xananode/core",
+    "git_commit": "930d4f27f1a9463e2337a166a8b5d54896b7caf6",
+    "git_branch": "main",
+    "runtime": "node v24.16.0",
+    "platform": "win32/x64",
+    "dependencies": [
+      {
+        "name": "XanaNode Protocol",
+        "version": "",
+        "repository": "kingc95/XanaNode",
+        "relationship": "uses"
+      },
+      {
+        "name": "protocol schemas",
+        "relationship": "consumes"
+      },
+      {
+        "name": "node files",
+        "relationship": "consumes"
+      },
+      {
+        "name": "relationship files",
+        "relationship": "consumes"
+      },
+      {
+        "name": "substrate manifests",
+        "relationship": "consumes"
+      },
+      {
+        "name": "substrate packs",
+        "relationship": "consumes"
+      }
+    ]
+  },
+  "consumes": [
+    "protocol schemas",
+    "node files",
+    "relationship files",
+    "substrate manifests",
+    "substrate packs"
+  ],
+  "related_protocol_artifacts": [
+    "../schemas/substrate-manifest.schema.json",
+    "../schemas/substrate-node.schema.json",
+    "../schemas/substrate-relationships.schema.json",
+    "../schemas/xananode-node-types.v0.3.0.json",
+    "../schemas/xananode-relationship-types.v0.5.0.json"
   ],
   "imported_from": "nodes.json",
   "pack_id": "xananode.canonical",

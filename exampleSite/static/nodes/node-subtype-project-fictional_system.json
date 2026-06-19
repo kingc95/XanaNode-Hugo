@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-project-fictional_system",
+  "title": "Project subtype: fictional system",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "fictional_system is an allowed subtype of the project node type.",
+  "version": "0.3.0",
+  "registry_type": "fictional_system",
+  "registry_namespace": "xananode",
+  "parent_node_type": "project",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-project-fictional_system-extension_of-schema-node-type-project",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-project",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-project-contains-schema-node-subtype-project-fictional_system",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-project",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

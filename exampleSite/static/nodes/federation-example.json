@@ -12,37 +12,37 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/federation-example-requires-merge-report-schema-74",
+      "id": "xananode.example:rel/federation-example-requires-merge-report-schema-95",
       "type": "requires",
       "target": "xananode.example:schema/merge-report-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-example-requires-compatibility-report-schema-77",
+      "id": "xananode.example:rel/federation-example-requires-compatibility-report-schema-98",
       "type": "requires",
       "target": "xananode.example:schema/compatibility-report-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-example-demonstrates-federated-knowledge-substrates-188",
+      "id": "xananode.example:rel/federation-example-demonstrates-federated-knowledge-substrates-209",
       "type": "demonstrates",
       "target": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-example-uses-compatibility-report-189",
+      "id": "xananode.example:rel/federation-example-uses-compatibility-report-210",
       "type": "uses",
       "target": "xananode.example:concept/compatibility-report",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-example-uses-merge-report-190",
+      "id": "xananode.example:rel/federation-example-uses-merge-report-211",
       "type": "uses",
       "target": "xananode.example:concept/merge-report",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-example-preserves-independent-moderation-191",
+      "id": "xananode.example:rel/federation-example-preserves-independent-moderation-212",
       "type": "preserves",
       "target": "xananode.example:concept/independent-moderation",
       "direction": "outgoing"

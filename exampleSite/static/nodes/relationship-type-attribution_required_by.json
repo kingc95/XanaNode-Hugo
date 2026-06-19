@@ -1,0 +1,49 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-attribution_required_by",
+  "title": "Attribution Required By Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The attribution_required_by inverse relationship term derived from requires_attribution.",
+  "version": "0.5.0",
+  "registry_type": "attribution_required_by",
+  "registry_namespace": "xananode",
+  "category": "governance",
+  "inverse": "requires_attribution",
+  "color": "#fde047",
+  "inverse_color": "#eab308",
+  "line_style": "dashed",
+  "inverse_line_style": "double",
+  "derived_inverse": true,
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-attribution_required_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-attribution_required_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-governance",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-attribution_required_by-related_to-schema-relationship-type-requires_attribution-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-requires_attribution",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-requires_attribution-related_to-schema-relationship-type-attribution_required_by-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-requires_attribution",
+      "direction": "incoming"
+    }
+  ],
+  "default_weight": 4,
+  "default_visibility": "secondary",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

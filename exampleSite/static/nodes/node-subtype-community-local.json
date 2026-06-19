@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-community-local",
+  "title": "Community subtype: local",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "local is an allowed subtype of the community node type.",
+  "version": "0.3.0",
+  "registry_type": "local",
+  "registry_namespace": "xananode",
+  "parent_node_type": "community",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-community-local-extension_of-schema-node-type-community",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-community",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-community-contains-schema-node-subtype-community-local",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-community",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

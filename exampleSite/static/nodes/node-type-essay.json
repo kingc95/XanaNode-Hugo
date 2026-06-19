@@ -37,10 +37,88 @@
   },
   "relationships": [
     {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-essay-59",
+      "type": "contains",
+      "source": "xananode.example:schema/xananode-node-types",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-essay",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-essay-analysis-extension_of-schema-node-type-essay",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-essay-analysis",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-essay-argument-extension_of-schema-node-type-essay",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-essay-argument",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-essay-critique-extension_of-schema-node-type-essay",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-essay-critique",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-essay-explainer-extension_of-schema-node-type-essay",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-essay-explainer",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-essay-manifesto-extension_of-schema-node-type-essay",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-essay-manifesto",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-essay-reflection-extension_of-schema-node-type-essay",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-essay-reflection",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-essay-contains-schema-node-subtype-essay-analysis",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-essay-analysis",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-essay-contains-schema-node-subtype-essay-argument",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-essay-argument",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-essay-contains-schema-node-subtype-essay-critique",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-essay-critique",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-essay-contains-schema-node-subtype-essay-explainer",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-essay-explainer",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-essay-contains-schema-node-subtype-essay-manifesto",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-essay-manifesto",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-essay-contains-schema-node-subtype-essay-reflection",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-essay-reflection",
+      "direction": "outgoing"
     }
   ],
   "imported_from": "nodes.json",

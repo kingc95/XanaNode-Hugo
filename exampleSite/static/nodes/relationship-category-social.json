@@ -1,0 +1,62 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-social",
+  "title": "Social Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The social category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "social",
+  "registry_namespace": "xananode",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-collaborated_with",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-collaborated_with",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-friend_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-friend_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-interviewed",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-interviewed",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-interviewed_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-interviewed_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-memorialized_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-memorialized_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-memorializes",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-memorializes",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-social",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "color": "#fb7185",
+  "inverse_color": "#fecdd3",
+  "line_style": "dotted",
+  "inverse_line_style": "dotted",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

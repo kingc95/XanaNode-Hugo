@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-insufficient_evidence",
+  "title": "Insufficient evidence",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source indicates that the target lacks enough evidence for the asserted interpretation or status.",
+  "version": "0.5.0",
+  "registry_type": "insufficient_evidence",
+  "registry_namespace": "xananode",
+  "category": "uncertainty",
+  "inverse": "evidence_insufficient_for",
+  "color": "#d946ef",
+  "inverse_color": "#f5d0fe",
+  "line_style": "dotted",
+  "inverse_line_style": "dotted",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-insufficient_evidence",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-uncertainty-contains-schema-relationship-type-insufficient_evidence",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-uncertainty",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-evidence_insufficient_for-related_to-schema-relationship-type-insufficient_evidence-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-evidence_insufficient_for",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-insufficient_evidence-related_to-schema-relationship-type-evidence_insufficient_for-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-evidence_insufficient_for",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-raises",
+  "title": "Raises",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source raises, surfaces, or implies the target question, problem, or knowledge gap.",
+  "version": "0.5.0",
+  "registry_type": "raises",
+  "registry_namespace": "xananode",
+  "category": "inquiry",
+  "inverse": "raised_by",
+  "color": "#2dd4bf",
+  "inverse_color": "#99f6e4",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-raises",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-raises",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-inquiry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-raised_by-related_to-schema-relationship-type-raises-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-raised_by",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-raises-related_to-schema-relationship-type-raised_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-raised_by",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,25 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/apache-2-0-example-of-permissive-license",
+      "type": "example_of",
+      "source": "xananode.canonical:source/apache-2-0-license",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/mit-example-of-permissive-license",
+      "type": "example_of",
+      "source": "xananode.canonical:source/mit-license",
+      "direction": "incoming"
+    }
+  ],
+  "id": "xananode.canonical:concept/permissive-open-source-license",
+  "title": "Permissive Open Source License",
+  "type": "concept",
+  "subtype": "distinction",
+  "importance": 4,
+  "summary": "An open source license family that allows broad reuse, modification, distribution, and commercial adoption with limited obligations.",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-announced_by",
+  "title": "Announced By Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The announced_by inverse relationship term derived from announced.",
+  "version": "0.5.0",
+  "registry_type": "announced_by",
+  "registry_namespace": "xananode",
+  "category": "communication",
+  "inverse": "announced",
+  "color": "#bae6fd",
+  "inverse_color": "#38bdf8",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "derived_inverse": true,
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-announced_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-announced_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-communication",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-announced_by-related_to-schema-relationship-type-announced-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-announced",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-announced-related_to-schema-relationship-type-announced_by-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-announced",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

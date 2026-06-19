@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-overlooked_by",
+  "title": "Overlooked by",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source is overlooked by the target person, community, source, or substrate.",
+  "version": "0.5.0",
+  "registry_type": "overlooked_by",
+  "registry_namespace": "xananode",
+  "category": "attention",
+  "inverse": "overlooks",
+  "color": "#fbbf24",
+  "inverse_color": "#fde68a",
+  "line_style": "dotted",
+  "inverse_line_style": "dotted",
+  "default_weight": 3,
+  "default_visibility": "secondary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-overlooked_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-attention-contains-schema-relationship-type-overlooked_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-attention",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-overlooked_by-related_to-schema-relationship-type-overlooks-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-overlooks",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-overlooks-related_to-schema-relationship-type-overlooked_by-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-overlooks",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

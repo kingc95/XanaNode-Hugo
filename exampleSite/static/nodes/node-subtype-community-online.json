@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-community-online",
+  "title": "Community subtype: online",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "online is an allowed subtype of the community node type.",
+  "version": "0.3.0",
+  "registry_type": "online",
+  "registry_namespace": "xananode",
+  "parent_node_type": "community",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-community-online-extension_of-schema-node-type-community",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-community",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-community-contains-schema-node-subtype-community-online",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-community",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

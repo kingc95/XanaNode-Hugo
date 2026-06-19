@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-trail-evidence_path",
+  "title": "Trail subtype: evidence path",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "evidence_path is an allowed subtype of the trail node type.",
+  "version": "0.3.0",
+  "registry_type": "evidence_path",
+  "registry_namespace": "xananode",
+  "parent_node_type": "trail",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-trail-evidence_path-extension_of-schema-node-type-trail",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-trail",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-trail-contains-schema-node-subtype-trail-evidence_path",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-trail",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

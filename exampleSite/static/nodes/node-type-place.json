@@ -38,10 +38,100 @@
   },
   "relationships": [
     {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-place-63",
+      "type": "contains",
+      "source": "xananode.example:schema/xananode-node-types",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-place",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-place-building-extension_of-schema-node-type-place",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-place-building",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-place-city-extension_of-schema-node-type-place",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-place-city",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-place-country-extension_of-schema-node-type-place",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-place-country",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-place-institution_site-extension_of-schema-node-type-place",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-place-institution_site",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-place-lab-extension_of-schema-node-type-place",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-place-lab",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-place-online_space-extension_of-schema-node-type-place",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-place-online_space",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-place-region-extension_of-schema-node-type-place",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-place-region",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-place-contains-schema-node-subtype-place-building",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-place-building",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-place-contains-schema-node-subtype-place-city",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-place-city",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-place-contains-schema-node-subtype-place-country",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-place-country",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-place-contains-schema-node-subtype-place-institution_site",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-place-institution_site",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-place-contains-schema-node-subtype-place-lab",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-place-lab",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-place-contains-schema-node-subtype-place-online_space",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-place-online_space",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-place-contains-schema-node-subtype-place-region",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-place-region",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-property-geo_coordinates-uses-schema-node-type-place",

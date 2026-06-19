@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-communicated_to",
+  "title": "Communicated to",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source communicated the target message, claim, question, or source to a receiver or audience.",
+  "version": "0.5.0",
+  "registry_type": "communicated_to",
+  "registry_namespace": "xananode",
+  "category": "communication",
+  "inverse": "communication_received_from",
+  "color": "#38bdf8",
+  "inverse_color": "#bae6fd",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-communicated_to",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-communicated_to",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-communication",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-communicated_to-related_to-schema-relationship-type-communication_received_from-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-communication_received_from",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-communication_received_from-related_to-schema-relationship-type-communicated_to-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-communication_received_from",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

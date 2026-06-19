@@ -20,6 +20,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-uses",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-composition",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-used_by-related_to-schema-relationship-type-uses-inverse",
       "type": "related_to",
       "source": "xananode.canonical:schema/relationship-type-used_by",
@@ -32,6 +38,10 @@
       "direction": "outgoing"
     }
   ],
+  "color": "#22c55e",
+  "inverse_color": "#86efac",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
   "imported_from": "nodes.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"

@@ -1,0 +1,40 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/apache-claim-supported-by-policy",
+      "type": "supports",
+      "target": "xananode.canonical:claim/schemas-validators-reference-code-apache-2-0",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/docs-claim-supported-by-policy",
+      "type": "supports",
+      "target": "xananode.canonical:claim/protocol-docs-licensed-cc-by-4-0",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/license-policy-defines-licensing",
+      "type": "defines",
+      "target": "xananode.canonical:concept/licensing",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-governed-by-license-policy",
+      "type": "governed_by",
+      "source": "xananode.canonical:project/xananode-protocol",
+      "direction": "incoming"
+    }
+  ],
+  "id": "xananode.canonical:source/xananode-license-policy",
+  "title": "XanaNode License Policy",
+  "type": "source",
+  "subtype": "legal_policy",
+  "importance": 5,
+  "summary": "The protocol-level policy splitting XanaNode documentation, schemas, validators, reference code, and trademarks into their proper legal categories.",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/LICENSE.md",
+  "rights_status": "canonical-public",
+  "license": "CC-BY-4.0",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

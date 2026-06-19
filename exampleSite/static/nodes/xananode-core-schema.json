@@ -37,91 +37,91 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-xananode-node-types-53",
+      "id": "xananode.example:rel/xananode-core-schema-defines-xananode-node-types-74",
       "type": "defines",
       "target": "xananode.example:schema/xananode-node-types",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-xananode-relationship-types-54",
+      "id": "xananode.example:rel/xananode-core-schema-defines-xananode-relationship-types-75",
       "type": "defines",
       "target": "xananode.example:schema/xananode-relationship-types",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-manifest-schema-55",
+      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-manifest-schema-76",
       "type": "defines",
       "target": "xananode.example:schema/substrate-manifest-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-node-schema-56",
+      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-node-schema-77",
       "type": "defines",
       "target": "xananode.example:schema/substrate-node-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-relationships-schema-57",
+      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-relationships-schema-78",
       "type": "defines",
       "target": "xananode.example:schema/substrate-relationships-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-xananode-core-schema-58",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-xananode-core-schema-79",
       "type": "requires",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-enables-schema-extension-59",
+      "id": "xananode.example:rel/xananode-core-schema-enables-schema-extension-80",
       "type": "enables",
       "target": "xananode.example:concept/schema-extension",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-contains-substrate-relationships-schema-62",
+      "id": "xananode.example:rel/xananode-core-schema-contains-substrate-relationships-schema-83",
       "type": "contains",
       "target": "xananode.example:schema/substrate-relationships-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-contains-substrate-node-schema-65",
+      "id": "xananode.example:rel/xananode-core-schema-contains-substrate-node-schema-86",
       "type": "contains",
       "target": "xananode.example:schema/substrate-node-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-contains-substrate-manifest-schema-67",
+      "id": "xananode.example:rel/xananode-core-schema-contains-substrate-manifest-schema-88",
       "type": "contains",
       "target": "xananode.example:schema/substrate-manifest-schema",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-requires-xananode-core-schema-123",
+      "id": "xananode.example:rel/xananode-requires-xananode-core-schema-144",
       "type": "requires",
       "source": "xananode.example:concept/xananode",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/schema-extension-requires-xananode-core-schema-147",
+      "id": "xananode.example:rel/schema-extension-requires-xananode-core-schema-168",
       "type": "requires",
       "source": "xananode.example:concept/schema-extension",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-protocol-artifacts-152",
+      "id": "xananode.example:rel/xananode-core-schema-defines-protocol-artifacts-173",
       "type": "defines",
       "target": "xananode.example:concept/protocol-artifacts",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-enables-knowledge-substrate-178",
+      "id": "xananode.example:rel/xananode-core-schema-enables-knowledge-substrate-199",
       "type": "enables",
       "target": "xananode.example:concept/knowledge-substrate",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-supports-claim-merge-without-collapse-222",
+      "id": "xananode.example:rel/xananode-core-schema-supports-claim-merge-without-collapse-243",
       "type": "supports",
       "target": "xananode.example:claim/claim-merge-without-collapse",
       "direction": "outgoing"

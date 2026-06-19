@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-event-talk",
+  "title": "Event subtype: talk",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "talk is an allowed subtype of the event node type.",
+  "version": "0.3.0",
+  "registry_type": "talk",
+  "registry_namespace": "xananode",
+  "parent_node_type": "event",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-event-talk-extension_of-schema-node-type-event",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-event",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-event-contains-schema-node-subtype-event-talk",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-event",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

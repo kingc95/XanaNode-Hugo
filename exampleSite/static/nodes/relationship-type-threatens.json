@@ -20,6 +20,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-threatens",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-governance",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-threatened_by-related_to-schema-relationship-type-threatens-inverse",
       "type": "related_to",
       "source": "xananode.canonical:schema/relationship-type-threatened_by",
@@ -32,6 +38,10 @@
       "direction": "outgoing"
     }
   ],
+  "color": "#eab308",
+  "inverse_color": "#fde047",
+  "line_style": "double",
+  "inverse_line_style": "double",
   "imported_from": "nodes.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"

@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-high_risk_for",
+  "title": "High risk for",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source identifies a high risk for the target.",
+  "version": "0.5.0",
+  "registry_type": "high_risk_for",
+  "registry_namespace": "xananode",
+  "category": "attention",
+  "inverse": "has_high_risk",
+  "color": "#fbbf24",
+  "inverse_color": "#fde68a",
+  "line_style": "dotted",
+  "inverse_line_style": "dotted",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-high_risk_for",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-attention-contains-schema-relationship-type-high_risk_for",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-attention",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-has_high_risk-related_to-schema-relationship-type-high_risk_for-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-has_high_risk",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-high_risk_for-related_to-schema-relationship-type-has_high_risk-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-has_high_risk",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

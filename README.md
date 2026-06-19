@@ -8,6 +8,8 @@ The renderer uses [kingc95/XanaNode-Core-SDK](https://github.com/kingc95/XanaNod
 
 This theme turns a Hugo content tree into a readable website plus machine-readable XanaNode substrate artifacts.
 
+This project is an independent XanaNode-compatible renderer. Canonical specification: `https://github.com/kingc95/XanaNode`. Theme/reference implementation code is licensed under `Apache-2.0`; the XanaNode name and logo remain project trademarks.
+
 ## Proper Build
 
 Run these from the `XanaNode-Hugo/` theme repository.

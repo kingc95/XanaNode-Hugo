@@ -12,25 +12,25 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/link-rot-demonstrates-unlabeled-hyperlink-98",
+      "id": "xananode.example:rel/link-rot-demonstrates-unlabeled-hyperlink-119",
       "type": "demonstrates",
       "target": "xananode.example:concept/unlabeled-hyperlink",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/link-rot-threatens-provenance-99",
+      "id": "xananode.example:rel/link-rot-threatens-provenance-120",
       "type": "threatens",
       "target": "xananode.example:concept/provenance",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/source-code-link-decay-study-supports-link-rot-100",
+      "id": "xananode.example:rel/source-code-link-decay-study-supports-link-rot-121",
       "type": "supports",
       "source": "xananode.example:source/source-code-link-decay-study",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/knowledge-substrate-explains-link-rot-101",
+      "id": "xananode.example:rel/knowledge-substrate-explains-link-rot-122",
       "type": "explains",
       "source": "xananode.example:concept/knowledge-substrate",
       "direction": "incoming"

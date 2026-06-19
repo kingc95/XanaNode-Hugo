@@ -1,0 +1,98 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-creation",
+  "title": "Creation Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The creation category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "creation",
+  "registry_namespace": "xananode",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-creation-contains-schema-relationship-type-authored",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-authored",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-creation-contains-schema-relationship-type-authored_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-authored_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-creation-contains-schema-relationship-type-coined",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-coined",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-creation-contains-schema-relationship-type-coined_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-coined_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-creation-contains-schema-relationship-type-created",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-created",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-creation-contains-schema-relationship-type-created_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-created_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-creation-contains-schema-relationship-type-identified",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-identified",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-creation-contains-schema-relationship-type-identified_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-identified_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-creation-contains-schema-relationship-type-introduced",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-introduced",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-creation-contains-schema-relationship-type-introduced_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-introduced_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-creation-contains-schema-relationship-type-proposed",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-proposed",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-creation-contains-schema-relationship-type-proposed_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-proposed_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-creation",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "color": "#fb923c",
+  "inverse_color": "#fed7aa",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

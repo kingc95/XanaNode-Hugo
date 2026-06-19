@@ -41,10 +41,112 @@
   },
   "relationships": [
     {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-person-55",
+      "type": "contains",
+      "source": "xananode.example:schema/xananode-node-types",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-person",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-person-artist-extension_of-schema-node-type-person",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-person-artist",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-person-critic-extension_of-schema-node-type-person",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-person-critic",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-person-engineer-extension_of-schema-node-type-person",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-person-engineer",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-person-founder-extension_of-schema-node-type-person",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-person-founder",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-person-programmer-extension_of-schema-node-type-person",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-person-programmer",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-person-researcher-extension_of-schema-node-type-person",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-person-researcher",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-person-scientist-extension_of-schema-node-type-person",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-person-scientist",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-person-writer-extension_of-schema-node-type-person",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-person-writer",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-person-contains-schema-node-subtype-person-artist",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-person-artist",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-person-contains-schema-node-subtype-person-critic",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-person-critic",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-person-contains-schema-node-subtype-person-engineer",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-person-engineer",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-person-contains-schema-node-subtype-person-founder",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-person-founder",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-person-contains-schema-node-subtype-person-programmer",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-person-programmer",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-person-contains-schema-node-subtype-person-researcher",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-person-researcher",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-person-contains-schema-node-subtype-person-scientist",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-person-scientist",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-person-contains-schema-node-subtype-person-writer",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-person-writer",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-property-birth_date-uses-schema-node-type-person",

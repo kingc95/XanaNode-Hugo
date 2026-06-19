@@ -9,7 +9,7 @@
   "rights_status": "external",
   "relationships": [
     {
-      "id": "xananode.example:rel/source-support-supports-xananode-225",
+      "id": "xananode.example:rel/source-support-supports-xananode-246",
       "type": "supports",
       "target": "xananode.example:concept/xananode",
       "direction": "outgoing"

@@ -38,10 +38,100 @@
   },
   "relationships": [
     {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-organization-64",
+      "type": "contains",
+      "source": "xananode.example:schema/xananode-node-types",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-organization",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-organization-agency-extension_of-schema-node-type-organization",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-organization-agency",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-organization-company-extension_of-schema-node-type-organization",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-organization-company",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-organization-lab-extension_of-schema-node-type-organization",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-organization-lab",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-organization-nonprofit-extension_of-schema-node-type-organization",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-organization-nonprofit",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-organization-publisher-extension_of-schema-node-type-organization",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-organization-publisher",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-organization-standards_body-extension_of-schema-node-type-organization",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-organization-standards_body",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-organization-university-extension_of-schema-node-type-organization",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-organization-university",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-organization-contains-schema-node-subtype-organization-agency",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-organization-agency",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-organization-contains-schema-node-subtype-organization-company",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-organization-company",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-organization-contains-schema-node-subtype-organization-lab",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-organization-lab",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-organization-contains-schema-node-subtype-organization-nonprofit",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-organization-nonprofit",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-organization-contains-schema-node-subtype-organization-publisher",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-organization-publisher",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-organization-contains-schema-node-subtype-organization-standards_body",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-organization-standards_body",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-organization-contains-schema-node-subtype-organization-university",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-organization-university",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-property-birth_date-uses-schema-node-type-organization",

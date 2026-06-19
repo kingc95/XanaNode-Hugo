@@ -1,0 +1,49 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-discussion_partner_of",
+  "title": "Discussion Partner Of Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The discussion_partner_of inverse relationship term derived from discussed_with.",
+  "version": "0.5.0",
+  "registry_type": "discussion_partner_of",
+  "registry_namespace": "xananode",
+  "category": "communication",
+  "inverse": "discussed_with",
+  "color": "#bae6fd",
+  "inverse_color": "#38bdf8",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "derived_inverse": true,
+  "default_weight": 3,
+  "default_visibility": "secondary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-discussion_partner_of",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-discussion_partner_of",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-communication",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-discussed_with-related_to-schema-relationship-type-discussion_partner_of-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-discussed_with",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-discussion_partner_of-related_to-schema-relationship-type-discussed_with-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-discussed_with",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

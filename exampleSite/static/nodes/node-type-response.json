@@ -1,0 +1,135 @@
+{
+  "id": "xananode.canonical:schema/node-type-response",
+  "title": "Response",
+  "type": "schema",
+  "subtype": "node_type_schema",
+  "importance": 5,
+  "summary": "A reply, answer, rebuttal, clarification, or follow-up that responds to a question, communication, claim, or prior response.",
+  "version": "0.3.0",
+  "registry_type": "response",
+  "registry_namespace": "xananode",
+  "allowed_subtypes": [
+    "answer",
+    "reply",
+    "rebuttal",
+    "clarification",
+    "follow_up",
+    "comment",
+    "review_response"
+  ],
+  "required_frontmatter": [
+    "title",
+    "type",
+    "importance",
+    "summary",
+    "relationships"
+  ],
+  "recommended_frontmatter": [
+    "provided_by",
+    "answered_question",
+    "communication",
+    "confidence",
+    "review_status",
+    "sources"
+  ],
+  "color": {
+    "bg": "#7dd3fc",
+    "fg": "#03131f",
+    "outline": "#e0f2fe"
+  },
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-response",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-response-answer-extension_of-schema-node-type-response",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-response-answer",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-response-clarification-extension_of-schema-node-type-response",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-response-clarification",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-response-comment-extension_of-schema-node-type-response",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-response-comment",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-response-follow_up-extension_of-schema-node-type-response",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-response-follow_up",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-response-rebuttal-extension_of-schema-node-type-response",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-response-rebuttal",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-response-reply-extension_of-schema-node-type-response",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-response-reply",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-response-review_response-extension_of-schema-node-type-response",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-response-review_response",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-response-contains-schema-node-subtype-response-answer",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-response-answer",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-response-contains-schema-node-subtype-response-clarification",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-response-clarification",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-response-contains-schema-node-subtype-response-comment",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-response-comment",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-response-contains-schema-node-subtype-response-follow_up",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-response-follow_up",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-response-contains-schema-node-subtype-response-rebuttal",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-response-rebuttal",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-response-contains-schema-node-subtype-response-reply",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-response-reply",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-response-contains-schema-node-subtype-response-review_response",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-response-review_response",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

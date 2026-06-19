@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "relationship_type_schema",
   "importance": 5,
-  "summary": "The source provides an explanation of the target â€” its causes, mechanisms, or meaning.",
+  "summary": "The source provides an explanation of the target - its causes, mechanisms, or meaning.",
   "version": "0.5.0",
   "registry_type": "explains",
   "registry_namespace": "xananode",
@@ -20,6 +20,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-explanation-contains-schema-relationship-type-explains",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-explanation",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-explained_by-related_to-schema-relationship-type-explains-inverse",
       "type": "related_to",
       "source": "xananode.canonical:schema/relationship-type-explained_by",
@@ -32,6 +38,10 @@
       "direction": "outgoing"
     }
   ],
+  "color": "#60a5fa",
+  "inverse_color": "#bfdbfe",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
   "imported_from": "nodes.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"

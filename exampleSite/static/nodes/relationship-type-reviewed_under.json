@@ -1,0 +1,49 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-reviewed_under",
+  "title": "Reviewed Under Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The reviewed_under inverse relationship term derived from under_review.",
+  "version": "0.5.0",
+  "registry_type": "reviewed_under",
+  "registry_namespace": "xananode",
+  "category": "uncertainty",
+  "inverse": "under_review",
+  "color": "#f5d0fe",
+  "inverse_color": "#d946ef",
+  "line_style": "dotted",
+  "inverse_line_style": "dotted",
+  "derived_inverse": true,
+  "default_weight": 3,
+  "default_visibility": "secondary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-reviewed_under",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-uncertainty-contains-schema-relationship-type-reviewed_under",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-uncertainty",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-reviewed_under-related_to-schema-relationship-type-under_review-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-under_review",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-under_review-related_to-schema-relationship-type-reviewed_under-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-under_review",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

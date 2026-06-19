@@ -1,0 +1,124 @@
+{
+  "id": "xananode.canonical:schema/node-type-hypothesis",
+  "title": "Hypothesis",
+  "type": "schema",
+  "subtype": "node_type_schema",
+  "importance": 5,
+  "summary": "A provisional explanation, prediction, or model that can be tested, supported, falsified, revised, or abandoned.",
+  "version": "0.3.0",
+  "registry_type": "hypothesis",
+  "registry_namespace": "xananode",
+  "allowed_subtypes": [
+    "scientific",
+    "design",
+    "historical",
+    "diagnostic",
+    "prediction",
+    "interpretive"
+  ],
+  "required_frontmatter": [
+    "title",
+    "type",
+    "importance",
+    "summary",
+    "status",
+    "relationships"
+  ],
+  "recommended_frontmatter": [
+    "confidence",
+    "uncertainty_level",
+    "evidence_strength",
+    "tests",
+    "claims",
+    "sources",
+    "questions"
+  ],
+  "color": {
+    "bg": "#c4b5fd",
+    "fg": "#171022",
+    "outline": "#ede9fe"
+  },
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-hypothesis",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-hypothesis-design-extension_of-schema-node-type-hypothesis",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-hypothesis-design",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-hypothesis-diagnostic-extension_of-schema-node-type-hypothesis",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-hypothesis-diagnostic",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-hypothesis-historical-extension_of-schema-node-type-hypothesis",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-hypothesis-historical",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-hypothesis-interpretive-extension_of-schema-node-type-hypothesis",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-hypothesis-interpretive",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-hypothesis-prediction-extension_of-schema-node-type-hypothesis",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-hypothesis-prediction",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-hypothesis-scientific-extension_of-schema-node-type-hypothesis",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-hypothesis-scientific",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-hypothesis-contains-schema-node-subtype-hypothesis-design",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-hypothesis-design",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-hypothesis-contains-schema-node-subtype-hypothesis-diagnostic",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-hypothesis-diagnostic",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-hypothesis-contains-schema-node-subtype-hypothesis-historical",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-hypothesis-historical",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-hypothesis-contains-schema-node-subtype-hypothesis-interpretive",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-hypothesis-interpretive",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-hypothesis-contains-schema-node-subtype-hypothesis-prediction",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-hypothesis-prediction",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-hypothesis-contains-schema-node-subtype-hypothesis-scientific",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-hypothesis-scientific",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

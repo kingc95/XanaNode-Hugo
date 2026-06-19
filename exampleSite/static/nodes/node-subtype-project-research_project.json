@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-project-research_project",
+  "title": "Project subtype: research project",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "research_project is an allowed subtype of the project node type.",
+  "version": "0.3.0",
+  "registry_type": "research_project",
+  "registry_namespace": "xananode",
+  "parent_node_type": "project",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-project-research_project-extension_of-schema-node-type-project",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-project",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-project-contains-schema-node-subtype-project-research_project",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-project",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

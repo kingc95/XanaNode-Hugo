@@ -7,6 +7,12 @@
   "summary": "The people and future maintainers who author, review, preserve, and project XanaNode-compatible substrates.",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/cc-by-requires-attribution-to-contributors",
+      "type": "requires_attribution",
+      "source": "xananode.canonical:source/cc-by-4-0-license",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/support-supports-contributors",
       "type": "supports",
       "source": "xananode.canonical:source/support-xananode",

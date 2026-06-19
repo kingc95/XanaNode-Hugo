@@ -37,10 +37,88 @@
   },
   "relationships": [
     {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-project-65",
+      "type": "contains",
+      "source": "xananode.example:schema/xananode-node-types",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-project",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-project-fictional_system-extension_of-schema-node-type-project",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-project-fictional_system",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-project-platform-extension_of-schema-node-type-project",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-project-platform",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-project-prototype-extension_of-schema-node-type-project",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-project-prototype",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-project-research_project-extension_of-schema-node-type-project",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-project-research_project",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-project-software-extension_of-schema-node-type-project",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-project-software",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-project-standard-extension_of-schema-node-type-project",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-project-standard",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-project-contains-schema-node-subtype-project-fictional_system",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-project-fictional_system",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-project-contains-schema-node-subtype-project-platform",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-project-platform",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-project-contains-schema-node-subtype-project-prototype",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-project-prototype",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-project-contains-schema-node-subtype-project-research_project",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-project-research_project",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-project-contains-schema-node-subtype-project-software",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-project-software",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-project-contains-schema-node-subtype-project-standard",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-project-standard",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-property-birth_date-uses-schema-node-type-project",

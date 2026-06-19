@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-resonates_with",
+  "title": "Resonates with",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source has a low-commitment conceptual or experiential resonance with the target.",
+  "version": "0.5.0",
+  "registry_type": "resonates_with",
+  "registry_namespace": "xananode",
+  "category": "cognition",
+  "inverse": "resonates_with",
+  "color": "#7c3aed",
+  "inverse_color": "#ddd6fe",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "default_weight": 2,
+  "default_visibility": "background",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-resonates_with",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-cognition-contains-schema-relationship-type-resonates_with",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-cognition",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-resonates_with-related_to-schema-relationship-type-resonates_with-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-resonates_with",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-resonates_with-related_to-schema-relationship-type-resonates_with-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-resonates_with",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

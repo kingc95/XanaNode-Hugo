@@ -9,10 +9,22 @@
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/xananode-relationship-types.v0.5.0.json",
   "relationships": [
     {
+      "id": "xananode.example:rel/xananode-relationship-types-equivalent_to-relationship-type-registry-52",
+      "type": "equivalent_to",
+      "source": "xananode.example:schema/xananode-relationship-types",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/protocol-contains-relationship-type-registry",
       "type": "contains",
       "source": "xananode.canonical:project/xananode-protocol",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-abstraction_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-abstraction_of",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-alias_of",
@@ -24,6 +36,42 @@
       "id": "xananode.canonical:rel/registry-contains-relationship-type-alternative_to",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-alternative_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-analogous_to",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-analogous_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-announced",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-announced",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-announced_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-announced_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-answered_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-answered_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-answered_in",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-answered_in",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-answers",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-answers",
       "direction": "outgoing"
     },
     {
@@ -75,6 +123,30 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-asked",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-asked",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-asked_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-asked_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-asked_in",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-asked_in",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-attribution_required_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-attribution_required_by",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-authored",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-authored",
@@ -84,6 +156,12 @@
       "id": "xananode.canonical:rel/registry-contains-relationship-type-authored_by",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-authored_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-broadcast_to",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-broadcast_to",
       "direction": "outgoing"
     },
     {
@@ -141,9 +219,27 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-communicated_to",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-communicated_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-communication_received_from",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-communication_received_from",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-compatible_with",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-compatible_with",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-concrete_example_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-concrete_example_of",
       "direction": "outgoing"
     },
     {
@@ -162,6 +258,12 @@
       "id": "xananode.canonical:rel/registry-contains-relationship-type-context_for",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-context_for",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-context_required_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-context_required_by",
       "direction": "outgoing"
     },
     {
@@ -204,6 +306,24 @@
       "id": "xananode.canonical:rel/registry-contains-relationship-type-created_by",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-created_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-critical_to",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-critical_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-critically_depends_on",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-critically_depends_on",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-debated_with",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-debated_with",
       "direction": "outgoing"
     },
     {
@@ -285,9 +405,21 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-discussed_with",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-discussed_with",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-discusses",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-discusses",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-discussion_partner_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-discussion_partner_of",
       "direction": "outgoing"
     },
     {
@@ -345,6 +477,18 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-evidence_insufficient_for",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-evidence_insufficient_for",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-example_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-example_of",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-explained_by",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-explained_by",
@@ -375,6 +519,24 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-fails_to_answer",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-fails_to_answer",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-falsified_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-falsified_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-falsifies",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-falsifies",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-featured_in",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-featured_in",
@@ -399,15 +561,69 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-frequently_misunderstood",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-frequently_misunderstood",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-friend_of",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-friend_of",
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-generalized_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-generalized_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-generalizes",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-generalizes",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-generated",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-generated",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-generated_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-generated_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-governed_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-governed_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-governs",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-governs",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-had_answer",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-had_answer",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-had_participant",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-had_participant",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-had_question",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-had_question",
       "direction": "outgoing"
     },
     {
@@ -441,15 +657,39 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-has_example",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-has_example",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-has_extension",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-has_extension",
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-has_high_risk",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-has_high_risk",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-has_important_context",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-has_important_context",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-has_primary_media",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-has_primary_media",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-high_risk_for",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-high_risk_for",
       "direction": "outgoing"
     },
     {
@@ -477,6 +717,12 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-important_for",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-important_for",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-included_in",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-included_in",
@@ -498,6 +744,24 @@
       "id": "xananode.canonical:rel/registry-contains-relationship-type-influenced_by",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-influenced_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-information_required_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-information_required_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-inquiry_motivated_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-inquiry_motivated_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-insufficient_evidence",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-insufficient_evidence",
       "direction": "outgoing"
     },
     {
@@ -537,9 +801,33 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-investigated_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-investigated_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-investigates",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-investigates",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-is_start_of",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-is_start_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-license_for",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-license_for",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-licensed_under",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-licensed_under",
       "direction": "outgoing"
     },
     {
@@ -579,6 +867,12 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-misunderstanding_context_for",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-misunderstanding_context_for",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-motivated_by",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-motivated_by",
@@ -591,15 +885,45 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-motivates_inquiry",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-motivates_inquiry",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-narrower_than",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-narrower_than",
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-negotiated_with",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-negotiated_with",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-not_answered_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-not_answered_by",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-occurred_at",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-occurred_at",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-overlooked_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-overlooked_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-overlooks",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-overlooks",
       "direction": "outgoing"
     },
     {
@@ -612,6 +936,18 @@
       "id": "xananode.canonical:rel/registry-contains-relationship-type-part_of",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-part_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-partially_answered_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-partially_answered_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-partially_answers",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-partially_answers",
       "direction": "outgoing"
     },
     {
@@ -639,9 +975,21 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-possibly_related_to",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-possibly_related_to",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-preceded",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-preceded",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-presentation_received_from",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-presentation_received_from",
       "direction": "outgoing"
     },
     {
@@ -654,6 +1002,12 @@
       "id": "xananode.canonical:rel/registry-contains-relationship-type-presented_by",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-presented_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-presented_to",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-presented_to",
       "direction": "outgoing"
     },
     {
@@ -699,6 +1053,30 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-raised_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-raised_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-raises",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-raises",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-received_broadcast_from",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-received_broadcast_from",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-received_report_from",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-received_report_from",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-refined_by",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-refined_by",
@@ -714,6 +1092,24 @@
       "id": "xananode.canonical:rel/registry-contains-relationship-type-related_to",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-related_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-replied_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-replied_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-replied_to",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-replied_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-reported_to",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-reported_to",
       "direction": "outgoing"
     },
     {
@@ -741,15 +1137,87 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-requires_attribution",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-requires_attribution",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-requires_context",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-requires_context",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-requires_information",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-requires_information",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-requires_review",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-requires_review",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-requires_source",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-requires_source",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-requires_validation",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-requires_validation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-resonates_with",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-resonates_with",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-results_from",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-results_from",
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-review_required_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-review_required_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-reviewed_under",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-reviewed_under",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-same_concept",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-same_concept",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-same_entity",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-same_entity",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-same_person",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-same_person",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-same_source",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-same_source",
       "direction": "outgoing"
     },
     {
@@ -765,9 +1233,45 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-shares_pattern_with",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-shares_pattern_with",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-site_of",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-site_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-source_required_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-source_required_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-specialized_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-specialized_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-specializes",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-specializes",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-speculated_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-speculated_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-speculative",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-speculative",
       "direction": "outgoing"
     },
     {
@@ -807,6 +1311,18 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-tested_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-tested_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-tests",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-tests",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-threatened_by",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-threatened_by",
@@ -816,6 +1332,18 @@
       "id": "xananode.canonical:rel/registry-contains-relationship-type-threatens",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-threatens",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-trademark_holder_for",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-trademark_holder_for",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-trademarked_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-trademarked_by",
       "direction": "outgoing"
     },
     {
@@ -834,6 +1362,24 @@
       "id": "xananode.canonical:rel/registry-contains-relationship-type-transcludes",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-transcludes",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-under_review",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-under_review",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-unresolved",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-unresolved",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-unresolved_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-unresolved_by",
       "direction": "outgoing"
     },
     {
@@ -861,10 +1407,214 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-validated_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-validated_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-validates",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-validates",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-validation_required_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-validation_required_by",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-canonical-schema-xananode-relationship-types-documents-schema-relationship-type-registry",
       "type": "documents",
       "source": "xananode.canonical:schema/canonical-schema-xananode-relationship-types",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-attention",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-attention",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-causation",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-causation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-citation",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-citation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-claim_structure",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-claim_structure",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-cognition",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-cognition",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-communication",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-communication",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-comparison",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-comparison",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-composition",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-composition",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-creation",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-creation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-definition",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-definition",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-discovery",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-discovery",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-evidence",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-evidence",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-explanation",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-explanation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-generic",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-generic",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-governance",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-governance",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-historical",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-historical",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-identity",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-identity",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-influence",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-influence",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-inquiry",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-inquiry",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-knowledge_workflow",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-knowledge_workflow",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-lineage",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-lineage",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-location",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-location",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-participation",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-participation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-reasoning",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-reasoning",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-representation",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-representation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-research_workflow",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-research_workflow",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-revision",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-revision",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-schema_mapping",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-schema_mapping",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-social",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-social",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-temporal",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-temporal",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-uncertainty",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-uncertainty",
+      "direction": "outgoing"
     }
   ],
   "imported_from": "nodes.json",

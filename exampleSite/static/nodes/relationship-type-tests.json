@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-tests",
+  "title": "Tests",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source tests the target hypothesis, claim, method, or prediction.",
+  "version": "0.5.0",
+  "registry_type": "tests",
+  "registry_namespace": "xananode",
+  "category": "research_workflow",
+  "inverse": "tested_by",
+  "color": "#0ea5e9",
+  "inverse_color": "#7dd3fc",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-tests",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-research_workflow-contains-schema-relationship-type-tests",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-research_workflow",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-tested_by-related_to-schema-relationship-type-tests-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-tested_by",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-tests-related_to-schema-relationship-type-tested_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-tested_by",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

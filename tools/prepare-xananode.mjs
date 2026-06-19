@@ -366,6 +366,30 @@ function copyProtocolSchemas(staticSchemaDir) {
   }
 }
 
+function copyProtocolBrandAssets(staticDir) {
+  const protocolMediaRoot = sdkRootCandidates
+    .map((candidate) => path.join(candidate, "vendor", "xananode-protocol", "media"))
+    .find((candidate) => fs.existsSync(candidate));
+  if (!protocolMediaRoot) return;
+  const brandAssets = [
+    ["images", "xananode-icon.svg", "xananode-icon.svg"],
+    ["images", "favicon.ico", "favicon.ico"],
+    ["images", "favicon-32x32.png", "favicon-32x32.png"],
+    ["images", "favicon-16x16.png", "favicon-16x16.png"],
+    ["images", "apple-touch-icon.png", "apple-touch-icon.png"],
+    ["images", "android-chrome-192x192.png", "android-chrome-192x192.png"],
+    ["images", "android-chrome-512x512.png", "android-chrome-512x512.png"],
+    ["web-manifests", "site.webmanifest", "site.webmanifest"]
+  ];
+
+  for (const [folder, filename, targetName] of brandAssets) {
+    const source = path.join(protocolMediaRoot, folder, filename);
+    if (fs.existsSync(source)) {
+      fs.copyFileSync(source, path.join(staticDir, targetName));
+    }
+  }
+}
+
 function stripMarkdown(markdown) {
   return markdown
     .replace(/```[\s\S]*?```/g, "")
@@ -1481,7 +1505,12 @@ function renderProtocolNodeResolverPage(node) {
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#55d6be">
   <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/xananode-icon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
   <main class="site-main">
@@ -1624,6 +1653,10 @@ const viewerFeed = {
     source: viewerIdForProtocolId(edge.source),
     target: viewerIdForProtocolId(edge.target),
     type: edge.type,
+    color: relationshipDefinitionFor(edge.type)?.color || "",
+    inverse_color: relationshipDefinitionFor(edge.type)?.inverse_color || "",
+    line_style: relationshipDefinitionFor(edge.type)?.line_style || "",
+    inverse_line_style: relationshipDefinitionFor(edge.type)?.inverse_line_style || "",
     weight: edge.weight || 3,
     visibility: edge.visibility || "secondary",
     origin: edge.imported_from ? "imported_relationship" : "protocol_relationship",
@@ -1657,6 +1690,7 @@ fs.mkdirSync(dataDir, { recursive: true });
 fs.mkdirSync(staticDir, { recursive: true });
 fs.mkdirSync(staticNodesDir, { recursive: true });
 copyProtocolSchemas(staticSchemaDir);
+copyProtocolBrandAssets(staticDir);
 const fragmentsOutput = withStableGeneratedAt(fragments, path.join(dataDir, "xananode_fragments.json"));
 reviewSuggestions = withStableGeneratedAt(reviewSuggestions, path.join(dataDir, "xananode_suggestions.json"));
 fs.writeFileSync(path.join(dataDir, "xananode_fragments.json"), JSON.stringify(fragmentsOutput, null, 2) + "\n");

@@ -20,7 +20,7 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/source-code-link-decay-study-supports-link-rot-100",
+      "id": "xananode.example:rel/source-code-link-decay-study-supports-link-rot-121",
       "type": "supports",
       "target": "xananode.example:observation/link-rot",
       "direction": "outgoing"

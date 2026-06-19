@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-schema-projection_style_rule",
+  "title": "Schema subtype: projection style rule",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "projection_style_rule is an allowed subtype of the schema node type.",
+  "version": "0.3.0",
+  "registry_type": "projection_style_rule",
+  "registry_namespace": "xananode",
+  "parent_node_type": "schema",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-projection_style_rule-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-projection_style_rule",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-schema",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

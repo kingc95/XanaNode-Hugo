@@ -1,0 +1,74 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-citation",
+  "title": "Citation Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The citation category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "citation",
+  "registry_namespace": "xananode",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-citation-contains-schema-relationship-type-cited_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-cited_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-citation-contains-schema-relationship-type-cites",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-cites",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-citation-contains-schema-relationship-type-discussed_in",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-discussed_in",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-citation-contains-schema-relationship-type-discusses",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-discusses",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-citation-contains-schema-relationship-type-mentioned_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-mentioned_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-citation-contains-schema-relationship-type-mentions",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-mentions",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-citation-contains-schema-relationship-type-quoted_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-quoted_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-citation-contains-schema-relationship-type-quotes",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-quotes",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-citation",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "color": "#38bdf8",
+  "inverse_color": "#bae6fd",
+  "line_style": "dotted",
+  "inverse_line_style": "dotted",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

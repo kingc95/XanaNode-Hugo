@@ -1,0 +1,49 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-governs",
+  "title": "Governs Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The governs inverse relationship term derived from governed_by.",
+  "version": "0.5.0",
+  "registry_type": "governs",
+  "registry_namespace": "xananode",
+  "category": "governance",
+  "inverse": "governed_by",
+  "color": "#fde047",
+  "inverse_color": "#eab308",
+  "line_style": "solid",
+  "inverse_line_style": "double",
+  "derived_inverse": true,
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-governs",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-governs",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-governance",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-governed_by-related_to-schema-relationship-type-governs-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-governed_by",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-governs-related_to-schema-relationship-type-governed_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-governed_by",
+      "direction": "outgoing"
+    }
+  ],
+  "default_weight": 4,
+  "default_visibility": "secondary",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

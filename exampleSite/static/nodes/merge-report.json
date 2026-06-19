@@ -6,49 +6,49 @@
   "summary": "A report that explains proposed mappings, conflicts, identity decisions, preserved disagreements, and unresolved issues when substrates are compared or merged.",
   "relationships": [
     {
-      "id": "xananode.example:rel/merge-report-schema-defines-merge-report-72",
+      "id": "xananode.example:rel/merge-report-schema-defines-merge-report-93",
       "type": "defines",
       "source": "xananode.example:schema/merge-report-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/merge-validation-uses-merge-report-167",
+      "id": "xananode.example:rel/merge-validation-uses-merge-report-188",
       "type": "uses",
       "source": "xananode.example:concept/merge-validation",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/merge-report-documents-merge-validation-170",
+      "id": "xananode.example:rel/merge-report-documents-merge-validation-191",
       "type": "documents",
       "target": "xananode.example:concept/merge-validation",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/merge-report-preserves-provenance-171",
+      "id": "xananode.example:rel/merge-report-preserves-provenance-192",
       "type": "preserves",
       "target": "xananode.example:concept/provenance",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/merge-report-supports-claim-merge-without-collapse-172",
+      "id": "xananode.example:rel/merge-report-supports-claim-merge-without-collapse-193",
       "type": "supports",
       "target": "xananode.example:claim/claim-merge-without-collapse",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-rules-requires-merge-report-187",
+      "id": "xananode.example:rel/federation-rules-requires-merge-report-208",
       "type": "requires",
       "source": "xananode.example:concept/federation-rules",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/federation-example-uses-merge-report-190",
+      "id": "xananode.example:rel/federation-example-uses-merge-report-211",
       "type": "uses",
       "source": "xananode.example:concept/federation-example",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/dispute-resolution-context_for-merge-report-199",
+      "id": "xananode.example:rel/dispute-resolution-context_for-merge-report-220",
       "type": "context_for",
       "source": "xananode.example:concept/dispute-resolution",
       "direction": "incoming"

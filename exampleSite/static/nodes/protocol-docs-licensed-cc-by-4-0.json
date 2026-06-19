@@ -1,0 +1,26 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/docs-claim-supported-by-policy",
+      "type": "supports",
+      "source": "xananode.canonical:source/xananode-license-policy",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-docs-licensed-under-cc-by",
+      "type": "licensed_under",
+      "target": "xananode.canonical:source/cc-by-4-0-license",
+      "direction": "outgoing"
+    }
+  ],
+  "id": "xananode.canonical:claim/protocol-docs-licensed-cc-by-4-0",
+  "title": "Protocol Docs Are Licensed CC-BY 4.0",
+  "type": "claim",
+  "subtype": "definition",
+  "status": "asserted",
+  "importance": 5,
+  "summary": "XanaNode protocol documentation is licensed under CC-BY 4.0 so the docs can be shared and adapted with attribution.",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

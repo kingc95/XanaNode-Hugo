@@ -2,11 +2,77 @@
   "id": "xananode.canonical:project/xananode-workspace",
   "title": "XanaNode Workspace",
   "type": "project",
-  "subtype": "software",
+  "subtype": "workspace-engine",
   "status": "active",
   "importance": 4,
-  "summary": "A coordination layer for local authoring, mounted pack selection, media placement, import review, Git workflows, and stack-level health checks.",
+  "summary": "Local-first workspace engine for creating, opening, validating, building, importing, and snapshotting XanaNode substrates.",
   "relationships": [
+    {
+      "id": "xananode.canonical:rel/project-xananode-workspace-implements-concept-substrate-projection-layer",
+      "type": "implements",
+      "target": "xananode.canonical:concept/substrate-projection-layer",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-workspace-uses-schema-protocol-artifact-schemas-author-profile.schema.json-artifact-0",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas-author-profile.schema.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-workspace-uses-schema-protocol-artifact-schemas-substrate-manifest.schema.json-artifact-1",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas-substrate-manifest.schema.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-workspace-uses-schema-protocol-artifact-schemas-substrate-node.schema.json-artifact-2",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas-substrate-node.schema.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-workspace-uses-technology-xananode-workspace-component-author-profiles-component-4",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-workspace-component-author-profiles",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-workspace-uses-technology-xananode-workspace-component-core-sdk-apis-component-0",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-workspace-component-core-sdk-apis",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-workspace-uses-technology-xananode-workspace-component-node-files-component-2",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-workspace-component-node-files",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-workspace-uses-technology-xananode-workspace-component-relationship-files-component-3",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-workspace-component-relationship-files",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-workspace-uses-technology-xananode-workspace-component-substrate-manifests-component-1",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-workspace-component-substrate-manifests",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-known-implementations-registry-contains-project-xananode-workspace",
+      "type": "contains",
+      "source": "xananode.canonical:schema/known-implementations-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/source-repository-kingc95-xananode-workspace-documents-project-xananode-workspace",
+      "type": "documents",
+      "source": "xananode.canonical:source/repository-kingc95-xananode-workspace",
+      "direction": "incoming"
+    },
     {
       "id": "xananode.canonical:rel/workspace-documented-by-repository",
       "type": "documents",
@@ -18,7 +84,63 @@
       "type": "uses",
       "target": "xananode.canonical:project/xananode-core-sdk",
       "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-workspace-identifies-compatibility",
+      "type": "governed_by",
+      "target": "xananode.canonical:concept/compatibility-attribution",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-workspace-licensed-under-apache",
+      "type": "licensed_under",
+      "target": "xananode.canonical:source/apache-2-0-license",
+      "direction": "outgoing"
     }
+  ],
+  "source_url": "https://github.com/kingc95/XanaNode-Workspace",
+  "repository": "kingc95/XanaNode-Workspace",
+  "protocol_role": "local-first-workspace-layer",
+  "software_version": "",
+  "build_metadata": {
+    "version": "",
+    "repository": "kingc95/XanaNode-Workspace",
+    "generated_at": "2026-06-19T20:40:39.583Z",
+    "built_by": "@xananode/core",
+    "dependencies": [
+      {
+        "name": "Core SDK APIs",
+        "relationship": "consumes"
+      },
+      {
+        "name": "substrate manifests",
+        "relationship": "consumes"
+      },
+      {
+        "name": "node files",
+        "relationship": "consumes"
+      },
+      {
+        "name": "relationship files",
+        "relationship": "consumes"
+      },
+      {
+        "name": "author profiles",
+        "relationship": "consumes"
+      }
+    ]
+  },
+  "consumes": [
+    "Core SDK APIs",
+    "substrate manifests",
+    "node files",
+    "relationship files",
+    "author profiles"
+  ],
+  "related_protocol_artifacts": [
+    "../schemas/author-profile.schema.json",
+    "../schemas/substrate-manifest.schema.json",
+    "../schemas/substrate-node.schema.json"
   ],
   "imported_from": "nodes.json",
   "pack_id": "xananode.canonical",

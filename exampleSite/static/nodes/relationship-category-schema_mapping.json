@@ -1,0 +1,68 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-schema_mapping",
+  "title": "Schema Mapping Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The schema_mapping category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "schema_mapping",
+  "registry_namespace": "xananode",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-schema_mapping-contains-schema-relationship-type-broader_than",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-broader_than",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-schema_mapping-contains-schema-relationship-type-compatible_with",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-compatible_with",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-schema_mapping-contains-schema-relationship-type-extension_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-extension_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-schema_mapping-contains-schema-relationship-type-has_extension",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-has_extension",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-schema_mapping-contains-schema-relationship-type-mapped_from",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-mapped_from",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-schema_mapping-contains-schema-relationship-type-maps_to",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-maps_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-schema_mapping-contains-schema-relationship-type-narrower_than",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-narrower_than",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-schema_mapping",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "color": "#22d3ee",
+  "inverse_color": "#a5f3fc",
+  "line_style": "double",
+  "inverse_line_style": "double",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

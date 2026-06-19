@@ -1,0 +1,26 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/apache-claim-supported-by-policy",
+      "type": "supports",
+      "source": "xananode.canonical:source/xananode-license-policy",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/code-schemas-licensed-under-apache",
+      "type": "licensed_under",
+      "target": "xananode.canonical:source/apache-2-0-license",
+      "direction": "outgoing"
+    }
+  ],
+  "id": "xananode.canonical:claim/schemas-validators-reference-code-apache-2-0",
+  "title": "Schemas, Validators, And Reference Code Are Apache-2.0",
+  "type": "claim",
+  "subtype": "definition",
+  "status": "asserted",
+  "importance": 5,
+  "summary": "XanaNode schemas, validators, tooling, and reference implementation code are licensed under Apache-2.0 for broad adoption.",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

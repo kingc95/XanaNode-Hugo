@@ -1,0 +1,21 @@
+{
+  "id": "xananode.canonical:schema/protocol-artifact-schemas-author-profile.schema.json",
+  "title": "schemas/author-profile.schema.json",
+  "type": "schema",
+  "subtype": "protocol_artifact",
+  "importance": 4,
+  "summary": "XanaNode Workspace references the protocol artifact schemas/author-profile.schema.json.",
+  "artifact_path": "schemas/author-profile.schema.json",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/author-profile.schema.json",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/project-xananode-workspace-uses-schema-protocol-artifact-schemas-author-profile.schema.json-artifact-0",
+      "type": "uses",
+      "source": "xananode.canonical:project/xananode-workspace",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

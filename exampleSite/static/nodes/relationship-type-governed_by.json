@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-governed_by",
+  "title": "governed by",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source artifact, workflow, implementation, substrate, or mark is governed by the target policy, rule, specification, or legal instrument.",
+  "version": "0.5.0",
+  "registry_type": "governed_by",
+  "registry_namespace": "xananode",
+  "category": "governance",
+  "inverse": "governs",
+  "color": "#eab308",
+  "inverse_color": "#fde047",
+  "line_style": "double",
+  "inverse_line_style": "solid",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-governed_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-contains-schema-relationship-type-governed_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-governance",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-governed_by-related_to-schema-relationship-type-governs-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-governs",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-governs-related_to-schema-relationship-type-governed_by-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-governs",
+      "direction": "incoming"
+    }
+  ],
+  "default_weight": 4,
+  "default_visibility": "secondary",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

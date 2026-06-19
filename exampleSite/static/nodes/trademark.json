@@ -1,0 +1,19 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/trademark-policy-defines-trademark",
+      "type": "defines",
+      "source": "xananode.canonical:source/xananode-trademark-policy",
+      "direction": "incoming"
+    }
+  ],
+  "id": "xananode.canonical:concept/trademark",
+  "title": "Trademark",
+  "type": "concept",
+  "subtype": "governance",
+  "importance": 5,
+  "summary": "A protected name, logo, or mark that identifies the source and reputation of a project, product, organization, or community.",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

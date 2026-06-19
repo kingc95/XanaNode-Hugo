@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-validates",
+  "title": "Validates",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source validates, confirms, or passes a test for the target hypothesis, claim, method, or artifact.",
+  "version": "0.5.0",
+  "registry_type": "validates",
+  "registry_namespace": "xananode",
+  "category": "research_workflow",
+  "inverse": "validated_by",
+  "color": "#0ea5e9",
+  "inverse_color": "#7dd3fc",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "default_weight": 5,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-validates",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-research_workflow-contains-schema-relationship-type-validates",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-research_workflow",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-validated_by-related_to-schema-relationship-type-validates-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-validated_by",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-validates-related_to-schema-relationship-type-validated_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-validated_by",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

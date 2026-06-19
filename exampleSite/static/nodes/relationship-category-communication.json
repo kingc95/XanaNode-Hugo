@@ -1,0 +1,158 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-communication",
+  "title": "Communication Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The communication category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "communication",
+  "registry_namespace": "xananode",
+  "color": "#38bdf8",
+  "inverse_color": "#bae6fd",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-announced",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-announced",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-announced_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-announced_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-answered_in",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-answered_in",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-asked",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-asked",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-asked_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-asked_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-asked_in",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-asked_in",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-broadcast_to",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-broadcast_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-communicated_to",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-communicated_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-communication_received_from",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-communication_received_from",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-debated_with",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-debated_with",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-discussed_with",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-discussed_with",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-discussion_partner_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-discussion_partner_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-had_answer",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-had_answer",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-had_question",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-had_question",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-negotiated_with",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-negotiated_with",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-presentation_received_from",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-presentation_received_from",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-presented_to",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-presented_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-received_broadcast_from",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-received_broadcast_from",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-received_report_from",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-received_report_from",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-replied_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-replied_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-replied_to",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-replied_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-reported_to",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-reported_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-communication",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

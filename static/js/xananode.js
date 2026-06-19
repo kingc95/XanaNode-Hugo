@@ -352,7 +352,7 @@
             if (relSchema?.relationship_types) {
                 VALID_RELATIONSHIP_TYPES = new Set(relSchema.relationship_types.map((t) => t.type));
             }
-            init(data, nodeSchema, null);
+            init(data, nodeSchema, relSchema);
         })
         .catch((err) => {
             graphEl.innerHTML = `<p class="xana-error">${escapeHtml(err.message)}</p>`;
@@ -524,9 +524,10 @@
         ].filter(Boolean).map(String);
     }
 
-    function init(data, nodeTypesData, fragmentsData) {
+    function init(data, nodeTypesData, relationshipTypesData) {
         const allNodes = Array.isArray(data.nodes) ? data.nodes : [];
         const nodeTypeColors = buildTypeColorMap(nodeTypesData);
+        const relationshipTypeStyles = buildRelationshipStyleMap(relationshipTypesData);
         const nodeIds = new Set(allNodes.map((node) => node.id));
 
         // allEdgesRaw: every edge as declared in frontmatter — used by audit to detect
@@ -612,10 +613,11 @@
             nodeIds,
             allEdges,
             allEdgesRaw,
-            fragmentsData: fragmentsData || {},
+            fragmentsData: {},
             pendingFragmentHighlight: null,
             displaySettings,
-            nodeTypeColors
+            nodeTypeColors,
+            relationshipTypeStyles
         };
 
         if (requestedNode && window.location.hash) {
@@ -650,7 +652,7 @@
             elements: [],
             minZoom: 0.15,
             maxZoom: 3,
-            style: getCyStyle(nodeTypeColors),
+            style: getCyStyle(nodeTypeColors, relationshipTypeStyles),
             layout: { name: "preset" }
         });
 
@@ -1310,7 +1312,7 @@
                 applyDisplaySettings(state.displaySettings);
                 updateDisplaySettingButtons(state);
                 if (key === "colorTheme" && state.cy) {
-                    state.cy.style(getCyStyle(state.nodeTypeColors)).update();
+                    state.cy.style(getCyStyle(state.nodeTypeColors, state.relationshipTypeStyles)).update();
                 }
                 if (key === "graphAtmosphere") {
                     refreshAliveMotion(state);
@@ -1813,10 +1815,12 @@
                 const isVisualMedia = ["image", "diagram", "screenshot"].includes(mediaType) ||
                     /\.(svg|png|jpe?g|webp|gif|avif)$/i.test(src);
                 const isContain = ["diagram", "screenshot"].includes(mediaType) || src.toLowerCase().endsWith(".svg");
+                const visualData = nodeVisualData(node, state.nodeTypeColors);
                 return {
-                    data: node,
+                    data: { ...node, ...visualData },
                     classes: [
                         node.type || "node",
+                        visualData.hasMixedRoles ? "multi-role" : "",
                         (node.image && isVisualMedia) ? "has-image" : "",
                         isContain ? "image-contain" : "",
                         searchMatchIds.has(node.id) ? "search-match" : "",
@@ -1833,7 +1837,9 @@
                     target: edge.target,
                     label: edge.type,
                     weight: edge.weight,
-                    score: edge.score
+                    score: edge.score,
+                    color: edge.color || relationshipTypeStyle(state, edge.type).color,
+                    lineStyle: mapRelationshipLineStyle(edge.line_style || relationshipTypeStyle(state, edge.type).line_style)
                 },
                 classes: [
                     edge.source === state.focusId || edge.target === state.focusId ? "focus-edge" : "mist-edge",
@@ -1941,8 +1947,10 @@
             .filter((edge) => edge.source === focusId || edge.target === focusId)
             .sort((a, b) => b.score - a.score);
 
-        const firstEdges = directEdges
-            .slice(0, settings.maxFirst);
+        // Direct relationships are substrate truth, not optional decoration.
+        // Range settings may limit surrounding context, but every enabled edge
+        // attached to the focused node must remain visible.
+        const firstEdges = directEdges;
 
         firstEdges.forEach((edge) => {
             const other = edge.source === focusId ? edge.target : edge.source;
@@ -2018,7 +2026,7 @@
         // visibleIds here — that caused unrelated nodes to bleed into the graph
         // while the search panel was open and disappear on close.
 
-        const nodes = allNodes.filter((node) => {
+        function nodePassesFilters(node) {
             if (node.id === focusId) return true;
             if (node.id === previousFocusId) return true;
             if (!visibleIds.has(node.id)) return false;
@@ -2031,21 +2039,32 @@
             }
 
             return true;
-        });
+        }
+
+        const nodes = allNodes.filter(nodePassesFilters);
 
         const nodeIds = new Set(nodes.map((node) => node.id));
 
-        let edges = scoredEdges.filter((edge) => {
+        const directVisibleEdges = directEdges.filter((edge) => {
             return nodeIds.has(edge.source) && nodeIds.has(edge.target);
         });
 
-        if (maxDepth === 1) {
-            edges = edges.filter((edge) => edge.source === focusId || edge.target === focusId);
-        }
+        const directEdgeKeys = new Set(directVisibleEdges.map(edgeIdentityKey));
+        const contextEdgeBudget = settings.maxSecond + settings.maxThird + (settings.maxFourth || 0);
+        const contextEdges = maxDepth === 1
+            ? []
+            : scoredEdges
+                .filter((edge) => !directEdgeKeys.has(edgeIdentityKey(edge)))
+                .filter((edge) => nodeIds.has(edge.source) && nodeIds.has(edge.target))
+                .slice(0, contextEdgeBudget);
 
-        edges = edges.slice(0, settings.maxFirst + settings.maxSecond + settings.maxThird + (settings.maxFourth || 0));
+        const edges = [...directVisibleEdges, ...contextEdges];
 
         return { nodes, edges, distances };
+    }
+
+    function edgeIdentityKey(edge) {
+        return [edge.source, edge.target, edge.type || "related_to"].join("::");
     }
 
     function dedupeEdges(edges) {
@@ -4820,12 +4839,91 @@
         return map;
     }
 
+    function buildRelationshipStyleMap(relationshipTypesData) {
+        const map = new Map();
+
+        if (relationshipTypesData?.relationship_types) {
+            relationshipTypesData.relationship_types.forEach((entry) => {
+                if (entry?.type) {
+                    map.set(entry.type, {
+                        color: entry.color || "#55d6be",
+                        inverse_color: entry.inverse_color || entry.color || "#9ae6db",
+                        line_style: entry.line_style || "solid",
+                        inverse_line_style: entry.inverse_line_style || entry.line_style || "dashed"
+                    });
+                }
+            });
+        }
+
+        return map;
+    }
+
+    function relationshipTypeStyle(state, type) {
+        return state?.relationshipTypeStyles?.get(type) || {
+            color: "#55d6be",
+            inverse_color: "#9ae6db",
+            line_style: "solid",
+            inverse_line_style: "dashed"
+        };
+    }
+
+    function mapRelationshipLineStyle(style) {
+        const clean = String(style || "solid").toLowerCase();
+        if (clean === "dashed" || clean === "dotted") return clean;
+        return "solid";
+    }
+
     function getTypeColor(type, nodeTypeColors) {
         const key = (type || "").toLowerCase();
         if (document.documentElement.dataset.xanaTheme === "accessible") {
             return ACCESSIBLE_TYPE_PALETTE[key] || ACCESSIBLE_TYPE_PALETTE.concept;
         }
         return nodeTypeColors.get(key) || TYPE_PALETTE[key] || TYPE_PALETTE.concept;
+    }
+
+    function nodeRoleTypes(node, nodeTypeColors) {
+        const values = [node?.type, ...(Array.isArray(node?.facets) ? node.facets : [])]
+            .filter(Boolean)
+            .map((value) => String(value).toLowerCase());
+        const known = values.filter((value) => nodeTypeColors.has(value) || TYPE_PALETTE[value] || ACCESSIBLE_TYPE_PALETTE[value]);
+        return [...new Set(known)].slice(0, 6);
+    }
+
+    function nodeVisualData(node, nodeTypeColors) {
+        const roles = nodeRoleTypes(node, nodeTypeColors);
+        const primary = getTypeColor(node?.type, nodeTypeColors);
+        const mixed = roles.length > 1;
+        const base = {
+            primaryColor: primary.bg || "#55d6be",
+            labelColor: primary.fg || "#f8fafc",
+            textOutlineColor: primary.outline || primary.bg || "#05070a",
+            roleSummary: roles.map(humanLabel).join(", "),
+            hasMixedRoles: mixed,
+            pie1Color: primary.bg || "#55d6be",
+            pie1Size: 100,
+            pie2Color: primary.bg || "#55d6be",
+            pie2Size: 0,
+            pie3Color: primary.bg || "#55d6be",
+            pie3Size: 0,
+            pie4Color: primary.bg || "#55d6be",
+            pie4Size: 0,
+            pie5Color: primary.bg || "#55d6be",
+            pie5Size: 0,
+            pie6Color: primary.bg || "#55d6be",
+            pie6Size: 0
+        };
+
+        if (!mixed) return base;
+
+        const size = Math.floor(100 / roles.length);
+        const remainder = 100 - (size * roles.length);
+        roles.forEach((role, index) => {
+            const colors = getTypeColor(role, nodeTypeColors);
+            const slot = index + 1;
+            base[`pie${slot}Color`] = colors.bg || base.primaryColor;
+            base[`pie${slot}Size`] = size + (index === 0 ? remainder : 0);
+        });
+        return base;
     }
 
     function nodeTypeStyle(type, nodeTypeColors, overrides = {}) {
@@ -4839,7 +4937,7 @@
         };
     }
 
-    function getCyStyle(nodeTypeColors) {
+    function getCyStyle(nodeTypeColors, relationshipTypeStyles = new Map()) {
         return [
             {
                 selector: "node",
@@ -4859,11 +4957,30 @@
                     "text-background-opacity": 0.72,
                     "text-background-padding": 4,
                     "text-background-shape": "roundrectangle",
-                    "background-color": "#55d6be",
+                    "background-color": "data(primaryColor)",
                     "border-width": 3,
-                    "border-color": "#dffcf6",
+                    "border-color": "data(textOutlineColor)",
                     width: 92,
                     height: 92
+                }
+            },
+            {
+                selector: ".multi-role",
+                style: {
+                    "pie-size": "92%",
+                    "pie-1-background-color": "data(pie1Color)",
+                    "pie-1-background-size": "data(pie1Size)",
+                    "pie-2-background-color": "data(pie2Color)",
+                    "pie-2-background-size": "data(pie2Size)",
+                    "pie-3-background-color": "data(pie3Color)",
+                    "pie-3-background-size": "data(pie3Size)",
+                    "pie-4-background-color": "data(pie4Color)",
+                    "pie-4-background-size": "data(pie4Size)",
+                    "pie-5-background-color": "data(pie5Color)",
+                    "pie-5-background-size": "data(pie5Size)",
+                    "pie-6-background-color": "data(pie6Color)",
+                    "pie-6-background-size": "data(pie6Size)",
+                    "border-width": 5
                 }
             },
             {
@@ -5076,8 +5193,9 @@
                 selector: "edge",
                 style: {
                     width: "mapData(weight, 1, 5, 1, 5)",
-                    "line-color": "#465166",
-                    "target-arrow-color": "#465166",
+                    "line-color": "data(color)",
+                    "target-arrow-color": "data(color)",
+                    "line-style": "data(lineStyle)",
                     "target-arrow-shape": "triangle",
                     "curve-style": "bezier",
                     label: "data(label)",
@@ -5095,8 +5213,9 @@
                 style: {
                     width: "mapData(weight, 1, 5, 3, 7)",
                     opacity: 0.95,
-                    "line-color": "#55d6be",
-                    "target-arrow-color": "#55d6be",
+                    "line-color": "data(color)",
+                    "target-arrow-color": "data(color)",
+                    "line-style": "data(lineStyle)",
                     "font-size": 13,
                     "font-weight": 700,
                     color: "#f0fdfa",

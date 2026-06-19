@@ -18,31 +18,31 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-relationships-schema-defines-substrate-relationship-list-60",
+      "id": "xananode.example:rel/substrate-relationships-schema-defines-substrate-relationship-list-81",
       "type": "defines",
       "source": "xananode.example:schema/substrate-relationships-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/using-hugo-with-protocol-json-explains-substrate-relationship-list-112",
+      "id": "xananode.example:rel/using-hugo-with-protocol-json-explains-substrate-relationship-list-133",
       "type": "explains",
       "source": "xananode.example:essay/using-hugo-with-protocol-json",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-relationship-list-uses-xananode-relationship-types-138",
+      "id": "xananode.example:rel/substrate-relationship-list-uses-xananode-relationship-types-159",
       "type": "uses",
       "target": "xananode.example:schema/xananode-relationship-types",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/substrate-relationship-list-preserves-provenance-139",
+      "id": "xananode.example:rel/substrate-relationship-list-preserves-provenance-160",
       "type": "preserves",
       "target": "xananode.example:concept/provenance",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-relationship-list-155",
+      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-relationship-list-176",
       "type": "contains",
       "source": "xananode.example:concept/protocol-artifacts",
       "direction": "incoming"

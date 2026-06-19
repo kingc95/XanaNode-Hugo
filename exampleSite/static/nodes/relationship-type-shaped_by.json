@@ -21,6 +21,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-influence-contains-schema-relationship-type-shaped_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-influence",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-shaped_by-related_to-schema-relationship-type-shapes-inverse",
       "type": "related_to",
       "target": "xananode.canonical:schema/relationship-type-shapes",
@@ -33,6 +39,10 @@
       "direction": "incoming"
     }
   ],
+  "color": "#99f6e4",
+  "inverse_color": "#14b8a6",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
   "imported_from": "nodes.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"

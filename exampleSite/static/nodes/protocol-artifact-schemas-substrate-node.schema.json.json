@@ -1,0 +1,33 @@
+{
+  "id": "xananode.canonical:schema/protocol-artifact-schemas-substrate-node.schema.json",
+  "title": "schemas/substrate-node.schema.json",
+  "type": "schema",
+  "subtype": "protocol_artifact",
+  "importance": 4,
+  "summary": "XanaNode Workspace references the protocol artifact schemas/substrate-node.schema.json.",
+  "artifact_path": "schemas/substrate-node.schema.json",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/substrate-node.schema.json",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/project-xananode-core-sdk-uses-schema-protocol-artifact-schemas-substrate-node.schema.json-artifact-1",
+      "type": "uses",
+      "source": "xananode.canonical:project/xananode-core-sdk",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-hugo-theme-uses-schema-protocol-artifact-schemas-substrate-node.schema.json-artifact-1",
+      "type": "uses",
+      "source": "xananode.canonical:project/xananode-hugo-theme",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-workspace-uses-schema-protocol-artifact-schemas-substrate-node.schema.json-artifact-2",
+      "type": "uses",
+      "source": "xananode.canonical:project/xananode-workspace",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

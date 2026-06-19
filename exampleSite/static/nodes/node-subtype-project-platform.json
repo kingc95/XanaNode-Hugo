@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-project-platform",
+  "title": "Project subtype: platform",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "platform is an allowed subtype of the project node type.",
+  "version": "0.3.0",
+  "registry_type": "platform",
+  "registry_namespace": "xananode",
+  "parent_node_type": "project",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-project-platform-extension_of-schema-node-type-project",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-project",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-project-contains-schema-node-subtype-project-platform",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-project",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

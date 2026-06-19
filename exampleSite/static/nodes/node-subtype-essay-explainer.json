@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-essay-explainer",
+  "title": "Essay subtype: explainer",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "explainer is an allowed subtype of the essay node type.",
+  "version": "0.3.0",
+  "registry_type": "explainer",
+  "registry_namespace": "xananode",
+  "parent_node_type": "essay",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-essay-explainer-extension_of-schema-node-type-essay",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-essay",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-essay-contains-schema-node-subtype-essay-explainer",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-essay",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

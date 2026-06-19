@@ -1,0 +1,49 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-validation_required_by",
+  "title": "Validation Required By Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The validation_required_by inverse relationship term derived from requires_validation.",
+  "version": "0.5.0",
+  "registry_type": "validation_required_by",
+  "registry_namespace": "xananode",
+  "category": "knowledge_workflow",
+  "inverse": "requires_validation",
+  "color": "#a5f3fc",
+  "inverse_color": "#06b6d4",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "derived_inverse": true,
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-validation_required_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-knowledge_workflow-contains-schema-relationship-type-validation_required_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-knowledge_workflow",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-requires_validation-related_to-schema-relationship-type-validation_required_by-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-requires_validation",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-validation_required_by-related_to-schema-relationship-type-requires_validation-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-requires_validation",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-discovery",
+  "title": "Discovery Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The discovery category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "discovery",
+  "registry_namespace": "xananode",
+  "color": "#34d399",
+  "inverse_color": "#a7f3d0",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-discovery-contains-schema-relationship-type-possibly_related_to",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-possibly_related_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-discovery-contains-schema-relationship-type-shares_pattern_with",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-shares_pattern_with",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-discovery",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

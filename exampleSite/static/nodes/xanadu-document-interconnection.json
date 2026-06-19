@@ -26,13 +26,13 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/ted-nelson-authored-xanadu-document-interconnection-93",
+      "id": "xananode.example:rel/ted-nelson-authored-xanadu-document-interconnection-114",
       "type": "authored",
       "source": "xananode.example:person/ted-nelson",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-substrate-is-structure-218",
+      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-substrate-is-structure-239",
       "type": "supports",
       "target": "xananode.example:claim/claim-substrate-is-structure",
       "direction": "outgoing"

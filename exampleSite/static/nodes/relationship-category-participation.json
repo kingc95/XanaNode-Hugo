@@ -1,0 +1,98 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-participation",
+  "title": "Participation Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The participation category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "participation",
+  "registry_namespace": "xananode",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-participation-contains-schema-relationship-type-appears_in",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-appears_in",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-participation-contains-schema-relationship-type-featured_in",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-featured_in",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-participation-contains-schema-relationship-type-featured_speaker",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-featured_speaker",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-participation-contains-schema-relationship-type-features",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-features",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-participation-contains-schema-relationship-type-had_participant",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-had_participant",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-participation-contains-schema-relationship-type-has_appearance",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-has_appearance",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-participation-contains-schema-relationship-type-introduced_in",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-introduced_in",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-participation-contains-schema-relationship-type-introduction_venue_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-introduction_venue_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-participation-contains-schema-relationship-type-participated_in",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-participated_in",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-participation-contains-schema-relationship-type-presented",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-presented",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-participation-contains-schema-relationship-type-presented_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-presented_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-participation-contains-schema-relationship-type-spoke_at",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-spoke_at",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-participation",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "color": "#ec4899",
+  "inverse_color": "#f9a8d4",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

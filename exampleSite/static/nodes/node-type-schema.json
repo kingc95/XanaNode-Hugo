@@ -13,7 +13,18 @@
     "relationship_type_schema",
     "validation_rule",
     "governance_rule",
-    "style_rule"
+    "style_rule",
+    "node_subtype_schema",
+    "relationship_category_schema",
+    "property_registry_entry",
+    "canonical_schema_record",
+    "namespace_record",
+    "protocol_artifact",
+    "term",
+    "schema_term",
+    "schema_field",
+    "semantic_rule",
+    "projection_style_rule"
   ],
   "required_frontmatter": [
     "title",
@@ -34,10 +45,208 @@
   },
   "relationships": [
     {
+      "id": "xananode.example:rel/xananode-node-types-contains-node-type-schema-72",
+      "type": "contains",
+      "source": "xananode.example:schema/xananode-node-types",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-schema",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-canonical_schema_record-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-schema-canonical_schema_record",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-governance_rule-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-schema-governance_rule",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-namespace_record-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-schema-namespace_record",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-node_subtype_schema-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-schema-node_subtype_schema",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-node_type_schema-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-schema-node_type_schema",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-projection_style_rule-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-schema-projection_style_rule",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-property_registry_entry-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-schema-property_registry_entry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-protocol_artifact-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-schema-protocol_artifact",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-relationship_category_schema-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-schema-relationship_category_schema",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-relationship_type_schema-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-schema-relationship_type_schema",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-schema_field-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-schema-schema_field",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-schema_term-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-schema-schema_term",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-semantic_rule-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-schema-semantic_rule",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-style_rule-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-schema-style_rule",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-term-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-schema-term",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-schema-validation_rule-extension_of-schema-node-type-schema",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-schema-validation_rule",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-canonical_schema_record",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-schema-canonical_schema_record",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-governance_rule",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-schema-governance_rule",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-namespace_record",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-schema-namespace_record",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-node_subtype_schema",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-schema-node_subtype_schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-node_type_schema",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-schema-node_type_schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-projection_style_rule",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-schema-projection_style_rule",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-property_registry_entry",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-schema-property_registry_entry",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-protocol_artifact",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-schema-protocol_artifact",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-relationship_category_schema",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-schema-relationship_category_schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-relationship_type_schema",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-schema-relationship_type_schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-schema_field",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-schema-schema_field",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-schema_term",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-schema-schema_term",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-semantic_rule",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-schema-semantic_rule",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-style_rule",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-schema-style_rule",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-term",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-schema-term",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-schema-contains-schema-node-subtype-schema-validation_rule",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-schema-validation_rule",
+      "direction": "outgoing"
     }
   ],
   "imported_from": "nodes.json",

@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-under_review",
+  "title": "Under review",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source places the target under review or indicates that its status is being evaluated.",
+  "version": "0.5.0",
+  "registry_type": "under_review",
+  "registry_namespace": "xananode",
+  "category": "uncertainty",
+  "inverse": "reviewed_under",
+  "color": "#d946ef",
+  "inverse_color": "#f5d0fe",
+  "line_style": "dotted",
+  "inverse_line_style": "dotted",
+  "default_weight": 3,
+  "default_visibility": "secondary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-under_review",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-uncertainty-contains-schema-relationship-type-under_review",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-uncertainty",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-reviewed_under-related_to-schema-relationship-type-under_review-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-reviewed_under",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-under_review-related_to-schema-relationship-type-reviewed_under-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-reviewed_under",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}
