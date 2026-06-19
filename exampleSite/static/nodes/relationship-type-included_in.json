@@ -1,0 +1,39 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-included_in",
+  "title": "Included In Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The included_in inverse relationship term derived from includes.",
+  "version": "0.5.0",
+  "registry_type": "included_in",
+  "registry_namespace": "xananode",
+  "category": "composition",
+  "inverse": "includes",
+  "derived_inverse": true,
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-included_in",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-included_in-related_to-schema-relationship-type-includes-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-includes",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-includes-related_to-schema-relationship-type-included_in-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-includes",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

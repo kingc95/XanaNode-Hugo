@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-starts_with",
+  "title": "Starts with",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source sequence, work, or argument begins with the target.",
+  "version": "0.5.0",
+  "registry_type": "starts_with",
+  "registry_namespace": "xananode",
+  "category": "temporal",
+  "inverse": "is_start_of",
+  "default_weight": 3,
+  "default_visibility": "secondary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-starts_with",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-is_start_of-related_to-schema-relationship-type-starts_with-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-is_start_of",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-starts_with-related_to-schema-relationship-type-is_start_of-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-is_start_of",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

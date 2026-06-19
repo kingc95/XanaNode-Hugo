@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-results_from",
+  "title": "Results from",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source is a consequence, failure mode, output, or downstream effect of the target.",
+  "version": "0.5.0",
+  "registry_type": "results_from",
+  "registry_namespace": "xananode",
+  "category": "causation",
+  "inverse": "produces",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-results_from",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-produces-related_to-schema-relationship-type-results_from-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-produces",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-results_from-related_to-schema-relationship-type-produces-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-produces",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-arrives_at",
+  "title": "Arrives at",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source reasoning, argument, or inquiry leads to the target conclusion or position.",
+  "version": "0.5.0",
+  "registry_type": "arrives_at",
+  "registry_namespace": "xananode",
+  "category": "reasoning",
+  "inverse": "arrived_from",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-arrives_at",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-arrived_from-related_to-schema-relationship-type-arrives_at-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-arrived_from",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-arrives_at-related_to-schema-relationship-type-arrived_from-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-arrived_from",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

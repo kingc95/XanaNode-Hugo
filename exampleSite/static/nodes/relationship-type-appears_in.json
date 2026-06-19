@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-appears_in",
+  "title": "Appears in",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source appears in the target work, collection, or event.",
+  "version": "0.5.0",
+  "registry_type": "appears_in",
+  "registry_namespace": "xananode",
+  "category": "participation",
+  "inverse": "has_appearance",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-appears_in",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-appears_in-related_to-schema-relationship-type-has_appearance-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-has_appearance",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-has_appearance-related_to-schema-relationship-type-appears_in-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-has_appearance",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

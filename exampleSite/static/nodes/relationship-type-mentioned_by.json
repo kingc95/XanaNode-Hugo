@@ -1,0 +1,39 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-mentioned_by",
+  "title": "Mentioned By Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The mentioned_by inverse relationship term derived from mentions.",
+  "version": "0.5.0",
+  "registry_type": "mentioned_by",
+  "registry_namespace": "xananode",
+  "category": "citation",
+  "inverse": "mentions",
+  "derived_inverse": true,
+  "default_weight": 2,
+  "default_visibility": "background",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-mentioned_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-mentioned_by-related_to-schema-relationship-type-mentions-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-mentions",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-mentions-related_to-schema-relationship-type-mentioned_by-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-mentions",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

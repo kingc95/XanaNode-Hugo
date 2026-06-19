@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-friend_of",
+  "title": "Friend of",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source had a documented friendship with the target.",
+  "version": "0.5.0",
+  "registry_type": "friend_of",
+  "registry_namespace": "xananode",
+  "category": "social",
+  "inverse": "friend_of",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-friend_of",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-friend_of-related_to-schema-relationship-type-friend_of-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-friend_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-friend_of-related_to-schema-relationship-type-friend_of-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-friend_of",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -33,7 +33,7 @@ params:
         mode: "mounted"
         version: "0.1.0"
         required: false
-        enabled: false
+        enabled: true
     brand:
       name: "XanaNode"
       tagline: "Relationships preserve knowledge"

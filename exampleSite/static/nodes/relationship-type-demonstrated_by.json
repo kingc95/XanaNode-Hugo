@@ -1,0 +1,39 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-demonstrated_by",
+  "title": "Demonstrated By Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The demonstrated_by inverse relationship term derived from demonstrates.",
+  "version": "0.5.0",
+  "registry_type": "demonstrated_by",
+  "registry_namespace": "xananode",
+  "category": "evidence",
+  "inverse": "demonstrates",
+  "derived_inverse": true,
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-demonstrated_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-demonstrated_by-related_to-schema-relationship-type-demonstrates-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-demonstrates",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-demonstrates-related_to-schema-relationship-type-demonstrated_by-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-demonstrates",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

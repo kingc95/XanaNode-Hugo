@@ -1,0 +1,113 @@
+{
+  "id": "xananode.canonical:project/xananode-protocol",
+  "title": "XanaNode Protocol",
+  "type": "project",
+  "subtypes": [
+    "standard",
+    "protocol"
+  ],
+  "status": "active",
+  "importance": 5,
+  "summary": "The specification layer that defines substrate artifacts, node types, relationship types, addressing, pack ingress, federation, governance, and validation rules.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/core-implements-protocol",
+      "type": "implements",
+      "source": "xananode.canonical:project/xananode-core-sdk",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-contains-author-profile-schema",
+      "type": "contains",
+      "target": "xananode.canonical:schema/author-profile-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-contains-compatibility-report-schema",
+      "type": "contains",
+      "target": "xananode.canonical:schema/compatibility-report-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-contains-manifest-schema",
+      "type": "contains",
+      "target": "xananode.canonical:schema/substrate-manifest-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-contains-merge-report-schema",
+      "type": "contains",
+      "target": "xananode.canonical:schema/merge-report-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-contains-namespace-schema",
+      "type": "contains",
+      "target": "xananode.canonical:schema/namespace-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-contains-nanopublication-schema",
+      "type": "contains",
+      "target": "xananode.canonical:schema/nanopublication-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-contains-node-schema",
+      "type": "contains",
+      "target": "xananode.canonical:schema/substrate-node-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-contains-node-type-registry",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-registry",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-contains-property-registry-schema",
+      "type": "contains",
+      "target": "xananode.canonical:schema/property-registry-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-contains-relationship-schema",
+      "type": "contains",
+      "target": "xananode.canonical:schema/substrate-relationships-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-contains-relationship-type-registry",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-contains-ro-crate-schema",
+      "type": "contains",
+      "target": "xananode.canonical:schema/ro-crate-metadata-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-contains-substrate-diff-schema",
+      "type": "contains",
+      "target": "xananode.canonical:schema/substrate-diff-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-documented-by-repository",
+      "type": "documents",
+      "source": "xananode.canonical:source/xananode-protocol-repository",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-uses-python",
+      "type": "uses",
+      "target": "xananode.canonical:technology/python",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

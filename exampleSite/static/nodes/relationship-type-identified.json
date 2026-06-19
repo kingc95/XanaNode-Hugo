@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-identified",
+  "title": "Identified",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source identified, named, or recognized the target.",
+  "version": "0.5.0",
+  "registry_type": "identified",
+  "registry_namespace": "xananode",
+  "category": "creation",
+  "inverse": "identified_by",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-identified",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-identified_by-related_to-schema-relationship-type-identified-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-identified_by",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-identified-related_to-schema-relationship-type-identified_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-identified_by",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

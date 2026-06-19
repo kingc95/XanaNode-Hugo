@@ -1,0 +1,39 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-has_appearance",
+  "title": "Has Appearance Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The has_appearance inverse relationship term derived from appears_in.",
+  "version": "0.5.0",
+  "registry_type": "has_appearance",
+  "registry_namespace": "xananode",
+  "category": "participation",
+  "inverse": "appears_in",
+  "derived_inverse": true,
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-has_appearance",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-appears_in-related_to-schema-relationship-type-has_appearance-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-appears_in",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-has_appearance-related_to-schema-relationship-type-appears_in-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-appears_in",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

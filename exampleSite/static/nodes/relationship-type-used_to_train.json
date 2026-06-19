@@ -1,0 +1,39 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-used_to_train",
+  "title": "Used To Train Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The used_to_train inverse relationship term derived from trained_on.",
+  "version": "0.5.0",
+  "registry_type": "used_to_train",
+  "registry_namespace": "xananode",
+  "category": "composition",
+  "inverse": "trained_on",
+  "derived_inverse": true,
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-used_to_train",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-trained_on-related_to-schema-relationship-type-used_to_train-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-trained_on",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-used_to_train-related_to-schema-relationship-type-trained_on-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-trained_on",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "xananode.canonical:schema/canonical-schema-xananode-node-types",
+  "title": "Xananode Node Types Schema",
+  "type": "schema",
+  "subtype": "canonical_schema_record",
+  "importance": 5,
+  "summary": "Canonical schema registry entry for xananode-node-types.",
+  "registry_type": "xananode-node-types",
+  "version": "0.3.0",
+  "schema_path": "../schemas/xananode-node-types.schema.v0.3.0.json",
+  "artifact_path": "../schemas/xananode-node-types.v0.3.0.json",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/xananode-node-types.schema.v0.3.0.json",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schema-xananode-node-types-documents-schema-node-type-registry",
+      "type": "documents",
+      "target": "xananode.canonical:schema/node-type-registry",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schemas-registry-contains-schema-canonical-schema-xananode-node-types",
+      "type": "contains",
+      "source": "xananode.canonical:schema/canonical-schemas-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

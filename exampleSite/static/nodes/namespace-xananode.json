@@ -1,0 +1,28 @@
+{
+  "id": "xananode.canonical:schema/namespace-xananode",
+  "title": "XanaNode Core",
+  "type": "schema",
+  "subtype": "namespace_record",
+  "importance": 5,
+  "summary": "Canonical namespace for core XanaNode node and relationship types.",
+  "registry_type": "xananode",
+  "schema_path": "../schemas/",
+  "example_path": "",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-namespace-registry-contains-schema-namespace-xananode",
+      "type": "contains",
+      "source": "xananode.canonical:schema/namespace-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-namespace-xananode-represents-concept-xananode",
+      "type": "represents",
+      "target": "xananode.canonical:concept/xananode",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

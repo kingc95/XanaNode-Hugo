@@ -21,6 +21,13 @@
     },
     {
       "mode": "mounted",
+      "id": "xananode.canonical",
+      "source": "packs/xananode-canonical",
+      "version": "0.1.0",
+      "required": false
+    },
+    {
+      "mode": "mounted",
       "id": "imports:lineage",
       "source": "imports/lineage"
     }

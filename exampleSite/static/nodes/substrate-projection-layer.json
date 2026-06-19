@@ -1,0 +1,34 @@
+{
+  "id": "xananode.canonical:concept/substrate-projection-layer",
+  "title": "Substrate Projection Layer",
+  "type": "concept",
+  "subtypes": [
+    "lens",
+    "renderer"
+  ],
+  "importance": 5,
+  "summary": "A renderer or lens that presents a substrate for a particular use without becoming the substrate itself.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/hugo-implements-projection-layer",
+      "type": "implements",
+      "source": "xananode.canonical:project/xananode-hugo-theme",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-hugo-theme-implements-concept-substrate-projection-layer",
+      "type": "implements",
+      "source": "xananode.canonical:project/xananode-hugo-theme",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-artifacts-enable-projection-layers",
+      "type": "enables",
+      "source": "xananode.canonical:concept/protocol-artifacts",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

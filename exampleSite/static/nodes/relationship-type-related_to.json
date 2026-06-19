@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-related_to",
+  "title": "Related to",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source is related to the target when no more specific relationship applies.",
+  "version": "0.5.0",
+  "registry_type": "related_to",
+  "registry_namespace": "xananode",
+  "category": "generic",
+  "inverse": "related_to",
+  "default_weight": 2,
+  "default_visibility": "background",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-related_to",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-related_to-related_to-schema-relationship-type-related_to-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-related_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-related_to-related_to-schema-relationship-type-related_to-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-related_to",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

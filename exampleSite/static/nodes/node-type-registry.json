@@ -1,0 +1,141 @@
+{
+  "id": "xananode.canonical:schema/node-type-registry",
+  "title": "Node Type Registry",
+  "type": "schema",
+  "subtype": "node_type_schema",
+  "importance": 5,
+  "summary": "The canonical registry of current XanaNode node types, subtypes, visual treatment hints, and frontmatter recommendations.",
+  "version": "0.3.0",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/xananode-node-types.v0.3.0.json",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/protocol-contains-node-type-registry",
+      "type": "contains",
+      "source": "xananode.canonical:project/xananode-protocol",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-claim",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-claim",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-community",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-community",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-concept",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-concept",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-essay",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-essay",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-event",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-event",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-fragment",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-fragment",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-media",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-media",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-observation",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-observation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-organization",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-organization",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-person",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-person",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-place",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-place",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-project",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-project",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-publication",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-publication",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-relationship",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-relationship",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-revision",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-revision",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-schema",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-source",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-source",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-technology",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-technology",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-trail",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-trail",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schema-xananode-node-types-documents-schema-node-type-registry",
+      "type": "documents",
+      "source": "xananode.canonical:schema/canonical-schema-xananode-node-types",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

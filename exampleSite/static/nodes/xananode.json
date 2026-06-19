@@ -1,196 +1,62 @@
 {
-  "id": "xananode.example:concept/xananode",
+  "id": "xananode.canonical:concept/xananode",
   "title": "XanaNode",
   "type": "concept",
+  "subtype": "protocol",
   "importance": 5,
-  "summary": "A protocol for interoperable, independently authored knowledge substrates that preserve relationships, provenance, lineage, disagreement, and addressable fragments.",
-  "primary_media": "xananode.example:media/xananode-icon",
+  "summary": "A protocol for independently authored knowledge substrates that preserve relationships, provenance, lineage, disagreement, and addressable fragments.",
+  "primary_media": "xananode.canonical:media/xananode-icon",
   "relationships": [
     {
-      "id": "xananode.example:rel/xananode-core-trail-continues_to-xananode-7",
-      "type": "continues_to",
-      "source": "xananode.example:trail/xananode-core-trail",
+      "id": "xananode.canonical:rel/christian-authored-xananode",
+      "type": "authored",
+      "source": "xananode.canonical:person/christian-siefen",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/historical-lineage-trail-arrives_at-xananode-20",
-      "type": "arrives_at",
-      "source": "xananode.example:trail/historical-lineage-trail",
+      "id": "xananode.canonical:rel/icon-depicts-xananode",
+      "type": "depicts",
+      "source": "xananode.canonical:media/xananode-icon",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/branching-orientation-trail-continues_to-xananode-22",
-      "type": "continues_to",
-      "source": "xananode.example:trail/branching-orientation-trail",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/xananode-protocol-repo-defines-xananode-33",
-      "type": "defines",
-      "source": "xananode.example:source/xananode-protocol-repo",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/xananode-node-types-defines-xananode-52",
-      "type": "defines",
-      "source": "xananode.example:schema/xananode-node-types",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/xananode-hugo-theme-implements-xananode-78",
-      "type": "implements",
-      "source": "xananode.example:project/xananode-hugo-theme",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/project-xanadu-influenced-xananode-83",
-      "type": "influenced",
-      "source": "xananode.example:project/project-xanadu",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/nls-anticipated-xananode-85",
-      "type": "anticipated",
-      "source": "xananode.example:project/nls",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/memex-anticipated-xananode-87",
-      "type": "anticipated",
-      "source": "xananode.example:project/memex",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/ted-nelson-influenced-xananode-94",
-      "type": "influenced",
-      "source": "xananode.example:person/ted-nelson",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/xananode-extends-douglas-engelbart-97",
-      "type": "extends",
-      "target": "xananode.example:person/douglas-engelbart",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/xananode-icon-represents-xananode-104",
+      "id": "xananode.canonical:rel/schema-namespace-xananode-represents-concept-xananode",
       "type": "represents",
-      "source": "xananode.example:media/xananode-icon",
+      "source": "xananode.canonical:schema/namespace-xananode",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/what-is-xananode-defines-xananode-105",
-      "type": "defines",
-      "source": "xananode.example:essay/what-is-xananode",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/start-here-explains-xananode-114",
+      "id": "xananode.canonical:rel/what-is-xananode-explains-xananode",
       "type": "explains",
-      "source": "xananode.example:essay/start-here",
+      "source": "xananode.canonical:essay/what-is-xananode",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-defines-knowledge-substrate-121",
+      "id": "xananode.canonical:rel/xananode-defines-knowledge-substrate",
       "type": "defines",
-      "target": "xananode.example:concept/knowledge-substrate",
+      "target": "xananode.canonical:concept/knowledge-substrate",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-explains-federated-knowledge-substrates-122",
-      "type": "explains",
-      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "id": "xananode.canonical:rel/xananode-has-claim-relationships-preserve-knowledge",
+      "type": "has_claim",
+      "target": "xananode.canonical:claim/relationships-preserve-knowledge",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-requires-xananode-core-schema-123",
-      "type": "requires",
-      "target": "xananode.example:schema/xananode-core-schema",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/xananode-preserves-provenance-124",
-      "type": "preserves",
-      "target": "xananode.example:concept/provenance",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/xananode-extends-project-xanadu-125",
-      "type": "extends",
-      "target": "xananode.example:project/project-xanadu",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/xananode-extends-memex-126",
-      "type": "extends",
-      "target": "xananode.example:project/memex",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/xananode-extends-tumbler-addressing-134",
-      "type": "extends",
-      "target": "xananode.example:concept/tumbler-addressing",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/source-github-documents-xananode-224",
-      "type": "documents",
-      "source": "xananode.example:source/source-github",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/source-support-supports-xananode-225",
-      "type": "supports",
-      "source": "xananode.example:source/source-support",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/xananode-represented-by-xananode-icon",
+      "id": "xananode.canonical:rel/xananode-has-primary-media-icon",
       "type": "has_primary_media",
-      "target": "xananode.example:media/xananode-icon",
+      "target": "xananode.canonical:media/xananode-icon",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.lineage:rel/web-incomplete-contrasts-with-xananode",
-      "type": "contrasts_with",
-      "source": "xananode.lineage:concept/web-as-incomplete-hypertext",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.lineage:rel/xananode-preserves-lost-lineage",
-      "type": "preserves",
-      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "id": "xananode.canonical:rel/xananode-published-at-com",
+      "type": "documents",
+      "target": "xananode.canonical:source/xananode-com-domain",
       "direction": "outgoing"
-    },
-    {
-      "id": "xananode.lineage:rel/xananode-extends-bush-trails",
-      "type": "extends",
-      "target": "xananode.example:project/memex",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.lineage:rel/xananode-extends-transclusion",
-      "type": "extends",
-      "target": "xananode.example:concept/transclusion",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.lineage:rel/lost-lineage-context-for-xananode",
-      "type": "context_for",
-      "source": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.lineage:rel/web-contrasts-with-xananode",
-      "type": "contrasts_with",
-      "source": "xananode.lineage:technology/world-wide-web",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.lineage:rel/trail-arrives-at-xananode",
-      "type": "arrives_at",
-      "source": "xananode.lineage:trail/lost-lineage-intertwingled-trail",
-      "direction": "incoming"
     }
-  ]
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
 }

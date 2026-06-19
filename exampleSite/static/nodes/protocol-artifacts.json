@@ -1,69 +1,30 @@
 {
-  "id": "xananode.example:concept/protocol-artifacts",
+  "id": "xananode.canonical:concept/protocol-artifacts",
   "title": "Protocol Artifacts",
   "type": "concept",
   "importance": 5,
-  "summary": "The machine-readable files and reports that let a XanaNode substrate be validated, compared, merged, and federated.",
+  "summary": "The portable JSON files, schemas, fragments, reports, and media references that allow tools to validate, compare, mount, import, merge, and render substrates.",
   "relationships": [
     {
-      "id": "xananode.example:rel/xananode-core-trail-continues_to-protocol-artifacts-9",
-      "type": "continues_to",
-      "source": "xananode.example:trail/xananode-core-trail",
+      "id": "xananode.canonical:rel/core-builds-protocol-artifacts",
+      "type": "enables",
+      "source": "xananode.canonical:project/xananode-core-sdk",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-trail-starts_with-protocol-artifacts-11",
-      "type": "starts_with",
-      "source": "xananode.example:trail/protocol-artifacts-trail",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/xananode-protocol-repo-documents-protocol-artifacts-35",
-      "type": "documents",
-      "source": "xananode.example:source/xananode-protocol-repo",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/what-is-xananode-explains-protocol-artifacts-109",
-      "type": "explains",
-      "source": "xananode.example:essay/what-is-xananode",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/xananode-core-schema-defines-protocol-artifacts-152",
-      "type": "defines",
-      "source": "xananode.example:schema/xananode-core-schema",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-manifest-153",
-      "type": "contains",
-      "target": "xananode.example:concept/substrate-manifest",
+      "id": "xananode.canonical:rel/protocol-artifacts-enable-projection-layers",
+      "type": "enables",
+      "target": "xananode.canonical:concept/substrate-projection-layer",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-node-record-154",
-      "type": "contains",
-      "target": "xananode.example:concept/substrate-node-record",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-relationship-list-155",
-      "type": "contains",
-      "target": "xananode.example:concept/substrate-relationship-list",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/protocol-artifacts-contains-review-suggestions-156",
-      "type": "contains",
-      "target": "xananode.example:concept/review-suggestions",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-protocol-artifacts-157",
-      "type": "requires",
-      "source": "xananode.example:concept/federated-knowledge-substrates",
+      "id": "xananode.canonical:rel/recreation-friction-motivates-pack-ingress",
+      "type": "motivated_by",
+      "source": "xananode.canonical:observation/markdown-recreation-friction",
       "direction": "incoming"
     }
-  ]
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
 }

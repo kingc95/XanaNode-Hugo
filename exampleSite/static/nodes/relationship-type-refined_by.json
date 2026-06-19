@@ -1,0 +1,39 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-refined_by",
+  "title": "Refined By Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The refined_by inverse relationship term derived from refines.",
+  "version": "0.5.0",
+  "registry_type": "refined_by",
+  "registry_namespace": "xananode",
+  "category": "revision",
+  "inverse": "refines",
+  "derived_inverse": true,
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-refined_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-refined_by-related_to-schema-relationship-type-refines-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-refines",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-refines-related_to-schema-relationship-type-refined_by-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-refines",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-is_start_of",
+  "title": "Is Start Of Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The is_start_of inverse relationship term derived from starts_with.",
+  "version": "0.5.0",
+  "registry_type": "is_start_of",
+  "registry_namespace": "xananode",
+  "category": "temporal",
+  "inverse": "starts_with",
+  "derived_inverse": true,
+  "default_weight": 3,
+  "default_visibility": "secondary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-is_start_of",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-is_start_of-related_to-schema-relationship-type-starts_with-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-starts_with",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-starts_with-related_to-schema-relationship-type-is_start_of-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-starts_with",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

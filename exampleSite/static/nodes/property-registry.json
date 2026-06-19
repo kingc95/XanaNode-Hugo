@@ -1,0 +1,50 @@
+{
+  "id": "xananode.canonical:schema/property-registry",
+  "title": "Property Registry",
+  "type": "schema",
+  "subtype": "validation_rule",
+  "importance": 5,
+  "summary": "The canonical registry of standardized open-ended node properties for dates, coordinates, money, measurements, and external identifiers.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schema-xananode-property-registry-documents-schema-property-registry",
+      "type": "documents",
+      "source": "xananode.canonical:schema/canonical-schema-xananode-property-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-birth_date",
+      "type": "contains",
+      "target": "xananode.canonical:schema/property-birth_date",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-currency_value",
+      "type": "contains",
+      "target": "xananode.canonical:schema/property-currency_value",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-external_identifier",
+      "type": "contains",
+      "target": "xananode.canonical:schema/property-external_identifier",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-geo_coordinates",
+      "type": "contains",
+      "target": "xananode.canonical:schema/property-geo_coordinates",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-measurement_si",
+      "type": "contains",
+      "target": "xananode.canonical:schema/property-measurement_si",
+      "direction": "outgoing"
+    }
+  ],
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/xananode-property-registry.v0.1.0.json",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

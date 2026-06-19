@@ -1,0 +1,32 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-anticipates",
+  "title": "Anticipates",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source foreshadows or historically precedes the target without direct causation.",
+  "version": "0.5.0",
+  "registry_type": "anticipates",
+  "registry_namespace": "xananode",
+  "category": "historical",
+  "inverse": "anticipated_by",
+  "default_weight": 3,
+  "default_visibility": "secondary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-anticipates",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-anticipates-related_to-schema-relationship-type-anticipated_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-anticipated_by",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

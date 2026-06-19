@@ -1,0 +1,39 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-has_context",
+  "title": "Has Context Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The has_context inverse relationship term derived from context_for.",
+  "version": "0.5.0",
+  "registry_type": "has_context",
+  "registry_namespace": "xananode",
+  "category": "explanation",
+  "inverse": "context_for",
+  "derived_inverse": true,
+  "default_weight": 3,
+  "default_visibility": "secondary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-has_context",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-context_for-related_to-schema-relationship-type-has_context-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-context_for",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-has_context-related_to-schema-relationship-type-context_for-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-context_for",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

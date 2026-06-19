@@ -1,36 +1,19 @@
 {
-  "id": "example.minimal:concept/knowledge-substrate",
+  "id": "xananode.canonical:concept/knowledge-substrate",
   "title": "Knowledge Substrate",
   "type": "concept",
+  "subtype": "frame",
   "importance": 5,
-  "summary": "A structure that determines how information relates, persists, and can be navigated.",
+  "summary": "The graph-shaped structure that lets information remain understandable across time by making claims, sources, media, fragments, and relationships explicit.",
   "relationships": [
     {
-      "id": "example.minimal:rel/associative-trails-context-for-substrate",
-      "type": "related_to",
-      "source": "example.minimal:concept/associative-trails",
-      "direction": "incoming"
-    },
-    {
-      "id": "example.minimal:rel/claim-defines-concept",
+      "id": "xananode.canonical:rel/xananode-defines-knowledge-substrate",
       "type": "defines",
-      "source": "example.minimal:claim/substrate-is-structure",
-      "direction": "incoming"
-    },
-    {
-      "id": "example.minimal:rel/concept-has-claim",
-      "type": "has_claim",
-      "target": "example.minimal:claim/substrate-is-structure",
-      "direction": "outgoing"
-    },
-    {
-      "id": "example.minimal:rel/trail-continues-to-concept",
-      "type": "continues_to",
-      "source": "example.minimal:claim/substrate-is-structure",
+      "source": "xananode.canonical:concept/xananode",
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/knowledge-substrate.json",
-  "pack_id": "example.minimal",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

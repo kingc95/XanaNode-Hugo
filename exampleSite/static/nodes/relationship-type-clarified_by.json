@@ -1,0 +1,39 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-clarified_by",
+  "title": "Clarified By Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The clarified_by inverse relationship term derived from clarifies.",
+  "version": "0.5.0",
+  "registry_type": "clarified_by",
+  "registry_namespace": "xananode",
+  "category": "explanation",
+  "inverse": "clarifies",
+  "derived_inverse": true,
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-clarified_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-clarified_by-related_to-schema-relationship-type-clarifies-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-clarifies",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-clarifies-related_to-schema-relationship-type-clarified_by-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-clarifies",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

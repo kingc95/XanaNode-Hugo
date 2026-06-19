@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-maps_to",
+  "title": "Maps to",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source schema type, field, node, or relationship maps to the target schema type, field, node, or relationship for interoperability.",
+  "version": "0.5.0",
+  "registry_type": "maps_to",
+  "registry_namespace": "xananode",
+  "category": "schema_mapping",
+  "inverse": "mapped_from",
+  "default_weight": 5,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-maps_to",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-mapped_from-related_to-schema-relationship-type-maps_to-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-mapped_from",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-maps_to-related_to-schema-relationship-type-mapped_from-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-mapped_from",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

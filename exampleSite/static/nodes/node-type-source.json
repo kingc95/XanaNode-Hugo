@@ -1,0 +1,71 @@
+{
+  "id": "xananode.canonical:schema/node-type-source",
+  "title": "Source",
+  "type": "schema",
+  "subtype": "node_type_schema",
+  "importance": 5,
+  "summary": "A reference work, transcript, paper, book, talk, article, dataset, or primary evidence item.",
+  "version": "0.3.0",
+  "registry_type": "source",
+  "registry_namespace": "xananode",
+  "allowed_subtypes": [
+    "book",
+    "paper",
+    "article",
+    "transcript",
+    "talk",
+    "interview",
+    "dataset",
+    "website",
+    "official_site",
+    "documentation",
+    "git_repository",
+    "social_profile",
+    "support_page",
+    "web_snapshot",
+    "archive"
+  ],
+  "required_frontmatter": [
+    "title",
+    "type",
+    "importance",
+    "summary",
+    "relationships"
+  ],
+  "recommended_frontmatter": [
+    "author",
+    "year",
+    "source_url",
+    "archive_url",
+    "license",
+    "rights_status"
+  ],
+  "color": {
+    "bg": "#ff9f7a",
+    "fg": "#2a1208",
+    "outline": "#ffe4d9"
+  },
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-source",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-currency_value-uses-schema-node-type-source",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-currency_value",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-geo_coordinates-uses-schema-node-type-source",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-geo_coordinates",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}
