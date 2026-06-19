@@ -597,7 +597,7 @@
                 targetQuery: "",
                 allowReverse: true,
                 maxDepth: 6,
-                maxPaths: 100,
+                maxPaths: 6,
                 results: [],
                 summary: ""
             },
@@ -3596,7 +3596,8 @@
     function findConnectivePaths(allEdges, sourceId, targetId, options = {}) {
         const allowReverse = options.allowReverse !== false;
         const maxDepth = Number(options.maxDepth || 6);
-        const maxPaths = Number(options.maxPaths || 100);
+        const maxPaths = Number(options.maxPaths || 6);
+        const searchLimit = Math.max(maxPaths * 12, 48);
         const adjacency = buildPathGraph(allEdges, allowReverse);
         const results = [];
         const visited = new Set([sourceId]);
@@ -3604,7 +3605,7 @@
         const pathNodeIds = [sourceId];
 
         const dfs = (currentId, depth) => {
-            if (results.length >= maxPaths) return;
+            if (results.length >= searchLimit) return;
             if (depth > maxDepth) return;
 
             if (currentId === targetId) {
@@ -3635,16 +3636,54 @@
                 path.pop();
                 visited.delete(step.toId);
 
-                if (results.length >= maxPaths) return;
+                if (results.length >= searchLimit) return;
             }
         };
 
         dfs(sourceId, 0);
 
         return results.sort((a, b) => {
+            const scoreDiff = scoreConnectivePath(b) - scoreConnectivePath(a);
+            if (scoreDiff) return scoreDiff;
             if (a.hops.length !== b.hops.length) return a.hops.length - b.hops.length;
             return a.nodes.join(" ").localeCompare(b.nodes.join(" "));
-        });
+        }).slice(0, maxPaths);
+    }
+
+    function scoreConnectivePath(path) {
+        const hopCount = path.hops.length || 1;
+        const edgeScore = path.hops.reduce((sum, hop) => {
+            const edge = hop.edge || {};
+            const weight = Number(edge.weight || 1);
+            const visibility = edge.visibility === "primary" ? 8 : edge.visibility === "secondary" ? 4 : 0;
+            const directionPenalty = hop.reversed ? -1 : 0;
+            return sum + weight * 6 + visibility + relationshipStoryPriority(edge.type) + directionPenalty;
+        }, 0);
+        return edgeScore - hopCount * 5;
+    }
+
+    function relationshipStoryPriority(type) {
+        const priorities = {
+            defines: 10,
+            has_claim: 10,
+            supports: 9,
+            evidence_for: 9,
+            derived_from: 9,
+            authored: 8,
+            created: 8,
+            influenced: 8,
+            implements: 8,
+            enables: 8,
+            contains: 8,
+            uses: 7,
+            explains: 7,
+            documents: 7,
+            context_for: 6,
+            continues_to: 6,
+            related_to: 2,
+            mentions: 1
+        };
+        return priorities[type] || 4;
     }
 
     function renderPathNodeChip(node, direction = "") {
@@ -3823,7 +3862,7 @@
         if (!paths.length) {
             pathState.summary = `No connective path found within ${pathState.maxDepth} hops.`;
         } else if (paths.length >= pathState.maxPaths) {
-            pathState.summary = `Showing the first ${pathState.maxPaths} paths within ${pathState.maxDepth} hops.`;
+            pathState.summary = `Showing the top ${pathState.maxPaths} scored paths within ${pathState.maxDepth} hops.`;
         } else {
             pathState.summary = `${paths.length} connective path${paths.length === 1 ? "" : "s"} found within ${pathState.maxDepth} hops.`;
         }
