@@ -4,7 +4,7 @@ Status: pending user approval
 
 These suggestions are not auto-applied. Review each replacement before editing content.
 
-Autolinks: 52
+Autolinks: 53
 Pending transclusions: 0
 Implemented transclusions: 4
 Merge candidates: 166
@@ -240,85 +240,91 @@ Imported relationships touching existing nodes: 81
    - Replacement: [deep-linking](deep-linking)
    - Approved: false
 
-39. content\projects\memex.md:13:38
+39. content\schemas\namespace-schema.md:19:6
+   - Match: support
+   - Target: Support (xananode.example:source/source-support)
+   - Replacement: [support](source-support)
+   - Approved: false
+
+40. content\projects\memex.md:13:38
    - Match: associative trails
    - Target: Associative Trails (example.minimal:concept/associative-trails)
    - Replacement: [associative trails](example.minimal:concept/associative-trails)
    - Approved: false
 
-40. content\essays\using-hugo-with-protocol-json.md:18:13
+41. content\essays\using-hugo-with-protocol-json.md:18:13
    - Match: static publishing
    - Target: Static Publishing (xananode.example:technology/static-publishing)
    - Replacement: [static publishing](static-publishing)
    - Approved: false
 
-41. content\essays\using-hugo-with-protocol-json.md:36:215
+42. content\essays\using-hugo-with-protocol-json.md:36:215
    - Match: XanaNode
    - Target: XanaNode (xananode.example:concept/xananode)
    - Replacement: [XanaNode](xananode)
    - Approved: false
 
-42. content\essays\using-hugo-with-protocol-json.md:35:180
+43. content\essays\using-hugo-with-protocol-json.md:35:180
    - Match: typed relationships
    - Target: Typed Relationships (xananode.example:concept/typed-relationships)
    - Replacement: [typed relationships](typed-relationships)
    - Approved: false
 
-43. content\essays\using-hugo-with-protocol-json.md:35:233
+44. content\essays\using-hugo-with-protocol-json.md:35:233
    - Match: transclusion
    - Target: Transclusion (xananode.example:concept/transclusion)
    - Replacement: [transclusion](transclusion)
    - Approved: false
 
-44. content\essays\using-hugo-with-protocol-json.md:35:146
+45. content\essays\using-hugo-with-protocol-json.md:35:146
    - Match: substrate manifest
    - Target: Substrate Manifest (xananode.example:concept/substrate-manifest)
    - Replacement: [substrate manifest](substrate-manifest)
    - Approved: false
 
-45. content\essays\using-hugo-with-protocol-json.md:36:147
+46. content\essays\using-hugo-with-protocol-json.md:36:147
    - Match: FRESS
    - Target: FRESS (xananode.lineage:project/fress)
    - Replacement: [FRESS](xananode.lineage:project/fress)
    - Approved: false
 
-46. content\essays\using-hugo-with-protocol-json.md:36:154
+47. content\essays\using-hugo-with-protocol-json.md:36:154
    - Match: Intermedia
    - Target: Intermedia (xananode.lineage:project/intermedia)
    - Replacement: [Intermedia](xananode.lineage:project/intermedia)
    - Approved: false
 
-47. content\essays\using-hugo-with-protocol-json.md:36:177
+48. content\essays\using-hugo-with-protocol-json.md:36:177
    - Match: Hyperland
    - Target: Hyperland (xananode.lineage:publication/hyperland)
    - Replacement: [Hyperland](xananode.lineage:publication/hyperland)
    - Approved: false
 
-48. content\essays\using-hugo-with-protocol-json.md:36:192
+49. content\essays\using-hugo-with-protocol-json.md:36:192
    - Match: TED2
    - Target: TED2 (xananode.lineage:event/ted2-1990)
    - Replacement: [TED2](xananode.lineage:event/ted2-1990)
    - Approved: false
 
-49. content\essays\using-hugo-with-protocol-json.md:36:166
+50. content\essays\using-hugo-with-protocol-json.md:36:166
    - Match: HyperCard
    - Target: HyperCard (xananode.lineage:technology/hypercard)
    - Replacement: [HyperCard](xananode.lineage:technology/hypercard)
    - Approved: false
 
-50. content\essays\start-here.md:34:23
+51. content\essays\start-here.md:34:23
    - Match: Hugo
    - Target: Hugo (xananode.example:technology/hugo)
    - Replacement: [Hugo](hugo)
    - Approved: false
 
-51. content\concepts\substrate-node-record.md:15:212
+52. content\concepts\substrate-node-record.md:15:212
    - Match: HTML
    - Target: HTML (xananode.lineage:technology/html)
    - Replacement: [HTML](xananode.lineage:technology/html)
    - Approved: false
 
-52. content\concepts\knowledge-substrate.md:17:3
+53. content\concepts\knowledge-substrate.md:17:3
    - Match: knowledge substrate
    - Target: Knowledge Substrate (example.minimal:concept/knowledge-substrate)
    - Replacement: [knowledge substrate](example.minimal:concept/knowledge-substrate)

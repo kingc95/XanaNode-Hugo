@@ -54,6 +54,12 @@ params:
       - label: "Workspace"
         node: "xananode-workspace-repo"
         url: "https://github.com/kingc95/XanaNode-Workspace"
+      - label: "GitHub"
+        url: "https://github.com/kingc95"
+        summary: "XanaNode project repositories and public development activity."
+      - label: "Support"
+        url: "https://github.com/sponsors/kingc95"
+        summary: "Support the ongoing XanaNode project work."
     searchPrompts:
       - "explore the knowledge substrate"
       - "trace an idea across sources"

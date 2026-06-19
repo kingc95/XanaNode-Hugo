@@ -32,6 +32,7 @@
         "xananode-workspace-repo",
         "xananode-studio-repo"
       ],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -75,6 +76,7 @@
         "federated-knowledge-substrates",
         "civilizational-memory"
       ],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -118,6 +120,7 @@
         "federation-example",
         "federation-rules"
       ],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -156,6 +159,7 @@
         "transclusion",
         "xananode"
       ],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -187,6 +191,7 @@
         "start-here",
         "xananode"
       ],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -215,6 +220,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -243,6 +249,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -271,6 +278,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -299,6 +307,7 @@
       "rights_status": "open-source",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -327,6 +336,7 @@
       "rights_status": "open-source",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -355,6 +365,7 @@
       "rights_status": "open-source",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -383,6 +394,7 @@
       "rights_status": "open-source",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -411,6 +423,7 @@
       "rights_status": "open-source",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -439,6 +452,7 @@
       "rights_status": "copyrighted",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -467,6 +481,7 @@
       "rights_status": "open-access",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -495,6 +510,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -523,6 +539,7 @@
       "rights_status": "copyrighted",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -551,6 +568,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -579,6 +597,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -607,6 +626,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -635,6 +655,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -663,6 +684,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -691,6 +713,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -719,6 +742,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -747,6 +771,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -775,6 +800,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -803,6 +829,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -831,6 +858,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -859,6 +887,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -887,6 +916,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -915,6 +945,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -943,6 +974,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -971,6 +1003,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -999,6 +1032,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1027,6 +1061,7 @@
       "rights_status": "open-source",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1055,6 +1090,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1083,6 +1119,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1111,6 +1148,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1139,6 +1177,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1167,6 +1206,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1195,6 +1235,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1223,6 +1264,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1251,6 +1293,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1279,6 +1322,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1307,6 +1351,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1335,6 +1380,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1363,6 +1409,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1391,6 +1438,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1419,6 +1467,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1447,6 +1496,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1475,6 +1525,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1503,6 +1554,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1531,6 +1583,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1559,6 +1612,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1587,6 +1641,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1615,6 +1670,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1643,6 +1699,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1671,6 +1728,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1699,6 +1757,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1727,6 +1786,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1755,6 +1815,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1783,6 +1844,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1811,6 +1873,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1839,6 +1902,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1867,6 +1931,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1895,6 +1960,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1923,6 +1989,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1951,6 +2018,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -1979,6 +2047,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -2007,6 +2076,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -2035,6 +2105,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -2063,6 +2134,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -2091,6 +2163,65 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
+      "imported": false,
+      "imported_from": ""
+    },
+    {
+      "id": "source-github",
+      "protocol_id": "xananode.example:source/source-github",
+      "title": "GitHub",
+      "type": "source",
+      "facets": [],
+      "section": "sources",
+      "importance": 2,
+      "summary": "XanaNode project repositories and public development activity.",
+      "content": "",
+      "url": "/source/source-github/",
+      "primary_media": "",
+      "media_type": "",
+      "file": "",
+      "alt": "",
+      "caption": "",
+      "creator": "",
+      "created_date": "",
+      "source_name": "GitHub",
+      "source_url": "https://github.com/kingc95",
+      "license": "",
+      "license_url": "",
+      "rights_status": "external",
+      "tumbler": "",
+      "trail_nodes": [],
+      "generated": true,
+      "imported": false,
+      "imported_from": ""
+    },
+    {
+      "id": "source-support",
+      "protocol_id": "xananode.example:source/source-support",
+      "title": "Support",
+      "type": "source",
+      "facets": [],
+      "section": "sources",
+      "importance": 2,
+      "summary": "Support the ongoing XanaNode project work.",
+      "content": "",
+      "url": "/source/source-support/",
+      "primary_media": "",
+      "media_type": "",
+      "file": "",
+      "alt": "",
+      "caption": "",
+      "creator": "",
+      "created_date": "",
+      "source_name": "Support",
+      "source_url": "https://github.com/sponsors/kingc95",
+      "license": "",
+      "license_url": "",
+      "rights_status": "external",
+      "tumbler": "",
+      "trail_nodes": [],
+      "generated": true,
       "imported": false,
       "imported_from": ""
     },
@@ -2119,6 +2250,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes/claim-substrate-structure.json"
     },
@@ -2147,6 +2279,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes/concept-associative-trails.json"
     },
@@ -2175,6 +2308,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes/essay-relationship-navigation-intro.json"
     },
@@ -2203,6 +2337,7 @@
       "rights_status": "copyrighted",
       "tumbler": "example.minimal:source/as-we-may-think@git:8e47e70:examples/minimal-substrate/nodes/source-as-we-may-think.json#fragment/0004@sha256:example-as-we-may-think-fragment-0004",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes/fragment-as-we-may-think-0004.json"
     },
@@ -2231,6 +2366,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes/knowledge-substrate.json"
     },
@@ -2259,6 +2395,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes/person-example-maintainer.json"
     },
@@ -2287,6 +2424,7 @@
       "rights_status": "copyrighted",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes/source-as-we-may-think.json"
     },
@@ -2315,6 +2453,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes/trail-start-here.json"
     },
@@ -2343,6 +2482,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2371,6 +2511,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2399,6 +2540,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2427,6 +2569,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2455,6 +2598,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2483,6 +2627,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2511,6 +2656,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2539,6 +2685,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2567,6 +2714,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2595,6 +2743,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2623,6 +2772,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2651,6 +2801,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2679,6 +2830,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2707,6 +2859,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2735,6 +2888,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2763,6 +2917,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2791,6 +2946,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2819,6 +2975,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2847,6 +3004,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2875,6 +3033,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2903,6 +3062,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2931,6 +3091,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2959,6 +3120,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -2987,6 +3149,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3015,6 +3178,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3043,6 +3207,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3071,6 +3236,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3099,6 +3265,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3127,6 +3294,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3155,6 +3323,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3183,6 +3352,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3211,6 +3381,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3239,6 +3410,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3267,6 +3439,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3295,6 +3468,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3323,6 +3497,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3351,6 +3526,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3379,6 +3555,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3407,6 +3584,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3435,6 +3613,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3463,6 +3642,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3491,6 +3671,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3519,6 +3700,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3547,6 +3729,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3575,6 +3758,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3603,6 +3787,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3631,6 +3816,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3659,6 +3845,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3687,6 +3874,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3715,6 +3903,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3743,6 +3932,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3771,6 +3961,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes-extended.json"
     },
@@ -3799,6 +3990,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -3827,6 +4019,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -3855,6 +4048,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -3883,6 +4077,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -3911,6 +4106,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -3939,6 +4135,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -3967,6 +4164,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -3995,6 +4193,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -4023,6 +4222,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -4051,6 +4251,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -4079,6 +4280,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -4107,6 +4309,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -4135,6 +4338,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -4163,6 +4367,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -4191,6 +4396,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -4219,6 +4425,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -4247,6 +4454,7 @@
       "rights_status": "",
       "tumbler": "",
       "trail_nodes": [],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -4286,6 +4494,7 @@
         "xananode.lineage:technology/world-wide-web",
         "xananode"
       ],
+      "generated": false,
       "imported": true,
       "imported_from": "nodes.json"
     },
@@ -4314,6 +4523,7 @@
       "rights_status": "copyrighted",
       "tumbler": "xananode.example:source/xanadu-document-interconnection@sha256:551b9b3f6532555b2b61f8411b721ef8610000d1f5f13d6bb050a03ec8af7b51#fragment/0001@sha256:48d3c63d7645b547a9d41b7f6f39d2f07a885f4a479353dd3ae8742c4225cbfe",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -4342,6 +4552,7 @@
       "rights_status": "",
       "tumbler": "xananode.example:source/mother-of-all-demos@sha256:88a43c06a3135ff5a982ca8efe948753f1d6e839561dcf664bd873719025e210#fragment/0001@sha256:217a3bcf5fb3c571fd4661497b6bdde97bba61576045ca253f21b9c0d2987ce4",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     },
@@ -4370,6 +4581,7 @@
       "rights_status": "copyrighted",
       "tumbler": "xananode.example:source/as-we-may-think@sha256:5e8e3a3bbe2278db54e5ea7b8e6a2677b620f67d2095e37409bc7c42451e1705#fragment/0004@sha256:f712416ac32e6b8771dcbe4315d4d9ff61635e6407265b20301ec3e3a79afc0e",
       "trail_nodes": [],
+      "generated": false,
       "imported": false,
       "imported_from": ""
     }

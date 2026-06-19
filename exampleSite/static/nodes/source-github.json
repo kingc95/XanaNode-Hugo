@@ -1,0 +1,10 @@
+{
+  "id": "xananode.example:source/source-github",
+  "title": "GitHub",
+  "type": "source",
+  "importance": 2,
+  "summary": "XanaNode project repositories and public development activity.",
+  "source_url": "https://github.com/kingc95",
+  "rights_status": "external",
+  "relationships": []
+}

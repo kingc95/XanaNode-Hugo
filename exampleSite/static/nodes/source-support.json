@@ -1,0 +1,10 @@
+{
+  "id": "xananode.example:source/source-support",
+  "title": "Support",
+  "type": "source",
+  "importance": 2,
+  "summary": "Support the ongoing XanaNode project work.",
+  "source_url": "https://github.com/sponsors/kingc95",
+  "rights_status": "external",
+  "relationships": []
+}

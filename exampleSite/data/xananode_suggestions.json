@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T04:51:52.723Z",
+  "generated_at": "2026-06-19T06:27:31.010Z",
   "status": "pending_user_approval",
   "note": "These suggestions are not auto-applied. Review each replacement before editing content.",
   "implemented_transclusions": [
@@ -587,6 +587,20 @@
       "matched_term": "deep-linking",
       "match_kind": "core",
       "replacement": "[deep-linking](deep-linking)",
+      "note": "Suggestion only. Review and apply manually if approved."
+    },
+    {
+      "approved": false,
+      "file": "content\\schemas\\namespace-schema.md",
+      "line": 19,
+      "column": 6,
+      "source_node": "namespace-schema",
+      "target_node": "xananode.example:source/source-support",
+      "target_title": "Support",
+      "matched_text": "support",
+      "matched_term": "support",
+      "match_kind": "core",
+      "replacement": "[support](source-support)",
       "note": "Suggestion only. Review and apply manually if approved."
     },
     {

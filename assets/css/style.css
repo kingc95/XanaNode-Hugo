@@ -772,18 +772,21 @@ body,
 }
 
 .xana-tools-popover {
-  position: absolute;
-  left: 1.5rem;
-  bottom: calc(var(--xana-controls-height) + 0.6rem);
-  z-index: 46;
-  width: min(300px, calc(100vw - 2rem));
-  padding: 0.8rem;
-  border: 1px solid var(--xana-panel-border);
-  border-radius: 0.9rem;
-  background: var(--xana-panel-bg);
+  position: fixed;
+  inset: 0;
+  z-index: 140;
+  width: auto;
+  min-height: 100svh;
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  padding: clamp(4.5rem, 10svh, 6.5rem) 1rem 2rem;
+  background: color-mix(in srgb, var(--xana-bg) 94%, transparent);
   color: var(--xana-text);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   pointer-events: auto;
+  overflow-y: auto;
 }
 
 .xana-tools-popover[hidden] {
@@ -791,6 +794,7 @@ body,
 }
 
 .xana-tools-popover-header {
+  width: min(460px, 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -813,6 +817,7 @@ body,
 }
 
 .xana-tools-list {
+  width: min(460px, 100%);
   display: grid;
   gap: 0.45rem;
 }
@@ -960,16 +965,28 @@ body,
 }
 
 .xana-settings {
-  position: absolute;
-  left: 1.5rem;
-  bottom: calc(var(--xana-controls-height) + 0.6rem);
-  z-index: 45;
+  position: fixed;
+  inset: 0;
+  z-index: 140;
+  min-height: 100svh;
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  padding: clamp(4.5rem, 9svh, 6.5rem) 1rem 2rem;
+  background: color-mix(in srgb, var(--xana-bg) 94%, transparent);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   pointer-events: auto;
+  overflow-y: auto;
+}
+
+.xana-settings[hidden] {
+  display: none;
 }
 
 .xana-settings-panel {
-  width: min(360px, calc(100vw - 2rem));
-  max-height: min(68vh, 620px);
+  width: min(460px, 100%);
+  max-height: none;
   overflow: auto;
   padding: 0.8rem;
   border: 1px solid var(--xana-panel-border);
@@ -1215,17 +1232,20 @@ html[data-xana-density="compact"] .xana-search-wrap {
 /* ── Filter popover ─────────────────────────────────────────────────────── */
 
 .xana-filter-popover {
-  position: absolute;
-  bottom: calc(var(--xana-controls-height) + 0.6rem);
-  left: 1.5rem;
-  z-index: 40;
-  width: clamp(260px, 38vw, 360px);
-  background: rgba(5, 7, 10, 0.96);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 1.15rem;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(20px);
+  position: fixed;
+  inset: 0;
+  z-index: 140;
+  width: auto;
+  min-height: 100svh;
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  padding: clamp(4.5rem, 10svh, 6.5rem) 1rem 2rem;
+  background: color-mix(in srgb, var(--xana-bg) 94%, transparent);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   pointer-events: auto;
+  overflow-y: auto;
 }
 
 .xana-filter-popover[hidden] {
@@ -1236,6 +1256,7 @@ html[data-xana-density="compact"] .xana-search-wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: min(520px, 100%);
   padding: 0.7rem 0.85rem 0.45rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.09);
 }
@@ -1269,8 +1290,9 @@ html[data-xana-density="compact"] .xana-search-wrap {
 }
 
 .xana-filter-popover-body {
+  width: min(520px, 100%);
   padding: 0.65rem 0.85rem 0.9rem;
-  max-height: min(60vh, 420px);
+  max-height: none;
   overflow-y: auto;
 }
 
@@ -3000,17 +3022,17 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
 
   .xana-settings,
   .xana-tools-popover {
-    left: 1rem;
-    z-index: 95;
-    bottom: 4rem;
+    inset: 0;
+    z-index: 140;
+    padding: 4.5rem 1rem 2rem;
   }
 
   .xana-filter-popover {
-    left: 1rem;
-    z-index: 95;
-    bottom: 4rem;
-    width: calc(100vw - 2.5rem);
-    max-width: 400px;
+    inset: 0;
+    z-index: 140;
+    width: auto;
+    max-width: none;
+    padding: 4.5rem 1rem 2rem;
   }
 
   .xana-audit-meta {
@@ -3039,15 +3061,14 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
 
   .xana-settings,
   .xana-tools-popover {
-    right: 0.75rem;
-    left: 0.75rem;
-    bottom: 4rem;
+    inset: 0;
+    padding: 4.25rem 0.9rem 2rem;
   }
 
   .xana-settings-panel,
   .xana-tools-popover {
     width: 100%;
-    max-height: 55svh;
+    max-height: none;
   }
 
   .xana-controls-strip {
@@ -3097,12 +3118,9 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
 
 #xana-audit-stage,
 #xana-path-stage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 20;
+  position: fixed;
+  inset: 0;
+  z-index: 130;
   overflow-y: auto;
   background: var(--xana-bg);
 }

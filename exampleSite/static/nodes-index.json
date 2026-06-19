@@ -513,6 +513,20 @@
       "imported": false
     },
     {
+      "id": "xananode.example:source/source-github",
+      "path": "nodes/source-github.json",
+      "title": "GitHub",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/source-support",
+      "path": "nodes/source-support.json",
+      "title": "Support",
+      "type": "source",
+      "imported": false
+    },
+    {
       "id": "example.minimal:claim/substrate-is-structure",
       "path": "nodes/substrate-is-structure.json",
       "title": "A knowledge substrate is structure, not just information",

@@ -263,6 +263,35 @@ function configuredPackReferences() {
   return packs.filter((pack) => pack.source && pack.enabled !== false);
 }
 
+function configuredThemeLinks() {
+  const text = readSiteConfigText();
+  const lines = text.split(/\r?\n/);
+  const linksLine = lines.findIndex((line) => /^\s{4}links:\s*$/.test(line));
+  if (linksLine < 0) return [];
+
+  const links = [];
+  let current = null;
+  for (let index = linksLine + 1; index < lines.length; index += 1) {
+    const line = lines[index];
+    if (/^\S/.test(line)) break;
+    const itemMatch = line.match(/^\s{6}-\s*(?:(\w+):\s*(.*))?$/);
+    if (itemMatch) {
+      if (current) links.push(current);
+      current = {};
+      if (itemMatch[1]) current[itemMatch[1]] = parseYamlScalar(itemMatch[2]);
+      continue;
+    }
+    const propertyMatch = line.match(/^\s{8}(\w+):\s*(.*)$/);
+    if (current && propertyMatch) {
+      current[propertyMatch[1]] = parseYamlScalar(propertyMatch[2]);
+    } else if (/^\s{0,5}\S/.test(line)) {
+      break;
+    }
+  }
+  if (current) links.push(current);
+  return links.filter((link) => link && link.label && link.url);
+}
+
 function parseYamlScalar(value) {
   const text = String(value || "").trim().replace(/^["']|["']$/g, "");
   if (text === "true") return true;
@@ -949,6 +978,37 @@ for (const relativeFile of contentFiles) {
   }
 }
 
+for (const [index, link] of configuredThemeLinks().entries()) {
+  const explicitNodeId = String(link.node || link.nodeId || "").trim();
+  const generatedId = String(link.id || explicitNodeId || `source-${slugify(link.label, "link")}`).trim();
+  const url = String(link.url || link.href || "").trim();
+  const label = String(link.label || link.title || generatedId).trim();
+  if (!generatedId || !url || nodes.has(generatedId)) continue;
+
+  const data = {
+    id: generatedId,
+    title: label,
+    type: "source",
+    summary: String(link.summary || `${label} external reference.`),
+    source_url: url,
+    importance: Number(link.importance || 2),
+    source_name: label,
+    rights_status: String(link.rights_status || "external"),
+    relationships: []
+  };
+  const protocolId = protocolIdFor(generatedId, data, substrateNamespace);
+  const file = `config:xananode.links[${index}]`;
+  nodes.set(generatedId, {
+    id: generatedId,
+    protocolId,
+    file,
+    data,
+    body: "",
+    body_start_line: 1,
+    generated: true
+  });
+}
+
 const nodeLookup = new Map();
 for (const node of nodes.values()) {
   nodeLookup.set(node.id, node);
@@ -1309,21 +1369,24 @@ function viewerNodeFromProtocolNode(node) {
     rights_status: node.rights_status || "",
     tumbler: node.tumbler || "",
     trail_nodes: asArray(node.trail_nodes).map(viewerIdForProtocolId),
+    generated: Boolean(localNode?.generated),
     imported: Boolean(node.imported_from),
     imported_from: node.imported_from || ""
   };
 }
 
 function protocolOnlyNodeRoutes(node) {
-  if (!node || !String(node.id || "").includes(":")) return [];
+  const protocolId = String(node?.protocol_id || "");
+  if (!node || (!String(node.id || "").includes(":") && !node.imported && !node.generated)) return [];
   const typeSegment = protocolTypePath(node.type || "node");
   const id = String(node.id || "");
+  const addressId = protocolId || id;
   const tail = slugify(id.split("/").at(-1), "node");
   const routes = [
-    `${typeSegment}/${encodeURIComponent(id)}/index.html`,
+    `${typeSegment}/${encodeURIComponent(addressId)}/index.html`,
     `${typeSegment}/${tail}/index.html`
   ];
-  const parts = id.split("/");
+  const parts = addressId.split("/");
   if (parts.length >= 2) {
     routes.push(`${typeSegment}/${encodeURIComponent(parts[0])}/${encodeURIComponent(parts.slice(1).join("/"))}/index.html`);
   }

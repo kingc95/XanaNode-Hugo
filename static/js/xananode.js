@@ -724,8 +724,8 @@
                 </div>
             </div>
 
-            <div class="xana-settings">
-                <div class="xana-settings-panel" hidden>
+            <div class="xana-settings" hidden>
+                <div class="xana-settings-panel">
                     <div class="xana-settings-header">
                         <span>Display</span>
                         <button type="button" data-settings-close aria-label="Close display settings">&#x2715;</button>
@@ -842,11 +842,14 @@
         const nodeByProtocolId = new Map((state.allNodes || [])
             .filter((node) => node.protocol_id)
             .map((node) => [node.protocol_id, node]));
+        const nodeBySourceUrl = new Map((state.allNodes || [])
+            .filter((node) => node.source_url)
+            .map((node) => [normalizeUrlKey(node.source_url), node]));
 
         const links = THEME_CONFIG.links.map((link) => {
             const linkedNode = link.node
                 ? nodeById.get(link.node) || nodeByProtocolId.get(link.node)
-                : null;
+                : nodeBySourceUrl.get(normalizeUrlKey(link.url));
             const href = linkedNode ? nodeHref(linkedNode, state) : link.url;
             if (!href) return "";
             const nodeJump = linkedNode ? ` data-node-jump="${escapeHtml(linkedNode.id)}"` : "";
@@ -863,6 +866,16 @@
                         ${links}
                     </div>
         `;
+    }
+
+    function normalizeUrlKey(url) {
+        try {
+            const parsed = new URL(String(url || ""));
+            parsed.hash = "";
+            return parsed.toString().replace(/\/$/, "").toLowerCase();
+        } catch {
+            return String(url || "").trim().replace(/\/$/, "").toLowerCase();
+        }
     }
 
     function bindControls(state) {
@@ -1030,6 +1043,7 @@
         const filterPopover = graphEl.querySelector(".xana-filter-popover");
         const pathOpenButton = graphEl.querySelector("[data-path-open]");
         const settingsToggle = graphEl.querySelector("[data-settings-toggle]");
+        const settingsOverlay = graphEl.querySelector(".xana-settings");
         const settingsPanel = graphEl.querySelector(".xana-settings-panel");
         const settingsClose = graphEl.querySelector("[data-settings-close]");
         const toolsToggleBtn = graphEl.querySelector("[data-tools-toggle]");
@@ -1049,36 +1063,51 @@
             window.speechSynthesis.onvoiceschanged = () => populateVoiceOptions(state);
         }
 
+        const setOverlayOpen = (overlay, toggle, open) => {
+            if (!overlay) return;
+            overlay.hidden = !open;
+            toggle?.classList.toggle("active", open);
+            toggle?.setAttribute("aria-expanded", open ? "true" : "false");
+        };
+        const closeReaderOverlays = () => {
+            setOverlayOpen(settingsOverlay, settingsToggle, false);
+            setOverlayOpen(toolsPopover, toolsToggleBtn, false);
+            setOverlayOpen(filterPopover, filterToggleBtn, false);
+        };
+
+        [settingsToggle, toolsToggleBtn, filterToggleBtn].forEach((button) => {
+            button?.setAttribute("aria-expanded", "false");
+        });
+
         settingsToggle?.addEventListener("click", (event) => {
             event.stopPropagation();
-            if (!settingsPanel) return;
-            const opening = settingsPanel.hidden;
-            settingsPanel.hidden = !opening;
-            settingsToggle.classList.toggle("active", opening);
+            const opening = Boolean(settingsOverlay?.hidden);
+            closeReaderOverlays();
+            setOverlayOpen(settingsOverlay, settingsToggle, opening);
+        });
+
+        settingsOverlay?.addEventListener("click", (event) => {
+            if (event.target === settingsOverlay) setOverlayOpen(settingsOverlay, settingsToggle, false);
         });
 
         settingsClose?.addEventListener("click", () => {
-            if (settingsPanel) settingsPanel.hidden = true;
-            settingsToggle?.classList.remove("active");
+            setOverlayOpen(settingsOverlay, settingsToggle, false);
         });
 
         toolsToggleBtn?.addEventListener("click", (event) => {
             event.stopPropagation();
-            if (!toolsPopover) return;
-            const opening = toolsPopover.hidden;
-            toolsPopover.hidden = !opening;
-            toolsToggleBtn.classList.toggle("active", opening);
+            const opening = Boolean(toolsPopover?.hidden);
+            closeReaderOverlays();
+            setOverlayOpen(toolsPopover, toolsToggleBtn, opening);
         });
 
         toolsCloseBtn?.addEventListener("click", () => {
-            if (toolsPopover) toolsPopover.hidden = true;
-            toolsToggleBtn?.classList.remove("active");
+            setOverlayOpen(toolsPopover, toolsToggleBtn, false);
         });
 
         interfaceTourButton?.addEventListener("click", () => {
             startInterfaceTour(state);
-            if (toolsPopover) toolsPopover.hidden = true;
-            toolsToggleBtn?.classList.remove("active");
+            setOverlayOpen(toolsPopover, toolsToggleBtn, false);
         });
 
         graphEl.querySelectorAll("[data-node-jump]").forEach((link) => {
@@ -1088,8 +1117,7 @@
                 const id = link.getAttribute("data-node-jump");
                 if (!id) return;
                 closeTransientUi(state, { clearSearch: true });
-                if (toolsPopover) toolsPopover.hidden = true;
-                toolsToggleBtn?.classList.remove("active");
+                setOverlayOpen(toolsPopover, toolsToggleBtn, false);
                 travelToNode(id, state, true);
             });
         });
@@ -1188,34 +1216,28 @@
         filterToggleBtn?.addEventListener("click", (event) => {
             event.stopPropagation();
 
-            if (filterPopover) {
-                const opening = filterPopover.hidden;
-                filterPopover.hidden = !opening;
-                filterToggleBtn.classList.toggle("active", opening);
-            }
+            const opening = Boolean(filterPopover?.hidden);
+            closeReaderOverlays();
+            setOverlayOpen(filterPopover, filterToggleBtn, opening);
         });
 
         filterCloseBtn?.addEventListener("click", () => {
-            if (filterPopover) filterPopover.hidden = true;
-            if (filterToggleBtn) filterToggleBtn.classList.remove("active");
+            setOverlayOpen(filterPopover, filterToggleBtn, false);
         });
 
         document.addEventListener("click", (event) => {
-            if (settingsPanel && !settingsPanel.hidden && !event.target.closest(".xana-settings")) {
-                settingsPanel.hidden = true;
-                settingsToggle?.classList.remove("active");
+            if (settingsOverlay && !settingsOverlay.hidden && !event.target.closest(".xana-settings")) {
+                setOverlayOpen(settingsOverlay, settingsToggle, false);
             }
 
             if (toolsPopover && !toolsPopover.hidden && !event.target.closest(".xana-tools-popover") && !event.target.closest("[data-tools-toggle]")) {
-                toolsPopover.hidden = true;
-                toolsToggleBtn?.classList.remove("active");
+                setOverlayOpen(toolsPopover, toolsToggleBtn, false);
             }
 
             if (!filterPopover || filterPopover.hidden) return;
             if (event.target.closest(".xana-filter-popover") || event.target.closest("[data-filter-toggle]")) return;
 
-            filterPopover.hidden = true;
-            if (filterToggleBtn) filterToggleBtn.classList.remove("active");
+            setOverlayOpen(filterPopover, filterToggleBtn, false);
         });
 
         const auditRunButton = graphEl.querySelector("[data-audit-run]");
@@ -1223,8 +1245,7 @@
 
         auditRunButton?.addEventListener("click", () => {
             runSchemaAudit(state);
-            if (toolsPopover) toolsPopover.hidden = true;
-            toolsToggleBtn?.classList.remove("active");
+            setOverlayOpen(toolsPopover, toolsToggleBtn, false);
         });
 
         auditClearButton?.addEventListener("click", () => {
@@ -1242,7 +1263,12 @@
         });
 
         pathOpenButton?.addEventListener("click", () => {
-            openPathExplorer(state);
+            if (state.pathExplorer?.active) {
+                closePathExplorer(state);
+            } else {
+                closeReaderOverlays();
+                openPathExplorer(state);
+            }
         });
 
         const homeBtn = (graphEl.closest(".xana-app") || document).querySelector("[data-home-btn]");
@@ -3294,6 +3320,8 @@
         state.pathExplorer.summary = "";
         state.auditMode = false;
         state.auditResults = [];
+        graphEl.querySelector("[data-path-open]")?.classList.add("active");
+        graphEl.querySelector("[data-path-open]")?.setAttribute("aria-expanded", "true");
         renderPathExplorer(state);
     }
 
@@ -3309,6 +3337,8 @@
             pathStageEl.innerHTML = "";
         }
         if (stageEl) stageEl.hidden = false;
+        graphEl.querySelector("[data-path-open]")?.classList.remove("active");
+        graphEl.querySelector("[data-path-open]")?.setAttribute("aria-expanded", "false");
 
         if (state.cy) {
             state.cy.resize();
@@ -4332,18 +4362,25 @@
     }
 
     function closeTransientUi(state, options = {}) {
-        const settingsPanel = graphEl.querySelector(".xana-settings-panel");
+        const settingsOverlay = graphEl.querySelector(".xana-settings");
         const settingsToggle = graphEl.querySelector("[data-settings-toggle]");
         const filterPanel = graphEl.querySelector(".xana-filter-popover");
         const filterToggle = graphEl.querySelector("[data-filter-toggle]");
+        const toolsPanel = graphEl.querySelector(".xana-tools-popover");
+        const toolsToggle = graphEl.querySelector("[data-tools-toggle]");
+        const pathToggle = graphEl.querySelector("[data-path-open]");
         const pathStage = graphEl.querySelector("#xana-path-stage");
         const stage = graphEl.querySelector("#xana-stage");
 
         if (options.clearSearch) clearSearchUi(state);
-        if (settingsPanel) settingsPanel.hidden = true;
+        if (settingsOverlay) settingsOverlay.hidden = true;
         if (settingsToggle) settingsToggle.classList.remove("active");
         if (filterPanel) filterPanel.hidden = true;
         if (filterToggle) filterToggle.classList.remove("active");
+        if (toolsPanel) toolsPanel.hidden = true;
+        if (toolsToggle) toolsToggle.classList.remove("active");
+        pathToggle?.classList.remove("active");
+        pathToggle?.setAttribute("aria-expanded", "false");
 
         if (state.pathExplorer) {
             state.pathExplorer.active = false;
