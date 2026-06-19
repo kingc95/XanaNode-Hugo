@@ -1318,7 +1318,8 @@ html[data-xana-density="compact"] .xana-search-wrap {
 .xana-filter-grid label {
   color: #cbd5e1;
   font-size: 0.82rem;
-  white-space: nowrap;
+  min-width: 0;
+  white-space: normal;
   display: flex;
   gap: 0.35rem;
   align-items: center;

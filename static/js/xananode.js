@@ -27,6 +27,8 @@
         searchQuery: "xananode.searchQuery",
         enabledTypes: "xananode.enabledTypes",
         enabledMediaTypes: "xananode.enabledMediaTypes",
+        enabledRelationshipTypes: "xananode.enabledRelationshipTypes",
+        enabledSubtypes: "xananode.enabledSubtypes",
         depth: "xananode.depth",
         connectionsOpen: "xananode.connectionsOpen",
         tourSpeed: "xananode.tourSpeed",
@@ -241,6 +243,8 @@
         "screenshot"
     ];
 
+    const PATH_MAX_HOPS = 24;
+
     const TYPE_SECTION_PATHS = {
         artifact: "artifacts",
         claim: "claims",
@@ -437,6 +441,11 @@
             .replaceAll("-", " ");
     }
 
+    function humanLabel(value) {
+        const text = subtypeLabel(value);
+        return text.charAt(0).toUpperCase() + text.slice(1);
+    }
+
     function renderSubtypeBadges(node) {
         const values = [
             node.subtype,
@@ -478,6 +487,41 @@
                 <a class="xana-youtube-embed__link" href="${safeUrl}" target="_blank" rel="noopener noreferrer">${safeText}</a>
             </div>
         `;
+    }
+
+    function relationshipTypesFromEdges(edges = []) {
+        const types = new Set();
+        for (const edge of edges) {
+            const type = String(edge?.type || "").trim();
+            if (type) types.add(type);
+        }
+        return [...types].sort((a, b) => humanLabel(a).localeCompare(humanLabel(b)));
+    }
+
+    function subtypesFromNodes(nodes = []) {
+        const values = new Set();
+        for (const node of nodes) {
+            if (node?.subtype) values.add(String(node.subtype));
+            if (Array.isArray(node?.subtypes)) {
+                node.subtypes.forEach((subtype) => {
+                    if (subtype) values.add(String(subtype));
+                });
+            }
+            if (Array.isArray(node?.facets)) {
+                node.facets.forEach((facet) => {
+                    if (facet) values.add(String(facet));
+                });
+            }
+        }
+        return [...values].sort((a, b) => humanLabel(a).localeCompare(humanLabel(b)));
+    }
+
+    function nodeSubtypeValues(node) {
+        return [
+            node?.subtype,
+            ...(Array.isArray(node?.subtypes) ? node.subtypes : []),
+            ...(Array.isArray(node?.facets) ? node.facets : [])
+        ].filter(Boolean).map(String);
     }
 
     function init(data, nodeTypesData, fragmentsData) {
@@ -527,6 +571,8 @@
 
         const savedTypes = loadSetting(STORAGE_KEYS.enabledTypes, null);
         const savedMediaTypes = loadSetting(STORAGE_KEYS.enabledMediaTypes, null);
+        const savedRelationshipTypes = loadSetting(STORAGE_KEYS.enabledRelationshipTypes, null);
+        const savedSubtypes = loadSetting(STORAGE_KEYS.enabledSubtypes, null);
         const savedDepth = clampNumber(loadSetting(STORAGE_KEYS.depth, 2), 1, 4, 2);
         const displaySettings = loadDisplaySettings();
         applyDisplaySettings(displaySettings);
@@ -537,6 +583,8 @@
             depth: savedDepth,
             enabledTypes: savedTypes ? new Set(savedTypes) : new Set(DEFAULT_TYPES),
             enabledMediaTypes: savedMediaTypes ? new Set(savedMediaTypes) : new Set(DEFAULT_MEDIA_TYPES),
+            enabledRelationshipTypes: savedRelationshipTypes ? new Set(savedRelationshipTypes) : new Set(relationshipTypesFromEdges(allEdges)),
+            enabledSubtypes: savedSubtypes ? new Set(savedSubtypes) : new Set(subtypesFromNodes(allNodes)),
             searchQuery: loadSetting(STORAGE_KEYS.searchQuery, ""),
             searchResults: [],
             auditResults: [],
@@ -548,7 +596,7 @@
                 sourceQuery: focusId || "",
                 targetQuery: "",
                 allowReverse: true,
-                maxDepth: 4,
+                maxDepth: 6,
                 maxPaths: 100,
                 results: [],
                 summary: ""
@@ -685,12 +733,22 @@
         const d = state.depth;
         const t = state.enabledTypes;
         const m = state.enabledMediaTypes;
+        const r = state.enabledRelationshipTypes;
+        const s = state.enabledSubtypes;
 
         const chk = (type) => t.has(type) ? "checked" : "";
         const mchk = (type) => m.has(type) ? "checked" : "";
+        const rchk = (type) => r.has(type) ? "checked" : "";
+        const schk = (type) => s.has(type) ? "checked" : "";
         const dact = (n) => d === n ? "class=\"active\"" : "";
         const brand = THEME_CONFIG.brand;
         const projectLinks = renderThemeLinks(state);
+        const relationshipFilterItems = relationshipTypesFromEdges(state.allEdges)
+            .map((type) => `<label><input type="checkbox" data-relationship-type="${escapeHtml(type)}" ${rchk(type)}> ${escapeHtml(humanLabel(type))}</label>`)
+            .join("");
+        const subtypeFilterItems = subtypesFromNodes(state.allNodes)
+            .map((type) => `<label><input type="checkbox" data-subtype-filter="${escapeHtml(type)}" ${schk(type)}> ${escapeHtml(humanLabel(type))}</label>`)
+            .join("");
 
         // Inject navbar into the .xana-app parent (runs once; guard against duplicates)
         const appEl = graphEl.closest(".xana-app") || graphEl.parentElement;
@@ -744,11 +802,11 @@
                     <div class="xana-search-meta" aria-live="polite"></div>
                     <div class="xana-search-results" hidden></div>
                 </div>
-                <div class="xana-depth-row" role="group" aria-label="View depth">
-                    <button data-depth="1" ${dact(1)}>Near</button>
-                    <button data-depth="2" ${dact(2)}>Mid</button>
-                    <button data-depth="3" ${dact(3)}>Deep</button>
-                    <button data-depth="4" ${dact(4)}>Far</button>
+                <div class="xana-depth-row" role="group" aria-label="Graph range">
+                    <button data-depth="1" ${dact(1)} title="Show direct neighbors">1 hop</button>
+                    <button data-depth="2" ${dact(2)} title="Show two relationship hops">2 hops</button>
+                    <button data-depth="3" ${dact(3)} title="Show three relationship hops">3 hops</button>
+                    <button data-depth="4" ${dact(4)} title="Show four relationship hops">4 hops</button>
                 </div>
             </div>
 
@@ -758,7 +816,7 @@
                 <button class="xana-ctrl-btn" data-zoom="fit" aria-label="Fit graph" title="Fit to screen">&#x25A1;</button>
                 <button class="xana-ctrl-btn" data-zoom="in" aria-label="Zoom in" title="Zoom in">+</button>
                 <span class="xana-ctrl-sep"></span>
-                <button class="xana-ctrl-btn" data-filter-toggle aria-label="Filter node types" title="Filter">&#x2261;</button>
+                <button class="xana-ctrl-btn" data-filter-toggle aria-label="Filter graph" title="Filter graph">&#x2261;</button>
                 <button class="xana-ctrl-btn" data-path-open aria-label="Path explorer" title="Compare connective path">&#x2934;</button>
                 <span class="xana-ctrl-sep"></span>
                 <button class="xana-ctrl-btn" data-tour-toggle aria-label="Guided tour" title="Guided tour">&#x25B6;</button>
@@ -878,6 +936,18 @@
                         <label><input type="checkbox" data-media-type="diagram" ${mchk("diagram")}> Diagrams</label>
                         <label><input type="checkbox" data-media-type="screenshot" ${mchk("screenshot")}> Screenshots</label>
                     </div>
+                    ${subtypeFilterItems ? `
+                    <h4 class="xana-filter-section-title second">Subtypes and Facets</h4>
+                    <div class="xana-filter-grid">
+                        ${subtypeFilterItems}
+                    </div>
+                    ` : ""}
+                    ${relationshipFilterItems ? `
+                    <h4 class="xana-filter-section-title second">Relationship Types</h4>
+                    <div class="xana-filter-grid">
+                        ${relationshipFilterItems}
+                    </div>
+                    ` : ""}
                 </div>
             </div>
 
@@ -1086,6 +1156,42 @@
                 }
 
                 saveSetting(STORAGE_KEYS.enabledMediaTypes, [...state.enabledMediaTypes]);
+                renderVisibleGraph(state, {
+                    updateUrl: false,
+                    preserveViewport: false
+                });
+            });
+        });
+
+        graphEl.querySelectorAll("[data-relationship-type]").forEach((input) => {
+            input.addEventListener("change", () => {
+                const relationshipType = input.getAttribute("data-relationship-type");
+
+                if (input.checked) {
+                    state.enabledRelationshipTypes.add(relationshipType);
+                } else {
+                    state.enabledRelationshipTypes.delete(relationshipType);
+                }
+
+                saveSetting(STORAGE_KEYS.enabledRelationshipTypes, [...state.enabledRelationshipTypes]);
+                renderVisibleGraph(state, {
+                    updateUrl: false,
+                    preserveViewport: false
+                });
+            });
+        });
+
+        graphEl.querySelectorAll("[data-subtype-filter]").forEach((input) => {
+            input.addEventListener("change", () => {
+                const subtype = input.getAttribute("data-subtype-filter");
+
+                if (input.checked) {
+                    state.enabledSubtypes.add(subtype);
+                } else {
+                    state.enabledSubtypes.delete(subtype);
+                }
+
+                saveSetting(STORAGE_KEYS.enabledSubtypes, [...state.enabledSubtypes]);
                 renderVisibleGraph(state, {
                     updateUrl: false,
                     preserveViewport: false
@@ -1692,6 +1798,8 @@
             state.depth,
             state.enabledTypes,
             state.enabledMediaTypes,
+            state.enabledRelationshipTypes,
+            state.enabledSubtypes,
             state.previousFocusId,
             state.searchResults
         );
@@ -1786,6 +1894,8 @@
         maxDepth,
         enabledTypes,
         enabledMediaTypes,
+        enabledRelationshipTypes,
+        enabledSubtypes,
         previousFocusId,
         searchResults
     ) {
@@ -1810,7 +1920,10 @@
             distances[previousFocusId] = 1;
         }
 
-        const scoredEdges = dedupeEdges(allEdges)
+        const eligibleEdges = dedupeEdges(allEdges)
+            .filter((edge) => enabledRelationshipTypes.has(edge.type || "related_to"));
+
+        const scoredEdges = eligibleEdges
             .map((edge) => ({
                 ...edge,
                 weight: Number(edge.weight || 1),
@@ -1819,7 +1932,7 @@
             .filter((edge) => edge.weight >= settings.minWeight)
             .sort((a, b) => b.score - a.score);
 
-        const directEdges = dedupeEdges(allEdges)
+        const directEdges = eligibleEdges
             .map((edge) => ({
                 ...edge,
                 weight: Number(edge.weight || 1),
@@ -1910,6 +2023,8 @@
             if (node.id === previousFocusId) return true;
             if (!visibleIds.has(node.id)) return false;
             if (!enabledTypes.has(node.type)) return false;
+            const nodeSubtypes = nodeSubtypeValues(node);
+            if (nodeSubtypes.length && !nodeSubtypes.some((value) => enabledSubtypes.has(value))) return false;
 
             if (node.type === "media") {
                 return enabledMediaTypes.has(node.media_type || "image");
@@ -3028,8 +3143,8 @@
             },
             {
                 selector: ".xana-depth-row",
-                title: "Depth",
-                body: "Near, Mid, and Deep control how much of the selected node's neighborhood is shown. Use this when the graph feels too sparse or too busy."
+                title: "Graph Range",
+                body: "Choose how many relationship hops to show around the focused node. Start with 1 or 2 hops for reading, then widen the graph when you want more context."
             },
             {
                 selector: "#xana-stage",
@@ -3044,12 +3159,12 @@
             {
                 selector: "[data-filter-toggle]",
                 title: "Filters",
-                body: "≡ opens type and media filters. Turn node classes on or off when you want to inspect one layer of the substrate."
+                body: "≡ opens graph filters for node types, relationship types, media kinds, subtypes, and facets. Use it to isolate schemas, sources, implementations, evidence, or any other layer in the substrate."
             },
             {
                 selector: "[data-path-open]",
                 title: "Paths",
-                body: "⤴ opens path comparison. Pick two nodes and XanaNode traces relationship routes between them."
+                body: "⤴ compares two nodes. XanaNode traces connective paths and also writes a short story of the semantic route between them."
             },
             {
                 selector: "[data-tour-toggle]",
@@ -3059,22 +3174,22 @@
             {
                 selector: "#xana-panel",
                 title: "Reader",
-                body: "The panel is the selected node's page: title, summary, authored content, media, protocol address, source details, and relationships."
+                body: "This is the reading view for the selected node. It puts the human-facing page first, then keeps protocol, source, media, and relationship details close by."
             },
             {
                 selector: ".xana-connections",
                 title: "Follow relationships",
-                body: "Open Connections to move by typed relationships: evidence, lineage, implementation, disagreement, sources, people, places, works, and trails."
+                body: "Connections lists the selected node's incoming and outgoing relationships. Open it to jump along sources, claims, implementations, people, places, works, trails, or disagreements."
             },
             {
                 selector: "[data-settings-toggle]",
                 title: "Settings",
-                body: "⚙ opens theme, density, text size, graph atmosphere, node-tour mode, narration voice, speed, pitch, and detail controls."
+                body: "⚙ opens display and narration settings: theme, density, text size, graph motion, tour behavior, and voice preferences."
             },
             {
                 selector: "[data-tools-toggle]",
                 title: "Tools",
-                body: "⋯ opens review suggestions, schema audit, and Interface tour. Reopen this walkthrough later from ⋯, then Interface tour."
+                body: "⋯ opens authoring utilities such as review suggestions and schema audit. You can reopen this tour later from ⋯, then Interface tour."
             }
         ];
 
@@ -3565,7 +3680,7 @@
                     <div class="xana-path-header-row">
                         <div>
                             <h2 class="xana-path-title">Connective Path Explorer</h2>
-                            <p class="xana-path-summary">Trace the connective chain between two nodes and inspect every hop that links them.</p>
+                            <p class="xana-path-summary">Trace relationship paths between two nodes and read the route as a short semantic story.</p>
                         </div>
                         <button type="button" class="xana-path-dismiss" data-path-dismiss>&larr; Back to graph</button>
                     </div>
@@ -3593,12 +3708,12 @@
 
                         <div class="xana-path-actions">
                             <label class="xana-path-hop-limit">
-                                <span>Hops</span>
-                                <input type="number" min="1" max="8" step="1" data-path-max-depth value="${clampNumber(pathState.maxDepth, 1, 8, 4)}">
+                                <span>Hop limit</span>
+                                <input type="number" min="1" max="${PATH_MAX_HOPS}" step="1" data-path-max-depth value="${clampNumber(pathState.maxDepth, 1, PATH_MAX_HOPS, 6)}">
                             </label>
                             <label class="xana-path-toggle">
                                 <input type="checkbox" data-path-allow-reverse ${pathState.allowReverse ? "checked" : ""}>
-                                <span>Allow reverse hops</span>
+                                <span>Trace both directions</span>
                             </label>
                             <button type="button" class="xana-path-swap" data-path-swap>Swap</button>
                             <button type="submit" class="xana-path-trace">Trace paths</button>
@@ -3637,7 +3752,7 @@
             pathState.sourceQuery = sourceValue;
             pathState.targetQuery = targetValue;
             pathState.allowReverse = Boolean(reverseToggle?.checked);
-            pathState.maxDepth = clampNumber(maxDepthInput?.value, 1, 8, 4);
+            pathState.maxDepth = clampNumber(maxDepthInput?.value, 1, PATH_MAX_HOPS, 6);
 
             runPathExplorer(state);
         });
@@ -3674,7 +3789,7 @@
         });
 
         pathStageEl.querySelector("[data-path-max-depth]")?.addEventListener("input", (event) => {
-            pathState.maxDepth = clampNumber(event.target.value, 1, 8, 4);
+            pathState.maxDepth = clampNumber(event.target.value, 1, PATH_MAX_HOPS, 6);
         });
     }
 
@@ -3788,44 +3903,127 @@
     }
 
     function renderPathStory(path, nodeById) {
-        const parts = path.hops.map((hop) => {
+        const parts = path.hops.map((hop, index) => {
             const fromNode = nodeById.get(hop.fromId);
             const toNode = nodeById.get(hop.toId);
             const fromTitle = escapeHtml(fromNode?.title || hop.fromId);
             const toTitle = escapeHtml(toNode?.title || hop.toId);
-            return `${fromTitle} ${relationshipPhrase(hop.edge?.type || "related_to", hop.reversed)} ${toTitle}`;
+            const phrase = relationshipPhrase(hop.edge?.type || "related_to", hop.reversed);
+            const lead = index === 0 ? "" : "Then ";
+            return `${lead}${fromTitle} ${phrase} ${toTitle}`;
         });
-        return `${parts.join("; ")}.`;
+        return `${parts.join(". ")}.`;
     }
 
     function relationshipPhrase(type, reversed = false) {
-        const phrases = {
+        const forwardPhrases = {
             supports: "supports",
             contradicts: "contradicts",
             explains: "explains",
+            defines: "defines",
+            has_claim: "has claim",
+            claim_of: "is a claim of",
+            demonstrates: "demonstrates",
             derives_from: "derives from",
             derived_from: "derives from",
             cites: "cites",
+            quotes: "quotes",
+            mentions: "mentions",
             references: "references",
             documents: "documents",
+            authored: "authored",
             authored_by: "was authored by",
+            created: "created",
             created_by: "was created by",
             participated_in: "participated in",
+            spoke_at: "spoke at",
+            features: "features",
+            presented: "presented",
+            introduced: "introduced",
+            proposed: "proposed",
             influenced: "influenced",
             influenced_by: "was influenced by",
+            popularized: "popularized",
+            anticipated: "anticipated",
+            anticipates: "anticipates",
+            shaped: "shaped",
+            shapes: "shapes",
             implements: "implements",
             implemented_by: "is implemented by",
+            enables: "enables",
+            preserves: "preserves",
             transcludes: "transcludes",
             deep_links_to: "deep-links to",
             has_primary_media: "has primary media",
             depicts: "depicts",
+            represents: "represents",
             located_in: "is located in",
             part_of: "is part of",
+            contains: "contains",
+            includes: "includes",
+            uses: "uses",
+            depends_on: "depends on",
+            requires: "requires",
+            starts_with: "starts with",
+            continues_to: "continues to",
             member_of: "is a member of",
             related_to: "relates to"
         };
-        const phrase = phrases[type] || String(type || "related_to").replace(/_/g, " ");
-        return reversed ? `is reached by reverse ${phrase} from` : phrase;
+        const reversePhrases = {
+            supports: "is supported by",
+            contradicts: "is contradicted by",
+            explains: "is explained by",
+            defines: "is defined by",
+            has_claim: "is a claim of",
+            claim_of: "has claim",
+            demonstrates: "is demonstrated by",
+            derives_from: "is the source for",
+            derived_from: "is the source for",
+            cites: "is cited by",
+            quotes: "is quoted by",
+            mentions: "is mentioned by",
+            references: "is referenced by",
+            documents: "is documented by",
+            authored: "was authored by",
+            authored_by: "authored",
+            created: "was created by",
+            created_by: "created",
+            participated_in: "had participant",
+            spoke_at: "featured speaker",
+            features: "is featured in",
+            presented: "was presented by",
+            introduced: "was introduced by",
+            proposed: "was proposed by",
+            influenced: "was influenced by",
+            influenced_by: "influenced",
+            popularized: "was popularized by",
+            anticipated: "was anticipated by",
+            anticipates: "is anticipated by",
+            shaped: "was shaped by",
+            shapes: "was shaped by",
+            implements: "is implemented by",
+            implemented_by: "implements",
+            enables: "is enabled by",
+            preserves: "is preserved by",
+            transcludes: "is transcluded by",
+            deep_links_to: "is deep-linked from",
+            has_primary_media: "is primary media for",
+            depicts: "is depicted by",
+            represents: "is represented by",
+            located_in: "contains",
+            part_of: "contains",
+            contains: "is contained by",
+            includes: "is included in",
+            uses: "is used by",
+            depends_on: "is a dependency of",
+            requires: "is required by",
+            starts_with: "starts",
+            continues_to: "appears in",
+            member_of: "has member",
+            related_to: "relates to"
+        };
+        const phrases = reversed ? reversePhrases : forwardPhrases;
+        return phrases[type] || String(type || "related_to").replace(/_/g, " ");
     }
 
     function renderAuditResults(state) {
