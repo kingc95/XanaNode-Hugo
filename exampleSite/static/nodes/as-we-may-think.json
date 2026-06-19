@@ -41,6 +41,12 @@
       "type": "derived_from",
       "source": "example.minimal:fragment/as-we-may-think-0004",
       "direction": "incoming"
+    },
+    {
+      "id": "example.minimal:rel/gap-requires-source",
+      "type": "requires_source",
+      "source": "example.minimal:knowledge_gap/missing-relationship-evidence",
+      "direction": "incoming"
     }
   ],
   "imported_from": "nodes/source-as-we-may-think.json",

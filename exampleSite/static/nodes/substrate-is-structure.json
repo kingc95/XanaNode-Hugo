@@ -39,6 +39,12 @@
       "type": "continues_to",
       "target": "example.minimal:concept/knowledge-substrate",
       "direction": "outgoing"
+    },
+    {
+      "id": "example.minimal:rel/response-supports-claim",
+      "type": "supports",
+      "source": "example.minimal:response/relationships-preserve-context",
+      "direction": "incoming"
     }
   ],
   "imported_from": "nodes/claim-substrate-structure.json",

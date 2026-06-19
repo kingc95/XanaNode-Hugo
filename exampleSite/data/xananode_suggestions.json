@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T20:41:16.647Z",
+  "generated_at": "2026-06-19T21:47:33.784Z",
   "status": "pending_user_approval",
   "note": "These suggestions are not auto-applied. Review each replacement before editing content.",
   "implemented_transclusions": [
@@ -132,6 +132,15 @@
       "incoming": "example.minimal:concept/knowledge-substrate",
       "existing_title": "Knowledge Substrate",
       "incoming_title": "Knowledge Substrate",
+      "confidence": 1,
+      "reason": "Incoming node has the same protocol id as an existing node."
+    },
+    {
+      "kind": "same_id",
+      "existing": "xananode.example:media/xananode-icon",
+      "incoming": "example.minimal:media/xananode-icon",
+      "existing_title": "XanaNode Icon",
+      "incoming_title": "XanaNode Icon",
       "confidence": 1,
       "reason": "Incoming node has the same protocol id as an existing node."
     },
@@ -474,6 +483,24 @@
       "incoming": "example.minimal:concept/knowledge-substrate",
       "existing_title": "A knowledge substrate is structure, not information",
       "incoming_title": "Knowledge Substrate",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.example:concept/xananode",
+      "incoming": "example.minimal:media/xananode-icon",
+      "existing_title": "XanaNode",
+      "incoming_title": "XanaNode Icon",
+      "confidence": 0.78,
+      "reason": "Incoming node title or alias closely matches an existing node."
+    },
+    {
+      "kind": "possible_same_entity",
+      "existing": "xananode.example:claim/claim-relationships-preserve-context",
+      "incoming": "example.minimal:response/relationships-preserve-context",
+      "existing_title": "Typed relationships preserve context that hyperlinks lose",
+      "incoming_title": "Relationships Preserve Context",
       "confidence": 0.78,
       "reason": "Incoming node title or alias closely matches an existing node."
     },
@@ -8790,6 +8817,90 @@
       "target": "example.minimal:fragment/as-we-may-think-0004",
       "type": "transcludes",
       "summary": "The essay includes the source fragment by stable reference instead of duplicating it.",
+      "touches_source": true,
+      "touches_target": true,
+      "confidence": 0.9,
+      "reason": "Incoming relationship references at least one node already present in the substrate."
+    },
+    {
+      "kind": "incoming_relationship_touches_existing_node",
+      "relationship": "example.minimal:rel/question-raises-gap",
+      "source": "example.minimal:question/why-relationships-matter",
+      "target": "example.minimal:knowledge_gap/missing-relationship-evidence",
+      "type": "raises",
+      "summary": "The question makes a missing-evidence gap explicit instead of leaving it implicit.",
+      "touches_source": true,
+      "touches_target": true,
+      "confidence": 0.9,
+      "reason": "Incoming relationship references at least one node already present in the substrate."
+    },
+    {
+      "kind": "incoming_relationship_touches_existing_node",
+      "relationship": "example.minimal:rel/gap-requires-source",
+      "source": "example.minimal:knowledge_gap/missing-relationship-evidence",
+      "target": "example.minimal:source/as-we-may-think",
+      "type": "requires_source",
+      "summary": "The knowledge gap points to source evidence that may help resolve it.",
+      "touches_source": true,
+      "touches_target": true,
+      "confidence": 0.9,
+      "reason": "Incoming relationship references at least one node already present in the substrate."
+    },
+    {
+      "kind": "incoming_relationship_touches_existing_node",
+      "relationship": "example.minimal:rel/question-asked-in-communication",
+      "source": "example.minimal:question/why-relationships-matter",
+      "target": "example.minimal:communication/minimal-substrate-discussion",
+      "type": "asked_in",
+      "summary": "The question is modeled as being asked inside a communication context.",
+      "touches_source": true,
+      "touches_target": true,
+      "confidence": 0.9,
+      "reason": "Incoming relationship references at least one node already present in the substrate."
+    },
+    {
+      "kind": "incoming_relationship_touches_existing_node",
+      "relationship": "example.minimal:rel/response-answers-question",
+      "source": "example.minimal:response/relationships-preserve-context",
+      "target": "example.minimal:question/why-relationships-matter",
+      "type": "answers",
+      "summary": "The response answers the question by connecting relationship structure to preserved context.",
+      "touches_source": true,
+      "touches_target": true,
+      "confidence": 0.9,
+      "reason": "Incoming relationship references at least one node already present in the substrate."
+    },
+    {
+      "kind": "incoming_relationship_touches_existing_node",
+      "relationship": "example.minimal:rel/response-answered-in-communication",
+      "source": "example.minimal:response/relationships-preserve-context",
+      "target": "example.minimal:communication/minimal-substrate-discussion",
+      "type": "answered_in",
+      "summary": "The response belongs to the same communication context as the question.",
+      "touches_source": true,
+      "touches_target": true,
+      "confidence": 0.9,
+      "reason": "Incoming relationship references at least one node already present in the substrate."
+    },
+    {
+      "kind": "incoming_relationship_touches_existing_node",
+      "relationship": "example.minimal:rel/response-supports-claim",
+      "source": "example.minimal:response/relationships-preserve-context",
+      "target": "example.minimal:claim/substrate-is-structure",
+      "type": "supports",
+      "summary": "The response supports the existing claim that substrate structure changes epistemic capability.",
+      "touches_source": true,
+      "touches_target": true,
+      "confidence": 0.9,
+      "reason": "Incoming relationship references at least one node already present in the substrate."
+    },
+    {
+      "kind": "incoming_relationship_touches_existing_node",
+      "relationship": "example.minimal:rel/substrate-has-primary-media",
+      "source": "example.minimal:concept/knowledge-substrate",
+      "target": "example.minimal:media/xananode-icon",
+      "type": "has_primary_media",
+      "summary": "The minimal substrate uses the canonical XanaNode icon as its primary branding media.",
       "touches_source": true,
       "touches_target": true,
       "confidence": 0.9,
