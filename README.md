@@ -78,6 +78,19 @@ The build tool validates generated substrate artifacts with `@xananode/core`. It
 
 Configured `params.xananode.links` are part of the site projection. Public links without an existing `node` are emitted as lightweight `source` nodes so the graph can represent project homes, social profiles, support pages, and documentation links with normal substrate identity. Set `private: true` or `generate_node: false` on a link when it should remain a UI link only.
 
+Generated link nodes can also connect back into the substrate with flat config keys:
+
+```yaml
+params:
+  xananode:
+    links:
+      - label: "Support"
+        url: "https://github.com/sponsors/example"
+        summary: "Support ongoing substrate creation."
+        relationship_type: "supports"
+        relationship_target: "xananode"
+```
+
 Current generated protocol files include:
 
 - `substrate.json`: substrate manifest with namespace, version, imports, and schema version.

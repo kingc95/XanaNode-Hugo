@@ -6,5 +6,12 @@
   "summary": "Support the ongoing XanaNode project work.",
   "source_url": "https://github.com/sponsors/kingc95",
   "rights_status": "external",
-  "relationships": []
+  "relationships": [
+    {
+      "id": "xananode.example:rel/source-support-supports-xananode-225",
+      "type": "supports",
+      "target": "xananode.example:concept/xananode",
+      "direction": "outgoing"
+    }
+  ]
 }

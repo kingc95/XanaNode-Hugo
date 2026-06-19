@@ -2008,6 +2008,24 @@
       "summary": "Substrates should merge without collapsing disagreement contradicts Single Source of Truth."
     },
     {
+      "id": "xananode.example:rel/source-github-documents-xananode-224",
+      "source": "xananode.example:source/source-github",
+      "target": "xananode.example:concept/xananode",
+      "type": "documents",
+      "weight": 4,
+      "visibility": "primary",
+      "summary": "The public GitHub profile collects XanaNode repositories and development activity."
+    },
+    {
+      "id": "xananode.example:rel/source-support-supports-xananode-225",
+      "source": "xananode.example:source/source-support",
+      "target": "xananode.example:concept/xananode",
+      "type": "supports",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "The support page helps sustain authored XanaNode substrate creation."
+    },
+    {
       "id": "xananode.example:rel/xanadu-document-interconnection-fragment-0001-derived-from-source",
       "source": "xananode.example:fragment/xanadu-document-interconnection-0001",
       "target": "xananode.example:source/xanadu-document-interconnection",

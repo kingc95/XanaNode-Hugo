@@ -133,6 +133,18 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.example:rel/source-github-documents-xananode-224",
+      "type": "documents",
+      "source": "xananode.example:source/source-github",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/source-support-supports-xananode-225",
+      "type": "supports",
+      "source": "xananode.example:source/source-support",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.example:rel/xananode-represented-by-xananode-icon",
       "type": "has_primary_media",
       "target": "xananode.example:media/xananode-icon",

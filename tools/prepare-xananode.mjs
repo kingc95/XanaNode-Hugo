@@ -985,6 +985,15 @@ for (const [index, link] of configuredThemeLinks().entries()) {
   const url = String(link.url || link.href || "").trim();
   const label = String(link.label || link.title || generatedId).trim();
   if (!generatedId || !url || nodes.has(generatedId)) continue;
+  const relationshipTarget = String(link.relationship_target || link.target || "").trim();
+  const relationshipType = String(link.relationship_type || link.relationship || (relationshipTarget ? "documents" : "")).trim();
+  const relationships = relationshipTarget && relationshipType
+    ? [{
+        type: relationshipType,
+        target: relationshipTarget,
+        summary: String(link.relationship_summary || `${label} ${relationshipType.replaceAll("_", " ")} ${relationshipTarget}.`)
+      }]
+    : [];
 
   const data = {
     id: generatedId,
@@ -995,7 +1004,7 @@ for (const [index, link] of configuredThemeLinks().entries()) {
     importance: Number(link.importance || 2),
     source_name: label,
     rights_status: String(link.rights_status || "external"),
-    relationships: []
+    relationships
   };
   const protocolId = protocolIdFor(generatedId, data, substrateNamespace);
   const file = `config:xananode.links[${index}]`;
