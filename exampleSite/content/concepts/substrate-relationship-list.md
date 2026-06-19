@@ -14,4 +14,4 @@ relationships:
 
 Each relationship has its own id, source, target, type, and summary. It can also carry weight, visibility, assertion [provenance](/node/provenance), confidence, evidence, federation metadata, and tumbler references.
 
-This implementation derives the protocol relationship list from authored front matter, primary media links, trail membership, and stable [transclusion](/node/transclusion) shortcodes.
+A relationship list can be authored directly, imported from packs, or derived from structured content such as primary media links, trail membership, and stable [transclusion](/node/transclusion) references.

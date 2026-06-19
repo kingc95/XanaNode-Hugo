@@ -2225,6 +2225,68 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
   background: color-mix(in srgb, var(--xana-surface-elevated) 72%, transparent);
 }
 
+.xana-source-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 0.65rem;
+}
+
+.xana-source-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--xana-panel-border);
+  border-radius: 999px;
+  background: rgba(85, 214, 190, 0.1);
+  color: var(--xana-accent);
+  font-size: 0.78rem;
+  font-weight: 850;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.xana-source-chip:hover {
+  border-color: var(--xana-accent);
+  background: rgba(85, 214, 190, 0.16);
+  text-decoration: none;
+}
+
+.xana-source-chip-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.4rem;
+  background: var(--xana-accent);
+  color: #04201a;
+  font-size: 0.68rem;
+  font-weight: 950;
+}
+
+.xana-source-chip[data-platform="github"] .xana-source-chip-icon,
+.xana-source-chip[data-platform="x"] .xana-source-chip-icon {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.xana-source-chip[data-platform="youtube"] .xana-source-chip-icon {
+  background: #ff0033;
+  color: #fff;
+}
+
+.xana-source-chip[data-platform="linkedin"] .xana-source-chip-icon {
+  background: #0a66c2;
+  color: #fff;
+}
+
+.xana-source-chip[data-platform="support"] .xana-source-chip-icon {
+  background: #ffd166;
+  color: #241100;
+}
+
 .xana-source-table {
   width: 100%;
   border-collapse: collapse;

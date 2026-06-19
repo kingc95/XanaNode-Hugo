@@ -4,7 +4,7 @@ Status: pending user approval
 
 These suggestions are not auto-applied. Review each replacement before editing content.
 
-Autolinks: 53
+Autolinks: 54
 Pending transclusions: 0
 Implemented transclusions: 4
 Merge candidates: 166
@@ -18,202 +18,202 @@ Imported relationships touching existing nodes: 81
    - Replacement: [XanaNode](xananode)
    - Approved: false
 
-2. content\essays\using-hugo-with-protocol-json.md:18:1
-   - Match: Hugo
-   - Target: Hugo (xananode.example:technology/hugo)
-   - Replacement: [Hugo](hugo)
-   - Approved: false
-
-3. content\essays\using-hugo-with-protocol-json.md:47:84
+2. content\essays\using-hugo-with-protocol-json.md:47:69
    - Match: protocol artifacts
    - Target: Protocol Artifacts (xananode.example:concept/protocol-artifacts)
    - Replacement: [protocol artifacts](protocol-artifacts)
    - Approved: false
 
-4. content\trails\xananode-implementation-stack-trail.md:31:65
+3. content\trails\xananode-implementation-stack-trail.md:31:65
    - Match: Hugo
    - Target: Hugo (xananode.example:technology/hugo)
    - Replacement: [Hugo](hugo)
    - Approved: false
 
-5. content\sources\xananode-hugo-repo.md:19:5
+4. content\essays\using-hugo-with-protocol-json.md:18:1
    - Match: Hugo
    - Target: Hugo (xananode.example:technology/hugo)
    - Replacement: [Hugo](hugo)
    - Approved: false
 
-6. content\trails\xananode-implementation-stack-trail.md:31:82
+5. content\trails\xananode-implementation-stack-trail.md:31:82
    - Match: static publishing
    - Target: Static Publishing (xananode.example:technology/static-publishing)
    - Replacement: [static publishing](static-publishing)
    - Approved: false
 
-7. content\trails\xananode-implementation-stack-trail.md:40:15
+6. content\trails\xananode-implementation-stack-trail.md:40:15
    - Match: xananode-workspace-repo
    - Target: XanaNode Workspace Repository (xananode.example:source/xananode-workspace-repo)
    - Replacement: [xananode-workspace-repo](xananode-workspace-repo)
    - Approved: false
 
-8. content\trails\xananode-implementation-stack-trail.md:41:15
+7. content\trails\xananode-implementation-stack-trail.md:41:15
    - Match: xananode-studio-repo
    - Target: XanaNode Studio Repository (xananode.example:source/xananode-studio-repo)
    - Replacement: [xananode-studio-repo](xananode-studio-repo)
    - Approved: false
 
-9. content\trails\xananode-implementation-stack-trail.md:37:15
+8. content\trails\xananode-implementation-stack-trail.md:37:15
    - Match: xananode-protocol-repo
    - Target: XanaNode Protocol Repository (xananode.example:source/xananode-protocol-repo)
    - Replacement: [xananode-protocol-repo](xananode-protocol-repo)
    - Approved: false
 
-10. content\trails\xananode-implementation-stack-trail.md:39:15
+9. content\trails\xananode-implementation-stack-trail.md:39:15
    - Match: xananode-hugo-repo
    - Target: XanaNode Hugo Repository (xananode.example:source/xananode-hugo-repo)
    - Replacement: [xananode-hugo-repo](xananode-hugo-repo)
    - Approved: false
 
-11. content\trails\xananode-implementation-stack-trail.md:38:15
+10. content\trails\xananode-implementation-stack-trail.md:38:15
    - Match: xananode-core-sdk-repo
    - Target: XanaNode Core SDK Repository (xananode.example:source/xananode-core-sdk-repo)
    - Replacement: [xananode-core-sdk-repo](xananode-core-sdk-repo)
    - Approved: false
 
-12. content\trails\xananode-implementation-stack-trail.md:31:118
+11. content\trails\xananode-implementation-stack-trail.md:31:118
    - Match: protocol artifacts
    - Target: Protocol Artifacts (xananode.example:concept/protocol-artifacts)
    - Replacement: [protocol artifacts](protocol-artifacts)
    - Approved: false
 
-13. content\trails\xananode-core-trail.md:38:15
+12. content\trails\xananode-core-trail.md:38:15
    - Match: start-here
    - Target: Start Here (xananode.example:essay/start-here)
    - Replacement: [start-here](start-here)
    - Approved: false
 
-14. content\trails\xananode-core-trail.md:44:15
+13. content\trails\xananode-core-trail.md:44:15
    - Match: tumbler-addressing
    - Target: Tumbler Addressing (xananode.example:concept/tumbler-addressing)
    - Replacement: [tumbler-addressing](tumbler-addressing)
    - Approved: false
 
-15. content\trails\xananode-core-trail.md:43:15
+14. content\trails\xananode-core-trail.md:43:15
    - Match: transclusion
    - Target: Transclusion (xananode.example:concept/transclusion)
    - Replacement: [transclusion](transclusion)
    - Approved: false
 
-16. content\trails\xananode-core-trail.md:45:15
+15. content\trails\xananode-core-trail.md:45:15
    - Match: namespacing
    - Target: Namespacing (xananode.example:concept/namespacing)
    - Replacement: [namespacing](namespacing)
    - Approved: false
 
-17. content\trails\xananode-core-trail.md:40:15
+16. content\trails\xananode-core-trail.md:40:15
    - Match: knowledge-substrate
    - Target: Knowledge Substrate (xananode.example:concept/knowledge-substrate)
    - Replacement: [knowledge-substrate](knowledge-substrate)
    - Approved: false
 
-18. content\trails\xananode-core-trail.md:49:15
+17. content\trails\xananode-core-trail.md:49:15
    - Match: federated-knowledge-substrates
    - Target: Federated Knowledge Substrates (xananode.example:concept/federated-knowledge-substrates)
    - Replacement: [federated-knowledge-substrates](federated-knowledge-substrates)
    - Approved: false
 
-19. content\trails\protocol-artifacts-trail.md:43:15
+18. content\trails\protocol-artifacts-trail.md:43:15
    - Match: substrate-relationship-list
    - Target: Substrate Relationship List (xananode.example:concept/substrate-relationship-list)
    - Replacement: [substrate-relationship-list](substrate-relationship-list)
    - Approved: false
 
-20. content\trails\protocol-artifacts-trail.md:42:15
+19. content\trails\protocol-artifacts-trail.md:42:15
    - Match: substrate-node-record
    - Target: Substrate Node Record (xananode.example:concept/substrate-node-record)
    - Replacement: [substrate-node-record](substrate-node-record)
    - Approved: false
 
-21. content\trails\protocol-artifacts-trail.md:41:15
+20. content\trails\protocol-artifacts-trail.md:41:15
    - Match: substrate-manifest
    - Target: Substrate Manifest (xananode.example:concept/substrate-manifest)
    - Replacement: [substrate-manifest](substrate-manifest)
    - Approved: false
 
-22. content\trails\protocol-artifacts-trail.md:49:15
+21. content\trails\protocol-artifacts-trail.md:49:15
    - Match: review-suggestions
    - Target: Review Suggestions (xananode.example:concept/review-suggestions)
    - Replacement: [review-suggestions](review-suggestions)
    - Approved: false
 
-23. content\trails\protocol-artifacts-trail.md:40:15
+22. content\trails\protocol-artifacts-trail.md:40:15
    - Match: protocol-artifacts
    - Target: Protocol Artifacts (xananode.example:concept/protocol-artifacts)
    - Replacement: [protocol-artifacts](protocol-artifacts)
    - Approved: false
 
-24. content\trails\protocol-artifacts-trail.md:47:15
+23. content\trails\protocol-artifacts-trail.md:47:15
    - Match: namespace-registry
    - Target: Namespace Registry (xananode.example:concept/namespace-registry)
    - Replacement: [namespace-registry](namespace-registry)
    - Approved: false
 
-25. content\trails\protocol-artifacts-trail.md:46:15
+24. content\trails\protocol-artifacts-trail.md:46:15
    - Match: merge-report
    - Target: Merge Report (xananode.example:concept/merge-report)
    - Replacement: [merge-report](merge-report)
    - Approved: false
 
-26. content\trails\protocol-artifacts-trail.md:48:15
+25. content\trails\protocol-artifacts-trail.md:48:15
    - Match: known-implementations-registry
    - Target: Known Implementations Registry (xananode.example:concept/known-implementations-registry)
    - Replacement: [known-implementations-registry](known-implementations-registry)
    - Approved: false
 
-27. content\trails\protocol-artifacts-trail.md:53:15
+26. content\trails\protocol-artifacts-trail.md:53:15
    - Match: federation-rules
    - Target: Federation Rules (xananode.example:concept/federation-rules)
    - Replacement: [federation-rules](federation-rules)
    - Approved: false
 
-28. content\trails\protocol-artifacts-trail.md:52:15
+27. content\trails\protocol-artifacts-trail.md:52:15
    - Match: federation-example
    - Target: Federation Example (xananode.example:concept/federation-example)
    - Replacement: [federation-example](federation-example)
    - Approved: false
 
-29. content\trails\protocol-artifacts-trail.md:51:15
+28. content\trails\protocol-artifacts-trail.md:51:15
    - Match: custom-extension-substrate
    - Target: Custom Extension Substrate (xananode.example:concept/custom-extension-substrate)
    - Replacement: [custom-extension-substrate](custom-extension-substrate)
    - Approved: false
 
-30. content\trails\protocol-artifacts-trail.md:45:15
+29. content\trails\protocol-artifacts-trail.md:45:15
    - Match: compatibility-report
    - Target: Compatibility Report (xananode.example:concept/compatibility-report)
    - Replacement: [compatibility-report](compatibility-report)
    - Approved: false
 
-31. content\trails\protocol-artifacts-trail.md:44:15
+30. content\trails\protocol-artifacts-trail.md:44:15
    - Match: compatibility-levels
    - Target: Compatibility Levels (xananode.example:concept/compatibility-levels)
    - Replacement: [compatibility-levels](compatibility-levels)
    - Approved: false
 
-32. content\trails\protocol-artifacts-trail.md:50:15
+31. content\trails\protocol-artifacts-trail.md:50:15
    - Match: canonical-type-policy
    - Target: Canonical Type Policy (xananode.example:concept/canonical-type-policy)
    - Replacement: [canonical-type-policy](canonical-type-policy)
    - Approved: false
 
-33. content\trails\historical-lineage-trail.md:27:85
+32. content\trails\historical-lineage-trail.md:27:85
    - Match: associative trails
    - Target: Associative Trails (example.minimal:concept/associative-trails)
    - Replacement: [associative trails](example.minimal:concept/associative-trails)
    - Approved: false
 
-34. content\trails\branching-orientation-trail.md:44:15
+33. content\trails\branching-orientation-trail.md:44:15
    - Match: start-here
    - Target: Start Here (xananode.example:essay/start-here)
    - Replacement: [start-here](start-here)
+   - Approved: false
+
+34. content\technologies\hugo.md:11:74
+   - Match: XanaNode
+   - Target: XanaNode (xananode.example:concept/xananode)
+   - Replacement: [XanaNode](xananode)
    - Approved: false
 
 35. content\sources\xananode-studio-repo.md:19:96
@@ -228,103 +228,109 @@ Imported relationships touching existing nodes: 81
    - Replacement: [XanaNode](xananode)
    - Approved: false
 
-37. content\sources\xananode-hugo-repo.md:19:139
-   - Match: XanaNode
-   - Target: XanaNode (xananode.example:concept/xananode)
-   - Replacement: [XanaNode](xananode)
-   - Approved: false
-
-38. content\schemas\xananode-relationship-types.md:15:208
-   - Match: deep-linking
-   - Target: Deep Linking (xananode.example:concept/deep-linking)
-   - Replacement: [deep-linking](deep-linking)
-   - Approved: false
-
-39. content\schemas\namespace-schema.md:19:6
-   - Match: support
-   - Target: Support (xananode.example:source/source-support)
-   - Replacement: [support](source-support)
-   - Approved: false
-
-40. content\projects\memex.md:13:38
-   - Match: associative trails
-   - Target: Associative Trails (example.minimal:concept/associative-trails)
-   - Replacement: [associative trails](example.minimal:concept/associative-trails)
-   - Approved: false
-
-41. content\essays\using-hugo-with-protocol-json.md:18:13
-   - Match: static publishing
-   - Target: Static Publishing (xananode.example:technology/static-publishing)
-   - Replacement: [static publishing](static-publishing)
-   - Approved: false
-
-42. content\essays\using-hugo-with-protocol-json.md:36:215
-   - Match: XanaNode
-   - Target: XanaNode (xananode.example:concept/xananode)
-   - Replacement: [XanaNode](xananode)
-   - Approved: false
-
-43. content\essays\using-hugo-with-protocol-json.md:35:180
-   - Match: typed relationships
-   - Target: Typed Relationships (xananode.example:concept/typed-relationships)
-   - Replacement: [typed relationships](typed-relationships)
-   - Approved: false
-
-44. content\essays\using-hugo-with-protocol-json.md:35:233
-   - Match: transclusion
-   - Target: Transclusion (xananode.example:concept/transclusion)
-   - Replacement: [transclusion](transclusion)
-   - Approved: false
-
-45. content\essays\using-hugo-with-protocol-json.md:35:146
-   - Match: substrate manifest
-   - Target: Substrate Manifest (xananode.example:concept/substrate-manifest)
-   - Replacement: [substrate manifest](substrate-manifest)
-   - Approved: false
-
-46. content\essays\using-hugo-with-protocol-json.md:36:147
-   - Match: FRESS
-   - Target: FRESS (xananode.lineage:project/fress)
-   - Replacement: [FRESS](xananode.lineage:project/fress)
-   - Approved: false
-
-47. content\essays\using-hugo-with-protocol-json.md:36:154
-   - Match: Intermedia
-   - Target: Intermedia (xananode.lineage:project/intermedia)
-   - Replacement: [Intermedia](xananode.lineage:project/intermedia)
-   - Approved: false
-
-48. content\essays\using-hugo-with-protocol-json.md:36:177
-   - Match: Hyperland
-   - Target: Hyperland (xananode.lineage:publication/hyperland)
-   - Replacement: [Hyperland](xananode.lineage:publication/hyperland)
-   - Approved: false
-
-49. content\essays\using-hugo-with-protocol-json.md:36:192
-   - Match: TED2
-   - Target: TED2 (xananode.lineage:event/ted2-1990)
-   - Replacement: [TED2](xananode.lineage:event/ted2-1990)
-   - Approved: false
-
-50. content\essays\using-hugo-with-protocol-json.md:36:166
-   - Match: HyperCard
-   - Target: HyperCard (xananode.lineage:technology/hypercard)
-   - Replacement: [HyperCard](xananode.lineage:technology/hypercard)
-   - Approved: false
-
-51. content\essays\start-here.md:34:23
+37. content\sources\xananode-hugo-repo.md:19:5
    - Match: Hugo
    - Target: Hugo (xananode.example:technology/hugo)
    - Replacement: [Hugo](hugo)
    - Approved: false
 
-52. content\concepts\substrate-node-record.md:15:212
+38. content\sources\xananode-hugo-repo.md:19:104
+   - Match: XanaNode
+   - Target: XanaNode (xananode.example:concept/xananode)
+   - Replacement: [XanaNode](xananode)
+   - Approved: false
+
+39. content\schemas\xananode-relationship-types.md:15:208
+   - Match: deep-linking
+   - Target: Deep Linking (xananode.example:concept/deep-linking)
+   - Replacement: [deep-linking](deep-linking)
+   - Approved: false
+
+40. content\schemas\namespace-schema.md:19:6
+   - Match: support
+   - Target: Support (xananode.example:source/source-support)
+   - Replacement: [support](source-support)
+   - Approved: false
+
+41. content\projects\memex.md:13:38
+   - Match: associative trails
+   - Target: Associative Trails (example.minimal:concept/associative-trails)
+   - Replacement: [associative trails](example.minimal:concept/associative-trails)
+   - Approved: false
+
+42. content\essays\using-hugo-with-protocol-json.md:18:13
+   - Match: static publishing
+   - Target: Static Publishing (xananode.example:technology/static-publishing)
+   - Replacement: [static publishing](static-publishing)
+   - Approved: false
+
+43. content\essays\using-hugo-with-protocol-json.md:36:215
+   - Match: XanaNode
+   - Target: XanaNode (xananode.example:concept/xananode)
+   - Replacement: [XanaNode](xananode)
+   - Approved: false
+
+44. content\essays\using-hugo-with-protocol-json.md:35:180
+   - Match: typed relationships
+   - Target: Typed Relationships (xananode.example:concept/typed-relationships)
+   - Replacement: [typed relationships](typed-relationships)
+   - Approved: false
+
+45. content\essays\using-hugo-with-protocol-json.md:35:233
+   - Match: transclusion
+   - Target: Transclusion (xananode.example:concept/transclusion)
+   - Replacement: [transclusion](transclusion)
+   - Approved: false
+
+46. content\essays\using-hugo-with-protocol-json.md:35:146
+   - Match: substrate manifest
+   - Target: Substrate Manifest (xananode.example:concept/substrate-manifest)
+   - Replacement: [substrate manifest](substrate-manifest)
+   - Approved: false
+
+47. content\essays\using-hugo-with-protocol-json.md:36:147
+   - Match: FRESS
+   - Target: FRESS (xananode.lineage:project/fress)
+   - Replacement: [FRESS](xananode.lineage:project/fress)
+   - Approved: false
+
+48. content\essays\using-hugo-with-protocol-json.md:36:154
+   - Match: Intermedia
+   - Target: Intermedia (xananode.lineage:project/intermedia)
+   - Replacement: [Intermedia](xananode.lineage:project/intermedia)
+   - Approved: false
+
+49. content\essays\using-hugo-with-protocol-json.md:36:177
+   - Match: Hyperland
+   - Target: Hyperland (xananode.lineage:publication/hyperland)
+   - Replacement: [Hyperland](xananode.lineage:publication/hyperland)
+   - Approved: false
+
+50. content\essays\using-hugo-with-protocol-json.md:36:192
+   - Match: TED2
+   - Target: TED2 (xananode.lineage:event/ted2-1990)
+   - Replacement: [TED2](xananode.lineage:event/ted2-1990)
+   - Approved: false
+
+51. content\essays\using-hugo-with-protocol-json.md:36:166
+   - Match: HyperCard
+   - Target: HyperCard (xananode.lineage:technology/hypercard)
+   - Replacement: [HyperCard](xananode.lineage:technology/hypercard)
+   - Approved: false
+
+52. content\essays\start-here.md:34:23
+   - Match: Hugo
+   - Target: Hugo (xananode.example:technology/hugo)
+   - Replacement: [Hugo](hugo)
+   - Approved: false
+
+53. content\concepts\substrate-node-record.md:15:212
    - Match: HTML
    - Target: HTML (xananode.lineage:technology/html)
    - Replacement: [HTML](xananode.lineage:technology/html)
    - Approved: false
 
-53. content\concepts\knowledge-substrate.md:17:3
+54. content\concepts\knowledge-substrate.md:17:3
    - Match: knowledge substrate
    - Target: Knowledge Substrate (example.minimal:concept/knowledge-substrate)
    - Replacement: [knowledge substrate](example.minimal:concept/knowledge-substrate)

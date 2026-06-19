@@ -302,6 +302,39 @@
         schema: { bg: "#f7f7f7", fg: "#111827", outline: "#ffffff" }
     };
 
+    function sourcePlatformFor(url) {
+        try {
+            const parsed = new URL(url);
+            const host = parsed.hostname.replace(/^www\./, "").toLowerCase();
+            const path = parsed.pathname.toLowerCase();
+
+            if (host === "github.com" && path.startsWith("/sponsors/")) {
+                return { key: "support", label: "Support", glyph: "$", color: "#55d6be", text: "#04201a" };
+            }
+            if (host === "github.com") return { key: "github", label: "GitHub", glyph: "GH", color: "#f8fafc", text: "#0f172a" };
+            if (host === "youtube.com" || host === "youtu.be") return { key: "youtube", label: "YouTube", glyph: "YT", color: "#ff0033", text: "#ffffff" };
+            if (host === "x.com" || host === "twitter.com") return { key: "x", label: "X", glyph: "X", color: "#f8fafc", text: "#0f172a" };
+            if (host === "linkedin.com") return { key: "linkedin", label: "LinkedIn", glyph: "in", color: "#0a66c2", text: "#ffffff" };
+            if (host === "mastodon.social" || host.endsWith(".social")) return { key: "social", label: "Social", glyph: "@", color: "#6364ff", text: "#ffffff" };
+            if (host.includes("patreon")) return { key: "support", label: "Support", glyph: "$", color: "#ff424d", text: "#ffffff" };
+            if (host.includes("opencollective")) return { key: "support", label: "Support", glyph: "$", color: "#7fadf2", text: "#071827" };
+
+            return { key: "web", label: "Website", glyph: "↗", color: "#55d6be", text: "#04201a" };
+        } catch (_) {
+            return null;
+        }
+    }
+
+    function sourcePlatformBadgeSvg(platform) {
+        if (!platform) return "";
+        const glyph = escapeHtml(platform.glyph || "↗");
+        const color = platform.color || "#55d6be";
+        const text = platform.text || "#04201a";
+        const fontSize = glyph.length > 1 ? 13 : 17;
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect x="2" y="2" width="28" height="28" rx="8" fill="${color}" stroke="rgba(5,7,10,.72)" stroke-width="2"/><text x="16" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="${fontSize}" font-weight="800" fill="${text}">${glyph}</text></svg>`;
+        return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+    }
+
     loadCytoscape()
         .then(() => Promise.all([
             loadViewerData(),
@@ -1321,6 +1354,12 @@
 
         allNodes.forEach((node) => {
             node.media_warning = "";
+            const platform = node.source_url ? sourcePlatformFor(node.source_url) : null;
+            if (platform) {
+                node.source_platform = platform.key;
+                node.source_platform_label = platform.label;
+                node.source_icon_svg = sourcePlatformBadgeSvg(platform);
+            }
 
             if (node.type === "media" && node.file && isVisualAsset(node.file, node.media_type)) {
                 node.image = node.file;
@@ -1645,6 +1684,7 @@
                     classes: [
                         node.type || "node",
                         (node.image && isVisualMedia) ? "has-image" : "",
+                        (node.source_icon_svg && !(node.image && isVisualMedia)) ? "external-source" : "",
                         isContain ? "image-contain" : "",
                         searchMatchIds.has(node.id) ? "search-match" : "",
                         node.id === state.focusId ? "focused-node" : `distance-${visible.distances[node.id] || 0}`,
@@ -3182,7 +3222,23 @@
 
         if (!rows.length) return "";
 
-        return `<div class="xana-source-info"><table class="xana-source-table">${rows.join("")}</table></div>`;
+        return `<div class="xana-source-info">${renderSourceActions(node)}<table class="xana-source-table">${rows.join("")}</table></div>`;
+    }
+
+    function renderSourceActions(node) {
+        if (!node.source_url) return "";
+        const label = node.source_platform_label || "Open source";
+        const platform = node.source_platform || "web";
+        const glyph = sourcePlatformFor(node.source_url)?.glyph || "↗";
+
+        return `
+            <div class="xana-source-actions">
+                <a class="xana-source-chip" data-platform="${escapeHtml(platform)}" href="${escapeHtml(node.source_url)}" target="_blank" rel="noopener noreferrer">
+                    <span class="xana-source-chip-icon" aria-hidden="true">${escapeHtml(glyph)}</span>
+                    <span>${escapeHtml(label)}</span>
+                </a>
+            </div>
+        `;
     }
 
     function relationshipList(edges, otherKey, allNodes) {
@@ -4655,6 +4711,18 @@
                     height: 72,
                     "text-max-width": 190
                 })
+            },
+            {
+                selector: ".external-source",
+                style: {
+                    "background-image": "data(source_icon_svg)",
+                    "background-fit": "none",
+                    "background-width": "24px",
+                    "background-height": "24px",
+                    "background-position-x": "10px",
+                    "background-position-y": "10px",
+                    "background-repeat": "no-repeat"
+                }
             },
             {
                 selector: ".person",

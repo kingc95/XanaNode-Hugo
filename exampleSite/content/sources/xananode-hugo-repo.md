@@ -16,4 +16,4 @@ relationships:
     target: "xananode-core-schema"
 ---
 
-The Hugo repository is the static-site renderer and example substrate. It adapts Hugo content, shortcodes, and assets into Core-validated XanaNode artifacts.
+The Hugo repository contains the public-site theme, example substrate, and graph viewer for publishing XanaNode substrates on a static host.

@@ -4,7 +4,7 @@
   "type": "project",
   "status": "prototype",
   "importance": 4,
-  "summary": "A static-site reference implementation that reads XanaNode content files and renders them as a navigable graph.",
+  "summary": "A Hugo theme that publishes XanaNode substrates as readable pages and a navigable graph.",
   "primary_media": "xananode.example:media/xananode-icon",
   "relationships": [
     {

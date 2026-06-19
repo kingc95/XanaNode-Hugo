@@ -19,7 +19,7 @@ Hugo is the static publishing layer. It is not the protocol.
 
 Use Markdown when you want prose pages, essays, explainers, sources, or authored trails. Use protocol JSON when you already have validated substrate records from Core, Workspace, another tool, or another substrate.
 
-The import path is intentionally simple. Drop a pack into the site, then let the prepare step merge it into the generated substrate:
+The import path is intentionally simple. Drop a pack into the site, then let the build compose it with the local substrate:
 
 ```text
 imports/
@@ -44,7 +44,7 @@ npm run validate
 npm run build
 ```
 
-The prepare step validates the generated and imported records together, writes the protocol artifacts, and emits a browser-ready viewer feed.
+The build validates local and imported records together, writes the protocol artifacts, and emits the viewer feed.
 
 The important published files are:
 
@@ -58,8 +58,8 @@ The important published files are:
 
 `/substrate.json`, `/nodes/*.json`, and `/relationships.json` are the protocol artifacts. `/nodes-index.json` makes the node files discoverable on a static host, because browsers cannot list a directory. `/xananode-viewer.json` is the read-only browser bundle derived from those protocol records.
 
-That means you do not need to recreate imported records as Markdown just to see them. Markdown is for authored human pages. JSON imports are for existing protocol objects.
+Imported records do not need duplicate Markdown pages just to appear in the graph. Markdown is for authored prose; JSON imports are for existing protocol objects.
 
-Core remains responsible for protocol intelligence. During prepare, Hugo hands Core the existing substrate and the incoming packs so Core can report possible same-entity merges, relationships that touch existing nodes, possible links from prose to known nodes, and possible transclusions. Hugo is the renderer and static-site adapter; Core is where the reusable substrate analysis belongs.
+Core remains responsible for protocol intelligence: same-entity merge candidates, imported relationships touching existing nodes, possible prose links, and possible transclusions. Hugo publishes the result.
 
-This is the pattern for a new site: mount the base pack if you want a known-good skeleton, drop in generated JSON from Core or Workspace, write Markdown only where you want human-authored pages, then publish the generated protocol artifacts with the static viewer.
+For a new site: mount the base pack if you want a known-good skeleton, add JSON from Core or Workspace, write Markdown where you want authored pages, then publish the protocol artifacts with the static viewer.

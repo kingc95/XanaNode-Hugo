@@ -3,7 +3,7 @@
   "title": "Hugo",
   "type": "technology",
   "importance": 3,
-  "summary": "A static site generator used by the example implementation to compile content into a public substrate viewer.",
+  "summary": "A static site generator used to publish XanaNode substrates as public websites.",
   "relationships": [
     {
       "id": "xananode.example:rel/hugo-implements-static-publishing-26",

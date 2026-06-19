@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T04:49:42.541Z",
+  "generated_at": "2026-06-19T07:29:15.864Z",
   "nodes": {
     "xananode-implementation-stack-trail": {
       "versions": {
@@ -147,15 +147,15 @@
       "versions": {
         "v1": {
           "fragments": {
-            "1": "Hugo provides the static publishing layer for this example implementation.",
-            "0001": "Hugo provides the static publishing layer for this example implementation."
+            "1": "Hugo provides the static publishing layer for XanaNode sites.",
+            "0001": "Hugo provides the static publishing layer for XanaNode sites."
           },
           "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "Hugo provides the static publishing layer for this example implementation.",
-            "0001": "Hugo provides the static publishing layer for this example implementation."
+            "1": "Hugo provides the static publishing layer for XanaNode sites.",
+            "0001": "Hugo provides the static publishing layer for XanaNode sites."
           },
           "metadata": {}
         }
@@ -247,15 +247,15 @@
       "versions": {
         "v1": {
           "fragments": {
-            "1": "The Hugo repository is the static site renderer and example substrate. It adapts Hugo content, shortcodes, and assets into Core validated XanaNode artifacts.",
-            "0001": "The Hugo repository is the static site renderer and example substrate. It adapts Hugo content, shortcodes, and assets into Core validated XanaNode artifacts."
+            "1": "The Hugo repository contains the public site theme, example substrate, and graph viewer for publishing XanaNode substrates on a static host.",
+            "0001": "The Hugo repository contains the public site theme, example substrate, and graph viewer for publishing XanaNode substrates on a static host."
           },
           "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "The Hugo repository is the static site renderer and example substrate. It adapts Hugo content, shortcodes, and assets into Core validated XanaNode artifacts.",
-            "0001": "The Hugo repository is the static site renderer and example substrate. It adapts Hugo content, shortcodes, and assets into Core validated XanaNode artifacts."
+            "1": "The Hugo repository contains the public site theme, example substrate, and graph viewer for publishing XanaNode substrates on a static host.",
+            "0001": "The Hugo repository contains the public site theme, example substrate, and graph viewer for publishing XanaNode substrates on a static host."
           },
           "metadata": {}
         }
@@ -689,17 +689,17 @@
       "versions": {
         "v1": {
           "fragments": {
-            "1": "The Hugo theme is not XanaNode itself.\n\nIt is one reference implementation: a static site generator, content folder, front matter conventions, JSON index, and graph viewer that demonstrate the XanaNode model.",
+            "1": "The Hugo theme is not XanaNode itself.\n\nIt turns substrate nodes, relationships, media, and trails into a readable public site with a graph beside the prose.",
             "0001": "The Hugo theme is not XanaNode itself.",
-            "0002": "It is one reference implementation: a static site generator, content folder, front matter conventions, JSON index, and graph viewer that demonstrate the XanaNode model."
+            "0002": "It turns substrate nodes, relationships, media, and trails into a readable public site with a graph beside the prose."
           },
           "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "The Hugo theme is not XanaNode itself.\n\nIt is one reference implementation: a static site generator, content folder, front matter conventions, JSON index, and graph viewer that demonstrate the XanaNode model.",
+            "1": "The Hugo theme is not XanaNode itself.\n\nIt turns substrate nodes, relationships, media, and trails into a readable public site with a graph beside the prose.",
             "0001": "The Hugo theme is not XanaNode itself.",
-            "0002": "It is one reference implementation: a static site generator, content folder, front matter conventions, JSON index, and graph viewer that demonstrate the XanaNode model."
+            "0002": "It turns substrate nodes, relationships, media, and trails into a readable public site with a graph beside the prose."
           },
           "metadata": {}
         }
@@ -905,41 +905,41 @@
       "versions": {
         "v1": {
           "fragments": {
-            "1": "Hugo is the static publishing layer. It is not the protocol.\n\nUse Markdown when you want prose pages, essays, explainers, sources, or authored trails. Use protocol JSON when you already have validated substrate records from Core, Workspace, another tool, or another substrate.\n\nThe import path is intentionally simple. Drop a pack into the site, then let the prepare step merge it into the generated substrate:\n\ncan contain either a single substrate node, an array of substrate nodes, or an object with a array. can contain either an array of relationships or an object with a array.\n\nThe example site uses two packs:\n\nin mounts the protocol minimal substrate from the Core/Protocol submodule. It demonstrates the base model: substrate manifest, node records, typed relationships, evidence, stable fragments, and transclusion. extends that model with the fuller human computer augmentation lineage: Leibniz, Otlet, Bush, Nelson, Engelbart, Brown, HES, FRESS, Intermedia, HyperCard, Hyperland, VR, TED2, the Web, and the XanaNode bridge concepts.\n\nMounted packs are build time layers. They can be enabled or removed without claiming local ownership of their records. Absorbed packs are reviewed imports that become part of the receiving substrate. The base pack is mounted here so the protocol repository remains its governed source of truth.\n\nThen run:\n\nThe prepare step validates the generated and imported records together, writes the protocol artifacts, and emits a browser ready viewer feed.\n\nThe important published files are:\n\n, , and are the protocol artifacts. makes the node files discoverable on a static host, because browsers cannot list a directory. is the read only browser bundle derived from those protocol records.\n\nThat means you do not need to recreate imported records as Markdown just to see them. Markdown is for authored human pages. JSON imports are for existing protocol objects.\n\nCore remains responsible for protocol intelligence. During prepare, Hugo hands Core the existing substrate and the incoming packs so Core can report possible same entity merges, relationships that touch existing nodes, possible links from prose to known nodes, and possible transclusions. Hugo is the renderer and static site adapter; Core is where the reusable substrate analysis belongs.\n\nThis is the pattern for a new site: mount the base pack if you want a known good skeleton, drop in generated JSON from Core or Workspace, write Markdown only where you want human authored pages, then publish the generated protocol artifacts with the static viewer.",
+            "1": "Hugo is the static publishing layer. It is not the protocol.\n\nUse Markdown when you want prose pages, essays, explainers, sources, or authored trails. Use protocol JSON when you already have validated substrate records from Core, Workspace, another tool, or another substrate.\n\nThe import path is intentionally simple. Drop a pack into the site, then let the build compose it with the local substrate:\n\ncan contain either a single substrate node, an array of substrate nodes, or an object with a array. can contain either an array of relationships or an object with a array.\n\nThe example site uses two packs:\n\nin mounts the protocol minimal substrate from the Core/Protocol submodule. It demonstrates the base model: substrate manifest, node records, typed relationships, evidence, stable fragments, and transclusion. extends that model with the fuller human computer augmentation lineage: Leibniz, Otlet, Bush, Nelson, Engelbart, Brown, HES, FRESS, Intermedia, HyperCard, Hyperland, VR, TED2, the Web, and the XanaNode bridge concepts.\n\nMounted packs are build time layers. They can be enabled or removed without claiming local ownership of their records. Absorbed packs are reviewed imports that become part of the receiving substrate. The base pack is mounted here so the protocol repository remains its governed source of truth.\n\nThen run:\n\nThe build validates local and imported records together, writes the protocol artifacts, and emits the viewer feed.\n\nThe important published files are:\n\n, , and are the protocol artifacts. makes the node files discoverable on a static host, because browsers cannot list a directory. is the read only browser bundle derived from those protocol records.\n\nImported records do not need duplicate Markdown pages just to appear in the graph. Markdown is for authored prose; JSON imports are for existing protocol objects.\n\nCore remains responsible for protocol intelligence: same entity merge candidates, imported relationships touching existing nodes, possible prose links, and possible transclusions. Hugo publishes the result.\n\nFor a new site: mount the base pack if you want a known good skeleton, add JSON from Core or Workspace, write Markdown where you want authored pages, then publish the protocol artifacts with the static viewer.",
             "0001": "Hugo is the static publishing layer. It is not the protocol.",
             "0002": "Use Markdown when you want prose pages, essays, explainers, sources, or authored trails. Use protocol JSON when you already have validated substrate records from Core, Workspace, another tool, or another substrate.",
-            "0003": "The import path is intentionally simple. Drop a pack into the site, then let the prepare step merge it into the generated substrate:",
+            "0003": "The import path is intentionally simple. Drop a pack into the site, then let the build compose it with the local substrate:",
             "0005": "can contain either a single substrate node, an array of substrate nodes, or an object with a array. can contain either an array of relationships or an object with a array.",
             "0006": "The example site uses two packs:",
             "0007": "in mounts the protocol minimal substrate from the Core/Protocol submodule. It demonstrates the base model: substrate manifest, node records, typed relationships, evidence, stable fragments, and transclusion. extends that model with the fuller human computer augmentation lineage: Leibniz, Otlet, Bush, Nelson, Engelbart, Brown, HES, FRESS, Intermedia, HyperCard, Hyperland, VR, TED2, the Web, and the XanaNode bridge concepts.",
             "0008": "Mounted packs are build time layers. They can be enabled or removed without claiming local ownership of their records. Absorbed packs are reviewed imports that become part of the receiving substrate. The base pack is mounted here so the protocol repository remains its governed source of truth.",
             "0009": "Then run:",
-            "0011": "The prepare step validates the generated and imported records together, writes the protocol artifacts, and emits a browser ready viewer feed.",
+            "0011": "The build validates local and imported records together, writes the protocol artifacts, and emits the viewer feed.",
             "0012": "The important published files are:",
             "0014": ", , and are the protocol artifacts. makes the node files discoverable on a static host, because browsers cannot list a directory. is the read only browser bundle derived from those protocol records.",
-            "0015": "That means you do not need to recreate imported records as Markdown just to see them. Markdown is for authored human pages. JSON imports are for existing protocol objects.",
-            "0016": "Core remains responsible for protocol intelligence. During prepare, Hugo hands Core the existing substrate and the incoming packs so Core can report possible same entity merges, relationships that touch existing nodes, possible links from prose to known nodes, and possible transclusions. Hugo is the renderer and static site adapter; Core is where the reusable substrate analysis belongs.",
-            "0017": "This is the pattern for a new site: mount the base pack if you want a known good skeleton, drop in generated JSON from Core or Workspace, write Markdown only where you want human authored pages, then publish the generated protocol artifacts with the static viewer."
+            "0015": "Imported records do not need duplicate Markdown pages just to appear in the graph. Markdown is for authored prose; JSON imports are for existing protocol objects.",
+            "0016": "Core remains responsible for protocol intelligence: same entity merge candidates, imported relationships touching existing nodes, possible prose links, and possible transclusions. Hugo publishes the result.",
+            "0017": "For a new site: mount the base pack if you want a known good skeleton, add JSON from Core or Workspace, write Markdown where you want authored pages, then publish the protocol artifacts with the static viewer."
           },
           "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "Hugo is the static publishing layer. It is not the protocol.\n\nUse Markdown when you want prose pages, essays, explainers, sources, or authored trails. Use protocol JSON when you already have validated substrate records from Core, Workspace, another tool, or another substrate.\n\nThe import path is intentionally simple. Drop a pack into the site, then let the prepare step merge it into the generated substrate:\n\ncan contain either a single substrate node, an array of substrate nodes, or an object with a array. can contain either an array of relationships or an object with a array.\n\nThe example site uses two packs:\n\nin mounts the protocol minimal substrate from the Core/Protocol submodule. It demonstrates the base model: substrate manifest, node records, typed relationships, evidence, stable fragments, and transclusion. extends that model with the fuller human computer augmentation lineage: Leibniz, Otlet, Bush, Nelson, Engelbart, Brown, HES, FRESS, Intermedia, HyperCard, Hyperland, VR, TED2, the Web, and the XanaNode bridge concepts.\n\nMounted packs are build time layers. They can be enabled or removed without claiming local ownership of their records. Absorbed packs are reviewed imports that become part of the receiving substrate. The base pack is mounted here so the protocol repository remains its governed source of truth.\n\nThen run:\n\nThe prepare step validates the generated and imported records together, writes the protocol artifacts, and emits a browser ready viewer feed.\n\nThe important published files are:\n\n, , and are the protocol artifacts. makes the node files discoverable on a static host, because browsers cannot list a directory. is the read only browser bundle derived from those protocol records.\n\nThat means you do not need to recreate imported records as Markdown just to see them. Markdown is for authored human pages. JSON imports are for existing protocol objects.\n\nCore remains responsible for protocol intelligence. During prepare, Hugo hands Core the existing substrate and the incoming packs so Core can report possible same entity merges, relationships that touch existing nodes, possible links from prose to known nodes, and possible transclusions. Hugo is the renderer and static site adapter; Core is where the reusable substrate analysis belongs.\n\nThis is the pattern for a new site: mount the base pack if you want a known good skeleton, drop in generated JSON from Core or Workspace, write Markdown only where you want human authored pages, then publish the generated protocol artifacts with the static viewer.",
+            "1": "Hugo is the static publishing layer. It is not the protocol.\n\nUse Markdown when you want prose pages, essays, explainers, sources, or authored trails. Use protocol JSON when you already have validated substrate records from Core, Workspace, another tool, or another substrate.\n\nThe import path is intentionally simple. Drop a pack into the site, then let the build compose it with the local substrate:\n\ncan contain either a single substrate node, an array of substrate nodes, or an object with a array. can contain either an array of relationships or an object with a array.\n\nThe example site uses two packs:\n\nin mounts the protocol minimal substrate from the Core/Protocol submodule. It demonstrates the base model: substrate manifest, node records, typed relationships, evidence, stable fragments, and transclusion. extends that model with the fuller human computer augmentation lineage: Leibniz, Otlet, Bush, Nelson, Engelbart, Brown, HES, FRESS, Intermedia, HyperCard, Hyperland, VR, TED2, the Web, and the XanaNode bridge concepts.\n\nMounted packs are build time layers. They can be enabled or removed without claiming local ownership of their records. Absorbed packs are reviewed imports that become part of the receiving substrate. The base pack is mounted here so the protocol repository remains its governed source of truth.\n\nThen run:\n\nThe build validates local and imported records together, writes the protocol artifacts, and emits the viewer feed.\n\nThe important published files are:\n\n, , and are the protocol artifacts. makes the node files discoverable on a static host, because browsers cannot list a directory. is the read only browser bundle derived from those protocol records.\n\nImported records do not need duplicate Markdown pages just to appear in the graph. Markdown is for authored prose; JSON imports are for existing protocol objects.\n\nCore remains responsible for protocol intelligence: same entity merge candidates, imported relationships touching existing nodes, possible prose links, and possible transclusions. Hugo publishes the result.\n\nFor a new site: mount the base pack if you want a known good skeleton, add JSON from Core or Workspace, write Markdown where you want authored pages, then publish the protocol artifacts with the static viewer.",
             "0001": "Hugo is the static publishing layer. It is not the protocol.",
             "0002": "Use Markdown when you want prose pages, essays, explainers, sources, or authored trails. Use protocol JSON when you already have validated substrate records from Core, Workspace, another tool, or another substrate.",
-            "0003": "The import path is intentionally simple. Drop a pack into the site, then let the prepare step merge it into the generated substrate:",
+            "0003": "The import path is intentionally simple. Drop a pack into the site, then let the build compose it with the local substrate:",
             "0005": "can contain either a single substrate node, an array of substrate nodes, or an object with a array. can contain either an array of relationships or an object with a array.",
             "0006": "The example site uses two packs:",
             "0007": "in mounts the protocol minimal substrate from the Core/Protocol submodule. It demonstrates the base model: substrate manifest, node records, typed relationships, evidence, stable fragments, and transclusion. extends that model with the fuller human computer augmentation lineage: Leibniz, Otlet, Bush, Nelson, Engelbart, Brown, HES, FRESS, Intermedia, HyperCard, Hyperland, VR, TED2, the Web, and the XanaNode bridge concepts.",
             "0008": "Mounted packs are build time layers. They can be enabled or removed without claiming local ownership of their records. Absorbed packs are reviewed imports that become part of the receiving substrate. The base pack is mounted here so the protocol repository remains its governed source of truth.",
             "0009": "Then run:",
-            "0011": "The prepare step validates the generated and imported records together, writes the protocol artifacts, and emits a browser ready viewer feed.",
+            "0011": "The build validates local and imported records together, writes the protocol artifacts, and emits the viewer feed.",
             "0012": "The important published files are:",
             "0014": ", , and are the protocol artifacts. makes the node files discoverable on a static host, because browsers cannot list a directory. is the read only browser bundle derived from those protocol records.",
-            "0015": "That means you do not need to recreate imported records as Markdown just to see them. Markdown is for authored human pages. JSON imports are for existing protocol objects.",
-            "0016": "Core remains responsible for protocol intelligence. During prepare, Hugo hands Core the existing substrate and the incoming packs so Core can report possible same entity merges, relationships that touch existing nodes, possible links from prose to known nodes, and possible transclusions. Hugo is the renderer and static site adapter; Core is where the reusable substrate analysis belongs.",
-            "0017": "This is the pattern for a new site: mount the base pack if you want a known good skeleton, drop in generated JSON from Core or Workspace, write Markdown only where you want human authored pages, then publish the generated protocol artifacts with the static viewer."
+            "0015": "Imported records do not need duplicate Markdown pages just to appear in the graph. Markdown is for authored prose; JSON imports are for existing protocol objects.",
+            "0016": "Core remains responsible for protocol intelligence: same entity merge candidates, imported relationships touching existing nodes, possible prose links, and possible transclusions. Hugo publishes the result.",
+            "0017": "For a new site: mount the base pack if you want a known good skeleton, add JSON from Core or Workspace, write Markdown where you want authored pages, then publish the protocol artifacts with the static viewer."
           },
           "metadata": {}
         }
@@ -951,25 +951,25 @@
       "versions": {
         "v1": {
           "fragments": {
-            "1": "XanaNode begins with a simple claim: civilization is good at publishing information and bad at preserving the relationships that make information understandable.\n\nA page can say something. A graph can show where that statement came from, what supports it, what challenges it, what it depends on, and how it changed.\n\nThis example substrate explains XanaNode using XanaNode itself. The pages are human readable nodes, and the build also imports protocol JSON packs, validates everything together, and republishes the merged substrate for machines.\n\nFollow the core trail from the problem of isolated documents, through typed relationships, provenance, transclusion, namespacing, merge validation, and federation.\n\nThen follow the protocol artifacts trail to see the manifest, node records, relationship list, schemas, registries, extension examples, reports, and governance rules that make federation concrete.\n\nIf you are building a Hugo site from existing protocol JSON, read Using Hugo with Protocol JSON. The bundled example imports the protocol base pack and the extended XanaNode lineage pack directly from JSON, then renders them in the 2D viewer without forcing you to recreate every node as Markdown.",
+            "1": "XanaNode begins with a simple claim: civilization is good at publishing information and bad at preserving the relationships that make information understandable.\n\nA page can say something. A graph can show where that statement came from, what supports it, what challenges it, what it depends on, and how it changed.\n\nThis substrate explains XanaNode using XanaNode itself. Each page is a node, and the graph around it carries the claims, sources, lineage, and relationships that make the page understandable.\n\nFollow the core trail from the problem of isolated documents, through typed relationships, provenance, transclusion, namespacing, merge validation, and federation.\n\nThen follow the protocol artifacts trail to see the manifest, node records, relationship list, schemas, registries, extension examples, reports, and governance rules that make federation concrete.\n\nIf you are building a Hugo site from existing protocol JSON, read Using Hugo with Protocol JSON.",
             "0001": "XanaNode begins with a simple claim: civilization is good at publishing information and bad at preserving the relationships that make information understandable.",
             "0002": "A page can say something. A graph can show where that statement came from, what supports it, what challenges it, what it depends on, and how it changed.",
-            "0003": "This example substrate explains XanaNode using XanaNode itself. The pages are human readable nodes, and the build also imports protocol JSON packs, validates everything together, and republishes the merged substrate for machines.",
+            "0003": "This substrate explains XanaNode using XanaNode itself. Each page is a node, and the graph around it carries the claims, sources, lineage, and relationships that make the page understandable.",
             "0004": "Follow the core trail from the problem of isolated documents, through typed relationships, provenance, transclusion, namespacing, merge validation, and federation.",
             "0005": "Then follow the protocol artifacts trail to see the manifest, node records, relationship list, schemas, registries, extension examples, reports, and governance rules that make federation concrete.",
-            "0006": "If you are building a Hugo site from existing protocol JSON, read Using Hugo with Protocol JSON. The bundled example imports the protocol base pack and the extended XanaNode lineage pack directly from JSON, then renders them in the 2D viewer without forcing you to recreate every node as Markdown."
+            "0006": "If you are building a Hugo site from existing protocol JSON, read Using Hugo with Protocol JSON."
           },
           "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "XanaNode begins with a simple claim: civilization is good at publishing information and bad at preserving the relationships that make information understandable.\n\nA page can say something. A graph can show where that statement came from, what supports it, what challenges it, what it depends on, and how it changed.\n\nThis example substrate explains XanaNode using XanaNode itself. The pages are human readable nodes, and the build also imports protocol JSON packs, validates everything together, and republishes the merged substrate for machines.\n\nFollow the core trail from the problem of isolated documents, through typed relationships, provenance, transclusion, namespacing, merge validation, and federation.\n\nThen follow the protocol artifacts trail to see the manifest, node records, relationship list, schemas, registries, extension examples, reports, and governance rules that make federation concrete.\n\nIf you are building a Hugo site from existing protocol JSON, read Using Hugo with Protocol JSON. The bundled example imports the protocol base pack and the extended XanaNode lineage pack directly from JSON, then renders them in the 2D viewer without forcing you to recreate every node as Markdown.",
+            "1": "XanaNode begins with a simple claim: civilization is good at publishing information and bad at preserving the relationships that make information understandable.\n\nA page can say something. A graph can show where that statement came from, what supports it, what challenges it, what it depends on, and how it changed.\n\nThis substrate explains XanaNode using XanaNode itself. Each page is a node, and the graph around it carries the claims, sources, lineage, and relationships that make the page understandable.\n\nFollow the core trail from the problem of isolated documents, through typed relationships, provenance, transclusion, namespacing, merge validation, and federation.\n\nThen follow the protocol artifacts trail to see the manifest, node records, relationship list, schemas, registries, extension examples, reports, and governance rules that make federation concrete.\n\nIf you are building a Hugo site from existing protocol JSON, read Using Hugo with Protocol JSON.",
             "0001": "XanaNode begins with a simple claim: civilization is good at publishing information and bad at preserving the relationships that make information understandable.",
             "0002": "A page can say something. A graph can show where that statement came from, what supports it, what challenges it, what it depends on, and how it changed.",
-            "0003": "This example substrate explains XanaNode using XanaNode itself. The pages are human readable nodes, and the build also imports protocol JSON packs, validates everything together, and republishes the merged substrate for machines.",
+            "0003": "This substrate explains XanaNode using XanaNode itself. Each page is a node, and the graph around it carries the claims, sources, lineage, and relationships that make the page understandable.",
             "0004": "Follow the core trail from the problem of isolated documents, through typed relationships, provenance, transclusion, namespacing, merge validation, and federation.",
             "0005": "Then follow the protocol artifacts trail to see the manifest, node records, relationship list, schemas, registries, extension examples, reports, and governance rules that make federation concrete.",
-            "0006": "If you are building a Hugo site from existing protocol JSON, read Using Hugo with Protocol JSON. The bundled example imports the protocol base pack and the extended XanaNode lineage pack directly from JSON, then renders them in the 2D viewer without forcing you to recreate every node as Markdown."
+            "0006": "If you are building a Hugo site from existing protocol JSON, read Using Hugo with Protocol JSON."
           },
           "metadata": {}
         }
@@ -1111,19 +1111,19 @@
       "versions": {
         "v1": {
           "fragments": {
-            "1": "is the edge list for a substrate.\n\nEach relationship has its own id, source, target, type, and summary. It can also carry weight, visibility, assertion provenance, confidence, evidence, federation metadata, and tumbler references.\n\nThis implementation derives the protocol relationship list from authored front matter, primary media links, trail membership, and stable transclusion shortcodes.",
+            "1": "is the edge list for a substrate.\n\nEach relationship has its own id, source, target, type, and summary. It can also carry weight, visibility, assertion provenance, confidence, evidence, federation metadata, and tumbler references.\n\nA relationship list can be authored directly, imported from packs, or derived from structured content such as primary media links, trail membership, and stable transclusion references.",
             "0001": "is the edge list for a substrate.",
             "0002": "Each relationship has its own id, source, target, type, and summary. It can also carry weight, visibility, assertion provenance, confidence, evidence, federation metadata, and tumbler references.",
-            "0003": "This implementation derives the protocol relationship list from authored front matter, primary media links, trail membership, and stable transclusion shortcodes."
+            "0003": "A relationship list can be authored directly, imported from packs, or derived from structured content such as primary media links, trail membership, and stable transclusion references."
           },
           "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "is the edge list for a substrate.\n\nEach relationship has its own id, source, target, type, and summary. It can also carry weight, visibility, assertion provenance, confidence, evidence, federation metadata, and tumbler references.\n\nThis implementation derives the protocol relationship list from authored front matter, primary media links, trail membership, and stable transclusion shortcodes.",
+            "1": "is the edge list for a substrate.\n\nEach relationship has its own id, source, target, type, and summary. It can also carry weight, visibility, assertion provenance, confidence, evidence, federation metadata, and tumbler references.\n\nA relationship list can be authored directly, imported from packs, or derived from structured content such as primary media links, trail membership, and stable transclusion references.",
             "0001": "is the edge list for a substrate.",
             "0002": "Each relationship has its own id, source, target, type, and summary. It can also carry weight, visibility, assertion provenance, confidence, evidence, federation metadata, and tumbler references.",
-            "0003": "This implementation derives the protocol relationship list from authored front matter, primary media links, trail membership, and stable transclusion shortcodes."
+            "0003": "A relationship list can be authored directly, imported from packs, or derived from structured content such as primary media links, trail membership, and stable transclusion references."
           },
           "metadata": {}
         }
@@ -1135,19 +1135,19 @@
       "versions": {
         "v1": {
           "fragments": {
-            "1": "A node record is the machine readable counterpart to a human readable page.\n\nIt preserves the protocol id, title, type, importance, summary, provenance fields, and incoming or outgoing relationship summaries needed for tools to traverse the substrate without scraping HTML.\n\nFor authored fragments, this implementation also emits protocol node records with , , , and metadata.",
+            "1": "A node record is the machine readable counterpart to a human readable page.\n\nIt preserves the protocol id, title, type, importance, summary, provenance fields, and incoming or outgoing relationship summaries needed for tools to traverse the substrate without scraping HTML.\n\nAddressable fragments can also be published as protocol node records with , , , and metadata.",
             "0001": "A node record is the machine readable counterpart to a human readable page.",
             "0002": "It preserves the protocol id, title, type, importance, summary, provenance fields, and incoming or outgoing relationship summaries needed for tools to traverse the substrate without scraping HTML.",
-            "0003": "For authored fragments, this implementation also emits protocol node records with , , , and metadata."
+            "0003": "Addressable fragments can also be published as protocol node records with , , , and metadata."
           },
           "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "A node record is the machine readable counterpart to a human readable page.\n\nIt preserves the protocol id, title, type, importance, summary, provenance fields, and incoming or outgoing relationship summaries needed for tools to traverse the substrate without scraping HTML.\n\nFor authored fragments, this implementation also emits protocol node records with , , , and metadata.",
+            "1": "A node record is the machine readable counterpart to a human readable page.\n\nIt preserves the protocol id, title, type, importance, summary, provenance fields, and incoming or outgoing relationship summaries needed for tools to traverse the substrate without scraping HTML.\n\nAddressable fragments can also be published as protocol node records with , , , and metadata.",
             "0001": "A node record is the machine readable counterpart to a human readable page.",
             "0002": "It preserves the protocol id, title, type, importance, summary, provenance fields, and incoming or outgoing relationship summaries needed for tools to traverse the substrate without scraping HTML.",
-            "0003": "For authored fragments, this implementation also emits protocol node records with , , , and metadata."
+            "0003": "Addressable fragments can also be published as protocol node records with , , , and metadata."
           },
           "metadata": {}
         }
@@ -1233,18 +1233,18 @@
       "versions": {
         "v1": {
           "fragments": {
-            "1": "The suggestion scanner looks for existing node titles and aliases in Markdown content, plus repeated fragment text that could become a transclusion.\n\nIt does not rewrite pages automatically. It produces a review queue so an author can approve each ordinary link, transclusion, merge, or imported relationship before changing the substrate. The generated review page keeps implemented examples beside pending suggestions so a new site author can see both states of the workflow.\n\n{{< review suggestions }}",
+            "1": "The suggestion scanner looks for existing node titles and aliases in Markdown content, plus repeated fragment text that could become a transclusion.\n\nReview suggestions are invitations, not automatic edits. The review queue lets an author decide which ordinary links, transclusions, merge candidates, or imported relationships should become part of the substrate.\n\n{{< review suggestions }}",
             "0001": "The suggestion scanner looks for existing node titles and aliases in Markdown content, plus repeated fragment text that could become a transclusion.",
-            "0002": "It does not rewrite pages automatically. It produces a review queue so an author can approve each ordinary link, transclusion, merge, or imported relationship before changing the substrate. The generated review page keeps implemented examples beside pending suggestions so a new site author can see both states of the workflow.",
+            "0002": "Review suggestions are invitations, not automatic edits. The review queue lets an author decide which ordinary links, transclusions, merge candidates, or imported relationships should become part of the substrate.",
             "0003": "{{< review suggestions }}"
           },
           "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "The suggestion scanner looks for existing node titles and aliases in Markdown content, plus repeated fragment text that could become a transclusion.\n\nIt does not rewrite pages automatically. It produces a review queue so an author can approve each ordinary link, transclusion, merge, or imported relationship before changing the substrate. The generated review page keeps implemented examples beside pending suggestions so a new site author can see both states of the workflow.\n\n{{< review suggestions }}",
+            "1": "The suggestion scanner looks for existing node titles and aliases in Markdown content, plus repeated fragment text that could become a transclusion.\n\nReview suggestions are invitations, not automatic edits. The review queue lets an author decide which ordinary links, transclusions, merge candidates, or imported relationships should become part of the substrate.\n\n{{< review suggestions }}",
             "0001": "The suggestion scanner looks for existing node titles and aliases in Markdown content, plus repeated fragment text that could become a transclusion.",
-            "0002": "It does not rewrite pages automatically. It produces a review queue so an author can approve each ordinary link, transclusion, merge, or imported relationship before changing the substrate. The generated review page keeps implemented examples beside pending suggestions so a new site author can see both states of the workflow.",
+            "0002": "Review suggestions are invitations, not automatic edits. The review queue lets an author decide which ordinary links, transclusions, merge candidates, or imported relationships should become part of the substrate.",
             "0003": "{{< review suggestions }}"
           },
           "metadata": {}
@@ -1279,18 +1279,18 @@
       "versions": {
         "v1": {
           "fragments": {
-            "1": "The protocol is not only a set of ideas. It is a set of publishable artifacts.\n\nThis implementation publishes those artifacts as static JSON: , , one JSON record per node, copied schema files, generated fragment data, and pending review suggestions.\n\nHuman pages make the substrate readable. Protocol artifacts make it inspectable, validatable, comparable, and federatable by other tools.",
+            "1": "The protocol is not only a set of ideas. It is a set of publishable artifacts.\n\nA published substrate can expose those artifacts as static JSON: , , one JSON record per node, schema files, fragment data, and pending review suggestions.\n\nHuman pages make the substrate readable. Protocol artifacts make it inspectable, validatable, comparable, and federatable by other tools.",
             "0001": "The protocol is not only a set of ideas. It is a set of publishable artifacts.",
-            "0002": "This implementation publishes those artifacts as static JSON: , , one JSON record per node, copied schema files, generated fragment data, and pending review suggestions.",
+            "0002": "A published substrate can expose those artifacts as static JSON: , , one JSON record per node, schema files, fragment data, and pending review suggestions.",
             "0003": "Human pages make the substrate readable. Protocol artifacts make it inspectable, validatable, comparable, and federatable by other tools."
           },
           "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "The protocol is not only a set of ideas. It is a set of publishable artifacts.\n\nThis implementation publishes those artifacts as static JSON: , , one JSON record per node, copied schema files, generated fragment data, and pending review suggestions.\n\nHuman pages make the substrate readable. Protocol artifacts make it inspectable, validatable, comparable, and federatable by other tools.",
+            "1": "The protocol is not only a set of ideas. It is a set of publishable artifacts.\n\nA published substrate can expose those artifacts as static JSON: , , one JSON record per node, schema files, fragment data, and pending review suggestions.\n\nHuman pages make the substrate readable. Protocol artifacts make it inspectable, validatable, comparable, and federatable by other tools.",
             "0001": "The protocol is not only a set of ideas. It is a set of publishable artifacts.",
-            "0002": "This implementation publishes those artifacts as static JSON: , , one JSON record per node, copied schema files, generated fragment data, and pending review suggestions.",
+            "0002": "A published substrate can expose those artifacts as static JSON: , , one JSON record per node, schema files, fragment data, and pending review suggestions.",
             "0003": "Human pages make the substrate readable. Protocol artifacts make it inspectable, validatable, comparable, and federatable by other tools."
           },
           "metadata": {}
