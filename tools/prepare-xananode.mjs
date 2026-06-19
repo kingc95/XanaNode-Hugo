@@ -1027,13 +1027,41 @@ for (const node of nodes.values()) {
   nodeLookup.set(node.protocolId, node);
   nodeLookup.set(node.data.protocol_id, node);
 }
+const importedNodeLookup = new Map(importedNodes.map((node) => [node.id, node]));
 
 function resolveNodeRef(ref) {
-  return nodeLookup.get(String(ref || "").trim()) || null;
+  const normalized = String(ref || "").trim();
+  return nodeLookup.get(normalized) || importedNodeLookup.get(normalized) || null;
 }
 
 function resolveNodeId(ref) {
-  return resolveNodeRef(ref)?.id || String(ref || "");
+  const node = resolveNodeRef(ref);
+  if (!node) return String(ref || "");
+  return node.protocolId || node.id;
+}
+
+function authoredEdgeNode(id) {
+  const localNode = nodes.get(id) || nodeLookup.get(id);
+  if (localNode) {
+    return {
+      id: localNode.id,
+      protocolId: localNode.protocolId,
+      title: localNode.data.title,
+      data: localNode.data,
+      local: true
+    };
+  }
+  const importedNode = importedNodeLookup.get(id);
+  if (importedNode) {
+    return {
+      id: importedNode.id,
+      protocolId: importedNode.id,
+      title: importedNode.title,
+      data: importedNode,
+      local: false
+    };
+  }
+  return null;
 }
 
 for (const node of nodes.values()) {
@@ -1133,8 +1161,8 @@ for (const edge of authoredEdges) {
 }
 
 const authoredProtocolEdges = authoredEdges.map((edge, index) => {
-  const sourceNode = nodes.get(edge.source);
-  const targetNode = nodes.get(edge.target);
+  const sourceNode = authoredEdgeNode(edge.source);
+  const targetNode = authoredEdgeNode(edge.target);
   const relationship = edge.relationship || {};
   return {
     id: relationship.id || relationship.protocol_id || relationshipIdFor(substrateNamespace, sourceNode.protocolId, edge.type, targetNode.protocolId, index),
@@ -1147,7 +1175,7 @@ const authoredProtocolEdges = authoredEdges.map((edge, index) => {
       source: sourceNode.protocolId,
       sourceTitle: sourceNode.data.title,
       target: targetNode.protocolId,
-      targetTitle: targetNode.data.title,
+      targetTitle: targetNode.data.title || targetNode.title,
       type: edge.type
     }),
     ...(relationship.asserted_by ? { asserted_by: nodes.get(relationship.asserted_by)?.protocolId || relationship.asserted_by } : {}),
@@ -1212,18 +1240,22 @@ const protocolEdges = [
 ];
 
 const protocolRelationshipList = { relationships: protocolEdges };
+const localNodeByProtocolId = new Map([...nodes.values()].map((node) => [node.protocolId, node]));
+const importedNodeIdsForRelationships = new Set(importedNodes.map((node) => node.id));
+function relationshipKeyForProtocolId(protocolId) {
+  const localNode = localNodeByProtocolId.get(protocolId);
+  if (localNode) return localNode.id;
+  if (importedNodeIdsForRelationships.has(protocolId)) return protocolId;
+  return authoredFragmentNodeMap.get(protocolId)?.protocol_id || null;
+}
 const protocolRelationshipsByNode = new Map([
   ...[...nodes.values()].map((node) => [node.id, []]),
   ...authoredFragmentNodes.map((fragment) => [fragment.protocol_id, []]),
   ...importedNodes.map((node) => [node.id, []])
 ]);
 for (const edge of protocolEdges) {
-  const sourceLocalId = [...nodes.values()].find((node) => node.protocolId === edge.source)?.id;
-  const targetLocalId = [...nodes.values()].find((node) => node.protocolId === edge.target)?.id;
-  const sourceFragmentId = authoredFragmentNodeMap.get(edge.source)?.protocol_id;
-  const targetFragmentId = authoredFragmentNodeMap.get(edge.target)?.protocol_id;
-  const sourceRelationshipKey = sourceLocalId || sourceFragmentId;
-  const targetRelationshipKey = targetLocalId || targetFragmentId;
+  const sourceRelationshipKey = relationshipKeyForProtocolId(edge.source);
+  const targetRelationshipKey = relationshipKeyForProtocolId(edge.target);
   if (sourceRelationshipKey) {
     protocolRelationshipsByNode.get(sourceRelationshipKey).push({
       id: edge.id,
