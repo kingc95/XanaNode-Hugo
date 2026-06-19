@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/herbie-hancock",
+  "title": "Herbie Hancock",
+  "type": "person",
+  "importance": 3,
+  "summary": "Musician whose technology-inflected performance branch demonstrates creative digital media.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

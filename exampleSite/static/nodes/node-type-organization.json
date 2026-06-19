@@ -1,0 +1,62 @@
+{
+  "id": "xananode.canonical:schema/node-type-organization",
+  "title": "Organization",
+  "type": "schema",
+  "subtype": "node_type_schema",
+  "importance": 5,
+  "summary": "A company, institution, agency, lab, school, collective, standards body, nonprofit, or group.",
+  "version": "0.3.0",
+  "registry_type": "organization",
+  "registry_namespace": "xananode",
+  "allowed_subtypes": [
+    "company",
+    "university",
+    "lab",
+    "agency",
+    "nonprofit",
+    "standards_body",
+    "publisher"
+  ],
+  "required_frontmatter": [
+    "title",
+    "type",
+    "importance",
+    "summary",
+    "relationships"
+  ],
+  "recommended_frontmatter": [
+    "website",
+    "founded",
+    "people",
+    "projects",
+    "technologies"
+  ],
+  "color": {
+    "bg": "#f0abfc",
+    "fg": "#1e1028",
+    "outline": "#fde8ff"
+  },
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-organization",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-birth_date-uses-schema-node-type-organization",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-birth_date",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-geo_coordinates-uses-schema-node-type-organization",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-geo_coordinates",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

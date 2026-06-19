@@ -12,25 +12,25 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/unlabeled-hyperlink-threatens-provenance-122",
+      "id": "xananode.example:rel/unlabeled-hyperlink-threatens-provenance-127",
       "type": "threatens",
       "target": "xananode.example:concept/provenance",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/typed-relationships-contrasts_with-unlabeled-hyperlink-123",
+      "id": "xananode.example:rel/typed-relationships-contrasts_with-unlabeled-hyperlink-128",
       "type": "contrasts_with",
       "source": "xananode.example:concept/typed-relationships",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/deep-linking-contrasts_with-unlabeled-hyperlink-197",
+      "id": "xananode.example:rel/deep-linking-contrasts_with-unlabeled-hyperlink-202",
       "type": "contrasts_with",
       "source": "xananode.example:concept/deep-linking",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/claim-relationships-preserve-context-contrasts_with-unlabeled-hyperlink-215",
+      "id": "xananode.example:rel/claim-relationships-preserve-context-contrasts_with-unlabeled-hyperlink-220",
       "type": "contrasts_with",
       "source": "xananode.example:claim/claim-relationships-preserve-context",
       "direction": "incoming"

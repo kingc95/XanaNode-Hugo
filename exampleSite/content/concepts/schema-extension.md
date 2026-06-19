@@ -18,4 +18,4 @@ The core schema provides shared interoperability. Extension schemas allow local 
 
 A custom type is valid when it is namespaced, described, versioned, machine-readable, and preserved even by tools that do not understand it.
 
-The [custom extension substrate](/node/custom-extension-substrate) example shows this in practice: a local domain can define additional types while still publishing the core manifest, node, relationship, and schema files expected by XanaNode tools.
+The [custom extension substrate](/node/custom-extension-substrate) example shows this in practice: a local domain can define additional types while still publishing the core manifest, node, relationship, and schema files expected by [XanaNode](xananode.canonical:concept/xananode) tools.

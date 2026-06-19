@@ -1,0 +1,24 @@
+{
+  "id": "xananode.lineage:organization/xerox-parc",
+  "title": "Xerox PARC",
+  "type": "organization",
+  "importance": 4,
+  "summary": "Research center associated with GUI, Smalltalk, personal computing, and dynamic media.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/xerox-parc-context-for-kay",
+      "type": "context_for",
+      "target": "xananode.lineage:person/alan-kay",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/alan-kay-shaped-dynamic-media",
+      "type": "shapes",
+      "source": "xananode.lineage:person/alan-kay",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

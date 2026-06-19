@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-disputes",
+  "title": "Disputes",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source disputes the target.",
+  "version": "0.5.0",
+  "registry_type": "disputes",
+  "registry_namespace": "xananode",
+  "category": "governance",
+  "inverse": "disputed_by",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-disputes",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-disputed_by-related_to-schema-relationship-type-disputes-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-disputed_by",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-disputes-related_to-schema-relationship-type-disputed_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-disputed_by",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

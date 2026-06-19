@@ -14,6 +14,6 @@ relationships:
     target: "xananode-core-schema"
 ---
 
-A knowledge substrate is not the information itself. It is the structure that lets information remain understandable across time.
+A [knowledge substrate](example.minimal:concept/knowledge-substrate) is not the information itself. It is the structure that lets information remain understandable across time.
 
 The same facts arranged as isolated documents, unlabeled hyperlinks, or [typed relationships](/node/typed-relationships) produce different knowledge capabilities. [XanaNode](/node/xananode) makes that structure explicit.

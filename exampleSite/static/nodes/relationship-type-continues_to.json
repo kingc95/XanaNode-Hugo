@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-continues_to",
+  "title": "Continues to",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source continues, leads into, or sequences directly to the target.",
+  "version": "0.5.0",
+  "registry_type": "continues_to",
+  "registry_namespace": "xananode",
+  "category": "temporal",
+  "inverse": "continued_from",
+  "default_weight": 3,
+  "default_visibility": "secondary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-continues_to",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-continued_from-related_to-schema-relationship-type-continues_to-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-continued_from",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-continues_to-related_to-schema-relationship-type-continued_from-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-continued_from",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

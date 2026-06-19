@@ -6,43 +6,43 @@
   "summary": "A centralized model where one canonical location or authority controls what is treated as valid.",
   "relationships": [
     {
-      "id": "xananode.example:rel/start-here-contrasts_with-single-source-of-truth-113",
+      "id": "xananode.example:rel/start-here-contrasts_with-single-source-of-truth-117",
       "type": "contrasts_with",
       "source": "xananode.example:essay/start-here",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/single-source-of-truth-contrasts_with-federated-knowledge-substrates-138",
+      "id": "xananode.example:rel/single-source-of-truth-contrasts_with-federated-knowledge-substrates-143",
       "type": "contrasts_with",
       "target": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/single-source-of-truth-threatens-independent-moderation-139",
+      "id": "xananode.example:rel/single-source-of-truth-threatens-independent-moderation-144",
       "type": "threatens",
       "target": "xananode.example:concept/independent-moderation",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/single-source-of-truth-alternative_to-knowledge-substrate-140",
+      "id": "xananode.example:rel/single-source-of-truth-alternative_to-knowledge-substrate-145",
       "type": "alternative_to",
       "target": "xananode.example:concept/knowledge-substrate",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/independent-moderation-contrasts_with-single-source-of-truth-174",
+      "id": "xananode.example:rel/independent-moderation-contrasts_with-single-source-of-truth-179",
       "type": "contrasts_with",
       "source": "xananode.example:concept/independent-moderation",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-alternative_to-single-source-of-truth-191",
+      "id": "xananode.example:rel/federated-knowledge-substrates-alternative_to-single-source-of-truth-196",
       "type": "alternative_to",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/claim-merge-without-collapse-contradicts-single-source-of-truth-218",
+      "id": "xananode.example:rel/claim-merge-without-collapse-contradicts-single-source-of-truth-223",
       "type": "contradicts",
       "source": "xananode.example:claim/claim-merge-without-collapse",
       "direction": "incoming"

@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/laurie-anderson",
+  "title": "Laurie Anderson",
+  "type": "person",
+  "importance": 3,
+  "summary": "Performance and media artist demonstrating narrative plus technology.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

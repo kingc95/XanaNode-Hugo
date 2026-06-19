@@ -10,6 +10,6 @@ relationships:
     target: "schema-extension"
 ---
 
-The namespace registry records known namespace ids and their owners.
+The [namespace registry](xananode.canonical:schema/namespace-registry) records known namespace ids and their owners.
 
 It does not make every other namespace invalid. It helps tools distinguish recognized namespaces from private, experimental, or not-yet-registered ones while still preserving unknown data.

@@ -1,0 +1,20 @@
+{
+  "id": "xananode.canonical:technology/python",
+  "title": "Python",
+  "type": "technology",
+  "subtype": "language",
+  "importance": 3,
+  "summary": "A language used by the protocol repository validation tooling and supported as a future validation/runtime target.",
+  "source_url": "https://www.python.org/",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/protocol-uses-python",
+      "type": "uses",
+      "source": "xananode.canonical:project/xananode-protocol",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

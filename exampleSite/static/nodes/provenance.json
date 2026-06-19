@@ -12,81 +12,87 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-preserves-provenance-119",
+      "id": "xananode.example:rel/xananode-preserves-provenance-124",
       "type": "preserves",
       "source": "xananode.example:concept/xananode",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/unlabeled-hyperlink-threatens-provenance-122",
+      "id": "xananode.example:rel/unlabeled-hyperlink-threatens-provenance-127",
       "type": "threatens",
       "source": "xananode.example:concept/unlabeled-hyperlink",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/tumbler-addressing-preserves-provenance-127",
+      "id": "xananode.example:rel/tumbler-addressing-preserves-provenance-132",
       "type": "preserves",
       "source": "xananode.example:concept/tumbler-addressing",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/transclusion-preserves-provenance-131",
+      "id": "xananode.example:rel/transclusion-preserves-provenance-136",
       "type": "preserves",
       "source": "xananode.example:concept/transclusion",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-relationship-list-preserves-provenance-134",
+      "id": "xananode.example:rel/substrate-relationship-list-preserves-provenance-139",
       "type": "preserves",
       "source": "xananode.example:concept/substrate-relationship-list",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/claim-relationships-preserve-context-evidence_for-provenance-146",
+      "id": "xananode.example:rel/claim-relationships-preserve-context-evidence_for-provenance-151",
       "type": "evidence_for",
       "source": "xananode.example:claim/claim-relationships-preserve-context",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/merge-validation-requires-provenance-160",
+      "id": "xananode.example:rel/merge-validation-requires-provenance-165",
       "type": "requires",
       "source": "xananode.example:concept/merge-validation",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/merge-report-preserves-provenance-166",
+      "id": "xananode.example:rel/merge-report-preserves-provenance-171",
       "type": "preserves",
       "source": "xananode.example:concept/merge-report",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/knowledge-substrate-requires-provenance-171",
+      "id": "xananode.example:rel/knowledge-substrate-requires-provenance-176",
       "type": "requires",
       "source": "xananode.example:concept/knowledge-substrate",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/independent-moderation-requires-provenance-175",
+      "id": "xananode.example:rel/independent-moderation-requires-provenance-180",
       "type": "requires",
       "source": "xananode.example:concept/independent-moderation",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/fragment-node-preserves-provenance-177",
+      "id": "xananode.example:rel/fragment-node-preserves-provenance-182",
       "type": "preserves",
       "source": "xananode.example:concept/fragment-node",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/dispute-resolution-requires-provenance-192",
+      "id": "xananode.example:rel/dispute-resolution-requires-provenance-197",
       "type": "requires",
       "source": "xananode.example:concept/dispute-resolution",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/civilizational-memory-requires-provenance-209",
+      "id": "xananode.example:rel/civilizational-memory-requires-provenance-214",
       "type": "requires",
       "source": "xananode.example:concept/civilizational-memory",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/git-backed-substrate-enables-history",
+      "type": "enables",
+      "source": "xananode.lineage:technology/git-backed-substrate",
       "direction": "incoming"
     }
   ]

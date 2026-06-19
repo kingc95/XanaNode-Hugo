@@ -1,0 +1,30 @@
+{
+  "id": "xananode.canonical:schema/canonical-schema-xananode-property-registry",
+  "title": "Xananode Property Registry Schema",
+  "type": "schema",
+  "subtype": "canonical_schema_record",
+  "importance": 5,
+  "summary": "Canonical schema registry entry for xananode-property-registry.",
+  "registry_type": "xananode-property-registry",
+  "version": "0.1.0",
+  "schema_path": "../schemas/property-registry.schema.json",
+  "artifact_path": "../schemas/xananode-property-registry.v0.1.0.json",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/property-registry.schema.json",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schema-xananode-property-registry-documents-schema-property-registry",
+      "type": "documents",
+      "target": "xananode.canonical:schema/property-registry",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schemas-registry-contains-schema-canonical-schema-xananode-property-registry",
+      "type": "contains",
+      "source": "xananode.canonical:schema/canonical-schemas-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

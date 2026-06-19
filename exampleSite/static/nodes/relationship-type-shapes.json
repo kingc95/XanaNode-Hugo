@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-shapes",
+  "title": "Shapes",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source significantly shapes or molds the form, direction, or character of the target.",
+  "version": "0.5.0",
+  "registry_type": "shapes",
+  "registry_namespace": "xananode",
+  "category": "influence",
+  "inverse": "shaped_by",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-shapes",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-shaped_by-related_to-schema-relationship-type-shapes-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-shaped_by",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-shapes-related_to-schema-relationship-type-shaped_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-shaped_by",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

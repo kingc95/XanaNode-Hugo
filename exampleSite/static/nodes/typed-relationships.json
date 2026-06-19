@@ -12,31 +12,31 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/typed-relationships-contrasts_with-unlabeled-hyperlink-123",
+      "id": "xananode.example:rel/typed-relationships-contrasts_with-unlabeled-hyperlink-128",
       "type": "contrasts_with",
       "target": "xananode.example:concept/unlabeled-hyperlink",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/typed-relationships-supports-claim-relationships-preserve-context-124",
+      "id": "xananode.example:rel/typed-relationships-supports-claim-relationships-preserve-context-129",
       "type": "supports",
       "target": "xananode.example:claim/claim-relationships-preserve-context",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/review-suggestions-uses-typed-relationships-144",
+      "id": "xananode.example:rel/review-suggestions-uses-typed-relationships-149",
       "type": "uses",
       "source": "xananode.example:concept/review-suggestions",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/knowledge-substrate-requires-typed-relationships-172",
+      "id": "xananode.example:rel/knowledge-substrate-requires-typed-relationships-177",
       "type": "requires",
       "source": "xananode.example:concept/knowledge-substrate",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/typed-relationships-has_claim-claim-relationships-preserve-context-214",
+      "id": "xananode.example:rel/typed-relationships-has_claim-claim-relationships-preserve-context-219",
       "type": "has_claim",
       "target": "xananode.example:claim/claim-relationships-preserve-context",
       "direction": "outgoing"

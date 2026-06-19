@@ -1,0 +1,56 @@
+{
+  "id": "xananode.canonical:schema/node-type-place",
+  "title": "Place",
+  "type": "schema",
+  "subtype": "node_type_schema",
+  "importance": 5,
+  "summary": "A physical or virtual location where people, projects, organizations, or events exist or occurred.",
+  "version": "0.3.0",
+  "registry_type": "place",
+  "registry_namespace": "xananode",
+  "allowed_subtypes": [
+    "city",
+    "building",
+    "lab",
+    "institution_site",
+    "online_space",
+    "country",
+    "region"
+  ],
+  "required_frontmatter": [
+    "title",
+    "type",
+    "importance",
+    "summary",
+    "relationships"
+  ],
+  "recommended_frontmatter": [
+    "location",
+    "geo",
+    "organizations",
+    "events",
+    "projects"
+  ],
+  "color": {
+    "bg": "#84cc16",
+    "fg": "#0a1a00",
+    "outline": "#e8ffe0"
+  },
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-place",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-geo_coordinates-uses-schema-node-type-place",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-geo_coordinates",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

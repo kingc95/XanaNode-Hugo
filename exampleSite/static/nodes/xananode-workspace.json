@@ -1,0 +1,26 @@
+{
+  "id": "xananode.canonical:project/xananode-workspace",
+  "title": "XanaNode Workspace",
+  "type": "project",
+  "subtype": "software",
+  "status": "active",
+  "importance": 4,
+  "summary": "A coordination layer for local authoring, mounted pack selection, media placement, import review, Git workflows, and stack-level health checks.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/workspace-documented-by-repository",
+      "type": "documents",
+      "source": "xananode.canonical:source/xananode-workspace-repository",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/workspace-uses-core",
+      "type": "uses",
+      "target": "xananode.canonical:project/xananode-core-sdk",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

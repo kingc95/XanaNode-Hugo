@@ -1,0 +1,50 @@
+{
+  "id": "xananode.canonical:project/xananode-core-sdk",
+  "title": "XanaNode Core SDK",
+  "type": "project",
+  "subtype": "software",
+  "status": "active",
+  "importance": 5,
+  "summary": "The renderer-independent SDK that validates substrates, resolves mounted packs, analyzes intake, builds fragments, generates suggestions, and exports protocol artifacts.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/core-builds-protocol-artifacts",
+      "type": "enables",
+      "target": "xananode.canonical:concept/protocol-artifacts",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/core-documented-by-repository",
+      "type": "documents",
+      "source": "xananode.canonical:source/xananode-core-sdk-repository",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/core-implements-protocol",
+      "type": "implements",
+      "target": "xananode.canonical:project/xananode-protocol",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/core-uses-nodejs",
+      "type": "uses",
+      "target": "xananode.canonical:technology/nodejs",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/hugo-uses-core",
+      "type": "uses",
+      "source": "xananode.canonical:project/xananode-hugo-theme",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/workspace-uses-core",
+      "type": "uses",
+      "source": "xananode.canonical:project/xananode-workspace",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,160 @@
+{
+  "nodes": [
+    {
+      "id": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "title": "Lost Lineage of Human Knowledge Augmentation",
+      "type": "concept",
+      "importance": 5,
+      "summary": "A parallel history of computing tried to preserve human understanding as connected, navigable, attributable knowledge.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/paul-otlet",
+      "title": "Paul Otlet",
+      "type": "person",
+      "importance": 4,
+      "summary": "Documentalist associated with the Mundaneum, universal bibliography, and early visions of networked document access.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/h-g-wells",
+      "title": "H. G. Wells",
+      "type": "person",
+      "importance": 4,
+      "summary": "Writer and futurist who proposed a World Brain as a planetary knowledge memory.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/douglas-adams",
+      "title": "Douglas Adams",
+      "type": "person",
+      "importance": 5,
+      "summary": "Writer and technologist who popularized the fundamental interconnectedness of things and introduced Hyperland to a broad audience.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:publication/hyperland",
+      "title": "Hyperland",
+      "type": "publication",
+      "importance": 5,
+      "summary": "A 1990 BBC hypermedia documentary by Douglas Adams that dramatized software agents, hypertext, Xanadu, micons, and associative browsing.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/tom-baker",
+      "title": "Tom Baker",
+      "type": "person",
+      "importance": 3,
+      "summary": "Actor who appears in Hyperland as a software-agent persona guiding knowledge navigation.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/max-whitby",
+      "title": "Max Whitby",
+      "type": "person",
+      "importance": 3,
+      "summary": "Producer and director associated with Hyperland.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:event/ted2-1990",
+      "title": "TED2",
+      "type": "event",
+      "importance": 5,
+      "summary": "The February 1990 TED conference in Monterey where hypertext, interactive media, virtual reality, design, and knowledge-navigation ideas converged.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:place/monterey-california",
+      "title": "Monterey, California",
+      "type": "place",
+      "importance": 3,
+      "summary": "The site of TED2 in February 1990.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/bob-stein",
+      "title": "Bob Stein",
+      "type": "person",
+      "importance": 4,
+      "summary": "Interactive publishing pioneer associated with Criterion, Voyager, and early electronic books.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:organization/voyager-company",
+      "title": "Voyager Company",
+      "type": "organization",
+      "importance": 4,
+      "summary": "Interactive publishing company in the laserdisc and CD-ROM lineage.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/alan-kay",
+      "title": "Alan Kay",
+      "type": "person",
+      "importance": 5,
+      "summary": "Computing pioneer associated with Dynabook, Smalltalk, personal dynamic media, and computers as tools for improving thought.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:organization/xerox-parc",
+      "title": "Xerox PARC",
+      "type": "organization",
+      "importance": 4,
+      "summary": "Research center associated with GUI, Smalltalk, personal computing, and dynamic media.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:technology/hypercard",
+      "title": "HyperCard",
+      "type": "technology",
+      "importance": 4,
+      "summary": "Apple hypermedia authoring system that popularized personal card-based linking and scripting.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/tim-berners-lee",
+      "title": "Tim Berners-Lee",
+      "type": "person",
+      "importance": 5,
+      "summary": "Inventor of the World Wide Web, a simpler distributed hypertext branch that solved broad publishing and retrieval.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:technology/world-wide-web",
+      "title": "World Wide Web",
+      "type": "technology",
+      "importance": 5,
+      "summary": "A distributed hypertext system that made publishing easy while leaving many provenance, transclusion, and semantic relationship problems unsolved.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:project/aspen-movie-map",
+      "title": "Aspen Movie Map",
+      "type": "project",
+      "importance": 4,
+      "summary": "An early navigable spatial media project often treated as part of the hypermedia and virtual environment lineage.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:trail/lost-lineage-intertwingled-trail",
+      "title": "Lost Lineage Intertwingled Trail",
+      "type": "trail",
+      "importance": 5,
+      "summary": "A JSON-imported trail showing that the lineage is an interwoven graph, not a single heroic family tree.",
+      "trail_nodes": [
+        "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+        "xananode.lineage:person/paul-otlet",
+        "xananode.example:person/vannevar-bush",
+        "xananode.example:person/douglas-engelbart",
+        "xananode.example:person/ted-nelson",
+        "xananode.lineage:person/douglas-adams",
+        "xananode.lineage:publication/hyperland",
+        "xananode.lineage:event/ted2-1990",
+        "xananode.lineage:technology/world-wide-web",
+        "xananode.example:concept/xananode"
+      ],
+      "relationships": []
+    }
+  ]
+}

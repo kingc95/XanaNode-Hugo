@@ -1,0 +1,39 @@
+{
+  "id": "xananode.example:essay/using-hugo-with-protocol-json",
+  "title": "Using Hugo with Protocol JSON",
+  "type": "essay",
+  "importance": 5,
+  "summary": "How to use the Hugo theme as a read-only XanaNode viewer for Markdown-authored nodes, the protocol base pack, and imported protocol JSON.",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/using-hugo-with-protocol-json-explains-xananode-hugo-theme-110",
+      "type": "explains",
+      "target": "xananode.example:project/xananode-hugo-theme",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/using-hugo-with-protocol-json-explains-substrate-node-record-111",
+      "type": "explains",
+      "target": "xananode.example:concept/substrate-node-record",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/using-hugo-with-protocol-json-explains-substrate-relationship-list-112",
+      "type": "explains",
+      "target": "xananode.example:concept/substrate-relationship-list",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/using-hugo-with-protocol-json-context_for-historical-lineage-trail-113",
+      "type": "context_for",
+      "target": "xananode.example:trail/historical-lineage-trail",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/start-here-continues_to-using-hugo-with-protocol-json-120",
+      "type": "continues_to",
+      "source": "xananode.example:essay/start-here",
+      "direction": "incoming"
+    }
+  ]
+}

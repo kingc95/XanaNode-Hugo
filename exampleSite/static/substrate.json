@@ -11,6 +11,30 @@
   },
   "schema_version": "xananode-core@0.5.0",
   "imports": [
-    "xananode:core"
+    "xananode:core",
+    {
+      "mode": "mounted",
+      "id": "example.minimal",
+      "source": "../vendor/xananode-core/vendor/xananode-protocol/examples/minimal-substrate",
+      "version": "0.2.0",
+      "required": true
+    },
+    {
+      "mode": "mounted",
+      "id": "xananode.canonical",
+      "source": "packs/xananode-canonical",
+      "version": "0.1.0",
+      "required": false
+    },
+    {
+      "mode": "mounted",
+      "id": "imports:lineage",
+      "source": "imports/lineage"
+    },
+    {
+      "mode": "mounted",
+      "id": "imports:review-fixture",
+      "source": "imports/review-fixture"
+    }
   ]
 }

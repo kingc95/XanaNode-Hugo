@@ -1,0 +1,24 @@
+{
+  "id": "xananode.lineage:claim/overlap-is-federation-signal",
+  "title": "Overlap is a Federation Signal",
+  "type": "claim",
+  "importance": 5,
+  "summary": "When independently authored substrates overlap, the overlap should trigger comparison, provenance review, and possible merge rather than automatic deletion.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/overlap-has-federation-signal-claim",
+      "type": "has_claim",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/federation-signal-supports-xananode",
+      "type": "supports",
+      "target": "xananode.example:concept/xananode",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

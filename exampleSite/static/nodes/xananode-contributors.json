@@ -1,0 +1,19 @@
+{
+  "id": "xananode.canonical:community/xananode-contributors",
+  "title": "XanaNode Contributors",
+  "type": "community",
+  "subtype": "open_source",
+  "importance": 4,
+  "summary": "The people and future maintainers who author, review, preserve, and project XanaNode-compatible substrates.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/support-supports-contributors",
+      "type": "supports",
+      "source": "xananode.canonical:source/support-xananode",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

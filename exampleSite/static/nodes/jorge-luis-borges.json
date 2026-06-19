@@ -1,0 +1,18 @@
+{
+  "id": "xananode.lineage:person/jorge-luis-borges",
+  "title": "Jorge Luis Borges",
+  "type": "person",
+  "importance": 4,
+  "summary": "Writer whose nonlinear literary structures are often treated as hypertext-adjacent ancestry.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/borges-authored-forking-paths",
+      "type": "authored",
+      "target": "xananode.lineage:publication/the-garden-of-forking-paths",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

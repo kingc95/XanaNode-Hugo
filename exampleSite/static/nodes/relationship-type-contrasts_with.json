@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-contrasts_with",
+  "title": "Contrasts with",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source is usefully contrasted with the target.",
+  "version": "0.5.0",
+  "registry_type": "contrasts_with",
+  "registry_namespace": "xananode",
+  "category": "comparison",
+  "inverse": "contrasts_with",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-contrasts_with",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-contrasts_with-related_to-schema-relationship-type-contrasts_with-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-contrasts_with",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-contrasts_with-related_to-schema-relationship-type-contrasts_with-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-contrasts_with",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -10,7 +10,7 @@ relationships:
     target: "compatibility-levels"
 ---
 
-The known implementations registry is a discovery aid for the ecosystem.
+The [known implementations registry](xananode.canonical:schema/known-implementations-registry) is a discovery aid for the ecosystem.
 
 It lists tools, themes, validators, renderers, and example substrates that claim a level of [XanaNode](/node/xananode) compatibility.
 

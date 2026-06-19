@@ -1,0 +1,14 @@
+{
+  "id": "xananode.canonical:source/xananode-studio-repository",
+  "title": "XanaNode Studio Repository",
+  "type": "source",
+  "subtype": "git_repository",
+  "importance": 3,
+  "summary": "The public Studio repository reserved for richer local-first authoring and review interfaces over XanaNode substrates.",
+  "source_url": "https://github.com/kingc95/XanaNode-Studio",
+  "rights_status": "open-source",
+  "relationships": [],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

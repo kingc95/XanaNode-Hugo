@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-alias_of",
+  "title": "Alias of",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source is an alternative name for the target entity.",
+  "version": "0.5.0",
+  "registry_type": "alias_of",
+  "registry_namespace": "xananode",
+  "category": "representation",
+  "inverse": "has_alias",
+  "default_weight": 5,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-alias_of",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-alias_of-related_to-schema-relationship-type-has_alias-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-has_alias",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-has_alias-related_to-schema-relationship-type-alias_of-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-has_alias",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-supersedes",
+  "title": "Supersedes",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source replaces the target.",
+  "version": "0.5.0",
+  "registry_type": "supersedes",
+  "registry_namespace": "xananode",
+  "category": "revision",
+  "inverse": "superseded_by",
+  "default_weight": 5,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-supersedes",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-superseded_by-related_to-schema-relationship-type-supersedes-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-superseded_by",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-supersedes-related_to-schema-relationship-type-superseded_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-superseded_by",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

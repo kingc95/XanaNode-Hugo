@@ -1,0 +1,17 @@
+{
+  "id": "xananode.canonical:source/xananode-org-domain",
+  "title": "XanaNode.org",
+  "type": "source",
+  "subtypes": [
+    "website",
+    "official_site"
+  ],
+  "importance": 4,
+  "summary": "A public XanaNode domain reserved for protocol, community, governance, or organizational presentation.",
+  "source_url": "https://xananode.org/",
+  "rights_status": "canonical-public",
+  "relationships": [],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,34 +1,21 @@
 {
-  "id": "xananode.example:schema/substrate-relationships-schema",
+  "id": "xananode.canonical:schema/substrate-relationships-schema",
   "title": "Substrate Relationships Schema",
   "type": "schema",
-  "status": "draft",
+  "subtype": "validation_rule",
   "importance": 5,
-  "summary": "The JSON Schema that validates the protocol relationship list for a substrate.",
+  "summary": "The JSON Schema defining portable relationship records, including asserted time, validity time, confidence, evidence, and tumbler references.",
+  "version": "xananode-core@0.5.0",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/substrate-relationships.schema.json",
   "relationships": [
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-relationships-schema-57",
-      "type": "defines",
-      "source": "xananode.example:schema/xananode-core-schema",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/substrate-relationships-schema-defines-substrate-relationship-list-60",
-      "type": "defines",
-      "target": "xananode.example:concept/substrate-relationship-list",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/substrate-relationships-schema-uses-xananode-relationship-types-61",
-      "type": "uses",
-      "target": "xananode.example:schema/xananode-relationship-types",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/xananode-core-schema-contains-substrate-relationships-schema-62",
+      "id": "xananode.canonical:rel/protocol-contains-relationship-schema",
       "type": "contains",
-      "source": "xananode.example:schema/xananode-core-schema",
+      "source": "xananode.canonical:project/xananode-protocol",
       "direction": "incoming"
     }
-  ]
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
 }

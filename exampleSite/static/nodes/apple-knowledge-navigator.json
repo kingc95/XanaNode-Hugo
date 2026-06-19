@@ -1,0 +1,30 @@
+{
+  "id": "xananode.lineage:technology/apple-knowledge-navigator",
+  "title": "Apple Knowledge Navigator",
+  "type": "technology",
+  "importance": 4,
+  "summary": "Concept video imagining agent-mediated interactive knowledge navigation.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/minsky-context-for-agents",
+      "type": "context_for",
+      "source": "xananode.lineage:person/marvin-minsky",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/sculley-presented-knowledge-navigator",
+      "type": "presented",
+      "source": "xananode.lineage:person/john-sculley",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/knowledge-navigator-parallel-to-hyperland-agent",
+      "type": "parallel_to",
+      "target": "xananode.lineage:person/tom-baker",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

@@ -25,7 +25,7 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-relationship-list-uses-xananode-relationship-types-133",
+      "id": "xananode.example:rel/substrate-relationship-list-uses-xananode-relationship-types-138",
       "type": "uses",
       "source": "xananode.example:concept/substrate-relationship-list",
       "direction": "incoming"

@@ -2,7 +2,7 @@
 title: "XanaNode Hugo Theme"
 type: "project"
 importance: 4
-summary: "A static-site reference implementation that reads XanaNode content files and renders them as a navigable graph."
+summary: "A Hugo theme that publishes XanaNode substrates as readable pages and a navigable graph."
 status: "prototype"
 primary_media: "xananode-icon"
 relationships:
@@ -18,4 +18,4 @@ relationships:
 
 The [Hugo](/node/hugo) theme is not [XanaNode](/node/xananode) itself.
 
-It is one reference implementation: a static site generator, content folder, front matter conventions, JSON index, and graph viewer that demonstrate the XanaNode model.
+It turns substrate nodes, relationships, media, and trails into a readable public site with a graph beside the prose.

@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-defines",
+  "title": "Defines",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source gives the defining explanation of the target.",
+  "version": "0.5.0",
+  "registry_type": "defines",
+  "registry_namespace": "xananode",
+  "category": "definition",
+  "inverse": "defined_by",
+  "default_weight": 5,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-defines",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-defined_by-related_to-schema-relationship-type-defines-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-defined_by",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-defines-related_to-schema-relationship-type-defined_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-defined_by",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "xananode.lineage:person/andries-van-dam",
+  "title": "Andries van Dam",
+  "type": "person",
+  "importance": 4,
+  "summary": "Computer scientist associated with HES, FRESS, and the Brown hypertext lineage.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/van-dam-collaborated-with-nelson",
+      "type": "collaborated_with",
+      "target": "xananode.example:person/ted-nelson",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/van-dam-implemented-fress",
+      "type": "implements",
+      "target": "xananode.lineage:project/fress",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

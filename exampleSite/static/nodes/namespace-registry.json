@@ -1,33 +1,50 @@
 {
-  "id": "xananode.example:concept/namespace-registry",
+  "id": "xananode.canonical:schema/namespace-registry",
   "title": "Namespace Registry",
-  "type": "concept",
-  "importance": 4,
-  "summary": "A registry of known namespace identifiers used to avoid collisions and help tools recognize who owns a substrate, schema, or extension vocabulary.",
+  "type": "schema",
+  "subtype": "governance_rule",
+  "importance": 5,
+  "summary": "The protocol registry of known namespace identifiers, owners, and extension vocabularies.",
   "relationships": [
     {
-      "id": "xananode.example:rel/namespace-schema-defines-namespace-registry-69",
-      "type": "defines",
-      "source": "xananode.example:schema/namespace-schema",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/namespace-registry-implements-namespacing-154",
-      "type": "implements",
-      "target": "xananode.example:concept/namespacing",
+      "id": "xananode.canonical:rel/schema-namespace-registry-contains-schema-namespace-example.merge",
+      "type": "contains",
+      "target": "xananode.canonical:schema/namespace-example.merge",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/schema-extension-requires-namespace-registry-155",
-      "type": "requires",
-      "source": "xananode.example:concept/schema-extension",
-      "direction": "incoming"
+      "id": "xananode.canonical:rel/schema-namespace-registry-contains-schema-namespace-example.minimal",
+      "type": "contains",
+      "target": "xananode.canonical:schema/namespace-example.minimal",
+      "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/custom-extension-substrate-requires-namespace-registry-199",
-      "type": "requires",
-      "source": "xananode.example:concept/custom-extension-substrate",
-      "direction": "incoming"
+      "id": "xananode.canonical:rel/schema-namespace-registry-contains-schema-namespace-example.museum",
+      "type": "contains",
+      "target": "xananode.canonical:schema/namespace-example.museum",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-namespace-registry-contains-schema-namespace-example.researcher_a",
+      "type": "contains",
+      "target": "xananode.canonical:schema/namespace-example.researcher_a",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-namespace-registry-contains-schema-namespace-example.researcher_b",
+      "type": "contains",
+      "target": "xananode.canonical:schema/namespace-example.researcher_b",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-namespace-registry-contains-schema-namespace-xananode",
+      "type": "contains",
+      "target": "xananode.canonical:schema/namespace-xananode",
+      "direction": "outgoing"
     }
-  ]
+  ],
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/registry/namespaces.json",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
 }

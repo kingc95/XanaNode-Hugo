@@ -97,31 +97,31 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-requires-xananode-core-schema-118",
+      "id": "xananode.example:rel/xananode-requires-xananode-core-schema-123",
       "type": "requires",
       "source": "xananode.example:concept/xananode",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/schema-extension-requires-xananode-core-schema-142",
+      "id": "xananode.example:rel/schema-extension-requires-xananode-core-schema-147",
       "type": "requires",
       "source": "xananode.example:concept/schema-extension",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-protocol-artifacts-147",
+      "id": "xananode.example:rel/xananode-core-schema-defines-protocol-artifacts-152",
       "type": "defines",
       "target": "xananode.example:concept/protocol-artifacts",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-enables-knowledge-substrate-173",
+      "id": "xananode.example:rel/xananode-core-schema-enables-knowledge-substrate-178",
       "type": "enables",
       "target": "xananode.example:concept/knowledge-substrate",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-supports-claim-merge-without-collapse-217",
+      "id": "xananode.example:rel/xananode-core-schema-supports-claim-merge-without-collapse-222",
       "type": "supports",
       "target": "xananode.example:claim/claim-merge-without-collapse",
       "direction": "outgoing"

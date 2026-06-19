@@ -1,0 +1,2812 @@
+{
+  "namespace": "xananode.example",
+  "nodes": [
+    {
+      "id": "xananode.example:trail/xananode-implementation-stack-trail",
+      "path": "nodes/xananode-implementation-stack-trail.json",
+      "title": "XanaNode Implementation Stack Trail",
+      "type": "trail",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:trail/xananode-core-trail",
+      "path": "nodes/xananode-core-trail.json",
+      "title": "XanaNode Core Trail",
+      "type": "trail",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:trail/protocol-artifacts-trail",
+      "path": "nodes/protocol-artifacts-trail.json",
+      "title": "Protocol Artifacts Trail",
+      "type": "trail",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:trail/historical-lineage-trail",
+      "path": "nodes/historical-lineage-trail.json",
+      "title": "Historical Lineage Trail",
+      "type": "trail",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:trail/branching-orientation-trail",
+      "path": "nodes/branching-orientation-trail.json",
+      "title": "Branching Orientation Trail",
+      "type": "trail",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:technology/static-publishing",
+      "path": "nodes/static-publishing.json",
+      "title": "Static Publishing",
+      "type": "technology",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:technology/hugo",
+      "path": "nodes/hugo.json",
+      "title": "Hugo",
+      "type": "technology",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:technology/cytoscape-js",
+      "path": "nodes/cytoscape-js.json",
+      "title": "Cytoscape.js",
+      "type": "technology",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/xananode-workspace-repo",
+      "path": "nodes/xananode-workspace-repo.json",
+      "title": "XanaNode Workspace Repository",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/xananode-studio-repo",
+      "path": "nodes/xananode-studio-repo.json",
+      "title": "XanaNode Studio Repository",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/xananode-protocol-repo",
+      "path": "nodes/xananode-protocol-repo.json",
+      "title": "XanaNode Protocol Repository",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/xananode-hugo-repo",
+      "path": "nodes/xananode-hugo-repo.json",
+      "title": "XanaNode Hugo Repository",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/xananode-core-sdk-repo",
+      "path": "nodes/xananode-core-sdk-repo.json",
+      "title": "XanaNode Core SDK Repository",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/xanadu-document-interconnection",
+      "path": "nodes/xanadu-document-interconnection.json",
+      "title": "Xanadu: Document Interconnection Enabling Re-use",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/source-code-link-decay-study",
+      "path": "nodes/source-code-link-decay-study.json",
+      "title": "9.6 Million Links in Source Code Comments",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/mother-of-all-demos",
+      "path": "nodes/mother-of-all-demos.json",
+      "title": "Mother of All Demos",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/as-we-may-think",
+      "path": "nodes/as-we-may-think.json",
+      "title": "As We May Think",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/xananode-relationship-types",
+      "path": "nodes/xananode-relationship-types.json",
+      "title": "XanaNode Relationship Types",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/xananode-node-types",
+      "path": "nodes/xananode-node-types.json",
+      "title": "XanaNode Node Types",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/xananode-core-schema",
+      "path": "nodes/xananode-core-schema.json",
+      "title": "XanaNode Core Schema",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/substrate-relationships-schema",
+      "path": "nodes/substrate-relationships-schema.json",
+      "title": "Substrate Relationships Schema",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/substrate-node-schema",
+      "path": "nodes/substrate-node-schema.json",
+      "title": "Substrate Node Schema",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/substrate-manifest-schema",
+      "path": "nodes/substrate-manifest-schema.json",
+      "title": "Substrate Manifest Schema",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/namespace-schema",
+      "path": "nodes/namespace-schema.json",
+      "title": "Namespace Schema",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/merge-report-schema",
+      "path": "nodes/merge-report-schema.json",
+      "title": "Merge Report Schema",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/compatibility-report-schema",
+      "path": "nodes/compatibility-report-schema.json",
+      "title": "Compatibility Report Schema",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:project/xananode-hugo-theme",
+      "path": "nodes/xananode-hugo-theme.json",
+      "title": "XanaNode Hugo Theme",
+      "type": "project",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:project/project-xanadu",
+      "path": "nodes/project-xanadu.json",
+      "title": "Project Xanadu",
+      "type": "project",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:project/nls",
+      "path": "nodes/nls.json",
+      "title": "NLS",
+      "type": "project",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:project/memex",
+      "path": "nodes/memex.json",
+      "title": "Memex",
+      "type": "project",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:person/vannevar-bush",
+      "path": "nodes/vannevar-bush.json",
+      "title": "Vannevar Bush",
+      "type": "person",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:person/ted-nelson",
+      "path": "nodes/ted-nelson.json",
+      "title": "Ted Nelson",
+      "type": "person",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:person/douglas-engelbart",
+      "path": "nodes/douglas-engelbart.json",
+      "title": "Douglas Engelbart",
+      "type": "person",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:observation/link-rot",
+      "path": "nodes/link-rot.json",
+      "title": "Link Rot",
+      "type": "observation",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:media/xananode-icon",
+      "path": "nodes/xananode-icon.json",
+      "title": "XanaNode Icon",
+      "type": "media",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:essay/what-is-xananode",
+      "path": "nodes/what-is-xananode.json",
+      "title": "What Is XanaNode?",
+      "type": "essay",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:essay/using-hugo-with-protocol-json",
+      "path": "nodes/using-hugo-with-protocol-json.json",
+      "title": "Using Hugo with Protocol JSON",
+      "type": "essay",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:essay/start-here",
+      "path": "nodes/start-here.json",
+      "title": "Start Here",
+      "type": "essay",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/xananode",
+      "path": "nodes/xananode.json",
+      "title": "XanaNode",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/unlabeled-hyperlink",
+      "path": "nodes/unlabeled-hyperlink.json",
+      "title": "Unlabeled Hyperlink",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/typed-relationships",
+      "path": "nodes/typed-relationships.json",
+      "title": "Typed Relationships",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/tumbler-addressing",
+      "path": "nodes/tumbler-addressing.json",
+      "title": "Tumbler Addressing",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/transclusion",
+      "path": "nodes/transclusion.json",
+      "title": "Transclusion",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/substrate-relationship-list",
+      "path": "nodes/substrate-relationship-list.json",
+      "title": "Substrate Relationship List",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/substrate-node-record",
+      "path": "nodes/substrate-node-record.json",
+      "title": "Substrate Node Record",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/substrate-manifest",
+      "path": "nodes/substrate-manifest.json",
+      "title": "Substrate Manifest",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/single-source-of-truth",
+      "path": "nodes/single-source-of-truth.json",
+      "title": "Single Source of Truth",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/schema-extension",
+      "path": "nodes/schema-extension.json",
+      "title": "Schema Extension",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/review-suggestions",
+      "path": "nodes/review-suggestions.json",
+      "title": "Review Suggestions",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/provenance",
+      "path": "nodes/provenance.json",
+      "title": "Provenance",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/protocol-artifacts",
+      "path": "nodes/protocol-artifacts.json",
+      "title": "Protocol Artifacts",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/namespacing",
+      "path": "nodes/namespacing.json",
+      "title": "Namespacing",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/namespace-registry",
+      "path": "nodes/namespace-registry.json",
+      "title": "Namespace Registry",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/moderation-model",
+      "path": "nodes/moderation-model.json",
+      "title": "Moderation Model",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/merge-validation",
+      "path": "nodes/merge-validation.json",
+      "title": "Merge Validation",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/merge-report",
+      "path": "nodes/merge-report.json",
+      "title": "Merge Report",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/known-implementations-registry",
+      "path": "nodes/known-implementations-registry.json",
+      "title": "Known Implementations Registry",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/knowledge-substrate",
+      "path": "nodes/knowledge-substrate.json",
+      "title": "Knowledge Substrate",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/independent-moderation",
+      "path": "nodes/independent-moderation.json",
+      "title": "Independent Moderation",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/fragment-node",
+      "path": "nodes/fragment-node.json",
+      "title": "Fragment Node",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/federation-rules",
+      "path": "nodes/federation-rules.json",
+      "title": "Federation Rules",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/federation-example",
+      "path": "nodes/federation-example.json",
+      "title": "Federation Example",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/federated-knowledge-substrates",
+      "path": "nodes/federated-knowledge-substrates.json",
+      "title": "Federated Knowledge Substrates",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/dispute-resolution",
+      "path": "nodes/dispute-resolution.json",
+      "title": "Dispute Resolution",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/deep-linking",
+      "path": "nodes/deep-linking.json",
+      "title": "Deep Linking",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/custom-extension-substrate",
+      "path": "nodes/custom-extension-substrate.json",
+      "title": "Custom Extension Substrate",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/compatibility-report",
+      "path": "nodes/compatibility-report.json",
+      "title": "Compatibility Report",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/compatibility-levels",
+      "path": "nodes/compatibility-levels.json",
+      "title": "Compatibility Levels",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/civilizational-memory",
+      "path": "nodes/civilizational-memory.json",
+      "title": "Civilizational Memory",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/canonical-type-policy",
+      "path": "nodes/canonical-type-policy.json",
+      "title": "Canonical Type Policy",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:claim/claim-substrate-is-structure",
+      "path": "nodes/claim-substrate-is-structure.json",
+      "title": "A knowledge substrate is structure, not information",
+      "type": "claim",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:claim/claim-relationships-preserve-context",
+      "path": "nodes/claim-relationships-preserve-context.json",
+      "title": "Typed relationships preserve context that hyperlinks lose",
+      "type": "claim",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:claim/claim-merge-without-collapse",
+      "path": "nodes/claim-merge-without-collapse.json",
+      "title": "Substrates should merge without collapsing disagreement",
+      "type": "claim",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/source-github",
+      "path": "nodes/source-github.json",
+      "title": "GitHub",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/source-support",
+      "path": "nodes/source-support.json",
+      "title": "Support",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "example.minimal:claim/substrate-is-structure",
+      "path": "nodes/substrate-is-structure.json",
+      "title": "A knowledge substrate is structure, not just information",
+      "type": "claim",
+      "imported": true
+    },
+    {
+      "id": "example.minimal:concept/associative-trails",
+      "path": "nodes/associative-trails.json",
+      "title": "Associative Trails",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "example.minimal:essay/relationship-navigation-intro",
+      "path": "nodes/relationship-navigation-intro.json",
+      "title": "Relationship Navigation Intro",
+      "type": "essay",
+      "imported": true
+    },
+    {
+      "id": "example.minimal:fragment/as-we-may-think-0004",
+      "path": "nodes/as-we-may-think-0004.json",
+      "title": "As We May Think Fragment 0004",
+      "type": "fragment",
+      "imported": true
+    },
+    {
+      "id": "example.minimal:concept/knowledge-substrate",
+      "path": "nodes/knowledge-substrate.json",
+      "title": "Knowledge Substrate",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "example.minimal:person/example-maintainer",
+      "path": "nodes/example-maintainer.json",
+      "title": "Example Maintainer",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "example.minimal:source/as-we-may-think",
+      "path": "nodes/as-we-may-think.json",
+      "title": "As We May Think",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "example.minimal:trail/start-here",
+      "path": "nodes/start-here.json",
+      "title": "Start Here",
+      "type": "trail",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:claim/relationships-preserve-knowledge",
+      "path": "nodes/relationships-preserve-knowledge.json",
+      "title": "Relationships Preserve Knowledge",
+      "type": "claim",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:community/xananode-contributors",
+      "path": "nodes/xananode-contributors.json",
+      "title": "XanaNode Contributors",
+      "type": "community",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:concept/knowledge-substrate",
+      "path": "nodes/knowledge-substrate.json",
+      "title": "Knowledge Substrate",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:concept/protocol-artifacts",
+      "path": "nodes/protocol-artifacts.json",
+      "title": "Protocol Artifacts",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:concept/substrate-projection-layer",
+      "path": "nodes/substrate-projection-layer.json",
+      "title": "Substrate Projection Layer",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:concept/xananode",
+      "path": "nodes/xananode.json",
+      "title": "XanaNode",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:essay/what-is-xananode",
+      "path": "nodes/what-is-xananode.json",
+      "title": "What Is XanaNode?",
+      "type": "essay",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:event/xananode-canonical-pack-bootstrap",
+      "path": "nodes/xananode-canonical-pack-bootstrap.json",
+      "title": "XanaNode Canonical Pack Bootstrap",
+      "type": "event",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:fragment/relationships-preserve-knowledge-sentence",
+      "path": "nodes/relationships-preserve-knowledge-sentence.json",
+      "title": "Relationships Preserve Knowledge Sentence",
+      "type": "fragment",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/xananode-icon",
+      "path": "nodes/xananode-icon.json",
+      "title": "XanaNode Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:observation/markdown-recreation-friction",
+      "path": "nodes/markdown-recreation-friction.json",
+      "title": "Markdown Recreation Friction",
+      "type": "observation",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:organization/built-by-bots",
+      "path": "nodes/built-by-bots.json",
+      "title": "Built By Bots",
+      "type": "organization",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:organization/cytoscape-consortium",
+      "path": "nodes/cytoscape-consortium.json",
+      "title": "Cytoscape Consortium",
+      "type": "organization",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:organization/hugo-authors",
+      "path": "nodes/hugo-authors.json",
+      "title": "Hugo Authors",
+      "type": "organization",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:person/christian-siefen",
+      "path": "nodes/christian-siefen.json",
+      "title": "Christian Siefen",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:place/world-wide-web",
+      "path": "nodes/world-wide-web.json",
+      "title": "World Wide Web",
+      "type": "place",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:project/xananode-core-sdk",
+      "path": "nodes/xananode-core-sdk.json",
+      "title": "XanaNode Core SDK",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:project/xananode-hugo-theme",
+      "path": "nodes/xananode-hugo-theme.json",
+      "title": "XanaNode Hugo Theme",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:project/xananode-protocol",
+      "path": "nodes/xananode-protocol.json",
+      "title": "XanaNode Protocol",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:project/xananode-workspace",
+      "path": "nodes/xananode-workspace.json",
+      "title": "XanaNode Workspace",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:publication/xnp-0004-merge-validation",
+      "path": "nodes/xnp-0004-merge-validation.json",
+      "title": "XNP-0004 Merge Validation",
+      "type": "publication",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:relationship/protocol-implements-claim",
+      "path": "nodes/protocol-implements-claim.json",
+      "title": "Protocol Implements Relationship Preservation",
+      "type": "relationship",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:revision/canonical-pack-v0-1-0",
+      "path": "nodes/canonical-pack-v0-1-0.json",
+      "title": "Canonical Pack v0.1.0",
+      "type": "revision",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/author-profile-schema",
+      "path": "nodes/author-profile-schema.json",
+      "title": "Author Profile Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/canonical-schema-author-profile",
+      "path": "nodes/canonical-schema-author-profile.json",
+      "title": "Author Profile Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/canonical-schema-compatibility-report",
+      "path": "nodes/canonical-schema-compatibility-report.json",
+      "title": "Compatibility Report Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/canonical-schema-merge-report",
+      "path": "nodes/canonical-schema-merge-report.json",
+      "title": "Merge Report Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/canonical-schema-nanopublication",
+      "path": "nodes/canonical-schema-nanopublication.json",
+      "title": "Nanopublication Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/canonical-schema-ro-crate-metadata",
+      "path": "nodes/canonical-schema-ro-crate-metadata.json",
+      "title": "Ro Crate Metadata Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/canonical-schema-substrate-diff",
+      "path": "nodes/canonical-schema-substrate-diff.json",
+      "title": "Substrate Diff Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/canonical-schema-substrate-manifest",
+      "path": "nodes/canonical-schema-substrate-manifest.json",
+      "title": "Substrate Manifest Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/canonical-schema-substrate-node",
+      "path": "nodes/canonical-schema-substrate-node.json",
+      "title": "Substrate Node Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/canonical-schema-substrate-relationships",
+      "path": "nodes/canonical-schema-substrate-relationships.json",
+      "title": "Substrate Relationships Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/canonical-schema-xananode-node-types",
+      "path": "nodes/canonical-schema-xananode-node-types.json",
+      "title": "Xananode Node Types Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/canonical-schema-xananode-property-registry",
+      "path": "nodes/canonical-schema-xananode-property-registry.json",
+      "title": "Xananode Property Registry Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/canonical-schema-xananode-relationship-types",
+      "path": "nodes/canonical-schema-xananode-relationship-types.json",
+      "title": "Xananode Relationship Types Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/canonical-schemas-registry",
+      "path": "nodes/canonical-schemas-registry.json",
+      "title": "Canonical Schemas Registry",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/compatibility-report-schema",
+      "path": "nodes/compatibility-report-schema.json",
+      "title": "Compatibility Report Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/known-implementations-registry",
+      "path": "nodes/known-implementations-registry.json",
+      "title": "Known Implementations Registry",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/merge-report-schema",
+      "path": "nodes/merge-report-schema.json",
+      "title": "Merge Report Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/namespace-example.merge",
+      "path": "nodes/namespace-example.merge.json",
+      "title": "Federation Merge Report Example Namespace",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/namespace-example.minimal",
+      "path": "nodes/namespace-example.minimal.json",
+      "title": "Minimal Example Namespace",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/namespace-example.museum",
+      "path": "nodes/namespace-example.museum.json",
+      "title": "Museum Extension Example Namespace",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/namespace-example.researcher_a",
+      "path": "nodes/namespace-example.researcher_a.json",
+      "title": "Federation Example A Namespace",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/namespace-example.researcher_b",
+      "path": "nodes/namespace-example.researcher_b.json",
+      "title": "Federation Example B Namespace",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/namespace-registry",
+      "path": "nodes/namespace-registry.json",
+      "title": "Namespace Registry",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/namespace-schema",
+      "path": "nodes/namespace-schema.json",
+      "title": "Namespace Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/namespace-xananode",
+      "path": "nodes/namespace-xananode.json",
+      "title": "XanaNode Core",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/nanopublication-schema",
+      "path": "nodes/nanopublication-schema.json",
+      "title": "Nanopublication Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-claim",
+      "path": "nodes/node-type-claim.json",
+      "title": "Claim",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-community",
+      "path": "nodes/node-type-community.json",
+      "title": "Community",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-concept",
+      "path": "nodes/node-type-concept.json",
+      "title": "Concept",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-essay",
+      "path": "nodes/node-type-essay.json",
+      "title": "Essay",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-event",
+      "path": "nodes/node-type-event.json",
+      "title": "Event",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-fragment",
+      "path": "nodes/node-type-fragment.json",
+      "title": "Fragment",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-media",
+      "path": "nodes/node-type-media.json",
+      "title": "Media",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-observation",
+      "path": "nodes/node-type-observation.json",
+      "title": "Observation",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-organization",
+      "path": "nodes/node-type-organization.json",
+      "title": "Organization",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-person",
+      "path": "nodes/node-type-person.json",
+      "title": "Person",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-place",
+      "path": "nodes/node-type-place.json",
+      "title": "Place",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-project",
+      "path": "nodes/node-type-project.json",
+      "title": "Project",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-publication",
+      "path": "nodes/node-type-publication.json",
+      "title": "Publication",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-registry",
+      "path": "nodes/node-type-registry.json",
+      "title": "Node Type Registry",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-relationship",
+      "path": "nodes/node-type-relationship.json",
+      "title": "Relationship",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-revision",
+      "path": "nodes/node-type-revision.json",
+      "title": "Revision",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-schema",
+      "path": "nodes/node-type-schema.json",
+      "title": "Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-source",
+      "path": "nodes/node-type-source.json",
+      "title": "Source",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-technology",
+      "path": "nodes/node-type-technology.json",
+      "title": "Technology",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-type-trail",
+      "path": "nodes/node-type-trail.json",
+      "title": "Trail",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-birth_date",
+      "path": "nodes/property-birth_date.json",
+      "title": "Birth date",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-currency_value",
+      "path": "nodes/property-currency_value.json",
+      "title": "Currency value",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-external_identifier",
+      "path": "nodes/property-external_identifier.json",
+      "title": "External identifier",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-geo_coordinates",
+      "path": "nodes/property-geo_coordinates.json",
+      "title": "Geographic coordinates",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-measurement_si",
+      "path": "nodes/property-measurement_si.json",
+      "title": "SI measurement",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-registry",
+      "path": "nodes/property-registry.json",
+      "title": "Property Registry",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-registry-schema",
+      "path": "nodes/property-registry-schema.json",
+      "title": "Property Registry Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-alias_of",
+      "path": "nodes/relationship-type-alias_of.json",
+      "title": "Alias of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-alternative_to",
+      "path": "nodes/relationship-type-alternative_to.json",
+      "title": "Alternative to",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-anticipated",
+      "path": "nodes/relationship-type-anticipated.json",
+      "title": "Anticipated",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-anticipated_by",
+      "path": "nodes/relationship-type-anticipated_by.json",
+      "title": "Anticipated By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-anticipates",
+      "path": "nodes/relationship-type-anticipates.json",
+      "title": "Anticipates",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-appears_in",
+      "path": "nodes/relationship-type-appears_in.json",
+      "title": "Appears in",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-approved",
+      "path": "nodes/relationship-type-approved.json",
+      "title": "Approved",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-approved_by",
+      "path": "nodes/relationship-type-approved_by.json",
+      "title": "Approved By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-arrived_from",
+      "path": "nodes/relationship-type-arrived_from.json",
+      "title": "Arrived From Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-arrives_at",
+      "path": "nodes/relationship-type-arrives_at.json",
+      "title": "Arrives at",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-authored",
+      "path": "nodes/relationship-type-authored.json",
+      "title": "Authored",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-authored_by",
+      "path": "nodes/relationship-type-authored_by.json",
+      "title": "Authored By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-broader_than",
+      "path": "nodes/relationship-type-broader_than.json",
+      "title": "Broader than",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-cited_by",
+      "path": "nodes/relationship-type-cited_by.json",
+      "title": "Cited By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-cites",
+      "path": "nodes/relationship-type-cites.json",
+      "title": "Cites",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-claim_of",
+      "path": "nodes/relationship-type-claim_of.json",
+      "title": "Claim Of Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-clarified_by",
+      "path": "nodes/relationship-type-clarified_by.json",
+      "title": "Clarified By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-clarifies",
+      "path": "nodes/relationship-type-clarifies.json",
+      "title": "Clarifies",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-coined",
+      "path": "nodes/relationship-type-coined.json",
+      "title": "Coined",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-coined_by",
+      "path": "nodes/relationship-type-coined_by.json",
+      "title": "Coined By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-collaborated_with",
+      "path": "nodes/relationship-type-collaborated_with.json",
+      "title": "Collaborated with",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-compatible_with",
+      "path": "nodes/relationship-type-compatible_with.json",
+      "title": "Compatible with",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-contains",
+      "path": "nodes/relationship-type-contains.json",
+      "title": "Contains",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-contemporary_of",
+      "path": "nodes/relationship-type-contemporary_of.json",
+      "title": "Contemporary of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-context_for",
+      "path": "nodes/relationship-type-context_for.json",
+      "title": "Context for",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-continued_from",
+      "path": "nodes/relationship-type-continued_from.json",
+      "title": "Continued From Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-continues_to",
+      "path": "nodes/relationship-type-continues_to.json",
+      "title": "Continues to",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-contradicted_by",
+      "path": "nodes/relationship-type-contradicted_by.json",
+      "title": "Contradicted By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-contradicts",
+      "path": "nodes/relationship-type-contradicts.json",
+      "title": "Contradicts",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-contrasts_with",
+      "path": "nodes/relationship-type-contrasts_with.json",
+      "title": "Contrasts with",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-created",
+      "path": "nodes/relationship-type-created.json",
+      "title": "Created",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-created_by",
+      "path": "nodes/relationship-type-created_by.json",
+      "title": "Created By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-deep_linked_from",
+      "path": "nodes/relationship-type-deep_linked_from.json",
+      "title": "Deep Linked From Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-deep_links_to",
+      "path": "nodes/relationship-type-deep_links_to.json",
+      "title": "Deep links to",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-defined_by",
+      "path": "nodes/relationship-type-defined_by.json",
+      "title": "Defined By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-defines",
+      "path": "nodes/relationship-type-defines.json",
+      "title": "Defines",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-demonstrated_by",
+      "path": "nodes/relationship-type-demonstrated_by.json",
+      "title": "Demonstrated By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-demonstrates",
+      "path": "nodes/relationship-type-demonstrates.json",
+      "title": "Demonstrates",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-dependency_of",
+      "path": "nodes/relationship-type-dependency_of.json",
+      "title": "Dependency Of Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-depends_on",
+      "path": "nodes/relationship-type-depends_on.json",
+      "title": "Depends on",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-depicted_by",
+      "path": "nodes/relationship-type-depicted_by.json",
+      "title": "Depicted By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-depicts",
+      "path": "nodes/relationship-type-depicts.json",
+      "title": "Depicts",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-derived_from",
+      "path": "nodes/relationship-type-derived_from.json",
+      "title": "Derived from",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-derived_into",
+      "path": "nodes/relationship-type-derived_into.json",
+      "title": "Derived Into Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-discussed_in",
+      "path": "nodes/relationship-type-discussed_in.json",
+      "title": "Discussed In Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-discusses",
+      "path": "nodes/relationship-type-discusses.json",
+      "title": "Discusses",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-disputed_by",
+      "path": "nodes/relationship-type-disputed_by.json",
+      "title": "Disputed By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-disputed_identity",
+      "path": "nodes/relationship-type-disputed_identity.json",
+      "title": "Disputed identity",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-disputes",
+      "path": "nodes/relationship-type-disputes.json",
+      "title": "Disputes",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-documented_by",
+      "path": "nodes/relationship-type-documented_by.json",
+      "title": "Documented By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-documents",
+      "path": "nodes/relationship-type-documents.json",
+      "title": "Documents",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-enabled_by",
+      "path": "nodes/relationship-type-enabled_by.json",
+      "title": "Enabled By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-enables",
+      "path": "nodes/relationship-type-enables.json",
+      "title": "Enables",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-equivalent_to",
+      "path": "nodes/relationship-type-equivalent_to.json",
+      "title": "Equivalent to",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-evidence_for",
+      "path": "nodes/relationship-type-evidence_for.json",
+      "title": "Evidence for",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-explained_by",
+      "path": "nodes/relationship-type-explained_by.json",
+      "title": "Explained By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-explains",
+      "path": "nodes/relationship-type-explains.json",
+      "title": "Explains",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-extended_by",
+      "path": "nodes/relationship-type-extended_by.json",
+      "title": "Extended By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-extends",
+      "path": "nodes/relationship-type-extends.json",
+      "title": "Extends",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-extension_of",
+      "path": "nodes/relationship-type-extension_of.json",
+      "title": "Extension of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-featured_in",
+      "path": "nodes/relationship-type-featured_in.json",
+      "title": "Featured In Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-featured_speaker",
+      "path": "nodes/relationship-type-featured_speaker.json",
+      "title": "Featured Speaker Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-features",
+      "path": "nodes/relationship-type-features.json",
+      "title": "Features",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-followed",
+      "path": "nodes/relationship-type-followed.json",
+      "title": "Followed Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-friend_of",
+      "path": "nodes/relationship-type-friend_of.json",
+      "title": "Friend of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-had_participant",
+      "path": "nodes/relationship-type-had_participant.json",
+      "title": "Had Participant Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-has_alias",
+      "path": "nodes/relationship-type-has_alias.json",
+      "title": "Has Alias Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-has_appearance",
+      "path": "nodes/relationship-type-has_appearance.json",
+      "title": "Has Appearance Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-has_claim",
+      "path": "nodes/relationship-type-has_claim.json",
+      "title": "Has claim",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-has_context",
+      "path": "nodes/relationship-type-has_context.json",
+      "title": "Has Context Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-has_evidence",
+      "path": "nodes/relationship-type-has_evidence.json",
+      "title": "Has Evidence Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-has_extension",
+      "path": "nodes/relationship-type-has_extension.json",
+      "title": "Has Extension Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-has_primary_media",
+      "path": "nodes/relationship-type-has_primary_media.json",
+      "title": "Has primary media",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-identified",
+      "path": "nodes/relationship-type-identified.json",
+      "title": "Identified",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-identified_by",
+      "path": "nodes/relationship-type-identified_by.json",
+      "title": "Identified By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-implemented_by",
+      "path": "nodes/relationship-type-implemented_by.json",
+      "title": "Implemented By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-implements",
+      "path": "nodes/relationship-type-implements.json",
+      "title": "Implements",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-included_in",
+      "path": "nodes/relationship-type-included_in.json",
+      "title": "Included In Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-includes",
+      "path": "nodes/relationship-type-includes.json",
+      "title": "Includes",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-influenced",
+      "path": "nodes/relationship-type-influenced.json",
+      "title": "Influenced",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-influenced_by",
+      "path": "nodes/relationship-type-influenced_by.json",
+      "title": "Influenced By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-interviewed",
+      "path": "nodes/relationship-type-interviewed.json",
+      "title": "Interviewed",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-interviewed_by",
+      "path": "nodes/relationship-type-interviewed_by.json",
+      "title": "Interviewed By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-introduced",
+      "path": "nodes/relationship-type-introduced.json",
+      "title": "Introduced",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-introduced_by",
+      "path": "nodes/relationship-type-introduced_by.json",
+      "title": "Introduced By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-introduced_in",
+      "path": "nodes/relationship-type-introduced_in.json",
+      "title": "Introduced in",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-introduction_venue_of",
+      "path": "nodes/relationship-type-introduction_venue_of.json",
+      "title": "Introduction Venue Of Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-is_start_of",
+      "path": "nodes/relationship-type-is_start_of.json",
+      "title": "Is Start Of Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-mapped_from",
+      "path": "nodes/relationship-type-mapped_from.json",
+      "title": "Mapped From Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-maps_to",
+      "path": "nodes/relationship-type-maps_to.json",
+      "title": "Maps to",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-memorialized_by",
+      "path": "nodes/relationship-type-memorialized_by.json",
+      "title": "Memorialized By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-memorializes",
+      "path": "nodes/relationship-type-memorializes.json",
+      "title": "Memorializes",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-mentioned_by",
+      "path": "nodes/relationship-type-mentioned_by.json",
+      "title": "Mentioned By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-mentions",
+      "path": "nodes/relationship-type-mentions.json",
+      "title": "Mentions",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-motivated_by",
+      "path": "nodes/relationship-type-motivated_by.json",
+      "title": "Motivated by",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-motivates",
+      "path": "nodes/relationship-type-motivates.json",
+      "title": "Motivates Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-narrower_than",
+      "path": "nodes/relationship-type-narrower_than.json",
+      "title": "Narrower Than Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-occurred_at",
+      "path": "nodes/relationship-type-occurred_at.json",
+      "title": "Occurred at",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-parallel_to",
+      "path": "nodes/relationship-type-parallel_to.json",
+      "title": "Parallel to",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-part_of",
+      "path": "nodes/relationship-type-part_of.json",
+      "title": "Part Of Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-participated_in",
+      "path": "nodes/relationship-type-participated_in.json",
+      "title": "Participated in",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-popularized",
+      "path": "nodes/relationship-type-popularized.json",
+      "title": "Popularized",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-popularized_by",
+      "path": "nodes/relationship-type-popularized_by.json",
+      "title": "Popularized By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-possible_match",
+      "path": "nodes/relationship-type-possible_match.json",
+      "title": "Possible match",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-preceded",
+      "path": "nodes/relationship-type-preceded.json",
+      "title": "Preceded",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-presented",
+      "path": "nodes/relationship-type-presented.json",
+      "title": "Presented",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-presented_by",
+      "path": "nodes/relationship-type-presented_by.json",
+      "title": "Presented By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-preserved_by",
+      "path": "nodes/relationship-type-preserved_by.json",
+      "title": "Preserved By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-preserves",
+      "path": "nodes/relationship-type-preserves.json",
+      "title": "Preserves",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-produces",
+      "path": "nodes/relationship-type-produces.json",
+      "title": "Produces Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-proposed",
+      "path": "nodes/relationship-type-proposed.json",
+      "title": "Proposed",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-proposed_by",
+      "path": "nodes/relationship-type-proposed_by.json",
+      "title": "Proposed By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-quoted_by",
+      "path": "nodes/relationship-type-quoted_by.json",
+      "title": "Quoted By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-quotes",
+      "path": "nodes/relationship-type-quotes.json",
+      "title": "Quotes",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-refined_by",
+      "path": "nodes/relationship-type-refined_by.json",
+      "title": "Refined By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-refines",
+      "path": "nodes/relationship-type-refines.json",
+      "title": "Refines",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-registry",
+      "path": "nodes/relationship-type-registry.json",
+      "title": "Relationship Type Registry",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-related_to",
+      "path": "nodes/relationship-type-related_to.json",
+      "title": "Related to",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-represented_by",
+      "path": "nodes/relationship-type-represented_by.json",
+      "title": "Represented By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-represents",
+      "path": "nodes/relationship-type-represents.json",
+      "title": "Represents",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-required_for",
+      "path": "nodes/relationship-type-required_for.json",
+      "title": "Required For Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-requires",
+      "path": "nodes/relationship-type-requires.json",
+      "title": "Requires",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-results_from",
+      "path": "nodes/relationship-type-results_from.json",
+      "title": "Results from",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-same_entity",
+      "path": "nodes/relationship-type-same_entity.json",
+      "title": "Same entity",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-shaped_by",
+      "path": "nodes/relationship-type-shaped_by.json",
+      "title": "Shaped By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-shapes",
+      "path": "nodes/relationship-type-shapes.json",
+      "title": "Shapes",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-site_of",
+      "path": "nodes/relationship-type-site_of.json",
+      "title": "Site Of Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-spoke_at",
+      "path": "nodes/relationship-type-spoke_at.json",
+      "title": "Spoke at",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-starts_with",
+      "path": "nodes/relationship-type-starts_with.json",
+      "title": "Starts with",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-superseded_by",
+      "path": "nodes/relationship-type-superseded_by.json",
+      "title": "Superseded By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-supersedes",
+      "path": "nodes/relationship-type-supersedes.json",
+      "title": "Supersedes",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-supported_by",
+      "path": "nodes/relationship-type-supported_by.json",
+      "title": "Supported By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-supports",
+      "path": "nodes/relationship-type-supports.json",
+      "title": "Supports",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-threatened_by",
+      "path": "nodes/relationship-type-threatened_by.json",
+      "title": "Threatened By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-threatens",
+      "path": "nodes/relationship-type-threatens.json",
+      "title": "Threatens",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-trained_on",
+      "path": "nodes/relationship-type-trained_on.json",
+      "title": "Trained on",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-transcluded_by",
+      "path": "nodes/relationship-type-transcluded_by.json",
+      "title": "Transcluded By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-transcludes",
+      "path": "nodes/relationship-type-transcludes.json",
+      "title": "Transcludes",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-used_as_primary_media_for",
+      "path": "nodes/relationship-type-used_as_primary_media_for.json",
+      "title": "Used As Primary Media For Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-used_by",
+      "path": "nodes/relationship-type-used_by.json",
+      "title": "Used By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-used_to_train",
+      "path": "nodes/relationship-type-used_to_train.json",
+      "title": "Used To Train Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-uses",
+      "path": "nodes/relationship-type-uses.json",
+      "title": "Uses",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/ro-crate-metadata-schema",
+      "path": "nodes/ro-crate-metadata-schema.json",
+      "title": "RO-Crate Metadata Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/substrate-diff-schema",
+      "path": "nodes/substrate-diff-schema.json",
+      "title": "Substrate Diff Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/substrate-manifest-schema",
+      "path": "nodes/substrate-manifest-schema.json",
+      "title": "Substrate Manifest Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/substrate-node-schema",
+      "path": "nodes/substrate-node-schema.json",
+      "title": "Substrate Node Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/substrate-relationships-schema",
+      "path": "nodes/substrate-relationships-schema.json",
+      "title": "Substrate Relationships Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/github-profile",
+      "path": "nodes/github-profile.json",
+      "title": "GitHub Profile",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/hugo-official-site",
+      "path": "nodes/hugo-official-site.json",
+      "title": "Hugo Official Site",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/support-xananode",
+      "path": "nodes/support-xananode.json",
+      "title": "Support XanaNode",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/xananode-com-domain",
+      "path": "nodes/xananode-com-domain.json",
+      "title": "XanaNode.com",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/xananode-core-sdk-repository",
+      "path": "nodes/xananode-core-sdk-repository.json",
+      "title": "XanaNode Core SDK Repository",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/xananode-hugo-repository",
+      "path": "nodes/xananode-hugo-repository.json",
+      "title": "XanaNode Hugo Repository",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/xananode-net-domain",
+      "path": "nodes/xananode-net-domain.json",
+      "title": "XanaNode.net",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/xananode-org-domain",
+      "path": "nodes/xananode-org-domain.json",
+      "title": "XanaNode.org",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/xananode-protocol-repository",
+      "path": "nodes/xananode-protocol-repository.json",
+      "title": "XanaNode Protocol Repository",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/xananode-studio-repository",
+      "path": "nodes/xananode-studio-repository.json",
+      "title": "XanaNode Studio Repository",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/xananode-workspace-repository",
+      "path": "nodes/xananode-workspace-repository.json",
+      "title": "XanaNode Workspace Repository",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:technology/cytoscape-js",
+      "path": "nodes/cytoscape-js.json",
+      "title": "Cytoscape.js",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:technology/git",
+      "path": "nodes/git.json",
+      "title": "Git",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:technology/hugo",
+      "path": "nodes/hugo.json",
+      "title": "Hugo",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:technology/nodejs",
+      "path": "nodes/nodejs.json",
+      "title": "Node.js",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:technology/python",
+      "path": "nodes/python.json",
+      "title": "Python",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:trail/xananode-stack-trail",
+      "path": "nodes/xananode-stack-trail.json",
+      "title": "XanaNode Stack Trail",
+      "type": "trail",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/gottfried-wilhelm-leibniz",
+      "path": "nodes/gottfried-wilhelm-leibniz.json",
+      "title": "Gottfried Wilhelm Leibniz",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/wilhelm-ostwald",
+      "path": "nodes/wilhelm-ostwald.json",
+      "title": "Wilhelm Ostwald",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/jorge-luis-borges",
+      "path": "nodes/jorge-luis-borges.json",
+      "title": "Jorge Luis Borges",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:publication/the-garden-of-forking-paths",
+      "path": "nodes/the-garden-of-forking-paths.json",
+      "title": "The Garden of Forking Paths",
+      "type": "publication",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/andries-van-dam",
+      "path": "nodes/andries-van-dam.json",
+      "title": "Andries van Dam",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:place/brown-university",
+      "path": "nodes/brown-university.json",
+      "title": "Brown University",
+      "type": "place",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/hypertext-editing-system",
+      "path": "nodes/hypertext-editing-system.json",
+      "title": "Hypertext Editing System",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/fress",
+      "path": "nodes/fress.json",
+      "title": "FRESS",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/intermedia",
+      "path": "nodes/intermedia.json",
+      "title": "Intermedia",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/nicholas-negroponte",
+      "path": "nodes/nicholas-negroponte.json",
+      "title": "Nicholas Negroponte",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/seymour-papert",
+      "path": "nodes/seymour-papert.json",
+      "title": "Seymour Papert",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/marvin-minsky",
+      "path": "nodes/marvin-minsky.json",
+      "title": "Marvin Minsky",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:organization/mit-media-lab",
+      "path": "nodes/mit-media-lab.json",
+      "title": "MIT Media Lab",
+      "type": "organization",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/hans-peter-brondmo",
+      "path": "nodes/hans-peter-brondmo.json",
+      "title": "Hans Peter Brondmo",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/micons",
+      "path": "nodes/micons.json",
+      "title": "Micons",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/robert-winter",
+      "path": "nodes/robert-winter.json",
+      "title": "Robert Winter",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/interactive-beethoven-ninth",
+      "path": "nodes/interactive-beethoven-ninth.json",
+      "title": "Interactive Beethoven's Ninth",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/robert-abel",
+      "path": "nodes/robert-abel.json",
+      "title": "Robert Abel",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/interactive-guernica",
+      "path": "nodes/interactive-guernica.json",
+      "title": "Interactive Guernica",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/ivan-sutherland",
+      "path": "nodes/ivan-sutherland.json",
+      "title": "Ivan Sutherland",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/jaron-lanier",
+      "path": "nodes/jaron-lanier.json",
+      "title": "Jaron Lanier",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:organization/vpl-research",
+      "path": "nodes/vpl-research.json",
+      "title": "VPL Research",
+      "type": "organization",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/scott-fisher",
+      "path": "nodes/scott-fisher.json",
+      "title": "Scott Fisher",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:organization/nasa",
+      "path": "nodes/nasa.json",
+      "title": "NASA",
+      "type": "organization",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:publication/dirk-gentlys-holistic-detective-agency",
+      "path": "nodes/dirk-gentlys-holistic-detective-agency.json",
+      "title": "Dirk Gently's Holistic Detective Agency",
+      "type": "publication",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:organization/bbc-two",
+      "path": "nodes/bbc-two.json",
+      "title": "BBC Two",
+      "type": "organization",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/richard-saul-wurman",
+      "path": "nodes/richard-saul-wurman.json",
+      "title": "Richard Saul Wurman",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/harry-marks",
+      "path": "nodes/harry-marks.json",
+      "title": "Harry Marks",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/john-sculley",
+      "path": "nodes/john-sculley.json",
+      "title": "John Sculley",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/apple-knowledge-navigator",
+      "path": "nodes/apple-knowledge-navigator.json",
+      "title": "Apple Knowledge Navigator",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/bill-atkinson",
+      "path": "nodes/bill-atkinson.json",
+      "title": "Bill Atkinson",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/herbie-hancock",
+      "path": "nodes/herbie-hancock.json",
+      "title": "Herbie Hancock",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/nigel-holmes",
+      "path": "nodes/nigel-holmes.json",
+      "title": "Nigel Holmes",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/laurie-anderson",
+      "path": "nodes/laurie-anderson.json",
+      "title": "Laurie Anderson",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/bran-ferren",
+      "path": "nodes/bran-ferren.json",
+      "title": "Bran Ferren",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/robert-cailliau",
+      "path": "nodes/robert-cailliau.json",
+      "title": "Robert Cailliau",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:place/cern",
+      "path": "nodes/cern.json",
+      "title": "CERN",
+      "type": "place",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/html",
+      "path": "nodes/html.json",
+      "title": "HTML",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/url-uri",
+      "path": "nodes/url-uri.json",
+      "title": "URL/URI",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/http",
+      "path": "nodes/http.json",
+      "title": "HTTP",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:organization/ncsa",
+      "path": "nodes/ncsa.json",
+      "title": "NCSA",
+      "type": "organization",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/marc-andreessen",
+      "path": "nodes/marc-andreessen.json",
+      "title": "Marc Andreessen",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/mosaic",
+      "path": "nodes/mosaic.json",
+      "title": "Mosaic",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:concept/web-as-incomplete-hypertext",
+      "path": "nodes/web-as-incomplete-hypertext.json",
+      "title": "The Web as Incomplete Hypertext",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/guide",
+      "path": "nodes/guide.json",
+      "title": "Guide",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/storyspace",
+      "path": "nodes/storyspace.json",
+      "title": "Storyspace",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/zog-kms",
+      "path": "nodes/zog-kms.json",
+      "title": "ZOG/KMS",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/xanadu-at-autodesk",
+      "path": "nodes/xanadu-at-autodesk.json",
+      "title": "Xanadu at Autodesk",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:concept/conflict-disputed-identity",
+      "path": "nodes/conflict-disputed-identity.json",
+      "title": "Conflict and Disputed Identity",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/git-backed-substrate",
+      "path": "nodes/git-backed-substrate.json",
+      "title": "Git-backed Substrate",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:tool/babel",
+      "path": "nodes/babel.json",
+      "title": "Babel",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:tool/hyperland-vr",
+      "path": "nodes/hyperland-vr.json",
+      "title": "Hyperland VR",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:concept/authored-substrate-overlap",
+      "path": "nodes/authored-substrate-overlap.json",
+      "title": "Authored Substrate Overlap",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:claim/overlap-is-federation-signal",
+      "path": "nodes/overlap-is-federation-signal.json",
+      "title": "Overlap is a Federation Signal",
+      "type": "claim",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "path": "nodes/merge-is-authored-interpretation.json",
+      "title": "Merge is Authored Interpretation",
+      "type": "claim",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack",
+      "path": "nodes/lineage-pack-can-overlap-canonical-pack.json",
+      "title": "Lineage Packs Can Overlap Canonical Packs",
+      "type": "claim",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "path": "nodes/lost-lineage-human-knowledge-augmentation.json",
+      "title": "Lost Lineage of Human Knowledge Augmentation",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/paul-otlet",
+      "path": "nodes/paul-otlet.json",
+      "title": "Paul Otlet",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/h-g-wells",
+      "path": "nodes/h-g-wells.json",
+      "title": "H. G. Wells",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/douglas-adams",
+      "path": "nodes/douglas-adams.json",
+      "title": "Douglas Adams",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:publication/hyperland",
+      "path": "nodes/hyperland.json",
+      "title": "Hyperland",
+      "type": "publication",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/tom-baker",
+      "path": "nodes/tom-baker.json",
+      "title": "Tom Baker",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/max-whitby",
+      "path": "nodes/max-whitby.json",
+      "title": "Max Whitby",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:event/ted2-1990",
+      "path": "nodes/ted2-1990.json",
+      "title": "TED2",
+      "type": "event",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:place/monterey-california",
+      "path": "nodes/monterey-california.json",
+      "title": "Monterey, California",
+      "type": "place",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/bob-stein",
+      "path": "nodes/bob-stein.json",
+      "title": "Bob Stein",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:organization/voyager-company",
+      "path": "nodes/voyager-company.json",
+      "title": "Voyager Company",
+      "type": "organization",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/alan-kay",
+      "path": "nodes/alan-kay.json",
+      "title": "Alan Kay",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:organization/xerox-parc",
+      "path": "nodes/xerox-parc.json",
+      "title": "Xerox PARC",
+      "type": "organization",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/hypercard",
+      "path": "nodes/hypercard.json",
+      "title": "HyperCard",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/tim-berners-lee",
+      "path": "nodes/tim-berners-lee.json",
+      "title": "Tim Berners-Lee",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/world-wide-web",
+      "path": "nodes/world-wide-web.json",
+      "title": "World Wide Web",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/aspen-movie-map",
+      "path": "nodes/aspen-movie-map.json",
+      "title": "Aspen Movie Map",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:trail/lost-lineage-intertwingled-trail",
+      "path": "nodes/lost-lineage-intertwingled-trail.json",
+      "title": "Lost Lineage Intertwingled Trail",
+      "type": "trail",
+      "imported": true
+    },
+    {
+      "id": "xananode.review:observation/unresolved-review-fixture",
+      "path": "nodes/unresolved-review-fixture.json",
+      "title": "Unresolved Review Fixture",
+      "type": "observation",
+      "imported": true
+    },
+    {
+      "id": "xananode.example:fragment/xanadu-document-interconnection-0001",
+      "path": "nodes/xanadu-document-interconnection-0001.json",
+      "title": "Reusable Media Fragment",
+      "type": "fragment",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:fragment/mother-of-all-demos-0001",
+      "path": "nodes/mother-of-all-demos-0001.json",
+      "title": "Augmenting Human Intelligence Fragment",
+      "type": "fragment",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:fragment/as-we-may-think-0004",
+      "path": "nodes/as-we-may-think-0004.json",
+      "title": "Associative Trails Fragment",
+      "type": "fragment",
+      "imported": false
+    }
+  ]
+}

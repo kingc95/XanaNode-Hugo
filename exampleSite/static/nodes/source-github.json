@@ -1,0 +1,18 @@
+{
+  "id": "xananode.example:source/source-github",
+  "title": "GitHub",
+  "type": "source",
+  "subtype": "social_profile",
+  "importance": 2,
+  "summary": "XanaNode project repositories and public development activity.",
+  "source_url": "https://github.com/kingc95",
+  "rights_status": "external",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/source-github-documents-xananode-224",
+      "type": "documents",
+      "target": "xananode.example:concept/xananode",
+      "direction": "outgoing"
+    }
+  ]
+}

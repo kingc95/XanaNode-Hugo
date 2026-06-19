@@ -1,0 +1,20 @@
+{
+  "id": "xananode.review:observation/unresolved-review-fixture",
+  "title": "Unresolved Review Fixture",
+  "type": "observation",
+  "importance": 1,
+  "review_fixture": true,
+  "summary": "A deliberately incomplete review fixture used to keep pending suggestion examples out of real authored packs.",
+  "content": "This intentionally unfinished fixture mentions Hyperland, transclusion, and protocol artifacts without applying the links. Nelson's work provides a key source layer for transclusion, reusable media, and visible interconnection.",
+  "relationships": [
+    {
+      "id": "xananode.review:rel/fixture-context-for-review",
+      "type": "context_for",
+      "target": "xananode.example:concept/review-suggestions",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:review-fixture",
+  "pack_mode": "mounted"
+}

@@ -6,6 +6,7 @@
   "scripts": {
     "prepare": "node tools/prepare-xananode.mjs exampleSite",
     "validate": "node tools/prepare-xananode.mjs exampleSite",
+    "pack:canonical": "node vendor/xananode-core/bin/xananode.js build-pack exampleSite --out exampleSite/packs/xananode-canonical --id xananode.canonical --name \"XanaNode Canonical Pack\" --namespace xananode.example --repository-url https://github.com/kingc95/xananode",
     "example:dev": "npm run prepare && hugo server --source exampleSite --themesDir ../..",
     "example:build": "npm run prepare && hugo --source exampleSite --themesDir ../.. --gc --minify",
     "core:init": "git submodule update --init --recursive vendor/xananode-core",

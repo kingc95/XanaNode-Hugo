@@ -1,28 +1,20 @@
 {
-  "id": "xananode.example:schema/namespace-schema",
+  "id": "xananode.canonical:schema/namespace-schema",
   "title": "Namespace Schema",
   "type": "schema",
-  "status": "draft",
+  "subtype": "validation_rule",
   "importance": 4,
-  "summary": "The JSON Schema for namespace registry entries.",
+  "summary": "The JSON Schema for declaring interoperable XanaNode namespaces.",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/namespace.schema.json",
   "relationships": [
     {
-      "id": "xananode.example:rel/namespace-schema-defines-namespace-registry-69",
-      "type": "defines",
-      "target": "xananode.example:concept/namespace-registry",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/namespace-schema-supports-namespacing-70",
-      "type": "supports",
-      "target": "xananode.example:concept/namespacing",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/schema-extension-requires-namespace-schema-71",
-      "type": "requires",
-      "source": "xananode.example:concept/schema-extension",
+      "id": "xananode.canonical:rel/protocol-contains-namespace-schema",
+      "type": "contains",
+      "source": "xananode.canonical:project/xananode-protocol",
       "direction": "incoming"
     }
-  ]
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
 }

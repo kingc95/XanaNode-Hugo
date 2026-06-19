@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-depends_on",
+  "title": "Depends on",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source depends on the target.",
+  "version": "0.5.0",
+  "registry_type": "depends_on",
+  "registry_namespace": "xananode",
+  "category": "composition",
+  "inverse": "dependency_of",
+  "default_weight": 3,
+  "default_visibility": "secondary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-depends_on",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-dependency_of-related_to-schema-relationship-type-depends_on-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-dependency_of",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-depends_on-related_to-schema-relationship-type-dependency_of-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-dependency_of",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

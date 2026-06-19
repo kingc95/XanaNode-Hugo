@@ -1,0 +1,66 @@
+{
+  "id": "xananode.lineage:publication/hyperland",
+  "title": "Hyperland",
+  "type": "publication",
+  "importance": 5,
+  "summary": "A 1990 BBC hypermedia documentary by Douglas Adams that dramatized software agents, hypertext, Xanadu, micons, and associative browsing.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/hyperland-features-micons",
+      "type": "features",
+      "target": "xananode.lineage:technology/micons",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/dirk-gently-anticipated-hyperland",
+      "type": "anticipated",
+      "source": "xananode.lineage:publication/dirk-gentlys-holistic-detective-agency",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/bbc-two-created-hyperland-broadcast-context",
+      "type": "created",
+      "source": "xananode.lineage:organization/bbc-two",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/nelson-influenced-hyperland",
+      "type": "influenced",
+      "source": "xananode.example:person/ted-nelson",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/adams-authored-hyperland",
+      "type": "authored",
+      "source": "xananode.lineage:person/douglas-adams",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/whitby-created-hyperland",
+      "type": "created",
+      "source": "xananode.lineage:person/max-whitby",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/hyperland-features-tom-baker",
+      "type": "features",
+      "target": "xananode.lineage:person/tom-baker",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/hyperland-contemporary-of-ted2",
+      "type": "contemporary_of",
+      "target": "xananode.lineage:event/ted2-1990",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/aspen-anticipated-spatial-media",
+      "type": "anticipated",
+      "source": "xananode.lineage:project/aspen-movie-map",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

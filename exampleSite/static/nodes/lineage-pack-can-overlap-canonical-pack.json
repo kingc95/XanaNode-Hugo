@@ -1,0 +1,24 @@
+{
+  "id": "xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack",
+  "title": "Lineage Packs Can Overlap Canonical Packs",
+  "type": "claim",
+  "importance": 4,
+  "summary": "The XanaNode lineage pack may overlap the canonical XanaNode pack because one explains origin and influence while the other defines protocol vocabulary and project structure.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/overlap-has-lineage-pack-claim",
+      "type": "has_claim",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/lineage-overlap-claim-explains-pack-boundary",
+      "type": "explains",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

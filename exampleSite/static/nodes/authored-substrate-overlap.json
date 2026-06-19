@@ -1,0 +1,43 @@
+{
+  "id": "xananode.lineage:concept/authored-substrate-overlap",
+  "title": "Authored Substrate Overlap",
+  "type": "concept",
+  "importance": 5,
+  "summary": "Independently authored substrates will naturally describe some of the same entities, claims, works, and sources without meaning one substrate should erase the other.",
+  "content": "Overlap is expected when people, organizations, and projects author their own substrates. Two packs may both mention XanaNode, Douglas Adams, Hyperland, the Web, or transclusion because those things matter from more than one point of view. XanaNode treats that overlap as a federation signal: keep the authored records, preserve their provenance, compare their identifiers and claims, and only merge when the substrate can explain why the records refer to the same thing.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/overlap-context-for-federation",
+      "type": "context_for",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/overlap-has-federation-signal-claim",
+      "type": "has_claim",
+      "target": "xananode.lineage:claim/overlap-is-federation-signal",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/overlap-has-merge-claim",
+      "type": "has_claim",
+      "target": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/overlap-has-lineage-pack-claim",
+      "type": "has_claim",
+      "target": "xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/overlap-preserves-disputed-identity",
+      "type": "preserves",
+      "target": "xananode.lineage:concept/conflict-disputed-identity",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

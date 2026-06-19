@@ -1,41 +1,41 @@
 {
-  "id": "xananode.example:media/xananode-icon",
+  "id": "xananode.canonical:media/xananode-icon",
   "title": "XanaNode Icon",
   "type": "media",
+  "subtypes": [
+    "image",
+    "logo"
+  ],
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
   "importance": 5,
-  "summary": "The abstract X-shaped network icon used as the visual mark for the XanaNode theme.",
-  "source_url": "https://xananode.com/xananode-icon.svg",
+  "summary": "The XanaNode project icon used as primary media for XanaNode nodes and projection branding.",
+  "alt": "A connected node mark with orange and blue paths crossing around a bright central node.",
   "rights_status": "open-source",
+  "asset_path": "media/images/xananode-icon.svg",
+  "asset_role": "primary_media",
+  "creator": "Built By Bots",
   "relationships": [
     {
-      "id": "xananode.example:rel/xananode-hugo-theme-has_primary_media-xananode-icon-102",
-      "type": "has_primary_media",
-      "source": "xananode.example:project/xananode-hugo-theme",
+      "id": "xananode.canonical:rel/built-by-bots-created-icon",
+      "type": "created",
+      "source": "xananode.canonical:organization/built-by-bots",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-icon-depicts-xananode-hugo-theme-103",
+      "id": "xananode.canonical:rel/icon-depicts-xananode",
       "type": "depicts",
-      "target": "xananode.example:project/xananode-hugo-theme",
+      "target": "xananode.canonical:concept/xananode",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/xananode-icon-represents-xananode-104",
-      "type": "represents",
-      "target": "xananode.example:concept/xananode",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/xananode-hugo-theme-represented-by-xananode-icon",
+      "id": "xananode.canonical:rel/xananode-has-primary-media-icon",
       "type": "has_primary_media",
-      "source": "xananode.example:project/xananode-hugo-theme",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/xananode-represented-by-xananode-icon",
-      "type": "has_primary_media",
-      "source": "xananode.example:concept/xananode",
+      "source": "xananode.canonical:concept/xananode",
       "direction": "incoming"
     }
-  ]
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
 }

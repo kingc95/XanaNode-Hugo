@@ -1,0 +1,24 @@
+{
+  "id": "xananode.lineage:technology/micons",
+  "title": "Micons",
+  "type": "technology",
+  "importance": 3,
+  "summary": "Motion icons presented in Hyperland as animated conceptual representations.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/brondmo-introduced-micons",
+      "type": "introduced",
+      "source": "xananode.lineage:person/hans-peter-brondmo",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/hyperland-features-micons",
+      "type": "features",
+      "source": "xananode.lineage:publication/hyperland",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

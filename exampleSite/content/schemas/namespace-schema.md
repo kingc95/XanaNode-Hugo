@@ -16,4 +16,4 @@ relationships:
 
 Namespace records help identify who owns a prefix and how it should be interpreted.
 
-They support registry tooling, extension discovery, and federation checks while allowing unknown namespaces to remain preserved rather than rejected.
+They [support](source-support) registry tooling, extension discovery, and federation checks while allowing unknown namespaces to remain preserved rather than rejected.

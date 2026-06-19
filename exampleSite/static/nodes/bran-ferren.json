@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/bran-ferren",
+  "title": "Bran Ferren",
+  "type": "person",
+  "importance": 3,
+  "summary": "Designer and technologist bridging entertainment, design, and technology.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

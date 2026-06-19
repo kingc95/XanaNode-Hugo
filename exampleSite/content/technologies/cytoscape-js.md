@@ -8,4 +8,4 @@ relationships:
     target: "knowledge-substrate"
 ---
 
-Cytoscape.js renders the visible graph. It is a presentation dependency, not the knowledge model itself.
+[Cytoscape.js](xananode.canonical:technology/cytoscape-js) renders the visible graph. It is a presentation dependency, not the knowledge model itself.

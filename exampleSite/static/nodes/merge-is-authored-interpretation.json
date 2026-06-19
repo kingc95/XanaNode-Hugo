@@ -1,0 +1,24 @@
+{
+  "id": "xananode.lineage:claim/merge-is-authored-interpretation",
+  "title": "Merge is Authored Interpretation",
+  "type": "claim",
+  "importance": 5,
+  "summary": "A merge decision is itself a claim about identity and should remain inspectable, reversible, and attributable.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/overlap-has-merge-claim",
+      "type": "has_claim",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/merge-claim-refines-conflict",
+      "type": "refines",
+      "target": "xananode.lineage:concept/conflict-disputed-identity",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

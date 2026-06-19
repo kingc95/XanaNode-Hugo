@@ -1,0 +1,98 @@
+{
+  "id": "xananode.canonical:schema/property-geo_coordinates",
+  "title": "Geographic coordinates",
+  "type": "schema",
+  "subtype": "property_registry_entry",
+  "importance": 4,
+  "summary": "WGS84 latitude and longitude coordinates for a place or geographically located entity.",
+  "registry_type": "geo_coordinates",
+  "category": "space",
+  "aliases": [
+    "coordinates",
+    "lat_lon",
+    "location"
+  ],
+  "applies_to": [
+    "place",
+    "event",
+    "organization",
+    "source",
+    "media"
+  ],
+  "unit_system": "WGS84",
+  "value_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "latitude",
+      "longitude"
+    ],
+    "properties": {
+      "latitude": {
+        "type": "number",
+        "minimum": -90,
+        "maximum": 90
+      },
+      "longitude": {
+        "type": "number",
+        "minimum": -180,
+        "maximum": 180
+      },
+      "altitude_m": {
+        "type": "number"
+      },
+      "crs": {
+        "type": "string",
+        "const": "WGS84"
+      }
+    }
+  },
+  "examples": [
+    {
+      "latitude": 37.33182,
+      "longitude": -122.03118,
+      "crs": "WGS84"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-property-geo_coordinates-uses-schema-node-type-event",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-event",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-geo_coordinates-uses-schema-node-type-media",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-media",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-geo_coordinates-uses-schema-node-type-organization",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-organization",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-geo_coordinates-uses-schema-node-type-place",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-place",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-geo_coordinates-uses-schema-node-type-source",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-source",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-geo_coordinates",
+      "type": "contains",
+      "source": "xananode.canonical:schema/property-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

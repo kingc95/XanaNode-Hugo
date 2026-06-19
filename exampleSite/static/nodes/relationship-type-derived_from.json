@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-derived_from",
+  "title": "Derived from",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source descends from or is based on the target.",
+  "version": "0.5.0",
+  "registry_type": "derived_from",
+  "registry_namespace": "xananode",
+  "category": "lineage",
+  "inverse": "derived_into",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-derived_from",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-derived_from-related_to-schema-relationship-type-derived_into-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-derived_into",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-derived_into-related_to-schema-relationship-type-derived_from-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-derived_into",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

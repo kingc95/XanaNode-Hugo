@@ -1,0 +1,18 @@
+{
+  "id": "xananode.lineage:project/fress",
+  "title": "FRESS",
+  "type": "project",
+  "importance": 4,
+  "summary": "A Brown University hypertext system in the early scholarly hypertext lineage.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/van-dam-implemented-fress",
+      "type": "implements",
+      "source": "xananode.lineage:person/andries-van-dam",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

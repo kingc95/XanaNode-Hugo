@@ -1,0 +1,18 @@
+{
+  "id": "xananode.lineage:organization/vpl-research",
+  "title": "VPL Research",
+  "type": "organization",
+  "importance": 3,
+  "summary": "Virtual reality company associated with Jaron Lanier.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/lanier-popularized-vr",
+      "type": "popularized",
+      "source": "xananode.lineage:person/jaron-lanier",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-arrived_from",
+  "title": "Arrived From Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The arrived_from inverse relationship term derived from arrives_at.",
+  "version": "0.5.0",
+  "registry_type": "arrived_from",
+  "registry_namespace": "xananode",
+  "category": "reasoning",
+  "inverse": "arrives_at",
+  "derived_inverse": true,
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-arrived_from",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-arrived_from-related_to-schema-relationship-type-arrives_at-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-arrives_at",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-arrives_at-related_to-schema-relationship-type-arrived_from-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-arrives_at",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

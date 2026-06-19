@@ -1,0 +1,30 @@
+{
+  "id": "xananode.lineage:concept/conflict-disputed-identity",
+  "title": "Conflict and Disputed Identity",
+  "type": "concept",
+  "importance": 4,
+  "summary": "The protocol pattern of preserving disagreement and possible identity matches rather than flattening them.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/conflict-preserves-disagreement",
+      "type": "preserves",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/overlap-preserves-disputed-identity",
+      "type": "preserves",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/merge-claim-refines-conflict",
+      "type": "refines",
+      "source": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

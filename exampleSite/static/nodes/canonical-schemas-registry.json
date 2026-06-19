@@ -1,0 +1,86 @@
+{
+  "id": "xananode.canonical:schema/canonical-schemas-registry",
+  "title": "Canonical Schemas Registry",
+  "type": "schema",
+  "subtype": "validation_rule",
+  "importance": 5,
+  "summary": "The protocol registry that identifies canonical schema artifacts and their current versions.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schemas-registry-contains-schema-canonical-schema-author-profile",
+      "type": "contains",
+      "target": "xananode.canonical:schema/canonical-schema-author-profile",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schemas-registry-contains-schema-canonical-schema-compatibility-report",
+      "type": "contains",
+      "target": "xananode.canonical:schema/canonical-schema-compatibility-report",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schemas-registry-contains-schema-canonical-schema-merge-report",
+      "type": "contains",
+      "target": "xananode.canonical:schema/canonical-schema-merge-report",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schemas-registry-contains-schema-canonical-schema-nanopublication",
+      "type": "contains",
+      "target": "xananode.canonical:schema/canonical-schema-nanopublication",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schemas-registry-contains-schema-canonical-schema-ro-crate-metadata",
+      "type": "contains",
+      "target": "xananode.canonical:schema/canonical-schema-ro-crate-metadata",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schemas-registry-contains-schema-canonical-schema-substrate-diff",
+      "type": "contains",
+      "target": "xananode.canonical:schema/canonical-schema-substrate-diff",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schemas-registry-contains-schema-canonical-schema-substrate-manifest",
+      "type": "contains",
+      "target": "xananode.canonical:schema/canonical-schema-substrate-manifest",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schemas-registry-contains-schema-canonical-schema-substrate-node",
+      "type": "contains",
+      "target": "xananode.canonical:schema/canonical-schema-substrate-node",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schemas-registry-contains-schema-canonical-schema-substrate-relationships",
+      "type": "contains",
+      "target": "xananode.canonical:schema/canonical-schema-substrate-relationships",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schemas-registry-contains-schema-canonical-schema-xananode-node-types",
+      "type": "contains",
+      "target": "xananode.canonical:schema/canonical-schema-xananode-node-types",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schemas-registry-contains-schema-canonical-schema-xananode-property-registry",
+      "type": "contains",
+      "target": "xananode.canonical:schema/canonical-schema-xananode-property-registry",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-canonical-schemas-registry-contains-schema-canonical-schema-xananode-relationship-types",
+      "type": "contains",
+      "target": "xananode.canonical:schema/canonical-schema-xananode-relationship-types",
+      "direction": "outgoing"
+    }
+  ],
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/registry/canonical-schemas.json",
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

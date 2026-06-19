@@ -1,0 +1,18 @@
+{
+  "id": "xananode.lineage:technology/mosaic",
+  "title": "Mosaic",
+  "type": "technology",
+  "importance": 4,
+  "summary": "Early Web browser that helped popularize Web browsing.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/ncsa-popularized-mosaic",
+      "type": "popularized",
+      "source": "xananode.lineage:organization/ncsa",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

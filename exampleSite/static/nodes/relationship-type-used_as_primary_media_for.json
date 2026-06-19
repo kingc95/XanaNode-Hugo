@@ -1,0 +1,39 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-used_as_primary_media_for",
+  "title": "Used As Primary Media For Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The used_as_primary_media_for inverse relationship term derived from has_primary_media.",
+  "version": "0.5.0",
+  "registry_type": "used_as_primary_media_for",
+  "registry_namespace": "xananode",
+  "category": "representation",
+  "inverse": "has_primary_media",
+  "derived_inverse": true,
+  "default_weight": 5,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-used_as_primary_media_for",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-has_primary_media-related_to-schema-relationship-type-used_as_primary_media_for-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-has_primary_media",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-used_as_primary_media_for-related_to-schema-relationship-type-has_primary_media-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-has_primary_media",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

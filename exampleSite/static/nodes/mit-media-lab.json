@@ -1,0 +1,18 @@
+{
+  "id": "xananode.lineage:organization/mit-media-lab",
+  "title": "MIT Media Lab",
+  "type": "organization",
+  "importance": 5,
+  "summary": "Research institution associated with media, agents, interactivity, and knowledge presentation.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/negroponte-shapes-media-lab",
+      "type": "shapes",
+      "source": "xananode.lineage:person/nicholas-negroponte",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

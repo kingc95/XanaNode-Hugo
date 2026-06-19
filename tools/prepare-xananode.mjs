@@ -6,7 +6,17 @@ import { createHash } from "node:crypto";
 import matter from "gray-matter";
 import { globSync } from "glob";
 import Ajv2020 from "ajv/dist/2020.js";
-import { validateSubstrateArtifacts as validateCoreSubstrateArtifacts } from "@xananode/core";
+import {
+  analyzeSubstrateIntake,
+  buildFragments as buildCoreFragments,
+  findXanaReferences,
+  loadSubstratePack,
+  packReferenceForManifest,
+  parseXanaRef as parseCoreXanaRef,
+  rangeToText as coreRangeToText,
+  resolveSubstratePacks,
+  validateSubstrateArtifacts as validateCoreSubstrateArtifacts
+} from "@xananode/core";
 
 const siteRoot = path.resolve(process.argv[2] || ".");
 const themeRootCandidates = [
@@ -102,6 +112,10 @@ function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
+function isPlainObject(value) {
+  return value !== null && typeof value === "object" && !Array.isArray(value);
+}
+
 function withoutGeneratedAt(value) {
   return JSON.stringify(value, (key, innerValue) => key === "generated_at" ? undefined : innerValue);
 }
@@ -179,6 +193,162 @@ function generatedSummary(edge) {
   return `${edge.sourceTitle || edge.source} ${String(edge.type || "related_to").replaceAll("_", " ")} ${edge.targetTitle || edge.target}.`;
 }
 
+function escapeHtml(value) {
+  return String(value || "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function protocolRelationshipRecord(relationship) {
+  const {
+    imported_from,
+    pack_id,
+    pack_mode,
+    ...record
+  } = relationship;
+  return record;
+}
+
+function readSiteConfigText() {
+  for (const fileName of ["hugo.yaml", "hugo.yml", "config.yaml", "config.yml"]) {
+    const filePath = path.join(siteRoot, fileName);
+    if (fs.existsSync(filePath)) return fs.readFileSync(filePath, "utf8");
+  }
+  return "";
+}
+
+function configuredPackReferences() {
+  const text = readSiteConfigText();
+  const lines = text.split(/\r?\n/);
+  const packsLine = lines.findIndex((line) => /^\s{4}packs:\s*$/.test(line));
+  if (packsLine < 0) return [];
+  const packs = [];
+  let current = null;
+  let currentNamespaceMapping = null;
+  for (let index = packsLine + 1; index < lines.length; index += 1) {
+    const line = lines[index];
+    if (/^\S/.test(line)) break;
+    const itemMatch = line.match(/^\s{6}-\s*(?:(\w+):\s*(.*))?$/);
+    if (itemMatch) {
+      if (current) packs.push(current);
+      current = {};
+      currentNamespaceMapping = null;
+      if (itemMatch[1]) current[itemMatch[1]] = parseYamlScalar(itemMatch[2]);
+      continue;
+    }
+    const mappingItemMatch = line.match(/^\s{10}-\s*(?:(\w+):\s*(.*))?$/);
+    if (current && Array.isArray(current.namespace_mappings) && mappingItemMatch) {
+      currentNamespaceMapping = {};
+      current.namespace_mappings.push(currentNamespaceMapping);
+      if (mappingItemMatch[1]) currentNamespaceMapping[mappingItemMatch[1]] = parseYamlScalar(mappingItemMatch[2]);
+      continue;
+    }
+    const mappingPropertyMatch = line.match(/^\s{12}(\w+):\s*(.*)$/);
+    if (currentNamespaceMapping && mappingPropertyMatch) {
+      currentNamespaceMapping[mappingPropertyMatch[1]] = parseYamlScalar(mappingPropertyMatch[2]);
+      continue;
+    }
+    const propertyMatch = line.match(/^\s{8}(\w+):\s*(.*)$/);
+    if (current && propertyMatch) {
+      currentNamespaceMapping = null;
+      current[propertyMatch[1]] = propertyMatch[1] === "namespace_mappings" ? [] : parseYamlScalar(propertyMatch[2]);
+    } else if (/^\s{0,5}\S/.test(line)) {
+      break;
+    }
+  }
+  if (current) packs.push(current);
+  return packs.filter((pack) => pack.source && pack.enabled !== false);
+}
+
+function parseYamlScalar(value) {
+  const text = String(value || "").trim().replace(/^["']|["']$/g, "");
+  if (text === "true") return true;
+  if (text === "false") return false;
+  return text;
+}
+
+function configuredThemeLinks() {
+  const text = readSiteConfigText();
+  const lines = text.split(/\r?\n/);
+  const linksLine = lines.findIndex((line) => /^\s{4}links:\s*$/.test(line));
+  if (linksLine < 0) return [];
+
+  const links = [];
+  let current = null;
+  for (let index = linksLine + 1; index < lines.length; index += 1) {
+    const line = lines[index];
+    if (/^\S/.test(line)) break;
+    const itemMatch = line.match(/^\s{6}-\s*(?:(\w+):\s*(.*))?$/);
+    if (itemMatch) {
+      if (current) links.push(current);
+      current = {};
+      if (itemMatch[1]) current[itemMatch[1]] = parseYamlScalar(itemMatch[2]);
+      continue;
+    }
+    const propertyMatch = line.match(/^\s{8}(\w+):\s*(.*)$/);
+    if (current && propertyMatch) {
+      current[propertyMatch[1]] = parseYamlScalar(propertyMatch[2]);
+    } else if (/^\s{0,5}\S/.test(line)) {
+      break;
+    }
+  }
+  if (current) links.push(current);
+  return links.filter((link) => link && link.label && link.url);
+}
+
+function localImportPackReferences() {
+  const roots = ["imports", "data/imports", "data/xananode-imports"];
+  const packs = [];
+  for (const root of roots) {
+    const fullRoot = path.join(siteRoot, root);
+    if (!fs.existsSync(fullRoot)) continue;
+    const entries = fs.readdirSync(fullRoot, { withFileTypes: true });
+    if (entries.some((entry) => entry.isFile() && entry.name.endsWith(".json"))) {
+      packs.push({ id: root.replace(/\//g, ":"), source: root, mode: "mounted" });
+    }
+    for (const entry of entries) {
+      if (entry.isDirectory()) {
+        const source = path.join(root, entry.name).replace(/\\/g, "/");
+        packs.push({ id: source.replace(/\//g, ":"), source, mode: "mounted" });
+      }
+    }
+  }
+  return packs;
+}
+
+function collectImportedProtocolArtifacts() {
+  const configured = resolveSubstratePacks(configuredPackReferences(), {
+    baseDir: siteRoot,
+    extraBaseDirs: [themeRoot],
+    receivingNamespace: substrateNamespace
+  });
+  const localPacks = localImportPackReferences().map((pack) => loadSubstratePack(path.resolve(siteRoot, pack.source), {
+    pack,
+    receivingNamespace: substrateNamespace
+  }));
+  const allPacks = [...configured.packs, ...localPacks];
+  const importedNodes = [];
+  const importedRelationships = [];
+
+  for (const pack of allPacks) {
+    importedNodes.push(...pack.nodes);
+    importedRelationships.push(...pack.relationships);
+    for (const warning of pack.warnings || []) warnings.push(`Pack ${pack.pack?.id || pack.root}: ${JSON.stringify(warning)}`);
+    for (const error of pack.errors || []) errors.push(`Pack ${pack.pack?.id || pack.root}: ${JSON.stringify(error)}`);
+  }
+  for (const warning of configured.warnings || []) warnings.push(`Pack import: ${JSON.stringify(warning)}`);
+  for (const error of configured.errors || []) errors.push(`Pack import: ${JSON.stringify(error)}`);
+
+  return {
+    importedNodes,
+    importedRelationships,
+    importedPacks: allPacks.map((pack) => packReferenceForManifest(pack.pack)).filter(Boolean)
+  };
+}
+
 function copyProtocolSchemas(staticSchemaDir) {
   fs.mkdirSync(staticSchemaDir, { recursive: true });
   for (const schemaName of protocolSchemaNames) {
@@ -209,32 +379,6 @@ function stripMarkdown(markdown) {
     .trim();
 }
 
-function splitBlocks(markdown) {
-  return markdown
-    .split(/\n\s*\n/g)
-    .map((block) => stripMarkdown(block))
-    .map((block) => block.replace(/\s+/g, " ").trim())
-    .filter(Boolean);
-}
-
-function buildGeneratedFragments(markdown) {
-  const blocks = splitBlocks(markdown);
-  const fragments = {};
-  fragments["1"] = blocks.join("\n\n");
-  blocks.forEach((block, blockIndex) => {
-    const blockAddress = `1.${blockIndex + 1}`;
-    fragments[blockAddress] = block;
-    const sentences = block
-      .match(/[^.!?]+[.!?]+(?:["')\]]+)?|[^.!?]+$/g)
-      ?.map((sentence) => sentence.trim())
-      .filter(Boolean) || [];
-    sentences.forEach((sentence, sentenceIndex) => {
-      fragments[`${blockAddress}.${sentenceIndex + 1}`] = sentence;
-    });
-  });
-  return fragments;
-}
-
 function fragmentProtocolIdFor(namespace, sourceId, fragmentId) {
   return `${namespace}:fragment/${slugify(sourceId, "node")}-${slugify(fragmentId, "fragment")}`;
 }
@@ -244,7 +388,20 @@ function normalizeAuthoredFragments(data) {
 }
 
 function buildFragments(markdown, data, context) {
-  const fragmentMap = buildGeneratedFragments(markdown);
+  const coreFragments = buildCoreFragments(markdown, data, {
+    namespace: context.namespace,
+    sourceId: context.localId,
+    sourceProtocolId: context.protocolId,
+    sourceContentId: context.sourceContentId,
+    sourceVersionId: context.sourceVersionId
+  });
+  const fragmentMap = {};
+  for (const fragment of coreFragments.generated) {
+    fragmentMap[fragment.id] = fragment.text;
+  }
+  if (coreFragments.generated.length) {
+    fragmentMap["1"] = coreFragments.generated.map((fragment) => fragment.text).filter(Boolean).join("\n\n");
+  }
   const metadata = {};
   const seenAuthoredIds = new Set();
 
@@ -285,6 +442,7 @@ function buildFragments(markdown, data, context) {
     metadata[fragmentId] = {
       authored: true,
       id: fragmentId,
+      text,
       content_id: fragmentContentId,
       version_id: fragmentVersionId,
       source_content_id: sourceContentId,
@@ -303,17 +461,18 @@ function buildFragments(markdown, data, context) {
 }
 
 function parseXanaRef(ref) {
-  const match = String(ref || "").match(/^(?:xana:\/\/)?([^@/]+)(?:@([^/]+))?(?:\/(.+))?$/);
-  if (!match) return null;
+  const parsed = parseCoreXanaRef(ref);
+  if (!parsed) return null;
   return {
-    nodeId: match[1],
-    version: match[2] || "latest",
-    range: match[3] || "1"
+    nodeId: parsed.node,
+    version: parsed.version || "latest",
+    range: parsed.range || parsed.start || "1"
   };
 }
 
 function rangeToText(fragmentMap, range) {
-  if (fragmentMap[range]) return fragmentMap[range];
+  const direct = coreRangeToText(fragmentMap, range);
+  if (direct) return direct;
   const [start, end] = String(range).split("-");
   if (!start || !end) return null;
   const startParts = start.split(".").map(Number);
@@ -455,7 +614,10 @@ function renderSuggestionReport(suggestions) {
     "These suggestions are not auto-applied. Review each replacement before editing content.",
     "",
     `Autolinks: ${suggestions.autolinks.length}`,
-    `Transclusions: ${suggestions.transclusions.length}`,
+    `Pending transclusions: ${suggestions.transclusions.length}`,
+    `Implemented transclusions: ${suggestions.implemented_transclusions?.length || 0}`,
+    `Merge candidates: ${suggestions.merge_candidates?.length || 0}`,
+    `Imported relationships touching existing nodes: ${suggestions.relationship_imports?.length || 0}`,
     "",
     "## Autolinks",
     ""
@@ -476,7 +638,23 @@ function renderSuggestionReport(suggestions) {
     });
   }
 
-  lines.push("## Transclusions", "");
+  lines.push("## Implemented Transclusions", "");
+  if (!suggestions.implemented_transclusions?.length) {
+    lines.push("No implemented transclusions detected.", "");
+  } else {
+    suggestions.implemented_transclusions.forEach((suggestion, index) => {
+      lines.push(
+        `${index + 1}. ${suggestion.file}`,
+        `   - Target: ${suggestion.target_title} (${suggestion.target_node}@${suggestion.version}/${suggestion.range})`,
+        `   - Tumbler: ${suggestion.tumbler}`,
+        `   - Text: ${shortPreview(suggestion.matched_text)}`,
+        "   - Implemented: true",
+        ""
+      );
+    });
+  }
+
+  lines.push("## Pending Transclusions", "");
   if (!suggestions.transclusions.length) {
     lines.push("No transclusion suggestions.", "");
   } else {
@@ -486,6 +664,40 @@ function renderSuggestionReport(suggestions) {
         `   - Target: ${suggestion.target_title} (${suggestion.target_node}@${suggestion.version}/${suggestion.range})`,
         `   - Match: ${shortPreview(suggestion.matched_text)}`,
         `   - Replacement: ${suggestion.replacement}`,
+        "   - Approved: false",
+        ""
+      );
+    });
+  }
+
+  lines.push("## Merge Candidates", "");
+  if (!suggestions.merge_candidates?.length) {
+    lines.push("No merge candidates.", "");
+  } else {
+    suggestions.merge_candidates.forEach((suggestion, index) => {
+      lines.push(
+        `${index + 1}. ${suggestion.incoming_title || suggestion.incoming}`,
+        `   - Existing: ${suggestion.existing_title || suggestion.existing} (${suggestion.existing})`,
+        `   - Incoming: ${suggestion.incoming_title || suggestion.incoming} (${suggestion.incoming})`,
+        `   - Confidence: ${suggestion.confidence}`,
+        `   - Reason: ${suggestion.reason}`,
+        "   - Approved: false",
+        ""
+      );
+    });
+  }
+
+  lines.push("## Incoming Relationships", "");
+  if (!suggestions.relationship_imports?.length) {
+    lines.push("No imported relationships touch existing nodes.", "");
+  } else {
+    suggestions.relationship_imports.forEach((suggestion, index) => {
+      lines.push(
+        `${index + 1}. ${suggestion.relationship}`,
+        `   - Type: ${suggestion.type}`,
+        `   - Source: ${suggestion.source}`,
+        `   - Target: ${suggestion.target}`,
+        `   - Reason: ${suggestion.reason}`,
         "   - Approved: false",
         ""
       );
@@ -507,100 +719,129 @@ function formatCoreValidationIssue(issue) {
   return `${label}${schema}: ${details}`;
 }
 
-function buildReviewSuggestions(nodes, fragments) {
+function buildCoreReviewSuggestions(nodes, protocolNodes, protocolEdges, authoredFragmentNodes, importedNodes, importedRelationships) {
   const nodeList = [...nodes.values()];
   const generatedAt = new Date().toISOString();
-  const suggestions = {
+  const coreNodes = nodeList.map((node) => ({
+    id: node.id,
+    protocolId: node.protocolId,
+    protocol_id: node.protocolId,
+    title: node.data.title || node.id,
+    type: node.data.type,
+    body: node.body || "",
+    data: {
+      ...node.data,
+      aliases: nodeAliases(node.data)
+    },
+    file: node.file,
+    body_start_line: node.body_start_line
+  }));
+  const reviewFixtureNodes = importedNodes
+    .filter((node) => node.review_fixture === true || node.data?.review_fixture === true)
+    .map((node) => ({
+      id: node.local_id || node.id,
+      protocolId: node.id,
+      protocol_id: node.id,
+      title: node.title || node.id,
+      type: node.type,
+      body: node.content || node.body || node.summary || "",
+      data: {
+        ...node,
+        aliases: nodeAliases(node)
+      },
+      file: node.source_file || node.id,
+      body_start_line: 1,
+      review_fixture: true
+    }));
+  const suggestionSourceNodes = [...coreNodes, ...reviewFixtureNodes];
+  const coreFragments = authoredFragmentNodes.map((fragment) => ({
+    protocol_id: fragment.protocol_id,
+    source_node: fragment.sourceProtocolId,
+    text: fragment.text,
+    generated: false
+  }));
+  const analysis = analyzeSubstrateIntake({
+    nodes: suggestionSourceNodes,
+    protocolNodes,
+    relationships: protocolEdges,
+    fragments: coreFragments
+  }, {
+    nodes: importedNodes,
+    relationships: importedRelationships
+  });
+  const localByProtocol = new Map(suggestionSourceNodes.map((node) => [node.protocolId, node]));
+  const targetByProtocol = new Map([
+    ...protocolNodes.map((node) => [node.id, node]),
+    ...importedNodes.map((node) => [node.id, node])
+  ]);
+  const fragmentByProtocol = new Map(authoredFragmentNodes.map((fragment) => [fragment.protocol_id, fragment]));
+  const implementedTransclusions = protocolEdges
+    .filter((edge) => edge.type === "transcludes")
+    .map((edge) => {
+      const source = localByProtocol.get(edge.source);
+      const fragment = fragmentByProtocol.get(edge.target);
+      return {
+        implemented: true,
+        file: source?.file || edge.source,
+        source_node: source?.id || edge.source,
+        target_node: edge.target,
+        target_title: fragment?.title || edge.target,
+        version: fragment?.version || "versioned",
+        range: fragment?.id || "fragment",
+        tumbler: edge.tumbler || fragment?.tumbler || "",
+        matched_text: fragment?.text || fragment?.summary || edge.summary || "",
+        replacement: edge.tumbler || edge.target,
+        note: "Already implemented as a stable XanaNode transclusion relationship."
+      };
+    });
+
+  return {
     generated_at: generatedAt,
     status: "pending_user_approval",
     note: "These suggestions are not auto-applied. Review each replacement before editing content.",
-    autolinks: [],
-    transclusions: []
-  };
-
-  const termsByTarget = nodeList.map((target) => {
-    const title = target.data.title || target.id;
-    return {
-      target,
-      terms: uniqueStrings([title, ...nodeAliases(target.data)])
-        .filter((term) => term.length >= 3)
-        .sort((left, right) => right.length - left.length || left.localeCompare(right))
-    };
-  });
-
-  const fragmentCandidates = [];
-  for (const target of nodeList) {
-    const version = target.data.version || "v1";
-    const fragmentMap = fragments.nodes[target.id]?.versions?.[version]?.fragments || {};
-    for (const [range, text] of Object.entries(fragmentMap)) {
-      if (!/^1\.\d+$/.test(range)) continue;
-      const normalized = String(text || "").replace(/\s+/g, " ").trim();
-      if (normalized.length < 120) continue;
-      fragmentCandidates.push({ target, version, range, text: normalized });
-    }
-  }
-
-  for (const source of nodeList) {
-    const markdown = source.body || "";
-    const protectedRanges = markdownProtectedRanges(markdown);
-    const linkedTargets = existingLinkedTargetIds(markdown, new Set(nodeList.map((node) => node.id)));
-
-    for (const { target, terms } of termsByTarget) {
-      if (target.id === source.id) continue;
-
-      for (const term of terms) {
-        const match = allPhraseMatches(markdown, term)
-          .find((candidate) => !positionInRanges(candidate.index, protectedRanges));
-        if (!match) continue;
-
-        if (linkedTargets.has(target.id)) break;
-        linkedTargets.add(target.id);
-        const position = reportPosition(source, markdown, match.index);
-        suggestions.autolinks.push({
-          approved: false,
-          file: source.file,
-          line: position.line,
-          column: position.column,
-          source_node: source.id,
-          target_node: target.id,
-          target_title: target.data.title || target.id,
-          matched_text: match[0],
-          matched_term: term,
-          match_kind: term === (target.data.title || target.id) ? "title" : "alias",
-          replacement: `[${match[0]}](${linkTargetFor(target)})`,
-          note: approvedReplacementNote()
-        });
-        break;
-      }
-    }
-
-    const transcludedTargets = new Set();
-    for (const candidate of fragmentCandidates) {
-      if (candidate.target.id === source.id) continue;
-      const match = markdown.toLowerCase().indexOf(candidate.text.toLowerCase());
-      if (match === -1 || positionInRanges(match, protectedRanges)) continue;
-      if (transcludedTargets.has(`${candidate.target.id}@${candidate.version}/${candidate.range}`)) continue;
-      transcludedTargets.add(`${candidate.target.id}@${candidate.version}/${candidate.range}`);
-      const actualText = markdown.slice(match, match + candidate.text.length);
-      const position = reportPosition(source, markdown, match);
-      suggestions.transclusions.push({
+    implemented_transclusions: implementedTransclusions,
+    autolinks: analysis.autolinks.map((suggestion) => {
+      const source = localByProtocol.get(suggestion.source);
+      const target = targetByProtocol.get(suggestion.target);
+      const line = suggestion.position?.line || 1;
+      const column = suggestion.position?.column || 1;
+      return {
         approved: false,
-        file: source.file,
-        line: position.line,
-        column: position.column,
-        source_node: source.id,
-        target_node: candidate.target.id,
-        target_title: candidate.target.data.title || candidate.target.id,
-        version: candidate.version,
-        range: candidate.range,
-        matched_text: actualText,
-        replacement: `{{< xana ref="${candidate.target.id}@${candidate.version}/${candidate.range}" >}}`,
+        file: source?.file || suggestion.source,
+        line: line + (source?.body_start_line || 1) - 1,
+        column,
+        source_node: source?.id || suggestion.source_local_id || suggestion.source,
+        target_node: target?.id || suggestion.target_local_id || suggestion.target,
+        target_title: target?.title || suggestion.target,
+        matched_text: suggestion.phrase,
+        matched_term: suggestion.phrase,
+        match_kind: "core",
+        replacement: `[${suggestion.phrase}](${target?.local_id || suggestion.target_local_id || suggestion.target})`,
         note: approvedReplacementNote()
-      });
-    }
-  }
-
-  return suggestions;
+      };
+    }),
+    transclusions: analysis.transclusions.map((suggestion) => {
+      const source = localByProtocol.get(suggestion.source);
+      return {
+        approved: false,
+        file: source?.file || suggestion.source,
+        line: 1,
+        column: 1,
+        source_node: source?.id || suggestion.source,
+        target_node: suggestion.target_fragment,
+        target_title: suggestion.target_fragment,
+        version: "versioned",
+        range: "fragment",
+        matched_text: suggestion.reason,
+        replacement: suggestion.action?.replacement || `{{< xana ref="${suggestion.target_fragment}" >}}`,
+        note: approvedReplacementNote()
+      };
+    }),
+    merge_candidates: analysis.merge_candidates,
+    relationship_imports: analysis.relationship_imports,
+    new_nodes: analysis.new_nodes,
+    dangling_relationships: analysis.dangling_relationships
+  };
 }
 
 const nodeTypesPath = resolveMostRecentJson("xananode-node-types");
@@ -680,6 +921,8 @@ const contentFiles = globSync("content/**/*.md", {
   nodir: true,
   ignore: ["content/**/_index.md"]
 });
+const substrateNamespace = slugify(process.env.XANANODE_NAMESPACE || "xananode.example", "xananode.example");
+const { importedNodes, importedRelationships, importedPacks } = collectImportedProtocolArtifacts();
 const nodes = new Map();
 const authoredEdges = [];
 const authoredFragmentNodes = [];
@@ -687,7 +930,6 @@ const authoredFragmentNodeMap = new Map();
 const shortcodeTransclusionEdges = [];
 const fragments = { generated_at: new Date().toISOString(), nodes: {} };
 let reviewSuggestions = null;
-const substrateNamespace = slugify(process.env.XANANODE_NAMESPACE || "xananode.example", "xananode.example");
 const substrateManifest = {
   id: substrateNamespace,
   name: process.env.XANANODE_NAME || "XanaNode Hugo Substrate",
@@ -702,7 +944,7 @@ const substrateManifest = {
     ...(process.env.XANANODE_REPOSITORY_COMMIT ? { commit: process.env.XANANODE_REPOSITORY_COMMIT } : {})
   },
   schema_version: `xananode-core@${relationshipTypesRegistry.version || "0.4.0"}`,
-  imports: ["xananode:core"]
+  imports: ["xananode:core", ...importedPacks]
 };
 
 for (const relativeFile of contentFiles) {
@@ -754,19 +996,90 @@ for (const relativeFile of contentFiles) {
   }
 }
 
+for (const [index, link] of configuredThemeLinks().entries()) {
+  if (link.private === true || link.generate_node === false || link.node === false) continue;
+  const explicitNodeId = String(link.node || link.nodeId || "").trim();
+  const generatedId = String(link.id || explicitNodeId || `source-${slugify(link.label, "link")}`).trim();
+  const url = String(link.url || link.href || "").trim();
+  const label = String(link.label || link.title || generatedId).trim();
+  if (!generatedId || !url || nodes.has(generatedId)) continue;
+  const relationshipTarget = String(link.relationship_target || link.target || "").trim();
+  const relationshipType = String(link.relationship_type || link.relationship || (relationshipTarget ? "documents" : "")).trim();
+  const relationships = relationshipTarget && relationshipType
+    ? [{
+        type: relationshipType,
+        target: relationshipTarget,
+        summary: String(link.relationship_summary || `${label} ${relationshipType.replaceAll("_", " ")} ${relationshipTarget}.`)
+      }]
+    : [];
+
+  const data = {
+    id: generatedId,
+    title: label,
+    type: "source",
+    ...(link.subtype ? { subtype: String(link.subtype) } : {}),
+    ...(link.subtypes ? { subtypes: String(link.subtypes).split(",").map((item) => item.trim()).filter(Boolean) } : {}),
+    summary: String(link.summary || `${label} external reference.`),
+    source_url: url,
+    importance: Number(link.importance || 2),
+    source_name: label,
+    rights_status: String(link.rights_status || "external"),
+    relationships
+  };
+  const protocolId = protocolIdFor(generatedId, data, substrateNamespace);
+  const file = `config:xananode.links[${index}]`;
+  nodes.set(generatedId, {
+    id: generatedId,
+    protocolId,
+    file,
+    data,
+    body: "",
+    body_start_line: 1,
+    generated: true
+  });
+}
+
 const nodeLookup = new Map();
 for (const node of nodes.values()) {
   nodeLookup.set(node.id, node);
   nodeLookup.set(node.protocolId, node);
   nodeLookup.set(node.data.protocol_id, node);
 }
+const importedNodeLookup = new Map(importedNodes.map((node) => [node.id, node]));
 
 function resolveNodeRef(ref) {
-  return nodeLookup.get(String(ref || "").trim()) || null;
+  const normalized = String(ref || "").trim();
+  return nodeLookup.get(normalized) || importedNodeLookup.get(normalized) || null;
 }
 
 function resolveNodeId(ref) {
-  return resolveNodeRef(ref)?.id || String(ref || "");
+  const node = resolveNodeRef(ref);
+  if (!node) return String(ref || "");
+  return node.protocolId || node.id;
+}
+
+function authoredEdgeNode(id) {
+  const localNode = nodes.get(id) || nodeLookup.get(id);
+  if (localNode) {
+    return {
+      id: localNode.id,
+      protocolId: localNode.protocolId,
+      title: localNode.data.title,
+      data: localNode.data,
+      local: true
+    };
+  }
+  const importedNode = importedNodeLookup.get(id);
+  if (importedNode) {
+    return {
+      id: importedNode.id,
+      protocolId: importedNode.id,
+      title: importedNode.title,
+      data: importedNode,
+      local: false
+    };
+  }
+  return null;
 }
 
 for (const node of nodes.values()) {
@@ -819,9 +1132,7 @@ for (const node of nodes.values()) {
   if (data.type === "claim" && !data.status) errors.push(`${file}: claim nodes require "status".`);
   if (data.type === "source" && !data.source_url && !data.file) warnings.push(`${file}: source node has neither source_url nor file.`);
 
-  const xanaRefs = [...body.matchAll(/xana:\/\/[^\s\]"'<>)}]+/g)].map((match) => match[0]);
-  const shortcodeRefs = [...body.matchAll(/\{\{<\s*xana\s+[^>]*ref=["']([^"']+)["'][^>]*>\}\}/g)].map((match) => match[1]);
-  for (const ref of [...xanaRefs, ...shortcodeRefs]) {
+  for (const { ref } of findXanaReferences(body)) {
     const parsedRef = parseXanaRef(ref);
     if (!parsedRef) {
       errors.push(`${file}: invalid XanaNode reference "${ref}".`);
@@ -868,8 +1179,8 @@ for (const edge of authoredEdges) {
 }
 
 const authoredProtocolEdges = authoredEdges.map((edge, index) => {
-  const sourceNode = nodes.get(edge.source);
-  const targetNode = nodes.get(edge.target);
+  const sourceNode = authoredEdgeNode(edge.source);
+  const targetNode = authoredEdgeNode(edge.target);
   const relationship = edge.relationship || {};
   return {
     id: relationship.id || relationship.protocol_id || relationshipIdFor(substrateNamespace, sourceNode.protocolId, edge.type, targetNode.protocolId, index),
@@ -882,11 +1193,13 @@ const authoredProtocolEdges = authoredEdges.map((edge, index) => {
       source: sourceNode.protocolId,
       sourceTitle: sourceNode.data.title,
       target: targetNode.protocolId,
-      targetTitle: targetNode.data.title,
+      targetTitle: targetNode.data.title || targetNode.title,
       type: edge.type
     }),
     ...(relationship.asserted_by ? { asserted_by: nodes.get(relationship.asserted_by)?.protocolId || relationship.asserted_by } : {}),
     ...(relationship.asserted_at ? { asserted_at: relationship.asserted_at } : {}),
+    ...(relationship.valid_from ? { valid_from: relationship.valid_from } : {}),
+    ...(relationship.valid_to ? { valid_to: relationship.valid_to } : {}),
     ...(relationship.confidence ? { confidence: relationship.confidence } : {}),
     ...(relationship.tumbler ? { tumbler: relationship.tumbler } : {}),
     ...(relationship.evidence ? { evidence: asArray(relationship.evidence).map((item) => nodes.get(item)?.protocolId || item) } : {}),
@@ -940,21 +1253,27 @@ const protocolEdges = [
   ...authoredProtocolEdges,
   ...fragmentDerivedEdges,
   ...primaryMediaEdges,
-  ...shortcodeProtocolEdges
+  ...shortcodeProtocolEdges,
+  ...importedRelationships.map(protocolRelationshipRecord)
 ];
 
 const protocolRelationshipList = { relationships: protocolEdges };
+const localNodeByProtocolId = new Map([...nodes.values()].map((node) => [node.protocolId, node]));
+const importedNodeIdsForRelationships = new Set(importedNodes.map((node) => node.id));
+function relationshipKeyForProtocolId(protocolId) {
+  const localNode = localNodeByProtocolId.get(protocolId);
+  if (localNode) return localNode.id;
+  if (importedNodeIdsForRelationships.has(protocolId)) return protocolId;
+  return authoredFragmentNodeMap.get(protocolId)?.protocol_id || null;
+}
 const protocolRelationshipsByNode = new Map([
   ...[...nodes.values()].map((node) => [node.id, []]),
-  ...authoredFragmentNodes.map((fragment) => [fragment.protocol_id, []])
+  ...authoredFragmentNodes.map((fragment) => [fragment.protocol_id, []]),
+  ...importedNodes.map((node) => [node.id, []])
 ]);
 for (const edge of protocolEdges) {
-  const sourceLocalId = [...nodes.values()].find((node) => node.protocolId === edge.source)?.id;
-  const targetLocalId = [...nodes.values()].find((node) => node.protocolId === edge.target)?.id;
-  const sourceFragmentId = authoredFragmentNodeMap.get(edge.source)?.protocol_id;
-  const targetFragmentId = authoredFragmentNodeMap.get(edge.target)?.protocol_id;
-  const sourceRelationshipKey = sourceLocalId || sourceFragmentId;
-  const targetRelationshipKey = targetLocalId || targetFragmentId;
+  const sourceRelationshipKey = relationshipKeyForProtocolId(edge.source);
+  const targetRelationshipKey = relationshipKeyForProtocolId(edge.target);
   if (sourceRelationshipKey) {
     protocolRelationshipsByNode.get(sourceRelationshipKey).push({
       id: edge.id,
@@ -991,6 +1310,9 @@ const protocolNodes = [...nodes.values()].map((node) => {
     id: node.protocolId,
     title: data.title || node.id,
     type: data.type,
+    ...(data.subtype ? { subtype: data.subtype } : {}),
+    ...(asArray(data.subtypes).length ? { subtypes: asArray(data.subtypes) } : {}),
+    ...(asArray(data.facets).length ? { facets: asArray(data.facets) } : {}),
     ...(data.status ? { status: data.status } : {}),
     importance: data.importance || 3,
     summary: data.summary || "",
@@ -999,6 +1321,13 @@ const protocolNodes = [...nodes.values()].map((node) => {
     ...(data.updated_at ? { updated_at: data.updated_at } : {}),
     ...(data.source_url ? { source_url: data.source_url } : {}),
     ...(data.rights_status ? { rights_status: data.rights_status } : {}),
+    ...(data.asset_path ? { asset_path: data.asset_path } : {}),
+    ...(data.asset_role ? { asset_role: data.asset_role } : {}),
+    ...(data.media_type ? { media_type: data.media_type } : {}),
+    ...(data.mime_type ? { mime_type: data.mime_type } : {}),
+    ...(data.alt ? { alt: data.alt } : {}),
+    ...(data.caption ? { caption: data.caption } : {}),
+    ...(data.source_snapshot ? { source_snapshot: data.source_snapshot } : {}),
     ...(data.confidence ? { confidence: data.confidence } : {}),
     ...(data.primary_media ? { primary_media: nodes.get(data.primary_media)?.protocolId || data.primary_media } : {}),
     ...(data.source_node ? { source_node: nodes.get(data.source_node)?.protocolId || data.source_node } : {}),
@@ -1010,6 +1339,19 @@ const protocolNodes = [...nodes.values()].map((node) => {
     relationships: protocolRelationshipsByNode.get(node.id) || []
   };
 });
+
+const importedNodeIds = new Set(protocolNodes.map((node) => node.id));
+for (const importedNode of importedNodes) {
+  if (importedNodeIds.has(importedNode.id)) {
+    warnings.push(`Imported node "${importedNode.id}" duplicates a generated node and was ignored.`);
+    continue;
+  }
+  protocolNodes.push({
+    ...importedNode,
+    relationships: protocolRelationshipsByNode.get(importedNode.id) || importedNode.relationships || []
+  });
+  importedNodeIds.add(importedNode.id);
+}
 
 for (const fragment of authoredFragmentNodes) {
   protocolNodes.push({
@@ -1055,7 +1397,257 @@ for (const coreWarning of coreValidation.warnings || []) {
   warnings.push(`Core SDK protocol warning: ${formatCoreValidationIssue(coreWarning)}`);
 }
 
-reviewSuggestions = buildReviewSuggestions(nodes, fragments);
+reviewSuggestions = buildCoreReviewSuggestions(nodes, protocolNodes, protocolEdges, authoredFragmentNodes, importedNodes, importedRelationships);
+
+const localProtocolToViewerId = new Map([
+  ...[...nodes.values()].map((node) => [node.protocolId, node.id]),
+  ...authoredFragmentNodes.map((fragment) => [fragment.protocol_id, fragment.protocol_id]),
+  ...importedNodes.map((node) => [node.id, node.id])
+]);
+const localProtocolNodeLookup = new Map([...nodes.values()].map((node) => [node.protocolId, node]));
+
+function viewerIdForProtocolId(id) {
+  return localProtocolToViewerId.get(id) || id;
+}
+
+function viewerNodeFromProtocolNode(node) {
+  const localNode = localProtocolNodeLookup.get(node.id);
+  const localId = localNode?.id || viewerIdForProtocolId(node.id);
+  const localType = localNode?.data?.type || node.type;
+  return {
+    id: localId,
+    protocol_id: node.id,
+    title: localNode?.data?.title || node.title,
+    type: localType,
+    facets: asArray(localNode?.data?.facets || node.facets),
+    section: `${protocolTypePath(localType)}s`,
+    importance: localNode?.data?.importance || node.importance || 3,
+    summary: localNode?.data?.summary || node.summary || "",
+    content: localNode ? stripMarkdown(localNode.body).slice(0, 1200) : node.content || node.summary || "",
+    url: localNode
+      ? `/${protocolTypePath(localType)}/${slugify(localNode.id, "node")}/`
+      : `/${protocolTypePath(localType)}/${slugify(String(localId).split("/").at(-1), "node")}/`,
+    primary_media: localNode?.data?.primary_media
+      ? nodes.get(localNode.data.primary_media)?.protocolId || localNode.data.primary_media
+      : node.primary_media || "",
+    media_type: localNode?.data?.media_type || node.media_type || "",
+    file: localNode?.data?.file || node.file || "",
+    alt: localNode?.data?.alt || node.alt || "",
+    caption: localNode?.data?.caption || node.caption || "",
+    creator: localNode?.data?.creator || node.creator || "",
+    created_date: localNode?.data?.created_date || node.created_date || "",
+    source_name: localNode?.data?.source_name || node.source_name || "",
+    source_url: node.source_url || "",
+    license: localNode?.data?.license || node.license || "",
+    license_url: localNode?.data?.license_url || node.license_url || "",
+    rights_status: node.rights_status || "",
+    tumbler: node.tumbler || "",
+    trail_nodes: asArray(node.trail_nodes).map(viewerIdForProtocolId),
+    generated: Boolean(localNode?.generated),
+    imported: Boolean(node.imported_from),
+    imported_from: node.imported_from || ""
+  };
+}
+
+function protocolOnlyNodeRoutes(node) {
+  const protocolId = String(node?.protocol_id || "");
+  if (!node || (!String(node.id || "").includes(":") && !node.imported && !node.generated)) return [];
+  const typeSegment = protocolTypePath(node.type || "node");
+  const id = String(node.id || "");
+  const addressId = protocolId || id;
+  const tail = slugify(id.split("/").at(-1), "node");
+  const routes = [
+    `${typeSegment}/${encodeURIComponent(addressId)}/index.html`,
+    `${typeSegment}/${tail}/index.html`
+  ];
+  const parts = addressId.split("/");
+  if (parts.length >= 2) {
+    routes.push(`${typeSegment}/${encodeURIComponent(parts[0])}/${encodeURIComponent(parts.slice(1).join("/"))}/index.html`);
+  }
+  return [...new Set(routes)];
+}
+
+function renderProtocolNodeResolverPage(node) {
+  const title = `${node.title || node.id} | ${substrateManifest.name}`;
+  const description = node.summary || substrateManifest.description || "";
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${escapeHtml(title)}</title>
+  <meta name="description" content="${escapeHtml(description)}">
+  <link rel="canonical" href="/${protocolTypePath(node.type || "node")}/${slugify(String(node.id || "").split("/").at(-1), "node")}/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#55d6be">
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="icon" type="image/svg+xml" href="/xananode-icon.svg">
+</head>
+<body>
+  <main class="site-main">
+    <section class="xana-app" data-xana-protocol-resolver="true">
+      <div id="xana-graph"></div>
+      <aside id="xana-panel" class="xana-panel">
+        <p class="panel-placeholder">Resolving ${escapeHtml(node.title || node.id)}...</p>
+      </aside>
+    </section>
+    <script src="/js/xananode.js"></script>
+  </main>
+</body>
+</html>
+`;
+}
+
+function renderSuggestionReviewPage(suggestions) {
+  const autolinks = asArray(suggestions.autolinks);
+  const transclusions = asArray(suggestions.transclusions);
+  const implementedTransclusions = asArray(suggestions.implemented_transclusions);
+  const merges = asArray(suggestions.merge_candidates);
+  const relationships = asArray(suggestions.relationship_imports);
+  const rows = [
+    ...autolinks.map((item) => ({
+      kind: "Autolink",
+      title: item.target_title || item.target_node || "",
+      detail: `${item.file || ""}:${item.line || 1} ${item.matched_text || ""}`,
+      action: item.replacement || ""
+    })),
+    ...transclusions.map((item) => ({
+      kind: "Transclusion",
+      title: item.target_title || item.target_node || "",
+      detail: `${item.file || ""}:${item.line || 1} ${item.matched_text || ""}`,
+      action: item.replacement || ""
+    })),
+    ...merges.map((item) => ({
+      kind: "Merge candidate",
+      title: item.incoming_title || item.incoming || "",
+      detail: `Existing: ${item.existing_title || item.existing || ""}. Confidence: ${item.confidence || ""}`,
+      action: item.reason || ""
+    })),
+    ...relationships.map((item) => ({
+      kind: "Relationship import",
+      title: item.relationship || "",
+      detail: `${item.source || ""} --${item.type || ""}--> ${item.target || ""}`,
+      action: item.summary || ""
+    }))
+  ];
+  const implementedExamples = implementedTransclusions.length ? implementedTransclusions.map((item) => ({
+    kind: "Transclusion",
+    title: item.target_title || item.target_node || "",
+    detail: `${item.file || ""} transcludes ${shortPreview(item.matched_text || item.tumbler || "")}`,
+    action: item.tumbler || item.replacement || ""
+  })) : [
+    {
+      kind: "Implemented",
+      title: "Review Suggestions node",
+      detail: "The example substrate includes a normal concept node that points authors to this generated review page.",
+      action: "/node/review-suggestions"
+    },
+    {
+      kind: "Implemented",
+      title: "Protocol fragment route",
+      detail: "Imported protocol fragments are generated as static resolver pages during the Hugo build.",
+      action: "/fragment/xanadu-document-interconnection-0001/"
+    }
+  ];
+  const renderRow = (row, status) => `<article class="xana-list-card xana-review-card" data-review-status="${escapeHtml(status)}">
+        <div class="xana-review-card-head">
+          <p class="xana-node-type">${escapeHtml(row.kind)}</p>
+          <span class="xana-review-status">${escapeHtml(status === "implemented" ? "Implemented" : "Pending")}</span>
+        </div>
+        <h2>${escapeHtml(row.title || "Untitled suggestion")}</h2>
+        <p>${escapeHtml(row.detail)}</p>
+        <code>${escapeHtml(row.action)}</code>
+      </article>`;
+  const implementedList = implementedExamples.map((row) => renderRow(row, "implemented")).join("\n");
+  const pendingList = rows.length
+    ? rows.map((row) => renderRow(row, "pending")).join("\n")
+    : `<p class="xana-empty">No pending Core suggestions.</p>`;
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XanaNode Review Suggestions | ${escapeHtml(substrateManifest.name)}</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="stylesheet" href="/css/style.min.css">
+  <script>
+    (function () {
+      try {
+        var theme = JSON.parse(localStorage.getItem("xananode.colorTheme") || "\\"dark\\"");
+        var density = JSON.parse(localStorage.getItem("xananode.uiDensity") || "\\"comfortable\\"");
+        var readerFontScale = JSON.parse(localStorage.getItem("xananode.readerFontScale") || "100");
+        document.documentElement.dataset.xanaTheme = theme;
+        document.documentElement.dataset.xanaDensity = density;
+        document.documentElement.style.setProperty("--xana-reader-scale", String(Math.min(150, Math.max(85, Number(readerFontScale) || 100)) / 100));
+      } catch (_) {}
+    })();
+  </script>
+</head>
+<body>
+  <main class="xana-list-page xana-review-page">
+    <nav class="xana-review-nav" aria-label="Review navigation">
+      <a href="/">Back to graph</a>
+      <a href="/node/review-suggestions/">How this works</a>
+    </nav>
+    <header class="xana-list-hero">
+      <p class="xana-node-type">Core review queue</p>
+      <h1>XanaNode Review Suggestions</h1>
+      <p>These suggestions are generated by Core and are not applied automatically. Implemented examples show what the workflow looks like after an author accepts a change; pending items stay visible for review.</p>
+      <div class="xana-list-metrics">
+        <div class="xana-list-metric"><span class="xana-list-metric-value">${implementedExamples.length}</span><span class="xana-list-metric-label">Implemented transclusions</span></div>
+        <div class="xana-list-metric"><span class="xana-list-metric-value">${rows.length}</span><span class="xana-list-metric-label">Pending suggestions</span></div>
+        <div class="xana-list-metric"><span class="xana-list-metric-value">${autolinks.length + transclusions.length}</span><span class="xana-list-metric-label">Link opportunities</span></div>
+      </div>
+    </header>
+    <section class="xana-review-section" aria-labelledby="implemented-review-heading">
+      <h2 id="implemented-review-heading">Implemented examples</h2>
+      <div class="xana-list-grid">
+        ${implementedList}
+      </div>
+    </section>
+    <section class="xana-review-section" aria-labelledby="pending-review-heading">
+      <h2 id="pending-review-heading">Pending Core suggestions</h2>
+      <div class="xana-list-grid">
+      ${pendingList}
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+`;
+}
+
+const viewerFeed = {
+  namespace: substrateNamespace,
+  nodes: protocolNodes.map(viewerNodeFromProtocolNode),
+  edges: protocolEdges.map((edge) => ({
+    source: viewerIdForProtocolId(edge.source),
+    target: viewerIdForProtocolId(edge.target),
+    type: edge.type,
+    weight: edge.weight || 3,
+    visibility: edge.visibility || "secondary",
+    origin: edge.imported_from ? "imported_relationship" : "protocol_relationship",
+    protocol_id: edge.id,
+    summary: edge.summary || "",
+    asserted_by: edge.asserted_by || "",
+    asserted_at: edge.asserted_at || "",
+    valid_from: edge.valid_from || "",
+    valid_to: edge.valid_to || "",
+    confidence: edge.confidence || "",
+    external: Boolean(edge.external),
+    target_substrate: edge.target_substrate || ""
+  }))
+};
+const nodesIndex = {
+  namespace: substrateNamespace,
+  nodes: protocolNodes.map((node) => ({
+    id: node.id,
+    path: `nodes/${slugify(node.id.split("/").at(-1), "node")}.json`,
+    title: node.title,
+    type: node.type,
+    imported: Boolean(node.imported_from)
+  }))
+};
 
 const dataDir = path.join(siteRoot, "data");
 const staticDir = path.join(siteRoot, "static");
@@ -1072,12 +1664,24 @@ fs.writeFileSync(path.join(dataDir, "xananode_suggestions.json"), JSON.stringify
 fs.writeFileSync(path.join(staticDir, "xananode-fragments.json"), JSON.stringify(fragmentsOutput, null, 2) + "\n");
 fs.writeFileSync(path.join(staticDir, "xananode-suggestions.json"), JSON.stringify(reviewSuggestions, null, 2) + "\n");
 fs.writeFileSync(path.join(staticDir, "xananode-suggestions.md"), renderSuggestionReport(reviewSuggestions));
+fs.writeFileSync(path.join(staticDir, "xananode-viewer.json"), JSON.stringify(viewerFeed, null, 2) + "\n");
+fs.writeFileSync(path.join(staticDir, "nodes-index.json"), JSON.stringify(nodesIndex, null, 2) + "\n");
 fs.writeFileSync(path.join(staticDir, "substrate.json"), JSON.stringify(substrateManifest, null, 2) + "\n");
 fs.writeFileSync(path.join(staticDir, "relationships.json"), JSON.stringify(protocolRelationshipList, null, 2) + "\n");
 for (const protocolNode of protocolNodes) {
   const nodeFileName = `${slugify(protocolNode.id.split("/").at(-1), "node")}.json`;
   fs.writeFileSync(path.join(staticNodesDir, nodeFileName), JSON.stringify(protocolNode, null, 2) + "\n");
 }
+for (const viewerNode of viewerFeed.nodes) {
+  for (const route of protocolOnlyNodeRoutes(viewerNode)) {
+    const routeFile = path.join(staticDir, route);
+    fs.mkdirSync(path.dirname(routeFile), { recursive: true });
+    fs.writeFileSync(routeFile, renderProtocolNodeResolverPage(viewerNode));
+  }
+}
+const reviewFile = path.join(staticDir, "review", "index.html");
+fs.mkdirSync(path.dirname(reviewFile), { recursive: true });
+fs.writeFileSync(reviewFile, renderSuggestionReviewPage(reviewSuggestions));
 
 finish();
 
@@ -1092,10 +1696,13 @@ function finish() {
   }
   console.log("XanaNode validation passed.");
   console.log(`Validated ${nodes?.size || 0} nodes.`);
+  if (importedNodes.length || importedRelationships.length) {
+    console.log(`Imported ${importedNodes.length} protocol nodes and ${importedRelationships.length} protocol relationships.`);
+  }
   console.log(`Validated ${relationshipTypeMap?.size || 0} relationship types.`);
   console.log(`Validated ${nodeTypeMap?.size || 0} node types.`);
   if (reviewSuggestions) {
-    console.log(`Generated ${reviewSuggestions.autolinks.length} pending autolink suggestions and ${reviewSuggestions.transclusions.length} pending transclusion suggestions.`);
+    console.log(`Generated ${reviewSuggestions.autolinks.length} pending autolink suggestions, ${reviewSuggestions.transclusions.length} pending transclusion suggestions, and ${reviewSuggestions.implemented_transclusions?.length || 0} implemented transclusions.`);
   }
   console.log("Generated data/xananode_fragments.json, static/xananode-fragments.json, and protocol substrate artifacts.");
 }

@@ -1,0 +1,39 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-has_extension",
+  "title": "Has Extension Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The has_extension inverse relationship term derived from extension_of.",
+  "version": "0.5.0",
+  "registry_type": "has_extension",
+  "registry_namespace": "xananode",
+  "category": "schema_mapping",
+  "inverse": "extension_of",
+  "derived_inverse": true,
+  "default_weight": 5,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-has_extension",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-extension_of-related_to-schema-relationship-type-has_extension-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-extension_of",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-has_extension-related_to-schema-relationship-type-extension_of-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-extension_of",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

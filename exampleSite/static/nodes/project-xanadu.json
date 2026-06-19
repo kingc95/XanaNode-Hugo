@@ -30,9 +30,15 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-extends-project-xanadu-120",
+      "id": "xananode.example:rel/xananode-extends-project-xanadu-125",
       "type": "extends",
       "source": "xananode.example:concept/xananode",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/xanadu-at-autodesk-implements-xanadu",
+      "type": "implements",
+      "source": "xananode.lineage:project/xanadu-at-autodesk",
       "direction": "incoming"
     }
   ]

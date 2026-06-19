@@ -1,0 +1,14 @@
+{
+  "id": "xananode.canonical:publication/xnp-0004-merge-validation",
+  "title": "XNP-0004 Merge Validation",
+  "type": "publication",
+  "subtype": "proposal",
+  "importance": 4,
+  "summary": "A protocol proposal describing merge validation for independently authored substrates.",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/proposals/XNP-0004-merge-validation.md",
+  "rights_status": "open-source",
+  "relationships": [],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

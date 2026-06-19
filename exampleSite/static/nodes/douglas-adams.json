@@ -1,0 +1,30 @@
+{
+  "id": "xananode.lineage:person/douglas-adams",
+  "title": "Douglas Adams",
+  "type": "person",
+  "importance": 5,
+  "summary": "Writer and technologist who popularized the fundamental interconnectedness of things and introduced Hyperland to a broad audience.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/bush-influenced-adams-lineage",
+      "type": "influenced",
+      "source": "xananode.example:person/vannevar-bush",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/adams-authored-hyperland",
+      "type": "authored",
+      "target": "xananode.lineage:publication/hyperland",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-adams",
+      "type": "features",
+      "source": "xananode.lineage:event/ted2-1990",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

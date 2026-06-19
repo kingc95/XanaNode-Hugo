@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-mentions",
+  "title": "Mentions",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source mentions the target without making it structurally central.",
+  "version": "0.5.0",
+  "registry_type": "mentions",
+  "registry_namespace": "xananode",
+  "category": "citation",
+  "inverse": "mentioned_by",
+  "default_weight": 2,
+  "default_visibility": "background",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-mentions",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-mentioned_by-related_to-schema-relationship-type-mentions-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-mentioned_by",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-mentions-related_to-schema-relationship-type-mentioned_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-mentioned_by",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

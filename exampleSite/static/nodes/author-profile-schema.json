@@ -1,0 +1,20 @@
+{
+  "id": "xananode.canonical:schema/author-profile-schema",
+  "title": "Author Profile Schema",
+  "type": "schema",
+  "subtype": "validation_rule",
+  "importance": 4,
+  "summary": "The JSON Schema for identifying substrate authors, maintainers, and provenance-bearing author profiles.",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/author-profile.schema.json",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/protocol-contains-author-profile-schema",
+      "type": "contains",
+      "source": "xananode.canonical:project/xananode-protocol",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

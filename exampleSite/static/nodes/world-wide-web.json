@@ -1,0 +1,54 @@
+{
+  "id": "xananode.lineage:technology/world-wide-web",
+  "title": "World Wide Web",
+  "type": "technology",
+  "importance": 5,
+  "summary": "A distributed hypertext system that made publishing easy while leaving many provenance, transclusion, and semantic relationship problems unsolved.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/cern-context-for-web",
+      "type": "context_for",
+      "source": "xananode.lineage:place/cern",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/html-implements-markup",
+      "type": "implements",
+      "source": "xananode.lineage:technology/html",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/http-enables-web",
+      "type": "enables",
+      "source": "xananode.lineage:technology/http",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/url-uri-enables-addressability",
+      "type": "enables",
+      "source": "xananode.lineage:technology/url-uri",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/andreessen-popularized-web",
+      "type": "popularized",
+      "source": "xananode.lineage:person/marc-andreessen",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/berners-lee-implemented-web",
+      "type": "implements",
+      "source": "xananode.lineage:person/tim-berners-lee",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/web-contrasts-with-xananode",
+      "type": "contrasts_with",
+      "target": "xananode.example:concept/xananode",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

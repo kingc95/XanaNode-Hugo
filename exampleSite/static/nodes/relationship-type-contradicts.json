@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-contradicts",
+  "title": "Contradicts",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source directly challenges or conflicts with the target.",
+  "version": "0.5.0",
+  "registry_type": "contradicts",
+  "registry_namespace": "xananode",
+  "category": "evidence",
+  "inverse": "contradicted_by",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-contradicts",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-contradicted_by-related_to-schema-relationship-type-contradicts-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-contradicted_by",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-contradicts-related_to-schema-relationship-type-contradicted_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-contradicted_by",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

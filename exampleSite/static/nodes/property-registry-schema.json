@@ -1,0 +1,21 @@
+{
+  "id": "xananode.canonical:schema/property-registry-schema",
+  "title": "Property Registry Schema",
+  "type": "schema",
+  "subtype": "validation_rule",
+  "importance": 5,
+  "summary": "The JSON Schema for declaring standardized custom node properties such as measurements, coordinates, money values, identifiers, and dates.",
+  "version": "0.1.0",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/property-registry.schema.json",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/protocol-contains-property-registry-schema",
+      "type": "contains",
+      "source": "xananode.canonical:project/xananode-protocol",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

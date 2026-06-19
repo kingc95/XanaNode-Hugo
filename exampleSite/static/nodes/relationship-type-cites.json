@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-cites",
+  "title": "Cites",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source cites the target.",
+  "version": "0.5.0",
+  "registry_type": "cites",
+  "registry_namespace": "xananode",
+  "category": "citation",
+  "inverse": "cited_by",
+  "default_weight": 3,
+  "default_visibility": "secondary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-cites",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-cited_by-related_to-schema-relationship-type-cites-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-cited_by",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-cites-related_to-schema-relationship-type-cited_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-cited_by",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

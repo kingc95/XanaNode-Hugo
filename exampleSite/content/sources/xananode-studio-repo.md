@@ -16,4 +16,4 @@ relationships:
     target: "knowledge-substrate"
 ---
 
-The Studio repository provides the local-first desktop workbench for editing nodes, previewing Hugo output, validating substrates, and managing author workflows.
+The Studio repository provides the local-first desktop workbench for editing nodes, previewing [Hugo](hugo) output, validating substrates, and managing author workflows.

@@ -1,0 +1,39 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-approved_by",
+  "title": "Approved By Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The approved_by inverse relationship term derived from approved.",
+  "version": "0.5.0",
+  "registry_type": "approved_by",
+  "registry_namespace": "xananode",
+  "category": "governance",
+  "inverse": "approved",
+  "derived_inverse": true,
+  "default_weight": 3,
+  "default_visibility": "secondary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-approved_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-approved_by-related_to-schema-relationship-type-approved-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-approved",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-approved-related_to-schema-relationship-type-approved_by-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-approved",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

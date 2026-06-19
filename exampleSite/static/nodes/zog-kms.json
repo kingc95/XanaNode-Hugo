@@ -1,0 +1,18 @@
+{
+  "id": "xananode.lineage:project/zog-kms",
+  "title": "ZOG/KMS",
+  "type": "project",
+  "importance": 3,
+  "summary": "Frame and card based knowledge management and navigation lineage from Carnegie Mellon University.",
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/zog-kms-implemented-frame-navigation",
+      "type": "implements",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

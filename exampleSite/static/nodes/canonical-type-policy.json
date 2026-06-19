@@ -6,19 +6,19 @@
   "summary": "The governance rule that separates shared core node and relationship types from namespaced extension types.",
   "relationships": [
     {
-      "id": "xananode.example:rel/custom-extension-substrate-features-canonical-type-policy-201",
+      "id": "xananode.example:rel/custom-extension-substrate-features-canonical-type-policy-206",
       "type": "features",
       "source": "xananode.example:concept/custom-extension-substrate",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/canonical-type-policy-context_for-schema-extension-211",
+      "id": "xananode.example:rel/canonical-type-policy-context_for-schema-extension-216",
       "type": "context_for",
       "target": "xananode.example:concept/schema-extension",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/canonical-type-policy-requires-namespacing-212",
+      "id": "xananode.example:rel/canonical-type-policy-requires-namespacing-217",
       "type": "requires",
       "target": "xananode.example:concept/namespacing",
       "direction": "outgoing"
