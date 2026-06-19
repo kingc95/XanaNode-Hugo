@@ -6,6 +6,8 @@
   "summary": "The abstract X-shaped network icon used as the visual mark for the XanaNode theme.",
   "source_url": "https://xananode.com/xananode-icon.svg",
   "rights_status": "open-source",
+  "media_type": "image/svg+xml",
+  "alt": "An abstract X-shaped network logo with a central node and four outer nodes connected by blue and orange relationship lines.",
   "relationships": [
     {
       "id": "xananode.example:rel/xananode-hugo-theme-has_primary_media-xananode-icon-102",

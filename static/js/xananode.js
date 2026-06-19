@@ -430,6 +430,28 @@
         return `<a class="${classes} xana-type-badge-link" data-type="${safeType}" href="${href}" title="Browse ${label} nodes">${label}</a>`;
     }
 
+    function subtypeLabel(value) {
+        return String(value || "")
+            .replace(/^[a-z][a-z0-9_-]*:/, "")
+            .replaceAll("_", " ")
+            .replaceAll("-", " ");
+    }
+
+    function renderSubtypeBadges(node) {
+        const values = [
+            node.subtype,
+            ...(Array.isArray(node.subtypes) ? node.subtypes : [])
+        ].filter(Boolean);
+        const unique = [...new Set(values.map((value) => String(value).trim()).filter(Boolean))];
+        if (!unique.length) return "";
+
+        return `
+            <div class="xana-subtype-badges">
+                ${unique.map((value) => `<span class="xana-subtype-badge" data-subtype="${escapeHtml(value)}">${escapeHtml(subtypeLabel(value))}</span>`).join("")}
+            </div>
+        `;
+    }
+
     function renderYouTubeEmbed(url, linkText = "Watch on YouTube") {
         if (!url) return "";
 
@@ -1359,6 +1381,9 @@
                 node.source_platform = platform.key;
                 node.source_platform_label = platform.label;
                 node.source_icon_svg = sourcePlatformBadgeSvg(platform);
+            }
+            if (!node.file && node.asset_path) {
+                node.file = node.asset_path;
             }
 
             if (node.type === "media" && node.file && isVisualAsset(node.file, node.media_type)) {
@@ -2658,7 +2683,10 @@
             <div class="xana-node-header ${(node.image && panelIsVisual) ? "has-media" : node.image ? "has-media has-doc-media" : "no-media"}">
                 ${renderPanelImage(node, state)}
                 <div class="xana-node-heading-text">
-                    ${renderTypeBadge(node.type)}
+                    <div class="xana-node-badges">
+                        ${renderTypeBadge(node.type)}
+                        ${renderSubtypeBadges(node)}
+                    </div>
                     <h1>${escapeHtml(node.title || node.id)}</h1>
                     ${node.summary ? `<p class="xana-summary">${escapeHtml(node.summary)}</p>` : ""}
                     ${renderMediaProvenance(node)}
