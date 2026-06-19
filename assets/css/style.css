@@ -3396,6 +3396,26 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
   font-weight: 700;
 }
 
+.xana-path-hop-limit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--xana-text-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.xana-path-hop-limit input {
+  width: 4.2rem;
+  min-height: 34px;
+  padding: 0 0.55rem;
+  border: 1px solid var(--xana-panel-border);
+  border-radius: 0.65rem;
+  background: var(--xana-surface-elevated);
+  color: var(--xana-text);
+  font: inherit;
+}
+
 .xana-path-swap,
 .xana-path-trace {
   border-radius: 0.75rem;
@@ -3481,6 +3501,13 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
   margin: 0;
   color: var(--xana-text-muted);
   font-size: 0.8rem;
+}
+
+.xana-path-story {
+  margin: 0 0 0.85rem;
+  color: var(--xana-text);
+  font-size: calc(0.92rem * var(--xana-reader-scale, 1));
+  line-height: 1.65;
 }
 
 .xana-path-card-endpoints {

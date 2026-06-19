@@ -492,7 +492,7 @@
                 sourceQuery: focusId || "",
                 targetQuery: "",
                 allowReverse: true,
-                maxDepth: 6,
+                maxDepth: 4,
                 maxPaths: 100,
                 results: [],
                 summary: ""
@@ -3506,6 +3506,10 @@
                         </div>
 
                         <div class="xana-path-actions">
+                            <label class="xana-path-hop-limit">
+                                <span>Hops</span>
+                                <input type="number" min="1" max="8" step="1" data-path-max-depth value="${clampNumber(pathState.maxDepth, 1, 8, 4)}">
+                            </label>
                             <label class="xana-path-toggle">
                                 <input type="checkbox" data-path-allow-reverse ${pathState.allowReverse ? "checked" : ""}>
                                 <span>Allow reverse hops</span>
@@ -3542,10 +3546,12 @@
             const sourceValue = sourceInput?.value || "";
             const targetValue = targetInput?.value || "";
             const reverseToggle = pathStageEl.querySelector("[data-path-allow-reverse]");
+            const maxDepthInput = pathStageEl.querySelector("[data-path-max-depth]");
 
             pathState.sourceQuery = sourceValue;
             pathState.targetQuery = targetValue;
             pathState.allowReverse = Boolean(reverseToggle?.checked);
+            pathState.maxDepth = clampNumber(maxDepthInput?.value, 1, 8, 4);
 
             runPathExplorer(state);
         });
@@ -3579,6 +3585,10 @@
 
         pathStageEl.querySelector("[data-path-allow-reverse]")?.addEventListener("change", (event) => {
             pathState.allowReverse = Boolean(event.target.checked);
+        });
+
+        pathStageEl.querySelector("[data-path-max-depth]")?.addEventListener("input", (event) => {
+            pathState.maxDepth = clampNumber(event.target.value, 1, 8, 4);
         });
     }
 
@@ -3649,6 +3659,7 @@
         const nodeById = new Map(allNodes.map((node) => [node.id, node]));
         const firstNode = nodeById.get(path.nodes[0]);
         const lastNode = nodeById.get(path.nodes[path.nodes.length - 1]);
+        const story = renderPathStory(path, nodeById);
 
         const hopsHtml = path.hops.map((hop, hopIndex) => {
             const fromNode = nodeById.get(hop.fromId);
@@ -3682,11 +3693,53 @@
                         ${renderPathNodeChip(lastNode)}
                     </div>
                 </div>
+                <p class="xana-path-story">${story}</p>
                 <ol class="xana-path-hop-list">
                     ${hopsHtml}
                 </ol>
             </li>
         `;
+    }
+
+    function renderPathStory(path, nodeById) {
+        const parts = path.hops.map((hop) => {
+            const fromNode = nodeById.get(hop.fromId);
+            const toNode = nodeById.get(hop.toId);
+            const fromTitle = escapeHtml(fromNode?.title || hop.fromId);
+            const toTitle = escapeHtml(toNode?.title || hop.toId);
+            return `${fromTitle} ${relationshipPhrase(hop.edge?.type || "related_to", hop.reversed)} ${toTitle}`;
+        });
+        return `${parts.join("; ")}.`;
+    }
+
+    function relationshipPhrase(type, reversed = false) {
+        const phrases = {
+            supports: "supports",
+            contradicts: "contradicts",
+            explains: "explains",
+            derives_from: "derives from",
+            derived_from: "derives from",
+            cites: "cites",
+            references: "references",
+            documents: "documents",
+            authored_by: "was authored by",
+            created_by: "was created by",
+            participated_in: "participated in",
+            influenced: "influenced",
+            influenced_by: "was influenced by",
+            implements: "implements",
+            implemented_by: "is implemented by",
+            transcludes: "transcludes",
+            deep_links_to: "deep-links to",
+            has_primary_media: "has primary media",
+            depicts: "depicts",
+            located_in: "is located in",
+            part_of: "is part of",
+            member_of: "is a member of",
+            related_to: "relates to"
+        };
+        const phrase = phrases[type] || String(type || "related_to").replace(/_/g, " ");
+        return reversed ? `is reached by reverse ${phrase} from` : phrase;
     }
 
     function renderAuditResults(state) {

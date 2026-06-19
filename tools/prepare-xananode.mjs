@@ -263,6 +263,13 @@ function configuredPackReferences() {
   return packs.filter((pack) => pack.source && pack.enabled !== false);
 }
 
+function parseYamlScalar(value) {
+  const text = String(value || "").trim().replace(/^["']|["']$/g, "");
+  if (text === "true") return true;
+  if (text === "false") return false;
+  return text;
+}
+
 function configuredThemeLinks() {
   const text = readSiteConfigText();
   const lines = text.split(/\r?\n/);
@@ -290,13 +297,6 @@ function configuredThemeLinks() {
   }
   if (current) links.push(current);
   return links.filter((link) => link && link.label && link.url);
-}
-
-function parseYamlScalar(value) {
-  const text = String(value || "").trim().replace(/^["']|["']$/g, "");
-  if (text === "true") return true;
-  if (text === "false") return false;
-  return text;
 }
 
 function localImportPackReferences() {
@@ -979,6 +979,7 @@ for (const relativeFile of contentFiles) {
 }
 
 for (const [index, link] of configuredThemeLinks().entries()) {
+  if (link.private === true || link.generate_node === false || link.node === false) continue;
   const explicitNodeId = String(link.node || link.nodeId || "").trim();
   const generatedId = String(link.id || explicitNodeId || `source-${slugify(link.label, "link")}`).trim();
   const url = String(link.url || link.href || "").trim();

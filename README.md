@@ -76,6 +76,8 @@ The build tool validates generated substrate artifacts with `@xananode/core`. It
 
 `tools/prepare-xananode.mjs` intentionally remains in this repository because it is Hugo-specific glue. It reads Hugo Markdown/front matter conventions, resolves Hugo shortcodes, writes files into Hugo's `data/` and `static/` folders, and prepares the viewer feed used by the theme. Protocol rules should live in Core; renderer concerns should stay here. If this script needs a protocol rule that Core does not expose, that rule belongs upstream in Core rather than being reimplemented permanently in Hugo.
 
+Configured `params.xananode.links` are part of the site projection. Public links without an existing `node` are emitted as lightweight `source` nodes so the graph can represent project homes, social profiles, support pages, and documentation links with normal substrate identity. Set `private: true` or `generate_node: false` on a link when it should remain a UI link only.
+
 Current generated protocol files include:
 
 - `substrate.json`: substrate manifest with namespace, version, imports, and schema version.
