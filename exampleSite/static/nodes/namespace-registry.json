@@ -12,19 +12,19 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/namespace-registry-implements-namespacing-154",
+      "id": "xananode.example:rel/namespace-registry-implements-namespacing-159",
       "type": "implements",
       "target": "xananode.example:concept/namespacing",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/schema-extension-requires-namespace-registry-155",
+      "id": "xananode.example:rel/schema-extension-requires-namespace-registry-160",
       "type": "requires",
       "source": "xananode.example:concept/schema-extension",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/custom-extension-substrate-requires-namespace-registry-199",
+      "id": "xananode.example:rel/custom-extension-substrate-requires-namespace-registry-204",
       "type": "requires",
       "source": "xananode.example:concept/custom-extension-substrate",
       "direction": "incoming"

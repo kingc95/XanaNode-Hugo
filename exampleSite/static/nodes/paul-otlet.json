@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/paul-otlet",
+  "title": "Paul Otlet",
+  "type": "person",
+  "importance": 4,
+  "summary": "Documentalist associated with the Mundaneum, universal bibliography, and early visions of networked document access.",
+  "relationships": [],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

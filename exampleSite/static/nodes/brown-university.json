@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:place/brown-university",
+  "title": "Brown University",
+  "type": "place",
+  "importance": 4,
+  "summary": "Early hypertext research center associated with HES, FRESS, and Intermedia.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

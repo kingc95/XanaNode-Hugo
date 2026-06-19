@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/alan-kay",
+  "title": "Alan Kay",
+  "type": "person",
+  "importance": 5,
+  "summary": "Computing pioneer associated with Dynabook, Smalltalk, personal dynamic media, and computers as tools for improving thought.",
+  "relationships": [],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

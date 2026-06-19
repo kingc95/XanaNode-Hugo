@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/seymour-papert",
+  "title": "Seymour Papert",
+  "type": "person",
+  "importance": 4,
+  "summary": "Constructionism and Logo pioneer who shaped computers as learning media.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

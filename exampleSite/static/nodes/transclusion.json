@@ -24,37 +24,37 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/tumbler-addressing-enables-transclusion-125",
+      "id": "xananode.example:rel/tumbler-addressing-enables-transclusion-130",
       "type": "enables",
       "source": "xananode.example:concept/tumbler-addressing",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/transclusion-preserves-provenance-131",
+      "id": "xananode.example:rel/transclusion-preserves-provenance-136",
       "type": "preserves",
       "target": "xananode.example:concept/provenance",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/transclusion-uses-fragment-node-132",
+      "id": "xananode.example:rel/transclusion-uses-fragment-node-137",
       "type": "uses",
       "target": "xananode.example:concept/fragment-node",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/review-suggestions-uses-transclusion-145",
+      "id": "xananode.example:rel/review-suggestions-uses-transclusion-150",
       "type": "uses",
       "source": "xananode.example:concept/review-suggestions",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/transclusion-requires-fragment-node-176",
+      "id": "xananode.example:rel/transclusion-requires-fragment-node-181",
       "type": "requires",
       "target": "xananode.example:concept/fragment-node",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/deep-linking-enables-transclusion-196",
+      "id": "xananode.example:rel/deep-linking-enables-transclusion-201",
       "type": "enables",
       "source": "xananode.example:concept/deep-linking",
       "direction": "incoming"
@@ -64,6 +64,12 @@
       "type": "transcludes",
       "target": "xananode.example:fragment/xanadu-document-interconnection-0001",
       "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/xananode-extends-transclusion",
+      "type": "extends",
+      "source": "xananode.example:concept/xananode",
+      "direction": "incoming"
     }
   ]
 }

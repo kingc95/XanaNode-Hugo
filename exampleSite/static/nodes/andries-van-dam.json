@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/andries-van-dam",
+  "title": "Andries van Dam",
+  "type": "person",
+  "importance": 4,
+  "summary": "Computer scientist associated with HES, FRESS, and the Brown hypertext lineage.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

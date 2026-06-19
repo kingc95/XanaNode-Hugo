@@ -34,6 +34,12 @@
       "type": "anticipated",
       "target": "xananode.example:concept/knowledge-substrate",
       "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/bush-influenced-adams-lineage",
+      "type": "influenced",
+      "target": "xananode.lineage:person/douglas-adams",
+      "direction": "outgoing"
     }
   ]
 }

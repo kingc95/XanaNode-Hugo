@@ -24,88 +24,100 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/start-here-explains-federated-knowledge-substrates-112",
+      "id": "xananode.example:rel/start-here-explains-federated-knowledge-substrates-116",
       "type": "explains",
       "source": "xananode.example:essay/start-here",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-explains-federated-knowledge-substrates-117",
+      "id": "xananode.example:rel/xananode-explains-federated-knowledge-substrates-122",
       "type": "explains",
       "source": "xananode.example:concept/xananode",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/single-source-of-truth-contrasts_with-federated-knowledge-substrates-138",
+      "id": "xananode.example:rel/single-source-of-truth-contrasts_with-federated-knowledge-substrates-143",
       "type": "contrasts_with",
       "source": "xananode.example:concept/single-source-of-truth",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-schema-extension-143",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-schema-extension-148",
       "type": "requires",
       "target": "xananode.example:concept/schema-extension",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-protocol-artifacts-152",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-protocol-artifacts-157",
       "type": "requires",
       "target": "xananode.example:concept/protocol-artifacts",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federation-rules-defines-federated-knowledge-substrates-179",
+      "id": "xananode.example:rel/federation-rules-defines-federated-knowledge-substrates-184",
       "type": "defines",
       "source": "xananode.example:concept/federation-rules",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/federation-example-demonstrates-federated-knowledge-substrates-183",
+      "id": "xananode.example:rel/federation-example-demonstrates-federated-knowledge-substrates-188",
       "type": "demonstrates",
       "source": "xananode.example:concept/federation-example",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-namespacing-187",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-namespacing-192",
       "type": "requires",
       "target": "xananode.example:concept/namespacing",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-merge-validation-188",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-merge-validation-193",
       "type": "requires",
       "target": "xananode.example:concept/merge-validation",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-federation-rules-189",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-federation-rules-194",
       "type": "requires",
       "target": "xananode.example:concept/federation-rules",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-preserves-independent-moderation-190",
+      "id": "xananode.example:rel/federated-knowledge-substrates-preserves-independent-moderation-195",
       "type": "preserves",
       "target": "xananode.example:concept/independent-moderation",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-alternative_to-single-source-of-truth-191",
+      "id": "xananode.example:rel/federated-knowledge-substrates-alternative_to-single-source-of-truth-196",
       "type": "alternative_to",
       "target": "xananode.example:concept/single-source-of-truth",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-compatibility-levels-206",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-compatibility-levels-211",
       "type": "requires",
       "target": "xananode.example:concept/compatibility-levels",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-enables-civilizational-memory-207",
+      "id": "xananode.example:rel/federated-knowledge-substrates-enables-civilizational-memory-212",
       "type": "enables",
       "target": "xananode.example:concept/civilizational-memory",
       "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/conflict-preserves-disagreement",
+      "type": "preserves",
+      "source": "xananode.lineage:concept/conflict-disputed-identity",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/hyperland-vr-implements-spatial-navigation",
+      "type": "implements",
+      "source": "xananode.lineage:tool/hyperland-vr",
+      "direction": "incoming"
     }
   ]
 }

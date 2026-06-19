@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:organization/voyager-company",
+  "title": "Voyager Company",
+  "type": "organization",
+  "importance": 4,
+  "summary": "Interactive publishing company in the laserdisc and CD-ROM lineage.",
+  "relationships": [],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:project/interactive-beethoven-ninth",
+  "title": "Interactive Beethoven's Ninth",
+  "type": "project",
+  "importance": 3,
+  "summary": "Interactive music system showing musical structure as explorable knowledge.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

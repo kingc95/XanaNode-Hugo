@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/tim-berners-lee",
+  "title": "Tim Berners-Lee",
+  "type": "person",
+  "importance": 5,
+  "summary": "Inventor of the World Wide Web, a simpler distributed hypertext branch that solved broad publishing and retrieval.",
+  "relationships": [],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

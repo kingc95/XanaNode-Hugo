@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/john-sculley",
+  "title": "John Sculley",
+  "type": "person",
+  "importance": 4,
+  "summary": "Apple executive who presented From Multimedia to Interactive Media and the Knowledge Navigator future.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

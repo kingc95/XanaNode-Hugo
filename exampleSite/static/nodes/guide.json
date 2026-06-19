@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:technology/guide",
+  "title": "Guide",
+  "type": "technology",
+  "importance": 3,
+  "summary": "Personal-computer hypertext system associated with Peter J. Brown.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

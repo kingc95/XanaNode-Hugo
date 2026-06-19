@@ -1,0 +1,28 @@
+{
+  "id": "xananode.example:fragment/as-we-may-think-0004",
+  "protocol_id": "xananode.example:fragment/as-we-may-think-0004",
+  "content_id": "sha256:f712416ac32e6b8771dcbe4315d4d9ff61635e6407265b20301ec3e3a79afc0e",
+  "version_id": "sha256:f712416ac32e6b8771dcbe4315d4d9ff61635e6407265b20301ec3e3a79afc0e",
+  "local_id": "as-we-may-think#0004",
+  "title": "Associative Trails Fragment",
+  "type": "fragment",
+  "summary": "Bush argued that the growing record of knowledge required better associative methods for navigation and recall.",
+  "importance": 3,
+  "relationships": [],
+  "source_node": "xananode.example:source/as-we-may-think",
+  "source_content_id": "sha256:d0e91f6a5790e264906827a917d0d8f0c6490dfe32976e4ed44a9ef7268f941e",
+  "source_version_id": "sha256:d0e91f6a5790e264906827a917d0d8f0c6490dfe32976e4ed44a9ef7268f941e",
+  "fragment_id": "0004",
+  "tumbler": "xananode.example:source/as-we-may-think@sha256:d0e91f6a5790e264906827a917d0d8f0c6490dfe32976e4ed44a9ef7268f941e#fragment/0004@sha256:f712416ac32e6b8771dcbe4315d4d9ff61635e6407265b20301ec3e3a79afc0e",
+  "selector": {
+    "type": "semantic-anchor",
+    "value": "associative-trails-discussion"
+  },
+  "source_url": "https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/",
+  "rights_status": "copyrighted",
+  "outgoing_relationships": [],
+  "incoming_relationships": [],
+  "metadata": {
+    "generated": false
+  }
+}

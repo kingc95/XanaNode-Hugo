@@ -1,0 +1,39 @@
+{
+  "id": "xananode.example:concept/compatibility-report",
+  "protocol_id": "xananode.example:concept/compatibility-report",
+  "content_id": "sha256:a76c461e456bfe8c5211d1443208deea353e1ab7ab3f73ad12bdcc8120f05b53",
+  "version_id": "sha256:a76c461e456bfe8c5211d1443208deea353e1ab7ab3f73ad12bdcc8120f05b53",
+  "local_id": "compatibility-report",
+  "title": "Compatibility Report",
+  "type": "concept",
+  "facets": [],
+  "summary": "A report that records how one substrate or tool understands another substrate, including compatibility level, supported schemas, warnings, and blocking issues.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-concept-compatibility-report-documents-compatibility-levels-16",
+      "type": "documents",
+      "source": "xananode.example:concept/compatibility-report",
+      "target": "compatibility-levels",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-compatibility-report-required-for-merge-validation-17",
+      "type": "required_for",
+      "source": "xananode.example:concept/compatibility-report",
+      "target": "merge-validation",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nA compatibility report records how one implementation understands a substrate.\n\nIt names the compatibility level reached, the schema versions recognized, unsupported extensions, warnings, and any blocking issues.\n\nThe canonical protocol example publishes a compatibility report for its [federation example](/node/federation-example), and this [Hugo](/node/hugo) implementation publishes the schema needed to validate that report shape.\n",
+  "source_file": "content/concepts/compatibility-report.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-concept-compatibility-report-documents-compatibility-levels-16",
+    "xananode.example:rel/xananode-example-concept-compatibility-report-required-for-merge-validation-17"
+  ],
+  "incoming_relationships": []
+}

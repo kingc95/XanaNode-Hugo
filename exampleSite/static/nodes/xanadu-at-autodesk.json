@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:project/xanadu-at-autodesk",
+  "title": "Xanadu at Autodesk",
+  "type": "project",
+  "importance": 4,
+  "summary": "Commercial implementation attempt for Nelson's Xanadu vision during Autodesk investment.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

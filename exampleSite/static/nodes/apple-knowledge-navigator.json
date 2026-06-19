@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:technology/apple-knowledge-navigator",
+  "title": "Apple Knowledge Navigator",
+  "type": "technology",
+  "importance": 4,
+  "summary": "Concept video imagining agent-mediated interactive knowledge navigation.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

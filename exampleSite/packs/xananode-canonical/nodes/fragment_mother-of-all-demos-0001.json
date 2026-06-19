@@ -1,0 +1,27 @@
+{
+  "id": "xananode.example:fragment/mother-of-all-demos-0001",
+  "protocol_id": "xananode.example:fragment/mother-of-all-demos-0001",
+  "content_id": "sha256:217a3bcf5fb3c571fd4661497b6bdde97bba61576045ca253f21b9c0d2987ce4",
+  "version_id": "sha256:217a3bcf5fb3c571fd4661497b6bdde97bba61576045ca253f21b9c0d2987ce4",
+  "local_id": "mother-of-all-demos#0001",
+  "title": "Augmenting Human Intelligence Fragment",
+  "type": "fragment",
+  "summary": "The demonstration showed computers as tools for augmenting human intelligence and navigating structured knowledge work.",
+  "importance": 3,
+  "relationships": [],
+  "source_node": "xananode.example:source/mother-of-all-demos",
+  "source_content_id": "sha256:43becbb536dc402ccca9b688130ae25e30c17109ab144e62cccfa78ddc804e5c",
+  "source_version_id": "sha256:43becbb536dc402ccca9b688130ae25e30c17109ab144e62cccfa78ddc804e5c",
+  "fragment_id": "0001",
+  "tumbler": "xananode.example:source/mother-of-all-demos@sha256:43becbb536dc402ccca9b688130ae25e30c17109ab144e62cccfa78ddc804e5c#fragment/0001@sha256:217a3bcf5fb3c571fd4661497b6bdde97bba61576045ca253f21b9c0d2987ce4",
+  "selector": {
+    "type": "semantic-anchor",
+    "value": "augmenting-human-intelligence"
+  },
+  "source_url": "https://www.dougengelbart.org/content/view/209/",
+  "outgoing_relationships": [],
+  "incoming_relationships": [],
+  "metadata": {
+    "generated": false
+  }
+}

@@ -24,19 +24,25 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-relationship-list-uses-xananode-relationship-types-133",
+      "id": "xananode.example:rel/using-hugo-with-protocol-json-explains-substrate-relationship-list-112",
+      "type": "explains",
+      "source": "xananode.example:essay/using-hugo-with-protocol-json",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/substrate-relationship-list-uses-xananode-relationship-types-138",
       "type": "uses",
       "target": "xananode.example:schema/xananode-relationship-types",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/substrate-relationship-list-preserves-provenance-134",
+      "id": "xananode.example:rel/substrate-relationship-list-preserves-provenance-139",
       "type": "preserves",
       "target": "xananode.example:concept/provenance",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-relationship-list-150",
+      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-relationship-list-155",
       "type": "contains",
       "source": "xananode.example:concept/protocol-artifacts",
       "direction": "incoming"

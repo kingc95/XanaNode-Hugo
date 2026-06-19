@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:technology/micons",
+  "title": "Micons",
+  "type": "technology",
+  "importance": 3,
+  "summary": "Motion icons presented in Hyperland as animated conceptual representations.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

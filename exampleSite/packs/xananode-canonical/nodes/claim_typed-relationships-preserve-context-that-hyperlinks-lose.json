@@ -1,0 +1,39 @@
+{
+  "id": "xananode.example:claim/typed-relationships-preserve-context-that-hyperlinks-lose",
+  "protocol_id": "xananode.example:claim/typed-relationships-preserve-context-that-hyperlinks-lose",
+  "content_id": "sha256:9929a3e5616ab5a4e766c003b055cc69e25a8c16493c953e79f09b6bdd493b43",
+  "version_id": "sha256:9929a3e5616ab5a4e766c003b055cc69e25a8c16493c953e79f09b6bdd493b43",
+  "local_id": "typed-relationships-preserve-context-that-hyperlinks-lose",
+  "title": "Typed relationships preserve context that hyperlinks lose",
+  "type": "claim",
+  "facets": [],
+  "summary": "Typed relationships preserve why nodes are connected, while ordinary hyperlinks usually preserve only that a connection exists.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-claim-typed-relationships-preserve-context-that-hyperlinks-lose-claim-of-typed-relationships-4",
+      "type": "claim_of",
+      "source": "xananode.example:claim/typed-relationships-preserve-context-that-hyperlinks-lose",
+      "target": "typed-relationships",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-claim-typed-relationships-preserve-context-that-hyperlinks-lose-contrasts-with-unlabeled-hyperlink-5",
+      "type": "contrasts_with",
+      "source": "xananode.example:claim/typed-relationships-preserve-context-that-hyperlinks-lose",
+      "target": "unlabeled-hyperlink",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nA hyperlink can connect a source to a target without saying whether the source cites, defines, contradicts, explains, quotes, or merely mentions the target.\n\n[Typed relationships](/node/typed-relationships) make that missing meaning explicit.\n",
+  "source_file": "content/claims/claim-relationships-preserve-context.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-claim-typed-relationships-preserve-context-that-hyperlinks-lose-claim-of-typed-relationships-4",
+    "xananode.example:rel/xananode-example-claim-typed-relationships-preserve-context-that-hyperlinks-lose-contrasts-with-unlabeled-hyperlink-5"
+  ],
+  "incoming_relationships": []
+}

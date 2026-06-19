@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:place/monterey-california",
+  "title": "Monterey, California",
+  "type": "place",
+  "importance": 3,
+  "summary": "The site of TED2 in February 1990.",
+  "relationships": [],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

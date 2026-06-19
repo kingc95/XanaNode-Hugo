@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/tom-baker",
+  "title": "Tom Baker",
+  "type": "person",
+  "importance": 3,
+  "summary": "Actor who appears in Hyperland as a software-agent persona guiding knowledge navigation.",
+  "relationships": [],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

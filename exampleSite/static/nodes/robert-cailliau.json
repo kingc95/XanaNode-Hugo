@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/robert-cailliau",
+  "title": "Robert Cailliau",
+  "type": "person",
+  "importance": 4,
+  "summary": "Collaborator and promoter of the World Wide Web proposal.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

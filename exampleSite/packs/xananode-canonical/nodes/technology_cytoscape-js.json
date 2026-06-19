@@ -1,0 +1,30 @@
+{
+  "id": "xananode.example:technology/cytoscape-js",
+  "protocol_id": "xananode.example:technology/cytoscape-js",
+  "content_id": "sha256:a741b9fe77f6f9ab033ae7bf06157f9e13433f2b559ab610ef54e96781c008b1",
+  "version_id": "sha256:a741b9fe77f6f9ab033ae7bf06157f9e13433f2b559ab610ef54e96781c008b1",
+  "local_id": "cytoscape-js",
+  "title": "Cytoscape.js",
+  "type": "technology",
+  "facets": [],
+  "summary": "A JavaScript graph visualization library used by the reference viewer to render nodes and relationships.",
+  "importance": 3,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-technology-cytoscape-js-represents-knowledge-substrate-197",
+      "type": "represents",
+      "source": "xananode.example:technology/cytoscape-js",
+      "target": "knowledge-substrate",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nCytoscape.js renders the visible graph. It is a presentation dependency, not the knowledge model itself.\n",
+  "source_file": "content/technologies/cytoscape-js.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-technology-cytoscape-js-represents-knowledge-substrate-197"
+  ],
+  "incoming_relationships": []
+}

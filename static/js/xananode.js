@@ -39,14 +39,19 @@
         ttsVoice: "xananode.ttsVoice",
         ttsRate: "xananode.ttsRate",
         ttsPitch: "xananode.ttsPitch",
-        ttsDetail: "xananode.ttsDetail"
+        ttsDetail: "xananode.ttsDetail",
+        interfaceTourCompleted: "xananode.interfaceTourCompleted"
+    };
+
+    const COOKIE_KEYS = {
+        interfaceTourCompleted: "xananode_interface_tour_completed"
     };
 
     const DISPLAY_DEFAULTS = Object.freeze({
         colorTheme: "dark",
         uiDensity: "comfortable",
         readerFontScale: 100,
-        graphAtmosphere: "alive",
+        graphAtmosphere: "still",
         tourMode: "narration",
         ttsNarrator: true,
         ttsVoice: "",
@@ -111,8 +116,26 @@
                 attributionText: String(brand.attributionText || "xananode.com"),
                 attributionUrl: String(brand.attributionUrl || "https://xananode.com")
             },
+            links: normalizeThemeLinks(raw.links || brand.links || []),
             searchPrompts: prompts
         };
+    }
+
+    function normalizeThemeLinks(links) {
+        if (!Array.isArray(links)) return [];
+
+        return links
+            .map((link) => {
+                const raw = link && typeof link === "object" ? link : {};
+                const label = String(raw.label || raw.title || "").trim();
+                const node = String(raw.node || raw.nodeId || "").trim();
+                const url = String(raw.url || raw.href || "").trim();
+
+                if (!label || (!node && !url)) return null;
+
+                return { label, node, url };
+            })
+            .filter(Boolean);
     }
 
     function resolveHomeNodeId(allNodes, nodeIds = new Set(allNodes.map((node) => node.id))) {
@@ -257,12 +280,31 @@
         schema: { bg: "#e2e8f0", fg: "#111827", outline: "#ffffff" }
     };
 
+    const ACCESSIBLE_TYPE_PALETTE = {
+        essay: { bg: "#cc79a7", fg: "#1a0712", outline: "#ffd8ed" },
+        concept: { bg: "#009e73", fg: "#001f17", outline: "#bfffea" },
+        source: { bg: "#e69f00", fg: "#211500", outline: "#ffe6ad" },
+        person: { bg: "#56b4e9", fg: "#061823", outline: "#d8f2ff" },
+        observation: { bg: "#d55e00", fg: "#250d00", outline: "#ffd9c7" },
+        trail: { bg: "#f0e442", fg: "#1d1a00", outline: "#fffbc5" },
+        project: { bg: "#0072b2", fg: "#001524", outline: "#c7ecff" },
+        artifact: { bg: "#009e73", fg: "#001f17", outline: "#bfffea" },
+        organization: { bg: "#cc79a7", fg: "#1a0712", outline: "#ffd8ed" },
+        media: { bg: "#56b4e9", fg: "#061823", outline: "#d8f2ff" },
+        claim: { bg: "#d55e00", fg: "#250d00", outline: "#ffd9c7" },
+        event: { bg: "#e69f00", fg: "#211500", outline: "#ffe6ad" },
+        place: { bg: "#009e73", fg: "#001f17", outline: "#bfffea" },
+        technology: { bg: "#0072b2", fg: "#001524", outline: "#c7ecff" },
+        publication: { bg: "#cc79a7", fg: "#1a0712", outline: "#ffd8ed" },
+        community: { bg: "#f0e442", fg: "#1d1a00", outline: "#fffbc5" },
+        relationship: { bg: "#0072b2", fg: "#001524", outline: "#c7ecff" },
+        revision: { bg: "#999999", fg: "#111827", outline: "#eeeeee" },
+        schema: { bg: "#f7f7f7", fg: "#111827", outline: "#ffffff" }
+    };
+
     loadCytoscape()
         .then(() => Promise.all([
-            fetch("/index.json").then((res) => {
-                if (!res.ok) throw new Error(`Could not load /index.json (${res.status}).`);
-                return res.json();
-            }),
+            loadViewerData(),
             fetch("/schemas/xananode-node-types.json").then((r) => r.json()).catch(() => null),
             fetch("/schemas/xananode-relationship-types.json").then((r) => r.json()).catch(() => null)
         ]))
@@ -278,6 +320,52 @@
         .catch((err) => {
             graphEl.innerHTML = `<p class="xana-error">${escapeHtml(err.message)}</p>`;
         });
+
+    function loadViewerData() {
+        const renderedIndexPromise = fetch("/index.json")
+            .then((res) => {
+                if (!res.ok) throw new Error(`Could not load /index.json (${res.status}).`);
+                return res.json();
+            })
+            .catch(() => null);
+
+        return fetch("/xananode-viewer.json")
+            .then((res) => {
+                if (!res.ok) throw new Error(`Could not load /xananode-viewer.json (${res.status}).`);
+                return res.json();
+            })
+            .then((viewerData) => renderedIndexPromise.then((renderedIndex) => mergeRenderedHugoData(viewerData, renderedIndex)))
+            .catch(() => renderedIndexPromise.then((renderedIndex) => {
+                if (!renderedIndex) throw new Error("Could not load /xananode-viewer.json or /index.json.");
+                return renderedIndex;
+            }));
+    }
+
+    function mergeRenderedHugoData(viewerData, renderedIndex) {
+        if (!viewerData || !renderedIndex?.nodes?.length) return viewerData;
+
+        const renderedById = new Map();
+        for (const node of renderedIndex.nodes || []) {
+            if (!node) continue;
+            if (node.id) renderedById.set(String(node.id), node);
+            if (node.protocol_id) renderedById.set(String(node.protocol_id), node);
+        }
+
+        return {
+            ...viewerData,
+            nodes: (viewerData.nodes || []).map((node) => {
+                const rendered = renderedById.get(String(node.id)) || renderedById.get(String(node.protocol_id));
+                if (!rendered) return node;
+                return {
+                    ...node,
+                    html: rendered.html || node.html,
+                    content: rendered.content || node.content,
+                    url: rendered.url || node.url,
+                    section: rendered.section || node.section
+                };
+            })
+        };
+    }
 
     function loadCytoscape() {
         if (window.cytoscape) return Promise.resolve();
@@ -422,7 +510,8 @@
             allEdgesRaw,
             fragmentsData: fragmentsData || {},
             pendingFragmentHighlight: null,
-            displaySettings
+            displaySettings,
+            nodeTypeColors
         };
 
         if (requestedNode && window.location.hash) {
@@ -532,6 +621,8 @@
             updateUrl: false,
             preserveViewport: true
         });
+
+        window.setTimeout(() => ensureInterfaceTourSeen(state), 450);
     }
 
     function renderChrome(state) {
@@ -543,6 +634,7 @@
         const mchk = (type) => m.has(type) ? "checked" : "";
         const dact = (n) => d === n ? "class=\"active\"" : "";
         const brand = THEME_CONFIG.brand;
+        const projectLinks = renderThemeLinks(state);
 
         // Inject navbar into the .xana-app parent (runs once; guard against duplicates)
         const appEl = graphEl.closest(".xana-app") || graphEl.parentElement;
@@ -604,20 +696,32 @@
                 </div>
             </div>
 
-            <!-- Compact controls: zoom + filter + audit + tour -->
+            <!-- Compact controls: zoom, exploration, reading, and secondary tools -->
             <div class="xana-controls-strip">
                 <button class="xana-ctrl-btn" data-zoom="out" aria-label="Zoom out" title="Zoom out">&#x2212;</button>
                 <button class="xana-ctrl-btn" data-zoom="fit" aria-label="Fit graph" title="Fit to screen">&#x25A1;</button>
                 <button class="xana-ctrl-btn" data-zoom="in" aria-label="Zoom in" title="Zoom in">+</button>
                 <span class="xana-ctrl-sep"></span>
                 <button class="xana-ctrl-btn" data-filter-toggle aria-label="Filter node types" title="Filter">&#x2261;</button>
-                <button class="xana-ctrl-btn" data-audit-run aria-label="Schema audit" title="Run schema audit">&#x26A0;</button>
-                <button class="xana-ctrl-btn" data-audit-clear aria-label="Clear audit" title="Clear audit" hidden>&#x2715;</button>
                 <button class="xana-ctrl-btn" data-path-open aria-label="Path explorer" title="Compare connective path">&#x2934;</button>
                 <span class="xana-ctrl-sep"></span>
                 <button class="xana-ctrl-btn" data-tour-toggle aria-label="Guided tour" title="Guided tour">&#x25B6;</button>
                 <button class="xana-ctrl-btn" data-settings-toggle aria-label="Display and narration settings" title="Settings">&#9881;</button>
-                <button class="xana-ctrl-btn" data-interface-tour aria-label="Interface tour" title="Interface tour">?</button>
+                <button class="xana-ctrl-btn" data-tools-toggle aria-label="Substrate tools" title="Substrate tools">&#x22EF;</button>
+            </div>
+
+            <div class="xana-tools-popover" hidden>
+                <div class="xana-tools-popover-header">
+                    <span>Tools</span>
+                    <button type="button" data-tools-close aria-label="Close substrate tools">&#x2715;</button>
+                </div>
+                <div class="xana-tools-list">
+                    <a class="xana-tools-link" href="/review/">Review suggestions</a>
+                    <button type="button" class="xana-tools-button" data-audit-run>Run schema audit</button>
+                    <button type="button" class="xana-tools-button" data-audit-clear hidden>Clear schema audit</button>
+                    <button type="button" class="xana-tools-button" data-interface-tour>Interface tour</button>
+                    ${projectLinks}
+                </div>
             </div>
 
             <div class="xana-settings">
@@ -630,6 +734,7 @@
                         <span class="xana-settings-label">Theme</span>
                         <button type="button" data-display-setting="colorTheme" data-value="dark">Dark</button>
                         <button type="button" data-display-setting="colorTheme" data-value="light">Light</button>
+                        <button type="button" data-display-setting="colorTheme" data-value="accessible">Contrast</button>
                         <button type="button" data-display-setting="colorTheme" data-value="classic">Classic</button>
                     </div>
                     <div class="xana-settings-group" role="group" aria-label="Interface density">
@@ -727,6 +832,36 @@
             <div id="xana-stage"></div>
             <div id="xana-audit-stage" hidden></div>
             <div id="xana-path-stage" hidden></div>
+        `;
+    }
+
+    function renderThemeLinks(state) {
+        if (!THEME_CONFIG.links.length) return "";
+
+        const nodeById = new Map((state.allNodes || []).map((node) => [node.id, node]));
+        const nodeByProtocolId = new Map((state.allNodes || [])
+            .filter((node) => node.protocol_id)
+            .map((node) => [node.protocol_id, node]));
+
+        const links = THEME_CONFIG.links.map((link) => {
+            const linkedNode = link.node
+                ? nodeById.get(link.node) || nodeByProtocolId.get(link.node)
+                : null;
+            const href = linkedNode ? nodeHref(linkedNode, state) : link.url;
+            if (!href) return "";
+            const nodeJump = linkedNode ? ` data-node-jump="${escapeHtml(linkedNode.id)}"` : "";
+            const external = !linkedNode && isExternalUrl(href) ? ` target="_blank" rel="noopener noreferrer"` : "";
+
+            return `<a class="xana-tools-link" href="${escapeHtml(href)}"${nodeJump}${external}>${escapeHtml(link.label)}</a>`;
+        }).filter(Boolean).join("");
+
+        if (!links) return "";
+
+        return `
+                    <div class="xana-tools-section" aria-label="Project links">
+                        <span class="xana-tools-section-label">Links</span>
+                        ${links}
+                    </div>
         `;
     }
 
@@ -897,6 +1032,9 @@
         const settingsToggle = graphEl.querySelector("[data-settings-toggle]");
         const settingsPanel = graphEl.querySelector(".xana-settings-panel");
         const settingsClose = graphEl.querySelector("[data-settings-close]");
+        const toolsToggleBtn = graphEl.querySelector("[data-tools-toggle]");
+        const toolsCloseBtn = graphEl.querySelector("[data-tools-close]");
+        const toolsPopover = graphEl.querySelector(".xana-tools-popover");
         const voiceSelect = graphEl.querySelector("[data-tts-voice]");
         const detailSelect = graphEl.querySelector("[data-tts-detail]");
         const rateInput = graphEl.querySelector("[data-tts-rate]");
@@ -924,8 +1062,36 @@
             settingsToggle?.classList.remove("active");
         });
 
+        toolsToggleBtn?.addEventListener("click", (event) => {
+            event.stopPropagation();
+            if (!toolsPopover) return;
+            const opening = toolsPopover.hidden;
+            toolsPopover.hidden = !opening;
+            toolsToggleBtn.classList.toggle("active", opening);
+        });
+
+        toolsCloseBtn?.addEventListener("click", () => {
+            if (toolsPopover) toolsPopover.hidden = true;
+            toolsToggleBtn?.classList.remove("active");
+        });
+
         interfaceTourButton?.addEventListener("click", () => {
             startInterfaceTour(state);
+            if (toolsPopover) toolsPopover.hidden = true;
+            toolsToggleBtn?.classList.remove("active");
+        });
+
+        graphEl.querySelectorAll("[data-node-jump]").forEach((link) => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+
+                const id = link.getAttribute("data-node-jump");
+                if (!id) return;
+                closeTransientUi(state, { clearSearch: true });
+                if (toolsPopover) toolsPopover.hidden = true;
+                toolsToggleBtn?.classList.remove("active");
+                travelToNode(id, state, true);
+            });
         });
 
         graphEl.querySelectorAll("[data-display-setting]").forEach((button) => {
@@ -953,6 +1119,9 @@
                 }
                 applyDisplaySettings(state.displaySettings);
                 updateDisplaySettingButtons(state);
+                if (key === "colorTheme" && state.cy) {
+                    state.cy.style(getCyStyle(state.nodeTypeColors)).update();
+                }
                 if (key === "graphAtmosphere") {
                     refreshAliveMotion(state);
                 }
@@ -1037,6 +1206,11 @@
                 settingsToggle?.classList.remove("active");
             }
 
+            if (toolsPopover && !toolsPopover.hidden && !event.target.closest(".xana-tools-popover") && !event.target.closest("[data-tools-toggle]")) {
+                toolsPopover.hidden = true;
+                toolsToggleBtn?.classList.remove("active");
+            }
+
             if (!filterPopover || filterPopover.hidden) return;
             if (event.target.closest(".xana-filter-popover") || event.target.closest("[data-filter-toggle]")) return;
 
@@ -1049,6 +1223,8 @@
 
         auditRunButton?.addEventListener("click", () => {
             runSchemaAudit(state);
+            if (toolsPopover) toolsPopover.hidden = true;
+            toolsToggleBtn?.classList.remove("active");
         });
 
         auditClearButton?.addEventListener("click", () => {
@@ -1057,10 +1233,12 @@
             state.auditMode = false;
             if (auditRunButton) {
                 auditRunButton.classList.remove("audit-active", "audit-pass", "audit-fail");
-                auditRunButton.innerHTML = "&#x26A0;";
+                auditRunButton.textContent = "Run schema audit";
                 auditRunButton.title = "Run schema audit";
             }
             renderAuditResults(state);
+            if (toolsPopover) toolsPopover.hidden = true;
+            toolsToggleBtn?.classList.remove("active");
         });
 
         pathOpenButton?.addEventListener("click", () => {
@@ -1106,6 +1284,9 @@
 
     function hydrateMedia(allNodes) {
         const nodesById = new Map(allNodes.map((node) => [node.id, node]));
+        const nodesByProtocolId = new Map(allNodes
+            .filter((node) => node.protocol_id)
+            .map((node) => [node.protocol_id, node]));
 
         function isVisualAsset(file, mediaType) {
             return ["image", "diagram", "screenshot", "clip", "scan", "svg"].includes(String(mediaType || "").toLowerCase()) ||
@@ -1121,7 +1302,7 @@
             }
 
             if (node.primary_media) {
-                const mediaNode = nodesById.get(node.primary_media);
+                const mediaNode = nodesById.get(node.primary_media) || nodesByProtocolId.get(node.primary_media);
 
                 if (mediaNode) {
                     node.image = mediaNode.file || node.image || "";
@@ -2094,20 +2275,25 @@
         if (_tourScrollInterval) { window.cancelAnimationFrame(_tourScrollInterval); _tourScrollInterval = null; }
     }
 
-    function startTourPanelScroll(durationMs = TOUR_DWELL_MS) {
+    function startTourPanelScroll(durationMs = TOUR_DWELL_MS, options = {}) {
         if (_tourScrollInterval) window.cancelAnimationFrame(_tourScrollInterval);
 
         // Measure total scrollable distance once the panel has rendered.
         // Scroll position is time-based so short content scrolls slowly and
         // long content scrolls faster. The caller decides which clock owns it.
-        const startTime = performance.now();
+        const delayMs = Math.max(0, Number(options.delayMs) || 0);
+        const startTime = performance.now() + delayMs;
         const duration = Math.max(1200, Number(durationMs) || TOUR_DWELL_MS);
         const totalDistance = Math.max(0, panelEl.scrollHeight - panelEl.clientHeight);
 
-        if (totalDistance === 0) return; // nothing to scroll
+        if (totalDistance < 24) return; // nothing meaningful to scroll
 
         const scroll = (now) => {
             if (!_tourScrollInterval) return;
+            if (now < startTime) {
+                _tourScrollInterval = window.requestAnimationFrame(scroll);
+                return;
+            }
             const elapsed = now - startTime;
             const progress = Math.min(elapsed / duration, 1);
             panelEl.scrollTop = totalDistance * progress;
@@ -2621,7 +2807,8 @@
 
         const title = node.title || node.id || "Untitled node";
         const summary = stripHtml(node.summary || "").replace(/\s+/g, " ").trim();
-        const content = stripHtml(node.html || node.content || "").replace(/\s+/g, " ").trim();
+        const renderedContent = panelNarrationText();
+        const content = (renderedContent || stripHtml(node.html || node.content || "")).replace(/\s+/g, " ").trim();
         const wantsFull = state.displaySettings.ttsDetail !== "summary";
         const readableContent = wantsFull && content && content !== summary
             ? content
@@ -2632,7 +2819,7 @@
         stopNarration();
 
         const rate = clampNumber(state.displaySettings.ttsRate, 0.65, 1.35, DISPLAY_DEFAULTS.ttsRate);
-        startTourPanelScroll(estimateNarrationDurationMs(text, rate));
+        startTourPanelScroll(estimateNarrationDurationMs(text, rate) + 1800, { delayMs: 900 });
 
         const utterance = new SpeechSynthesisUtterance(text);
         const voices = getAvailableVoices();
@@ -2659,6 +2846,14 @@
         };
         window.speechSynthesis.speak(utterance);
         return true;
+    }
+
+    function panelNarrationText() {
+        const content = panelEl.querySelector(".xana-node-content");
+        if (!content) return "";
+        const clone = content.cloneNode(true);
+        clone.querySelectorAll("[data-tts-skip], script, style, noscript").forEach((el) => el.remove());
+        return clone.textContent || "";
     }
 
     function estimateNarrationDurationMs(text, rate) {
@@ -2718,42 +2913,72 @@
         }
     }
 
-    function startInterfaceTour(state) {
+    function ensureInterfaceTourSeen(state) {
+        if (hasCompletedInterfaceTour()) return;
+        if (document.querySelector(".xana-interface-tour")) return;
+        startInterfaceTour(state, { forced: true });
+    }
+
+    function startInterfaceTour(state, options = {}) {
+        document.querySelectorAll(".xana-interface-tour").forEach((el) => el.remove());
+        document.querySelectorAll(".xana-tour-target").forEach((el) => el.classList.remove("xana-tour-target"));
+
+        const forced = Boolean(options.forced);
         const steps = [
             {
                 selector: ".xana-searcher",
-                title: "Start anywhere",
-                body: "Search is the front door. Type a person, claim, source, idea, or protocol address and the graph will pull matching nodes into view."
+                title: "Search",
+                body: "Type a title, alias, person, claim, source, concept, or protocol address. Results update the visible graph and jump directly to matching nodes."
             },
             {
                 selector: ".xana-depth-row",
-                title: "Choose your focus",
-                body: "Near, mid, and deep change how much neighborhood context you see around the selected node."
+                title: "Depth",
+                body: "Near, Mid, and Deep control how much of the selected node's neighborhood is shown. Use this when the graph feels too sparse or too busy."
             },
             {
                 selector: "#xana-stage",
-                title: "Navigate the substrate",
-                body: "Each node is a typed knowledge object. Click one to travel through meaning, not just pages."
+                title: "Graph",
+                body: "Click a node to travel to it. Drag nodes to rearrange the local view. The focused node stays connected to its visible relationships."
             },
             {
                 selector: ".xana-controls-strip",
-                title: "Graph tools",
-                body: "These controls zoom, fit, filter, audit, compare paths, run the node tour, and open display or narration settings."
+                title: "Controls",
+                body: "- zooms out, □ fits the graph, and + zooms in. The rest of this bar opens filters, path tracing, tours, settings, and tools."
+            },
+            {
+                selector: "[data-filter-toggle]",
+                title: "Filters",
+                body: "≡ opens type and media filters. Turn node classes on or off when you want to inspect one layer of the substrate."
+            },
+            {
+                selector: "[data-path-open]",
+                title: "Paths",
+                body: "⤴ opens path comparison. Pick two nodes and XanaNode traces relationship routes between them."
+            },
+            {
+                selector: "[data-tour-toggle]",
+                title: "Node Tour",
+                body: "▶ starts the guided node tour. It moves through connected nodes by narration or timed advance, depending on your settings."
             },
             {
                 selector: "#xana-panel",
-                title: "Read with context",
-                body: "The content panel shows the selected node, media, source metadata, stable addresses, and typed relationships."
+                title: "Reader",
+                body: "The panel is the selected node's page: title, summary, authored content, media, protocol address, source details, and relationships."
             },
             {
                 selector: ".xana-connections",
                 title: "Follow relationships",
-                body: "Connections explain why nodes are linked. This is where evidence, disagreement, lineage, and trails become navigable."
+                body: "Open Connections to move by typed relationships: evidence, lineage, implementation, disagreement, sources, people, places, works, and trails."
             },
             {
                 selector: "[data-settings-toggle]",
-                title: "Make it yours",
-                body: "Settings let readers choose theme, density, graph atmosphere, and narrated tours."
+                title: "Settings",
+                body: "⚙ opens theme, density, text size, graph atmosphere, node-tour mode, narration voice, speed, pitch, and detail controls."
+            },
+            {
+                selector: "[data-tools-toggle]",
+                title: "Tools",
+                body: "⋯ opens review suggestions, schema audit, and Interface tour. Reopen this walkthrough later from ⋯, then Interface tour."
             }
         ];
 
@@ -2777,7 +3002,7 @@
                     <h2>${escapeHtml(step.title)}</h2>
                     <p>${escapeHtml(step.body)}</p>
                     <div class="xana-interface-tour-actions">
-                        <button type="button" data-tour-close>Close</button>
+                        <button type="button" data-tour-close>${forced ? "Skip" : "Close"}</button>
                         <button type="button" data-tour-prev ${index === 0 ? "disabled" : ""}>Back</button>
                         <button type="button" data-tour-next>${index === steps.length - 1 ? "Done" : "Next"}</button>
                     </div>
@@ -2801,6 +3026,7 @@
         }
 
         function closeInterfaceTour() {
+            markInterfaceTourCompleted();
             document.querySelectorAll(".xana-interface-tour").forEach((el) => el.remove());
             document.querySelectorAll(".xana-tour-target").forEach((el) => el.classList.remove("xana-tour-target"));
         }
@@ -3459,11 +3685,11 @@
                 // Show pass/fail icon if we just ran the audit (auditPassed is set),
                 // otherwise restore the default warning icon.
                 if (state.auditPassed === true) {
-                    auditRunBtn.innerHTML = "&#x2713;"; // ✓
+                    auditRunBtn.textContent = "Schema audit passed";
                     auditRunBtn.classList.add("audit-pass");
                     auditRunBtn.title = "Audit passed \u2014 no violations";
                 } else {
-                    auditRunBtn.innerHTML = "&#x26A0;";
+                    auditRunBtn.textContent = "Run schema audit";
                     auditRunBtn.title = "Run schema audit";
                 }
             }
@@ -3493,7 +3719,7 @@
         if (auditRunBtn) {
             auditRunBtn.classList.remove("audit-pass");
             auditRunBtn.classList.add("audit-active", "audit-fail");
-            auditRunBtn.innerHTML = "&#x2715;"; // ✕
+            auditRunBtn.textContent = "Schema audit issues";
             auditRunBtn.title = `Audit: ${total} node${total === 1 ? "" : "s"} \u00B7 ${violationCount} issue${violationCount === 1 ? "" : "s"}`;
         }
 
@@ -3564,7 +3790,7 @@
 
                 if (auditRunBtn) {
                     auditRunBtn.classList.remove("audit-active", "audit-pass", "audit-fail");
-                    auditRunBtn.innerHTML = "&#x26A0;";
+                    auditRunBtn.textContent = "Run schema audit";
                     auditRunBtn.title = "Run schema audit";
                 }
                 if (auditClearBtn) auditClearBtn.hidden = true;
@@ -3586,7 +3812,7 @@
 
             if (auditRunBtn) {
                 auditRunBtn.classList.remove("audit-active", "audit-pass", "audit-fail");
-                auditRunBtn.innerHTML = "&#x26A0;";
+                auditRunBtn.textContent = "Run schema audit";
                 auditRunBtn.title = "Run schema audit";
             }
             if (auditClearBtn) auditClearBtn.hidden = true;
@@ -3891,7 +4117,7 @@
     }
 
     function getFitPadding() {
-        return isMobileLayout() ? 42 : 90;
+        return isMobileLayout() ? 30 : 72;
     }
 
     function isMobileLayout() {
@@ -4012,6 +4238,41 @@
         } catch {
             return fallback;
         }
+    }
+
+    function markInterfaceTourCompleted() {
+        saveSetting(STORAGE_KEYS.interfaceTourCompleted, true);
+        setCookie(COOKIE_KEYS.interfaceTourCompleted, "1", 365);
+    }
+
+    function hasCompletedInterfaceTour() {
+        return getCookie(COOKIE_KEYS.interfaceTourCompleted) === "1"
+            || loadSetting(STORAGE_KEYS.interfaceTourCompleted, false) === true;
+    }
+
+    function setCookie(name, value, days) {
+        try {
+            const maxAge = Math.max(1, Number(days) || 365) * 24 * 60 * 60;
+            document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}; Max-Age=${maxAge}; Path=/; SameSite=Lax`;
+        } catch {
+            // Ignore cookie failures.
+        }
+    }
+
+    function getCookie(name) {
+        try {
+            const encodedName = `${encodeURIComponent(name)}=`;
+            const parts = document.cookie ? document.cookie.split(";") : [];
+            for (const part of parts) {
+                const value = part.trim();
+                if (value.startsWith(encodedName)) {
+                    return decodeURIComponent(value.slice(encodedName.length));
+                }
+            }
+        } catch {
+            // Ignore cookie failures.
+        }
+        return "";
     }
 
     function loadDisplaySettings() {
@@ -4155,6 +4416,9 @@
 
     function getTypeColor(type, nodeTypeColors) {
         const key = (type || "").toLowerCase();
+        if (document.documentElement.dataset.xanaTheme === "accessible") {
+            return ACCESSIBLE_TYPE_PALETTE[key] || ACCESSIBLE_TYPE_PALETTE.concept;
+        }
         return nodeTypeColors.get(key) || TYPE_PALETTE[key] || TYPE_PALETTE.concept;
     }
 

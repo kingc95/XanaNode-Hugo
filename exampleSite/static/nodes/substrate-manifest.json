@@ -18,25 +18,25 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-manifest-requires-namespacing-137",
+      "id": "xananode.example:rel/substrate-manifest-requires-namespacing-142",
       "type": "requires",
       "target": "xananode.example:concept/namespacing",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-manifest-148",
+      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-manifest-153",
       "type": "contains",
       "source": "xananode.example:concept/protocol-artifacts",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/custom-extension-substrate-uses-substrate-manifest-200",
+      "id": "xananode.example:rel/custom-extension-substrate-uses-substrate-manifest-205",
       "type": "uses",
       "source": "xananode.example:concept/custom-extension-substrate",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/compatibility-levels-requires-substrate-manifest-205",
+      "id": "xananode.example:rel/compatibility-levels-requires-substrate-manifest-210",
       "type": "requires",
       "source": "xananode.example:concept/compatibility-levels",
       "direction": "incoming"

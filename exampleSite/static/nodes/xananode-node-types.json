@@ -25,7 +25,7 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/substrate-node-record-uses-xananode-node-types-135",
+      "id": "xananode.example:rel/substrate-node-record-uses-xananode-node-types-140",
       "type": "uses",
       "source": "xananode.example:concept/substrate-node-record",
       "direction": "incoming"

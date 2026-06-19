@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:organization/bbc-two",
+  "title": "BBC Two",
+  "type": "organization",
+  "importance": 3,
+  "summary": "Broadcaster of Hyperland.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "xananode.example:concept/dispute-resolution",
+  "protocol_id": "xananode.example:concept/dispute-resolution",
+  "content_id": "sha256:ed57d90de1ed57cb291302550169aa16127b1c7f15cddcae6270541e7ed5fec7",
+  "version_id": "sha256:ed57d90de1ed57cb291302550169aa16127b1c7f15cddcae6270541e7ed5fec7",
+  "local_id": "dispute-resolution",
+  "title": "Dispute Resolution",
+  "type": "concept",
+  "facets": [],
+  "summary": "A governance process for preserving contested claims, identity matches, relationships, and moderation decisions without pretending disagreement has disappeared.",
+  "importance": 4,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-concept-dispute-resolution-requires-provenance-24",
+      "type": "requires",
+      "source": "xananode.example:concept/dispute-resolution",
+      "target": "provenance",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-dispute-resolution-supports-claim-merge-without-collapse-25",
+      "type": "supports",
+      "source": "xananode.example:concept/dispute-resolution",
+      "target": "claim-merge-without-collapse",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-dispute-resolution-context-for-merge-report-26",
+      "type": "context_for",
+      "source": "xananode.example:concept/dispute-resolution",
+      "target": "merge-report",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-dispute-resolution-required-for-federation-rules-27",
+      "type": "required_for",
+      "source": "xananode.example:concept/dispute-resolution",
+      "target": "federation-rules",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nDisputes are knowledge, not cleanup errors.\n\n[XanaNode](/node/xananode) preserves disagreement about claims, relationships, identity mappings, and merge decisions. The contested state remains traceable through [provenance](/node/provenance), evidence, counterevidence, and explicit relationship types such as `contradicts`, `disputes`, `possible_match`, and `disputed_identity`.\n\nThe goal is navigable uncertainty, not instant consensus.\n",
+  "source_file": "content/concepts/dispute-resolution.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-concept-dispute-resolution-requires-provenance-24",
+    "xananode.example:rel/xananode-example-concept-dispute-resolution-supports-claim-merge-without-collapse-25",
+    "xananode.example:rel/xananode-example-concept-dispute-resolution-context-for-merge-report-26",
+    "xananode.example:rel/xananode-example-concept-dispute-resolution-required-for-federation-rules-27"
+  ],
+  "incoming_relationships": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/marc-andreessen",
+  "title": "Marc Andreessen",
+  "type": "person",
+  "importance": 4,
+  "summary": "Mosaic and Netscape figure who helped popularize the Web branch.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

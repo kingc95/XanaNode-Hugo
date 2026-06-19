@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:tool/hyperland-vr",
+  "title": "Hyperland VR",
+  "type": "technology",
+  "importance": 3,
+  "summary": "A future interface idea for spatial navigation of federated substrates.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

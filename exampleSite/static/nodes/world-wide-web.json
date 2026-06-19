@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:technology/world-wide-web",
+  "title": "World Wide Web",
+  "type": "technology",
+  "importance": 5,
+  "summary": "A distributed hypertext system that made publishing easy while leaving many provenance, transclusion, and semantic relationship problems unsolved.",
+  "relationships": [],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

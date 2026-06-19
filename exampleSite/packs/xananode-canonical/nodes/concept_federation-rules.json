@@ -1,0 +1,57 @@
+{
+  "id": "xananode.example:concept/federation-rules",
+  "protocol_id": "xananode.example:concept/federation-rules",
+  "content_id": "sha256:5677baf52c70ac5bf733f2cf2df26f28ec1bfde07d0f5451ba6ef579ef573a66",
+  "version_id": "sha256:5677baf52c70ac5bf733f2cf2df26f28ec1bfde07d0f5451ba6ef579ef573a66",
+  "local_id": "federation-rules",
+  "title": "Federation Rules",
+  "type": "concept",
+  "facets": [],
+  "summary": "The rules for exchanging, comparing, and preserving independently governed substrates without collapsing them into one authority.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-concept-federation-rules-defines-federated-knowledge-substrates-37",
+      "type": "defines",
+      "source": "xananode.example:concept/federation-rules",
+      "target": "federated-knowledge-substrates",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-federation-rules-preserves-independent-moderation-38",
+      "type": "preserves",
+      "source": "xananode.example:concept/federation-rules",
+      "target": "independent-moderation",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-federation-rules-requires-compatibility-report-39",
+      "type": "requires",
+      "source": "xananode.example:concept/federation-rules",
+      "target": "compatibility-report",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-federation-rules-requires-merge-report-40",
+      "type": "requires",
+      "source": "xananode.example:concept/federation-rules",
+      "target": "merge-report",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nFederation starts from substrate sovereignty.\n\nAnother substrate may import, map, compare, or reject data, but it must not silently overwrite [provenance](/node/provenance), collapse disagreement, or erase local moderation decisions.\n\nThe canonical rule is simple: merge by adding structure, not by destroying context.\n",
+  "source_file": "content/concepts/federation-rules.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-concept-federation-rules-defines-federated-knowledge-substrates-37",
+    "xananode.example:rel/xananode-example-concept-federation-rules-preserves-independent-moderation-38",
+    "xananode.example:rel/xananode-example-concept-federation-rules-requires-compatibility-report-39",
+    "xananode.example:rel/xananode-example-concept-federation-rules-requires-merge-report-40"
+  ],
+  "incoming_relationships": []
+}

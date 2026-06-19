@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:place/cern",
+  "title": "CERN",
+  "type": "place",
+  "importance": 4,
+  "summary": "Birthplace of the Web proposal and early Web implementation.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

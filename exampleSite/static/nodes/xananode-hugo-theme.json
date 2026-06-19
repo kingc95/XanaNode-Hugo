@@ -68,7 +68,13 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/known-implementations-registry-documents-xananode-hugo-theme-168",
+      "id": "xananode.example:rel/using-hugo-with-protocol-json-explains-xananode-hugo-theme-110",
+      "type": "explains",
+      "source": "xananode.example:essay/using-hugo-with-protocol-json",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/known-implementations-registry-documents-xananode-hugo-theme-173",
       "type": "documents",
       "source": "xananode.example:concept/known-implementations-registry",
       "direction": "incoming"

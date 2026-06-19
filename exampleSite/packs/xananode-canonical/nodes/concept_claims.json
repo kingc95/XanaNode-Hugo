@@ -1,0 +1,19 @@
+{
+  "id": "xananode.example:concept/claims",
+  "protocol_id": "xananode.example:concept/claims",
+  "content_id": "sha256:df87f7528ee113c67a158c225bdddcb39923efddbefb916e0fb50b80f139b75d",
+  "version_id": "sha256:df87f7528ee113c67a158c225bdddcb39923efddbefb916e0fb50b80f139b75d",
+  "local_id": "claims",
+  "title": "Claims",
+  "type": "concept",
+  "facets": [],
+  "summary": "",
+  "importance": 3,
+  "relationships": [],
+  "body": "\nSpecific assertions that can be supported, disputed, refined, or replaced.\n",
+  "source_file": "content/claims/_index.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [],
+  "incoming_relationships": []
+}

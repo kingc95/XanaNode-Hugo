@@ -1,0 +1,39 @@
+{
+  "id": "xananode.example:concept/independent-moderation",
+  "protocol_id": "xananode.example:concept/independent-moderation",
+  "content_id": "sha256:538c432a4cb65e4fd8f3c73f22f940d6af01c2fff9f91e110cf7a12cd79483df",
+  "version_id": "sha256:538c432a4cb65e4fd8f3c73f22f940d6af01c2fff9f91e110cf7a12cd79483df",
+  "local_id": "independent-moderation",
+  "title": "Independent Moderation",
+  "type": "concept",
+  "facets": [],
+  "summary": "The principle that each substrate may govern its own content while still remaining interoperable with others.",
+  "importance": 4,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-concept-independent-moderation-contrasts-with-single-source-of-truth-44",
+      "type": "contrasts_with",
+      "source": "xananode.example:concept/independent-moderation",
+      "target": "single-source-of-truth",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-independent-moderation-requires-provenance-45",
+      "type": "requires",
+      "source": "xananode.example:concept/independent-moderation",
+      "target": "provenance",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nIndependent moderation means each substrate controls what it accepts, rejects, disputes, hides, deprecates, or marks as uncertain.\n\nFederation does not require one moderation team to control validity for everyone. Local decisions remain visible as [provenance](/node/provenance), confidence, claims, counterclaims, evidence, and mappings across substrates.\n",
+  "source_file": "content/concepts/independent-moderation.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-concept-independent-moderation-contrasts-with-single-source-of-truth-44",
+    "xananode.example:rel/xananode-example-concept-independent-moderation-requires-provenance-45"
+  ],
+  "incoming_relationships": []
+}

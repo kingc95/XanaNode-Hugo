@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/robert-abel",
+  "title": "Robert Abel",
+  "type": "person",
+  "importance": 3,
+  "summary": "Interactive media artist associated with navigable multimedia art such as Guernica.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

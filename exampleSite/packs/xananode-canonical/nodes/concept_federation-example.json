@@ -1,0 +1,57 @@
+{
+  "id": "xananode.example:concept/federation-example",
+  "protocol_id": "xananode.example:concept/federation-example",
+  "content_id": "sha256:f6dcc30d961054710310b920b576789f66bbbfceda5ed75febaee9c34ba23f9f",
+  "version_id": "sha256:f6dcc30d961054710310b920b576789f66bbbfceda5ed75febaee9c34ba23f9f",
+  "local_id": "federation-example",
+  "title": "Federation Example",
+  "type": "concept",
+  "facets": [],
+  "summary": "A protocol example showing two independently authored substrates being compared through compatibility and merge reports.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-concept-federation-example-demonstrates-federated-knowledge-substrates-33",
+      "type": "demonstrates",
+      "source": "xananode.example:concept/federation-example",
+      "target": "federated-knowledge-substrates",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-federation-example-uses-compatibility-report-34",
+      "type": "uses",
+      "source": "xananode.example:concept/federation-example",
+      "target": "compatibility-report",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-federation-example-uses-merge-report-35",
+      "type": "uses",
+      "source": "xananode.example:concept/federation-example",
+      "target": "merge-report",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-federation-example-preserves-independent-moderation-36",
+      "type": "preserves",
+      "source": "xananode.example:concept/federation-example",
+      "target": "independent-moderation",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nThe canonical federation example makes the protocol concrete.\n\nIt compares two independently authored substrates: one models a [knowledge substrate](/node/knowledge-substrate), the other models a memory substrate. Each keeps its own namespace and local records.\n\nThe [compatibility report](/node/compatibility-report) records how much interoperability is safe. The [merge report](/node/merge-report) records mappings and the decision not to collapse overlapping concepts into one forced truth.\n",
+  "source_file": "content/concepts/federation-example.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-concept-federation-example-demonstrates-federated-knowledge-substrates-33",
+    "xananode.example:rel/xananode-example-concept-federation-example-uses-compatibility-report-34",
+    "xananode.example:rel/xananode-example-concept-federation-example-uses-merge-report-35",
+    "xananode.example:rel/xananode-example-concept-federation-example-preserves-independent-moderation-36"
+  ],
+  "incoming_relationships": []
+}

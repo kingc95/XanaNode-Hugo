@@ -1,0 +1,57 @@
+{
+  "id": "xananode.example:person/ted-nelson",
+  "protocol_id": "xananode.example:person/ted-nelson",
+  "content_id": "sha256:19e92077720489a87bfde3f5572207efda7421b199d75e89d4ce4442c4ed3ffa",
+  "version_id": "sha256:19e92077720489a87bfde3f5572207efda7421b199d75e89d4ce4442c4ed3ffa",
+  "local_id": "ted-nelson",
+  "title": "Ted Nelson",
+  "type": "person",
+  "facets": [],
+  "summary": "Hypertext theorist and founder of Project Xanadu, associated with transclusion, visible interconnection, and nonsequential writing.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-person-ted-nelson-created-project-xanadu-130",
+      "type": "created",
+      "source": "xananode.example:person/ted-nelson",
+      "target": "project-xanadu",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-person-ted-nelson-introduced-transclusion-131",
+      "type": "introduced",
+      "source": "xananode.example:person/ted-nelson",
+      "target": "transclusion",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-person-ted-nelson-authored-xanadu-document-interconnection-132",
+      "type": "authored",
+      "source": "xananode.example:person/ted-nelson",
+      "target": "xanadu-document-interconnection",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-person-ted-nelson-influenced-xananode-133",
+      "type": "influenced",
+      "source": "xananode.example:person/ted-nelson",
+      "target": "xananode",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nTed Nelson argued that documents were the wrong primitive and that systems should preserve reusable, visibly connected media.\n",
+  "source_file": "content/people/ted-nelson.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-person-ted-nelson-created-project-xanadu-130",
+    "xananode.example:rel/xananode-example-person-ted-nelson-introduced-transclusion-131",
+    "xananode.example:rel/xananode-example-person-ted-nelson-authored-xanadu-document-interconnection-132",
+    "xananode.example:rel/xananode-example-person-ted-nelson-influenced-xananode-133"
+  ],
+  "incoming_relationships": []
+}

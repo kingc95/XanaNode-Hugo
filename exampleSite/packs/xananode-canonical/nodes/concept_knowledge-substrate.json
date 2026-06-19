@@ -1,0 +1,57 @@
+{
+  "id": "xananode.example:concept/knowledge-substrate",
+  "protocol_id": "xananode.example:concept/knowledge-substrate",
+  "content_id": "sha256:b5e66900d5ed56b9b0426ef0936d82de7e07dbd4b0799836bfd86784b7d3ff8b",
+  "version_id": "sha256:b5e66900d5ed56b9b0426ef0936d82de7e07dbd4b0799836bfd86784b7d3ff8b",
+  "local_id": "knowledge-substrate",
+  "title": "Knowledge Substrate",
+  "type": "concept",
+  "facets": [],
+  "summary": "The structure that determines how information relates, persists, evolves, and can be navigated as knowledge.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-concept-knowledge-substrate-has-claim-claim-substrate-is-structure-46",
+      "type": "has_claim",
+      "source": "xananode.example:concept/knowledge-substrate",
+      "target": "claim-substrate-is-structure",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-knowledge-substrate-requires-provenance-47",
+      "type": "requires",
+      "source": "xananode.example:concept/knowledge-substrate",
+      "target": "provenance",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-knowledge-substrate-requires-typed-relationships-48",
+      "type": "requires",
+      "source": "xananode.example:concept/knowledge-substrate",
+      "target": "typed-relationships",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-knowledge-substrate-enabled-by-xananode-core-schema-49",
+      "type": "enabled_by",
+      "source": "xananode.example:concept/knowledge-substrate",
+      "target": "xananode-core-schema",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nA knowledge substrate is not the information itself. It is the structure that lets information remain understandable across time.\n\nThe same facts arranged as isolated documents, unlabeled hyperlinks, or [typed relationships](/node/typed-relationships) produce different knowledge capabilities. [XanaNode](/node/xananode) makes that structure explicit.\n",
+  "source_file": "content/concepts/knowledge-substrate.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-concept-knowledge-substrate-has-claim-claim-substrate-is-structure-46",
+    "xananode.example:rel/xananode-example-concept-knowledge-substrate-requires-provenance-47",
+    "xananode.example:rel/xananode-example-concept-knowledge-substrate-requires-typed-relationships-48",
+    "xananode.example:rel/xananode-example-concept-knowledge-substrate-enabled-by-xananode-core-schema-49"
+  ],
+  "incoming_relationships": []
+}

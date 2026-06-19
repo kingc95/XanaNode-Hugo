@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:event/ted2-1990",
+  "title": "TED2",
+  "type": "event",
+  "importance": 5,
+  "summary": "The February 1990 TED conference in Monterey where hypertext, interactive media, virtual reality, design, and knowledge-navigation ideas converged.",
+  "relationships": [],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

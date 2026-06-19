@@ -30,37 +30,37 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-protocol-artifacts-147",
+      "id": "xananode.example:rel/xananode-core-schema-defines-protocol-artifacts-152",
       "type": "defines",
       "source": "xananode.example:schema/xananode-core-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-manifest-148",
+      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-manifest-153",
       "type": "contains",
       "target": "xananode.example:concept/substrate-manifest",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-node-record-149",
+      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-node-record-154",
       "type": "contains",
       "target": "xananode.example:concept/substrate-node-record",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-relationship-list-150",
+      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-relationship-list-155",
       "type": "contains",
       "target": "xananode.example:concept/substrate-relationship-list",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-contains-review-suggestions-151",
+      "id": "xananode.example:rel/protocol-artifacts-contains-review-suggestions-156",
       "type": "contains",
       "target": "xananode.example:concept/review-suggestions",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-protocol-artifacts-152",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-protocol-artifacts-157",
       "type": "requires",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "incoming"

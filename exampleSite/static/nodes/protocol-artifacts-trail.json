@@ -58,7 +58,7 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/start-here-continues_to-protocol-artifacts-trail-115",
+      "id": "xananode.example:rel/start-here-continues_to-protocol-artifacts-trail-119",
       "type": "continues_to",
       "source": "xananode.example:essay/start-here",
       "direction": "incoming"

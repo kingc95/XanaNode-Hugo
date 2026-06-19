@@ -1,0 +1,50 @@
+{
+  "id": "xananode.example:source/xananode-protocol-repository",
+  "protocol_id": "xananode.example:source/xananode-protocol-repository",
+  "content_id": "sha256:bc18edfcb8992d4bea6e705b655a6de00038fe198b5e2ea4f198b6ab6dafec00",
+  "version_id": "sha256:bc18edfcb8992d4bea6e705b655a6de00038fe198b5e2ea4f198b6ab6dafec00",
+  "local_id": "xananode-protocol-repository",
+  "title": "XanaNode Protocol Repository",
+  "type": "source",
+  "facets": [],
+  "summary": "The canonical XanaNode protocol repository containing schemas, registries, examples, specs, governance, and proposals.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-source-xananode-protocol-repository-defines-xananode-189",
+      "type": "defines",
+      "source": "xananode.example:source/xananode-protocol-repository",
+      "target": "xananode",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-source-xananode-protocol-repository-defines-xananode-core-schema-190",
+      "type": "defines",
+      "source": "xananode.example:source/xananode-protocol-repository",
+      "target": "xananode-core-schema",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-source-xananode-protocol-repository-documents-protocol-artifacts-191",
+      "type": "documents",
+      "source": "xananode.example:source/xananode-protocol-repository",
+      "target": "protocol-artifacts",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nThe protocol repository is the source of truth for XanaNode schemas, registries, specs, examples, governance, and proposals.\n",
+  "source_file": "content/sources/xananode-protocol-repo.md",
+  "source_url": "https://github.com/kingc95/xananode",
+  "rights_status": "open-source",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-source-xananode-protocol-repository-defines-xananode-189",
+    "xananode.example:rel/xananode-example-source-xananode-protocol-repository-defines-xananode-core-schema-190",
+    "xananode.example:rel/xananode-example-source-xananode-protocol-repository-documents-protocol-artifacts-191"
+  ],
+  "incoming_relationships": []
+}

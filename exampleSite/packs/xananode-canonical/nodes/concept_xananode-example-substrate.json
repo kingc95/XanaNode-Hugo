@@ -1,0 +1,19 @@
+{
+  "id": "xananode.example:concept/xananode-example-substrate",
+  "protocol_id": "xananode.example:concept/xananode-example-substrate",
+  "content_id": "sha256:1771fd1f2ede7d785d395a0deafc27d27c8958e6b868239ebbb8d78ad502aece",
+  "version_id": "sha256:1771fd1f2ede7d785d395a0deafc27d27c8958e6b868239ebbb8d78ad502aece",
+  "local_id": "xananode-example-substrate",
+  "title": "XanaNode Example Substrate",
+  "type": "concept",
+  "facets": [],
+  "summary": "",
+  "importance": 3,
+  "relationships": [],
+  "body": "\nThis example site is a self-describing XanaNode substrate: it uses XanaNode content files, node types, relationship types, trails, and source records to explain what XanaNode is.\n",
+  "source_file": "content/_index.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [],
+  "incoming_relationships": []
+}

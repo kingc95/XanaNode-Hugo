@@ -1,0 +1,48 @@
+{
+  "id": "xananode.example:schema/merge-report-schema",
+  "protocol_id": "xananode.example:schema/merge-report-schema",
+  "content_id": "sha256:0cc5aa3ff3995932090d1894593b5a0829782a7e6509e194191573a50af4af68",
+  "version_id": "sha256:0cc5aa3ff3995932090d1894593b5a0829782a7e6509e194191573a50af4af68",
+  "local_id": "merge-report-schema",
+  "title": "Merge Report Schema",
+  "type": "schema",
+  "facets": [],
+  "summary": "The JSON Schema that validates merge reports for substrate comparison and federation workflows.",
+  "importance": 4,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-schema-merge-report-schema-defines-merge-report-150",
+      "type": "defines",
+      "source": "xananode.example:schema/merge-report-schema",
+      "target": "merge-report",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-schema-merge-report-schema-documents-merge-validation-151",
+      "type": "documents",
+      "source": "xananode.example:schema/merge-report-schema",
+      "target": "merge-validation",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-schema-merge-report-schema-required-for-federation-example-152",
+      "type": "required_for",
+      "source": "xananode.example:schema/merge-report-schema",
+      "target": "federation-example",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nThis schema validates the record of a proposed merge or comparison.\n\nIt preserves mappings, conflicts, identity decisions, unresolved questions, and warnings so downstream tools can inspect what happened without treating a comparison as a destructive merge.\n",
+  "source_file": "content/schemas/merge-report-schema.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-schema-merge-report-schema-defines-merge-report-150",
+    "xananode.example:rel/xananode-example-schema-merge-report-schema-documents-merge-validation-151",
+    "xananode.example:rel/xananode-example-schema-merge-report-schema-required-for-federation-example-152"
+  ],
+  "incoming_relationships": []
+}

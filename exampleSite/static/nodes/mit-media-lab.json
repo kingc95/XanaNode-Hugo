@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:organization/mit-media-lab",
+  "title": "MIT Media Lab",
+  "type": "organization",
+  "importance": 5,
+  "summary": "Research institution associated with media, agents, interactivity, and knowledge presentation.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

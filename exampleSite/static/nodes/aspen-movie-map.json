@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:project/aspen-movie-map",
+  "title": "Aspen Movie Map",
+  "type": "project",
+  "importance": 4,
+  "summary": "An early navigable spatial media project often treated as part of the hypermedia and virtual environment lineage.",
+  "relationships": [],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

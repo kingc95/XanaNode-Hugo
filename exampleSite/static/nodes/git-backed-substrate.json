@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:technology/git-backed-substrate",
+  "title": "Git-backed Substrate",
+  "type": "technology",
+  "importance": 4,
+  "summary": "Using Git history, branching, merging, authorship, and preservation as substrate mechanics.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

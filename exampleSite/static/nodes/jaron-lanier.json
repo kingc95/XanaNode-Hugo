@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/jaron-lanier",
+  "title": "Jaron Lanier",
+  "type": "person",
+  "importance": 4,
+  "summary": "VPL Research founder who popularized virtual reality.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:concept/conflict-disputed-identity",
+  "title": "Conflict and Disputed Identity",
+  "type": "concept",
+  "importance": 4,
+  "summary": "The protocol pattern of preserving disagreement and possible identity matches rather than flattening them.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "xananode.example:technology/static-publishing",
+  "protocol_id": "xananode.example:technology/static-publishing",
+  "content_id": "sha256:a0b009c1d53fbdae68095051a0439bbcfc4da64bf40a5c998d906d248155bf7b",
+  "version_id": "sha256:a0b009c1d53fbdae68095051a0439bbcfc4da64bf40a5c998d906d248155bf7b",
+  "local_id": "static-publishing",
+  "title": "Static Publishing",
+  "type": "technology",
+  "facets": [],
+  "summary": "Publishing files that can be hosted without a dynamic application server.",
+  "importance": 3,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-technology-static-publishing-enabled-by-xananode-hugo-theme-199",
+      "type": "enabled_by",
+      "source": "xananode.example:technology/static-publishing",
+      "target": "xananode-hugo-theme",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nStatic publishing makes a substrate easy to host, mirror, archive, and inspect.\n",
+  "source_file": "content/technologies/static-publishing.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-technology-static-publishing-enabled-by-xananode-hugo-theme-199"
+  ],
+  "incoming_relationships": []
+}

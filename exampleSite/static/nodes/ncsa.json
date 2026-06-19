@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:organization/ncsa",
+  "title": "NCSA",
+  "type": "organization",
+  "importance": 4,
+  "summary": "Organization associated with Mosaic and the popularization of Web browsing.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

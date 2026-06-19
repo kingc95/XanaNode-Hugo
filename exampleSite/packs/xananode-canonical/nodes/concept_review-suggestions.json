@@ -1,0 +1,39 @@
+{
+  "id": "xananode.example:concept/review-suggestions",
+  "protocol_id": "xananode.example:concept/review-suggestions",
+  "content_id": "sha256:8a476b3136f6c32ff3ee5cd02c377dce33ea7e734edbaf525add715988227c2c",
+  "version_id": "sha256:8a476b3136f6c32ff3ee5cd02c377dce33ea7e734edbaf525add715988227c2c",
+  "local_id": "review-suggestions",
+  "title": "Review Suggestions",
+  "type": "concept",
+  "facets": [],
+  "summary": "Generated, user-approved suggestions for autolinking node titles, aliases, repeated fragments, and imported substrate changes without rewriting content automatically.",
+  "importance": 4,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-concept-review-suggestions-uses-typed-relationships-74",
+      "type": "uses",
+      "source": "xananode.example:concept/review-suggestions",
+      "target": "typed-relationships",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-review-suggestions-uses-transclusion-75",
+      "type": "uses",
+      "source": "xananode.example:concept/review-suggestions",
+      "target": "transclusion",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nThe suggestion scanner looks for existing node titles and aliases in Markdown content, plus repeated fragment text that could become a [transclusion](/node/transclusion).\n\nIt does not rewrite pages automatically. It produces a [review queue](/review/) so an author can approve each ordinary link, transclusion, merge, or imported relationship before changing the substrate. The generated review page keeps implemented examples beside pending suggestions so a new site author can see both states of the workflow.\n\n{{< review-suggestions >}}\n",
+  "source_file": "content/concepts/review-suggestions.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-concept-review-suggestions-uses-typed-relationships-74",
+    "xananode.example:rel/xananode-example-concept-review-suggestions-uses-transclusion-75"
+  ],
+  "incoming_relationships": []
+}

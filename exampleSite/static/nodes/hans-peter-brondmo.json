@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/hans-peter-brondmo",
+  "title": "Hans Peter Brondmo",
+  "type": "person",
+  "importance": 3,
+  "summary": "MIT figure associated with micons, or motion icons, as animated conceptual representations.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

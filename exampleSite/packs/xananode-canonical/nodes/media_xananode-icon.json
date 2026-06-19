@@ -1,0 +1,58 @@
+{
+  "id": "xananode.example:media/xananode-icon",
+  "protocol_id": "xananode.example:media/xananode-icon",
+  "content_id": "sha256:64564755b311697834b4006581f138de7a613532394260a92475753d23b54a7e",
+  "version_id": "sha256:64564755b311697834b4006581f138de7a613532394260a92475753d23b54a7e",
+  "local_id": "xananode-icon",
+  "title": "XanaNode Icon",
+  "type": "media",
+  "facets": [],
+  "summary": "The abstract X-shaped network icon used as the visual mark for the XanaNode theme.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-media-xananode-icon-used-as-primary-media-for-xananode-hugo-theme-120",
+      "type": "used_as_primary_media_for",
+      "source": "xananode.example:media/xananode-icon",
+      "target": "xananode-hugo-theme",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-media-xananode-icon-depicts-xananode-hugo-theme-121",
+      "type": "depicts",
+      "source": "xananode.example:media/xananode-icon",
+      "target": "xananode-hugo-theme",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-media-xananode-icon-represents-xananode-122",
+      "type": "represents",
+      "source": "xananode.example:media/xananode-icon",
+      "target": "xananode",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\r\nThis icon is the visual mark for the [XanaNode](/node/xananode) theme.\r\n\r\nThe crossing lines and central node are meant to suggest [typed relationships](/node/typed-relationships), visible lineage, and a substrate whose meaning comes from the connections between things rather than from isolated documents.\n",
+  "source_file": "content/media/xananode-icon.md",
+  "media_type": "image/svg+xml",
+  "file": "/xananode-icon.svg",
+  "alt": "An abstract X-shaped network logo with a central node and four outer nodes connected by blue and orange relationship lines.",
+  "creator": "Built By Bots",
+  "created_date": "2026-06-16T00:00:00.000Z",
+  "source_name": "XanaNode theme static asset",
+  "source_url": "https://xananode.com/xananode-icon.svg",
+  "license": "MIT",
+  "license_url": "/LICENSE",
+  "rights_status": "open-source",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-media-xananode-icon-used-as-primary-media-for-xananode-hugo-theme-120",
+    "xananode.example:rel/xananode-example-media-xananode-icon-depicts-xananode-hugo-theme-121",
+    "xananode.example:rel/xananode-example-media-xananode-icon-represents-xananode-122"
+  ],
+  "incoming_relationships": []
+}

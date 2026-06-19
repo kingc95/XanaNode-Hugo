@@ -39,6 +39,12 @@
       "type": "arrives_at",
       "target": "xananode.example:concept/xananode",
       "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/using-hugo-with-protocol-json-context_for-historical-lineage-trail-113",
+      "type": "context_for",
+      "source": "xananode.example:essay/using-hugo-with-protocol-json",
+      "direction": "incoming"
     }
   ]
 }

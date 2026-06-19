@@ -1,0 +1,48 @@
+{
+  "id": "xananode.example:schema/substrate-relationships-schema",
+  "protocol_id": "xananode.example:schema/substrate-relationships-schema",
+  "content_id": "sha256:da06cbeab9fdc7b71e7107b94547817423d2cbfa613ef0438c7979172f334b8c",
+  "version_id": "sha256:da06cbeab9fdc7b71e7107b94547817423d2cbfa613ef0438c7979172f334b8c",
+  "local_id": "substrate-relationships-schema",
+  "title": "Substrate Relationships Schema",
+  "type": "schema",
+  "facets": [],
+  "summary": "The JSON Schema that validates the protocol relationship list for a substrate.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-schema-substrate-relationships-schema-defines-substrate-relationship-list-162",
+      "type": "defines",
+      "source": "xananode.example:schema/substrate-relationships-schema",
+      "target": "substrate-relationship-list",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-schema-substrate-relationships-schema-uses-xananode-relationship-types-163",
+      "type": "uses",
+      "source": "xananode.example:schema/substrate-relationships-schema",
+      "target": "xananode-relationship-types",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-schema-substrate-relationships-schema-part-of-xananode-core-schema-164",
+      "type": "part_of",
+      "source": "xananode.example:schema/substrate-relationships-schema",
+      "target": "xananode-core-schema",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nThis schema validates `relationships.json`.\n\nIt requires each relationship to have an id, source, target, type, and summary. Optional fields preserve weight, visibility, assertion [provenance](/node/provenance), confidence, evidence, tumbler address, external-target metadata, and federation metadata.\n",
+  "source_file": "content/schemas/substrate-relationships-schema.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-schema-substrate-relationships-schema-defines-substrate-relationship-list-162",
+    "xananode.example:rel/xananode-example-schema-substrate-relationships-schema-uses-xananode-relationship-types-163",
+    "xananode.example:rel/xananode-example-schema-substrate-relationships-schema-part-of-xananode-core-schema-164"
+  ],
+  "incoming_relationships": []
+}

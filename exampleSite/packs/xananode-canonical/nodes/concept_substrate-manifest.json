@@ -1,0 +1,30 @@
+{
+  "id": "xananode.example:concept/substrate-manifest",
+  "protocol_id": "xananode.example:concept/substrate-manifest",
+  "content_id": "sha256:4445b2d92bbe3af6e8048b7ce26dd98afedc098ad6c7f53fe99a2099b69f138b",
+  "version_id": "sha256:4445b2d92bbe3af6e8048b7ce26dd98afedc098ad6c7f53fe99a2099b69f138b",
+  "local_id": "substrate-manifest",
+  "title": "Substrate Manifest",
+  "type": "concept",
+  "facets": [],
+  "summary": "The root metadata file that identifies a substrate, its namespace, version, schema version, imports, maintainers, and extension declarations.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-concept-substrate-manifest-requires-namespacing-82",
+      "type": "requires",
+      "source": "xananode.example:concept/substrate-manifest",
+      "target": "namespacing",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\n`substrate.json` is the first file another tool should read.\n\nIt identifies the substrate, namespace, substrate version, targeted core schema version, imports, maintainers, and extension declarations.\n\nThis theme generates `substrate.json` during preparation so the human site and machine-readable substrate stay aligned.\n",
+  "source_file": "content/concepts/substrate-manifest.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-concept-substrate-manifest-requires-namespacing-82"
+  ],
+  "incoming_relationships": []
+}

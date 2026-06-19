@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/max-whitby",
+  "title": "Max Whitby",
+  "type": "person",
+  "importance": 3,
+  "summary": "Producer and director associated with Hyperland.",
+  "relationships": [],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

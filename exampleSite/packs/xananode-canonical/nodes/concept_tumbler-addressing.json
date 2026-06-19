@@ -1,0 +1,84 @@
+{
+  "id": "xananode.example:concept/tumbler-addressing",
+  "protocol_id": "xananode.example:concept/tumbler-addressing",
+  "content_id": "sha256:07b3be34699607a96e05e7668ad7c1fb772f6552c938b5bf089eab6e85f9fe9b",
+  "version_id": "sha256:07b3be34699607a96e05e7668ad7c1fb772f6552c938b5bf089eab6e85f9fe9b",
+  "local_id": "tumbler-addressing",
+  "title": "Tumbler Addressing",
+  "type": "concept",
+  "facets": [],
+  "summary": "Persistent, location-independent addressing for nodes, relationships, revisions, and fragments inside a substrate.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-concept-tumbler-addressing-enables-transclusion-89",
+      "type": "enables",
+      "source": "xananode.example:concept/tumbler-addressing",
+      "target": "transclusion",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-tumbler-addressing-enables-deep-linking-90",
+      "type": "enables",
+      "source": "xananode.example:concept/tumbler-addressing",
+      "target": "deep-linking",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-tumbler-addressing-preserves-provenance-91",
+      "type": "preserves",
+      "source": "xananode.example:concept/tumbler-addressing",
+      "target": "provenance",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-tumbler-addressing-enables-fragment-node-92",
+      "type": "enables",
+      "source": "xananode.example:concept/tumbler-addressing",
+      "target": "fragment-node",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-tumbler-addressing-extended-by-xananode-93",
+      "type": "extended_by",
+      "source": "xananode.example:concept/tumbler-addressing",
+      "target": "xananode",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-tumbler-addressing-deep-links-to-as-we-may-think-94",
+      "type": "deep_links_to",
+      "source": "xananode.example:concept/tumbler-addressing",
+      "target": "as-we-may-think",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-tumbler-addressing-transcludes-as-we-may-think-v1-0004-1",
+      "type": "transcludes",
+      "source": "xananode.example:concept/tumbler-addressing",
+      "target": "as-we-may-think@v1/0004",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nTumbler addressing keeps content addressable when files move, URLs change, or layouts are rebuilt.\n\n[XanaNode](/node/xananode) uses stable node identifiers and stable fragment identifiers for [deep linking](/node/deep-linking) and [transclusion](/node/transclusion).\n\nThe protocol-level address profile uses namespaced ids such as `example.minimal:source/as-we-may-think#fragment/0004` so fragments can remain identifiable across renderers and rebuilds.\n\nThis page resolves a local stable fragment. The shortcode below points at fragment `0004` inside the `as-we-may-think` source node:\n\n{{< xana ref=\"as-we-may-think@v1/0004\" label=\"Tumbler-addressed fragment\" >}}\n\nIf the source file moves or the page layout changes, the reference still names the logical node, version, and fragment id rather than a fragile screen location.\n",
+  "source_file": "content/concepts/tumbler-addressing.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-concept-tumbler-addressing-enables-transclusion-89",
+    "xananode.example:rel/xananode-example-concept-tumbler-addressing-enables-deep-linking-90",
+    "xananode.example:rel/xananode-example-concept-tumbler-addressing-preserves-provenance-91",
+    "xananode.example:rel/xananode-example-concept-tumbler-addressing-enables-fragment-node-92",
+    "xananode.example:rel/xananode-example-concept-tumbler-addressing-extended-by-xananode-93",
+    "xananode.example:rel/xananode-example-concept-tumbler-addressing-deep-links-to-as-we-may-think-94",
+    "xananode.example:rel/xananode-example-concept-tumbler-addressing-transcludes-as-we-may-think-v1-0004-1"
+  ],
+  "incoming_relationships": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/nigel-holmes",
+  "title": "Nigel Holmes",
+  "type": "person",
+  "importance": 3,
+  "summary": "Information designer associated with visual explanation and data visualization.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

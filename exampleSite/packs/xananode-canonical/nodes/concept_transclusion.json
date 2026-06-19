@@ -1,0 +1,48 @@
+{
+  "id": "xananode.example:concept/transclusion",
+  "protocol_id": "xananode.example:concept/transclusion",
+  "content_id": "sha256:a7af51e9c6de7d547b1210f02bd4c4f4761f0e137940a39e2b295d9d04ce5848",
+  "version_id": "sha256:a7af51e9c6de7d547b1210f02bd4c4f4761f0e137940a39e2b295d9d04ce5848",
+  "local_id": "transclusion",
+  "title": "Transclusion",
+  "type": "concept",
+  "facets": [],
+  "summary": "Including a specific versioned fragment by reference rather than copying it, preserving identity, attribution, and revision lineage.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-concept-transclusion-preserves-provenance-87",
+      "type": "preserves",
+      "source": "xananode.example:concept/transclusion",
+      "target": "provenance",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-transclusion-uses-fragment-node-88",
+      "type": "uses",
+      "source": "xananode.example:concept/transclusion",
+      "target": "fragment-node",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-transclusion-transcludes-xanadu-document-interconnection-v1-0001-1",
+      "type": "transcludes",
+      "source": "xananode.example:concept/transclusion",
+      "target": "xanadu-document-interconnection@v1/0001",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nTransclusion includes a source fragment by reference instead of turning it into an anonymous copy.\n\nIn this [XanaNode](/node/xananode) substrate, a transclusion points to a stable fragment id inside a versioned source node.\n\nThe rendered passage keeps its source identity, selector metadata, attribution path, and protocol tumbler address.\n\nThis page includes fragment `0001` from the Xanadu source node:\n\n{{< xana ref=\"xanadu-document-interconnection@v1/0001\" label=\"Transcluded source fragment\" >}}\n\nThe block above is backed by `xanadu-document-interconnection@v1/0001`, which resolves to the protocol address `xananode.example:source/xanadu-document-interconnection#fragment/0001`.\n",
+  "source_file": "content/concepts/transclusion.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-concept-transclusion-preserves-provenance-87",
+    "xananode.example:rel/xananode-example-concept-transclusion-uses-fragment-node-88",
+    "xananode.example:rel/xananode-example-concept-transclusion-transcludes-xanadu-document-interconnection-v1-0001-1"
+  ],
+  "incoming_relationships": []
+}

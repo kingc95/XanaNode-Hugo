@@ -1,0 +1,21 @@
+{
+  "id": "xananode.canonical",
+  "namespace": "xananode.example",
+  "sources": [
+    {
+      "id": "xananode.example",
+      "name": "XanaNode Hugo Substrate",
+      "namespace": "xananode.example",
+      "version": "0.1.0",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/kingc95/xananode-hugo",
+        "default_branch": "main"
+      }
+    }
+  ],
+  "nodes": 88,
+  "relationships": 229,
+  "warnings": [],
+  "generated_at": "2026-06-19T05:55:31.816Z"
+}

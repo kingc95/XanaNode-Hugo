@@ -1,0 +1,39 @@
+{
+  "id": "xananode.example:concept/namespace-registry",
+  "protocol_id": "xananode.example:concept/namespace-registry",
+  "content_id": "sha256:51abe1766f5122fcf7adcb1db9496513c13dd82a27bdfb821bfce7cfc5edf68f",
+  "version_id": "sha256:51abe1766f5122fcf7adcb1db9496513c13dd82a27bdfb821bfce7cfc5edf68f",
+  "local_id": "namespace-registry",
+  "title": "Namespace Registry",
+  "type": "concept",
+  "facets": [],
+  "summary": "A registry of known namespace identifiers used to avoid collisions and help tools recognize who owns a substrate, schema, or extension vocabulary.",
+  "importance": 4,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-concept-namespace-registry-implements-namespacing-64",
+      "type": "implements",
+      "source": "xananode.example:concept/namespace-registry",
+      "target": "namespacing",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-namespace-registry-required-for-schema-extension-65",
+      "type": "required_for",
+      "source": "xananode.example:concept/namespace-registry",
+      "target": "schema-extension",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nThe namespace registry records known namespace ids and their owners.\n\nIt does not make every other namespace invalid. It helps tools distinguish recognized namespaces from private, experimental, or not-yet-registered ones while still preserving unknown data.\n",
+  "source_file": "content/concepts/namespace-registry.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-concept-namespace-registry-implements-namespacing-64",
+    "xananode.example:rel/xananode-example-concept-namespace-registry-required-for-schema-extension-65"
+  ],
+  "incoming_relationships": []
+}

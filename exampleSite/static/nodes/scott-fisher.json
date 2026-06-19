@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/scott-fisher",
+  "title": "Scott Fisher",
+  "type": "person",
+  "importance": 3,
+  "summary": "Virtual environment researcher associated with NASA VR demonstrations.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

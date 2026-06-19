@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/wilhelm-ostwald",
+  "title": "Wilhelm Ostwald",
+  "type": "person",
+  "importance": 3,
+  "summary": "Organizer of Die Bruecke, an effort to standardize and organize world knowledge.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

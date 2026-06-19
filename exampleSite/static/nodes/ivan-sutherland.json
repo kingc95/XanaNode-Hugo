@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/ivan-sutherland",
+  "title": "Ivan Sutherland",
+  "type": "person",
+  "importance": 5,
+  "summary": "Sketchpad and head-mounted display pioneer who anticipated visual and spatial computing.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

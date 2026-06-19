@@ -1,0 +1,19 @@
+{
+  "id": "xananode.example:concept/projects",
+  "protocol_id": "xananode.example:concept/projects",
+  "content_id": "sha256:81c690bfd8719e597faaca18dbb64eb83a161eb2191abb86f166ed02ddd40207",
+  "version_id": "sha256:81c690bfd8719e597faaca18dbb64eb83a161eb2191abb86f166ed02ddd40207",
+  "local_id": "projects",
+  "title": "Projects",
+  "type": "concept",
+  "facets": [],
+  "summary": "",
+  "importance": 3,
+  "relationships": [],
+  "body": "\nBuilt, proposed, fictional, abandoned, or active systems with lineage.\n",
+  "source_file": "content/projects/_index.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [],
+  "incoming_relationships": []
+}

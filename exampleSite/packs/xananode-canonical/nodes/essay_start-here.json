@@ -1,0 +1,84 @@
+{
+  "id": "xananode.example:essay/start-here",
+  "protocol_id": "xananode.example:essay/start-here",
+  "content_id": "sha256:3a56c3e7dcfb43606adab52e423d70a557d440e81f8fce96a199fcd6c2488cee",
+  "version_id": "sha256:3a56c3e7dcfb43606adab52e423d70a557d440e81f8fce96a199fcd6c2488cee",
+  "local_id": "start-here",
+  "title": "Start Here",
+  "type": "essay",
+  "facets": [],
+  "summary": "The canonical starting essay for the XanaNode example substrate.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-essay-start-here-explains-xananode-104",
+      "type": "explains",
+      "source": "xananode.example:essay/start-here",
+      "target": "xananode",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-essay-start-here-explains-knowledge-substrate-105",
+      "type": "explains",
+      "source": "xananode.example:essay/start-here",
+      "target": "knowledge-substrate",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-essay-start-here-explains-federated-knowledge-substrates-106",
+      "type": "explains",
+      "source": "xananode.example:essay/start-here",
+      "target": "federated-knowledge-substrates",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-essay-start-here-contrasts-with-single-source-of-truth-107",
+      "type": "contrasts_with",
+      "source": "xananode.example:essay/start-here",
+      "target": "single-source-of-truth",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-essay-start-here-continues-to-xananode-core-trail-108",
+      "type": "continues_to",
+      "source": "xananode.example:essay/start-here",
+      "target": "xananode-core-trail",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-essay-start-here-continues-to-protocol-artifacts-trail-109",
+      "type": "continues_to",
+      "source": "xananode.example:essay/start-here",
+      "target": "protocol-artifacts-trail",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-essay-start-here-continues-to-using-hugo-with-protocol-json-110",
+      "type": "continues_to",
+      "source": "xananode.example:essay/start-here",
+      "target": "using-hugo-with-protocol-json",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\n[XanaNode](/node/xananode) begins with a simple claim: civilization is good at publishing information and bad at preserving the relationships that make information understandable.\n\nA page can say something. A graph can show where that statement came from, what supports it, what challenges it, what it depends on, and how it changed.\n\nThis example substrate explains XanaNode using XanaNode itself. The pages are human-readable nodes, and the build also imports protocol JSON packs, validates everything together, and republishes the merged substrate for machines.\n\nFollow the core trail from the problem of isolated documents, through [typed relationships](/node/typed-relationships), [provenance](/node/provenance), [transclusion](/node/transclusion), [namespacing](/node/namespacing), [merge validation](/node/merge-validation), and federation.\n\nThen follow the [protocol artifacts trail](/node/protocol-artifacts-trail) to see the manifest, node records, relationship list, schemas, registries, extension examples, reports, and governance rules that make federation concrete.\n\nIf you are building a Hugo site from existing protocol JSON, read [Using Hugo with Protocol JSON](/node/using-hugo-with-protocol-json). The bundled example imports the protocol base pack and the extended XanaNode lineage pack directly from JSON, then renders them in the 2D viewer without forcing you to recreate every node as Markdown.\n",
+  "source_file": "content/essays/start-here.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-essay-start-here-explains-xananode-104",
+    "xananode.example:rel/xananode-example-essay-start-here-explains-knowledge-substrate-105",
+    "xananode.example:rel/xananode-example-essay-start-here-explains-federated-knowledge-substrates-106",
+    "xananode.example:rel/xananode-example-essay-start-here-contrasts-with-single-source-of-truth-107",
+    "xananode.example:rel/xananode-example-essay-start-here-continues-to-xananode-core-trail-108",
+    "xananode.example:rel/xananode-example-essay-start-here-continues-to-protocol-artifacts-trail-109",
+    "xananode.example:rel/xananode-example-essay-start-here-continues-to-using-hugo-with-protocol-json-110"
+  ],
+  "incoming_relationships": []
+}

@@ -18,11 +18,24 @@ params:
   themeColor: "#55d6be"
   image: "xananode-icon.svg"
   analytics:
-    gtag: ""
+    gtag: "G-W8Q2NVJ8PL"
     plausibleDomain: ""
     plausibleSrc: "https://plausible.io/js/script.js"
   xananode:
     namespace: "xananode.example"
+    links:
+      - label: "Protocol"
+        node: "xananode-protocol-repo"
+        url: "https://github.com/kingc95/xananode"
+      - label: "Core SDK"
+        node: "xananode-core-sdk-repo"
+        url: "https://github.com/kingc95/XanaNode-Core-SDK"
+      - label: "Hugo"
+        node: "xananode-hugo-repo"
+        url: "https://github.com/kingc95/XanaNode-Hugo"
+      - label: "Workspace"
+        node: "xananode-workspace-repo"
+        url: "https://github.com/kingc95/XanaNode-Workspace"
 
 markup:
   goldmark:

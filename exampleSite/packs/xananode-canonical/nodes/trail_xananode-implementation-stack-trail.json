@@ -1,0 +1,66 @@
+{
+  "id": "xananode.example:trail/xananode-implementation-stack-trail",
+  "protocol_id": "xananode.example:trail/xananode-implementation-stack-trail",
+  "content_id": "sha256:c78930481bccf0a292154579f30c765624c76393fedae522394937d9d7972f50",
+  "version_id": "sha256:c78930481bccf0a292154579f30c765624c76393fedae522394937d9d7972f50",
+  "local_id": "xananode-implementation-stack-trail",
+  "title": "XanaNode Implementation Stack Trail",
+  "type": "trail",
+  "facets": [],
+  "summary": "A curated path through the XanaNode repositories in dependency order: Protocol, Core SDK, Hugo, Workspace, and Studio.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-trail-xananode-implementation-stack-trail-starts-with-xananode-protocol-repo-219",
+      "type": "starts_with",
+      "source": "xananode.example:trail/xananode-implementation-stack-trail",
+      "target": "xananode-protocol-repo",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-trail-xananode-implementation-stack-trail-continues-to-xananode-core-sdk-repo-220",
+      "type": "continues_to",
+      "source": "xananode.example:trail/xananode-implementation-stack-trail",
+      "target": "xananode-core-sdk-repo",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-trail-xananode-implementation-stack-trail-continues-to-xananode-hugo-repo-221",
+      "type": "continues_to",
+      "source": "xananode.example:trail/xananode-implementation-stack-trail",
+      "target": "xananode-hugo-repo",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-trail-xananode-implementation-stack-trail-continues-to-xananode-workspace-repo-222",
+      "type": "continues_to",
+      "source": "xananode.example:trail/xananode-implementation-stack-trail",
+      "target": "xananode-workspace-repo",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-trail-xananode-implementation-stack-trail-arrives-at-xananode-studio-repo-223",
+      "type": "arrives_at",
+      "source": "xananode.example:trail/xananode-implementation-stack-trail",
+      "target": "xananode-studio-repo",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nThis trail orders the active XanaNode implementation repositories by dependency and responsibility.\n\nThe [protocol repository](/source/xananode-protocol-repository/) defines the canonical rules.\n\nThe [Core SDK repository](/source/xananode-core-sdk-repository/) consumes those rules and exposes reusable validation, fragment, graph, and artifact APIs.\n\nThe [Hugo repository](/source/xananode-hugo-repository/) adapts Hugo content and static publishing to Core-validated protocol artifacts.\n\nThe [Workspace repository](/source/xananode-workspace-repository/) manages multiple local substrates and their operational workflows.\n\nThe [Studio repository](/source/xananode-studio-repository/) provides the desktop workbench for editing, previewing, validating, and navigating those substrates.\n\n{{< node ref=\"xananode-protocol-repo\" >}}\n{{< node ref=\"xananode-core-sdk-repo\" >}}\n{{< node ref=\"xananode-hugo-repo\" >}}\n{{< node ref=\"xananode-workspace-repo\" >}}\n{{< node ref=\"xananode-studio-repo\" >}}\n",
+  "source_file": "content/trails/xananode-implementation-stack-trail.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-trail-xananode-implementation-stack-trail-starts-with-xananode-protocol-repo-219",
+    "xananode.example:rel/xananode-example-trail-xananode-implementation-stack-trail-continues-to-xananode-core-sdk-repo-220",
+    "xananode.example:rel/xananode-example-trail-xananode-implementation-stack-trail-continues-to-xananode-hugo-repo-221",
+    "xananode.example:rel/xananode-example-trail-xananode-implementation-stack-trail-continues-to-xananode-workspace-repo-222",
+    "xananode.example:rel/xananode-example-trail-xananode-implementation-stack-trail-arrives-at-xananode-studio-repo-223"
+  ],
+  "incoming_relationships": []
+}

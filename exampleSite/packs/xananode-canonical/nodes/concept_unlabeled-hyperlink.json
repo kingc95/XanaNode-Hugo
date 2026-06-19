@@ -1,0 +1,30 @@
+{
+  "id": "xananode.example:concept/unlabeled-hyperlink",
+  "protocol_id": "xananode.example:concept/unlabeled-hyperlink",
+  "content_id": "sha256:b46a14f9b8df36ae25e87e25a9b8addeebe561cd8fa8339058e20440f8f15b29",
+  "version_id": "sha256:b46a14f9b8df36ae25e87e25a9b8addeebe561cd8fa8339058e20440f8f15b29",
+  "local_id": "unlabeled-hyperlink",
+  "title": "Unlabeled Hyperlink",
+  "type": "concept",
+  "facets": [],
+  "summary": "A link that connects two resources without preserving why the connection matters.",
+  "importance": 3,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-concept-unlabeled-hyperlink-threatens-provenance-97",
+      "type": "threatens",
+      "source": "xananode.example:concept/unlabeled-hyperlink",
+      "target": "provenance",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nThe web hyperlink is powerful because it is simple. It spread because it was easy.\n\nIts weakness is that it usually does not say whether the target supports, contradicts, defines, documents, quotes, explains, or merely mentions the source.\n",
+  "source_file": "content/concepts/unlabeled-hyperlink.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-concept-unlabeled-hyperlink-threatens-provenance-97"
+  ],
+  "incoming_relationships": []
+}

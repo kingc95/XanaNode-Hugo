@@ -1,0 +1,66 @@
+{
+  "id": "xananode.example:essay/what-is-xananode",
+  "protocol_id": "xananode.example:essay/what-is-xananode",
+  "content_id": "sha256:7fa1f354c07354f0e19ee701e01c843a155009252bbbe2c46a23ce0491033e13",
+  "version_id": "sha256:7fa1f354c07354f0e19ee701e01c843a155009252bbbe2c46a23ce0491033e13",
+  "local_id": "what-is-xananode",
+  "title": "What Is XanaNode?",
+  "type": "essay",
+  "facets": [],
+  "summary": "XanaNode is a protocol for interoperable knowledge substrates, not merely a graph viewer or static site theme.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-essay-what-is-xananode-defines-xananode-115",
+      "type": "defines",
+      "source": "xananode.example:essay/what-is-xananode",
+      "target": "xananode",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-essay-what-is-xananode-explains-xananode-hugo-theme-116",
+      "type": "explains",
+      "source": "xananode.example:essay/what-is-xananode",
+      "target": "xananode-hugo-theme",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-essay-what-is-xananode-arrives-at-claim-merge-without-collapse-117",
+      "type": "arrives_at",
+      "source": "xananode.example:essay/what-is-xananode",
+      "target": "claim-merge-without-collapse",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-essay-what-is-xananode-context-for-federated-knowledge-substrates-118",
+      "type": "context_for",
+      "source": "xananode.example:essay/what-is-xananode",
+      "target": "federated-knowledge-substrates",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-essay-what-is-xananode-explains-protocol-artifacts-119",
+      "type": "explains",
+      "source": "xananode.example:essay/what-is-xananode",
+      "target": "protocol-artifacts",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\n[XanaNode](/node/xananode) is best understood in layers.\n\nThe ontology defines what kinds of things can be represented.\n\nThe relationship vocabulary defines why those things are connected.\n\nA substrate is an independently authored graph using that vocabulary.\n\n[Protocol artifacts](/node/protocol-artifacts) make that graph portable: `substrate.json` identifies the substrate, node records describe addressable objects, `relationships.json` preserves typed edges, schemas validate the artifacts, and reports explain compatibility or merge decisions.\n\nA renderer, such as this [Hugo](/node/hugo) theme, is one way to publish and navigate a substrate. It is not the protocol itself.\n\nThe larger goal is federation: many independently moderated substrates that can still interoperate because they declare their schemas and relationships clearly.\n",
+  "source_file": "content/essays/what-is-xananode.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-essay-what-is-xananode-defines-xananode-115",
+    "xananode.example:rel/xananode-example-essay-what-is-xananode-explains-xananode-hugo-theme-116",
+    "xananode.example:rel/xananode-example-essay-what-is-xananode-arrives-at-claim-merge-without-collapse-117",
+    "xananode.example:rel/xananode-example-essay-what-is-xananode-context-for-federated-knowledge-substrates-118",
+    "xananode.example:rel/xananode-example-essay-what-is-xananode-explains-protocol-artifacts-119"
+  ],
+  "incoming_relationships": []
+}

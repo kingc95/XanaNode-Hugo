@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/gottfried-wilhelm-leibniz",
+  "title": "Gottfried Wilhelm Leibniz",
+  "type": "person",
+  "importance": 4,
+  "summary": "Philosopher and mathematician associated with universal symbolic reasoning and the calculus of thought.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

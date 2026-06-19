@@ -982,7 +982,43 @@
       "summary": "What Is XanaNode? explains Protocol Artifacts."
     },
     {
-      "id": "xananode.example:rel/start-here-explains-xananode-110",
+      "id": "xananode.example:rel/using-hugo-with-protocol-json-explains-xananode-hugo-theme-110",
+      "source": "xananode.example:essay/using-hugo-with-protocol-json",
+      "target": "xananode.example:project/xananode-hugo-theme",
+      "type": "explains",
+      "weight": 4,
+      "visibility": "primary",
+      "summary": "Using Hugo with Protocol JSON explains XanaNode Hugo Theme."
+    },
+    {
+      "id": "xananode.example:rel/using-hugo-with-protocol-json-explains-substrate-node-record-111",
+      "source": "xananode.example:essay/using-hugo-with-protocol-json",
+      "target": "xananode.example:concept/substrate-node-record",
+      "type": "explains",
+      "weight": 4,
+      "visibility": "primary",
+      "summary": "Using Hugo with Protocol JSON explains Substrate Node Record."
+    },
+    {
+      "id": "xananode.example:rel/using-hugo-with-protocol-json-explains-substrate-relationship-list-112",
+      "source": "xananode.example:essay/using-hugo-with-protocol-json",
+      "target": "xananode.example:concept/substrate-relationship-list",
+      "type": "explains",
+      "weight": 4,
+      "visibility": "primary",
+      "summary": "Using Hugo with Protocol JSON explains Substrate Relationship List."
+    },
+    {
+      "id": "xananode.example:rel/using-hugo-with-protocol-json-context_for-historical-lineage-trail-113",
+      "source": "xananode.example:essay/using-hugo-with-protocol-json",
+      "target": "xananode.example:trail/historical-lineage-trail",
+      "type": "context_for",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Using Hugo with Protocol JSON context for Historical Lineage Trail."
+    },
+    {
+      "id": "xananode.example:rel/start-here-explains-xananode-114",
       "source": "xananode.example:essay/start-here",
       "target": "xananode.example:concept/xananode",
       "type": "explains",
@@ -991,7 +1027,7 @@
       "summary": "Start Here explains XanaNode."
     },
     {
-      "id": "xananode.example:rel/start-here-explains-knowledge-substrate-111",
+      "id": "xananode.example:rel/start-here-explains-knowledge-substrate-115",
       "source": "xananode.example:essay/start-here",
       "target": "xananode.example:concept/knowledge-substrate",
       "type": "explains",
@@ -1000,7 +1036,7 @@
       "summary": "Start Here explains Knowledge Substrate."
     },
     {
-      "id": "xananode.example:rel/start-here-explains-federated-knowledge-substrates-112",
+      "id": "xananode.example:rel/start-here-explains-federated-knowledge-substrates-116",
       "source": "xananode.example:essay/start-here",
       "target": "xananode.example:concept/federated-knowledge-substrates",
       "type": "explains",
@@ -1009,7 +1045,7 @@
       "summary": "Start Here explains Federated Knowledge Substrates."
     },
     {
-      "id": "xananode.example:rel/start-here-contrasts_with-single-source-of-truth-113",
+      "id": "xananode.example:rel/start-here-contrasts_with-single-source-of-truth-117",
       "source": "xananode.example:essay/start-here",
       "target": "xananode.example:concept/single-source-of-truth",
       "type": "contrasts_with",
@@ -1018,7 +1054,7 @@
       "summary": "Start Here contrasts with Single Source of Truth."
     },
     {
-      "id": "xananode.example:rel/start-here-continues_to-xananode-core-trail-114",
+      "id": "xananode.example:rel/start-here-continues_to-xananode-core-trail-118",
       "source": "xananode.example:essay/start-here",
       "target": "xananode.example:trail/xananode-core-trail",
       "type": "continues_to",
@@ -1027,7 +1063,7 @@
       "summary": "Start Here continues to XanaNode Core Trail."
     },
     {
-      "id": "xananode.example:rel/start-here-continues_to-protocol-artifacts-trail-115",
+      "id": "xananode.example:rel/start-here-continues_to-protocol-artifacts-trail-119",
       "source": "xananode.example:essay/start-here",
       "target": "xananode.example:trail/protocol-artifacts-trail",
       "type": "continues_to",
@@ -1036,7 +1072,16 @@
       "summary": "Start Here continues to Protocol Artifacts Trail."
     },
     {
-      "id": "xananode.example:rel/xananode-defines-knowledge-substrate-116",
+      "id": "xananode.example:rel/start-here-continues_to-using-hugo-with-protocol-json-120",
+      "source": "xananode.example:essay/start-here",
+      "target": "xananode.example:essay/using-hugo-with-protocol-json",
+      "type": "continues_to",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Start Here continues to Using Hugo with Protocol JSON."
+    },
+    {
+      "id": "xananode.example:rel/xananode-defines-knowledge-substrate-121",
       "source": "xananode.example:concept/xananode",
       "target": "xananode.example:concept/knowledge-substrate",
       "type": "defines",
@@ -1045,7 +1090,7 @@
       "summary": "XanaNode defines Knowledge Substrate."
     },
     {
-      "id": "xananode.example:rel/xananode-explains-federated-knowledge-substrates-117",
+      "id": "xananode.example:rel/xananode-explains-federated-knowledge-substrates-122",
       "source": "xananode.example:concept/xananode",
       "target": "xananode.example:concept/federated-knowledge-substrates",
       "type": "explains",
@@ -1054,7 +1099,7 @@
       "summary": "XanaNode explains Federated Knowledge Substrates."
     },
     {
-      "id": "xananode.example:rel/xananode-requires-xananode-core-schema-118",
+      "id": "xananode.example:rel/xananode-requires-xananode-core-schema-123",
       "source": "xananode.example:concept/xananode",
       "target": "xananode.example:schema/xananode-core-schema",
       "type": "requires",
@@ -1063,7 +1108,7 @@
       "summary": "XanaNode requires XanaNode Core Schema."
     },
     {
-      "id": "xananode.example:rel/xananode-preserves-provenance-119",
+      "id": "xananode.example:rel/xananode-preserves-provenance-124",
       "source": "xananode.example:concept/xananode",
       "target": "xananode.example:concept/provenance",
       "type": "preserves",
@@ -1072,7 +1117,7 @@
       "summary": "XanaNode preserves Provenance."
     },
     {
-      "id": "xananode.example:rel/xananode-extends-project-xanadu-120",
+      "id": "xananode.example:rel/xananode-extends-project-xanadu-125",
       "source": "xananode.example:concept/xananode",
       "target": "xananode.example:project/project-xanadu",
       "type": "extends",
@@ -1081,7 +1126,7 @@
       "summary": "XanaNode extends Project Xanadu."
     },
     {
-      "id": "xananode.example:rel/xananode-extends-memex-121",
+      "id": "xananode.example:rel/xananode-extends-memex-126",
       "source": "xananode.example:concept/xananode",
       "target": "xananode.example:project/memex",
       "type": "extends",
@@ -1090,7 +1135,7 @@
       "summary": "XanaNode extends Memex."
     },
     {
-      "id": "xananode.example:rel/unlabeled-hyperlink-threatens-provenance-122",
+      "id": "xananode.example:rel/unlabeled-hyperlink-threatens-provenance-127",
       "source": "xananode.example:concept/unlabeled-hyperlink",
       "target": "xananode.example:concept/provenance",
       "type": "threatens",
@@ -1099,7 +1144,7 @@
       "summary": "Unlabeled Hyperlink threatens Provenance."
     },
     {
-      "id": "xananode.example:rel/typed-relationships-contrasts_with-unlabeled-hyperlink-123",
+      "id": "xananode.example:rel/typed-relationships-contrasts_with-unlabeled-hyperlink-128",
       "source": "xananode.example:concept/typed-relationships",
       "target": "xananode.example:concept/unlabeled-hyperlink",
       "type": "contrasts_with",
@@ -1108,7 +1153,7 @@
       "summary": "Typed Relationships contrasts with Unlabeled Hyperlink."
     },
     {
-      "id": "xananode.example:rel/typed-relationships-supports-claim-relationships-preserve-context-124",
+      "id": "xananode.example:rel/typed-relationships-supports-claim-relationships-preserve-context-129",
       "source": "xananode.example:concept/typed-relationships",
       "target": "xananode.example:claim/claim-relationships-preserve-context",
       "type": "supports",
@@ -1117,7 +1162,7 @@
       "summary": "Typed Relationships supports Typed relationships preserve context that hyperlinks lose."
     },
     {
-      "id": "xananode.example:rel/tumbler-addressing-enables-transclusion-125",
+      "id": "xananode.example:rel/tumbler-addressing-enables-transclusion-130",
       "source": "xananode.example:concept/tumbler-addressing",
       "target": "xananode.example:concept/transclusion",
       "type": "enables",
@@ -1126,7 +1171,7 @@
       "summary": "Tumbler Addressing enables Transclusion."
     },
     {
-      "id": "xananode.example:rel/tumbler-addressing-enables-deep-linking-126",
+      "id": "xananode.example:rel/tumbler-addressing-enables-deep-linking-131",
       "source": "xananode.example:concept/tumbler-addressing",
       "target": "xananode.example:concept/deep-linking",
       "type": "enables",
@@ -1135,7 +1180,7 @@
       "summary": "Tumbler Addressing enables Deep Linking."
     },
     {
-      "id": "xananode.example:rel/tumbler-addressing-preserves-provenance-127",
+      "id": "xananode.example:rel/tumbler-addressing-preserves-provenance-132",
       "source": "xananode.example:concept/tumbler-addressing",
       "target": "xananode.example:concept/provenance",
       "type": "preserves",
@@ -1144,7 +1189,7 @@
       "summary": "Tumbler Addressing preserves Provenance."
     },
     {
-      "id": "xananode.example:rel/tumbler-addressing-enables-fragment-node-128",
+      "id": "xananode.example:rel/tumbler-addressing-enables-fragment-node-133",
       "source": "xananode.example:concept/tumbler-addressing",
       "target": "xananode.example:concept/fragment-node",
       "type": "enables",
@@ -1153,7 +1198,7 @@
       "summary": "Tumbler Addressing enables Fragment Node."
     },
     {
-      "id": "xananode.example:rel/xananode-extends-tumbler-addressing-129",
+      "id": "xananode.example:rel/xananode-extends-tumbler-addressing-134",
       "source": "xananode.example:concept/xananode",
       "target": "xananode.example:concept/tumbler-addressing",
       "type": "extends",
@@ -1162,7 +1207,7 @@
       "summary": "XanaNode extends Tumbler Addressing."
     },
     {
-      "id": "xananode.example:rel/tumbler-addressing-deep_links_to-as-we-may-think-130",
+      "id": "xananode.example:rel/tumbler-addressing-deep_links_to-as-we-may-think-135",
       "source": "xananode.example:concept/tumbler-addressing",
       "target": "xananode.example:source/as-we-may-think",
       "type": "deep_links_to",
@@ -1171,7 +1216,7 @@
       "summary": "Tumbler Addressing deep links to As We May Think."
     },
     {
-      "id": "xananode.example:rel/transclusion-preserves-provenance-131",
+      "id": "xananode.example:rel/transclusion-preserves-provenance-136",
       "source": "xananode.example:concept/transclusion",
       "target": "xananode.example:concept/provenance",
       "type": "preserves",
@@ -1180,7 +1225,7 @@
       "summary": "Transclusion preserves Provenance."
     },
     {
-      "id": "xananode.example:rel/transclusion-uses-fragment-node-132",
+      "id": "xananode.example:rel/transclusion-uses-fragment-node-137",
       "source": "xananode.example:concept/transclusion",
       "target": "xananode.example:concept/fragment-node",
       "type": "uses",
@@ -1189,7 +1234,7 @@
       "summary": "Transclusion uses Fragment Node."
     },
     {
-      "id": "xananode.example:rel/substrate-relationship-list-uses-xananode-relationship-types-133",
+      "id": "xananode.example:rel/substrate-relationship-list-uses-xananode-relationship-types-138",
       "source": "xananode.example:concept/substrate-relationship-list",
       "target": "xananode.example:schema/xananode-relationship-types",
       "type": "uses",
@@ -1198,7 +1243,7 @@
       "summary": "Substrate Relationship List uses XanaNode Relationship Types."
     },
     {
-      "id": "xananode.example:rel/substrate-relationship-list-preserves-provenance-134",
+      "id": "xananode.example:rel/substrate-relationship-list-preserves-provenance-139",
       "source": "xananode.example:concept/substrate-relationship-list",
       "target": "xananode.example:concept/provenance",
       "type": "preserves",
@@ -1207,7 +1252,7 @@
       "summary": "Substrate Relationship List preserves Provenance."
     },
     {
-      "id": "xananode.example:rel/substrate-node-record-uses-xananode-node-types-135",
+      "id": "xananode.example:rel/substrate-node-record-uses-xananode-node-types-140",
       "source": "xananode.example:concept/substrate-node-record",
       "target": "xananode.example:schema/xananode-node-types",
       "type": "uses",
@@ -1216,7 +1261,7 @@
       "summary": "Substrate Node Record uses XanaNode Node Types."
     },
     {
-      "id": "xananode.example:rel/substrate-node-record-contains-fragment-node-136",
+      "id": "xananode.example:rel/substrate-node-record-contains-fragment-node-141",
       "source": "xananode.example:concept/substrate-node-record",
       "target": "xananode.example:concept/fragment-node",
       "type": "contains",
@@ -1225,7 +1270,7 @@
       "summary": "Substrate Node Record contains Fragment Node."
     },
     {
-      "id": "xananode.example:rel/substrate-manifest-requires-namespacing-137",
+      "id": "xananode.example:rel/substrate-manifest-requires-namespacing-142",
       "source": "xananode.example:concept/substrate-manifest",
       "target": "xananode.example:concept/namespacing",
       "type": "requires",
@@ -1234,7 +1279,7 @@
       "summary": "Substrate Manifest requires Namespacing."
     },
     {
-      "id": "xananode.example:rel/single-source-of-truth-contrasts_with-federated-knowledge-substrates-138",
+      "id": "xananode.example:rel/single-source-of-truth-contrasts_with-federated-knowledge-substrates-143",
       "source": "xananode.example:concept/single-source-of-truth",
       "target": "xananode.example:concept/federated-knowledge-substrates",
       "type": "contrasts_with",
@@ -1243,7 +1288,7 @@
       "summary": "Single Source of Truth contrasts with Federated Knowledge Substrates."
     },
     {
-      "id": "xananode.example:rel/single-source-of-truth-threatens-independent-moderation-139",
+      "id": "xananode.example:rel/single-source-of-truth-threatens-independent-moderation-144",
       "source": "xananode.example:concept/single-source-of-truth",
       "target": "xananode.example:concept/independent-moderation",
       "type": "threatens",
@@ -1252,7 +1297,7 @@
       "summary": "Single Source of Truth threatens Independent Moderation."
     },
     {
-      "id": "xananode.example:rel/single-source-of-truth-alternative_to-knowledge-substrate-140",
+      "id": "xananode.example:rel/single-source-of-truth-alternative_to-knowledge-substrate-145",
       "source": "xananode.example:concept/single-source-of-truth",
       "target": "xananode.example:concept/knowledge-substrate",
       "type": "alternative_to",
@@ -1261,7 +1306,7 @@
       "summary": "Single Source of Truth alternative to Knowledge Substrate."
     },
     {
-      "id": "xananode.example:rel/namespacing-enables-schema-extension-141",
+      "id": "xananode.example:rel/namespacing-enables-schema-extension-146",
       "source": "xananode.example:concept/namespacing",
       "target": "xananode.example:concept/schema-extension",
       "type": "enables",
@@ -1270,7 +1315,7 @@
       "summary": "Namespacing enables Schema Extension."
     },
     {
-      "id": "xananode.example:rel/schema-extension-requires-xananode-core-schema-142",
+      "id": "xananode.example:rel/schema-extension-requires-xananode-core-schema-147",
       "source": "xananode.example:concept/schema-extension",
       "target": "xananode.example:schema/xananode-core-schema",
       "type": "requires",
@@ -1279,7 +1324,7 @@
       "summary": "Schema Extension requires XanaNode Core Schema."
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-schema-extension-143",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-schema-extension-148",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "target": "xananode.example:concept/schema-extension",
       "type": "requires",
@@ -1288,7 +1333,7 @@
       "summary": "Federated Knowledge Substrates requires Schema Extension."
     },
     {
-      "id": "xananode.example:rel/review-suggestions-uses-typed-relationships-144",
+      "id": "xananode.example:rel/review-suggestions-uses-typed-relationships-149",
       "source": "xananode.example:concept/review-suggestions",
       "target": "xananode.example:concept/typed-relationships",
       "type": "uses",
@@ -1297,7 +1342,7 @@
       "summary": "Review Suggestions uses Typed Relationships."
     },
     {
-      "id": "xananode.example:rel/review-suggestions-uses-transclusion-145",
+      "id": "xananode.example:rel/review-suggestions-uses-transclusion-150",
       "source": "xananode.example:concept/review-suggestions",
       "target": "xananode.example:concept/transclusion",
       "type": "uses",
@@ -1306,7 +1351,7 @@
       "summary": "Review Suggestions uses Transclusion."
     },
     {
-      "id": "xananode.example:rel/claim-relationships-preserve-context-evidence_for-provenance-146",
+      "id": "xananode.example:rel/claim-relationships-preserve-context-evidence_for-provenance-151",
       "source": "xananode.example:claim/claim-relationships-preserve-context",
       "target": "xananode.example:concept/provenance",
       "type": "evidence_for",
@@ -1315,7 +1360,7 @@
       "summary": "Typed relationships preserve context that hyperlinks lose evidence for Provenance."
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-defines-protocol-artifacts-147",
+      "id": "xananode.example:rel/xananode-core-schema-defines-protocol-artifacts-152",
       "source": "xananode.example:schema/xananode-core-schema",
       "target": "xananode.example:concept/protocol-artifacts",
       "type": "defines",
@@ -1324,7 +1369,7 @@
       "summary": "XanaNode Core Schema defines Protocol Artifacts."
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-manifest-148",
+      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-manifest-153",
       "source": "xananode.example:concept/protocol-artifacts",
       "target": "xananode.example:concept/substrate-manifest",
       "type": "contains",
@@ -1333,7 +1378,7 @@
       "summary": "Protocol Artifacts contains Substrate Manifest."
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-node-record-149",
+      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-node-record-154",
       "source": "xananode.example:concept/protocol-artifacts",
       "target": "xananode.example:concept/substrate-node-record",
       "type": "contains",
@@ -1342,7 +1387,7 @@
       "summary": "Protocol Artifacts contains Substrate Node Record."
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-relationship-list-150",
+      "id": "xananode.example:rel/protocol-artifacts-contains-substrate-relationship-list-155",
       "source": "xananode.example:concept/protocol-artifacts",
       "target": "xananode.example:concept/substrate-relationship-list",
       "type": "contains",
@@ -1351,7 +1396,7 @@
       "summary": "Protocol Artifacts contains Substrate Relationship List."
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-contains-review-suggestions-151",
+      "id": "xananode.example:rel/protocol-artifacts-contains-review-suggestions-156",
       "source": "xananode.example:concept/protocol-artifacts",
       "target": "xananode.example:concept/review-suggestions",
       "type": "contains",
@@ -1360,7 +1405,7 @@
       "summary": "Protocol Artifacts contains Review Suggestions."
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-protocol-artifacts-152",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-protocol-artifacts-157",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "target": "xananode.example:concept/protocol-artifacts",
       "type": "requires",
@@ -1369,7 +1414,7 @@
       "summary": "Federated Knowledge Substrates requires Protocol Artifacts."
     },
     {
-      "id": "xananode.example:rel/namespacing-clarifies-schema-extension-153",
+      "id": "xananode.example:rel/namespacing-clarifies-schema-extension-158",
       "source": "xananode.example:concept/namespacing",
       "target": "xananode.example:concept/schema-extension",
       "type": "clarifies",
@@ -1378,7 +1423,7 @@
       "summary": "Namespacing clarifies Schema Extension."
     },
     {
-      "id": "xananode.example:rel/namespace-registry-implements-namespacing-154",
+      "id": "xananode.example:rel/namespace-registry-implements-namespacing-159",
       "source": "xananode.example:concept/namespace-registry",
       "target": "xananode.example:concept/namespacing",
       "type": "implements",
@@ -1387,7 +1432,7 @@
       "summary": "Namespace Registry implements Namespacing."
     },
     {
-      "id": "xananode.example:rel/schema-extension-requires-namespace-registry-155",
+      "id": "xananode.example:rel/schema-extension-requires-namespace-registry-160",
       "source": "xananode.example:concept/schema-extension",
       "target": "xananode.example:concept/namespace-registry",
       "type": "requires",
@@ -1396,7 +1441,7 @@
       "summary": "Schema Extension requires Namespace Registry."
     },
     {
-      "id": "xananode.example:rel/moderation-model-defines-independent-moderation-156",
+      "id": "xananode.example:rel/moderation-model-defines-independent-moderation-161",
       "source": "xananode.example:concept/moderation-model",
       "target": "xananode.example:concept/independent-moderation",
       "type": "defines",
@@ -1405,7 +1450,7 @@
       "summary": "Moderation Model defines Independent Moderation."
     },
     {
-      "id": "xananode.example:rel/federation-rules-requires-moderation-model-157",
+      "id": "xananode.example:rel/federation-rules-requires-moderation-model-162",
       "source": "xananode.example:concept/federation-rules",
       "target": "xananode.example:concept/moderation-model",
       "type": "requires",
@@ -1414,7 +1459,7 @@
       "summary": "Federation Rules requires Moderation Model."
     },
     {
-      "id": "xananode.example:rel/moderation-model-context_for-dispute-resolution-158",
+      "id": "xananode.example:rel/moderation-model-context_for-dispute-resolution-163",
       "source": "xananode.example:concept/moderation-model",
       "target": "xananode.example:concept/dispute-resolution",
       "type": "context_for",
@@ -1423,7 +1468,7 @@
       "summary": "Moderation Model context for Dispute Resolution."
     },
     {
-      "id": "xananode.example:rel/merge-validation-requires-namespacing-159",
+      "id": "xananode.example:rel/merge-validation-requires-namespacing-164",
       "source": "xananode.example:concept/merge-validation",
       "target": "xananode.example:concept/namespacing",
       "type": "requires",
@@ -1432,7 +1477,7 @@
       "summary": "Merge Validation requires Namespacing."
     },
     {
-      "id": "xananode.example:rel/merge-validation-requires-provenance-160",
+      "id": "xananode.example:rel/merge-validation-requires-provenance-165",
       "source": "xananode.example:concept/merge-validation",
       "target": "xananode.example:concept/provenance",
       "type": "requires",
@@ -1441,7 +1486,7 @@
       "summary": "Merge Validation requires Provenance."
     },
     {
-      "id": "xananode.example:rel/merge-validation-requires-schema-extension-161",
+      "id": "xananode.example:rel/merge-validation-requires-schema-extension-166",
       "source": "xananode.example:concept/merge-validation",
       "target": "xananode.example:concept/schema-extension",
       "type": "requires",
@@ -1450,7 +1495,7 @@
       "summary": "Merge Validation requires Schema Extension."
     },
     {
-      "id": "xananode.example:rel/merge-validation-uses-merge-report-162",
+      "id": "xananode.example:rel/merge-validation-uses-merge-report-167",
       "source": "xananode.example:concept/merge-validation",
       "target": "xananode.example:concept/merge-report",
       "type": "uses",
@@ -1459,7 +1504,7 @@
       "summary": "Merge Validation uses Merge Report."
     },
     {
-      "id": "xananode.example:rel/merge-validation-uses-compatibility-report-163",
+      "id": "xananode.example:rel/merge-validation-uses-compatibility-report-168",
       "source": "xananode.example:concept/merge-validation",
       "target": "xananode.example:concept/compatibility-report",
       "type": "uses",
@@ -1468,7 +1513,7 @@
       "summary": "Merge Validation uses Compatibility Report."
     },
     {
-      "id": "xananode.example:rel/merge-validation-arrives_at-claim-merge-without-collapse-164",
+      "id": "xananode.example:rel/merge-validation-arrives_at-claim-merge-without-collapse-169",
       "source": "xananode.example:concept/merge-validation",
       "target": "xananode.example:claim/claim-merge-without-collapse",
       "type": "arrives_at",
@@ -1477,7 +1522,7 @@
       "summary": "Merge Validation arrives at Substrates should merge without collapsing disagreement."
     },
     {
-      "id": "xananode.example:rel/merge-report-documents-merge-validation-165",
+      "id": "xananode.example:rel/merge-report-documents-merge-validation-170",
       "source": "xananode.example:concept/merge-report",
       "target": "xananode.example:concept/merge-validation",
       "type": "documents",
@@ -1486,7 +1531,7 @@
       "summary": "Merge Report documents Merge Validation."
     },
     {
-      "id": "xananode.example:rel/merge-report-preserves-provenance-166",
+      "id": "xananode.example:rel/merge-report-preserves-provenance-171",
       "source": "xananode.example:concept/merge-report",
       "target": "xananode.example:concept/provenance",
       "type": "preserves",
@@ -1495,7 +1540,7 @@
       "summary": "Merge Report preserves Provenance."
     },
     {
-      "id": "xananode.example:rel/merge-report-supports-claim-merge-without-collapse-167",
+      "id": "xananode.example:rel/merge-report-supports-claim-merge-without-collapse-172",
       "source": "xananode.example:concept/merge-report",
       "target": "xananode.example:claim/claim-merge-without-collapse",
       "type": "supports",
@@ -1504,7 +1549,7 @@
       "summary": "Merge Report supports Substrates should merge without collapsing disagreement."
     },
     {
-      "id": "xananode.example:rel/known-implementations-registry-documents-xananode-hugo-theme-168",
+      "id": "xananode.example:rel/known-implementations-registry-documents-xananode-hugo-theme-173",
       "source": "xananode.example:concept/known-implementations-registry",
       "target": "xananode.example:project/xananode-hugo-theme",
       "type": "documents",
@@ -1513,7 +1558,7 @@
       "summary": "Known Implementations Registry documents XanaNode Hugo Theme."
     },
     {
-      "id": "xananode.example:rel/known-implementations-registry-supports-compatibility-levels-169",
+      "id": "xananode.example:rel/known-implementations-registry-supports-compatibility-levels-174",
       "source": "xananode.example:concept/known-implementations-registry",
       "target": "xananode.example:concept/compatibility-levels",
       "type": "supports",
@@ -1522,7 +1567,7 @@
       "summary": "Known Implementations Registry supports Compatibility Levels."
     },
     {
-      "id": "xananode.example:rel/knowledge-substrate-has_claim-claim-substrate-is-structure-170",
+      "id": "xananode.example:rel/knowledge-substrate-has_claim-claim-substrate-is-structure-175",
       "source": "xananode.example:concept/knowledge-substrate",
       "target": "xananode.example:claim/claim-substrate-is-structure",
       "type": "has_claim",
@@ -1531,7 +1576,7 @@
       "summary": "Knowledge Substrate has claim A knowledge substrate is structure, not information."
     },
     {
-      "id": "xananode.example:rel/knowledge-substrate-requires-provenance-171",
+      "id": "xananode.example:rel/knowledge-substrate-requires-provenance-176",
       "source": "xananode.example:concept/knowledge-substrate",
       "target": "xananode.example:concept/provenance",
       "type": "requires",
@@ -1540,7 +1585,7 @@
       "summary": "Knowledge Substrate requires Provenance."
     },
     {
-      "id": "xananode.example:rel/knowledge-substrate-requires-typed-relationships-172",
+      "id": "xananode.example:rel/knowledge-substrate-requires-typed-relationships-177",
       "source": "xananode.example:concept/knowledge-substrate",
       "target": "xananode.example:concept/typed-relationships",
       "type": "requires",
@@ -1549,7 +1594,7 @@
       "summary": "Knowledge Substrate requires Typed Relationships."
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-enables-knowledge-substrate-173",
+      "id": "xananode.example:rel/xananode-core-schema-enables-knowledge-substrate-178",
       "source": "xananode.example:schema/xananode-core-schema",
       "target": "xananode.example:concept/knowledge-substrate",
       "type": "enables",
@@ -1558,7 +1603,7 @@
       "summary": "XanaNode Core Schema enables Knowledge Substrate."
     },
     {
-      "id": "xananode.example:rel/independent-moderation-contrasts_with-single-source-of-truth-174",
+      "id": "xananode.example:rel/independent-moderation-contrasts_with-single-source-of-truth-179",
       "source": "xananode.example:concept/independent-moderation",
       "target": "xananode.example:concept/single-source-of-truth",
       "type": "contrasts_with",
@@ -1567,7 +1612,7 @@
       "summary": "Independent Moderation contrasts with Single Source of Truth."
     },
     {
-      "id": "xananode.example:rel/independent-moderation-requires-provenance-175",
+      "id": "xananode.example:rel/independent-moderation-requires-provenance-180",
       "source": "xananode.example:concept/independent-moderation",
       "target": "xananode.example:concept/provenance",
       "type": "requires",
@@ -1576,7 +1621,7 @@
       "summary": "Independent Moderation requires Provenance."
     },
     {
-      "id": "xananode.example:rel/transclusion-requires-fragment-node-176",
+      "id": "xananode.example:rel/transclusion-requires-fragment-node-181",
       "source": "xananode.example:concept/transclusion",
       "target": "xananode.example:concept/fragment-node",
       "type": "requires",
@@ -1585,7 +1630,7 @@
       "summary": "Transclusion requires Fragment Node."
     },
     {
-      "id": "xananode.example:rel/fragment-node-preserves-provenance-177",
+      "id": "xananode.example:rel/fragment-node-preserves-provenance-182",
       "source": "xananode.example:concept/fragment-node",
       "target": "xananode.example:concept/provenance",
       "type": "preserves",
@@ -1594,7 +1639,7 @@
       "summary": "Fragment Node preserves Provenance."
     },
     {
-      "id": "xananode.example:rel/fragment-node-deep_links_to-mother-of-all-demos-178",
+      "id": "xananode.example:rel/fragment-node-deep_links_to-mother-of-all-demos-183",
       "source": "xananode.example:concept/fragment-node",
       "target": "xananode.example:source/mother-of-all-demos",
       "type": "deep_links_to",
@@ -1603,7 +1648,7 @@
       "summary": "Fragment Node deep links to Mother of All Demos."
     },
     {
-      "id": "xananode.example:rel/federation-rules-defines-federated-knowledge-substrates-179",
+      "id": "xananode.example:rel/federation-rules-defines-federated-knowledge-substrates-184",
       "source": "xananode.example:concept/federation-rules",
       "target": "xananode.example:concept/federated-knowledge-substrates",
       "type": "defines",
@@ -1612,7 +1657,7 @@
       "summary": "Federation Rules defines Federated Knowledge Substrates."
     },
     {
-      "id": "xananode.example:rel/federation-rules-preserves-independent-moderation-180",
+      "id": "xananode.example:rel/federation-rules-preserves-independent-moderation-185",
       "source": "xananode.example:concept/federation-rules",
       "target": "xananode.example:concept/independent-moderation",
       "type": "preserves",
@@ -1621,7 +1666,7 @@
       "summary": "Federation Rules preserves Independent Moderation."
     },
     {
-      "id": "xananode.example:rel/federation-rules-requires-compatibility-report-181",
+      "id": "xananode.example:rel/federation-rules-requires-compatibility-report-186",
       "source": "xananode.example:concept/federation-rules",
       "target": "xananode.example:concept/compatibility-report",
       "type": "requires",
@@ -1630,7 +1675,7 @@
       "summary": "Federation Rules requires Compatibility Report."
     },
     {
-      "id": "xananode.example:rel/federation-rules-requires-merge-report-182",
+      "id": "xananode.example:rel/federation-rules-requires-merge-report-187",
       "source": "xananode.example:concept/federation-rules",
       "target": "xananode.example:concept/merge-report",
       "type": "requires",
@@ -1639,7 +1684,7 @@
       "summary": "Federation Rules requires Merge Report."
     },
     {
-      "id": "xananode.example:rel/federation-example-demonstrates-federated-knowledge-substrates-183",
+      "id": "xananode.example:rel/federation-example-demonstrates-federated-knowledge-substrates-188",
       "source": "xananode.example:concept/federation-example",
       "target": "xananode.example:concept/federated-knowledge-substrates",
       "type": "demonstrates",
@@ -1648,7 +1693,7 @@
       "summary": "Federation Example demonstrates Federated Knowledge Substrates."
     },
     {
-      "id": "xananode.example:rel/federation-example-uses-compatibility-report-184",
+      "id": "xananode.example:rel/federation-example-uses-compatibility-report-189",
       "source": "xananode.example:concept/federation-example",
       "target": "xananode.example:concept/compatibility-report",
       "type": "uses",
@@ -1657,7 +1702,7 @@
       "summary": "Federation Example uses Compatibility Report."
     },
     {
-      "id": "xananode.example:rel/federation-example-uses-merge-report-185",
+      "id": "xananode.example:rel/federation-example-uses-merge-report-190",
       "source": "xananode.example:concept/federation-example",
       "target": "xananode.example:concept/merge-report",
       "type": "uses",
@@ -1666,7 +1711,7 @@
       "summary": "Federation Example uses Merge Report."
     },
     {
-      "id": "xananode.example:rel/federation-example-preserves-independent-moderation-186",
+      "id": "xananode.example:rel/federation-example-preserves-independent-moderation-191",
       "source": "xananode.example:concept/federation-example",
       "target": "xananode.example:concept/independent-moderation",
       "type": "preserves",
@@ -1675,7 +1720,7 @@
       "summary": "Federation Example preserves Independent Moderation."
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-namespacing-187",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-namespacing-192",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "target": "xananode.example:concept/namespacing",
       "type": "requires",
@@ -1684,7 +1729,7 @@
       "summary": "Federated Knowledge Substrates requires Namespacing."
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-merge-validation-188",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-merge-validation-193",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "target": "xananode.example:concept/merge-validation",
       "type": "requires",
@@ -1693,7 +1738,7 @@
       "summary": "Federated Knowledge Substrates requires Merge Validation."
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-federation-rules-189",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-federation-rules-194",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "target": "xananode.example:concept/federation-rules",
       "type": "requires",
@@ -1702,7 +1747,7 @@
       "summary": "Federated Knowledge Substrates requires Federation Rules."
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-preserves-independent-moderation-190",
+      "id": "xananode.example:rel/federated-knowledge-substrates-preserves-independent-moderation-195",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "target": "xananode.example:concept/independent-moderation",
       "type": "preserves",
@@ -1711,7 +1756,7 @@
       "summary": "Federated Knowledge Substrates preserves Independent Moderation."
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-alternative_to-single-source-of-truth-191",
+      "id": "xananode.example:rel/federated-knowledge-substrates-alternative_to-single-source-of-truth-196",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "target": "xananode.example:concept/single-source-of-truth",
       "type": "alternative_to",
@@ -1720,7 +1765,7 @@
       "summary": "Federated Knowledge Substrates alternative to Single Source of Truth."
     },
     {
-      "id": "xananode.example:rel/dispute-resolution-requires-provenance-192",
+      "id": "xananode.example:rel/dispute-resolution-requires-provenance-197",
       "source": "xananode.example:concept/dispute-resolution",
       "target": "xananode.example:concept/provenance",
       "type": "requires",
@@ -1729,7 +1774,7 @@
       "summary": "Dispute Resolution requires Provenance."
     },
     {
-      "id": "xananode.example:rel/dispute-resolution-supports-claim-merge-without-collapse-193",
+      "id": "xananode.example:rel/dispute-resolution-supports-claim-merge-without-collapse-198",
       "source": "xananode.example:concept/dispute-resolution",
       "target": "xananode.example:claim/claim-merge-without-collapse",
       "type": "supports",
@@ -1738,7 +1783,7 @@
       "summary": "Dispute Resolution supports Substrates should merge without collapsing disagreement."
     },
     {
-      "id": "xananode.example:rel/dispute-resolution-context_for-merge-report-194",
+      "id": "xananode.example:rel/dispute-resolution-context_for-merge-report-199",
       "source": "xananode.example:concept/dispute-resolution",
       "target": "xananode.example:concept/merge-report",
       "type": "context_for",
@@ -1747,7 +1792,7 @@
       "summary": "Dispute Resolution context for Merge Report."
     },
     {
-      "id": "xananode.example:rel/federation-rules-requires-dispute-resolution-195",
+      "id": "xananode.example:rel/federation-rules-requires-dispute-resolution-200",
       "source": "xananode.example:concept/federation-rules",
       "target": "xananode.example:concept/dispute-resolution",
       "type": "requires",
@@ -1756,7 +1801,7 @@
       "summary": "Federation Rules requires Dispute Resolution."
     },
     {
-      "id": "xananode.example:rel/deep-linking-enables-transclusion-196",
+      "id": "xananode.example:rel/deep-linking-enables-transclusion-201",
       "source": "xananode.example:concept/deep-linking",
       "target": "xananode.example:concept/transclusion",
       "type": "enables",
@@ -1765,7 +1810,7 @@
       "summary": "Deep Linking enables Transclusion."
     },
     {
-      "id": "xananode.example:rel/deep-linking-contrasts_with-unlabeled-hyperlink-197",
+      "id": "xananode.example:rel/deep-linking-contrasts_with-unlabeled-hyperlink-202",
       "source": "xananode.example:concept/deep-linking",
       "target": "xananode.example:concept/unlabeled-hyperlink",
       "type": "contrasts_with",
@@ -1774,7 +1819,7 @@
       "summary": "Deep Linking contrasts with Unlabeled Hyperlink."
     },
     {
-      "id": "xananode.example:rel/custom-extension-substrate-demonstrates-schema-extension-198",
+      "id": "xananode.example:rel/custom-extension-substrate-demonstrates-schema-extension-203",
       "source": "xananode.example:concept/custom-extension-substrate",
       "target": "xananode.example:concept/schema-extension",
       "type": "demonstrates",
@@ -1783,7 +1828,7 @@
       "summary": "Custom Extension Substrate demonstrates Schema Extension."
     },
     {
-      "id": "xananode.example:rel/custom-extension-substrate-requires-namespace-registry-199",
+      "id": "xananode.example:rel/custom-extension-substrate-requires-namespace-registry-204",
       "source": "xananode.example:concept/custom-extension-substrate",
       "target": "xananode.example:concept/namespace-registry",
       "type": "requires",
@@ -1792,7 +1837,7 @@
       "summary": "Custom Extension Substrate requires Namespace Registry."
     },
     {
-      "id": "xananode.example:rel/custom-extension-substrate-uses-substrate-manifest-200",
+      "id": "xananode.example:rel/custom-extension-substrate-uses-substrate-manifest-205",
       "source": "xananode.example:concept/custom-extension-substrate",
       "target": "xananode.example:concept/substrate-manifest",
       "type": "uses",
@@ -1801,7 +1846,7 @@
       "summary": "Custom Extension Substrate uses Substrate Manifest."
     },
     {
-      "id": "xananode.example:rel/custom-extension-substrate-features-canonical-type-policy-201",
+      "id": "xananode.example:rel/custom-extension-substrate-features-canonical-type-policy-206",
       "source": "xananode.example:concept/custom-extension-substrate",
       "target": "xananode.example:concept/canonical-type-policy",
       "type": "features",
@@ -1810,7 +1855,7 @@
       "summary": "Custom Extension Substrate features Canonical Type Policy."
     },
     {
-      "id": "xananode.example:rel/compatibility-report-documents-compatibility-levels-202",
+      "id": "xananode.example:rel/compatibility-report-documents-compatibility-levels-207",
       "source": "xananode.example:concept/compatibility-report",
       "target": "xananode.example:concept/compatibility-levels",
       "type": "documents",
@@ -1819,7 +1864,7 @@
       "summary": "Compatibility Report documents Compatibility Levels."
     },
     {
-      "id": "xananode.example:rel/merge-validation-requires-compatibility-report-203",
+      "id": "xananode.example:rel/merge-validation-requires-compatibility-report-208",
       "source": "xananode.example:concept/merge-validation",
       "target": "xananode.example:concept/compatibility-report",
       "type": "requires",
@@ -1828,7 +1873,7 @@
       "summary": "Merge Validation requires Compatibility Report."
     },
     {
-      "id": "xananode.example:rel/compatibility-levels-uses-compatibility-report-204",
+      "id": "xananode.example:rel/compatibility-levels-uses-compatibility-report-209",
       "source": "xananode.example:concept/compatibility-levels",
       "target": "xananode.example:concept/compatibility-report",
       "type": "uses",
@@ -1837,7 +1882,7 @@
       "summary": "Compatibility Levels uses Compatibility Report."
     },
     {
-      "id": "xananode.example:rel/compatibility-levels-requires-substrate-manifest-205",
+      "id": "xananode.example:rel/compatibility-levels-requires-substrate-manifest-210",
       "source": "xananode.example:concept/compatibility-levels",
       "target": "xananode.example:concept/substrate-manifest",
       "type": "requires",
@@ -1846,7 +1891,7 @@
       "summary": "Compatibility Levels requires Substrate Manifest."
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-compatibility-levels-206",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-compatibility-levels-211",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "target": "xananode.example:concept/compatibility-levels",
       "type": "requires",
@@ -1855,7 +1900,7 @@
       "summary": "Federated Knowledge Substrates requires Compatibility Levels."
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-enables-civilizational-memory-207",
+      "id": "xananode.example:rel/federated-knowledge-substrates-enables-civilizational-memory-212",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "target": "xananode.example:concept/civilizational-memory",
       "type": "enables",
@@ -1864,7 +1909,7 @@
       "summary": "Federated Knowledge Substrates enables Civilizational Memory."
     },
     {
-      "id": "xananode.example:rel/civilizational-memory-requires-knowledge-substrate-208",
+      "id": "xananode.example:rel/civilizational-memory-requires-knowledge-substrate-213",
       "source": "xananode.example:concept/civilizational-memory",
       "target": "xananode.example:concept/knowledge-substrate",
       "type": "requires",
@@ -1873,7 +1918,7 @@
       "summary": "Civilizational Memory requires Knowledge Substrate."
     },
     {
-      "id": "xananode.example:rel/civilizational-memory-requires-provenance-209",
+      "id": "xananode.example:rel/civilizational-memory-requires-provenance-214",
       "source": "xananode.example:concept/civilizational-memory",
       "target": "xananode.example:concept/provenance",
       "type": "requires",
@@ -1882,7 +1927,7 @@
       "summary": "Civilizational Memory requires Provenance."
     },
     {
-      "id": "xananode.example:rel/civilizational-memory-requires-merge-validation-210",
+      "id": "xananode.example:rel/civilizational-memory-requires-merge-validation-215",
       "source": "xananode.example:concept/civilizational-memory",
       "target": "xananode.example:concept/merge-validation",
       "type": "requires",
@@ -1891,7 +1936,7 @@
       "summary": "Civilizational Memory requires Merge Validation."
     },
     {
-      "id": "xananode.example:rel/canonical-type-policy-context_for-schema-extension-211",
+      "id": "xananode.example:rel/canonical-type-policy-context_for-schema-extension-216",
       "source": "xananode.example:concept/canonical-type-policy",
       "target": "xananode.example:concept/schema-extension",
       "type": "context_for",
@@ -1900,7 +1945,7 @@
       "summary": "Canonical Type Policy context for Schema Extension."
     },
     {
-      "id": "xananode.example:rel/canonical-type-policy-requires-namespacing-212",
+      "id": "xananode.example:rel/canonical-type-policy-requires-namespacing-217",
       "source": "xananode.example:concept/canonical-type-policy",
       "target": "xananode.example:concept/namespacing",
       "type": "requires",
@@ -1909,7 +1954,7 @@
       "summary": "Canonical Type Policy requires Namespacing."
     },
     {
-      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-substrate-is-structure-213",
+      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-substrate-is-structure-218",
       "source": "xananode.example:source/xanadu-document-interconnection",
       "target": "xananode.example:claim/claim-substrate-is-structure",
       "type": "supports",
@@ -1918,7 +1963,7 @@
       "summary": "Xanadu: Document Interconnection Enabling Re-use supports A knowledge substrate is structure, not information."
     },
     {
-      "id": "xananode.example:rel/typed-relationships-has_claim-claim-relationships-preserve-context-214",
+      "id": "xananode.example:rel/typed-relationships-has_claim-claim-relationships-preserve-context-219",
       "source": "xananode.example:concept/typed-relationships",
       "target": "xananode.example:claim/claim-relationships-preserve-context",
       "type": "has_claim",
@@ -1927,7 +1972,7 @@
       "summary": "Typed Relationships has claim Typed relationships preserve context that hyperlinks lose."
     },
     {
-      "id": "xananode.example:rel/claim-relationships-preserve-context-contrasts_with-unlabeled-hyperlink-215",
+      "id": "xananode.example:rel/claim-relationships-preserve-context-contrasts_with-unlabeled-hyperlink-220",
       "source": "xananode.example:claim/claim-relationships-preserve-context",
       "target": "xananode.example:concept/unlabeled-hyperlink",
       "type": "contrasts_with",
@@ -1936,7 +1981,7 @@
       "summary": "Typed relationships preserve context that hyperlinks lose contrasts with Unlabeled Hyperlink."
     },
     {
-      "id": "xananode.example:rel/merge-validation-has_claim-claim-merge-without-collapse-216",
+      "id": "xananode.example:rel/merge-validation-has_claim-claim-merge-without-collapse-221",
       "source": "xananode.example:concept/merge-validation",
       "target": "xananode.example:claim/claim-merge-without-collapse",
       "type": "has_claim",
@@ -1945,7 +1990,7 @@
       "summary": "Merge Validation has claim Substrates should merge without collapsing disagreement."
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-supports-claim-merge-without-collapse-217",
+      "id": "xananode.example:rel/xananode-core-schema-supports-claim-merge-without-collapse-222",
       "source": "xananode.example:schema/xananode-core-schema",
       "target": "xananode.example:claim/claim-merge-without-collapse",
       "type": "supports",
@@ -1954,7 +1999,7 @@
       "summary": "XanaNode Core Schema supports Substrates should merge without collapsing disagreement."
     },
     {
-      "id": "xananode.example:rel/claim-merge-without-collapse-contradicts-single-source-of-truth-218",
+      "id": "xananode.example:rel/claim-merge-without-collapse-contradicts-single-source-of-truth-223",
       "source": "xananode.example:claim/claim-merge-without-collapse",
       "target": "xananode.example:concept/single-source-of-truth",
       "type": "contradicts",
@@ -2039,6 +2084,775 @@
       "visibility": "primary",
       "tumbler": "xananode.example:source/mother-of-all-demos@sha256:88a43c06a3135ff5a982ca8efe948753f1d6e839561dcf664bd873719025e210#fragment/0001@sha256:217a3bcf5fb3c571fd4661497b6bdde97bba61576045ca253f21b9c0d2987ce4",
       "summary": "Fragment Node transcludes Augmenting Human Intelligence Fragment by stable reference."
+    },
+    {
+      "id": "example.minimal:rel/source-supports-claim",
+      "source": "example.minimal:source/as-we-may-think",
+      "target": "example.minimal:claim/substrate-is-structure",
+      "type": "supports",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_by": "example.minimal:person/example-maintainer",
+      "asserted_at": "2026-01-01T00:00:00Z",
+      "confidence": "interpretive",
+      "summary": "Bush's essay is used as source evidence for the claim that substrate structure matters."
+    },
+    {
+      "id": "example.minimal:rel/source-discusses-associative-trails",
+      "source": "example.minimal:source/as-we-may-think",
+      "target": "example.minimal:concept/associative-trails",
+      "type": "discusses",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_by": "example.minimal:person/example-maintainer",
+      "asserted_at": "2026-01-01T00:00:00Z",
+      "confidence": "high",
+      "summary": "The source discusses associative trails as a way to navigate knowledge by meaningful connections."
+    },
+    {
+      "id": "example.minimal:rel/associative-trails-context-for-substrate",
+      "source": "example.minimal:concept/associative-trails",
+      "target": "example.minimal:concept/knowledge-substrate",
+      "type": "related_to",
+      "weight": 4,
+      "visibility": "primary",
+      "asserted_by": "example.minimal:person/example-maintainer",
+      "asserted_at": "2026-01-01T00:00:00Z",
+      "confidence": "interpretive",
+      "summary": "Associative trails provide historical and conceptual context for the knowledge substrate concept."
+    },
+    {
+      "id": "example.minimal:rel/claim-defines-concept",
+      "source": "example.minimal:claim/substrate-is-structure",
+      "target": "example.minimal:concept/knowledge-substrate",
+      "type": "defines",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_by": "example.minimal:person/example-maintainer",
+      "asserted_at": "2026-01-01T00:00:00Z",
+      "confidence": "interpretive",
+      "summary": "The claim gives the defining explanation of what a knowledge substrate is."
+    },
+    {
+      "id": "example.minimal:rel/concept-has-claim",
+      "source": "example.minimal:concept/knowledge-substrate",
+      "target": "example.minimal:claim/substrate-is-structure",
+      "type": "has_claim",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_by": "example.minimal:person/example-maintainer",
+      "asserted_at": "2026-01-01T00:00:00Z",
+      "confidence": "high",
+      "summary": "The concept is built from the claim rather than floating as an unsupported idea."
+    },
+    {
+      "id": "example.minimal:rel/trail-starts-with-source",
+      "source": "example.minimal:trail/start-here",
+      "target": "example.minimal:source/as-we-may-think",
+      "type": "starts_with",
+      "weight": 3,
+      "visibility": "secondary",
+      "asserted_by": "example.minimal:person/example-maintainer",
+      "asserted_at": "2026-01-01T00:00:00Z",
+      "confidence": "curatorial",
+      "summary": "The reading trail starts with the source."
+    },
+    {
+      "id": "example.minimal:rel/trail-continues-to-claim",
+      "source": "example.minimal:source/as-we-may-think",
+      "target": "example.minimal:claim/substrate-is-structure",
+      "type": "continues_to",
+      "weight": 3,
+      "visibility": "secondary",
+      "asserted_by": "example.minimal:person/example-maintainer",
+      "asserted_at": "2026-01-01T00:00:00Z",
+      "confidence": "curatorial",
+      "summary": "The trail continues from source evidence to the claim derived from it."
+    },
+    {
+      "id": "example.minimal:rel/trail-continues-to-concept",
+      "source": "example.minimal:claim/substrate-is-structure",
+      "target": "example.minimal:concept/knowledge-substrate",
+      "type": "continues_to",
+      "weight": 3,
+      "visibility": "secondary",
+      "asserted_by": "example.minimal:person/example-maintainer",
+      "asserted_at": "2026-01-01T00:00:00Z",
+      "confidence": "curatorial",
+      "summary": "The trail continues from the defining claim to the concept it helps construct."
+    },
+    {
+      "id": "example.minimal:rel/trail-includes-associative-trails",
+      "source": "example.minimal:trail/start-here",
+      "target": "example.minimal:concept/associative-trails",
+      "type": "features",
+      "weight": 3,
+      "visibility": "secondary",
+      "asserted_by": "example.minimal:person/example-maintainer",
+      "asserted_at": "2026-01-01T00:00:00Z",
+      "confidence": "curatorial",
+      "summary": "The trail features the background concept that explains why relationship-based navigation matters."
+    },
+    {
+      "id": "example.minimal:rel/maintainer-created-intro-essay",
+      "source": "example.minimal:person/example-maintainer",
+      "target": "example.minimal:essay/relationship-navigation-intro",
+      "type": "created",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_by": "example.minimal:person/example-maintainer",
+      "asserted_at": "2026-01-01T00:00:00Z",
+      "confidence": "high",
+      "summary": "The example maintainer created the short introductory essay used to demonstrate transclusion."
+    },
+    {
+      "id": "example.minimal:rel/fragment-derived-from-source",
+      "source": "example.minimal:fragment/as-we-may-think-0004",
+      "target": "example.minimal:source/as-we-may-think",
+      "type": "derived_from",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_by": "example.minimal:person/example-maintainer",
+      "asserted_at": "2026-01-01T00:00:00Z",
+      "confidence": "high",
+      "tumbler": "example.minimal:source/as-we-may-think@git:8e47e70:examples/minimal-substrate/nodes/source-as-we-may-think.json#fragment/0004@sha256:example-as-we-may-think-fragment-0004",
+      "summary": "The fragment node is derived from a stable addressable portion of the source node."
+    },
+    {
+      "id": "example.minimal:rel/essay-transcludes-fragment",
+      "source": "example.minimal:essay/relationship-navigation-intro",
+      "target": "example.minimal:fragment/as-we-may-think-0004",
+      "type": "transcludes",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_by": "example.minimal:person/example-maintainer",
+      "asserted_at": "2026-01-01T00:00:00Z",
+      "confidence": "high",
+      "tumbler": "example.minimal:source/as-we-may-think@git:8e47e70:examples/minimal-substrate/nodes/source-as-we-may-think.json#fragment/0004@sha256:example-as-we-may-think-fragment-0004",
+      "summary": "The essay includes the source fragment by stable reference instead of duplicating it."
+    },
+    {
+      "id": "xananode.lineage:rel/leibniz-anticipated-semantic-computation",
+      "source": "xananode.lineage:person/gottfried-wilhelm-leibniz",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "anticipated",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Leibniz anticipated semantic computation through universal symbolic reasoning."
+    },
+    {
+      "id": "xananode.lineage:rel/ostwald-parallel-to-otlet",
+      "source": "xananode.lineage:person/wilhelm-ostwald",
+      "target": "xananode.lineage:person/paul-otlet",
+      "type": "parallel_to",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Ostwald's Die Bruecke work runs parallel to Otlet's knowledge organization work."
+    },
+    {
+      "id": "xananode.lineage:rel/borges-authored-forking-paths",
+      "source": "xananode.lineage:person/jorge-luis-borges",
+      "target": "xananode.lineage:publication/the-garden-of-forking-paths",
+      "type": "authored",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Borges authored The Garden of Forking Paths."
+    },
+    {
+      "id": "xananode.lineage:rel/forking-paths-anticipated-nonlinear-text",
+      "source": "xananode.lineage:publication/the-garden-of-forking-paths",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "anticipated",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "The Garden of Forking Paths anticipated nonlinear textual structures."
+    },
+    {
+      "id": "xananode.lineage:rel/van-dam-collaborated-with-nelson",
+      "source": "xananode.lineage:person/andries-van-dam",
+      "target": "xananode.example:person/ted-nelson",
+      "type": "collaborated_with",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Andries van Dam belongs to the Brown hypertext lineage connected to Nelson's early hypertext work."
+    },
+    {
+      "id": "xananode.lineage:rel/brown-site-of-hes",
+      "source": "xananode.lineage:place/brown-university",
+      "target": "xananode.lineage:project/hypertext-editing-system",
+      "type": "occurred_at",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Brown University was a site of the Hypertext Editing System lineage."
+    },
+    {
+      "id": "xananode.lineage:rel/van-dam-implemented-fress",
+      "source": "xananode.lineage:person/andries-van-dam",
+      "target": "xananode.lineage:project/fress",
+      "type": "implements",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Van Dam's Brown lineage implemented FRESS."
+    },
+    {
+      "id": "xananode.lineage:rel/intermedia-implemented-scholarly-hypermedia",
+      "source": "xananode.lineage:project/intermedia",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "implements",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Intermedia implemented scholarly hypermedia as part of the larger lineage."
+    },
+    {
+      "id": "xananode.lineage:rel/alan-kay-extends-engelbart",
+      "source": "xananode.lineage:person/alan-kay",
+      "target": "xananode.example:person/douglas-engelbart",
+      "type": "extends",
+      "weight": 4,
+      "visibility": "primary",
+      "summary": "Kay extends Engelbart's augmentation ideas into personal dynamic media."
+    },
+    {
+      "id": "xananode.lineage:rel/xerox-parc-context-for-kay",
+      "source": "xananode.lineage:organization/xerox-parc",
+      "target": "xananode.lineage:person/alan-kay",
+      "type": "context_for",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Xerox PARC contextualizes Kay's major work."
+    },
+    {
+      "id": "xananode.lineage:rel/negroponte-shapes-media-lab",
+      "source": "xananode.lineage:person/nicholas-negroponte",
+      "target": "xananode.lineage:organization/mit-media-lab",
+      "type": "shapes",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Negroponte shaped the interactive media and information-space branch."
+    },
+    {
+      "id": "xananode.lineage:rel/papert-parallel-to-kay",
+      "source": "xananode.lineage:person/seymour-papert",
+      "target": "xananode.lineage:person/alan-kay",
+      "type": "parallel_to",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Papert's learning-media work runs parallel to Kay's dynamic media branch."
+    },
+    {
+      "id": "xananode.lineage:rel/minsky-context-for-agents",
+      "source": "xananode.lineage:person/marvin-minsky",
+      "target": "xananode.lineage:technology/apple-knowledge-navigator",
+      "type": "context_for",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Minsky's AI work contextualizes intelligent agents and cognitive modeling."
+    },
+    {
+      "id": "xananode.lineage:rel/brondmo-introduced-micons",
+      "source": "xananode.lineage:person/hans-peter-brondmo",
+      "target": "xananode.lineage:technology/micons",
+      "type": "introduced",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Hans Peter Brondmo introduced micons as animated conceptual representations."
+    },
+    {
+      "id": "xananode.lineage:rel/hyperland-features-micons",
+      "source": "xananode.lineage:publication/hyperland",
+      "target": "xananode.lineage:technology/micons",
+      "type": "features",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Hyperland features micons as part of its media-agent demonstration."
+    },
+    {
+      "id": "xananode.lineage:rel/winter-demonstrated-interactive-music",
+      "source": "xananode.lineage:person/robert-winter",
+      "target": "xananode.lineage:project/interactive-beethoven-ninth",
+      "type": "demonstrates",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Robert Winter demonstrated music as explorable structure."
+    },
+    {
+      "id": "xananode.lineage:rel/abel-demonstrated-guernica",
+      "source": "xananode.lineage:person/robert-abel",
+      "target": "xananode.lineage:project/interactive-guernica",
+      "type": "demonstrates",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Robert Abel demonstrated visual art as navigable knowledge."
+    },
+    {
+      "id": "xananode.lineage:rel/sutherland-anticipated-spatial-computing",
+      "source": "xananode.lineage:person/ivan-sutherland",
+      "target": "xananode.lineage:tool/hyperland-vr",
+      "type": "anticipated",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Sutherland anticipated visual and spatial computing."
+    },
+    {
+      "id": "xananode.lineage:rel/lanier-popularized-vr",
+      "source": "xananode.lineage:person/jaron-lanier",
+      "target": "xananode.lineage:organization/vpl-research",
+      "type": "popularized",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Lanier popularized virtual reality through VPL Research."
+    },
+    {
+      "id": "xananode.lineage:rel/fisher-demonstrated-nasa-vr",
+      "source": "xananode.lineage:person/scott-fisher",
+      "target": "xananode.lineage:organization/nasa",
+      "type": "demonstrates",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Scott Fisher demonstrated VR cases including NASA virtual environment work."
+    },
+    {
+      "id": "xananode.lineage:rel/dirk-gently-anticipated-hyperland",
+      "source": "xananode.lineage:publication/dirk-gentlys-holistic-detective-agency",
+      "target": "xananode.lineage:publication/hyperland",
+      "type": "anticipated",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Dirk Gently anticipates Hyperland's theme of interconnectedness."
+    },
+    {
+      "id": "xananode.lineage:rel/bbc-two-created-hyperland-broadcast-context",
+      "source": "xananode.lineage:organization/bbc-two",
+      "target": "xananode.lineage:publication/hyperland",
+      "type": "created",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "BBC Two provided the broadcast context for Hyperland."
+    },
+    {
+      "id": "xananode.lineage:rel/wurman-created-ted-context",
+      "source": "xananode.lineage:person/richard-saul-wurman",
+      "target": "xananode.lineage:event/ted2-1990",
+      "type": "created",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Richard Saul Wurman created the TED context that TED2 belongs to."
+    },
+    {
+      "id": "xananode.lineage:rel/harry-marks-participated-in-ted2",
+      "source": "xananode.lineage:person/harry-marks",
+      "target": "xananode.lineage:event/ted2-1990",
+      "type": "participated_in",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Harry Marks participated in TED2."
+    },
+    {
+      "id": "xananode.lineage:rel/sculley-presented-knowledge-navigator",
+      "source": "xananode.lineage:person/john-sculley",
+      "target": "xananode.lineage:technology/apple-knowledge-navigator",
+      "type": "presented",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "John Sculley presented Apple's agent and interactive-media future."
+    },
+    {
+      "id": "xananode.lineage:rel/knowledge-navigator-parallel-to-hyperland-agent",
+      "source": "xananode.lineage:technology/apple-knowledge-navigator",
+      "target": "xananode.lineage:person/tom-baker",
+      "type": "parallel_to",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Apple Knowledge Navigator runs parallel to Hyperland's software-agent persona."
+    },
+    {
+      "id": "xananode.lineage:rel/bill-atkinson-implemented-hypercard",
+      "source": "xananode.lineage:person/bill-atkinson",
+      "target": "xananode.lineage:technology/hypercard",
+      "type": "implements",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "Bill Atkinson implemented HyperCard."
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-robert-abel",
+      "source": "xananode.lineage:event/ted2-1990",
+      "target": "xananode.lineage:person/robert-abel",
+      "type": "features",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "TED2 featured Robert Abel's multimedia art navigation branch."
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-bill-atkinson",
+      "source": "xananode.lineage:event/ted2-1990",
+      "target": "xananode.lineage:person/bill-atkinson",
+      "type": "features",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "TED2 featured Bill Atkinson and accessible hypermedia authoring."
+    },
+    {
+      "id": "xananode.lineage:rel/berners-lee-collaborated-with-cailliau",
+      "source": "xananode.lineage:person/tim-berners-lee",
+      "target": "xananode.lineage:person/robert-cailliau",
+      "type": "collaborated_with",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Berners-Lee collaborated with Robert Cailliau on the Web proposal and promotion."
+    },
+    {
+      "id": "xananode.lineage:rel/cern-context-for-web",
+      "source": "xananode.lineage:place/cern",
+      "target": "xananode.lineage:technology/world-wide-web",
+      "type": "context_for",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "CERN provided the context for the Web's birth."
+    },
+    {
+      "id": "xananode.lineage:rel/html-implements-markup",
+      "source": "xananode.lineage:technology/html",
+      "target": "xananode.lineage:technology/world-wide-web",
+      "type": "implements",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "HTML implements document markup for the Web."
+    },
+    {
+      "id": "xananode.lineage:rel/http-enables-web",
+      "source": "xananode.lineage:technology/http",
+      "target": "xananode.lineage:technology/world-wide-web",
+      "type": "enables",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "HTTP enables distributed retrieval on the Web."
+    },
+    {
+      "id": "xananode.lineage:rel/url-uri-enables-addressability",
+      "source": "xananode.lineage:technology/url-uri",
+      "target": "xananode.lineage:technology/world-wide-web",
+      "type": "enables",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "URL and URI addressing enables Web addressability."
+    },
+    {
+      "id": "xananode.lineage:rel/ncsa-popularized-mosaic",
+      "source": "xananode.lineage:organization/ncsa",
+      "target": "xananode.lineage:technology/mosaic",
+      "type": "popularized",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "NCSA popularized Web browsing through Mosaic."
+    },
+    {
+      "id": "xananode.lineage:rel/andreessen-popularized-web",
+      "source": "xananode.lineage:person/marc-andreessen",
+      "target": "xananode.lineage:technology/world-wide-web",
+      "type": "popularized",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Marc Andreessen helped popularize the Web branch."
+    },
+    {
+      "id": "xananode.lineage:rel/web-incomplete-contrasts-with-xananode",
+      "source": "xananode.lineage:concept/web-as-incomplete-hypertext",
+      "target": "xananode.example:concept/xananode",
+      "type": "contrasts_with",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "The incomplete-hypertext frame contrasts the Web's missing provenance and relationship governance with XanaNode."
+    },
+    {
+      "id": "xananode.lineage:rel/guide-implemented-pc-hypertext",
+      "source": "xananode.lineage:technology/guide",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "implements",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Guide implemented personal-computer hypertext."
+    },
+    {
+      "id": "xananode.lineage:rel/storyspace-implemented-hypertext-literature",
+      "source": "xananode.lineage:project/storyspace",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "implements",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Storyspace implemented hypertext literature authoring."
+    },
+    {
+      "id": "xananode.lineage:rel/zog-kms-implemented-frame-navigation",
+      "source": "xananode.lineage:project/zog-kms",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "implements",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "ZOG/KMS implemented frame and card based knowledge management."
+    },
+    {
+      "id": "xananode.lineage:rel/xanadu-at-autodesk-implements-xanadu",
+      "source": "xananode.lineage:project/xanadu-at-autodesk",
+      "target": "xananode.example:project/project-xanadu",
+      "type": "implements",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Xanadu at Autodesk attempted a commercial implementation of Nelson's Xanadu vision."
+    },
+    {
+      "id": "xananode.lineage:rel/xananode-preserves-lost-lineage",
+      "source": "xananode.example:concept/xananode",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "preserves",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "XanaNode preserves the lost lineage as an intertwingled graph."
+    },
+    {
+      "id": "xananode.lineage:rel/xananode-extends-bush-trails",
+      "source": "xananode.example:concept/xananode",
+      "target": "xananode.example:project/memex",
+      "type": "extends",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "XanaNode extends Bush's associative trails into typed, portable substrate records."
+    },
+    {
+      "id": "xananode.lineage:rel/xananode-extends-transclusion",
+      "source": "xananode.example:concept/xananode",
+      "target": "xananode.example:concept/transclusion",
+      "type": "extends",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "XanaNode extends Nelson-style transclusion with stable fragments and protocol identity."
+    },
+    {
+      "id": "xananode.lineage:rel/conflict-preserves-disagreement",
+      "source": "xananode.lineage:concept/conflict-disputed-identity",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "type": "preserves",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Conflict and disputed identity preserve disagreement instead of flattening it."
+    },
+    {
+      "id": "xananode.lineage:rel/git-backed-substrate-enables-history",
+      "source": "xananode.lineage:technology/git-backed-substrate",
+      "target": "xananode.example:concept/provenance",
+      "type": "enables",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "A Git-backed substrate enables history, branching, merging, authorship, and preservation."
+    },
+    {
+      "id": "xananode.lineage:rel/babel-maps-to-translation",
+      "source": "xananode.lineage:tool/babel",
+      "target": "xananode.example:concept/schema-extension",
+      "type": "maps_to",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Babel maps to future translation across machine-readable formats, languages, and ontologies."
+    },
+    {
+      "id": "xananode.lineage:rel/hyperland-vr-implements-spatial-navigation",
+      "source": "xananode.lineage:tool/hyperland-vr",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "type": "implements",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Hyperland VR imagines spatial navigation across federated substrates."
+    },
+    {
+      "id": "xananode.lineage:rel/lost-lineage-context-for-xananode",
+      "source": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "target": "xananode.example:concept/xananode",
+      "type": "context_for",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "The lost lineage frames XanaNode as a corrective for preserving connected, attributable knowledge."
+    },
+    {
+      "id": "xananode.lineage:rel/otlet-anticipated-knowledge-systems",
+      "source": "xananode.lineage:person/paul-otlet",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "anticipated",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Otlet anticipated global knowledge systems and networked documentation."
+    },
+    {
+      "id": "xananode.lineage:rel/wells-proposed-world-brain",
+      "source": "xananode.lineage:person/h-g-wells",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "proposed",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Wells proposed a planetary memory through the World Brain."
+    },
+    {
+      "id": "xananode.lineage:rel/bush-influenced-adams-lineage",
+      "source": "xananode.example:person/vannevar-bush",
+      "target": "xananode.lineage:person/douglas-adams",
+      "type": "influenced",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Bush's associative trails feed the lineage that Hyperland dramatized."
+    },
+    {
+      "id": "xananode.lineage:rel/nelson-influenced-hyperland",
+      "source": "xananode.example:person/ted-nelson",
+      "target": "xananode.lineage:publication/hyperland",
+      "type": "influenced",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "Nelson's hypertext and Xanadu ideas are central to Hyperland."
+    },
+    {
+      "id": "xananode.lineage:rel/adams-authored-hyperland",
+      "source": "xananode.lineage:person/douglas-adams",
+      "target": "xananode.lineage:publication/hyperland",
+      "type": "authored",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "Douglas Adams authored Hyperland."
+    },
+    {
+      "id": "xananode.lineage:rel/whitby-created-hyperland",
+      "source": "xananode.lineage:person/max-whitby",
+      "target": "xananode.lineage:publication/hyperland",
+      "type": "created",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Max Whitby produced and directed Hyperland."
+    },
+    {
+      "id": "xananode.lineage:rel/hyperland-features-tom-baker",
+      "source": "xananode.lineage:publication/hyperland",
+      "target": "xananode.lineage:person/tom-baker",
+      "type": "features",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Hyperland features Tom Baker as a software-agent persona."
+    },
+    {
+      "id": "xananode.lineage:rel/hyperland-contemporary-of-ted2",
+      "source": "xananode.lineage:publication/hyperland",
+      "target": "xananode.lineage:event/ted2-1990",
+      "type": "contemporary_of",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Hyperland and TED2 converge in the same 1990 hypermedia moment.",
+      "valid_from": "1990-01-01T00:00:00Z",
+      "valid_to": "1990-12-31T23:59:59Z"
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-occurred-at-monterey",
+      "source": "xananode.lineage:event/ted2-1990",
+      "target": "xananode.lineage:place/monterey-california",
+      "type": "occurred_at",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "TED2 occurred in Monterey, California."
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-adams",
+      "source": "xananode.lineage:event/ted2-1990",
+      "target": "xananode.lineage:person/douglas-adams",
+      "type": "features",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "TED2 featured Douglas Adams."
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-bob-stein",
+      "source": "xananode.lineage:event/ted2-1990",
+      "target": "xananode.lineage:person/bob-stein",
+      "type": "features",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "TED2 featured Bob Stein's interactive publishing branch."
+    },
+    {
+      "id": "xananode.lineage:rel/bob-stein-created-voyager",
+      "source": "xananode.lineage:person/bob-stein",
+      "target": "xananode.lineage:organization/voyager-company",
+      "type": "created",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Bob Stein created interactive publishing contexts including Voyager."
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-alan-kay",
+      "source": "xananode.lineage:event/ted2-1990",
+      "target": "xananode.lineage:person/alan-kay",
+      "type": "features",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "TED2 featured Alan Kay's dynamic media branch."
+    },
+    {
+      "id": "xananode.lineage:rel/alan-kay-shaped-dynamic-media",
+      "source": "xananode.lineage:person/alan-kay",
+      "target": "xananode.lineage:organization/xerox-parc",
+      "type": "shapes",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Kay's work belongs to the PARC dynamic-media and personal-computing lineage."
+    },
+    {
+      "id": "xananode.lineage:rel/hypercard-popularized-hypermedia",
+      "source": "xananode.lineage:technology/hypercard",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "popularized",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "HyperCard popularized personal hypermedia authoring."
+    },
+    {
+      "id": "xananode.lineage:rel/berners-lee-implemented-web",
+      "source": "xananode.lineage:person/tim-berners-lee",
+      "target": "xananode.lineage:technology/world-wide-web",
+      "type": "implements",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "Tim Berners-Lee implemented the Web as simple distributed hypertext."
+    },
+    {
+      "id": "xananode.lineage:rel/web-contrasts-with-xananode",
+      "source": "xananode.lineage:technology/world-wide-web",
+      "target": "xananode.example:concept/xananode",
+      "type": "contrasts_with",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "The Web solved broad publishing, while XanaNode focuses on semantic relationships, provenance, transclusion, and governance."
+    },
+    {
+      "id": "xananode.lineage:rel/aspen-anticipated-spatial-media",
+      "source": "xananode.lineage:project/aspen-movie-map",
+      "target": "xananode.lineage:publication/hyperland",
+      "type": "anticipated",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Aspen Movie Map anticipates navigable spatial media adjacent to Hyperland's concerns."
+    },
+    {
+      "id": "xananode.lineage:rel/trail-starts-with-lost-lineage",
+      "source": "xananode.lineage:trail/lost-lineage-intertwingled-trail",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "starts_with",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "The imported lineage trail starts with the lost-lineage frame."
+    },
+    {
+      "id": "xananode.lineage:rel/trail-arrives-at-xananode",
+      "source": "xananode.lineage:trail/lost-lineage-intertwingled-trail",
+      "target": "xananode.example:concept/xananode",
+      "type": "arrives_at",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "The imported lineage trail arrives at XanaNode."
     }
   ]
 }

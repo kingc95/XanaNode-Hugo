@@ -1,0 +1,28 @@
+{
+  "id": "xananode.example:fragment/xanadu-document-interconnection-enabling-re-use-0001",
+  "protocol_id": "xananode.example:fragment/xanadu-document-interconnection-enabling-re-use-0001",
+  "content_id": "sha256:48d3c63d7645b547a9d41b7f6f39d2f07a885f4a479353dd3ae8742c4225cbfe",
+  "version_id": "sha256:48d3c63d7645b547a9d41b7f6f39d2f07a885f4a479353dd3ae8742c4225cbfe",
+  "local_id": "xanadu-document-interconnection-enabling-re-use#0001",
+  "title": "Reusable Media Fragment",
+  "type": "fragment",
+  "summary": "Nelson's work provides a key source layer for transclusion, reusable media, and visible interconnection.",
+  "importance": 3,
+  "relationships": [],
+  "source_node": "xananode.example:source/xanadu-document-interconnection-enabling-re-use",
+  "source_content_id": "sha256:8f975bbba85c5ea8428de2a7bf1e0b51e12a5c4c844788ac1bc90521269db590",
+  "source_version_id": "sha256:8f975bbba85c5ea8428de2a7bf1e0b51e12a5c4c844788ac1bc90521269db590",
+  "fragment_id": "0001",
+  "tumbler": "xananode.example:source/xanadu-document-interconnection-enabling-re-use@sha256:8f975bbba85c5ea8428de2a7bf1e0b51e12a5c4c844788ac1bc90521269db590#fragment/0001@sha256:48d3c63d7645b547a9d41b7f6f39d2f07a885f4a479353dd3ae8742c4225cbfe",
+  "selector": {
+    "type": "semantic-anchor",
+    "value": "reusable-media-visible-interconnection"
+  },
+  "source_url": "https://www.xanadu.net/",
+  "rights_status": "copyrighted",
+  "outgoing_relationships": [],
+  "incoming_relationships": [],
+  "metadata": {
+    "generated": false
+  }
+}

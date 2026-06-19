@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:organization/nasa",
+  "title": "NASA",
+  "type": "organization",
+  "importance": 3,
+  "summary": "Agency associated with virtual environment workstation demonstrations in the spatial knowledge branch.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

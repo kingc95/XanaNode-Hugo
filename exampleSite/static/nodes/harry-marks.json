@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/harry-marks",
+  "title": "Harry Marks",
+  "type": "person",
+  "importance": 3,
+  "summary": "TED visual and media origin figure who participated in TED2.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

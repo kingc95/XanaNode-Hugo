@@ -1,57 +1,30 @@
 {
-  "id": "xananode.example:essay/start-here",
+  "id": "example.minimal:trail/start-here",
   "title": "Start Here",
-  "type": "essay",
+  "type": "trail",
   "importance": 5,
-  "summary": "The canonical starting essay for the XanaNode example substrate.",
+  "summary": "A short curated route introducing the substrate through source, claim, supporting context, and concept.",
+  "nodes": [
+    "example.minimal:source/as-we-may-think",
+    "example.minimal:concept/associative-trails",
+    "example.minimal:claim/substrate-is-structure",
+    "example.minimal:concept/knowledge-substrate"
+  ],
   "relationships": [
     {
-      "id": "xananode.example:rel/xananode-core-trail-starts_with-start-here-6",
+      "id": "example.minimal:rel/trail-starts-with-source",
       "type": "starts_with",
-      "source": "xananode.example:trail/xananode-core-trail",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/branching-orientation-trail-starts_with-start-here-21",
-      "type": "starts_with",
-      "source": "xananode.example:trail/branching-orientation-trail",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/start-here-explains-xananode-110",
-      "type": "explains",
-      "target": "xananode.example:concept/xananode",
+      "target": "example.minimal:source/as-we-may-think",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/start-here-explains-knowledge-substrate-111",
-      "type": "explains",
-      "target": "xananode.example:concept/knowledge-substrate",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/start-here-explains-federated-knowledge-substrates-112",
-      "type": "explains",
-      "target": "xananode.example:concept/federated-knowledge-substrates",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/start-here-contrasts_with-single-source-of-truth-113",
-      "type": "contrasts_with",
-      "target": "xananode.example:concept/single-source-of-truth",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/start-here-continues_to-xananode-core-trail-114",
-      "type": "continues_to",
-      "target": "xananode.example:trail/xananode-core-trail",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.example:rel/start-here-continues_to-protocol-artifacts-trail-115",
-      "type": "continues_to",
-      "target": "xananode.example:trail/protocol-artifacts-trail",
+      "id": "example.minimal:rel/trail-includes-associative-trails",
+      "type": "features",
+      "target": "example.minimal:concept/associative-trails",
       "direction": "outgoing"
     }
-  ]
+  ],
+  "imported_from": "nodes/trail-start-here.json",
+  "pack_id": "example.minimal",
+  "pack_mode": "mounted"
 }

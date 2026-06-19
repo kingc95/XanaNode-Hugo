@@ -1,0 +1,51 @@
+{
+  "id": "xananode.example:source/as-we-may-think",
+  "protocol_id": "xananode.example:source/as-we-may-think",
+  "content_id": "sha256:d0e91f6a5790e264906827a917d0d8f0c6490dfe32976e4ed44a9ef7268f941e",
+  "version_id": "sha256:d0e91f6a5790e264906827a917d0d8f0c6490dfe32976e4ed44a9ef7268f941e",
+  "local_id": "as-we-may-think",
+  "title": "As We May Think",
+  "type": "source",
+  "facets": [],
+  "summary": "Bush's essay proposing associative trails and the Memex as responses to information overload.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-source-as-we-may-think-documents-memex-174",
+      "type": "documents",
+      "source": "xananode.example:source/as-we-may-think",
+      "target": "memex",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-source-as-we-may-think-supports-claim-substrate-is-structure-175",
+      "type": "supports",
+      "source": "xananode.example:source/as-we-may-think",
+      "target": "claim-substrate-is-structure",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-fragment-as-we-may-think-0004-derived-from-xananode-example-source-as-we-may-think-1",
+      "type": "derived_from",
+      "source": "xananode.example:fragment/as-we-may-think-0004",
+      "target": "xananode.example:source/as-we-may-think",
+      "direction": "incoming",
+      "external": false
+    }
+  ],
+  "body": "\nBush argued that the growing record of knowledge required better associative methods for navigation and recall.\n",
+  "source_file": "content/sources/as-we-may-think.md",
+  "source_url": "https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/",
+  "rights_status": "copyrighted",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-source-as-we-may-think-documents-memex-174",
+    "xananode.example:rel/xananode-example-source-as-we-may-think-supports-claim-substrate-is-structure-175"
+  ],
+  "incoming_relationships": [
+    "xananode.example:rel/xananode-example-fragment-as-we-may-think-0004-derived-from-xananode-example-source-as-we-may-think-1"
+  ]
+}

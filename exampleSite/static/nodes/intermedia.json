@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:project/intermedia",
+  "title": "Intermedia",
+  "type": "project",
+  "importance": 4,
+  "summary": "A scholarly hypermedia system associated with Brown University.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

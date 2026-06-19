@@ -28,6 +28,12 @@
       "type": "extends",
       "source": "xananode.example:concept/xananode",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/alan-kay-extends-engelbart",
+      "type": "extends",
+      "source": "xananode.lineage:person/alan-kay",
+      "direction": "incoming"
     }
   ]
 }

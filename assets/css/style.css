@@ -91,6 +91,62 @@ html[data-xana-theme="classic"] {
   --xana-scrollbar-thumb-hover: #3366cc;
 }
 
+html[data-xana-theme="accessible"] {
+  color-scheme: dark;
+  --xana-bg: #000000;
+  --xana-surface: #0b0f14;
+  --xana-surface-elevated: #111827;
+  --xana-panel-bg: rgba(0, 0, 0, 0.98);
+  --xana-panel-border: rgba(255, 255, 255, 0.32);
+  --xana-text: #ffffff;
+  --xana-text-muted: #d1d5db;
+  --xana-accent: #f0e442;
+  --xana-accent-soft: rgba(240, 228, 66, 0.16);
+  --xana-accent-border: rgba(240, 228, 66, 0.55);
+  --xana-scrollbar-track: #111827;
+  --xana-scrollbar-thumb: #f0e442;
+  --xana-scrollbar-thumb-hover: #ffffff;
+  --xana-section-people: #56b4e9;
+  --xana-section-people-soft: rgba(86, 180, 233, 0.18);
+  --xana-section-people-border: rgba(86, 180, 233, 0.48);
+  --xana-section-claims: #d55e00;
+  --xana-section-claims-soft: rgba(213, 94, 0, 0.18);
+  --xana-section-claims-border: rgba(213, 94, 0, 0.5);
+  --xana-section-projects: #0072b2;
+  --xana-section-projects-soft: rgba(0, 114, 178, 0.22);
+  --xana-section-projects-border: rgba(0, 114, 178, 0.5);
+  --xana-section-sources: #e69f00;
+  --xana-section-sources-soft: rgba(230, 159, 0, 0.18);
+  --xana-section-sources-border: rgba(230, 159, 0, 0.5);
+  --xana-section-media: #56b4e9;
+  --xana-section-media-soft: rgba(86, 180, 233, 0.18);
+  --xana-section-media-border: rgba(86, 180, 233, 0.48);
+  --xana-section-observations: #cc79a7;
+  --xana-section-observations-soft: rgba(204, 121, 167, 0.2);
+  --xana-section-observations-border: rgba(204, 121, 167, 0.5);
+  --xana-section-concepts: #009e73;
+  --xana-section-concepts-soft: rgba(0, 158, 115, 0.2);
+  --xana-section-concepts-border: rgba(0, 158, 115, 0.5);
+  --xana-section-essays: #cc79a7;
+  --xana-section-essays-soft: rgba(204, 121, 167, 0.2);
+  --xana-section-essays-border: rgba(204, 121, 167, 0.5);
+  --xana-section-events: #e69f00;
+  --xana-section-events-soft: rgba(230, 159, 0, 0.18);
+  --xana-section-events-border: rgba(230, 159, 0, 0.5);
+  --xana-section-place: #009e73;
+  --xana-section-place-soft: rgba(0, 158, 115, 0.2);
+  --xana-section-place-border: rgba(0, 158, 115, 0.5);
+  --xana-section-technologies: #0072b2;
+  --xana-section-technologies-soft: rgba(0, 114, 178, 0.22);
+  --xana-section-technologies-border: rgba(0, 114, 178, 0.5);
+  --xana-section-organizations: #cc79a7;
+  --xana-section-organizations-soft: rgba(204, 121, 167, 0.2);
+  --xana-section-organizations-border: rgba(204, 121, 167, 0.5);
+  --xana-section-trails: #f0e442;
+  --xana-section-trails-soft: rgba(240, 228, 66, 0.16);
+  --xana-section-trails-border: rgba(240, 228, 66, 0.55);
+}
+
 *,
 *::before,
 *::after {
@@ -144,6 +200,15 @@ button {
   font-family: inherit;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--xana-accent);
+  outline-offset: 3px;
+}
+
 .site-header,
 .site-nav {
   display: none !important;
@@ -188,6 +253,7 @@ body.is-resizing {
 }
 
 #xana-graph {
+  --xana-controls-height: 64px;
   min-width: 0;
   height: 100%;
   width: 100%;
@@ -200,9 +266,13 @@ body.is-resizing {
 }
 
 #xana-stage {
-  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: var(--xana-controls-height);
+  height: auto;
   width: 100%;
-  position: relative;
   z-index: 1;
 }
 
@@ -253,6 +323,15 @@ html[data-xana-atmosphere="plain"] .xana-graph-atmosphere {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
   .xana-graph-atmosphere::before,
   .xana-graph-atmosphere::after {
     animation: none;
@@ -363,7 +442,7 @@ body,
   position: absolute;
   bottom: 0.9rem;
   right: 1rem;
-  z-index: 12;
+  z-index: 31;
   font-size: 0.6rem;
   color: rgba(148, 163, 184, 0.45);
   pointer-events: none;
@@ -633,7 +712,7 @@ body,
 
 .xana-controls-strip {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 1rem;
   left: 1.5rem;
   z-index: 30;
   display: flex;
@@ -687,6 +766,108 @@ body,
 }
 
 .xana-ctrl-btn.audit-pass {
+  background: rgba(85, 214, 190, 0.12);
+  border-color: rgba(85, 214, 190, 0.45);
+  color: #55d6be;
+}
+
+.xana-tools-popover {
+  position: absolute;
+  left: 1.5rem;
+  bottom: calc(var(--xana-controls-height) + 0.6rem);
+  z-index: 46;
+  width: min(300px, calc(100vw - 2rem));
+  padding: 0.8rem;
+  border: 1px solid var(--xana-panel-border);
+  border-radius: 0.9rem;
+  background: var(--xana-panel-bg);
+  color: var(--xana-text);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+  pointer-events: auto;
+}
+
+.xana-tools-popover[hidden] {
+  display: none;
+}
+
+.xana-tools-popover-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  color: var(--xana-text-muted);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+}
+
+.xana-tools-popover-header button {
+  border: 1px solid var(--xana-panel-border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--xana-text-muted);
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.xana-tools-list {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.xana-tools-section {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 0.35rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid var(--xana-panel-border);
+}
+
+.xana-tools-section-label {
+  color: var(--xana-text-muted);
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.xana-tools-link,
+.xana-tools-button {
+  width: 100%;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0.7rem;
+  border: 1px solid var(--xana-panel-border);
+  border-radius: 0.55rem;
+  background: var(--xana-surface-elevated);
+  color: var(--xana-text);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 760;
+  text-align: left;
+  text-decoration: none;
+}
+
+.xana-tools-link:hover,
+.xana-tools-button:hover {
+  border-color: rgba(85, 214, 190, 0.44);
+  color: var(--xana-accent);
+}
+
+.xana-tools-button.audit-active,
+.xana-tools-button.audit-fail {
+  background: rgba(255, 107, 107, 0.12);
+  border-color: rgba(255, 107, 107, 0.45);
+  color: #ff9a9a;
+}
+
+.xana-tools-button.audit-pass {
   background: rgba(85, 214, 190, 0.12);
   border-color: rgba(85, 214, 190, 0.45);
   color: #55d6be;
@@ -781,7 +962,7 @@ body,
 .xana-settings {
   position: absolute;
   left: 1.5rem;
-  bottom: 4.45rem;
+  bottom: calc(var(--xana-controls-height) + 0.6rem);
   z-index: 45;
   pointer-events: auto;
 }
@@ -826,7 +1007,7 @@ body,
 
 .xana-settings-group {
   display: grid;
-  grid-template-columns: 68px repeat(3, minmax(0, 1fr));
+  grid-template-columns: 68px repeat(auto-fit, minmax(70px, 1fr));
   gap: 0.35rem;
   align-items: center;
   margin: 0.45rem 0;
@@ -925,8 +1106,10 @@ body,
   position: absolute;
   z-index: 1;
   right: 1.5rem;
-  top: 1.5rem;
+  top: calc(52px + 1rem);
   width: min(360px, calc(100% - 3rem));
+  max-height: calc(100svh - 84px);
+  overflow: auto;
   padding: 1rem;
   border: 1px solid var(--xana-accent-border);
   border-radius: 0.9rem;
@@ -998,7 +1181,7 @@ html[data-xana-density="compact"] .xana-panel {
 }
 
 html[data-xana-density="compact"] .xana-panel h1 {
-  font-size: clamp(1.45rem, 2.4vw, 2.05rem);
+  font-size: calc(1.85rem * var(--xana-reader-scale));
 }
 
 html[data-xana-density="roomy"] .xana-panel {
@@ -1012,7 +1195,7 @@ html[data-xana-density="roomy"] .xana-settings-panel {
 html[data-xana-density="compact"] .xana-node-body,
 html[data-xana-density="compact"] .xana-summary,
 html[data-xana-density="compact"] .xana-connections {
-  font-size: 0.94rem;
+  font-size: 0.94em;
   line-height: 1.5;
 }
 
@@ -1033,7 +1216,7 @@ html[data-xana-density="compact"] .xana-search-wrap {
 
 .xana-filter-popover {
   position: absolute;
-  bottom: 4.5rem;
+  bottom: calc(var(--xana-controls-height) + 0.6rem);
   left: 1.5rem;
   z-index: 40;
   width: clamp(260px, 38vw, 360px);
@@ -1147,7 +1330,9 @@ html[data-xana-theme="classic"] .xana-ctrl-btn,
 html[data-xana-theme="light"] .xana-ctrl-speed,
 html[data-xana-theme="classic"] .xana-ctrl-speed,
 html[data-xana-theme="light"] .xana-filter-popover,
-html[data-xana-theme="classic"] .xana-filter-popover {
+html[data-xana-theme="classic"] .xana-filter-popover,
+html[data-xana-theme="light"] .xana-tools-popover,
+html[data-xana-theme="classic"] .xana-tools-popover {
   background: var(--xana-panel-bg);
   border-color: var(--xana-panel-border);
   color: var(--xana-text);
@@ -1188,8 +1373,8 @@ html[data-xana-theme="classic"] .xana-list-card {
 }
 
 html[data-xana-theme="light"] .xana-transclusion {
-  background: #f8fffd;
-  border-color: rgba(15, 118, 110, 0.24);
+  background: #ffffff;
+  border-color: rgba(15, 118, 110, 0.22);
 }
 
 html[data-xana-theme="classic"] .xana-transclusion {
@@ -1213,7 +1398,7 @@ html[data-xana-theme="classic"] .xana-transclusion-meta div {
 
 html[data-xana-theme="light"] .xana-transclusion blockquote,
 html[data-xana-theme="classic"] .xana-transclusion blockquote {
-  background: #ffffff;
+  background: transparent;
   color: var(--xana-text);
 }
 
@@ -1258,6 +1443,7 @@ html[data-xana-theme="classic"] .xana-navbar,
 html[data-xana-theme="classic"] .xana-search-wrap,
 html[data-xana-theme="classic"] .xana-filter-popover,
 html[data-xana-theme="classic"] .xana-settings-panel,
+html[data-xana-theme="classic"] .xana-tools-popover,
 html[data-xana-theme="classic"] .xana-list-hero,
 html[data-xana-theme="classic"] .xana-list-card,
 html[data-xana-theme="classic"] .xana-ctrl-btn,
@@ -1318,13 +1504,13 @@ html[data-xana-theme="classic"] a:visited {
 }
 
 .xana-panel h1 {
-  font-size: clamp(1.7rem, calc(3vw * var(--xana-reader-scale)), calc(2.5rem * var(--xana-reader-scale)));
+  font-size: calc(2.15rem * var(--xana-reader-scale));
   line-height: 1.05;
   margin: 0 0 16px;
 }
 
 .xana-panel h2 {
-  font-size: 0.92rem;
+  font-size: 0.92em;
   color: var(--xana-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -1336,7 +1522,7 @@ html[data-xana-theme="classic"] a:visited {
   align-items: center;
   padding: 0.18rem 0.6rem;
   border-radius: 999px;
-  font-size: 0.68rem;
+  font-size: 0.68em;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -2059,11 +2245,12 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
   padding: 48px 24px;
   height: 100vh;
   overflow-y: auto;
+  font-size: calc(1rem * var(--xana-reader-scale));
 }
 
 .xana-document-view h1,
 .xana-list-hero h1 {
-  font-size: clamp(3rem, 5vw, 4.8rem);
+  font-size: calc(3.4rem * var(--xana-reader-scale));
   line-height: 0.94;
   margin: 0;
 }
@@ -2104,22 +2291,22 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
 }
 
 .xana-transclusion {
-  margin: 1.4rem 0;
-  padding: 1rem;
-  border: 1px solid var(--xana-accent-border);
-  border-left: 4px solid var(--xana-accent);
-  border-radius: 8px;
-  background: color-mix(in srgb, var(--xana-accent-soft) 48%, var(--xana-panel-bg));
+  display: block;
+  margin: 0.15em 0 1em;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   color: var(--xana-text);
 }
 
 .xana-transclusion .transclusion-label {
-  margin-bottom: 0.8rem;
-  color: var(--xana-accent);
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 .xana-transclusion-header {
@@ -2146,8 +2333,9 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
 }
 
 .xana-transclusion h3 a,
-.xana-transclusion-citation a {
+.xana-transclusion-source {
   color: var(--xana-accent);
+  text-decoration: none;
 }
 
 .xana-transclusion-source-link {
@@ -2171,16 +2359,16 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
 
 .xana-transclusion-meta {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: 1fr;
   gap: 0.5rem;
-  margin: 0 0 0.9rem;
+  margin: 0.65rem 0 0;
 }
 
 .xana-transclusion-meta div {
   min-width: 0;
-  padding: 0.5rem 0.6rem;
+  padding: 0.45rem 0.55rem;
   border: 1px solid var(--xana-panel-border);
-  border-radius: 6px;
+  border-radius: 5px;
   background: var(--xana-surface-elevated);
 }
 
@@ -2204,11 +2392,21 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
 }
 
 .xana-transclusion blockquote {
-  margin: 0.85rem 0;
-  padding: 0.85rem 1rem;
-  border-left: 3px solid var(--xana-accent-border);
-  color: var(--xana-text);
-  background: color-mix(in srgb, var(--xana-surface-elevated) 86%, transparent);
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border-left: 0;
+  color: color-mix(in srgb, var(--xana-text) 96%, var(--xana-accent));
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: italic;
+  line-height: inherit;
+}
+
+.xana-transclusion blockquote p {
+  display: inline;
+  margin: 0;
 }
 
 .xana-transclusion blockquote p:last-child {
@@ -2216,9 +2414,53 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
 }
 
 .xana-transclusion-citation {
-  margin: 0.75rem 0 0;
+  display: inline;
+  margin: 0 0 0 0.35em;
   color: var(--xana-text-muted);
-  font-size: 0.85rem;
+  font-size: 0.68em;
+}
+
+.xana-transclusion-citation code {
+  color: inherit;
+  font-size: 0.95em;
+}
+
+.xana-transclusion-source {
+  border-bottom: 1px dotted color-mix(in srgb, var(--xana-accent) 45%, transparent);
+  color: color-mix(in srgb, var(--xana-accent) 70%, var(--xana-text-muted));
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.xana-transclusion-source:hover {
+  color: var(--xana-accent);
+}
+
+.xana-transclusion-details {
+  display: none;
+}
+
+.xana-transclusion-details summary {
+  display: inline-flex;
+  cursor: pointer;
+  color: var(--xana-text-muted);
+  font-size: 0.72em;
+  font-weight: 800;
+  list-style: none;
+}
+
+.xana-transclusion-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.xana-transclusion-details summary::after {
+  content: "+";
+  margin-left: 0.35rem;
+  color: var(--xana-accent);
+}
+
+.xana-transclusion-details[open] summary::after {
+  content: "-";
 }
 
 .xana-suggestion-report {
@@ -2270,6 +2512,7 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
+  font-size: calc(1rem * var(--xana-reader-scale));
   --xana-scrollbar-track: rgba(10, 14, 19, 0.9);
   --xana-accent-soft: rgba(85, 214, 190, 0.14);
   --xana-accent-border: rgba(85, 214, 190, 0.26);
@@ -2437,6 +2680,62 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
   margin-top: 22px;
 }
 
+.xana-review-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.xana-review-nav a {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.85rem;
+  border: 1px solid var(--xana-accent-border);
+  border-radius: 0.65rem;
+  background: rgba(13, 17, 23, 0.72);
+  color: var(--xana-accent);
+  text-decoration: none;
+  font-size: 0.86rem;
+  font-weight: 850;
+}
+
+.xana-review-section {
+  margin-top: 28px;
+}
+
+.xana-review-section > h2 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 1.15rem;
+}
+
+.xana-review-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.xana-review-status {
+  flex: 0 0 auto;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.26);
+  border-radius: 999px;
+  color: #cbd5e1;
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.xana-review-card[data-review-status="implemented"] .xana-review-status {
+  border-color: rgba(85, 214, 190, 0.42);
+  background: rgba(85, 214, 190, 0.12);
+  color: #55d6be;
+}
+
 .xana-list-card {
   padding: 18px 18px 16px;
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
@@ -2520,17 +2819,20 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
 @media (max-width: 900px) {
   html,
   body {
-    overflow: auto;
+    overflow: hidden;
   }
 
   .xana-app {
     width: 100%;
     min-height: 100svh;
-    height: auto;
+    height: 100svh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 48px minmax(56svh, 620px) auto;
-    overflow: visible;
+    grid-template-rows: 48px 1fr;
+    overflow: hidden;
+    --xana-mobile-panel-height: min(48svh, 440px);
+    --xana-mobile-search-height: 112px;
+    --xana-mobile-controls-height: 52px;
   }
 
   .xana-list-page {
@@ -2554,6 +2856,38 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
     grid-column: 1;
     grid-row: 1;
     padding: 0 0.75rem;
+    min-width: 0;
+  }
+
+  .xana-brand-home {
+    min-width: 0;
+    max-width: 100%;
+    gap: 0.45rem;
+    padding: 0.25rem 0.45rem 0.25rem 0.2rem;
+  }
+
+  .xana-brand-icon {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+  }
+
+  .xana-brand-text {
+    min-width: 0;
+  }
+
+  .xana-brand-name {
+    font-size: 0.78rem;
+  }
+
+  .xana-brand-tagline {
+    display: block;
+    max-width: calc(100vw - 6rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.52rem;
+    letter-spacing: 0.02em;
   }
 
   .xana-resizer {
@@ -2562,52 +2896,118 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
 
   #xana-graph {
     grid-row: 2;
-    height: min(68svh, 720px);
-    min-height: 560px;
+    align-self: start;
+    height: calc(100svh - 48px - var(--xana-mobile-panel-height));
+    min-height: 0;
   }
 
   #xana-stage {
-    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: var(--xana-mobile-search-height);
+    bottom: var(--xana-mobile-controls-height);
+    height: auto;
   }
 
   .xana-panel {
-    height: auto;
-    min-height: 42svh;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 80;
+    height: var(--xana-mobile-panel-height);
+    min-height: 260px;
+    max-height: 58svh;
     overflow-y: auto;
     padding: 22px;
+    background: var(--xana-bg);
+    border-top: 1px solid var(--xana-panel-border);
+    box-shadow: 0 -22px 70px rgba(0, 0, 0, 0.56);
+    border-radius: 16px 16px 0 0;
   }
 
-  .xana-brand-tagline {
-    display: none;
+  .xana-panel.panel-transitioning {
+    opacity: 1;
+    filter: none;
   }
 
   .xana-attribution {
-    bottom: 0.5rem;
+    bottom: 0.75rem;
     right: 0.6rem;
+    z-index: 31;
+    max-width: calc(100vw - 1.2rem);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   .xana-searcher {
-    left: 1rem;
+    top: 0.7rem;
+    left: 0.75rem;
+    right: 0.75rem;
     transform: none;
-    width: calc(100% - 2rem);
+    width: auto;
+    max-width: none;
+    box-sizing: border-box;
+  }
+
+  html[data-xana-density="compact"] .xana-searcher {
+    width: auto;
+    max-width: none;
+  }
+
+  .xana-search-wrap {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 1.25rem;
+    padding: 0.5rem 0.55rem 0.5rem 0.9rem;
+  }
+
+  html[data-xana-density="compact"] .xana-search-wrap {
+    padding: 0.46rem 0.55rem 0.46rem 0.9rem;
+  }
+
+  .xana-search-form input,
+  .xana-search-prompt {
+    font-size: 0.92rem;
+  }
+
+  .xana-depth-row {
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.15rem 0;
+  }
+
+  .xana-depth-row button {
+    flex: 1 1 0;
+    max-width: 5.5rem;
   }
 
   .xana-search-results {
-    max-height: 32svh;
+    max-height: min(32svh, calc(100svh - var(--xana-mobile-panel-height) - var(--xana-mobile-search-height) - 96px));
   }
 
   .xana-controls-strip {
     left: 1rem;
-    bottom: 1rem;
+    right: 1rem;
+    bottom: 0.6rem;
+    min-height: 38px;
+    max-width: calc(100vw - 2rem);
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .xana-settings {
+  .xana-settings,
+  .xana-tools-popover {
     left: 1rem;
+    z-index: 95;
     bottom: 4rem;
   }
 
   .xana-filter-popover {
     left: 1rem;
+    z-index: 95;
     bottom: 4rem;
     width: calc(100vw - 2.5rem);
     max-width: 400px;
@@ -2615,39 +3015,61 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
 
   .xana-audit-meta {
     left: 1rem;
+    z-index: 95;
     bottom: 4rem;
   }
 }
 
 @media (max-width: 700px) {
   .xana-app {
-    grid-template-rows: 48px minmax(58svh, 580px) auto;
+    grid-template-rows: 48px 1fr;
+    --xana-mobile-panel-height: min(50svh, 420px);
+    --xana-mobile-search-height: 104px;
+    --xana-mobile-controls-height: 48px;
   }
 
   #xana-graph {
-    min-height: 520px;
+    height: calc(100svh - 48px - var(--xana-mobile-panel-height));
+    min-height: 0;
   }
 
   .xana-panel {
     padding: 18px;
   }
 
-  .xana-settings {
+  .xana-settings,
+  .xana-tools-popover {
     right: 0.75rem;
     left: 0.75rem;
-    bottom: 4.25rem;
+    bottom: 4rem;
   }
 
-  .xana-settings-panel {
+  .xana-settings-panel,
+  .xana-tools-popover {
     width: 100%;
     max-height: 55svh;
+  }
+
+  .xana-controls-strip {
+    gap: 0.25rem;
+  }
+
+  .xana-ctrl-sep {
+    display: none;
+  }
+
+  .xana-ctrl-btn {
+    width: 30px;
+    height: 30px;
   }
 
   .xana-interface-tour-card {
     right: 0.75rem;
     left: 0.75rem;
-    top: 0.75rem;
+    top: calc(48px + 0.75rem);
     width: auto;
+    max-height: min(36svh, 280px);
+    background: var(--xana-bg);
   }
 
   .xana-trail-playlist-items button {

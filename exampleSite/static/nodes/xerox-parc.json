@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:organization/xerox-parc",
+  "title": "Xerox PARC",
+  "type": "organization",
+  "importance": 4,
+  "summary": "Research center associated with GUI, Smalltalk, personal computing, and dynamic media.",
+  "relationships": [],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

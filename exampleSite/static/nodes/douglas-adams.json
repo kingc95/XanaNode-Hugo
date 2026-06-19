@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/douglas-adams",
+  "title": "Douglas Adams",
+  "type": "person",
+  "importance": 5,
+  "summary": "Writer and technologist who popularized the fundamental interconnectedness of things and introduced Hyperland to a broad audience.",
+  "relationships": [],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

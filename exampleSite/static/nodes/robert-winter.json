@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/robert-winter",
+  "title": "Robert Winter",
+  "type": "person",
+  "importance": 3,
+  "summary": "Music scholar associated with interactive exploration of Beethoven's Ninth.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

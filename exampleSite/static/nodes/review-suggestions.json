@@ -3,22 +3,22 @@
   "title": "Review Suggestions",
   "type": "concept",
   "importance": 4,
-  "summary": "Generated, user-approved suggestions for autolinking node titles, aliases, and repeated fragments without rewriting content automatically.",
+  "summary": "Generated, user-approved suggestions for autolinking node titles, aliases, repeated fragments, and imported substrate changes without rewriting content automatically.",
   "relationships": [
     {
-      "id": "xananode.example:rel/review-suggestions-uses-typed-relationships-144",
+      "id": "xananode.example:rel/review-suggestions-uses-typed-relationships-149",
       "type": "uses",
       "target": "xananode.example:concept/typed-relationships",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/review-suggestions-uses-transclusion-145",
+      "id": "xananode.example:rel/review-suggestions-uses-transclusion-150",
       "type": "uses",
       "target": "xananode.example:concept/transclusion",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/protocol-artifacts-contains-review-suggestions-151",
+      "id": "xananode.example:rel/protocol-artifacts-contains-review-suggestions-156",
       "type": "contains",
       "source": "xananode.example:concept/protocol-artifacts",
       "direction": "incoming"

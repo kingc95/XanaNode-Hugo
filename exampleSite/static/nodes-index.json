@@ -1,0 +1,1083 @@
+{
+  "namespace": "xananode.example",
+  "nodes": [
+    {
+      "id": "xananode.example:trail/xananode-implementation-stack-trail",
+      "path": "nodes/xananode-implementation-stack-trail.json",
+      "title": "XanaNode Implementation Stack Trail",
+      "type": "trail",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:trail/xananode-core-trail",
+      "path": "nodes/xananode-core-trail.json",
+      "title": "XanaNode Core Trail",
+      "type": "trail",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:trail/protocol-artifacts-trail",
+      "path": "nodes/protocol-artifacts-trail.json",
+      "title": "Protocol Artifacts Trail",
+      "type": "trail",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:trail/historical-lineage-trail",
+      "path": "nodes/historical-lineage-trail.json",
+      "title": "Historical Lineage Trail",
+      "type": "trail",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:trail/branching-orientation-trail",
+      "path": "nodes/branching-orientation-trail.json",
+      "title": "Branching Orientation Trail",
+      "type": "trail",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:technology/static-publishing",
+      "path": "nodes/static-publishing.json",
+      "title": "Static Publishing",
+      "type": "technology",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:technology/hugo",
+      "path": "nodes/hugo.json",
+      "title": "Hugo",
+      "type": "technology",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:technology/cytoscape-js",
+      "path": "nodes/cytoscape-js.json",
+      "title": "Cytoscape.js",
+      "type": "technology",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/xananode-workspace-repo",
+      "path": "nodes/xananode-workspace-repo.json",
+      "title": "XanaNode Workspace Repository",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/xananode-studio-repo",
+      "path": "nodes/xananode-studio-repo.json",
+      "title": "XanaNode Studio Repository",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/xananode-protocol-repo",
+      "path": "nodes/xananode-protocol-repo.json",
+      "title": "XanaNode Protocol Repository",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/xananode-hugo-repo",
+      "path": "nodes/xananode-hugo-repo.json",
+      "title": "XanaNode Hugo Repository",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/xananode-core-sdk-repo",
+      "path": "nodes/xananode-core-sdk-repo.json",
+      "title": "XanaNode Core SDK Repository",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/xanadu-document-interconnection",
+      "path": "nodes/xanadu-document-interconnection.json",
+      "title": "Xanadu: Document Interconnection Enabling Re-use",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/source-code-link-decay-study",
+      "path": "nodes/source-code-link-decay-study.json",
+      "title": "9.6 Million Links in Source Code Comments",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/mother-of-all-demos",
+      "path": "nodes/mother-of-all-demos.json",
+      "title": "Mother of All Demos",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:source/as-we-may-think",
+      "path": "nodes/as-we-may-think.json",
+      "title": "As We May Think",
+      "type": "source",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/xananode-relationship-types",
+      "path": "nodes/xananode-relationship-types.json",
+      "title": "XanaNode Relationship Types",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/xananode-node-types",
+      "path": "nodes/xananode-node-types.json",
+      "title": "XanaNode Node Types",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/xananode-core-schema",
+      "path": "nodes/xananode-core-schema.json",
+      "title": "XanaNode Core Schema",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/substrate-relationships-schema",
+      "path": "nodes/substrate-relationships-schema.json",
+      "title": "Substrate Relationships Schema",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/substrate-node-schema",
+      "path": "nodes/substrate-node-schema.json",
+      "title": "Substrate Node Schema",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/substrate-manifest-schema",
+      "path": "nodes/substrate-manifest-schema.json",
+      "title": "Substrate Manifest Schema",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/namespace-schema",
+      "path": "nodes/namespace-schema.json",
+      "title": "Namespace Schema",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/merge-report-schema",
+      "path": "nodes/merge-report-schema.json",
+      "title": "Merge Report Schema",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:schema/compatibility-report-schema",
+      "path": "nodes/compatibility-report-schema.json",
+      "title": "Compatibility Report Schema",
+      "type": "schema",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:project/xananode-hugo-theme",
+      "path": "nodes/xananode-hugo-theme.json",
+      "title": "XanaNode Hugo Theme",
+      "type": "project",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:project/project-xanadu",
+      "path": "nodes/project-xanadu.json",
+      "title": "Project Xanadu",
+      "type": "project",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:project/nls",
+      "path": "nodes/nls.json",
+      "title": "NLS",
+      "type": "project",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:project/memex",
+      "path": "nodes/memex.json",
+      "title": "Memex",
+      "type": "project",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:person/vannevar-bush",
+      "path": "nodes/vannevar-bush.json",
+      "title": "Vannevar Bush",
+      "type": "person",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:person/ted-nelson",
+      "path": "nodes/ted-nelson.json",
+      "title": "Ted Nelson",
+      "type": "person",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:person/douglas-engelbart",
+      "path": "nodes/douglas-engelbart.json",
+      "title": "Douglas Engelbart",
+      "type": "person",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:observation/link-rot",
+      "path": "nodes/link-rot.json",
+      "title": "Link Rot",
+      "type": "observation",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:media/xananode-icon",
+      "path": "nodes/xananode-icon.json",
+      "title": "XanaNode Icon",
+      "type": "media",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:essay/what-is-xananode",
+      "path": "nodes/what-is-xananode.json",
+      "title": "What Is XanaNode?",
+      "type": "essay",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:essay/using-hugo-with-protocol-json",
+      "path": "nodes/using-hugo-with-protocol-json.json",
+      "title": "Using Hugo with Protocol JSON",
+      "type": "essay",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:essay/start-here",
+      "path": "nodes/start-here.json",
+      "title": "Start Here",
+      "type": "essay",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/xananode",
+      "path": "nodes/xananode.json",
+      "title": "XanaNode",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/unlabeled-hyperlink",
+      "path": "nodes/unlabeled-hyperlink.json",
+      "title": "Unlabeled Hyperlink",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/typed-relationships",
+      "path": "nodes/typed-relationships.json",
+      "title": "Typed Relationships",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/tumbler-addressing",
+      "path": "nodes/tumbler-addressing.json",
+      "title": "Tumbler Addressing",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/transclusion",
+      "path": "nodes/transclusion.json",
+      "title": "Transclusion",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/substrate-relationship-list",
+      "path": "nodes/substrate-relationship-list.json",
+      "title": "Substrate Relationship List",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/substrate-node-record",
+      "path": "nodes/substrate-node-record.json",
+      "title": "Substrate Node Record",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/substrate-manifest",
+      "path": "nodes/substrate-manifest.json",
+      "title": "Substrate Manifest",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/single-source-of-truth",
+      "path": "nodes/single-source-of-truth.json",
+      "title": "Single Source of Truth",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/schema-extension",
+      "path": "nodes/schema-extension.json",
+      "title": "Schema Extension",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/review-suggestions",
+      "path": "nodes/review-suggestions.json",
+      "title": "Review Suggestions",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/provenance",
+      "path": "nodes/provenance.json",
+      "title": "Provenance",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/protocol-artifacts",
+      "path": "nodes/protocol-artifacts.json",
+      "title": "Protocol Artifacts",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/namespacing",
+      "path": "nodes/namespacing.json",
+      "title": "Namespacing",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/namespace-registry",
+      "path": "nodes/namespace-registry.json",
+      "title": "Namespace Registry",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/moderation-model",
+      "path": "nodes/moderation-model.json",
+      "title": "Moderation Model",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/merge-validation",
+      "path": "nodes/merge-validation.json",
+      "title": "Merge Validation",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/merge-report",
+      "path": "nodes/merge-report.json",
+      "title": "Merge Report",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/known-implementations-registry",
+      "path": "nodes/known-implementations-registry.json",
+      "title": "Known Implementations Registry",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/knowledge-substrate",
+      "path": "nodes/knowledge-substrate.json",
+      "title": "Knowledge Substrate",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/independent-moderation",
+      "path": "nodes/independent-moderation.json",
+      "title": "Independent Moderation",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/fragment-node",
+      "path": "nodes/fragment-node.json",
+      "title": "Fragment Node",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/federation-rules",
+      "path": "nodes/federation-rules.json",
+      "title": "Federation Rules",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/federation-example",
+      "path": "nodes/federation-example.json",
+      "title": "Federation Example",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/federated-knowledge-substrates",
+      "path": "nodes/federated-knowledge-substrates.json",
+      "title": "Federated Knowledge Substrates",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/dispute-resolution",
+      "path": "nodes/dispute-resolution.json",
+      "title": "Dispute Resolution",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/deep-linking",
+      "path": "nodes/deep-linking.json",
+      "title": "Deep Linking",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/custom-extension-substrate",
+      "path": "nodes/custom-extension-substrate.json",
+      "title": "Custom Extension Substrate",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/compatibility-report",
+      "path": "nodes/compatibility-report.json",
+      "title": "Compatibility Report",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/compatibility-levels",
+      "path": "nodes/compatibility-levels.json",
+      "title": "Compatibility Levels",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/civilizational-memory",
+      "path": "nodes/civilizational-memory.json",
+      "title": "Civilizational Memory",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:concept/canonical-type-policy",
+      "path": "nodes/canonical-type-policy.json",
+      "title": "Canonical Type Policy",
+      "type": "concept",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:claim/claim-substrate-is-structure",
+      "path": "nodes/claim-substrate-is-structure.json",
+      "title": "A knowledge substrate is structure, not information",
+      "type": "claim",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:claim/claim-relationships-preserve-context",
+      "path": "nodes/claim-relationships-preserve-context.json",
+      "title": "Typed relationships preserve context that hyperlinks lose",
+      "type": "claim",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:claim/claim-merge-without-collapse",
+      "path": "nodes/claim-merge-without-collapse.json",
+      "title": "Substrates should merge without collapsing disagreement",
+      "type": "claim",
+      "imported": false
+    },
+    {
+      "id": "example.minimal:claim/substrate-is-structure",
+      "path": "nodes/substrate-is-structure.json",
+      "title": "A knowledge substrate is structure, not just information",
+      "type": "claim",
+      "imported": true
+    },
+    {
+      "id": "example.minimal:concept/associative-trails",
+      "path": "nodes/associative-trails.json",
+      "title": "Associative Trails",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "example.minimal:essay/relationship-navigation-intro",
+      "path": "nodes/relationship-navigation-intro.json",
+      "title": "Relationship Navigation Intro",
+      "type": "essay",
+      "imported": true
+    },
+    {
+      "id": "example.minimal:fragment/as-we-may-think-0004",
+      "path": "nodes/as-we-may-think-0004.json",
+      "title": "As We May Think Fragment 0004",
+      "type": "fragment",
+      "imported": true
+    },
+    {
+      "id": "example.minimal:concept/knowledge-substrate",
+      "path": "nodes/knowledge-substrate.json",
+      "title": "Knowledge Substrate",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "example.minimal:person/example-maintainer",
+      "path": "nodes/example-maintainer.json",
+      "title": "Example Maintainer",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "example.minimal:source/as-we-may-think",
+      "path": "nodes/as-we-may-think.json",
+      "title": "As We May Think",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "example.minimal:trail/start-here",
+      "path": "nodes/start-here.json",
+      "title": "Start Here",
+      "type": "trail",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/gottfried-wilhelm-leibniz",
+      "path": "nodes/gottfried-wilhelm-leibniz.json",
+      "title": "Gottfried Wilhelm Leibniz",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/wilhelm-ostwald",
+      "path": "nodes/wilhelm-ostwald.json",
+      "title": "Wilhelm Ostwald",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/jorge-luis-borges",
+      "path": "nodes/jorge-luis-borges.json",
+      "title": "Jorge Luis Borges",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:publication/the-garden-of-forking-paths",
+      "path": "nodes/the-garden-of-forking-paths.json",
+      "title": "The Garden of Forking Paths",
+      "type": "publication",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/andries-van-dam",
+      "path": "nodes/andries-van-dam.json",
+      "title": "Andries van Dam",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:place/brown-university",
+      "path": "nodes/brown-university.json",
+      "title": "Brown University",
+      "type": "place",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/hypertext-editing-system",
+      "path": "nodes/hypertext-editing-system.json",
+      "title": "Hypertext Editing System",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/fress",
+      "path": "nodes/fress.json",
+      "title": "FRESS",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/intermedia",
+      "path": "nodes/intermedia.json",
+      "title": "Intermedia",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/nicholas-negroponte",
+      "path": "nodes/nicholas-negroponte.json",
+      "title": "Nicholas Negroponte",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/seymour-papert",
+      "path": "nodes/seymour-papert.json",
+      "title": "Seymour Papert",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/marvin-minsky",
+      "path": "nodes/marvin-minsky.json",
+      "title": "Marvin Minsky",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:organization/mit-media-lab",
+      "path": "nodes/mit-media-lab.json",
+      "title": "MIT Media Lab",
+      "type": "organization",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/hans-peter-brondmo",
+      "path": "nodes/hans-peter-brondmo.json",
+      "title": "Hans Peter Brondmo",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/micons",
+      "path": "nodes/micons.json",
+      "title": "Micons",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/robert-winter",
+      "path": "nodes/robert-winter.json",
+      "title": "Robert Winter",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/interactive-beethoven-ninth",
+      "path": "nodes/interactive-beethoven-ninth.json",
+      "title": "Interactive Beethoven's Ninth",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/robert-abel",
+      "path": "nodes/robert-abel.json",
+      "title": "Robert Abel",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/interactive-guernica",
+      "path": "nodes/interactive-guernica.json",
+      "title": "Interactive Guernica",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/ivan-sutherland",
+      "path": "nodes/ivan-sutherland.json",
+      "title": "Ivan Sutherland",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/jaron-lanier",
+      "path": "nodes/jaron-lanier.json",
+      "title": "Jaron Lanier",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:organization/vpl-research",
+      "path": "nodes/vpl-research.json",
+      "title": "VPL Research",
+      "type": "organization",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/scott-fisher",
+      "path": "nodes/scott-fisher.json",
+      "title": "Scott Fisher",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:organization/nasa",
+      "path": "nodes/nasa.json",
+      "title": "NASA",
+      "type": "organization",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:publication/dirk-gentlys-holistic-detective-agency",
+      "path": "nodes/dirk-gentlys-holistic-detective-agency.json",
+      "title": "Dirk Gently's Holistic Detective Agency",
+      "type": "publication",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:organization/bbc-two",
+      "path": "nodes/bbc-two.json",
+      "title": "BBC Two",
+      "type": "organization",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/richard-saul-wurman",
+      "path": "nodes/richard-saul-wurman.json",
+      "title": "Richard Saul Wurman",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/harry-marks",
+      "path": "nodes/harry-marks.json",
+      "title": "Harry Marks",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/john-sculley",
+      "path": "nodes/john-sculley.json",
+      "title": "John Sculley",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/apple-knowledge-navigator",
+      "path": "nodes/apple-knowledge-navigator.json",
+      "title": "Apple Knowledge Navigator",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/bill-atkinson",
+      "path": "nodes/bill-atkinson.json",
+      "title": "Bill Atkinson",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/herbie-hancock",
+      "path": "nodes/herbie-hancock.json",
+      "title": "Herbie Hancock",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/nigel-holmes",
+      "path": "nodes/nigel-holmes.json",
+      "title": "Nigel Holmes",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/laurie-anderson",
+      "path": "nodes/laurie-anderson.json",
+      "title": "Laurie Anderson",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/bran-ferren",
+      "path": "nodes/bran-ferren.json",
+      "title": "Bran Ferren",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/robert-cailliau",
+      "path": "nodes/robert-cailliau.json",
+      "title": "Robert Cailliau",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:place/cern",
+      "path": "nodes/cern.json",
+      "title": "CERN",
+      "type": "place",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/html",
+      "path": "nodes/html.json",
+      "title": "HTML",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/url-uri",
+      "path": "nodes/url-uri.json",
+      "title": "URL/URI",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/http",
+      "path": "nodes/http.json",
+      "title": "HTTP",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:organization/ncsa",
+      "path": "nodes/ncsa.json",
+      "title": "NCSA",
+      "type": "organization",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/marc-andreessen",
+      "path": "nodes/marc-andreessen.json",
+      "title": "Marc Andreessen",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/mosaic",
+      "path": "nodes/mosaic.json",
+      "title": "Mosaic",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:concept/web-as-incomplete-hypertext",
+      "path": "nodes/web-as-incomplete-hypertext.json",
+      "title": "The Web as Incomplete Hypertext",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/guide",
+      "path": "nodes/guide.json",
+      "title": "Guide",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/storyspace",
+      "path": "nodes/storyspace.json",
+      "title": "Storyspace",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/zog-kms",
+      "path": "nodes/zog-kms.json",
+      "title": "ZOG/KMS",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/xanadu-at-autodesk",
+      "path": "nodes/xanadu-at-autodesk.json",
+      "title": "Xanadu at Autodesk",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:concept/conflict-disputed-identity",
+      "path": "nodes/conflict-disputed-identity.json",
+      "title": "Conflict and Disputed Identity",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/git-backed-substrate",
+      "path": "nodes/git-backed-substrate.json",
+      "title": "Git-backed Substrate",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:tool/babel",
+      "path": "nodes/babel.json",
+      "title": "Babel",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:tool/hyperland-vr",
+      "path": "nodes/hyperland-vr.json",
+      "title": "Hyperland VR",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "path": "nodes/lost-lineage-human-knowledge-augmentation.json",
+      "title": "Lost Lineage of Human Knowledge Augmentation",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/paul-otlet",
+      "path": "nodes/paul-otlet.json",
+      "title": "Paul Otlet",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/h-g-wells",
+      "path": "nodes/h-g-wells.json",
+      "title": "H. G. Wells",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/douglas-adams",
+      "path": "nodes/douglas-adams.json",
+      "title": "Douglas Adams",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:publication/hyperland",
+      "path": "nodes/hyperland.json",
+      "title": "Hyperland",
+      "type": "publication",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/tom-baker",
+      "path": "nodes/tom-baker.json",
+      "title": "Tom Baker",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/max-whitby",
+      "path": "nodes/max-whitby.json",
+      "title": "Max Whitby",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:event/ted2-1990",
+      "path": "nodes/ted2-1990.json",
+      "title": "TED2",
+      "type": "event",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:place/monterey-california",
+      "path": "nodes/monterey-california.json",
+      "title": "Monterey, California",
+      "type": "place",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/bob-stein",
+      "path": "nodes/bob-stein.json",
+      "title": "Bob Stein",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:organization/voyager-company",
+      "path": "nodes/voyager-company.json",
+      "title": "Voyager Company",
+      "type": "organization",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/alan-kay",
+      "path": "nodes/alan-kay.json",
+      "title": "Alan Kay",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:organization/xerox-parc",
+      "path": "nodes/xerox-parc.json",
+      "title": "Xerox PARC",
+      "type": "organization",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/hypercard",
+      "path": "nodes/hypercard.json",
+      "title": "HyperCard",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:person/tim-berners-lee",
+      "path": "nodes/tim-berners-lee.json",
+      "title": "Tim Berners-Lee",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:technology/world-wide-web",
+      "path": "nodes/world-wide-web.json",
+      "title": "World Wide Web",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:project/aspen-movie-map",
+      "path": "nodes/aspen-movie-map.json",
+      "title": "Aspen Movie Map",
+      "type": "project",
+      "imported": true
+    },
+    {
+      "id": "xananode.lineage:trail/lost-lineage-intertwingled-trail",
+      "path": "nodes/lost-lineage-intertwingled-trail.json",
+      "title": "Lost Lineage Intertwingled Trail",
+      "type": "trail",
+      "imported": true
+    },
+    {
+      "id": "xananode.example:fragment/xanadu-document-interconnection-0001",
+      "path": "nodes/xanadu-document-interconnection-0001.json",
+      "title": "Reusable Media Fragment",
+      "type": "fragment",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:fragment/mother-of-all-demos-0001",
+      "path": "nodes/mother-of-all-demos-0001.json",
+      "title": "Augmenting Human Intelligence Fragment",
+      "type": "fragment",
+      "imported": false
+    },
+    {
+      "id": "xananode.example:fragment/as-we-may-think-0004",
+      "path": "nodes/as-we-may-think-0004.json",
+      "title": "Associative Trails Fragment",
+      "type": "fragment",
+      "imported": false
+    }
+  ]
+}

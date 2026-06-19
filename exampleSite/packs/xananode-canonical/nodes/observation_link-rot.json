@@ -1,0 +1,57 @@
+{
+  "id": "xananode.example:observation/link-rot",
+  "protocol_id": "xananode.example:observation/link-rot",
+  "content_id": "sha256:cb934cfc8deaec76b176aa7bf8bd3ebb92d6123ba06df6520a011693108d55ca",
+  "version_id": "sha256:cb934cfc8deaec76b176aa7bf8bd3ebb92d6123ba06df6520a011693108d55ca",
+  "local_id": "link-rot",
+  "title": "Link Rot",
+  "type": "observation",
+  "facets": [],
+  "summary": "A failure mode where references embedded in digital artifacts decay, move, disappear, or lose context over time.",
+  "importance": 4,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-observation-link-rot-demonstrates-unlabeled-hyperlink-123",
+      "type": "demonstrates",
+      "source": "xananode.example:observation/link-rot",
+      "target": "unlabeled-hyperlink",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-observation-link-rot-threatens-provenance-124",
+      "type": "threatens",
+      "source": "xananode.example:observation/link-rot",
+      "target": "provenance",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-observation-link-rot-supported-by-source-code-link-decay-study-125",
+      "type": "supported_by",
+      "source": "xananode.example:observation/link-rot",
+      "target": "source-code-link-decay-study",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-observation-link-rot-explained-by-knowledge-substrate-126",
+      "type": "explained_by",
+      "source": "xananode.example:observation/link-rot",
+      "target": "knowledge-substrate",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nLink rot shows why ordinary document-embedded references are fragile.\n\nThe target may disappear, move, change meaning, or lose its surrounding context.\n",
+  "source_file": "content/observations/link-rot.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-observation-link-rot-demonstrates-unlabeled-hyperlink-123",
+    "xananode.example:rel/xananode-example-observation-link-rot-threatens-provenance-124",
+    "xananode.example:rel/xananode-example-observation-link-rot-supported-by-source-code-link-decay-study-125",
+    "xananode.example:rel/xananode-example-observation-link-rot-explained-by-knowledge-substrate-126"
+  ],
+  "incoming_relationships": []
+}

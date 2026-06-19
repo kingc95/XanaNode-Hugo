@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:concept/web-as-incomplete-hypertext",
+  "title": "The Web as Incomplete Hypertext",
+  "type": "concept",
+  "importance": 5,
+  "summary": "The Web solved publishing and linking, but not transclusion, authorship, semantic identity, provenance, or relationship governance.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

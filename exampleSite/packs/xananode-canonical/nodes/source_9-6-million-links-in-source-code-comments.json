@@ -1,0 +1,41 @@
+{
+  "id": "xananode.example:source/9-6-million-links-in-source-code-comments",
+  "protocol_id": "xananode.example:source/9-6-million-links-in-source-code-comments",
+  "content_id": "sha256:6ee414de9aff4fe11067f58df98b526be5748c02918d3180c3731ad374c367cc",
+  "version_id": "sha256:6ee414de9aff4fe11067f58df98b526be5748c02918d3180c3731ad374c367cc",
+  "local_id": "9-6-million-links-in-source-code-comments",
+  "title": "9.6 Million Links in Source Code Comments",
+  "type": "source",
+  "facets": [],
+  "summary": "A large-scale empirical study of link decay in source-code comments.",
+  "importance": 4,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-source-9-6-million-links-in-source-code-comments-documents-link-rot-178",
+      "type": "documents",
+      "source": "xananode.example:source/9-6-million-links-in-source-code-comments",
+      "target": "link-rot",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-source-9-6-million-links-in-source-code-comments-supports-claim-relationships-preserve-context-179",
+      "type": "supports",
+      "source": "xananode.example:source/9-6-million-links-in-source-code-comments",
+      "target": "claim-relationships-preserve-context",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nThis source records empirical evidence that embedded references in digital artifacts can decay or lose context over time.\n",
+  "source_file": "content/sources/source-code-link-decay-study.md",
+  "source_url": "https://arxiv.org/abs/1901.07440",
+  "rights_status": "open-access",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-source-9-6-million-links-in-source-code-comments-documents-link-rot-178",
+    "xananode.example:rel/xananode-example-source-9-6-million-links-in-source-code-comments-supports-claim-relationships-preserve-context-179"
+  ],
+  "incoming_relationships": []
+}

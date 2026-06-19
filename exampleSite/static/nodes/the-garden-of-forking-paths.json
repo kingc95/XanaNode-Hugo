@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:publication/the-garden-of-forking-paths",
+  "title": "The Garden of Forking Paths",
+  "type": "publication",
+  "importance": 4,
+  "summary": "A Borges story frequently read as a literary ancestor of nonlinear textual structures.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

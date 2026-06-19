@@ -1,0 +1,60 @@
+{
+  "id": "xananode.example:source/xanadu-document-interconnection-enabling-re-use",
+  "protocol_id": "xananode.example:source/xanadu-document-interconnection-enabling-re-use",
+  "content_id": "sha256:8f975bbba85c5ea8428de2a7bf1e0b51e12a5c4c844788ac1bc90521269db590",
+  "version_id": "sha256:8f975bbba85c5ea8428de2a7bf1e0b51e12a5c4c844788ac1bc90521269db590",
+  "local_id": "xanadu-document-interconnection-enabling-re-use",
+  "title": "Xanadu: Document Interconnection Enabling Re-use",
+  "type": "source",
+  "facets": [],
+  "summary": "A paper describing Xanadu concepts including reusable media, visible interconnection, and transclusion.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-source-xanadu-document-interconnection-enabling-re-use-documents-project-xanadu-180",
+      "type": "documents",
+      "source": "xananode.example:source/xanadu-document-interconnection-enabling-re-use",
+      "target": "project-xanadu",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-source-xanadu-document-interconnection-enabling-re-use-defines-transclusion-181",
+      "type": "defines",
+      "source": "xananode.example:source/xanadu-document-interconnection-enabling-re-use",
+      "target": "transclusion",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-source-xanadu-document-interconnection-enabling-re-use-supports-claim-relationships-preserve-context-182",
+      "type": "supports",
+      "source": "xananode.example:source/xanadu-document-interconnection-enabling-re-use",
+      "target": "claim-relationships-preserve-context",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-fragment-xanadu-document-interconnection-enabling-re-use-0001-derived-from-xananode-example-source-xanadu-document-interconnection-enabling-re-use-3",
+      "type": "derived_from",
+      "source": "xananode.example:fragment/xanadu-document-interconnection-enabling-re-use-0001",
+      "target": "xananode.example:source/xanadu-document-interconnection-enabling-re-use",
+      "direction": "incoming",
+      "external": false
+    }
+  ],
+  "body": "\nNelson's work provides a key source layer for [transclusion](/node/transclusion), reusable media, and visible interconnection.\n",
+  "source_file": "content/sources/xanadu-document-interconnection.md",
+  "source_url": "https://www.xanadu.net/",
+  "rights_status": "copyrighted",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-source-xanadu-document-interconnection-enabling-re-use-documents-project-xanadu-180",
+    "xananode.example:rel/xananode-example-source-xanadu-document-interconnection-enabling-re-use-defines-transclusion-181",
+    "xananode.example:rel/xananode-example-source-xanadu-document-interconnection-enabling-re-use-supports-claim-relationships-preserve-context-182"
+  ],
+  "incoming_relationships": [
+    "xananode.example:rel/xananode-example-fragment-xanadu-document-interconnection-enabling-re-use-0001-derived-from-xananode-example-source-xanadu-document-interconnection-enabling-re-use-3"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+  "title": "Lost Lineage of Human Knowledge Augmentation",
+  "type": "concept",
+  "importance": 5,
+  "summary": "A parallel history of computing tried to preserve human understanding as connected, navigable, attributable knowledge.",
+  "relationships": [],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:person/marvin-minsky",
+  "title": "Marvin Minsky",
+  "type": "person",
+  "importance": 4,
+  "summary": "AI researcher whose work contextualizes intelligent agents and cognitive modeling.",
+  "relationships": [],
+  "imported_from": "nodes-extended.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

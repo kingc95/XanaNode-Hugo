@@ -18,31 +18,31 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/known-implementations-registry-supports-compatibility-levels-169",
+      "id": "xananode.example:rel/known-implementations-registry-supports-compatibility-levels-174",
       "type": "supports",
       "source": "xananode.example:concept/known-implementations-registry",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/compatibility-report-documents-compatibility-levels-202",
+      "id": "xananode.example:rel/compatibility-report-documents-compatibility-levels-207",
       "type": "documents",
       "source": "xananode.example:concept/compatibility-report",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/compatibility-levels-uses-compatibility-report-204",
+      "id": "xananode.example:rel/compatibility-levels-uses-compatibility-report-209",
       "type": "uses",
       "target": "xananode.example:concept/compatibility-report",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/compatibility-levels-requires-substrate-manifest-205",
+      "id": "xananode.example:rel/compatibility-levels-requires-substrate-manifest-210",
       "type": "requires",
       "target": "xananode.example:concept/substrate-manifest",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-compatibility-levels-206",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-compatibility-levels-211",
       "type": "requires",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "incoming"

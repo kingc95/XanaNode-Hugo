@@ -34,6 +34,18 @@
       "type": "influenced",
       "target": "xananode.example:concept/xananode",
       "direction": "outgoing"
+    },
+    {
+      "id": "xananode.lineage:rel/van-dam-collaborated-with-nelson",
+      "type": "collaborated_with",
+      "source": "xananode.lineage:person/andries-van-dam",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/nelson-influenced-hyperland",
+      "type": "influenced",
+      "target": "xananode.lineage:publication/hyperland",
+      "direction": "outgoing"
     }
   ]
 }

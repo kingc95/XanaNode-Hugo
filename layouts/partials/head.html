@@ -28,7 +28,7 @@
       var theme = JSON.parse(localStorage.getItem("xananode.colorTheme") || "\"dark\"");
       var density = JSON.parse(localStorage.getItem("xananode.uiDensity") || "\"comfortable\"");
       var readerFontScale = JSON.parse(localStorage.getItem("xananode.readerFontScale") || "100");
-      var atmosphere = JSON.parse(localStorage.getItem("xananode.graphAtmosphere") || "\"alive\"");
+      var atmosphere = JSON.parse(localStorage.getItem("xananode.graphAtmosphere") || "\"still\"");
       document.documentElement.dataset.xanaTheme = theme;
       document.documentElement.dataset.xanaDensity = density;
       document.documentElement.dataset.xanaAtmosphere = atmosphere;
@@ -50,6 +50,7 @@
 {{- $themeConfig := dict
   "brand" $brandConfig
   "homeNode" (index $xanaParams "homeNode" | default "start-here")
+  "links" (index $xanaParams "links" | default (index $brandParams "links" | default slice))
   "searchPrompts" (index $xanaParams "searchPrompts" | default slice)
 -}}
 <script>

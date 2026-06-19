@@ -1,0 +1,420 @@
+{
+  "nodes": [
+    {
+      "id": "xananode.lineage:person/gottfried-wilhelm-leibniz",
+      "title": "Gottfried Wilhelm Leibniz",
+      "type": "person",
+      "importance": 4,
+      "summary": "Philosopher and mathematician associated with universal symbolic reasoning and the calculus of thought.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/wilhelm-ostwald",
+      "title": "Wilhelm Ostwald",
+      "type": "person",
+      "importance": 3,
+      "summary": "Organizer of Die Bruecke, an effort to standardize and organize world knowledge.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/jorge-luis-borges",
+      "title": "Jorge Luis Borges",
+      "type": "person",
+      "importance": 4,
+      "summary": "Writer whose nonlinear literary structures are often treated as hypertext-adjacent ancestry.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:publication/the-garden-of-forking-paths",
+      "title": "The Garden of Forking Paths",
+      "type": "publication",
+      "importance": 4,
+      "summary": "A Borges story frequently read as a literary ancestor of nonlinear textual structures.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/andries-van-dam",
+      "title": "Andries van Dam",
+      "type": "person",
+      "importance": 4,
+      "summary": "Computer scientist associated with HES, FRESS, and the Brown hypertext lineage.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:place/brown-university",
+      "title": "Brown University",
+      "type": "place",
+      "importance": 4,
+      "summary": "Early hypertext research center associated with HES, FRESS, and Intermedia.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:project/hypertext-editing-system",
+      "title": "Hypertext Editing System",
+      "type": "project",
+      "importance": 4,
+      "summary": "An early usable hypertext system developed at Brown University.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:project/fress",
+      "title": "FRESS",
+      "type": "project",
+      "importance": 4,
+      "summary": "A Brown University hypertext system in the early scholarly hypertext lineage.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:project/intermedia",
+      "title": "Intermedia",
+      "type": "project",
+      "importance": 4,
+      "summary": "A scholarly hypermedia system associated with Brown University.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/nicholas-negroponte",
+      "title": "Nicholas Negroponte",
+      "type": "person",
+      "importance": 4,
+      "summary": "Media Lab figure associated with intelligent media and interactive information spaces.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/seymour-papert",
+      "title": "Seymour Papert",
+      "type": "person",
+      "importance": 4,
+      "summary": "Constructionism and Logo pioneer who shaped computers as learning media.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/marvin-minsky",
+      "title": "Marvin Minsky",
+      "type": "person",
+      "importance": 4,
+      "summary": "AI researcher whose work contextualizes intelligent agents and cognitive modeling.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:organization/mit-media-lab",
+      "title": "MIT Media Lab",
+      "type": "organization",
+      "importance": 5,
+      "summary": "Research institution associated with media, agents, interactivity, and knowledge presentation.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/hans-peter-brondmo",
+      "title": "Hans Peter Brondmo",
+      "type": "person",
+      "importance": 3,
+      "summary": "MIT figure associated with micons, or motion icons, as animated conceptual representations.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:technology/micons",
+      "title": "Micons",
+      "type": "technology",
+      "importance": 3,
+      "summary": "Motion icons presented in Hyperland as animated conceptual representations.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/robert-winter",
+      "title": "Robert Winter",
+      "type": "person",
+      "importance": 3,
+      "summary": "Music scholar associated with interactive exploration of Beethoven's Ninth.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:project/interactive-beethoven-ninth",
+      "title": "Interactive Beethoven's Ninth",
+      "type": "project",
+      "importance": 3,
+      "summary": "Interactive music system showing musical structure as explorable knowledge.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/robert-abel",
+      "title": "Robert Abel",
+      "type": "person",
+      "importance": 3,
+      "summary": "Interactive media artist associated with navigable multimedia art such as Guernica.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:project/interactive-guernica",
+      "title": "Interactive Guernica",
+      "type": "project",
+      "importance": 3,
+      "summary": "Interactive visual-art navigation work in the multimedia lineage.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/ivan-sutherland",
+      "title": "Ivan Sutherland",
+      "type": "person",
+      "importance": 5,
+      "summary": "Sketchpad and head-mounted display pioneer who anticipated visual and spatial computing.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/jaron-lanier",
+      "title": "Jaron Lanier",
+      "type": "person",
+      "importance": 4,
+      "summary": "VPL Research founder who popularized virtual reality.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:organization/vpl-research",
+      "title": "VPL Research",
+      "type": "organization",
+      "importance": 3,
+      "summary": "Virtual reality company associated with Jaron Lanier.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/scott-fisher",
+      "title": "Scott Fisher",
+      "type": "person",
+      "importance": 3,
+      "summary": "Virtual environment researcher associated with NASA VR demonstrations.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:organization/nasa",
+      "title": "NASA",
+      "type": "organization",
+      "importance": 3,
+      "summary": "Agency associated with virtual environment workstation demonstrations in the spatial knowledge branch.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:publication/dirk-gentlys-holistic-detective-agency",
+      "title": "Dirk Gently's Holistic Detective Agency",
+      "type": "publication",
+      "importance": 4,
+      "summary": "Douglas Adams novel foregrounding the fundamental interconnectedness of all things before the public Web.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:organization/bbc-two",
+      "title": "BBC Two",
+      "type": "organization",
+      "importance": 3,
+      "summary": "Broadcaster of Hyperland.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/richard-saul-wurman",
+      "title": "Richard Saul Wurman",
+      "type": "person",
+      "importance": 4,
+      "summary": "TED founder and information architecture figure.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/harry-marks",
+      "title": "Harry Marks",
+      "type": "person",
+      "importance": 3,
+      "summary": "TED visual and media origin figure who participated in TED2.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/john-sculley",
+      "title": "John Sculley",
+      "type": "person",
+      "importance": 4,
+      "summary": "Apple executive who presented From Multimedia to Interactive Media and the Knowledge Navigator future.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:technology/apple-knowledge-navigator",
+      "title": "Apple Knowledge Navigator",
+      "type": "technology",
+      "importance": 4,
+      "summary": "Concept video imagining agent-mediated interactive knowledge navigation.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/bill-atkinson",
+      "title": "Bill Atkinson",
+      "type": "person",
+      "importance": 4,
+      "summary": "Creator associated with HyperCard and MacPaint, bringing accessible hypermedia authoring to personal computers.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/herbie-hancock",
+      "title": "Herbie Hancock",
+      "type": "person",
+      "importance": 3,
+      "summary": "Musician whose technology-inflected performance branch demonstrates creative digital media.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/nigel-holmes",
+      "title": "Nigel Holmes",
+      "type": "person",
+      "importance": 3,
+      "summary": "Information designer associated with visual explanation and data visualization.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/laurie-anderson",
+      "title": "Laurie Anderson",
+      "type": "person",
+      "importance": 3,
+      "summary": "Performance and media artist demonstrating narrative plus technology.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/bran-ferren",
+      "title": "Bran Ferren",
+      "type": "person",
+      "importance": 3,
+      "summary": "Designer and technologist bridging entertainment, design, and technology.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/robert-cailliau",
+      "title": "Robert Cailliau",
+      "type": "person",
+      "importance": 4,
+      "summary": "Collaborator and promoter of the World Wide Web proposal.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:place/cern",
+      "title": "CERN",
+      "type": "place",
+      "importance": 4,
+      "summary": "Birthplace of the Web proposal and early Web implementation.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:technology/html",
+      "title": "HTML",
+      "type": "technology",
+      "importance": 4,
+      "summary": "Document markup language that enabled simple Web publishing without rich semantic provenance.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:technology/url-uri",
+      "title": "URL/URI",
+      "type": "technology",
+      "importance": 4,
+      "summary": "Addressing technology for distributed retrieval and identification on the Web.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:technology/http",
+      "title": "HTTP",
+      "type": "technology",
+      "importance": 4,
+      "summary": "Retrieval protocol that enabled the distributed Web.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:organization/ncsa",
+      "title": "NCSA",
+      "type": "organization",
+      "importance": 4,
+      "summary": "Organization associated with Mosaic and the popularization of Web browsing.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:person/marc-andreessen",
+      "title": "Marc Andreessen",
+      "type": "person",
+      "importance": 4,
+      "summary": "Mosaic and Netscape figure who helped popularize the Web branch.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:technology/mosaic",
+      "title": "Mosaic",
+      "type": "technology",
+      "importance": 4,
+      "summary": "Early Web browser that helped popularize Web browsing.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:concept/web-as-incomplete-hypertext",
+      "title": "The Web as Incomplete Hypertext",
+      "type": "concept",
+      "importance": 5,
+      "summary": "The Web solved publishing and linking, but not transclusion, authorship, semantic identity, provenance, or relationship governance.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:technology/guide",
+      "title": "Guide",
+      "type": "technology",
+      "importance": 3,
+      "summary": "Personal-computer hypertext system associated with Peter J. Brown.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:project/storyspace",
+      "title": "Storyspace",
+      "type": "project",
+      "importance": 3,
+      "summary": "Hypertext literature authoring system.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:project/zog-kms",
+      "title": "ZOG/KMS",
+      "type": "project",
+      "importance": 3,
+      "summary": "Frame and card based knowledge management and navigation lineage from Carnegie Mellon University.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:project/xanadu-at-autodesk",
+      "title": "Xanadu at Autodesk",
+      "type": "project",
+      "importance": 4,
+      "summary": "Commercial implementation attempt for Nelson's Xanadu vision during Autodesk investment.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:concept/conflict-disputed-identity",
+      "title": "Conflict and Disputed Identity",
+      "type": "concept",
+      "importance": 4,
+      "summary": "The protocol pattern of preserving disagreement and possible identity matches rather than flattening them.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:technology/git-backed-substrate",
+      "title": "Git-backed Substrate",
+      "type": "technology",
+      "importance": 4,
+      "summary": "Using Git history, branching, merging, authorship, and preservation as substrate mechanics.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:tool/babel",
+      "title": "Babel",
+      "type": "technology",
+      "importance": 3,
+      "summary": "A future mapping and translation layer for machine-readable formats, languages, and ontologies.",
+      "relationships": []
+    },
+    {
+      "id": "xananode.lineage:tool/hyperland-vr",
+      "title": "Hyperland VR",
+      "type": "technology",
+      "importance": 3,
+      "summary": "A future interface idea for spatial navigation of federated substrates.",
+      "relationships": []
+    }
+  ]
+}

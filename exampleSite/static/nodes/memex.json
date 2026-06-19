@@ -30,7 +30,13 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-extends-memex-121",
+      "id": "xananode.example:rel/xananode-extends-memex-126",
+      "type": "extends",
+      "source": "xananode.example:concept/xananode",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.lineage:rel/xananode-extends-bush-trails",
       "type": "extends",
       "source": "xananode.example:concept/xananode",
       "direction": "incoming"

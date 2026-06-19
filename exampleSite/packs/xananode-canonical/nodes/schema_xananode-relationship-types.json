@@ -1,0 +1,30 @@
+{
+  "id": "xananode.example:schema/xananode-relationship-types",
+  "protocol_id": "xananode.example:schema/xananode-relationship-types",
+  "content_id": "sha256:2a691ec99092791ddbecc347e151758f69cf1914effc00145e133f538d98d9ac",
+  "version_id": "sha256:2a691ec99092791ddbecc347e151758f69cf1914effc00145e133f538d98d9ac",
+  "local_id": "xananode-relationship-types",
+  "title": "XanaNode Relationship Types",
+  "type": "schema",
+  "facets": [],
+  "summary": "The canonical relationship type registry for XanaNode substrates.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-schema-xananode-relationship-types-defines-typed-relationships-173",
+      "type": "defines",
+      "source": "xananode.example:schema/xananode-relationship-types",
+      "target": "typed-relationships",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nRelationship types describe why nodes are connected.\n\nThe current canonical registry contains 144 [typed relationships](/node/typed-relationships), including evidence, authorship, lineage, identity, media, trail, governance, [transclusion](/node/transclusion), deep-linking, compatibility, and extension relationships.\n\nExamples include `supports`, `contradicts`, `explains`, `derived_from`, `memorializes`, `transcludes`, and `deep_links_to`.\n",
+  "source_file": "content/schemas/xananode-relationship-types.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-schema-xananode-relationship-types-defines-typed-relationships-173"
+  ],
+  "incoming_relationships": []
+}

@@ -1,0 +1,48 @@
+{
+  "id": "xananode.example:concept/single-source-of-truth",
+  "protocol_id": "xananode.example:concept/single-source-of-truth",
+  "content_id": "sha256:fda94ebba910c27f27e6d2fb9c8e4ac6dce6f620d3694a3e42bd9bc47da73b79",
+  "version_id": "sha256:fda94ebba910c27f27e6d2fb9c8e4ac6dce6f620d3694a3e42bd9bc47da73b79",
+  "local_id": "single-source-of-truth",
+  "title": "Single Source of Truth",
+  "type": "concept",
+  "facets": [],
+  "summary": "A centralized model where one canonical location or authority controls what is treated as valid.",
+  "importance": 4,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-concept-single-source-of-truth-contrasts-with-federated-knowledge-substrates-79",
+      "type": "contrasts_with",
+      "source": "xananode.example:concept/single-source-of-truth",
+      "target": "federated-knowledge-substrates",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-single-source-of-truth-threatens-independent-moderation-80",
+      "type": "threatens",
+      "source": "xananode.example:concept/single-source-of-truth",
+      "target": "independent-moderation",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-concept-single-source-of-truth-alternative-to-knowledge-substrate-81",
+      "type": "alternative_to",
+      "source": "xananode.example:concept/single-source-of-truth",
+      "target": "knowledge-substrate",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nSingle-source-of-truth systems are useful when consensus, control, and simplicity matter.\n\nThey become fragile when knowledge is disputed, partial, culturally specific, politically sensitive, or evolving.\n\n[XanaNode](/node/xananode) favors interoperable sources of context over one enforced source of truth.\n",
+  "source_file": "content/concepts/single-source-of-truth.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-concept-single-source-of-truth-contrasts-with-federated-knowledge-substrates-79",
+    "xananode.example:rel/xananode-example-concept-single-source-of-truth-threatens-independent-moderation-80",
+    "xananode.example:rel/xananode-example-concept-single-source-of-truth-alternative-to-knowledge-substrate-81"
+  ],
+  "incoming_relationships": []
+}

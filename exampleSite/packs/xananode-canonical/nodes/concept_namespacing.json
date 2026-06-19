@@ -1,0 +1,30 @@
+{
+  "id": "xananode.example:concept/namespacing",
+  "protocol_id": "xananode.example:concept/namespacing",
+  "content_id": "sha256:abd2bb070212bab8bc5dfdebdadad5e5261b8b96ea8a837c23bd014cc94611b1",
+  "version_id": "sha256:abd2bb070212bab8bc5dfdebdadad5e5261b8b96ea8a837c23bd014cc94611b1",
+  "local_id": "namespacing",
+  "title": "Namespacing",
+  "type": "concept",
+  "facets": [],
+  "summary": "A way to identify which substrate or schema owns a node type, relationship type, node, or fragment.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-concept-namespacing-clarifies-schema-extension-66",
+      "type": "clarifies",
+      "source": "xananode.example:concept/namespacing",
+      "target": "schema-extension",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nNamespacing prevents independent substrates and extension vocabularies from colliding.\n\nThe core namespace is `xananode`. A substrate can use its own namespace for local nodes and extension types, such as `example.museum:artifact` or `example.researcher_a:concept/knowledge-substrate`.\n\nUnknown namespaced types are not invalid knowledge. They are declared extensions that can be displayed, preserved, mapped, or quarantined until another system understands them.\n",
+  "source_file": "content/concepts/namespacing.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-concept-namespacing-clarifies-schema-extension-66"
+  ],
+  "incoming_relationships": []
+}

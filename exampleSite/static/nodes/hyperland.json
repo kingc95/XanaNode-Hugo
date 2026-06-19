@@ -1,0 +1,11 @@
+{
+  "id": "xananode.lineage:publication/hyperland",
+  "title": "Hyperland",
+  "type": "publication",
+  "importance": 5,
+  "summary": "A 1990 BBC hypermedia documentary by Douglas Adams that dramatized software agents, hypertext, Xanadu, micons, and associative browsing.",
+  "relationships": [],
+  "imported_from": "nodes.json",
+  "pack_id": "imports:lineage",
+  "pack_mode": "mounted"
+}

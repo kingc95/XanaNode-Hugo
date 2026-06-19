@@ -1,0 +1,39 @@
+{
+  "id": "xananode.example:project/project-xanadu",
+  "protocol_id": "xananode.example:project/project-xanadu",
+  "content_id": "sha256:caad2612b08b20f9c29131bac67847230acba366503758f657fb63e8714bf670",
+  "version_id": "sha256:caad2612b08b20f9c29131bac67847230acba366503758f657fb63e8714bf670",
+  "local_id": "project-xanadu",
+  "title": "Project Xanadu",
+  "type": "project",
+  "facets": [],
+  "summary": "Ted Nelson's long-running hypertext project focused on deep linking, transclusion, versioning, and visible interconnection.",
+  "importance": 5,
+  "relationships": [
+    {
+      "id": "xananode.example:rel/xananode-example-project-project-xanadu-defines-transclusion-141",
+      "type": "defines",
+      "source": "xananode.example:project/project-xanadu",
+      "target": "transclusion",
+      "direction": "outgoing",
+      "external": false
+    },
+    {
+      "id": "xananode.example:rel/xananode-example-project-project-xanadu-influenced-xananode-142",
+      "type": "influenced",
+      "source": "xananode.example:project/project-xanadu",
+      "target": "xananode",
+      "direction": "outgoing",
+      "external": false
+    }
+  ],
+  "body": "\nProject Xanadu is the clearest historical predecessor for persistent [transclusion](/node/transclusion), [deep linking](/node/deep-linking), and relationship-preserving media.\n",
+  "source_file": "content/projects/project-xanadu.md",
+  "aliases": [],
+  "tags": [],
+  "outgoing_relationships": [
+    "xananode.example:rel/xananode-example-project-project-xanadu-defines-transclusion-141",
+    "xananode.example:rel/xananode-example-project-project-xanadu-influenced-xananode-142"
+  ],
+  "incoming_relationships": []
+}
