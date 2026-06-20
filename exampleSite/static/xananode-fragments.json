@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T19:53:05.308Z",
+  "generated_at": "2026-06-19T21:47:33.698Z",
   "nodes": {
     "xananode-implementation-stack-trail": {
       "versions": {
@@ -487,21 +487,15 @@
       "versions": {
         "0.4.0": {
           "fragments": {
-            "1": "Relationship types describe why nodes are connected.\n\nThe current canonical registry contains 144 typed relationships, grouped by relationship categories such as evidence, authorship, lineage, identity, media, trail, governance, transclusion, deep linking, compatibility, and extension relationships.\n\nThe full pack backed registry is available at Relationship Type Registry.\n\nExamples include , , , , , , and .",
-            "0001": "Relationship types describe why nodes are connected.",
-            "0002": "The current canonical registry contains 144 typed relationships, grouped by relationship categories such as evidence, authorship, lineage, identity, media, trail, governance, transclusion, deep linking, compatibility, and extension relationships.",
-            "0003": "The full pack backed registry is available at Relationship Type Registry.",
-            "0004": "Examples include , , , , , , and ."
+            "1": "Relationship types describe why nodes are connected. The current canonical registry contains 144 typed relationships, grouped by relationship categories such as evidence, authorship, lineage, identity, media, trail, governance, transclusion, deep linking, compatibility, and extension relationships. The full pack backed registry is available at Relationship Type Registry. Examples include , , , , , , and .",
+            "0001": "Relationship types describe why nodes are connected. The current canonical registry contains 144 typed relationships, grouped by relationship categories such as evidence, authorship, lineage, identity, media, trail, governance, transclusion, deep linking, compatibility, and extension relationships. The full pack backed registry is available at Relationship Type Registry. Examples include , , , , , , and ."
           },
           "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "Relationship types describe why nodes are connected.\n\nThe current canonical registry contains 144 typed relationships, grouped by relationship categories such as evidence, authorship, lineage, identity, media, trail, governance, transclusion, deep linking, compatibility, and extension relationships.\n\nThe full pack backed registry is available at Relationship Type Registry.\n\nExamples include , , , , , , and .",
-            "0001": "Relationship types describe why nodes are connected.",
-            "0002": "The current canonical registry contains 144 typed relationships, grouped by relationship categories such as evidence, authorship, lineage, identity, media, trail, governance, transclusion, deep linking, compatibility, and extension relationships.",
-            "0003": "The full pack backed registry is available at Relationship Type Registry.",
-            "0004": "Examples include , , , , , , and ."
+            "1": "Relationship types describe why nodes are connected. The current canonical registry contains 144 typed relationships, grouped by relationship categories such as evidence, authorship, lineage, identity, media, trail, governance, transclusion, deep linking, compatibility, and extension relationships. The full pack backed registry is available at Relationship Type Registry. Examples include , , , , , , and .",
+            "0001": "Relationship types describe why nodes are connected. The current canonical registry contains 144 typed relationships, grouped by relationship categories such as evidence, authorship, lineage, identity, media, trail, governance, transclusion, deep linking, compatibility, and extension relationships. The full pack backed registry is available at Relationship Type Registry. Examples include , , , , , , and ."
           },
           "metadata": {}
         }
@@ -513,19 +507,15 @@
       "versions": {
         "0.3.0": {
           "fragments": {
-            "1": "Node types describe what kind of thing a node represents.\n\nThe current canonical registry contains 19 core node types:\n\nPerson Concept Claim Source Essay Observation Media Event Place Organization Project Technology Publication Community Relationship Revision Trail Schema Fragment",
-            "0001": "Node types describe what kind of thing a node represents.",
-            "0002": "The current canonical registry contains 19 core node types:",
-            "0003": "Person Concept Claim Source Essay Observation Media Event Place Organization Project Technology Publication Community Relationship Revision Trail Schema Fragment"
+            "1": "Node types describe what kind of thing a node represents. The current canonical registry contains 19 core node types: Person Concept Claim Source Essay Observation Media Event Place Organization Project Technology Publication Community Relationship Revision Trail Schema Fragment",
+            "0001": "Node types describe what kind of thing a node represents. The current canonical registry contains 19 core node types: Person Concept Claim Source Essay Observation Media Event Place Organization Project Technology Publication Community Relationship Revision Trail Schema Fragment"
           },
           "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "Node types describe what kind of thing a node represents.\n\nThe current canonical registry contains 19 core node types:\n\nPerson Concept Claim Source Essay Observation Media Event Place Organization Project Technology Publication Community Relationship Revision Trail Schema Fragment",
-            "0001": "Node types describe what kind of thing a node represents.",
-            "0002": "The current canonical registry contains 19 core node types:",
-            "0003": "Person Concept Claim Source Essay Observation Media Event Place Organization Project Technology Publication Community Relationship Revision Trail Schema Fragment"
+            "1": "Node types describe what kind of thing a node represents. The current canonical registry contains 19 core node types: Person Concept Claim Source Essay Observation Media Event Place Organization Project Technology Publication Community Relationship Revision Trail Schema Fragment",
+            "0001": "Node types describe what kind of thing a node represents. The current canonical registry contains 19 core node types: Person Concept Claim Source Essay Observation Media Event Place Organization Project Technology Publication Community Relationship Revision Trail Schema Fragment"
           },
           "metadata": {}
         }

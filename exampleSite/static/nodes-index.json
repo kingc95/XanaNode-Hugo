@@ -534,6 +534,13 @@
       "imported": true
     },
     {
+      "id": "example.minimal:communication/minimal-substrate-discussion",
+      "path": "nodes/minimal-substrate-discussion.json",
+      "title": "Minimal Substrate Discussion",
+      "type": "communication",
+      "imported": true
+    },
+    {
       "id": "example.minimal:concept/associative-trails",
       "path": "nodes/associative-trails.json",
       "title": "Associative Trails",
@@ -555,6 +562,13 @@
       "imported": true
     },
     {
+      "id": "example.minimal:knowledge_gap/missing-relationship-evidence",
+      "path": "nodes/missing-relationship-evidence.json",
+      "title": "Missing Relationship Evidence",
+      "type": "knowledge_gap",
+      "imported": true
+    },
+    {
       "id": "example.minimal:concept/knowledge-substrate",
       "path": "nodes/knowledge-substrate.json",
       "title": "Knowledge Substrate",
@@ -562,10 +576,31 @@
       "imported": true
     },
     {
+      "id": "example.minimal:media/xananode-icon",
+      "path": "nodes/xananode-icon.json",
+      "title": "XanaNode Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
       "id": "example.minimal:person/example-maintainer",
       "path": "nodes/example-maintainer.json",
       "title": "Example Maintainer",
       "type": "person",
+      "imported": true
+    },
+    {
+      "id": "example.minimal:question/why-relationships-matter",
+      "path": "nodes/why-relationships-matter.json",
+      "title": "Why do relationships matter?",
+      "type": "question",
+      "imported": true
+    },
+    {
+      "id": "example.minimal:response/relationships-preserve-context",
+      "path": "nodes/relationships-preserve-context.json",
+      "title": "Relationships Preserve Context",
+      "type": "response",
       "imported": true
     },
     {
