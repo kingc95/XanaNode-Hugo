@@ -1,5 +1,7 @@
 # XanaNode Hugo Theme
 
+Created by [Christian Siefen](https://xananode.com/) for the [XanaNode project](https://xananode.com/).
+
 This repository is a Hugo implementation of the XanaNode protocol.
 
 The canonical protocol lives at [kingc95/xananode](https://github.com/kingc95/xananode). Use that repository as the source of truth for the core specs, schemas, governance model, registries, examples, and protocol proposals.
@@ -46,14 +48,24 @@ A Hugo site using this theme can publish:
 3. The legacy Hugo viewer feed at `/index.json`.
 4. Protocol artifacts:
    - `/substrate.json`
+   - `/nodes-index.json`
    - `/relationships.json`
    - `/nodes/*.json`
+   - `/substrate-bundle.json`
+   - `/substrate-bundle.jsonl`
    - `/schemas/*.json`
-5. Tumbler fragment data:
+5. Machine discovery endpoints:
+   - `/.well-known/xananode`
+   - `/.well-known/xananode.json`
+   - `/robots.txt`
+   - page-head discovery links for the protocol artifacts
+6. Tumbler fragment data:
    - `/xananode-fragments.json`
-6. Human-review suggestions for links and transclusions:
+7. Human-review suggestions for links and transclusions:
    - `/xananode-suggestions.json`
    - `/xananode-suggestions.md`
+8. Optional portable substrate download:
+   - `archives/<namespace>.substrate` by default when enabled in `params.xananode.downloadSubstrate`
 
 The theme does not replace the protocol. It is one static-site renderer and validator for authoring a XanaNode-compatible substrate with Markdown, front matter, schemas, relationships, trails, sources, claims, media, and revisions.
 
@@ -80,6 +92,8 @@ The build tool validates generated substrate artifacts with `@xananode/core`. It
 
 Configured `params.xananode.links` are part of the site projection. Public links without an existing `node` are emitted as lightweight `source` nodes so the graph can represent project homes, social profiles, support pages, and documentation links with normal substrate identity. Set `private: true` or `generate_node: false` on a link when it should remain a UI link only.
 
+Configured `params.xananode.downloadSubstrate` turns on an optional one-click download of the current portable substrate bundle. The button is rendered in the tools tray, and the build writes a `.substrate` archive containing the current substrate artifacts plus preserved substrate roots such as `imports/`, `packs/`, `reports/`, `schemas/`, generated `nodes/*.json`, and non-renderer media under `assets/`. The archive intentionally excludes the Hugo projection layer such as `content/`, `layouts/`, HTML output, and JavaScript renderer assets.
+
 Generated link nodes can also connect back into the substrate with flat config keys:
 
 ```yaml
@@ -99,8 +113,12 @@ Current generated protocol files include:
 - `nodes-index.json`: static-host friendly index of published node record files.
 - `relationships.json`: typed protocol relationship records.
 - `nodes/*.json`: per-node protocol records with incoming/outgoing relationship summaries.
+- `substrate-bundle.json`: one mass JSON file with the manifest, all nodes, relationships, fragments, and review suggestions.
+- `substrate-bundle.jsonl`: the same bundle in JSON Lines form for stream-oriented tools and current LLM workflows.
 - `schemas/*.json`: canonical registries and substrate/report schemas.
 - `xananode-viewer.json`: browser-ready read-only viewer feed derived from the protocol records.
+- `.well-known/xananode`: the boring machine handshake for crawlers, validators, agents, and federation tooling.
+- `robots.txt`: standard crawl hints plus XanaNode-specific discovery pointers.
 
 ## Import Protocol JSON
 
@@ -131,18 +149,23 @@ npm run build
 
 The prepare step merges Markdown-authored nodes with imported protocol JSON, validates the combined substrate through Core, writes `/substrate.json`, `/nodes-index.json`, `/nodes/*.json`, `/relationships.json`, and updates `/xananode-viewer.json` for the browser.
 
+It also writes discovery metadata so a site is both a human-facing viewer and a machine-facing protocol endpoint. Machines can start at `/.well-known/xananode` or the head links, then fetch `substrate.json`, `nodes-index.json`, and `relationships.json` without scraping the graph UI.
+
 Use Markdown for prose and authored pages. Use JSON imports for existing Core or Workspace records, generated relationship files, federation packs, schema packs, or any substrate data you do not want to hand-copy into front matter.
 
 Core owns the review logic. The Hugo prepare step asks `@xananode/core` to analyze the current substrate plus incoming packs for possible same-entity merges, incoming relationships that touch existing nodes, possible Markdown links, and possible transclusions. Hugo only formats those Core suggestions for static review.
 
 The example site also includes a "Protocol Artifacts Trail" that explains the concrete files, reports, registries, extension model, and federation governance described by the protocol.
 
-The bundled example uses protocol JSON packs:
+The bundled example uses protocol JSON substrates:
 
 - `params.xananode.packs` in `exampleSite/hugo.yaml` mounts the protocol minimal substrate from the Core/Protocol submodule.
-- `exampleSite/imports/lineage/` is the extended XanaNode lineage pack, covering the historical and conceptual branches that lead into XanaNode.
+- In a `XanaNode-Master` development checkout, the example mounts `../../XanaNode-Canonical-Substrate` for the canonical XanaNode substrate. That repo is the source of truth; the Hugo theme does not own or copy it.
+- `exampleSite/imports/lineage/` is the extended XanaNode lineage substrate layer, covering the historical and conceptual branches that lead into XanaNode.
 
-These are intentionally not recreated as Markdown pages. They demonstrate both pack modes: a mounted pack remains governed by its source repository, while a local import pack can later be absorbed after review. Generated or validated protocol JSON can be mounted or dropped into a Hugo site, merged with authored Markdown nodes, validated by Core, and rendered by the read-only viewer.
+These are intentionally not recreated as Markdown pages. They demonstrate substrate federation: a mounted substrate remains governed by its source repository, while a local imported substrate can later be merged after review. Generated or validated protocol JSON can be mounted or dropped into a Hugo site, merged with authored Markdown nodes, validated by Core, and rendered by the read-only viewer.
+
+For fresh clones outside `XanaNode-Master`, use the Protocol registry target or Workspace federation tooling to clone the canonical substrate repository, then point `params.xananode.packs[].source` at that local checkout. The `.substrate` archive is a release/transmission artifact; the Git repository is preferred when you need current source history. In other words: Hugo should list substrate sources in config, then let Core resolve and validate them.
 
 ## Core Authoring Model
 
@@ -268,7 +291,7 @@ npm run validate
 npm run example:dev
 ```
 
-The example site is intentionally small enough to copy: it shows how XanaNode nodes, relationships, trails, schemas, and generated protocol artifacts render in Hugo. The fuller XanaNode doctrine, lineage, and implementation stack should be treated as a substrate pack that can be mounted when a site wants that layer.
+The example site is intentionally small enough to copy: it shows how XanaNode nodes, relationships, trails, schemas, and generated protocol artifacts render in Hugo. The fuller XanaNode doctrine, lineage, and implementation stack should be treated as a substrate layer that can be mounted when a site wants that layer.
 
 To generate the optional canonical pack from the current example substrate:
 
@@ -276,7 +299,7 @@ To generate the optional canonical pack from the current example substrate:
 npm run pack:canonical
 ```
 
-That writes `exampleSite/packs/xananode-canonical/`. It is present as an opt-in pack in `exampleSite/hugo.yaml` with `enabled: false`; flip that to `true` when you want Hugo to mount it. In normal use, Workspace should provide the friendly pack picker and import/merge review flow, while Core enforces the protocol behavior and Hugo renders the resulting artifacts.
+That writes `exampleSite/packs/xananode-canonical/`. It is present as an opt-in substrate source in `exampleSite/hugo.yaml` with `enabled: false`; flip that to `true` when you want Hugo to mount it. In normal use, Workspace should provide the substrate chooser and import/merge review flow, while Core enforces the protocol behavior and Hugo renders the resulting artifacts.
 
 ## Use This Theme In Another Hugo Site
 
@@ -338,6 +361,10 @@ params:
       - "explore the project archive"
       - "trace a claim to its source"
       - "follow a trail"
+    downloadSubstrate:
+      enabled: true
+      label: "Download current substrate"
+      path: "archives/example.org.substrate"
 ```
 
 `homeNode` is the stable node id used when a visitor opens the bare site URL or

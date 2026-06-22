@@ -8,5 +8,5 @@ features = ["relationship graph", "concept nodes", "source cards", "claim blocks
 min_version = "0.120.0"
 
 [author]
-  name = "XanaNode"
+  name = "Christian Siefen"
   homepage = "https://xananode.com/"

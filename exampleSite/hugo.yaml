@@ -29,7 +29,7 @@ params:
         version: "0.2.0"
         required: true
       - id: "xananode.canonical"
-        source: "packs/xananode-canonical"
+        source: "../../XanaNode-Canonical-Substrate"
         mode: "mounted"
         version: "0.1.0"
         required: false
@@ -41,7 +41,17 @@ params:
       attributionLabel: "XanaNode"
       attributionText: "xananode.com"
       attributionUrl: "https://xananode.com"
+    downloadSubstrate:
+      enabled: true
+      label: "Download current substrate"
+      path: "archives/xananode.example.substrate"
     links:
+      - label: "Creator"
+        url: "https://xananode.com/"
+        summary: "Christian Siefen's canonical XanaNode website and project home."
+        relationship_type: "documents"
+        relationship_target: "xananode"
+        relationship_summary: "The canonical website credits the creator and anchors the public project home."
       - label: "Protocol"
         node: "xananode-protocol-repo"
         url: "https://github.com/kingc95/xananode"
