@@ -12,13 +12,30 @@
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/merge-report.schema.json",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/protocol-contains-merge-report-schema",
+      "type": "contains",
+      "source": "xananode.canonical:project/xananode-protocol",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-canonical-schemas-registry-contains-schema-canonical-schema-merge-report",
       "type": "contains",
       "source": "xananode.canonical:schema/canonical-schemas-registry",
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes.json",
+  "asset_path": "assets/raw/protocol/schemas/merge-report.schema.json",
+  "asset_role": "canonical_raw_source",
+  "content_id": "sha256:b5800fe6bbc0f5d5f01b936462cb2d4c7b69b2ff7b3268b0bb96f907a140c17a",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/merge-report.schema.json",
+    "method": "archive",
+    "content_id": "sha256:1db233199589a5ec082d4d74814d0e8225bd53d7a0a968962c88db692ee58665",
+    "rights_status": "canonical-public",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/schema_canonical-schema-merge-report.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

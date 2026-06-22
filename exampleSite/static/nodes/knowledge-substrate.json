@@ -13,7 +13,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/concept_knowledge-substrate.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

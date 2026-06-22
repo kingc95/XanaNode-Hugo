@@ -513,6 +513,13 @@
       "imported": false
     },
     {
+      "id": "xananode.example:source/source-creator",
+      "path": "nodes/source-creator.json",
+      "title": "Creator",
+      "type": "source",
+      "imported": false
+    },
+    {
       "id": "xananode.example:source/source-github",
       "path": "nodes/source-github.json",
       "title": "GitHub",
@@ -615,6 +622,55 @@
       "path": "nodes/start-here.json",
       "title": "Start Here",
       "type": "trail",
+      "imported": true
+    },
+    {
+      "id": "example.museum:concept/memex",
+      "path": "nodes/memex.json",
+      "title": "Memex",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "example.museum:artifact/memex-illustration",
+      "path": "nodes/memex-illustration.json",
+      "title": "Memex Exhibit Illustration",
+      "type": "example.museum:artifact",
+      "imported": true
+    },
+    {
+      "id": "example.museum:person/example-curator",
+      "path": "nodes/example-curator.json",
+      "title": "Example Museum Curator",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "example.researcher_a:concept/knowledge-substrate",
+      "path": "nodes/knowledge-substrate.json",
+      "title": "Knowledge Substrate",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "example.researcher_a:person/researcher-a",
+      "path": "nodes/researcher-a.json",
+      "title": "Researcher A",
+      "type": "person",
+      "imported": true
+    },
+    {
+      "id": "example.researcher_b:concept/memory-substrate",
+      "path": "nodes/memory-substrate.json",
+      "title": "Memory Substrate",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "example.researcher_b:person/researcher-b",
+      "path": "nodes/researcher-b.json",
+      "title": "Researcher B",
+      "type": "person",
       "imported": true
     },
     {
@@ -765,6 +821,1658 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:media/protocol-artifact-examples-minimal-substrate-assets-branding-xananode-icon.svg",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-assets-branding-xananode-icon.svg.json",
+      "title": "Examples / Minimal Substrate / Assets / Branding / Xananode Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-images-android-chrome-192x192.png",
+      "path": "nodes/protocol-artifact-media-images-android-chrome-192x192.png.json",
+      "title": "Media / Images / Android Chrome 192x192",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-images-android-chrome-512x512.png",
+      "path": "nodes/protocol-artifact-media-images-android-chrome-512x512.png.json",
+      "title": "Media / Images / Android Chrome 512x512",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-images-apple-touch-icon.png",
+      "path": "nodes/protocol-artifact-media-images-apple-touch-icon.png.json",
+      "title": "Media / Images / Apple Touch Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-images-favicon-16x16.png",
+      "path": "nodes/protocol-artifact-media-images-favicon-16x16.png.json",
+      "title": "Media / Images / Favicon 16x16",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-images-favicon-32x32.png",
+      "path": "nodes/protocol-artifact-media-images-favicon-32x32.png.json",
+      "title": "Media / Images / Favicon 32x32",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-images-favicon.ico",
+      "path": "nodes/protocol-artifact-media-images-favicon.ico.json",
+      "title": "Media / Images / Favicon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-images-xananode-icon.svg",
+      "path": "nodes/protocol-artifact-media-images-xananode-icon.svg.json",
+      "title": "Media / Images / Xananode Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-claim.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-claim.svg.json",
+      "title": "Media / Projection / Node Types / Claim",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-communication.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-communication.svg.json",
+      "title": "Media / Projection / Node Types / Communication",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-community.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-community.svg.json",
+      "title": "Media / Projection / Node Types / Community",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-concept.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-concept.svg.json",
+      "title": "Media / Projection / Node Types / Concept",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-essay.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-essay.svg.json",
+      "title": "Media / Projection / Node Types / Essay",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-event.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-event.svg.json",
+      "title": "Media / Projection / Node Types / Event",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-fragment.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-fragment.svg.json",
+      "title": "Media / Projection / Node Types / Fragment",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-hypothesis.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-hypothesis.svg.json",
+      "title": "Media / Projection / Node Types / Hypothesis",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-item.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-item.svg.json",
+      "title": "Media / Projection / Node Types / Item",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-knowledge_gap.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-knowledge_gap.svg.json",
+      "title": "Media / Projection / Node Types / Knowledge Gap",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-media.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-media.svg.json",
+      "title": "Media / Projection / Node Types / Media",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-observation.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-observation.svg.json",
+      "title": "Media / Projection / Node Types / Observation",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-organization.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-organization.svg.json",
+      "title": "Media / Projection / Node Types / Organization",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-person.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-person.svg.json",
+      "title": "Media / Projection / Node Types / Person",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-place.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-place.svg.json",
+      "title": "Media / Projection / Node Types / Place",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-problem.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-problem.svg.json",
+      "title": "Media / Projection / Node Types / Problem",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-project.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-project.svg.json",
+      "title": "Media / Projection / Node Types / Project",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-publication.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-publication.svg.json",
+      "title": "Media / Projection / Node Types / Publication",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-question.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-question.svg.json",
+      "title": "Media / Projection / Node Types / Question",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-relationship.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-relationship.svg.json",
+      "title": "Media / Projection / Node Types / Relationship",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-response.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-response.svg.json",
+      "title": "Media / Projection / Node Types / Response",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-revision.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-revision.svg.json",
+      "title": "Media / Projection / Node Types / Revision",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-schema.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-schema.svg.json",
+      "title": "Media / Projection / Node Types / Schema",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-source.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-source.svg.json",
+      "title": "Media / Projection / Node Types / Source",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-technology.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-technology.svg.json",
+      "title": "Media / Projection / Node Types / Technology",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-trail.svg",
+      "path": "nodes/protocol-artifact-media-projection-node-types-trail.svg.json",
+      "title": "Media / Projection / Node Types / Trail",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-attention.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-attention.svg.json",
+      "title": "Media / Projection / Relationship Categories / Attention",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-causation.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-causation.svg.json",
+      "title": "Media / Projection / Relationship Categories / Causation",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-citation.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-citation.svg.json",
+      "title": "Media / Projection / Relationship Categories / Citation",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-claim_structure.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-claim_structure.svg.json",
+      "title": "Media / Projection / Relationship Categories / Claim Structure",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-cognition.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-cognition.svg.json",
+      "title": "Media / Projection / Relationship Categories / Cognition",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-communication.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-communication.svg.json",
+      "title": "Media / Projection / Relationship Categories / Communication",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-comparison.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-comparison.svg.json",
+      "title": "Media / Projection / Relationship Categories / Comparison",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-composition.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-composition.svg.json",
+      "title": "Media / Projection / Relationship Categories / Composition",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-creation.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-creation.svg.json",
+      "title": "Media / Projection / Relationship Categories / Creation",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-definition.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-definition.svg.json",
+      "title": "Media / Projection / Relationship Categories / Definition",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-discovery.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-discovery.svg.json",
+      "title": "Media / Projection / Relationship Categories / Discovery",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-evidence.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-evidence.svg.json",
+      "title": "Media / Projection / Relationship Categories / Evidence",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-evolution.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-evolution.svg.json",
+      "title": "Media / Projection / Relationship Categories / Evolution",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-explanation.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-explanation.svg.json",
+      "title": "Media / Projection / Relationship Categories / Explanation",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-generic.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-generic.svg.json",
+      "title": "Media / Projection / Relationship Categories / Generic",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-governance.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-governance.svg.json",
+      "title": "Media / Projection / Relationship Categories / Governance",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-historical.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-historical.svg.json",
+      "title": "Media / Projection / Relationship Categories / Historical",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-identity.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-identity.svg.json",
+      "title": "Media / Projection / Relationship Categories / Identity",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-influence.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-influence.svg.json",
+      "title": "Media / Projection / Relationship Categories / Influence",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-inquiry.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-inquiry.svg.json",
+      "title": "Media / Projection / Relationship Categories / Inquiry",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-knowledge_workflow.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-knowledge_workflow.svg.json",
+      "title": "Media / Projection / Relationship Categories / Knowledge Workflow",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-lineage.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-lineage.svg.json",
+      "title": "Media / Projection / Relationship Categories / Lineage",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-location.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-location.svg.json",
+      "title": "Media / Projection / Relationship Categories / Location",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-participation.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-participation.svg.json",
+      "title": "Media / Projection / Relationship Categories / Participation",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-reasoning.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-reasoning.svg.json",
+      "title": "Media / Projection / Relationship Categories / Reasoning",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-representation.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-representation.svg.json",
+      "title": "Media / Projection / Relationship Categories / Representation",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-research_workflow.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-research_workflow.svg.json",
+      "title": "Media / Projection / Relationship Categories / Research Workflow",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-revision.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-revision.svg.json",
+      "title": "Media / Projection / Relationship Categories / Revision",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-schema_mapping.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-schema_mapping.svg.json",
+      "title": "Media / Projection / Relationship Categories / Schema Mapping",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-social.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-social.svg.json",
+      "title": "Media / Projection / Relationship Categories / Social",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-temporal.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-temporal.svg.json",
+      "title": "Media / Projection / Relationship Categories / Temporal",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-uncertainty.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-categories-uncertainty.svg.json",
+      "title": "Media / Projection / Relationship Categories / Uncertainty",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-abstraction_of.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-abstraction_of.svg.json",
+      "title": "Media / Projection / Relationship Types / Abstraction Of",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-adapted_from.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-adapted_from.svg.json",
+      "title": "Media / Projection / Relationship Types / Adapted From",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-adapted_into.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-adapted_into.svg.json",
+      "title": "Media / Projection / Relationship Types / Adapted Into",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-alias_of.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-alias_of.svg.json",
+      "title": "Media / Projection / Relationship Types / Alias Of",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-alternative_to.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-alternative_to.svg.json",
+      "title": "Media / Projection / Relationship Types / Alternative To",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-analogous_to.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-analogous_to.svg.json",
+      "title": "Media / Projection / Relationship Types / Analogous To",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-announced.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-announced.svg.json",
+      "title": "Media / Projection / Relationship Types / Announced",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-answered_in.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-answered_in.svg.json",
+      "title": "Media / Projection / Relationship Types / Answered In",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-answers.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-answers.svg.json",
+      "title": "Media / Projection / Relationship Types / Answers",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-anticipated.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-anticipated.svg.json",
+      "title": "Media / Projection / Relationship Types / Anticipated",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-anticipates.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-anticipates.svg.json",
+      "title": "Media / Projection / Relationship Types / Anticipates",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-appears_in.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-appears_in.svg.json",
+      "title": "Media / Projection / Relationship Types / Appears In",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-approved.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-approved.svg.json",
+      "title": "Media / Projection / Relationship Types / Approved",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-arrives_at.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-arrives_at.svg.json",
+      "title": "Media / Projection / Relationship Types / Arrives At",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-asked_in.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-asked_in.svg.json",
+      "title": "Media / Projection / Relationship Types / Asked In",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-asked.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-asked.svg.json",
+      "title": "Media / Projection / Relationship Types / Asked",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-assembled_from.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-assembled_from.svg.json",
+      "title": "Media / Projection / Relationship Types / Assembled From",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-authored.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-authored.svg.json",
+      "title": "Media / Projection / Relationship Types / Authored",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-broadcast_to.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-broadcast_to.svg.json",
+      "title": "Media / Projection / Relationship Types / Broadcast To",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-broader_than.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-broader_than.svg.json",
+      "title": "Media / Projection / Relationship Types / Broader Than",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-cites.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-cites.svg.json",
+      "title": "Media / Projection / Relationship Types / Cites",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-clarifies.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-clarifies.svg.json",
+      "title": "Media / Projection / Relationship Types / Clarifies",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-co_authored_with.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-co_authored_with.svg.json",
+      "title": "Media / Projection / Relationship Types / Co Authored With",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-coined.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-coined.svg.json",
+      "title": "Media / Projection / Relationship Types / Coined",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-collaborated_with.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-collaborated_with.svg.json",
+      "title": "Media / Projection / Relationship Types / Collaborated With",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-communicated_to.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-communicated_to.svg.json",
+      "title": "Media / Projection / Relationship Types / Communicated To",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-compatible_with.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-compatible_with.svg.json",
+      "title": "Media / Projection / Relationship Types / Compatible With",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-contains.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-contains.svg.json",
+      "title": "Media / Projection / Relationship Types / Contains",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-contemporary_of.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-contemporary_of.svg.json",
+      "title": "Media / Projection / Relationship Types / Contemporary Of",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-context_for.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-context_for.svg.json",
+      "title": "Media / Projection / Relationship Types / Context For",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-continues_to.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-continues_to.svg.json",
+      "title": "Media / Projection / Relationship Types / Continues To",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-contradicts.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-contradicts.svg.json",
+      "title": "Media / Projection / Relationship Types / Contradicts",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-contrasts_with.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-contrasts_with.svg.json",
+      "title": "Media / Projection / Relationship Types / Contrasts With",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-created.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-created.svg.json",
+      "title": "Media / Projection / Relationship Types / Created",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-critical_to.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-critical_to.svg.json",
+      "title": "Media / Projection / Relationship Types / Critical To",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-debated_with.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-debated_with.svg.json",
+      "title": "Media / Projection / Relationship Types / Debated With",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-deep_links_to.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-deep_links_to.svg.json",
+      "title": "Media / Projection / Relationship Types / Deep Links To",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-defines.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-defines.svg.json",
+      "title": "Media / Projection / Relationship Types / Defines",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-demonstrates.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-demonstrates.svg.json",
+      "title": "Media / Projection / Relationship Types / Demonstrates",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-depends_on.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-depends_on.svg.json",
+      "title": "Media / Projection / Relationship Types / Depends On",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-depicts.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-depicts.svg.json",
+      "title": "Media / Projection / Relationship Types / Depicts",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-derived_from.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-derived_from.svg.json",
+      "title": "Media / Projection / Relationship Types / Derived From",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-discussed_with.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-discussed_with.svg.json",
+      "title": "Media / Projection / Relationship Types / Discussed With",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-discusses.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-discusses.svg.json",
+      "title": "Media / Projection / Relationship Types / Discusses",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-disputed_identity.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-disputed_identity.svg.json",
+      "title": "Media / Projection / Relationship Types / Disputed Identity",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-disputes.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-disputes.svg.json",
+      "title": "Media / Projection / Relationship Types / Disputes",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-documents.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-documents.svg.json",
+      "title": "Media / Projection / Relationship Types / Documents",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-enables.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-enables.svg.json",
+      "title": "Media / Projection / Relationship Types / Enables",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-equivalent_to.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-equivalent_to.svg.json",
+      "title": "Media / Projection / Relationship Types / Equivalent To",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-evidence_for.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-evidence_for.svg.json",
+      "title": "Media / Projection / Relationship Types / Evidence For",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-example_of.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-example_of.svg.json",
+      "title": "Media / Projection / Relationship Types / Example Of",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-explains.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-explains.svg.json",
+      "title": "Media / Projection / Relationship Types / Explains",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-extends.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-extends.svg.json",
+      "title": "Media / Projection / Relationship Types / Extends",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-extension_of.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-extension_of.svg.json",
+      "title": "Media / Projection / Relationship Types / Extension Of",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-fails_to_answer.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-fails_to_answer.svg.json",
+      "title": "Media / Projection / Relationship Types / Fails To Answer",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-falsifies.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-falsifies.svg.json",
+      "title": "Media / Projection / Relationship Types / Falsifies",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-features.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-features.svg.json",
+      "title": "Media / Projection / Relationship Types / Features",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-format_translated_from.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-format_translated_from.svg.json",
+      "title": "Media / Projection / Relationship Types / Format Translated From",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-format_translated_into.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-format_translated_into.svg.json",
+      "title": "Media / Projection / Relationship Types / Format Translated Into",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-frequently_misunderstood.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-frequently_misunderstood.svg.json",
+      "title": "Media / Projection / Relationship Types / Frequently Misunderstood",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-friend_of.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-friend_of.svg.json",
+      "title": "Media / Projection / Relationship Types / Friend Of",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-generalizes.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-generalizes.svg.json",
+      "title": "Media / Projection / Relationship Types / Generalizes",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-generated.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-generated.svg.json",
+      "title": "Media / Projection / Relationship Types / Generated",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-governed_by.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-governed_by.svg.json",
+      "title": "Media / Projection / Relationship Types / Governed By",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-has_claim.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-has_claim.svg.json",
+      "title": "Media / Projection / Relationship Types / Has Claim",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-has_primary_media.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-has_primary_media.svg.json",
+      "title": "Media / Projection / Relationship Types / Has Primary Media",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-high_risk_for.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-high_risk_for.svg.json",
+      "title": "Media / Projection / Relationship Types / High Risk For",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-identified.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-identified.svg.json",
+      "title": "Media / Projection / Relationship Types / Identified",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-implements.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-implements.svg.json",
+      "title": "Media / Projection / Relationship Types / Implements",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-important_for.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-important_for.svg.json",
+      "title": "Media / Projection / Relationship Types / Important For",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-includes.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-includes.svg.json",
+      "title": "Media / Projection / Relationship Types / Includes",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-influenced.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-influenced.svg.json",
+      "title": "Media / Projection / Relationship Types / Influenced",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-ingredient_of.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-ingredient_of.svg.json",
+      "title": "Media / Projection / Relationship Types / Ingredient Of",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-insufficient_evidence.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-insufficient_evidence.svg.json",
+      "title": "Media / Projection / Relationship Types / Insufficient Evidence",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-interviewed.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-interviewed.svg.json",
+      "title": "Media / Projection / Relationship Types / Interviewed",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-introduced_in.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-introduced_in.svg.json",
+      "title": "Media / Projection / Relationship Types / Introduced In",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-introduced.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-introduced.svg.json",
+      "title": "Media / Projection / Relationship Types / Introduced",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-investigates.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-investigates.svg.json",
+      "title": "Media / Projection / Relationship Types / Investigates",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-licensed_under.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-licensed_under.svg.json",
+      "title": "Media / Projection / Relationship Types / Licensed Under",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-made_of.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-made_of.svg.json",
+      "title": "Media / Projection / Relationship Types / Made Of",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-maps_to.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-maps_to.svg.json",
+      "title": "Media / Projection / Relationship Types / Maps To",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-medium_transition.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-medium_transition.svg.json",
+      "title": "Media / Projection / Relationship Types / Medium Transition",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-medium_transitioned_from.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-medium_transitioned_from.svg.json",
+      "title": "Media / Projection / Relationship Types / Medium Transitioned From",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-memorializes.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-memorializes.svg.json",
+      "title": "Media / Projection / Relationship Types / Memorializes",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-mentions.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-mentions.svg.json",
+      "title": "Media / Projection / Relationship Types / Mentions",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-motivated_by.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-motivated_by.svg.json",
+      "title": "Media / Projection / Relationship Types / Motivated By",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-motivates_inquiry.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-motivates_inquiry.svg.json",
+      "title": "Media / Projection / Relationship Types / Motivates Inquiry",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-negotiated_with.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-negotiated_with.svg.json",
+      "title": "Media / Projection / Relationship Types / Negotiated With",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-occurred_at.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-occurred_at.svg.json",
+      "title": "Media / Projection / Relationship Types / Occurred At",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-overlooked_by.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-overlooked_by.svg.json",
+      "title": "Media / Projection / Relationship Types / Overlooked By",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-parallel_to.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-parallel_to.svg.json",
+      "title": "Media / Projection / Relationship Types / Parallel To",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-partially_answers.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-partially_answers.svg.json",
+      "title": "Media / Projection / Relationship Types / Partially Answers",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-participated_in.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-participated_in.svg.json",
+      "title": "Media / Projection / Relationship Types / Participated In",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-popularized.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-popularized.svg.json",
+      "title": "Media / Projection / Relationship Types / Popularized",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-possible_match.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-possible_match.svg.json",
+      "title": "Media / Projection / Relationship Types / Possible Match",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-possibly_related_to.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-possibly_related_to.svg.json",
+      "title": "Media / Projection / Relationship Types / Possibly Related To",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-preceded.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-preceded.svg.json",
+      "title": "Media / Projection / Relationship Types / Preceded",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-presented_to.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-presented_to.svg.json",
+      "title": "Media / Projection / Relationship Types / Presented To",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-presented.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-presented.svg.json",
+      "title": "Media / Projection / Relationship Types / Presented",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-preserves.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-preserves.svg.json",
+      "title": "Media / Projection / Relationship Types / Preserves",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-proposed.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-proposed.svg.json",
+      "title": "Media / Projection / Relationship Types / Proposed",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-quotes.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-quotes.svg.json",
+      "title": "Media / Projection / Relationship Types / Quotes",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-raises.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-raises.svg.json",
+      "title": "Media / Projection / Relationship Types / Raises",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-refines.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-refines.svg.json",
+      "title": "Media / Projection / Relationship Types / Refines",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-related_to.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-related_to.svg.json",
+      "title": "Media / Projection / Relationship Types / Related To",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-replied_to.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-replied_to.svg.json",
+      "title": "Media / Projection / Relationship Types / Replied To",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-reported_to.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-reported_to.svg.json",
+      "title": "Media / Projection / Relationship Types / Reported To",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-represents.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-represents.svg.json",
+      "title": "Media / Projection / Relationship Types / Represents",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-requires_attribution.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-requires_attribution.svg.json",
+      "title": "Media / Projection / Relationship Types / Requires Attribution",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-requires_context.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-requires_context.svg.json",
+      "title": "Media / Projection / Relationship Types / Requires Context",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-requires_information.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-requires_information.svg.json",
+      "title": "Media / Projection / Relationship Types / Requires Information",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-requires_review.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-requires_review.svg.json",
+      "title": "Media / Projection / Relationship Types / Requires Review",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-requires_source.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-requires_source.svg.json",
+      "title": "Media / Projection / Relationship Types / Requires Source",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-requires_validation.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-requires_validation.svg.json",
+      "title": "Media / Projection / Relationship Types / Requires Validation",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-requires.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-requires.svg.json",
+      "title": "Media / Projection / Relationship Types / Requires",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-resonates_with.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-resonates_with.svg.json",
+      "title": "Media / Projection / Relationship Types / Resonates With",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-results_from.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-results_from.svg.json",
+      "title": "Media / Projection / Relationship Types / Results From",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-same_concept.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-same_concept.svg.json",
+      "title": "Media / Projection / Relationship Types / Same Concept",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-same_entity.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-same_entity.svg.json",
+      "title": "Media / Projection / Relationship Types / Same Entity",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-same_person.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-same_person.svg.json",
+      "title": "Media / Projection / Relationship Types / Same Person",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-same_source.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-same_source.svg.json",
+      "title": "Media / Projection / Relationship Types / Same Source",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-shapes.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-shapes.svg.json",
+      "title": "Media / Projection / Relationship Types / Shapes",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-shares_pattern_with.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-shares_pattern_with.svg.json",
+      "title": "Media / Projection / Relationship Types / Shares Pattern With",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-specializes.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-specializes.svg.json",
+      "title": "Media / Projection / Relationship Types / Specializes",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-speculative.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-speculative.svg.json",
+      "title": "Media / Projection / Relationship Types / Speculative",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-spoke_at.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-spoke_at.svg.json",
+      "title": "Media / Projection / Relationship Types / Spoke At",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-starts_with.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-starts_with.svg.json",
+      "title": "Media / Projection / Relationship Types / Starts With",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-supersedes.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-supersedes.svg.json",
+      "title": "Media / Projection / Relationship Types / Supersedes",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-supports.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-supports.svg.json",
+      "title": "Media / Projection / Relationship Types / Supports",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-tests.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-tests.svg.json",
+      "title": "Media / Projection / Relationship Types / Tests",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-threatens.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-threatens.svg.json",
+      "title": "Media / Projection / Relationship Types / Threatens",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-trademarked_by.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-trademarked_by.svg.json",
+      "title": "Media / Projection / Relationship Types / Trademarked By",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-trained_on.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-trained_on.svg.json",
+      "title": "Media / Projection / Relationship Types / Trained On",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-transcludes.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-transcludes.svg.json",
+      "title": "Media / Projection / Relationship Types / Transcludes",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-under_review.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-under_review.svg.json",
+      "title": "Media / Projection / Relationship Types / Under Review",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-unresolved.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-unresolved.svg.json",
+      "title": "Media / Projection / Relationship Types / Unresolved",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-uses.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-uses.svg.json",
+      "title": "Media / Projection / Relationship Types / Uses",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-types-validates.svg",
+      "path": "nodes/protocol-artifact-media-projection-relationship-types-validates.svg.json",
+      "title": "Media / Projection / Relationship Types / Validates",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-attention-projection-icon",
+      "path": "nodes/relationship-category-attention-projection-icon.json",
+      "title": "attention Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-causation-projection-icon",
+      "path": "nodes/relationship-category-causation-projection-icon.json",
+      "title": "causation Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-citation-projection-icon",
+      "path": "nodes/relationship-category-citation-projection-icon.json",
+      "title": "citation Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-claim_structure-projection-icon",
+      "path": "nodes/relationship-category-claim_structure-projection-icon.json",
+      "title": "claim structure Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-cognition-projection-icon",
+      "path": "nodes/relationship-category-cognition-projection-icon.json",
+      "title": "cognition Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-communication-projection-icon",
+      "path": "nodes/relationship-category-communication-projection-icon.json",
+      "title": "communication Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-comparison-projection-icon",
+      "path": "nodes/relationship-category-comparison-projection-icon.json",
+      "title": "comparison Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-composition-projection-icon",
+      "path": "nodes/relationship-category-composition-projection-icon.json",
+      "title": "composition Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-creation-projection-icon",
+      "path": "nodes/relationship-category-creation-projection-icon.json",
+      "title": "creation Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-definition-projection-icon",
+      "path": "nodes/relationship-category-definition-projection-icon.json",
+      "title": "definition Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-discovery-projection-icon",
+      "path": "nodes/relationship-category-discovery-projection-icon.json",
+      "title": "discovery Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-evidence-projection-icon",
+      "path": "nodes/relationship-category-evidence-projection-icon.json",
+      "title": "evidence Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-evolution-projection-icon",
+      "path": "nodes/relationship-category-evolution-projection-icon.json",
+      "title": "evolution Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-explanation-projection-icon",
+      "path": "nodes/relationship-category-explanation-projection-icon.json",
+      "title": "explanation Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-generic-projection-icon",
+      "path": "nodes/relationship-category-generic-projection-icon.json",
+      "title": "generic Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-governance-projection-icon",
+      "path": "nodes/relationship-category-governance-projection-icon.json",
+      "title": "governance Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-historical-projection-icon",
+      "path": "nodes/relationship-category-historical-projection-icon.json",
+      "title": "historical Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-identity-projection-icon",
+      "path": "nodes/relationship-category-identity-projection-icon.json",
+      "title": "identity Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-influence-projection-icon",
+      "path": "nodes/relationship-category-influence-projection-icon.json",
+      "title": "influence Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-inquiry-projection-icon",
+      "path": "nodes/relationship-category-inquiry-projection-icon.json",
+      "title": "inquiry Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-knowledge_workflow-projection-icon",
+      "path": "nodes/relationship-category-knowledge_workflow-projection-icon.json",
+      "title": "knowledge workflow Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-lineage-projection-icon",
+      "path": "nodes/relationship-category-lineage-projection-icon.json",
+      "title": "lineage Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-location-projection-icon",
+      "path": "nodes/relationship-category-location-projection-icon.json",
+      "title": "location Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-participation-projection-icon",
+      "path": "nodes/relationship-category-participation-projection-icon.json",
+      "title": "participation Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-reasoning-projection-icon",
+      "path": "nodes/relationship-category-reasoning-projection-icon.json",
+      "title": "reasoning Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-representation-projection-icon",
+      "path": "nodes/relationship-category-representation-projection-icon.json",
+      "title": "representation Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-research_workflow-projection-icon",
+      "path": "nodes/relationship-category-research_workflow-projection-icon.json",
+      "title": "research workflow Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-revision-projection-icon",
+      "path": "nodes/relationship-category-revision-projection-icon.json",
+      "title": "revision Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-schema_mapping-projection-icon",
+      "path": "nodes/relationship-category-schema_mapping-projection-icon.json",
+      "title": "schema mapping Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-social-projection-icon",
+      "path": "nodes/relationship-category-social-projection-icon.json",
+      "title": "social Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-temporal-projection-icon",
+      "path": "nodes/relationship-category-temporal-projection-icon.json",
+      "title": "temporal Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-category-uncertainty-projection-icon",
+      "path": "nodes/relationship-category-uncertainty-projection-icon.json",
+      "title": "uncertainty Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:media/xananode-android-chrome-192",
       "path": "nodes/xananode-android-chrome-192.json",
       "title": "XanaNode Android Chrome Icon 192x192",
@@ -898,6 +2606,41 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:question/how-do-i-use-xananode-myself",
+      "path": "nodes/how-do-i-use-xananode-myself.json",
+      "title": "How do I use XanaNode myself?",
+      "type": "question",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:question/how-do-sharing-rules-work",
+      "path": "nodes/how-do-sharing-rules-work.json",
+      "title": "How do sharing rules work?",
+      "type": "question",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:question/is-xananode-a-real-working-stack",
+      "path": "nodes/is-xananode-a-real-working-stack.json",
+      "title": "Is XanaNode a real working stack?",
+      "type": "question",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:question/who-made-xananode",
+      "path": "nodes/who-made-xananode.json",
+      "title": "Who made XanaNode?",
+      "type": "question",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:question/why-does-xananode-exist",
+      "path": "nodes/why-does-xananode-exist.json",
+      "title": "Why does XanaNode exist?",
+      "type": "question",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:relationship/protocol-implements-claim",
       "path": "nodes/protocol-implements-claim.json",
       "title": "Protocol Implements Relationship Preservation",
@@ -909,13 +2652,6 @@
       "path": "nodes/canonical-pack-v0-1-0.json",
       "title": "Canonical Pack v0.1.0",
       "type": "revision",
-      "imported": true
-    },
-    {
-      "id": "xananode.canonical:schema/author-profile-schema",
-      "path": "nodes/author-profile-schema.json",
-      "title": "Author Profile Schema",
-      "type": "schema",
       "imported": true
     },
     {
@@ -1010,23 +2746,9 @@
       "imported": true
     },
     {
-      "id": "xananode.canonical:schema/compatibility-report-schema",
-      "path": "nodes/compatibility-report-schema.json",
-      "title": "Compatibility Report Schema",
-      "type": "schema",
-      "imported": true
-    },
-    {
       "id": "xananode.canonical:schema/known-implementations-registry",
       "path": "nodes/known-implementations-registry.json",
       "title": "Known Implementations Registry",
-      "type": "schema",
-      "imported": true
-    },
-    {
-      "id": "xananode.canonical:schema/merge-report-schema",
-      "path": "nodes/merge-report-schema.json",
-      "title": "Merge Report Schema",
       "type": "schema",
       "imported": true
     },
@@ -1083,13 +2805,6 @@
       "id": "xananode.canonical:schema/namespace-xananode",
       "path": "nodes/namespace-xananode.json",
       "title": "XanaNode Core",
-      "type": "schema",
-      "imported": true
-    },
-    {
-      "id": "xananode.canonical:schema/nanopublication-schema",
-      "path": "nodes/nanopublication-schema.json",
-      "title": "Nanopublication Schema",
       "type": "schema",
       "imported": true
     },
@@ -1517,6 +3232,76 @@
       "id": "xananode.canonical:schema/node-subtype-hypothesis-scientific",
       "path": "nodes/node-subtype-hypothesis-scientific.json",
       "title": "Hypothesis subtype: scientific",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-item-appliance",
+      "path": "nodes/node-subtype-item-appliance.json",
+      "title": "Item subtype: appliance",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-item-artifact",
+      "path": "nodes/node-subtype-item-artifact.json",
+      "title": "Item subtype: artifact",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-item-component",
+      "path": "nodes/node-subtype-item-component.json",
+      "title": "Item subtype: component",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-item-container",
+      "path": "nodes/node-subtype-item-container.json",
+      "title": "Item subtype: container",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-item-finished_item",
+      "path": "nodes/node-subtype-item-finished_item.json",
+      "title": "Item subtype: finished item",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-item-ingredient",
+      "path": "nodes/node-subtype-item-ingredient.json",
+      "title": "Item subtype: ingredient",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-item-material",
+      "path": "nodes/node-subtype-item-material.json",
+      "title": "Item subtype: material",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-item-spare_part",
+      "path": "nodes/node-subtype-item-spare_part.json",
+      "title": "Item subtype: spare part",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-item-tool",
+      "path": "nodes/node-subtype-item-tool.json",
+      "title": "Item subtype: tool",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-item-utensil",
+      "path": "nodes/node-subtype-item-utensil.json",
+      "title": "Item subtype: utensil",
       "type": "schema",
       "imported": true
     },
@@ -1955,6 +3740,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/node-subtype-publication-adaptation",
+      "path": "nodes/node-subtype-publication-adaptation.json",
+      "title": "Publication subtype: adaptation",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/node-subtype-publication-article",
       "path": "nodes/node-subtype-publication-article.json",
       "title": "Publication subtype: article",
@@ -1965,6 +3757,13 @@
       "id": "xananode.canonical:schema/node-subtype-publication-book",
       "path": "nodes/node-subtype-publication-book.json",
       "title": "Publication subtype: book",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-publication-edition",
+      "path": "nodes/node-subtype-publication-edition.json",
+      "title": "Publication subtype: edition",
       "type": "schema",
       "imported": true
     },
@@ -1983,9 +3782,30 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/node-subtype-publication-installment",
+      "path": "nodes/node-subtype-publication-installment.json",
+      "title": "Publication subtype: installment",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-publication-omnibus",
+      "path": "nodes/node-subtype-publication-omnibus.json",
+      "title": "Publication subtype: omnibus",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/node-subtype-publication-paper",
       "path": "nodes/node-subtype-publication-paper.json",
       "title": "Publication subtype: paper",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-publication-pilot",
+      "path": "nodes/node-subtype-publication-pilot.json",
+      "title": "Publication subtype: pilot",
       "type": "schema",
       "imported": true
     },
@@ -1997,9 +3817,44 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/node-subtype-publication-reissue",
+      "path": "nodes/node-subtype-publication-reissue.json",
+      "title": "Publication subtype: reissue",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-publication-saga",
+      "path": "nodes/node-subtype-publication-saga.json",
+      "title": "Publication subtype: saga",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-publication-season",
+      "path": "nodes/node-subtype-publication-season.json",
+      "title": "Publication subtype: season",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-publication-series",
+      "path": "nodes/node-subtype-publication-series.json",
+      "title": "Publication subtype: series",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/node-subtype-publication-talk",
       "path": "nodes/node-subtype-publication-talk.json",
       "title": "Publication subtype: talk",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-publication-trilogy",
+      "path": "nodes/node-subtype-publication-trilogy.json",
+      "title": "Publication subtype: trilogy",
       "type": "schema",
       "imported": true
     },
@@ -2305,6 +4160,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/node-subtype-source-audio_drama",
+      "path": "nodes/node-subtype-source-audio_drama.json",
+      "title": "Source subtype: audio drama",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/node-subtype-source-book",
       "path": "nodes/node-subtype-source-book.json",
       "title": "Source subtype: book",
@@ -2375,9 +4237,30 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/node-subtype-source-radio_episode",
+      "path": "nodes/node-subtype-source-radio_episode.json",
+      "title": "Source subtype: radio episode",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-source-radio_series",
+      "path": "nodes/node-subtype-source-radio_series.json",
+      "title": "Source subtype: radio series",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/node-subtype-source-social_profile",
       "path": "nodes/node-subtype-source-social_profile.json",
       "title": "Source subtype: social profile",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-source-stage_play",
+      "path": "nodes/node-subtype-source-stage_play.json",
+      "title": "Source subtype: stage play",
       "type": "schema",
       "imported": true
     },
@@ -2392,6 +4275,20 @@
       "id": "xananode.canonical:schema/node-subtype-source-talk",
       "path": "nodes/node-subtype-source-talk.json",
       "title": "Source subtype: talk",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-source-television_episode",
+      "path": "nodes/node-subtype-source-television_episode.json",
+      "title": "Source subtype: television episode",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-source-television_series",
+      "path": "nodes/node-subtype-source-television_series.json",
+      "title": "Source subtype: television series",
       "type": "schema",
       "imported": true
     },
@@ -2578,6 +4475,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/node-type-item",
+      "path": "nodes/node-type-item.json",
+      "title": "Item",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/node-type-knowledge_gap",
       "path": "nodes/node-type-knowledge_gap.json",
       "title": "Knowledge Gap",
@@ -2753,6 +4657,153 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/protocol-artifact-contexts",
+      "path": "nodes/protocol-artifact-contexts.json",
+      "title": "Protocol Contexts",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-contexts-xananode.context.jsonld",
+      "path": "nodes/protocol-artifact-contexts-xananode.context.jsonld.json",
+      "title": "Contexts / Xananode.Context",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples",
+      "path": "nodes/protocol-artifact-examples.json",
+      "title": "Protocol Examples",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-nodes-memex-concept.json",
+      "path": "nodes/protocol-artifact-examples-custom-extension-substrate-nodes-memex-concept.json.json",
+      "title": "Examples / Custom Extension Substrate / Nodes / Memex Concept",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-nodes-memex-illustration.json",
+      "path": "nodes/protocol-artifact-examples-custom-extension-substrate-nodes-memex-illustration.json.json",
+      "title": "Examples / Custom Extension Substrate / Nodes / Memex Illustration",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-nodes-person-example-curator.json",
+      "path": "nodes/protocol-artifact-examples-custom-extension-substrate-nodes-person-example-curator.json.json",
+      "title": "Examples / Custom Extension Substrate / Nodes / Person Example Curator",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-relationships.json",
+      "path": "nodes/protocol-artifact-examples-custom-extension-substrate-relationships.json.json",
+      "title": "Examples / Custom Extension Substrate / Relationships",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-schemas-node-types.example.museum.json",
+      "path": "nodes/protocol-artifact-examples-custom-extension-substrate-schemas-node-types.example.museum.json.json",
+      "title": "Examples / Custom Extension Substrate / Schemas / Node Types.Example.Museum",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-schemas-relationship-types.example.museum.json",
+      "path": "nodes/protocol-artifact-examples-custom-extension-substrate-schemas-relationship-types.example.museum.json.json",
+      "title": "Examples / Custom Extension Substrate / Schemas / Relationship Types.Example.Museum",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-substrate.json",
+      "path": "nodes/protocol-artifact-examples-custom-extension-substrate-substrate.json.json",
+      "title": "Examples / Custom Extension Substrate / Substrate",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-federation-example-compatibility-report.json",
+      "path": "nodes/protocol-artifact-examples-federation-example-compatibility-report.json.json",
+      "title": "Examples / Federation Example / Compatibility Report",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-federation-example-merge-report.json",
+      "path": "nodes/protocol-artifact-examples-federation-example-merge-report.json.json",
+      "title": "Examples / Federation Example / Merge Report",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-a-nodes-knowledge-substrate.json",
+      "path": "nodes/protocol-artifact-examples-federation-example-substrate-a-nodes-knowledge-substrate.json.json",
+      "title": "Examples / Federation Example / Substrate A / Nodes / Knowledge Substrate",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-a-nodes-person-researcher-a.json",
+      "path": "nodes/protocol-artifact-examples-federation-example-substrate-a-nodes-person-researcher-a.json.json",
+      "title": "Examples / Federation Example / Substrate A / Nodes / Person Researcher A",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-a-relationships.json",
+      "path": "nodes/protocol-artifact-examples-federation-example-substrate-a-relationships.json.json",
+      "title": "Examples / Federation Example / Substrate A / Relationships",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-a-substrate.json",
+      "path": "nodes/protocol-artifact-examples-federation-example-substrate-a-substrate.json.json",
+      "title": "Examples / Federation Example / Substrate A / Substrate",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-b-nodes-memory-substrate.json",
+      "path": "nodes/protocol-artifact-examples-federation-example-substrate-b-nodes-memory-substrate.json.json",
+      "title": "Examples / Federation Example / Substrate B / Nodes / Memory Substrate",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-b-nodes-person-researcher-b.json",
+      "path": "nodes/protocol-artifact-examples-federation-example-substrate-b-nodes-person-researcher-b.json.json",
+      "title": "Examples / Federation Example / Substrate B / Nodes / Person Researcher B",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-b-relationships.json",
+      "path": "nodes/protocol-artifact-examples-federation-example-substrate-b-relationships.json.json",
+      "title": "Examples / Federation Example / Substrate B / Relationships",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-b-substrate.json",
+      "path": "nodes/protocol-artifact-examples-federation-example-substrate-b-substrate.json.json",
+      "title": "Examples / Federation Example / Substrate B / Substrate",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-diff.json",
+      "path": "nodes/protocol-artifact-examples-federation-example-substrate-diff.json.json",
+      "title": "Examples / Federation Example / Substrate Diff",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate",
       "path": "nodes/protocol-artifact-examples-minimal-substrate.json",
       "title": "examples/minimal-substrate/",
@@ -2760,9 +4811,149 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-author-profile.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-author-profile.json.json",
+      "title": "Examples / Minimal Substrate / Author Profile",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nanopublication-substrate-claim.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-nanopublication-substrate-claim.json.json",
+      "title": "Examples / Minimal Substrate / Nanopublication Substrate Claim",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-claim-substrate-structure.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-nodes-claim-substrate-structure.json.json",
+      "title": "Examples / Minimal Substrate / Nodes / Claim Substrate Structure",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-communication-minimal-substrate-discussion.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-nodes-communication-minimal-substrate-discussion.json.json",
+      "title": "Examples / Minimal Substrate / Nodes / Communication Minimal Substrate Discussion",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-concept-associative-trails.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-nodes-concept-associative-trails.json.json",
+      "title": "Examples / Minimal Substrate / Nodes / Concept Associative Trails",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-essay-relationship-navigation-intro.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-nodes-essay-relationship-navigation-intro.json.json",
+      "title": "Examples / Minimal Substrate / Nodes / Essay Relationship Navigation Intro",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-fragment-as-we-may-think-0004.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-nodes-fragment-as-we-may-think-0004.json.json",
+      "title": "Examples / Minimal Substrate / Nodes / Fragment As We May Think 0004",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-knowledge-gap-missing-relationship-evidence.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-nodes-knowledge-gap-missing-relationship-evidence.json.json",
+      "title": "Examples / Minimal Substrate / Nodes / Knowledge Gap Missing Relationship Evidence",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-knowledge-substrate.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-nodes-knowledge-substrate.json.json",
+      "title": "Examples / Minimal Substrate / Nodes / Knowledge Substrate",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-media-xananode-icon.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-nodes-media-xananode-icon.json.json",
+      "title": "Examples / Minimal Substrate / Nodes / Media Xananode Icon",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-person-example-maintainer.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-nodes-person-example-maintainer.json.json",
+      "title": "Examples / Minimal Substrate / Nodes / Person Example Maintainer",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-question-why-relationships-matter.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-nodes-question-why-relationships-matter.json.json",
+      "title": "Examples / Minimal Substrate / Nodes / Question Why Relationships Matter",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-response-relationships-preserve-context.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-nodes-response-relationships-preserve-context.json.json",
+      "title": "Examples / Minimal Substrate / Nodes / Response Relationships Preserve Context",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-source-as-we-may-think.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-nodes-source-as-we-may-think.json.json",
+      "title": "Examples / Minimal Substrate / Nodes / Source As We May Think",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-trail-start-here.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-nodes-trail-start-here.json.json",
+      "title": "Examples / Minimal Substrate / Nodes / Trail Start Here",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-relationships.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-relationships.json.json",
+      "title": "Examples / Minimal Substrate / Relationships",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-ro-crate-metadata.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-ro-crate-metadata.json.json",
+      "title": "Examples / Minimal Substrate / Ro Crate Metadata",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-substrate.json",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-substrate.json.json",
+      "title": "Examples / Minimal Substrate / Substrate",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/protocol-artifact-governance",
       "path": "nodes/protocol-artifact-governance.json",
-      "title": "governance/",
+      "title": "Protocol Governance",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-links",
+      "path": "nodes/protocol-artifact-links.json",
+      "title": "Protocol Links",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-media",
+      "path": "nodes/protocol-artifact-media.json",
+      "title": "Protocol Media",
       "type": "schema",
       "imported": true
     },
@@ -2776,70 +4967,203 @@
     {
       "id": "xananode.canonical:schema/protocol-artifact-media-web-manifests-site.webmanifest",
       "path": "nodes/protocol-artifact-media-web-manifests-site.webmanifest.json",
-      "title": "media/web-manifests/site.webmanifest",
+      "title": "Media / Web Manifests / Site",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-proposals",
+      "path": "nodes/protocol-artifact-proposals.json",
+      "title": "Protocol Proposals",
       "type": "schema",
       "imported": true
     },
     {
       "id": "xananode.canonical:schema/protocol-artifact-registry",
       "path": "nodes/protocol-artifact-registry.json",
-      "title": "registry/",
+      "title": "Protocol Registry",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-registry-canonical-schemas.json",
+      "path": "nodes/protocol-artifact-registry-canonical-schemas.json.json",
+      "title": "Registry / Canonical Schemas",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-registry-federation-targets.json",
+      "path": "nodes/protocol-artifact-registry-federation-targets.json.json",
+      "title": "Registry / Federation Targets",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-registry-federation-targets.schema.json",
+      "path": "nodes/protocol-artifact-registry-federation-targets.schema.json.json",
+      "title": "Registry / Federation Targets.Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-registry-known-implementations.json",
+      "path": "nodes/protocol-artifact-registry-known-implementations.json.json",
+      "title": "Registry / Known Implementations",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-registry-namespaces.json",
+      "path": "nodes/protocol-artifact-registry-namespaces.json.json",
+      "title": "Registry / Namespaces",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-root",
+      "path": "nodes/protocol-artifact-root.json",
+      "title": "Protocol Root Files",
       "type": "schema",
       "imported": true
     },
     {
       "id": "xananode.canonical:schema/protocol-artifact-schemas",
       "path": "nodes/protocol-artifact-schemas.json",
-      "title": "schemas/",
+      "title": "Protocol Schemas",
       "type": "schema",
       "imported": true
     },
     {
       "id": "xananode.canonical:schema/protocol-artifact-schemas-author-profile.schema.json",
       "path": "nodes/protocol-artifact-schemas-author-profile.schema.json.json",
-      "title": "schemas/author-profile.schema.json",
+      "title": "Schemas / Author Profile.Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-schemas-compatibility-report.schema.json",
+      "path": "nodes/protocol-artifact-schemas-compatibility-report.schema.json.json",
+      "title": "Schemas / Compatibility Report.Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-schemas-merge-report.schema.json",
+      "path": "nodes/protocol-artifact-schemas-merge-report.schema.json.json",
+      "title": "Schemas / Merge Report.Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-schemas-namespace.schema.json",
+      "path": "nodes/protocol-artifact-schemas-namespace.schema.json.json",
+      "title": "Schemas / Namespace.Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-schemas-nanopublication.schema.json",
+      "path": "nodes/protocol-artifact-schemas-nanopublication.schema.json.json",
+      "title": "Schemas / Nanopublication.Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-schemas-property-registry.schema.json",
+      "path": "nodes/protocol-artifact-schemas-property-registry.schema.json.json",
+      "title": "Schemas / Property Registry.Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-schemas-ro-crate-metadata.schema.json",
+      "path": "nodes/protocol-artifact-schemas-ro-crate-metadata.schema.json.json",
+      "title": "Schemas / Ro Crate Metadata.Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-schemas-substrate-diff.schema.json",
+      "path": "nodes/protocol-artifact-schemas-substrate-diff.schema.json.json",
+      "title": "Schemas / Substrate Diff.Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-schemas-substrate-layout.schema.json",
+      "path": "nodes/protocol-artifact-schemas-substrate-layout.schema.json.json",
+      "title": "Schemas / Substrate Layout.Schema",
       "type": "schema",
       "imported": true
     },
     {
       "id": "xananode.canonical:schema/protocol-artifact-schemas-substrate-manifest.schema.json",
       "path": "nodes/protocol-artifact-schemas-substrate-manifest.schema.json.json",
-      "title": "schemas/substrate-manifest.schema.json",
+      "title": "Schemas / Substrate Manifest.Schema",
       "type": "schema",
       "imported": true
     },
     {
       "id": "xananode.canonical:schema/protocol-artifact-schemas-substrate-node.schema.json",
       "path": "nodes/protocol-artifact-schemas-substrate-node.schema.json.json",
-      "title": "schemas/substrate-node.schema.json",
+      "title": "Schemas / Substrate Node.Schema",
       "type": "schema",
       "imported": true
     },
     {
       "id": "xananode.canonical:schema/protocol-artifact-schemas-substrate-relationships.schema.json",
       "path": "nodes/protocol-artifact-schemas-substrate-relationships.schema.json.json",
-      "title": "schemas/substrate-relationships.schema.json",
+      "title": "Schemas / Substrate Relationships.Schema",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-schemas-xananode-node-types.schema.v0.3.0.json",
+      "path": "nodes/protocol-artifact-schemas-xananode-node-types.schema.v0.3.0.json.json",
+      "title": "Schemas / Xananode Node Types.Schema.V0.3.0",
       "type": "schema",
       "imported": true
     },
     {
       "id": "xananode.canonical:schema/protocol-artifact-schemas-xananode-node-types.v0.3.0.json",
       "path": "nodes/protocol-artifact-schemas-xananode-node-types.v0.3.0.json.json",
-      "title": "schemas/xananode-node-types.v0.3.0.json",
+      "title": "Schemas / Xananode Node Types.V0.3.0",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-schemas-xananode-property-registry.v0.1.0.json",
+      "path": "nodes/protocol-artifact-schemas-xananode-property-registry.v0.1.0.json.json",
+      "title": "Schemas / Xananode Property Registry.V0.1.0",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-schemas-xananode-relationship-types.schema.v0.5.0.json",
+      "path": "nodes/protocol-artifact-schemas-xananode-relationship-types.schema.v0.5.0.json.json",
+      "title": "Schemas / Xananode Relationship Types.Schema.V0.5.0",
       "type": "schema",
       "imported": true
     },
     {
       "id": "xananode.canonical:schema/protocol-artifact-schemas-xananode-relationship-types.v0.5.0.json",
       "path": "nodes/protocol-artifact-schemas-xananode-relationship-types.v0.5.0.json.json",
-      "title": "schemas/xananode-relationship-types.v0.5.0.json",
+      "title": "Schemas / Xananode Relationship Types.V0.5.0",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-schemas-xananode-substrate-layout.v0.1.0.json",
+      "path": "nodes/protocol-artifact-schemas-xananode-substrate-layout.v0.1.0.json.json",
+      "title": "Schemas / Xananode Substrate Layout.V0.1.0",
       "type": "schema",
       "imported": true
     },
     {
       "id": "xananode.canonical:schema/protocol-artifact-specs",
       "path": "nodes/protocol-artifact-specs.json",
-      "title": "specs/",
+      "title": "Protocol Specs",
       "type": "schema",
       "imported": true
     },
@@ -2847,6 +5171,13 @@
       "id": "xananode.canonical:schema/protocol-artifact-specs-implementation-compatibility.md",
       "path": "nodes/protocol-artifact-specs-implementation-compatibility.md.json",
       "title": "specs/implementation-compatibility.md",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-tools",
+      "path": "nodes/protocol-artifact-tools.json",
+      "title": "Protocol Tools",
       "type": "schema",
       "imported": true
     },
@@ -2931,6 +5262,13 @@
       "id": "xananode.canonical:schema/relationship-category-evidence",
       "path": "nodes/relationship-category-evidence.json",
       "title": "Evidence Relationship Category",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-category-evolution",
+      "path": "nodes/relationship-category-evolution.json",
+      "title": "Evolution Relationship Category",
       "type": "schema",
       "imported": true
     },
@@ -3075,6 +5413,20 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-adapted_from",
+      "path": "nodes/relationship-type-adapted_from.json",
+      "title": "Adapted from",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-adapted_into",
+      "path": "nodes/relationship-type-adapted_into.json",
+      "title": "Adapted into",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-alias_of",
       "path": "nodes/relationship-type-alias_of.json",
       "title": "Alias of",
@@ -3208,6 +5560,20 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-assembled_from",
+      "path": "nodes/relationship-type-assembled_from.json",
+      "title": "Assembled from",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-assembled_into",
+      "path": "nodes/relationship-type-assembled_into.json",
+      "title": "Assembled Into Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-attribution_required_by",
       "path": "nodes/relationship-type-attribution_required_by.json",
       "title": "Attribution Required By Relationship Term",
@@ -3274,6 +5640,13 @@
       "id": "xananode.canonical:schema/relationship-type-clarifies",
       "path": "nodes/relationship-type-clarifies.json",
       "title": "Clarifies",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-co_authored_with",
+      "path": "nodes/relationship-type-co_authored_with.json",
+      "title": "Co-authored with",
       "type": "schema",
       "imported": true
     },
@@ -3698,6 +6071,20 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-format_translated_from",
+      "path": "nodes/relationship-type-format_translated_from.json",
+      "title": "Format translated from",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-format_translated_into",
+      "path": "nodes/relationship-type-format_translated_into.json",
+      "title": "Format translated into",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-frequently_misunderstood",
       "path": "nodes/relationship-type-frequently_misunderstood.json",
       "title": "Frequently misunderstood",
@@ -3838,6 +6225,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-has_ingredient",
+      "path": "nodes/relationship-type-has_ingredient.json",
+      "title": "Has Ingredient Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-has_primary_media",
       "path": "nodes/relationship-type-has_primary_media.json",
       "title": "Has primary media",
@@ -3918,6 +6312,13 @@
       "id": "xananode.canonical:schema/relationship-type-information_required_by",
       "path": "nodes/relationship-type-information_required_by.json",
       "title": "Information Required By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-ingredient_of",
+      "path": "nodes/relationship-type-ingredient_of.json",
+      "title": "Ingredient of",
       "type": "schema",
       "imported": true
     },
@@ -4013,6 +6414,20 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-made_of",
+      "path": "nodes/relationship-type-made_of.json",
+      "title": "Made of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-makes_up",
+      "path": "nodes/relationship-type-makes_up.json",
+      "title": "Makes Up Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-mapped_from",
       "path": "nodes/relationship-type-mapped_from.json",
       "title": "Mapped From Relationship Term",
@@ -4023,6 +6438,20 @@
       "id": "xananode.canonical:schema/relationship-type-maps_to",
       "path": "nodes/relationship-type-maps_to.json",
       "title": "Maps to",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-medium_transition",
+      "path": "nodes/relationship-type-medium_transition.json",
+      "title": "Medium transition",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-medium_transitioned_from",
+      "path": "nodes/relationship-type-medium_transitioned_from.json",
+      "title": "Medium transitioned from",
       "type": "schema",
       "imported": true
     },
@@ -4720,34 +7149,6 @@
       "imported": true
     },
     {
-      "id": "xananode.canonical:schema/substrate-diff-schema",
-      "path": "nodes/substrate-diff-schema.json",
-      "title": "Substrate Diff Schema",
-      "type": "schema",
-      "imported": true
-    },
-    {
-      "id": "xananode.canonical:schema/substrate-manifest-schema",
-      "path": "nodes/substrate-manifest-schema.json",
-      "title": "Substrate Manifest Schema",
-      "type": "schema",
-      "imported": true
-    },
-    {
-      "id": "xananode.canonical:schema/substrate-node-schema",
-      "path": "nodes/substrate-node-schema.json",
-      "title": "Substrate Node Schema",
-      "type": "schema",
-      "imported": true
-    },
-    {
-      "id": "xananode.canonical:schema/substrate-relationships-schema",
-      "path": "nodes/substrate-relationships-schema.json",
-      "title": "Substrate Relationships Schema",
-      "type": "schema",
-      "imported": true
-    },
-    {
       "id": "xananode.canonical:source/apache-2-0-license",
       "path": "nodes/apache-2-0-license.json",
       "title": "Apache License 2.0",
@@ -4793,6 +7194,377 @@
       "id": "xananode.canonical:source/mit-license",
       "path": "nodes/mit-license.json",
       "title": "MIT License",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-examples-custom-extension-substrate-nodes-readme.md",
+      "path": "nodes/protocol-artifact-examples-custom-extension-substrate-nodes-readme.md.json",
+      "title": "Examples / Custom Extension Substrate / Nodes / README",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-examples-custom-extension-substrate-readme.md",
+      "path": "nodes/protocol-artifact-examples-custom-extension-substrate-readme.md.json",
+      "title": "Examples / Custom Extension Substrate / README",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-examples-custom-extension-substrate-schemas-readme.md",
+      "path": "nodes/protocol-artifact-examples-custom-extension-substrate-schemas-readme.md.json",
+      "title": "Examples / Custom Extension Substrate / Schemas / README",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-examples-federation-example-readme.md",
+      "path": "nodes/protocol-artifact-examples-federation-example-readme.md.json",
+      "title": "Examples / Federation Example / README",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-examples-federation-example-substrate-a-readme.md",
+      "path": "nodes/protocol-artifact-examples-federation-example-substrate-a-readme.md.json",
+      "title": "Examples / Federation Example / Substrate A / README",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-examples-federation-example-substrate-b-readme.md",
+      "path": "nodes/protocol-artifact-examples-federation-example-substrate-b-readme.md.json",
+      "title": "Examples / Federation Example / Substrate B / README",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-examples-minimal-substrate-nodes-readme.md",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-nodes-readme.md.json",
+      "title": "Examples / Minimal Substrate / Nodes / README",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-examples-minimal-substrate-readme.md",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate-readme.md.json",
+      "title": "Examples / Minimal Substrate / README",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-examples-readme.md",
+      "path": "nodes/protocol-artifact-examples-readme.md.json",
+      "title": "Examples / README",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-governance-canonical-type-policy.md",
+      "path": "nodes/protocol-artifact-governance-canonical-type-policy.md.json",
+      "title": "Governance / Canonical Type Policy",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-governance-dispute-resolution.md",
+      "path": "nodes/protocol-artifact-governance-dispute-resolution.md.json",
+      "title": "Governance / Dispute Resolution",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-governance-federation-rules.md",
+      "path": "nodes/protocol-artifact-governance-federation-rules.md.json",
+      "title": "Governance / Federation Rules",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-governance-moderation-model.md",
+      "path": "nodes/protocol-artifact-governance-moderation-model.md.json",
+      "title": "Governance / Moderation Model",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-governance-readme.md",
+      "path": "nodes/protocol-artifact-governance-readme.md.json",
+      "title": "Governance / README",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-governance-schema-extension-rules.md",
+      "path": "nodes/protocol-artifact-governance-schema-extension-rules.md.json",
+      "title": "Governance / Schema Extension Rules",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-governance-versioning-policy.md",
+      "path": "nodes/protocol-artifact-governance-versioning-policy.md.json",
+      "title": "Governance / Versioning Policy",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-license.md",
+      "path": "nodes/protocol-artifact-license.md.json",
+      "title": "XanaNode Protocol License",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-links-implementations.md",
+      "path": "nodes/protocol-artifact-links-implementations.md.json",
+      "title": "Links / Implementations",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-links-readme.md",
+      "path": "nodes/protocol-artifact-links-readme.md.json",
+      "title": "Links / README",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-links-related-projects.md",
+      "path": "nodes/protocol-artifact-links-related-projects.md.json",
+      "title": "Links / Related Projects",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-links-tools.md",
+      "path": "nodes/protocol-artifact-links-tools.md.json",
+      "title": "Links / Tools",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-notice",
+      "path": "nodes/protocol-artifact-notice.json",
+      "title": "XanaNode Protocol Notice",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-proposals-readme.md",
+      "path": "nodes/protocol-artifact-proposals-readme.md.json",
+      "title": "Proposals / README",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-proposals-xnp-0001-namespaces.md",
+      "path": "nodes/protocol-artifact-proposals-xnp-0001-namespaces.md.json",
+      "title": "Proposals / XNP 0001 Namespaces",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-proposals-xnp-0002-extension-schemas.md",
+      "path": "nodes/protocol-artifact-proposals-xnp-0002-extension-schemas.md.json",
+      "title": "Proposals / XNP 0002 Extension Schemas",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-proposals-xnp-0003-federation.md",
+      "path": "nodes/protocol-artifact-proposals-xnp-0003-federation.md.json",
+      "title": "Proposals / XNP 0003 Federation",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-proposals-xnp-0004-merge-validation.md",
+      "path": "nodes/protocol-artifact-proposals-xnp-0004-merge-validation.md.json",
+      "title": "Proposals / XNP 0004 Merge Validation",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-proposals-xnp-0005-transclusion.md",
+      "path": "nodes/protocol-artifact-proposals-xnp-0005-transclusion.md.json",
+      "title": "Proposals / XNP 0005 Transclusion",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-proposals-xnp-0006-tumbler-addressing.md",
+      "path": "nodes/protocol-artifact-proposals-xnp-0006-tumbler-addressing.md.json",
+      "title": "Proposals / XNP 0006 Tumbler Addressing",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-proposals-xnp-0007-git-backed-substrates.md",
+      "path": "nodes/protocol-artifact-proposals-xnp-0007-git-backed-substrates.md.json",
+      "title": "Proposals / XNP 0007 Git Backed Substrates",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-proposals-xnp-0008-derived-inverse-relationships.md",
+      "path": "nodes/protocol-artifact-proposals-xnp-0008-derived-inverse-relationships.md.json",
+      "title": "Proposals / XNP 0008 Derived Inverse Relationships",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-proposals-xnp-0009-standards-alignment.md",
+      "path": "nodes/protocol-artifact-proposals-xnp-0009-standards-alignment.md.json",
+      "title": "Proposals / XNP 0009 Standards Alignment",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-proposals-xnp-0010-federation-discovery-and-trust.md",
+      "path": "nodes/protocol-artifact-proposals-xnp-0010-federation-discovery-and-trust.md.json",
+      "title": "Proposals / XNP 0010 Federation Discovery And Trust",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-proposals-xnp-0011-studio-local-first-authoring.md",
+      "path": "nodes/protocol-artifact-proposals-xnp-0011-studio-local-first-authoring.md.json",
+      "title": "Proposals / XNP 0011 Studio Local First Authoring",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-readme.md",
+      "path": "nodes/protocol-artifact-readme.md.json",
+      "title": "XanaNode Protocol README",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-registry-readme.md",
+      "path": "nodes/protocol-artifact-registry-readme.md.json",
+      "title": "Registry / README",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-schemas-readme.md",
+      "path": "nodes/protocol-artifact-schemas-readme.md.json",
+      "title": "Schemas / README",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-specs-compatibility-levels.md",
+      "path": "nodes/protocol-artifact-specs-compatibility-levels.md.json",
+      "title": "Specs / Compatibility Levels",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-specs-federation.md",
+      "path": "nodes/protocol-artifact-specs-federation.md.json",
+      "title": "Specs / Federation",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-specs-implementation-compatibility.md",
+      "path": "nodes/protocol-artifact-specs-implementation-compatibility.md.json",
+      "title": "Specs / Implementation Compatibility",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-specs-interoperability.md",
+      "path": "nodes/protocol-artifact-specs-interoperability.md.json",
+      "title": "Specs / Interoperability",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-specs-merge-validation.md",
+      "path": "nodes/protocol-artifact-specs-merge-validation.md.json",
+      "title": "Specs / Merge Validation",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-specs-namespaces.md",
+      "path": "nodes/protocol-artifact-specs-namespaces.md.json",
+      "title": "Specs / Namespaces",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-specs-nodes.md",
+      "path": "nodes/protocol-artifact-specs-nodes.md.json",
+      "title": "Specs / Nodes",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-specs-readme.md",
+      "path": "nodes/protocol-artifact-specs-readme.md.json",
+      "title": "Specs / README",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-specs-relationships.md",
+      "path": "nodes/protocol-artifact-specs-relationships.md.json",
+      "title": "Specs / Relationships",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-specs-studio.md",
+      "path": "nodes/protocol-artifact-specs-studio.md.json",
+      "title": "Specs / Studio",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-specs-substrates.md",
+      "path": "nodes/protocol-artifact-specs-substrates.md.json",
+      "title": "Specs / Substrates",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-specs-transclusion.md",
+      "path": "nodes/protocol-artifact-specs-transclusion.md.json",
+      "title": "Specs / Transclusion",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-specs-tumbler-addressing.md",
+      "path": "nodes/protocol-artifact-specs-tumbler-addressing.md.json",
+      "title": "Specs / Tumbler Addressing",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-specs-xananode-core.md",
+      "path": "nodes/protocol-artifact-specs-xananode-core.md.json",
+      "title": "Specs / Xananode Core",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-tools-readme.md",
+      "path": "nodes/protocol-artifact-tools-readme.md.json",
+      "title": "Tools / README",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/protocol-artifact-trademark.md",
+      "path": "nodes/protocol-artifact-trademark.md.json",
+      "title": "XanaNode Trademark Policy",
       "type": "source",
       "imported": true
     },
@@ -4846,13 +7618,6 @@
       "imported": true
     },
     {
-      "id": "xananode.canonical:source/xananode-core-sdk-repository",
-      "path": "nodes/xananode-core-sdk-repository.json",
-      "title": "XanaNode Core SDK Repository",
-      "type": "source",
-      "imported": true
-    },
-    {
       "id": "xananode.canonical:source/xananode-hugo-repository",
       "path": "nodes/xananode-hugo-repository.json",
       "title": "XanaNode Hugo Repository",
@@ -4888,30 +7653,9 @@
       "imported": true
     },
     {
-      "id": "xananode.canonical:source/xananode-protocol-repository",
-      "path": "nodes/xananode-protocol-repository.json",
-      "title": "XanaNode Protocol Repository",
-      "type": "source",
-      "imported": true
-    },
-    {
-      "id": "xananode.canonical:source/xananode-studio-repository",
-      "path": "nodes/xananode-studio-repository.json",
-      "title": "XanaNode Studio Repository",
-      "type": "source",
-      "imported": true
-    },
-    {
       "id": "xananode.canonical:source/xananode-trademark-policy",
       "path": "nodes/xananode-trademark-policy.json",
       "title": "XanaNode Trademark Policy",
-      "type": "source",
-      "imported": true
-    },
-    {
-      "id": "xananode.canonical:source/xananode-workspace-repository",
-      "path": "nodes/xananode-workspace-repository.json",
-      "title": "XanaNode Workspace Repository",
       "type": "source",
       "imported": true
     },

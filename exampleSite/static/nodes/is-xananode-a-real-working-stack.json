@@ -1,0 +1,44 @@
+{
+  "id": "xananode.canonical:question/is-xananode-a-real-working-stack",
+  "title": "Is XanaNode a real working stack?",
+  "type": "question",
+  "subtype": "faq",
+  "importance": 5,
+  "summary": "Yes. XanaNode has a protocol, Core SDK, Hugo projection, Workspace layer, and Studio authoring application that work together.",
+  "content": "XanaNode is not only a design idea. The current stack includes protocol schemas and governance rules, a Core SDK for validation and pack building, Hugo for static public projection, Workspace for local substrate handling, and Studio for desktop authoring. The pieces are versioned so a reader can trace what each part does and why it exists.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/question-is-xananode-a-real-working-stack-explains-concept-xananode-faq-0",
+      "type": "explains",
+      "target": "xananode.canonical:concept/xananode",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/question-is-xananode-a-real-working-stack-requires-project-xananode-core-sdk-faq-2",
+      "type": "requires",
+      "target": "xananode.canonical:project/xananode-core-sdk",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/question-is-xananode-a-real-working-stack-requires-project-xananode-protocol-faq-1",
+      "type": "requires",
+      "target": "xananode.canonical:project/xananode-protocol",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/question-is-xananode-a-real-working-stack-uses-project-xananode-hugo-theme-faq-3",
+      "type": "uses",
+      "target": "xananode.canonical:project/xananode-hugo-theme",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/question-is-xananode-a-real-working-stack-uses-project-xananode-studio-faq-4",
+      "type": "uses",
+      "target": "xananode.canonical:project/xananode-studio",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/question_is-xananode-a-real-working-stack.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "xananode.canonical:schema/relationship-category-evolution",
+  "title": "Evolution Relationship Category",
+  "type": "schema",
+  "subtype": "relationship_category_schema",
+  "importance": 4,
+  "summary": "The evolution category groups relationship types with related meaning.",
+  "version": "0.5.0",
+  "registry_type": "evolution",
+  "registry_namespace": "xananode",
+  "color": "#64748b",
+  "inverse_color": "#cbd5e1",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-category-evolution-projection-icon-represents-schema-relationship-category-evolution",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-category-evolution-projection-icon",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-evolution-contains-schema-relationship-type-medium_transition",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-medium_transition",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-evolution-contains-schema-relationship-type-medium_transitioned_from",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-medium_transitioned_from",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-evolution-contains-schema-relationship-type-refined_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-refined_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-evolution-contains-schema-relationship-type-refines",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-refines",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-evolution-contains-schema-relationship-type-superseded_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-superseded_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-evolution-contains-schema-relationship-type-supersedes",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-supersedes",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-evolution-has_primary_media-media-relationship-category-evolution-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-category-evolution-projection-icon",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-evolution",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/schema_relationship-category-evolution.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

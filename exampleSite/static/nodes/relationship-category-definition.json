@@ -10,6 +10,12 @@
   "registry_namespace": "xananode",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-category-definition-projection-icon-represents-schema-relationship-category-definition",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-category-definition-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-category-definition-contains-schema-relationship-type-defined_by",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-defined_by",
@@ -19,6 +25,12 @@
       "id": "xananode.canonical:rel/schema-relationship-category-definition-contains-schema-relationship-type-defines",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-defines",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-definition-has_primary_media-media-relationship-category-definition-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-category-definition-projection-icon",
       "direction": "outgoing"
     },
     {
@@ -32,7 +44,7 @@
   "inverse_color": "#fde68a",
   "line_style": "solid",
   "inverse_line_style": "dashed",
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_relationship-category-definition.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

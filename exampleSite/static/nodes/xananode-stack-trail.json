@@ -15,7 +15,7 @@
     "xananode.canonical:source/xananode-com-domain"
   ],
   "relationships": [],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/trail_xananode-stack-trail.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

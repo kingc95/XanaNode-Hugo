@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://example.com/sitemap.xml
+XanaNode-Well-Known: https://example.com/.well-known/xananode
+XanaNode-Substrate: https://example.com/substrate.json
+XanaNode-Nodes-Index: https://example.com/nodes-index.json
+XanaNode-Relationships: https://example.com/relationships.json
+XanaNode-Viewer: https://example.com/xananode-viewer.json
+XanaNode-Substrate-Archive: https://example.com/archives/xananode.example.substrate

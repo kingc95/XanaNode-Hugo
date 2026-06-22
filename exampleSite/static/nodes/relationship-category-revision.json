@@ -10,6 +10,24 @@
   "registry_namespace": "xananode",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-category-revision-projection-icon-represents-schema-relationship-category-revision",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-category-revision-projection-icon",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-revision-contains-schema-relationship-type-adapted_from",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-adapted_from",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-revision-contains-schema-relationship-type-adapted_into",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-adapted_into",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-category-revision-contains-schema-relationship-type-refined_by",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-refined_by",
@@ -34,17 +52,23 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-revision-has_primary_media-media-relationship-category-revision-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-category-revision-projection-icon",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-revision",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
       "direction": "incoming"
     }
   ],
-  "color": "#64748b",
-  "inverse_color": "#cbd5e1",
-  "line_style": "dashed",
-  "inverse_line_style": "solid",
-  "imported_from": "nodes.json",
+  "color": "#fb923c",
+  "inverse_color": "#fdba74",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "imported_from": "nodes/schema_relationship-category-revision.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

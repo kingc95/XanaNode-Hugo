@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-category-schema_mapping-projection-icon",
+  "title": "schema mapping Relationship Category Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-categories/schema_mapping.svg",
+  "asset_role": "relationship_category_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/schema_mapping.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the schema_mapping relationship category.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-category-schema_mapping-projection-icon-represents-schema-relationship-category-schema_mapping",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-category-schema_mapping",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-schema_mapping-has_primary_media-media-relationship-category-schema_mapping-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-category-schema_mapping",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:d3f7a8726e99426f288cc65101c86f554c991b65a2cb53bae1179de4d2eed7db",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/schema_mapping.svg",
+    "method": "archive",
+    "content_id": "sha256:d3f7a8726e99426f288cc65101c86f554c991b65a2cb53bae1179de4d2eed7db",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/media_relationship-category-schema_mapping-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

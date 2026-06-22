@@ -1,0 +1,297 @@
+{
+  "id": "xananode.canonical:schema/protocol-artifact-examples",
+  "title": "Protocol Examples",
+  "type": "schema",
+  "subtype": "protocol_artifact_group",
+  "importance": 3,
+  "summary": "Protocol files under examples/ preserved inside the canonical substrate.",
+  "artifact_path": "examples/",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/concept-protocol-artifacts-contains-schema-protocol-artifact-examples-raw-group-examples",
+      "type": "contains",
+      "source": "xananode.canonical:concept/protocol-artifacts",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-media-protocol-artifact-examples-minimal-substrate-assets-branding-xananode-icon.svg-raw-file-examples-minimal-substrate-assets-branding-xananode-icon.svg",
+      "type": "contains",
+      "target": "xananode.canonical:media/protocol-artifact-examples-minimal-substrate-assets-branding-xananode-icon.svg",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-custom-extension-substrate-nodes-memex-concept.json-raw-file-examples-custom-extension-substrate-nodes-memex-concept.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-nodes-memex-concept.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-custom-extension-substrate-nodes-memex-illustration.json-raw-file-examples-custom-extension-substrate-nodes-memex-illustration.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-nodes-memex-illustration.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-custom-extension-substrate-nodes-person-example-curator.json-raw-file-examples-custom-extension-substrate-nodes-person-example-curator.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-nodes-person-example-curator.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-custom-extension-substrate-relationships.json-raw-file-examples-custom-extension-substrate-relationships.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-relationships.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-custom-extension-substrate-schemas-node-types.example.museum.json-raw-file-examples-custom-extension-substrate-schemas-node-types.example.museum.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-schemas-node-types.example.museum.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-custom-extension-substrate-schemas-relationship-types.example.museum.json-raw-file-examples-custom-extension-substrate-schemas-relationship-types.example.museum.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-schemas-relationship-types.example.museum.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-custom-extension-substrate-substrate.json-raw-file-examples-custom-extension-substrate-substrate.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-substrate.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-compatibility-report.json-raw-file-examples-federation-example-compatibility-report.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-compatibility-report.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-merge-report.json-raw-file-examples-federation-example-merge-report.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-merge-report.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-substrate-a-nodes-knowledge-substrate.json-raw-file-examples-federation-example-substrate-a-nodes-knowledge-substrate.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-a-nodes-knowledge-substrate.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-substrate-a-nodes-person-researcher-a.json-raw-file-examples-federation-example-substrate-a-nodes-person-researcher-a.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-a-nodes-person-researcher-a.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-substrate-a-relationships.json-raw-file-examples-federation-example-substrate-a-relationships.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-a-relationships.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-substrate-a-substrate.json-raw-file-examples-federation-example-substrate-a-substrate.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-a-substrate.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-substrate-b-nodes-memory-substrate.json-raw-file-examples-federation-example-substrate-b-nodes-memory-substrate.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-b-nodes-memory-substrate.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-substrate-b-nodes-person-researcher-b.json-raw-file-examples-federation-example-substrate-b-nodes-person-researcher-b.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-b-nodes-person-researcher-b.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-substrate-b-relationships.json-raw-file-examples-federation-example-substrate-b-relationships.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-b-relationships.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-substrate-b-substrate.json-raw-file-examples-federation-example-substrate-b-substrate.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-b-substrate.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-substrate-diff.json-raw-file-examples-federation-example-substrate-diff.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-diff.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-author-profile.json-raw-file-examples-minimal-substrate-author-profile.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-author-profile.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-nanopublication-substrate-claim.json-raw-file-examples-minimal-substrate-nanopublication-substrate-claim.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nanopublication-substrate-claim.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-nodes-claim-substrate-structure.json-raw-file-examples-minimal-substrate-nodes-claim-substrate-structure.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-claim-substrate-structure.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-nodes-communication-minimal-substrate-discussion.json-raw-file-examples-minimal-substrate-nodes-communication-minimal-substrate-discussion.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-communication-minimal-substrate-discussion.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-nodes-concept-associative-trails.json-raw-file-examples-minimal-substrate-nodes-concept-associative-trails.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-concept-associative-trails.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-nodes-essay-relationship-navigation-intro.json-raw-file-examples-minimal-substrate-nodes-essay-relationship-navigation-intro.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-essay-relationship-navigation-intro.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-nodes-fragment-as-we-may-think-0004.json-raw-file-examples-minimal-substrate-nodes-fragment-as-we-may-think-0004.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-fragment-as-we-may-think-0004.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-nodes-knowledge-gap-missing-relationship-evidence.json-raw-file-examples-minimal-substrate-nodes-knowledge-gap-missing-relationship-evidence.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-knowledge-gap-missing-relationship-evidence.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-nodes-knowledge-substrate.json-raw-file-examples-minimal-substrate-nodes-knowledge-substrate.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-knowledge-substrate.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-nodes-media-xananode-icon.json-raw-file-examples-minimal-substrate-nodes-media-xananode-icon.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-media-xananode-icon.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-nodes-person-example-maintainer.json-raw-file-examples-minimal-substrate-nodes-person-example-maintainer.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-person-example-maintainer.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-nodes-question-why-relationships-matter.json-raw-file-examples-minimal-substrate-nodes-question-why-relationships-matter.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-question-why-relationships-matter.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-nodes-response-relationships-preserve-context.json-raw-file-examples-minimal-substrate-nodes-response-relationships-preserve-context.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-response-relationships-preserve-context.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-nodes-source-as-we-may-think.json-raw-file-examples-minimal-substrate-nodes-source-as-we-may-think.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-source-as-we-may-think.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-nodes-trail-start-here.json-raw-file-examples-minimal-substrate-nodes-trail-start-here.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-nodes-trail-start-here.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-relationships.json-raw-file-examples-minimal-substrate-relationships.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-relationships.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-ro-crate-metadata.json-raw-file-examples-minimal-substrate-ro-crate-metadata.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-ro-crate-metadata.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-minimal-substrate-substrate.json-raw-file-examples-minimal-substrate-substrate.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-substrate.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-source-protocol-artifact-examples-custom-extension-substrate-nodes-readme.md-raw-file-examples-custom-extension-substrate-nodes-readme.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-examples-custom-extension-substrate-nodes-readme.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-source-protocol-artifact-examples-custom-extension-substrate-readme.md-raw-file-examples-custom-extension-substrate-readme.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-examples-custom-extension-substrate-readme.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-source-protocol-artifact-examples-custom-extension-substrate-schemas-readme.md-raw-file-examples-custom-extension-substrate-schemas-readme.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-examples-custom-extension-substrate-schemas-readme.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-source-protocol-artifact-examples-federation-example-readme.md-raw-file-examples-federation-example-readme.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-examples-federation-example-readme.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-source-protocol-artifact-examples-federation-example-substrate-a-readme.md-raw-file-examples-federation-example-substrate-a-readme.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-examples-federation-example-substrate-a-readme.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-source-protocol-artifact-examples-federation-example-substrate-b-readme.md-raw-file-examples-federation-example-substrate-b-readme.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-examples-federation-example-substrate-b-readme.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-source-protocol-artifact-examples-minimal-substrate-nodes-readme.md-raw-file-examples-minimal-substrate-nodes-readme.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-examples-minimal-substrate-nodes-readme.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-source-protocol-artifact-examples-minimal-substrate-readme.md-raw-file-examples-minimal-substrate-readme.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-examples-minimal-substrate-readme.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-source-protocol-artifact-examples-readme.md-raw-file-examples-readme.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-examples-readme.md",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/schema_protocol-artifact-examples.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

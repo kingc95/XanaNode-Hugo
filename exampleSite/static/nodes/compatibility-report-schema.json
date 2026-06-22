@@ -1,20 +1,28 @@
 {
-  "id": "xananode.canonical:schema/compatibility-report-schema",
+  "id": "xananode.example:schema/compatibility-report-schema",
   "title": "Compatibility Report Schema",
   "type": "schema",
-  "subtype": "validation_rule",
+  "status": "draft",
   "importance": 4,
-  "summary": "The JSON Schema for describing whether schemas, packs, substrates, or tools can interoperate without destructive conversion.",
-  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/compatibility-report.schema.json",
+  "summary": "The JSON Schema that validates compatibility reports between tools and substrates.",
   "relationships": [
     {
-      "id": "xananode.canonical:rel/protocol-contains-compatibility-report-schema",
-      "type": "contains",
-      "source": "xananode.canonical:project/xananode-protocol",
+      "id": "xananode.example:rel/compatibility-report-schema-defines-compatibility-report-96",
+      "type": "defines",
+      "target": "xananode.example:concept/compatibility-report",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/compatibility-report-schema-documents-compatibility-levels-97",
+      "type": "documents",
+      "target": "xananode.example:concept/compatibility-levels",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/federation-example-requires-compatibility-report-schema-98",
+      "type": "requires",
+      "source": "xananode.example:concept/federation-example",
       "direction": "incoming"
     }
-  ],
-  "imported_from": "nodes.json",
-  "pack_id": "xananode.canonical",
-  "pack_mode": "mounted"
+  ]
 }

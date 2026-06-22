@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-category-definition-projection-icon",
+  "title": "definition Relationship Category Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-categories/definition.svg",
+  "asset_role": "relationship_category_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/definition.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the definition relationship category.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-category-definition-projection-icon-represents-schema-relationship-category-definition",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-category-definition",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-definition-has_primary_media-media-relationship-category-definition-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-category-definition",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:a89c48fa6a2a57cbfe6ab8525f7aed6c374f5300f4475600bc22c9a7569fc2f9",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/definition.svg",
+    "method": "archive",
+    "content_id": "sha256:a89c48fa6a2a57cbfe6ab8525f7aed6c374f5300f4475600bc22c9a7569fc2f9",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/media_relationship-category-definition-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

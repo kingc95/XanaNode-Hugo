@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-category-citation-projection-icon",
+  "title": "citation Relationship Category Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-categories/citation.svg",
+  "asset_role": "relationship_category_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/citation.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the citation relationship category.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-category-citation-projection-icon-represents-schema-relationship-category-citation",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-category-citation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-citation-has_primary_media-media-relationship-category-citation-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-category-citation",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:681bac3266c7644084fb1a81c10db18b1f4e9a58befba8c9e9dfed6cca551553",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/citation.svg",
+    "method": "archive",
+    "content_id": "sha256:681bac3266c7644084fb1a81c10db18b1f4e9a58befba8c9e9dfed6cca551553",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/media_relationship-category-citation-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

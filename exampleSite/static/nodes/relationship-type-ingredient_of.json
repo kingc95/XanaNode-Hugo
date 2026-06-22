@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-ingredient_of",
+  "title": "Ingredient of",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source item is an ingredient in the target recipe, dish, or preparation.",
+  "version": "0.5.0",
+  "registry_type": "ingredient_of",
+  "registry_namespace": "xananode",
+  "category": "composition",
+  "inverse": "has_ingredient",
+  "color": "#22c55e",
+  "inverse_color": "#86efac",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-ingredient_of",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-ingredient_of",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-composition",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-has_ingredient-related_to-schema-relationship-type-ingredient_of-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-has_ingredient",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-ingredient_of-related_to-schema-relationship-type-has_ingredient-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-has_ingredient",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/schema_relationship-type-ingredient_of.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

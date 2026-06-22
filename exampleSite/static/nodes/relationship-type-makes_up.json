@@ -1,0 +1,49 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-makes_up",
+  "title": "Makes Up Relationship Term",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 4,
+  "summary": "The makes_up inverse relationship term derived from made_of.",
+  "version": "0.5.0",
+  "registry_type": "makes_up",
+  "registry_namespace": "xananode",
+  "category": "composition",
+  "inverse": "made_of",
+  "color": "#86efac",
+  "inverse_color": "#22c55e",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "derived_inverse": true,
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-makes_up",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-contains-schema-relationship-type-makes_up",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-composition",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-made_of-related_to-schema-relationship-type-makes_up-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-made_of",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-makes_up-related_to-schema-relationship-type-made_of-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-made_of",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/schema_relationship-type-makes_up.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

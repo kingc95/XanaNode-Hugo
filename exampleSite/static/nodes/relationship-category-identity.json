@@ -10,6 +10,12 @@
   "registry_namespace": "xananode",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-category-identity-projection-icon-represents-schema-relationship-category-identity",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-category-identity-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-category-identity-contains-schema-relationship-type-disputed_identity",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-disputed_identity",
@@ -46,6 +52,12 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-identity-has_primary_media-media-relationship-category-identity-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-category-identity-projection-icon",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-identity",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
@@ -56,7 +68,7 @@
   "inverse_color": "#fbcfe8",
   "line_style": "double",
   "inverse_line_style": "double",
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_relationship-category-identity.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

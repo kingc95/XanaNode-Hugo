@@ -42,7 +42,7 @@
   "inverse_color": "#fde047",
   "line_style": "double",
   "inverse_line_style": "double",
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_relationship-type-disputes.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

@@ -1,0 +1,27 @@
+{
+  "id": "xananode.canonical:schema/protocol-artifact-contexts",
+  "title": "Protocol Contexts",
+  "type": "schema",
+  "subtype": "protocol_artifact_group",
+  "importance": 3,
+  "summary": "Protocol files under contexts/ preserved inside the canonical substrate.",
+  "artifact_path": "contexts/",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/contexts/",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/concept-protocol-artifacts-contains-schema-protocol-artifact-contexts-raw-group-contexts",
+      "type": "contains",
+      "source": "xananode.canonical:concept/protocol-artifacts",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-contexts-contains-schema-protocol-artifact-contexts-xananode.context.jsonld-raw-file-contexts-xananode.context.jsonld",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-contexts-xananode.context.jsonld",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/schema_protocol-artifact-contexts.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

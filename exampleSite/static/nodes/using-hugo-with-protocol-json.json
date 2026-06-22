@@ -3,7 +3,7 @@
   "title": "Using Hugo with Protocol JSON",
   "type": "essay",
   "importance": 5,
-  "summary": "How to use the Hugo theme as a read-only XanaNode viewer for Markdown-authored nodes, the protocol base pack, and imported protocol JSON.",
+  "summary": "How to use the Hugo theme as a read-only XanaNode viewer for Markdown-authored nodes, mounted substrates, and imported protocol JSON.",
   "relationships": [
     {
       "id": "xananode.example:rel/using-hugo-with-protocol-json-explains-xananode-hugo-theme-131",

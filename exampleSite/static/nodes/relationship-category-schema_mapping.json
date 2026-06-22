@@ -10,6 +10,12 @@
   "registry_namespace": "xananode",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-category-schema_mapping-projection-icon-represents-schema-relationship-category-schema_mapping",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-category-schema_mapping-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-category-schema_mapping-contains-schema-relationship-type-broader_than",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-broader_than",
@@ -52,6 +58,12 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-schema_mapping-has_primary_media-media-relationship-category-schema_mapping-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-category-schema_mapping-projection-icon",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-schema_mapping",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
@@ -62,7 +74,7 @@
   "inverse_color": "#a5f3fc",
   "line_style": "double",
   "inverse_line_style": "double",
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_relationship-category-schema_mapping.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

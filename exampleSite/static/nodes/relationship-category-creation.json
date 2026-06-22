@@ -10,6 +10,12 @@
   "registry_namespace": "xananode",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-category-creation-projection-icon-represents-schema-relationship-category-creation",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-category-creation-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-category-creation-contains-schema-relationship-type-authored",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-authored",
@@ -19,6 +25,12 @@
       "id": "xananode.canonical:rel/schema-relationship-category-creation-contains-schema-relationship-type-authored_by",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-authored_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-creation-contains-schema-relationship-type-co_authored_with",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-co_authored_with",
       "direction": "outgoing"
     },
     {
@@ -82,6 +94,12 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-creation-has_primary_media-media-relationship-category-creation-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-category-creation-projection-icon",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-creation",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
@@ -92,7 +110,7 @@
   "inverse_color": "#fed7aa",
   "line_style": "solid",
   "inverse_line_style": "dashed",
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_relationship-category-creation.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

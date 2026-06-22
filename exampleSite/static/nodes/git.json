@@ -7,7 +7,7 @@
   "summary": "The distributed version control system used to preserve substrate history, protocol revisions, repositories, and deployment workflows.",
   "source_url": "https://git-scm.com/",
   "relationships": [],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/technology_git.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

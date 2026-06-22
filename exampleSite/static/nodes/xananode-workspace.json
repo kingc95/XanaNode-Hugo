@@ -74,12 +74,6 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.canonical:rel/workspace-documented-by-repository",
-      "type": "documents",
-      "source": "xananode.canonical:source/xananode-workspace-repository",
-      "direction": "incoming"
-    },
-    {
       "id": "xananode.canonical:rel/workspace-uses-core",
       "type": "uses",
       "target": "xananode.canonical:project/xananode-core-sdk",
@@ -105,7 +99,7 @@
   "build_metadata": {
     "version": "",
     "repository": "kingc95/XanaNode-Workspace",
-    "generated_at": "2026-06-19T21:46:06.039Z",
+    "generated_at": "2026-06-22T07:39:41.393Z",
     "built_by": "@xananode/core",
     "dependencies": [
       {
@@ -142,7 +136,7 @@
     "../schemas/substrate-manifest.schema.json",
     "../schemas/substrate-node.schema.json"
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/project_xananode-workspace.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

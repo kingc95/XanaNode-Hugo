@@ -10,6 +10,12 @@
   "registry_namespace": "xananode",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-category-temporal-projection-icon-represents-schema-relationship-category-temporal",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-category-temporal-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-category-temporal-contains-schema-relationship-type-contemporary_of",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-contemporary_of",
@@ -52,6 +58,12 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-temporal-has_primary_media-media-relationship-category-temporal-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-category-temporal-projection-icon",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-temporal",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
@@ -62,7 +74,7 @@
   "inverse_color": "#d9f99d",
   "line_style": "dashed",
   "inverse_line_style": "solid",
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_relationship-category-temporal.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

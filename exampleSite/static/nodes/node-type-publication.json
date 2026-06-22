@@ -14,7 +14,17 @@
     "article",
     "film",
     "episode",
+    "series",
+    "season",
+    "installment",
+    "trilogy",
+    "saga",
+    "omnibus",
+    "pilot",
     "talk",
+    "adaptation",
+    "edition",
+    "reissue",
     "podcast",
     "webpage"
   ],
@@ -52,6 +62,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-adaptation-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-adaptation",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-node-subtype-publication-article-extension_of-schema-node-type-publication",
       "type": "extension_of",
       "source": "xananode.canonical:schema/node-subtype-publication-article",
@@ -61,6 +77,12 @@
       "id": "xananode.canonical:rel/schema-node-subtype-publication-book-extension_of-schema-node-type-publication",
       "type": "extension_of",
       "source": "xananode.canonical:schema/node-subtype-publication-book",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-edition-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-edition",
       "direction": "incoming"
     },
     {
@@ -76,9 +98,27 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-installment-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-installment",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-omnibus-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-omnibus",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-node-subtype-publication-paper-extension_of-schema-node-type-publication",
       "type": "extension_of",
       "source": "xananode.canonical:schema/node-subtype-publication-paper",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-pilot-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-pilot",
       "direction": "incoming"
     },
     {
@@ -88,9 +128,39 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-reissue-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-reissue",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-saga-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-saga",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-season-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-season",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-series-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-series",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-node-subtype-publication-talk-extension_of-schema-node-type-publication",
       "type": "extension_of",
       "source": "xananode.canonical:schema/node-subtype-publication-talk",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-trilogy-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-publication-trilogy",
       "direction": "incoming"
     },
     {
@@ -98,6 +168,12 @@
       "type": "extension_of",
       "source": "xananode.canonical:schema/node-subtype-publication-webpage",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-adaptation",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-adaptation",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-article",
@@ -109,6 +185,12 @@
       "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-book",
       "type": "contains",
       "target": "xananode.canonical:schema/node-subtype-publication-book",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-edition",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-edition",
       "direction": "outgoing"
     },
     {
@@ -124,9 +206,27 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-installment",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-installment",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-omnibus",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-omnibus",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-paper",
       "type": "contains",
       "target": "xananode.canonical:schema/node-subtype-publication-paper",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-pilot",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-pilot",
       "direction": "outgoing"
     },
     {
@@ -136,9 +236,39 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-reissue",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-reissue",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-saga",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-saga",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-season",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-season",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-series",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-series",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-talk",
       "type": "contains",
       "target": "xananode.canonical:schema/node-subtype-publication-talk",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-trilogy",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-publication-trilogy",
       "direction": "outgoing"
     },
     {
@@ -148,7 +278,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_node-type-publication.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

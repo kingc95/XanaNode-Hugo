@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-category-explanation-projection-icon",
+  "title": "explanation Relationship Category Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-categories/explanation.svg",
+  "asset_role": "relationship_category_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/explanation.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the explanation relationship category.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-category-explanation-projection-icon-represents-schema-relationship-category-explanation",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-category-explanation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-explanation-has_primary_media-media-relationship-category-explanation-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-category-explanation",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:4e4874d5199141421f5a5d7b171ebb98658441850c3dac004c0049372537f1d3",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/explanation.svg",
+    "method": "archive",
+    "content_id": "sha256:4e4874d5199141421f5a5d7b171ebb98658441850c3dac004c0049372537f1d3",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/media_relationship-category-explanation-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

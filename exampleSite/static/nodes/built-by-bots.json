@@ -4,16 +4,16 @@
   "type": "organization",
   "subtype": "company",
   "importance": 4,
-  "summary": "The authoring and project identity associated with XanaNode development and media attribution.",
+  "summary": "A historical bridge identity recorded in XanaNode's lineage. It is preserved for provenance, but XanaNode's current and durable public identity lives at XanaNode.com under Christian Siefen's authorship.",
   "relationships": [
     {
-      "id": "xananode.canonical:rel/built-by-bots-created-icon",
-      "type": "created",
-      "target": "xananode.canonical:media/xananode-icon",
-      "direction": "outgoing"
+      "id": "xananode.canonical:rel/question-who-made-xananode-documents-organization-built-by-bots-faq-2",
+      "type": "documents",
+      "source": "xananode.canonical:question/who-made-xananode",
+      "direction": "incoming"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/organization_built-by-bots.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

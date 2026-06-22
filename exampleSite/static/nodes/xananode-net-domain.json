@@ -7,11 +7,11 @@
     "official_site"
   ],
   "importance": 4,
-  "summary": "A public XanaNode domain reserved for network, federation, or infrastructure presentation.",
+  "summary": "A project-owned alias domain that resolves to the same canonical XanaNode projection as XanaNode.com so the XanaNode project does not compete with itself in search, linking, or naming.",
   "source_url": "https://xananode.net/",
   "rights_status": "canonical-public",
   "relationships": [],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/source_xananode-net-domain.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

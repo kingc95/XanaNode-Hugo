@@ -14,7 +14,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/technology_xananode-hugo-theme-component-relationship-files.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

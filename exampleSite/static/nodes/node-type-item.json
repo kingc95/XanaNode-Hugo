@@ -1,0 +1,178 @@
+{
+  "id": "xananode.canonical:schema/node-type-item",
+  "title": "Item",
+  "type": "schema",
+  "subtype": "node_type_schema",
+  "importance": 5,
+  "summary": "A discrete physical thing, product, ingredient, component, tool, or other tangible object that can be counted, assembled, consumed, used, or stored.",
+  "version": "0.3.0",
+  "registry_type": "item",
+  "registry_namespace": "xananode",
+  "allowed_subtypes": [
+    "material",
+    "ingredient",
+    "component",
+    "tool",
+    "artifact",
+    "appliance",
+    "container",
+    "utensil",
+    "finished_item",
+    "spare_part"
+  ],
+  "required_frontmatter": [
+    "title",
+    "type",
+    "importance",
+    "summary",
+    "relationships"
+  ],
+  "recommended_frontmatter": [
+    "quantity",
+    "unit",
+    "weight",
+    "dimensions",
+    "condition",
+    "material_composition",
+    "components",
+    "ingredients",
+    "primary_media",
+    "source"
+  ],
+  "color": {
+    "bg": "#f4b183",
+    "fg": "#25170a",
+    "outline": "#ffe8d6"
+  },
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-node-type-item",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-item-appliance-extension_of-schema-node-type-item",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-item-appliance",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-item-artifact-extension_of-schema-node-type-item",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-item-artifact",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-item-component-extension_of-schema-node-type-item",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-item-component",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-item-container-extension_of-schema-node-type-item",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-item-container",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-item-finished_item-extension_of-schema-node-type-item",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-item-finished_item",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-item-ingredient-extension_of-schema-node-type-item",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-item-ingredient",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-item-material-extension_of-schema-node-type-item",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-item-material",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-item-spare_part-extension_of-schema-node-type-item",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-item-spare_part",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-item-tool-extension_of-schema-node-type-item",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-item-tool",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-item-utensil-extension_of-schema-node-type-item",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-item-utensil",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-item-contains-schema-node-subtype-item-appliance",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-item-appliance",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-item-contains-schema-node-subtype-item-artifact",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-item-artifact",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-item-contains-schema-node-subtype-item-component",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-item-component",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-item-contains-schema-node-subtype-item-container",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-item-container",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-item-contains-schema-node-subtype-item-finished_item",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-item-finished_item",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-item-contains-schema-node-subtype-item-ingredient",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-item-ingredient",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-item-contains-schema-node-subtype-item-material",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-item-material",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-item-contains-schema-node-subtype-item-spare_part",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-item-spare_part",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-item-contains-schema-node-subtype-item-tool",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-item-tool",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-item-contains-schema-node-subtype-item-utensil",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-item-utensil",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/schema_node-type-item.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}
