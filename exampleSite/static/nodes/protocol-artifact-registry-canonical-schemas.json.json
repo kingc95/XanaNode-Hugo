@@ -29,7 +29,7 @@
   "asset_path": "assets/raw/protocol/registry/canonical-schemas.json",
   "content_id": "sha256:a37a134ff539525456dada8cbafc182f812a50589f3de0358aac77de47cc6928",
   "source_snapshot": {
-    "captured_at": "2026-06-22T07:39:41.439Z",
+    "captured_at": "2026-06-22T08:23:26.983Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/registry/canonical-schemas.json",
     "method": "archive",
     "content_id": "sha256:a37a134ff539525456dada8cbafc182f812a50589f3de0358aac77de47cc6928",

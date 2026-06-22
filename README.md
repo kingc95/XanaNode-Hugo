@@ -4,6 +4,10 @@ Created by [Christian Siefen](https://xananode.com/) for the [XanaNode project](
 
 This repository is a Hugo implementation of the XanaNode protocol.
 
+Canonical protocol statement:
+
+XanaNode is a protocol for independently authored knowledge substrates that preserve relationships, provenance, lineage, disagreement, and addressable fragments, so knowledge can move across tools and media without losing its structure.
+
 The canonical protocol lives at [kingc95/xananode](https://github.com/kingc95/xananode). Use that repository as the source of truth for the core specs, schemas, governance model, registries, examples, and protocol proposals.
 
 The renderer uses [kingc95/XanaNode-Core-SDK](https://github.com/kingc95/XanaNode-Core-SDK) as a Git submodule and validates generated protocol artifacts through the Core SDK. Core carries the canonical protocol schema submodule, so standalone Hugo users get the same protocol rules as Studio and Workspace.

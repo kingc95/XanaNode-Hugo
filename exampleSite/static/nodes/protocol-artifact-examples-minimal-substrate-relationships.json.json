@@ -29,7 +29,7 @@
   "asset_path": "assets/raw/protocol/examples/minimal-substrate/relationships.json",
   "content_id": "sha256:c61676a7fd8e82bd034f80ab28fdef5eefd0d4cbc7c205c3d510ad601076c290",
   "source_snapshot": {
-    "captured_at": "2026-06-22T07:39:41.439Z",
+    "captured_at": "2026-06-22T08:23:26.983Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/relationships.json",
     "method": "archive",
     "content_id": "sha256:c61676a7fd8e82bd034f80ab28fdef5eefd0d4cbc7c205c3d510ad601076c290",
