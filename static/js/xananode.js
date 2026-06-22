@@ -781,15 +781,14 @@ import {
             <div class="xana-searcher">
                 <div class="xana-search-wrap">
                     <form class="xana-search-form" role="search">
-                        <input
+                        <textarea
                             id="xana-search-input"
-                            type="search"
                             autocomplete="off"
                             spellcheck="false"
+                            rows="1"
                             placeholder=""
                             aria-label="${escapeHtml(SEARCH_PROMPTS[0])}"
-                            value="${escapeHtml(state.searchQuery)}"
-                        >
+                        >${escapeHtml(state.searchQuery)}</textarea>
                         <span class="xana-search-prompt" data-search-prompt aria-hidden="true">
                             <span data-search-prompt-text>${escapeHtml(SEARCH_PROMPTS[0])}</span><span class="xana-search-caret"></span>
                         </span>
@@ -1025,6 +1024,7 @@ import {
         const searchWrap = graphEl.querySelector(".xana-search-wrap");
         const clearSearchButton = graphEl.querySelector("[data-search-clear]");
 
+        resizeSearchInput();
         updateSearchPromptState();
 
         searchForm?.addEventListener("submit", (event) => {
@@ -1045,6 +1045,7 @@ import {
             state.searchQuery = query;
             saveSetting(STORAGE_KEYS.searchQuery, query);
             runSearch(query, state);
+            resizeSearchInput();
             renderVisibleGraph(state, {
                 updateUrl: false,
                 preserveViewport: true
@@ -1061,6 +1062,7 @@ import {
                 state.searchResults = [];
                 saveSetting(STORAGE_KEYS.searchQuery, "");
                 if (clearSearchButton) clearSearchButton.hidden = true;
+                resizeSearchInput();
                 renderSearchResults(state);
                 renderVisibleGraph(state, {
                     updateUrl: false,
@@ -1071,6 +1073,12 @@ import {
         });
 
         searchInput?.addEventListener("blur", updateSearchPromptState);
+        searchInput?.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" && !event.shiftKey) {
+                event.preventDefault();
+                searchForm?.requestSubmit();
+            }
+        });
 
         clearSearchButton?.addEventListener("click", () => {
             searchInput.value = "";
@@ -1078,6 +1086,7 @@ import {
             state.searchResults = [];
             saveSetting(STORAGE_KEYS.searchQuery, "");
             clearSearchButton.hidden = true;
+            resizeSearchInput();
             renderSearchResults(state);
             renderVisibleGraph(state, {
                 updateUrl: false,
@@ -1091,6 +1100,14 @@ import {
             if (!searchWrap || !searchInput) return;
             searchWrap.classList.toggle("is-focused", document.activeElement === searchInput);
             searchWrap.classList.toggle("has-value", Boolean(searchInput.value.trim()));
+        }
+
+        function resizeSearchInput() {
+            if (!searchInput) return;
+            searchInput.style.height = "auto";
+            const nextHeight = Math.min(Math.max(searchInput.scrollHeight, 24), 128);
+            searchInput.style.height = `${nextHeight}px`;
+            searchWrap?.classList.toggle("has-multiline", nextHeight > 40);
         }
 
         graphEl.querySelectorAll("[data-depth]").forEach((button) => {
@@ -1547,15 +1564,17 @@ import {
     }
 
     function runSearch(query, state) {
-        const normalizedQuery = normalizeSearchText(query);
+        const searchPlan = buildSearchPlan(query);
+        const normalizedQuery = searchPlan.normalized;
 
         if (!normalizedQuery) {
             state.searchResults = [];
+            state.searchPlan = searchPlan;
             renderSearchResults(state);
             return;
         }
 
-        const queryTokens = tokenize(normalizedQuery);
+        const queryTokens = searchPlan.tokens;
 
         state.searchResults = state.allNodes
             .map((node) => {
@@ -1581,6 +1600,7 @@ import {
             })
             .slice(0, 30);
 
+        state.searchPlan = searchPlan;
         renderSearchResults(state);
         trackSearch(query, state.searchResults.length);
     }
@@ -1600,14 +1620,20 @@ import {
             return;
         }
 
+        const interpretedQuery = state.searchPlan?.display || "";
+
         if (!state.searchResults.length) {
-            metaEl.textContent = "No matches.";
+            metaEl.textContent = interpretedQuery && interpretedQuery !== query
+                ? `No matches for ${interpretedQuery}.`
+                : "No matches.";
             resultsEl.hidden = true;
             resultsEl.innerHTML = "";
             return;
         }
 
-        metaEl.textContent = `${state.searchResults.length} match${state.searchResults.length === 1 ? "" : "es"}`;
+        metaEl.textContent = interpretedQuery && interpretedQuery !== query
+            ? `${state.searchResults.length} match${state.searchResults.length === 1 ? "" : "es"} for ${interpretedQuery}`
+            : `${state.searchResults.length} match${state.searchResults.length === 1 ? "" : "es"}`;
         resultsEl.hidden = false;
 
         resultsEl.innerHTML = `
@@ -1753,6 +1779,20 @@ import {
             if (summary.includes(token)) score += 10;
             if (haystack.includes(token)) score += 5;
         });
+
+        const tokenMatches = queryTokens.filter((token) =>
+            title.includes(token) ||
+            id.includes(token) ||
+            summary.includes(token) ||
+            haystack.includes(token)
+        ).length;
+
+        if (queryTokens.length) {
+            const coverage = tokenMatches / queryTokens.length;
+            score += coverage * 40;
+            if (queryTokens.length >= 3 && coverage < 0.34) score -= 18;
+            if (queryTokens.length >= 5 && coverage < 0.2) score -= 30;
+        }
 
         score += Number(node.importance || 0);
 
@@ -4822,6 +4862,59 @@ import {
             .map((token) => token.trim())
             .filter((token) => token.length >= 2);
     }
+
+    function buildSearchPlan(value) {
+        const raw = String(value || "").trim();
+        const normalizedRaw = normalizeSearchText(raw);
+        const conversational = stripSearchLeadIn(normalizedRaw);
+        const rawTokens = tokenize(conversational);
+        const filteredTokens = rawTokens.filter((token) => !SEARCH_STOPWORDS.has(token));
+        const finalTokens = filteredTokens.length ? filteredTokens : rawTokens;
+        const normalized = finalTokens.join(" ").trim();
+
+        return {
+            raw,
+            normalized,
+            tokens: finalTokens,
+            display: normalized || normalizedRaw || raw
+        };
+    }
+
+    function stripSearchLeadIn(value) {
+        let next = String(value || "").trim();
+        const prefixes = [
+            /^who\s+is\s+/,
+            /^what\s+is\s+/,
+            /^what\s+are\s+/,
+            /^tell\s+me\s+about\s+/,
+            /^show\s+me\s+/,
+            /^find\s+/,
+            /^search\s+for\s+/,
+            /^i\s+want\s+to\s+know\s+about\s+/,
+            /^can\s+you\s+find\s+/,
+            /^where\s+is\s+/,
+            /^why\s+is\s+/,
+            /^how\s+does\s+/,
+            /^how\s+do\s+/,
+            /^give\s+me\s+/,
+            /^trace\s+/,
+            /^follow\s+/
+        ];
+
+        prefixes.forEach((pattern) => {
+            next = next.replace(pattern, "");
+        });
+
+        return next.trim();
+    }
+
+    const SEARCH_STOPWORDS = new Set([
+        "a", "an", "and", "are", "as", "at", "be", "by", "for", "from", "how",
+        "i", "in", "into", "is", "it", "me", "my", "of", "on", "or", "please",
+        "show", "tell", "that", "the", "their", "them", "this", "to", "want",
+        "was", "what", "when", "where", "which", "who", "why", "with", "you",
+        "your", "about", "find", "search", "trace", "follow", "explain"
+    ]);
 
     function stripHtml(value) {
         const div = document.createElement("div");
