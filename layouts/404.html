@@ -6,18 +6,42 @@
 </head>
 <body>
   <main class="site-main">
-    <section class="xana-app" data-xana-404-resolver="true">
+    <section class="xana-app xana-404-shell" data-xana-404-resolver="true">
       <div id="xana-graph"></div>
 
-      <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving reference...</p>
-        <noscript>
-          <p class="xana-empty">This path did not match a generated page. Enable JavaScript to resolve XanaNode protocol and fragment addresses.</p>
-        </noscript>
+      <aside id="xana-panel" class="xana-panel xana-404-panel">
+        <div class="xana-document-view xana-404-view">
+          <p class="xana-inline-type">404</p>
+          <h1>That route is not published</h1>
+          <p class="xana-404-lead">
+            XanaNode publishes typed pages, not a generic <code>/nodes/</code> bucket.
+            Use the node's type route instead.
+          </p>
+
+          <div class="xana-404-callout">
+            <p class="xana-404-label">Try this route</p>
+            <a class="xana-404-link" href="{{ "/trail/start-here/" | relURL }}">/trail/start-here/</a>
+            <p class="xana-404-note">
+              Start Here is a trail node, so its public page lives under <code>/trail/</code>.
+            </p>
+          </div>
+
+          <p class="xana-404-note">
+            If you were trying to reach a different node, open the home view and follow the type-specific links from there.
+          </p>
+
+          <p>
+            <a class="xana-404-home" href="{{ "/" | relURL }}">Return to home</a>
+          </p>
+
+          <noscript>
+            <p class="xana-empty">This path did not match a generated page. Enable JavaScript to resolve XanaNode protocol and fragment addresses.</p>
+          </noscript>
+        </div>
       </aside>
     </section>
 
-    <script src="{{ "js/xananode.js" | relURL }}?v={{ now.UnixNano }}"></script>
+    <script type="module" src="{{ "js/xananode.js" | relURL }}?v={{ now.UnixNano }}"></script>
   </main>
 </body>
 </html>

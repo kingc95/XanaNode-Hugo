@@ -14,12 +14,12 @@
   "rights_status": "open-source",
   "asset_path": "media/images/xananode-icon.svg",
   "asset_role": "primary_media",
-  "creator": "Built By Bots",
+  "creator": "Christian Siefen",
   "relationships": [
     {
       "id": "xananode.canonical:rel/built-by-bots-created-icon",
       "type": "created",
-      "source": "xananode.canonical:organization/built-by-bots",
+      "source": "xananode.canonical:person/christian-siefen",
       "direction": "incoming"
     },
     {
@@ -77,7 +77,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/media_xananode-icon.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

@@ -1,0 +1,17 @@
+{
+  "id": "xananode.example:source/source-creator",
+  "title": "Creator",
+  "type": "source",
+  "importance": 2,
+  "summary": "Christian Siefen's canonical XanaNode website and project home.",
+  "source_url": "https://xananode.com/",
+  "rights_status": "external",
+  "relationships": [
+    {
+      "id": "xananode.example:rel/source-creator-documents-xananode-245",
+      "type": "documents",
+      "target": "xananode.example:concept/xananode",
+      "direction": "outgoing"
+    }
+  ]
+}

@@ -19,7 +19,7 @@
   "subtype": "distinction",
   "importance": 4,
   "summary": "A license applied to source code, validators, tooling, schemas, and implementation artifacts.",
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/concept_software-license.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

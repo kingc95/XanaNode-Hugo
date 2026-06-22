@@ -276,6 +276,244 @@ body.is-resizing {
   z-index: 1;
 }
 
+.xana-graph-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  touch-action: none;
+}
+
+.graph-surface {
+  fill: #05070a;
+}
+
+.graph-layer {
+  will-change: transform;
+}
+
+.graph-travel-layer {
+  pointer-events: none;
+}
+
+.graph-edge path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.graph-edge polygon {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.graph-edge-label {
+  fill: #e2e8f0;
+  font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-anchor: middle;
+  paint-order: stroke;
+  stroke: rgba(5, 7, 10, 0.92);
+  stroke-width: 4.5px;
+}
+
+.graph-node {
+  cursor: pointer;
+}
+
+.graph-node.dragging {
+  cursor: grabbing;
+}
+
+.graph-node.dragging circle {
+  filter: drop-shadow(0 0 18px rgba(85, 214, 190, 0.45));
+}
+
+.graph-node circle {
+  vector-effect: non-scaling-stroke;
+}
+
+.graph-node text {
+  font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+  font-size: 14.5px;
+  font-weight: 800;
+  text-anchor: middle;
+  paint-order: stroke;
+  stroke: rgba(5, 7, 10, 0.9);
+  stroke-width: 2.6px;
+  pointer-events: none;
+}
+
+.graph-node-title-chip rect {
+  fill: rgba(5, 10, 18, 0.94);
+  stroke: rgba(148, 163, 184, 0.48);
+  stroke-width: 1.4;
+  vector-effect: non-scaling-stroke;
+}
+
+.graph-node-title {
+  font-size: 13px;
+  font-weight: 850;
+  fill: #f8fafc;
+  paint-order: stroke;
+  stroke: rgba(0, 0, 0, 0.82);
+  stroke-width: 2.2px;
+}
+
+.graph-node-icon {
+  font-size: 18px;
+  font-weight: 900;
+  paint-order: stroke;
+  stroke: rgba(255, 255, 255, 0.18);
+  stroke-width: 1.2px;
+  pointer-events: none;
+}
+
+.graph-node.selected .graph-node-icon {
+  font-size: 22px;
+}
+
+.graph-node-media {
+  pointer-events: none;
+  opacity: 0.96;
+}
+
+.graph-node-type-media {
+  pointer-events: none;
+  opacity: 0.96;
+}
+
+.graph-type-badge rect {
+  fill: rgba(2, 8, 13, 0.7);
+  stroke: rgba(85, 214, 190, 0.42);
+  stroke-width: 1.1;
+  vector-effect: non-scaling-stroke;
+}
+
+.graph-type {
+  fill: rgba(159, 247, 232, 0.86);
+  paint-order: stroke;
+  stroke: rgba(0, 0, 0, 0.68);
+  stroke-width: 1.4px;
+  font-size: 8.5px;
+}
+
+.graph-node .graph-type {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  stroke-width: 1.8px;
+}
+
+.graph-node.selected text {
+  font-size: 14px;
+}
+
+.graph-node.selected .graph-node-title {
+  font-size: 14.5px;
+}
+
+.graph-node.distance-1 .graph-node-title {
+  font-size: 13px;
+}
+
+.graph-node.distance-2 .graph-node-title,
+.graph-node.distance-3 .graph-node-title,
+.graph-node.distance-4 .graph-node-title {
+  font-size: 12px;
+}
+
+.graph-node.distance-3 .graph-type-badge,
+.graph-node.distance-4 .graph-type-badge {
+  display: none;
+}
+
+.graph-node.selected circle {
+  filter: drop-shadow(0 0 16px rgba(85, 214, 190, 0.35));
+}
+
+.xana-graph-svg.is-staged .graph-node,
+.xana-graph-svg.is-staged .graph-edge {
+  opacity: 0;
+  animation: graph-depth-reveal 520ms cubic-bezier(0.2, 0.85, 0.25, 1) forwards;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+.xana-graph-svg.is-staged .graph-node.selected {
+  animation-duration: 280ms;
+}
+
+@keyframes graph-depth-reveal {
+  from {
+    opacity: 0;
+    filter: blur(2px);
+  }
+  to {
+    opacity: var(--graph-depth-opacity, 1);
+    filter: blur(0);
+  }
+}
+
+.xana-graph-caption {
+  position: absolute;
+  right: 20px;
+  bottom: 12px;
+  color: var(--xana-text-muted);
+  font-size: 12px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.graph-travel-rail {
+  stroke: rgba(85, 214, 190, 0.92);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 10 8;
+  filter: drop-shadow(0 0 10px rgba(85, 214, 190, 0.35));
+  opacity: 0;
+  animation: graph-travel-rail 620ms ease-out var(--travel-delay, 0ms) forwards;
+}
+
+.graph-travel-start {
+  fill: rgba(255, 255, 255, 0.95);
+  stroke: rgba(85, 214, 190, 0.95);
+  stroke-width: 2;
+}
+
+.graph-travel-step {
+  fill: rgba(85, 214, 190, 0.95);
+  stroke: rgba(255, 255, 255, 0.9);
+  stroke-width: 2;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: graph-travel-step 360ms ease-out var(--travel-delay, 0ms) forwards;
+}
+
+@keyframes graph-travel-rail {
+  from {
+    stroke-dashoffset: 112;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0.96;
+  }
+}
+
+@keyframes graph-travel-step {
+  from {
+    transform: scale(0.58);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0.96;
+  }
+}
+
 .xana-graph-atmosphere {
   position: absolute;
   inset: 0;
@@ -687,9 +925,9 @@ body,
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 999px;
   color: #475569;
-  font-size: 0.64rem;
+  font-size: 0.72rem;
   font-weight: 850;
-  padding: 0.22rem 0.35rem;
+  padding: 0.3rem 0.4rem;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.07em;
@@ -706,6 +944,12 @@ body,
   background: rgba(85, 214, 190, 0.13);
   border-color: rgba(85, 214, 190, 0.5);
   color: #55d6be;
+}
+
+.xana-depth-row button:focus-visible,
+.xana-ctrl-btn:focus-visible {
+  outline: 2px solid rgba(85, 214, 190, 0.85);
+  outline-offset: 2px;
 }
 
 /* ── Controls strip ─────────────────────────────────────────────────────── */
@@ -2355,6 +2599,52 @@ html[data-xana-theme="classic"] .xana-trail-playlist-items button {
 .xana-empty,
 .xana-error {
   color: var(--xana-text-muted);
+}
+
+.xana-404-shell {
+  grid-template-columns: minmax(340px, 1fr) 8px minmax(360px, 680px);
+}
+
+.xana-404-panel {
+  display: block;
+}
+
+.xana-404-view {
+  max-width: 760px;
+  padding-top: 72px;
+}
+
+.xana-404-lead,
+.xana-404-note {
+  max-width: 62ch;
+  color: var(--xana-text-muted);
+  font-size: calc(1.02rem * var(--xana-reader-scale));
+  line-height: 1.65;
+}
+
+.xana-404-callout {
+  margin: 28px 0 18px;
+  padding: 18px 20px;
+  border: 1px solid var(--xana-panel-border);
+  border-radius: 18px;
+  background: var(--xana-accent-soft);
+}
+
+.xana-404-label {
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 900;
+  color: var(--xana-accent);
+}
+
+.xana-404-link {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--xana-accent);
+  font-weight: 800;
+  font-size: 1.2rem;
 }
 
 .xana-document-view {

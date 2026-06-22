@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-category-identity-projection-icon",
+  "title": "identity Relationship Category Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-categories/identity.svg",
+  "asset_role": "relationship_category_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/identity.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the identity relationship category.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-category-identity-projection-icon-represents-schema-relationship-category-identity",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-category-identity",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-identity-has_primary_media-media-relationship-category-identity-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-category-identity",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:14fe95355a5344504ea807e841227b05567b7a54432e44848e33fc241f43359f",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/identity.svg",
+    "method": "archive",
+    "content_id": "sha256:14fe95355a5344504ea807e841227b05567b7a54432e44848e33fc241f43359f",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/media_relationship-category-identity-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

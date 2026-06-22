@@ -1,0 +1,93 @@
+{
+  "id": "xananode.canonical:schema/protocol-artifact-proposals",
+  "title": "Protocol Proposals",
+  "type": "schema",
+  "subtype": "protocol_artifact_group",
+  "importance": 3,
+  "summary": "Protocol files under proposals/ preserved inside the canonical substrate.",
+  "artifact_path": "proposals/",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/proposals/",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/concept-protocol-artifacts-contains-schema-protocol-artifact-proposals-raw-group-proposals",
+      "type": "contains",
+      "source": "xananode.canonical:concept/protocol-artifacts",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-proposals-contains-source-protocol-artifact-proposals-readme.md-raw-file-proposals-readme.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-proposals-readme.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-proposals-contains-source-protocol-artifact-proposals-xnp-0001-namespaces.md-raw-file-proposals-xnp-0001-namespaces.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-proposals-xnp-0001-namespaces.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-proposals-contains-source-protocol-artifact-proposals-xnp-0002-extension-schemas.md-raw-file-proposals-xnp-0002-extension-schemas.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-proposals-xnp-0002-extension-schemas.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-proposals-contains-source-protocol-artifact-proposals-xnp-0003-federation.md-raw-file-proposals-xnp-0003-federation.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-proposals-xnp-0003-federation.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-proposals-contains-source-protocol-artifact-proposals-xnp-0004-merge-validation.md-raw-file-proposals-xnp-0004-merge-validation.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-proposals-xnp-0004-merge-validation.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-proposals-contains-source-protocol-artifact-proposals-xnp-0005-transclusion.md-raw-file-proposals-xnp-0005-transclusion.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-proposals-xnp-0005-transclusion.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-proposals-contains-source-protocol-artifact-proposals-xnp-0006-tumbler-addressing.md-raw-file-proposals-xnp-0006-tumbler-addressing.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-proposals-xnp-0006-tumbler-addressing.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-proposals-contains-source-protocol-artifact-proposals-xnp-0007-git-backed-substrates.md-raw-file-proposals-xnp-0007-git-backed-substrates.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-proposals-xnp-0007-git-backed-substrates.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-proposals-contains-source-protocol-artifact-proposals-xnp-0008-derived-inverse-relationships.md-raw-file-proposals-xnp-0008-derived-inverse-relationships.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-proposals-xnp-0008-derived-inverse-relationships.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-proposals-contains-source-protocol-artifact-proposals-xnp-0009-standards-alignment.md-raw-file-proposals-xnp-0009-standards-alignment.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-proposals-xnp-0009-standards-alignment.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-proposals-contains-source-protocol-artifact-proposals-xnp-0010-federation-discovery-and-trust.md-raw-file-proposals-xnp-0010-federation-discovery-and-trust.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-proposals-xnp-0010-federation-discovery-and-trust.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-proposals-contains-source-protocol-artifact-proposals-xnp-0011-studio-local-first-authoring.md-raw-file-proposals-xnp-0011-studio-local-first-authoring.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-proposals-xnp-0011-studio-local-first-authoring.md",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/schema_protocol-artifact-proposals.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

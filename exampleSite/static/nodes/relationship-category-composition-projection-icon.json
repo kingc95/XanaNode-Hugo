@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-category-composition-projection-icon",
+  "title": "composition Relationship Category Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-categories/composition.svg",
+  "asset_role": "relationship_category_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/composition.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the composition relationship category.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-category-composition-projection-icon-represents-schema-relationship-category-composition",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-category-composition",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-composition-has_primary_media-media-relationship-category-composition-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-category-composition",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:78ef038784d1d147cf90f6bb7130d87b267d20749c9b6c853301150e50ea4a04",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/composition.svg",
+    "method": "archive",
+    "content_id": "sha256:78ef038784d1d147cf90f6bb7130d87b267d20749c9b6c853301150e50ea4a04",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/media_relationship-category-composition-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

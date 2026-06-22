@@ -1,0 +1,41 @@
+{
+  "id": "xananode.canonical:media/protocol-artifact-media-projection-relationship-categories-temporal.svg",
+  "title": "Media / Projection / Relationship Categories / Temporal",
+  "type": "media",
+  "subtype": "protocol_media_asset",
+  "importance": 3,
+  "summary": "media/projection/relationship-categories/temporal.svg is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "artifact_path": "media/projection/relationship-categories/temporal.svg",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/temporal.svg",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_role": "canonical_raw_source",
+  "rights_status": "CC-BY-4.0",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-protocol-artifact-media-projection-relationship-categories-temporal.svg-documents-concept-protocol-artifacts-raw-file-docs-media-projection-relationship-categories-temporal.svg",
+      "type": "documents",
+      "target": "xananode.canonical:concept/protocol-artifacts",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-media-contains-media-protocol-artifact-media-projection-relationship-categories-temporal.svg-raw-file-media-projection-relationship-categories-temporal.svg",
+      "type": "contains",
+      "source": "xananode.canonical:schema/protocol-artifact-media",
+      "direction": "incoming"
+    }
+  ],
+  "asset_path": "assets/raw/protocol/media/projection/relationship-categories/temporal.svg",
+  "content_id": "sha256:ba47c9bd720072a19d36ead5dbbffeee32836c0811f8fb286f7c608336d108cd",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/temporal.svg",
+    "method": "archive",
+    "content_id": "sha256:ba47c9bd720072a19d36ead5dbbffeee32836c0811f8fb286f7c608336d108cd",
+    "rights_status": "CC-BY-4.0",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/media_protocol-artifact-media-projection-relationship-categories-temporal.svg.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

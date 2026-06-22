@@ -1,3 +1,16 @@
+import {
+    createProjectionRegistry,
+    projectionEdgePath,
+    projectionEdgeArrowPoints,
+    findProjectionRoute,
+    buildHopNeighborhood,
+    layoutReadableProjection,
+    fitReadableProjectionViewport,
+    resolveProjectionNodeCollisions,
+    wrapProjectionText,
+    buildReadableTravelOverlayMarkup
+} from "/js/projection.js";
+
 (function () {
     const graphEl = document.getElementById("xana-graph");
     const panelEl = document.getElementById("xana-panel");
@@ -108,6 +121,7 @@
             : [];
 
         return {
+            namespace: String(raw.namespace || "").trim(),
             homeNode: String(raw.homeNode || "start-here").trim() || "start-here",
             brand: {
                 name: String(brand.name || "XanaNode"),
@@ -119,7 +133,34 @@
                 attributionUrl: String(brand.attributionUrl || "https://xananode.com")
             },
             links: normalizeThemeLinks(raw.links || brand.links || []),
+            downloadSubstrate: normalizeDownloadSubstrate(raw.downloadSubstrate, String(raw.namespace || "").trim()),
             searchPrompts: prompts
+        };
+    }
+
+    function normalizeDownloadSubstrate(value, namespace = "") {
+        const basePath = `archives/${namespace || "substrate"}.substrate`;
+        if (!value || value === false) {
+            return {
+                enabled: false,
+                label: "Download current substrate",
+                path: basePath,
+                url: `/${basePath}`,
+                filename: `${namespace || "substrate"}.substrate`,
+                includeViewerArtifacts: false
+            };
+        }
+
+        const raw = value && typeof value === "object" ? value : { enabled: value };
+        const enabled = typeof raw.enabled === "boolean" ? raw.enabled : Boolean(raw.enabled ?? value);
+        const path = String(raw.path || basePath).replace(/^\/+/, "");
+        return {
+            enabled,
+            label: String(raw.label || "Download current substrate"),
+            path,
+            url: `/${path}`,
+            filename: String(raw.filename || path.split("/").pop() || `${namespace || "substrate"}.substrate`),
+            includeViewerArtifacts: Boolean(raw.includeViewerArtifacts || raw.include_viewer_artifacts || false)
         };
     }
 
@@ -339,12 +380,11 @@
         return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
     }
 
-    loadCytoscape()
-        .then(() => Promise.all([
-            loadViewerData(),
-            fetch("/schemas/xananode-node-types.json").then((r) => r.json()).catch(() => null),
-            fetch("/schemas/xananode-relationship-types.json").then((r) => r.json()).catch(() => null)
-        ]))
+    Promise.all([
+        loadViewerData(),
+        fetch("/schemas/xananode-node-types.json").then((r) => r.json()).catch(() => null),
+        fetch("/schemas/xananode-relationship-types.json").then((r) => r.json()).catch(() => null)
+    ])
         .then(([data, nodeSchema, relSchema]) => {
             if (nodeSchema?.node_types) {
                 VALID_NODE_TYPES = new Set(nodeSchema.node_types.map((t) => t.type));
@@ -402,18 +442,6 @@
                 };
             })
         };
-    }
-
-    function loadCytoscape() {
-        if (window.cytoscape) return Promise.resolve();
-
-        return new Promise((resolve, reject) => {
-            const script = document.createElement("script");
-            script.src = "https://unpkg.com/cytoscape@3.29.2/dist/cytoscape.min.js";
-            script.onload = resolve;
-            script.onerror = () => reject(new Error("Could not load Cytoscape."));
-            document.head.appendChild(script);
-        });
     }
 
     function getTypeSectionHref(type) {
@@ -528,6 +556,10 @@
         const allNodes = Array.isArray(data.nodes) ? data.nodes : [];
         const nodeTypeColors = buildTypeColorMap(nodeTypesData);
         const relationshipTypeStyles = buildRelationshipStyleMap(relationshipTypesData);
+        const projectionRegistry = createProjectionRegistry({
+            nodeTypes: Array.isArray(nodeTypesData?.node_types) ? nodeTypesData.node_types : [],
+            relationshipTypes: Array.isArray(relationshipTypesData?.relationship_types) ? relationshipTypesData.relationship_types : []
+        });
         const nodeIds = new Set(allNodes.map((node) => node.id));
 
         // allEdgesRaw: every edge as declared in frontmatter — used by audit to detect
@@ -617,7 +649,11 @@
             pendingFragmentHighlight: null,
             displaySettings,
             nodeTypeColors,
-            relationshipTypeStyles
+            relationshipTypeStyles,
+            projectionRegistry,
+            graph: null,
+            graphModel: { nodes: [], edges: [], distances: {} },
+            graphViewport: null
         };
 
         if (requestedNode && window.location.hash) {
@@ -646,43 +682,7 @@
         renderChrome(state);
 
         const stageEl = document.getElementById("xana-stage");
-
-        const cy = cytoscape({
-            container: stageEl,
-            elements: [],
-            minZoom: 0.15,
-            maxZoom: 3,
-            style: getCyStyle(nodeTypeColors, relationshipTypeStyles),
-            layout: { name: "preset" }
-        });
-
-        state.cy = cy;
-
-        cy.on("tap", "node", function (evt) {
-            const nodeId = evt.target.id();
-            if (!state.nodeIds.has(nodeId)) return;
-            if (nodeId === state.focusId) {
-                notifyStudioNodeSelection(nodeId);
-                return;
-            }
-            travelToNode(nodeId, state, true);
-        });
-
-        cy.on("zoom pan", debounce(() => {
-            saveSetting(STORAGE_KEYS.graphZoom, cy.zoom());
-            saveSetting(STORAGE_KEYS.graphPan, cy.pan());
-        }, 250));
-
-        cy.on("drag", "node", debounce((evt) => {
-            if (state.displaySettings?.graphAtmosphere !== "alive") return;
-            enlivenDraggedNode(evt.target, state, 0.48);
-        }, 40));
-
-        cy.on("free", "node", (evt) => {
-            if (state.displaySettings?.graphAtmosphere !== "alive") return;
-            enlivenDraggedNode(evt.target, state, 1);
-            startAliveMotion(state);
-        });
+        state.graph = createGraphView(stageEl, state);
 
         bindControls(state);
         startSearchVerbRotation();
@@ -690,10 +690,9 @@
         restorePanelWidth(state);
 
         window.addEventListener("resize", debounce(() => {
-            if (!state.cy) return;
-
-            state.cy.resize();
-            fitReadableNeighborhood(state.cy);
+            if (!state.graph) return;
+            state.graph.resize();
+            fitReadableNeighborhood(state.graph);
         }, 180));
 
         window.addEventListener("popstate", () => {
@@ -745,6 +744,7 @@
         const dact = (n) => d === n ? "class=\"active\"" : "";
         const brand = THEME_CONFIG.brand;
         const projectLinks = renderThemeLinks(state);
+        const substrateDownload = renderThemeDownload();
         const relationshipFilterItems = relationshipTypesFromEdges(state.allEdges)
             .map((type) => `<label><input type="checkbox" data-relationship-type="${escapeHtml(type)}" ${rchk(type)}> ${escapeHtml(humanLabel(type))}</label>`)
             .join("");
@@ -836,6 +836,7 @@
                     <button type="button" class="xana-tools-button" data-audit-run>Run schema audit</button>
                     <button type="button" class="xana-tools-button" data-audit-clear hidden>Clear schema audit</button>
                     <button type="button" class="xana-tools-button" data-interface-tour>Interface tour</button>
+                    ${substrateDownload}
                     ${projectLinks}
                 </div>
             </div>
@@ -996,6 +997,17 @@
         `;
     }
 
+    function renderThemeDownload() {
+        const download = THEME_CONFIG.downloadSubstrate || {};
+        if (!download.enabled || !download.url) return "";
+        return `
+                    <div class="xana-tools-section" aria-label="Portable substrate export">
+                        <span class="xana-tools-section-label">Export</span>
+                        <a class="xana-tools-link xana-tools-download" href="${escapeHtml(download.url)}" download="${escapeHtml(download.filename || "")}">${escapeHtml(download.label || "Download current substrate")}</a>
+                    </div>
+        `;
+    }
+
     function normalizeUrlKey(url) {
         try {
             const parsed = new URL(String(url || ""));
@@ -1007,7 +1019,7 @@
     }
 
     function bindControls(state) {
-        const cy = state.cy;
+        const graph = state.graph;
         const searchForm = graphEl.querySelector(".xana-search-form");
         const searchInput = graphEl.querySelector("#xana-search-input");
         const searchWrap = graphEl.querySelector(".xana-search-wrap");
@@ -1101,31 +1113,21 @@
         graphEl.querySelectorAll("[data-zoom]").forEach((button) => {
             button.addEventListener("click", () => {
                 const action = button.getAttribute("data-zoom");
-                const center = {
-                    x: cy.container().clientWidth / 2,
-                    y: cy.container().clientHeight / 2
-                };
 
                 if (action === "in") {
-                    cy.zoom({
-                        level: Math.min(cy.zoom() * 1.18, cy.maxZoom()),
-                        renderedPosition: center
-                    });
+                    graph?.zoomBy?.(1.18);
                 }
 
                 if (action === "out") {
-                    cy.zoom({
-                        level: Math.max(cy.zoom() / 1.18, cy.minZoom()),
-                        renderedPosition: center
-                    });
+                    graph?.zoomBy?.(1 / 1.18);
                 }
 
                 if (action === "fit") {
-                    fitReadableNeighborhood(cy);
+                    fitReadableNeighborhood(graph);
                 }
 
-                saveSetting(STORAGE_KEYS.graphZoom, cy.zoom());
-                saveSetting(STORAGE_KEYS.graphPan, cy.pan());
+                saveSetting(STORAGE_KEYS.graphZoom, graph?.viewport?.scale || 1);
+                saveSetting(STORAGE_KEYS.graphPan, graph?.viewport ? { x: graph.viewport.x, y: graph.viewport.y } : { x: 0, y: 0 });
             });
         });
 
@@ -1311,8 +1313,8 @@
                 }
                 applyDisplaySettings(state.displaySettings);
                 updateDisplaySettingButtons(state);
-                if (key === "colorTheme" && state.cy) {
-                    state.cy.style(getCyStyle(state.nodeTypeColors, state.relationshipTypeStyles)).update();
+                if (key === "colorTheme" && state.graph) {
+                    state.graph.render?.(state.graphModel, { preserveViewport: true });
                 }
                 if (key === "graphAtmosphere") {
                     refreshAliveMotion(state);
@@ -1782,16 +1784,11 @@
     }
 
     function renderVisibleGraph(state, options = {}) {
-        const cy = state.cy;
+        if (!state) return;
 
-        if (!cy) return;
-
-        // Always cancel any in-flight reveal timers before rebuilding the graph,
-        // regardless of whether this render will start a new staged reveal.
         _navGen++;
         _revealTimers.forEach((id) => window.clearTimeout(id));
         _revealTimers = [];
-        cy.stop(true); // stop any running viewport or element animations
 
         const visible = getVisibleSubgraph(
             state.allNodes,
@@ -1806,55 +1803,14 @@
             state.searchResults
         );
 
-        const searchMatchIds = new Set(state.searchResults.map((result) => result.node.id));
+        const focusNode = visible.nodes.find((node) => node.id === state.focusId) || state.allNodes.find((node) => node.id === state.focusId) || null;
+        const graphModel = layoutGraphNodes(visible, focusNode, state);
+        state.graphModel = graphModel;
+        state.graph?.render?.(graphModel, {
+            preserveViewport: Boolean(options.preserveViewport && state.hasRenderedGraph),
+            stagedReveal: Boolean(options.stagedReveal)
+        });
 
-        const elements = [
-            ...visible.nodes.map((node) => {
-                const src = node.image || "";
-                const mediaType = node.primary_media_node?.media_type || "";
-                const isVisualMedia = ["image", "diagram", "screenshot"].includes(mediaType) ||
-                    /\.(svg|png|jpe?g|webp|gif|avif)$/i.test(src);
-                const isContain = ["diagram", "screenshot"].includes(mediaType) || src.toLowerCase().endsWith(".svg");
-                const visualData = nodeVisualData(node, state.nodeTypeColors);
-                return {
-                    data: { ...node, ...visualData },
-                    classes: [
-                        node.type || "node",
-                        visualData.hasMixedRoles ? "multi-role" : "",
-                        (node.image && isVisualMedia) ? "has-image" : "",
-                        isContain ? "image-contain" : "",
-                        searchMatchIds.has(node.id) ? "search-match" : "",
-                        node.id === state.focusId ? "focused-node" : `distance-${visible.distances[node.id] || 0}`,
-                        options.stagedReveal ? "entering-node" : "",
-                        getNodeViolations(node, state.allEdgesRaw, state.allNodes).length > 0 ? "schema-violation" : ""
-                    ].filter(Boolean).join(" ")
-                };
-            }),
-            ...visible.edges.map((edge, index) => ({
-                data: {
-                    id: edgeId(edge, index),
-                    source: edge.source,
-                    target: edge.target,
-                    label: edge.type,
-                    weight: edge.weight,
-                    score: edge.score,
-                    color: edge.color || relationshipTypeStyle(state, edge.type).color,
-                    lineStyle: mapRelationshipLineStyle(edge.line_style || relationshipTypeStyle(state, edge.type).line_style)
-                },
-                classes: [
-                    edge.source === state.focusId || edge.target === state.focusId ? "focus-edge" : "mist-edge",
-                    options.stagedReveal ? "entering-edge" : ""
-                ].filter(Boolean).join(" ")
-            }))
-        ];
-
-        cy.elements().remove();
-        cy.add(elements);
-
-        positionAsFocusCloud(cy, state.focusId, visible.distances);
-        resolveNodeCollisions(cy, 14);
-
-        const focusNode = state.allNodes.find((node) => node.id === state.focusId);
         const relatedEdges = state.allEdges
             .filter((edge) => edge.source === state.focusId || edge.target === state.focusId)
             .sort((a, b) => {
@@ -1878,19 +1834,23 @@
 
         trackNodeView(focusNode);
 
-        if (options.preserveViewport && state.hasRenderedGraph) {
-            // Cytoscape keeps pan/zoom across element replacement; preserve it
-            // during live filtering/search instead of forcing a camera jump.
-        } else {
-            fitReadableNeighborhood(cy);
+        if (!options.preserveViewport || !state.hasRenderedGraph) {
+            fitReadableNeighborhood(state.graph);
         }
         state.hasRenderedGraph = true;
 
-        if (options.stagedReveal) {
-            stagedReveal(cy, state.previousFocusId);
-        }
-
         refreshAliveMotion(state);
+    }
+
+    function layoutGraphNodes(visible, focusNode, state) {
+        return layoutReadableProjection(visible, {
+            focusId: state.focusId,
+            registry: state.projectionRegistry,
+            width: 900,
+            height: 620,
+            maxDepth: 4,
+            labelForEdge: (edge) => humanLabel(edge.type || "related_to")
+        });
     }
 
     function getVisibleSubgraph(
@@ -1905,131 +1865,8 @@
         previousFocusId,
         searchResults
     ) {
-        const settingsByDepth = {
-            1: { minWeight: 5, maxFirst: 6, maxSecond: 0, maxThird: 0 },
-            2: { minWeight: 4, maxFirst: 9, maxSecond: 8, maxThird: 0 },
-            3: { minWeight: 3, maxFirst: 12, maxSecond: 14, maxThird: 8 },
-            4: { minWeight: 2, maxFirst: 18, maxSecond: 24, maxThird: 20, maxFourth: 16 }
-        };
-
-        const settings = settingsByDepth[maxDepth] || settingsByDepth[2];
-        const distances = {};
-        const visibleIds = new Set();
-
-        if (focusId) {
-            visibleIds.add(focusId);
-            distances[focusId] = 0;
-        }
-
-        if (previousFocusId) {
-            visibleIds.add(previousFocusId);
-            distances[previousFocusId] = 1;
-        }
-
-        const eligibleEdges = dedupeEdges(allEdges)
-            .filter((edge) => enabledRelationshipTypes.has(edge.type || "related_to"));
-
-        const scoredEdges = eligibleEdges
-            .map((edge) => ({
-                ...edge,
-                weight: Number(edge.weight || 1),
-                score: scoreEdge(edge, allNodes, focusId)
-            }))
-            .filter((edge) => edge.weight >= settings.minWeight)
-            .sort((a, b) => b.score - a.score);
-
-        const directEdges = eligibleEdges
-            .map((edge) => ({
-                ...edge,
-                weight: Number(edge.weight || 1),
-                score: scoreEdge(edge, allNodes, focusId)
-            }))
-            .filter((edge) => edge.source === focusId || edge.target === focusId)
-            .sort((a, b) => b.score - a.score);
-
-        // Direct relationships are substrate truth, not optional decoration.
-        // Range settings may limit surrounding context, but every enabled edge
-        // attached to the focused node must remain visible.
-        const firstEdges = directEdges;
-
-        firstEdges.forEach((edge) => {
-            const other = edge.source === focusId ? edge.target : edge.source;
-            visibleIds.add(other);
-            distances[other] = Math.min(distances[other] || 999, 1);
-        });
-
-        if (maxDepth >= 2) {
-            const firstIds = Array.from(visibleIds).filter((id) => id !== focusId);
-
-            const secondEdges = scoredEdges
-                .filter((edge) => {
-                    const touchesFirst = firstIds.includes(edge.source) || firstIds.includes(edge.target);
-                    const touchesFocus = edge.source === focusId || edge.target === focusId;
-
-                    return touchesFirst && !touchesFocus;
-                })
-                .slice(0, settings.maxSecond);
-
-            secondEdges.forEach((edge) => {
-                if (!visibleIds.has(edge.source)) {
-                    visibleIds.add(edge.source);
-                    distances[edge.source] = 2;
-                }
-
-                if (!visibleIds.has(edge.target)) {
-                    visibleIds.add(edge.target);
-                    distances[edge.target] = 2;
-                }
-            });
-        }
-
-        if (maxDepth >= 3) {
-            const secondIds = Array.from(visibleIds).filter((id) => distances[id] === 2);
-
-            const thirdEdges = scoredEdges
-                .filter((edge) => secondIds.includes(edge.source) || secondIds.includes(edge.target))
-                .slice(0, settings.maxThird);
-
-            thirdEdges.forEach((edge) => {
-                if (!visibleIds.has(edge.source)) {
-                    visibleIds.add(edge.source);
-                    distances[edge.source] = 3;
-                }
-
-                if (!visibleIds.has(edge.target)) {
-                    visibleIds.add(edge.target);
-                    distances[edge.target] = 3;
-                }
-            });
-        }
-
-        if (maxDepth >= 4) {
-            const thirdIds = Array.from(visibleIds).filter((id) => distances[id] === 3);
-            const fourthEdges = scoredEdges
-                .filter((edge) => thirdIds.includes(edge.source) || thirdIds.includes(edge.target))
-                .slice(0, settings.maxFourth || 0);
-
-            fourthEdges.forEach((edge) => {
-                if (!visibleIds.has(edge.source)) {
-                    visibleIds.add(edge.source);
-                    distances[edge.source] = 4;
-                }
-                if (!visibleIds.has(edge.target)) {
-                    visibleIds.add(edge.target);
-                    distances[edge.target] = 4;
-                }
-            });
-        }
-
-        // Note: search results are shown in the dropdown and highlighted via the
-        // search-match class on already-visible nodes. We do NOT inject them into
-        // visibleIds here — that caused unrelated nodes to bleed into the graph
-        // while the search panel was open and disappear on close.
-
         function nodePassesFilters(node) {
             if (node.id === focusId) return true;
-            if (node.id === previousFocusId) return true;
-            if (!visibleIds.has(node.id)) return false;
             if (!enabledTypes.has(node.type)) return false;
             const nodeSubtypes = nodeSubtypeValues(node);
             if (nodeSubtypes.length && !nodeSubtypes.some((value) => enabledSubtypes.has(value))) return false;
@@ -2041,26 +1878,463 @@
             return true;
         }
 
-        const nodes = allNodes.filter(nodePassesFilters);
-
-        const nodeIds = new Set(nodes.map((node) => node.id));
-
-        const directVisibleEdges = directEdges.filter((edge) => {
-            return nodeIds.has(edge.source) && nodeIds.has(edge.target);
+        const neighborhood = buildHopNeighborhood(allNodes, allEdges, {
+            focusId,
+            maxDepth,
+            nodeFilter: nodePassesFilters,
+            edgeFilter: (edge) => enabledRelationshipTypes.has(edge.type || "related_to"),
+            edgeScore: (edge) => scoreEdge(edge, allNodes, focusId)
         });
 
-        const directEdgeKeys = new Set(directVisibleEdges.map(edgeIdentityKey));
-        const contextEdgeBudget = settings.maxSecond + settings.maxThird + (settings.maxFourth || 0);
-        const contextEdges = maxDepth === 1
-            ? []
-            : scoredEdges
-                .filter((edge) => !directEdgeKeys.has(edgeIdentityKey(edge)))
-                .filter((edge) => nodeIds.has(edge.source) && nodeIds.has(edge.target))
-                .slice(0, contextEdgeBudget);
+        return neighborhood;
+    }
 
-        const edges = [...directVisibleEdges, ...contextEdges];
+    function createGraphView(stageEl, state) {
+        const view = {
+            viewport: loadGraphViewport(),
+            graphModel: { nodes: [], edges: [], distances: {}, focusId: state.focusId },
+            travelFrame: null,
+            isPanning: false,
+            panStart: null,
+            render(graphModel, options = {}) {
+                this.graphModel = graphModel || { nodes: [], edges: [], distances: {}, focusId: state.focusId };
+                if (!options.preserveViewport || !this.viewport) {
+                    this.viewport = fitGraphViewport(this.graphModel.nodes || []);
+                }
+                saveGraphViewport(this.viewport);
+                stageEl.innerHTML = buildGraphStageMarkup(this.graphModel, this.viewport, state, options);
+                bindGraphInteractions(stageEl, state, this);
+                this.applyViewport();
+            },
+            animateTravel(fromNode, toNode, done, options = {}) {
+                if (!fromNode || !toNode) {
+                    done?.();
+                    return;
+                }
+                if (this.travelFrame?.cancel) {
+                    this.travelFrame.cancel();
+                }
 
-        return { nodes, edges, distances };
+                const start = { ...this.viewport };
+                const targetScale = clampNumber(Math.max(start.scale || 1, 1.08), 0.65, 2.15, 1.1);
+                const end = {
+                    scale: targetScale,
+                    x: 450 - (Number(toNode.x || 450) * targetScale),
+                    y: 310 - (Number(toNode.y || 310) * targetScale)
+                };
+
+                const overlay = buildGraphTravelOverlayMarkup(fromNode, toNode, start, options);
+                const overlayHost = stageEl.querySelector(".graph-travel-layer");
+                if (overlayHost) {
+                    overlayHost.innerHTML = overlay;
+                }
+
+                const duration = Math.max(560, Number(options.routeNodes?.length || 2) * 240);
+                const startedAt = performance.now();
+                const ease = (t) => 1 - Math.pow(1 - t, 3);
+                let cancelled = false;
+
+                const tick = (now) => {
+                    if (cancelled) return;
+                    const raw = Math.min(1, (now - startedAt) / duration);
+                    const t = ease(raw);
+                    this.viewport = {
+                        x: start.x + (end.x - start.x) * t,
+                        y: start.y + (end.y - start.y) * t,
+                        scale: start.scale + (end.scale - start.scale) * t
+                    };
+                    this.applyViewport();
+                    if (raw < 1) {
+                        this.travelFrame.raf = window.requestAnimationFrame(tick);
+                    } else {
+                        saveGraphViewport(this.viewport);
+                        overlayHost && (overlayHost.innerHTML = "");
+                        this.travelFrame = null;
+                        done?.();
+                    }
+                };
+
+                this.travelFrame = {
+                    cancel: () => {
+                        cancelled = true;
+                        if (this.travelFrame?.raf) {
+                            window.cancelAnimationFrame(this.travelFrame.raf);
+                        }
+                        overlayHost && (overlayHost.innerHTML = "");
+                        this.travelFrame = null;
+                    }
+                };
+
+                this.travelFrame.raf = window.requestAnimationFrame(tick);
+            },
+            resize() {
+                if (!this.graphModel) return;
+                this.applyViewport();
+            },
+            fit() {
+                this.viewport = fitGraphViewport(this.graphModel.nodes || []);
+                saveGraphViewport(this.viewport);
+                this.applyViewport();
+            },
+            reset() {
+                this.viewport = { x: 0, y: 0, scale: 1 };
+                saveGraphViewport(this.viewport);
+                this.applyViewport();
+            },
+            zoomBy(factor) {
+                this.viewport = scaleGraphViewport(this.viewport, factor);
+                saveGraphViewport(this.viewport);
+                this.applyViewport();
+            },
+            panBy(dx, dy) {
+                this.viewport = {
+                    ...this.viewport,
+                    x: this.viewport.x + dx,
+                    y: this.viewport.y + dy
+                };
+                saveGraphViewport(this.viewport);
+                this.applyViewport();
+            },
+            graphPointFromClient(clientX, clientY) {
+                const svg = stageEl.querySelector(".xana-graph-svg");
+                const rect = svg?.getBoundingClientRect();
+                if (!rect || !this.viewport) return { x: 0, y: 0 };
+                const svgX = ((clientX - rect.left) / Math.max(1, rect.width)) * 900;
+                const svgY = ((clientY - rect.top) / Math.max(1, rect.height)) * 620;
+                return {
+                    x: (svgX - this.viewport.x) / this.viewport.scale,
+                    y: (svgY - this.viewport.y) / this.viewport.scale
+                };
+            },
+            moveNode(nodeId, x, y) {
+                const node = this.graphModel?.nodes?.find((candidate) => candidate.id === nodeId);
+                if (!node) return;
+                node.x = clampNumber(x, -400, 1300, node.x);
+                node.y = clampNumber(y, -400, 1020, node.y);
+                const nodeEl = stageEl.querySelector(`[data-node-id="${cssEscape(nodeId)}"]`);
+                if (nodeEl) {
+                    nodeEl.setAttribute("transform", `translate(${node.x} ${node.y})`);
+                }
+                this.updateConnectedEdges(nodeId);
+            },
+            updateConnectedEdges(nodeId) {
+                for (const edge of this.graphModel?.edges || []) {
+                    if (edge.source?.id !== nodeId && edge.target?.id !== nodeId) continue;
+                    const edgeEl = stageEl.querySelector(`[data-edge-source="${cssEscape(edge.source.id)}"][data-edge-target="${cssEscape(edge.target.id)}"]`);
+                    if (!edgeEl) continue;
+                    const targetInset = Math.max(22, Number(edge.target?.r || 24) + 8);
+                    const sourceInset = Math.max(12, Number(edge.source?.r || 24) + 3);
+                    const path = projectionEdgePath(edge, { sourceInset, targetInset });
+                    const arrow = projectionEdgeArrowPoints(edge, 11, targetInset).map(([x, y]) => `${x},${y}`).join(" ");
+                    edgeEl.querySelector("path")?.setAttribute("d", path);
+                    edgeEl.querySelector("polygon")?.setAttribute("points", arrow);
+                    const labelEl = edgeEl.querySelector(".graph-edge-label");
+                    if (labelEl) {
+                        labelEl.setAttribute("x", String((edge.source.x + edge.target.x) / 2));
+                        labelEl.setAttribute("y", String((edge.source.y + edge.target.y) / 2 - 6));
+                    }
+                }
+            },
+            redraw() {
+                stageEl.innerHTML = buildGraphStageMarkup(this.graphModel, this.viewport, state, {});
+                bindGraphInteractions(stageEl, state, this);
+                this.applyViewport();
+            },
+            applyViewport() {
+                const layer = stageEl.querySelector(".graph-layer");
+                if (layer) {
+                    layer.setAttribute("transform", `translate(${this.viewport.x} ${this.viewport.y}) scale(${this.viewport.scale})`);
+                }
+            }
+        };
+
+        return view;
+    }
+
+    function buildGraphStageMarkup(graphModel, viewport, state, options = {}) {
+        const nodes = graphModel.nodes || [];
+        const edges = graphModel.edges || [];
+        const stagedClass = options.stagedReveal ? " is-staged" : "";
+        const caption = graphModel.focusId
+            ? `${nodes.length} visible node${nodes.length === 1 ? "" : "s"} connected to ${escapeHtml(state.allNodes.find((node) => node.id === graphModel.focusId)?.title || graphModel.focusId)}`
+            : `${nodes.length} visible node${nodes.length === 1 ? "" : "s"}`;
+
+        return `
+            <svg class="xana-graph-svg${stagedClass}" viewBox="0 0 900 620" role="img" aria-label="XanaNode graph projection">
+                <defs>
+                    ${nodes.filter((node) => node.style?.fills?.length > 1).map((node) => {
+                        const colors = node.style.fills;
+                        return `
+                            <linearGradient id="${graphNodeGradientId(node)}" gradientUnits="objectBoundingBox" x1="0%" y1="0%" x2="100%" y2="100%">
+                                ${colors.map((color, index) => `<stop offset="${Math.round((index / Math.max(1, colors.length - 1)) * 100)}%" stop-color="${escapeHtml(color)}"></stop>`).join("")}
+                            </linearGradient>
+                        `;
+                    }).join("")}
+                    ${edges.map((edge) => `
+                        <marker id="${graphEdgeMarkerId(edge)}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                            <path d="M 0 0 L 10 5 L 0 10 z" fill="${escapeHtml(edge.style.color)}"></path>
+                        </marker>
+                    `).join("")}
+                </defs>
+                <rect class="graph-surface" x="0" y="0" width="900" height="620"></rect>
+                <g class="graph-layer" transform="translate(${viewport.x} ${viewport.y}) scale(${viewport.scale})">
+                    ${edges.map((edge) => buildGraphEdgeMarkup(edge)).join("")}
+                    ${nodes.map((node) => buildGraphNodeMarkup(node, state)).join("")}
+                </g>
+                <g class="graph-travel-layer"></g>
+            </svg>
+            <div class="xana-graph-caption">${caption}</div>
+        `;
+    }
+
+    function buildGraphTravelOverlayMarkup(fromNode, toNode, viewport, options = {}) {
+        return buildReadableTravelOverlayMarkup(fromNode, toNode, viewport, options);
+    }
+
+    function buildGraphEdgeMarkup(edge) {
+        const targetInset = Math.max(22, Number(edge.target?.r || 24) + 8);
+        const sourceInset = Math.max(12, Number(edge.source?.r || 24) + 3);
+        const path = projectionEdgePath(edge, { sourceInset, targetInset });
+        const arrow = projectionEdgeArrowPoints(edge, 11, targetInset).map(([x, y]) => `${x},${y}`).join(" ");
+        const weight = Number(edge.style?.strokeWidth || 2.4);
+        const opacity = Number(edge.opacity || 1);
+        const arrowOpacity = Number(edge.arrowOpacity || opacity);
+        const label = edge.showLabel === false ? "" : `<text class="graph-edge-label" x="${(edge.source.x + edge.target.x) / 2}" y="${(edge.source.y + edge.target.y) / 2 - 6}" opacity="${Math.min(1, opacity + 0.15)}">${escapeHtml(edge.label || humanLabel(edge.type || "related_to"))}</text>`;
+        return `
+            <g class="graph-edge distance-${edge.distance || 1} ${edge.source.id === edge.target.id ? "self-edge" : ""}" data-edge-source="${escapeHtml(edge.source.id)}" data-edge-target="${escapeHtml(edge.target.id)}" style="--reveal-delay: ${Math.min(420, Number(edge.distance || 1) * 90)}ms; --graph-depth-opacity: ${opacity}">
+                <path d="${path}" fill="none" stroke="${escapeHtml(edge.style.color)}" stroke-width="${weight}" stroke-dasharray="${escapeHtml(edge.style.dash || "")}" opacity="${opacity}"></path>
+                <polygon points="${arrow}" fill="${escapeHtml(edge.style.color)}" opacity="${arrowOpacity}"></polygon>
+                ${label}
+            </g>
+        `;
+    }
+
+    function buildGraphNodeMarkup(node, state) {
+        const fill = node.style?.fills?.length > 1 ? `url(#${graphNodeGradientId(node)})` : escapeHtml(node.style?.fills?.[0] || "#55d6be");
+        const radius = node.r || (node.selected ? 46 : 32);
+        const mediaSrc = node.image || "";
+        const hasMedia = Boolean(mediaSrc);
+        const labelLines = wrapProjectionText(node.title || node.id || "Untitled", { maxCharsPerLine: node.selected ? 18 : 16 });
+        const labelOpacity = Number(node.labelOpacity || 1);
+        const nodeOpacity = Number(node.opacity || 1);
+        const strokeOpacity = Number(node.strokeOpacity || nodeOpacity);
+        const rawTypeLabel = node.type || "node";
+        const rawSubtype = node.subtype || "";
+        const chipText = rawSubtype ? `${rawTypeLabel} / ${rawSubtype}` : rawTypeLabel;
+        const typeLabel = node.showType === false ? "" : escapeHtml(chipText);
+        const longestLabelLine = Math.max(8, ...labelLines.map((line) => line.length));
+        const labelWidth = Math.min(240, Math.max(72, longestLabelLine * 8 + 22));
+        const labelHeight = Math.max(22, labelLines.length * 14 + 8);
+        const typeWidth = Math.min(132, Math.max(44, String(chipText).length * 6.2 + 18));
+        const labelY = -radius - labelHeight - 8;
+        const typeY = radius + 4;
+        const iconLabel = node.style?.projection?.iconLabel || rawTypeLabel.slice(0, 2).toUpperCase();
+        const iconAssetPath = node.style?.projection?.subtypeAssetPath || node.style?.projection?.assetPath || "";
+        const iconAssetSrc = iconAssetPath ? `/${String(iconAssetPath).replace(/^\/+/, "")}` : "";
+        const imageRadius = Math.max(8, radius - 7);
+        const clipId = `xana-node-clip-${String(node.id || node.key || "node").replace(/[^a-z0-9_-]/gi, "-")}`;
+        const labelTextMarkup = labelLines.map((line, index) => `
+            <tspan x="0" dy="${index === 0 ? 0 : 14}">${escapeHtml(line)}</tspan>
+        `).join("");
+        const labelMarkup = node.showLabel === false ? "" : `
+            <g class="graph-node-title-chip graph-node-title-chip--top" opacity="${labelOpacity}">
+                <rect x="${-labelWidth / 2}" y="${labelY}" width="${labelWidth}" height="${labelHeight}" rx="6"></rect>
+                <text class="graph-node-title" text-anchor="middle" y="${labelY + 15}" fill="#f8fafc">${labelTextMarkup}</text>
+            </g>
+        `;
+        const centerMarkup = hasMedia ? `
+            <clipPath id="${clipId}">
+                <circle r="${imageRadius}"></circle>
+            </clipPath>
+            <image class="graph-node-media" href="${escapeHtml(mediaSrc)}" x="${-imageRadius}" y="${-imageRadius}" width="${imageRadius * 2}" height="${imageRadius * 2}" preserveAspectRatio="xMidYMid slice" clip-path="url(#${clipId})"></image>
+        ` : iconAssetSrc ? `
+            <image class="graph-node-type-media" href="${escapeHtml(iconAssetSrc)}" x="${-imageRadius}" y="${-imageRadius}" width="${imageRadius * 2}" height="${imageRadius * 2}" preserveAspectRatio="xMidYMid meet"></image>
+        ` : `
+            <text class="graph-node-icon" text-anchor="middle" y="8" fill="${escapeHtml(node.style?.text || "#06131a")}">${escapeHtml(iconLabel)}</text>
+        `;
+        const typeMarkup = typeLabel ? `
+            <g class="graph-type-badge" opacity="${Math.min(0.76, labelOpacity)}">
+                <rect x="${-typeWidth / 2}" y="${typeY}" width="${typeWidth}" height="18" rx="9"></rect>
+                <text class="graph-type" text-anchor="middle" y="${typeY + 13}" fill="#9ff7e8">${typeLabel}</text>
+            </g>
+        ` : "";
+        return `
+            <g class="graph-node ${node.selected ? "selected" : ""} distance-${node.distance || 0}" transform="translate(${node.x} ${node.y})" data-node-id="${escapeHtml(node.id)}" title="${escapeHtml(node.title || node.id || "Untitled")}" opacity="${nodeOpacity}" style="--reveal-delay: ${Math.min(560, Number(node.distance || 0) * 110)}ms; --graph-depth-opacity: ${nodeOpacity}">
+                <circle r="${radius}" fill="${fill}" stroke="${escapeHtml(node.style?.outline || "#ffffff")}" stroke-width="${node.selected ? 5 : 2.4}" stroke-opacity="${strokeOpacity}"></circle>
+                ${centerMarkup}
+                ${labelMarkup}
+                ${typeMarkup}
+            </g>
+        `;
+    }
+
+    function bindGraphInteractions(stageEl, state, view) {
+        const svg = stageEl.querySelector(".xana-graph-svg");
+        if (!svg || svg.dataset.bound === "1") return;
+        svg.dataset.bound = "1";
+
+        svg.addEventListener("click", (event) => {
+            if (view.suppressNextClick) {
+                view.suppressNextClick = false;
+                return;
+            }
+            const node = event.target.closest?.("[data-node-id]");
+            if (!node) return;
+            const nodeId = node.getAttribute("data-node-id");
+            if (!nodeId || nodeId === state.focusId) {
+                if (nodeId) notifyStudioNodeSelection(nodeId);
+                return;
+            }
+            travelToNode(nodeId, state, true);
+        });
+
+        let panStart = null;
+        let dragStart = null;
+        const activateNode = (nodeId) => {
+            if (!nodeId || nodeId === state.focusId) {
+                if (nodeId) notifyStudioNodeSelection(nodeId);
+                return;
+            }
+            travelToNode(nodeId, state, true);
+        };
+        svg.addEventListener("pointerdown", (event) => {
+            const node = event.target.closest?.("[data-node-id]");
+            if (node) {
+                event.preventDefault();
+                const nodeId = node.getAttribute("data-node-id");
+                const modelNode = view.graphModel?.nodes?.find((candidate) => candidate.id === nodeId);
+                const point = view.graphPointFromClient(event.clientX, event.clientY);
+                dragStart = {
+                    nodeId,
+                    pointerId: event.pointerId,
+                    clientX: event.clientX,
+                    clientY: event.clientY,
+                    moved: false,
+                    offsetX: point.x - Number(modelNode?.x || 0),
+                    offsetY: point.y - Number(modelNode?.y || 0)
+                };
+                node.classList.add("dragging");
+                svg.setPointerCapture?.(event.pointerId);
+                return;
+            }
+            event.preventDefault();
+            panStart = { x: event.clientX, y: event.clientY };
+            svg.setPointerCapture?.(event.pointerId);
+        });
+        svg.addEventListener("pointermove", (event) => {
+            if (dragStart) {
+                event.preventDefault();
+                const point = view.graphPointFromClient(event.clientX, event.clientY);
+                const movedPx = Math.hypot(event.clientX - dragStart.clientX, event.clientY - dragStart.clientY);
+                if (movedPx < 6 && !dragStart.moved) return;
+                dragStart.moved = true;
+                view.moveNode(dragStart.nodeId, point.x - dragStart.offsetX, point.y - dragStart.offsetY);
+                return;
+            }
+            if (!panStart) return;
+            event.preventDefault();
+            const dx = event.clientX - panStart.x;
+            const dy = event.clientY - panStart.y;
+            panStart = { x: event.clientX, y: event.clientY };
+            view.panBy(dx, dy);
+        });
+        const endPan = (event) => {
+            if (dragStart) {
+                const nodeId = dragStart.nodeId;
+                const moved = dragStart.moved;
+                const draggedNode = stageEl.querySelector(`[data-node-id="${cssEscape(dragStart.nodeId)}"]`);
+                draggedNode?.classList.remove("dragging");
+                if (moved) {
+                    view.suppressNextClick = true;
+                    view.redraw();
+                }
+                dragStart = null;
+                svg.releasePointerCapture?.(event.pointerId);
+                if (!moved) {
+                    view.suppressNextClick = true;
+                    activateNode(nodeId);
+                }
+                return;
+            }
+            if (!panStart) return;
+            panStart = null;
+            svg.releasePointerCapture?.(event.pointerId);
+        };
+        svg.addEventListener("pointerup", endPan);
+        svg.addEventListener("pointercancel", endPan);
+        svg.addEventListener("wheel", (event) => {
+            event.preventDefault();
+            view.zoomBy(event.deltaY < 0 ? 1.08 : 0.92);
+        }, { passive: false });
+    }
+
+    function resolveGraphNodeRadius(node) {
+        return node.selected ? 46 : node.distance === 1 ? 34 : node.distance === 2 ? 29 : node.distance === 3 ? 24 : 20;
+    }
+
+    function fitGraphViewport(nodes = []) {
+        const readableNodes = nodes.filter((node) => node.selected || Number(node.distance || 0) <= 1);
+        const targetNodes = readableNodes.length ? readableNodes : nodes;
+        return fitReadableProjectionViewport(targetNodes, {
+            padding: getFitPadding(),
+            width: 900,
+            height: 620,
+            maxScale: 1.45,
+            minScale: 0.66
+        });
+    }
+
+    function scaleGraphViewport(viewport, factor = 1) {
+        const nextScale = clampNumber((viewport?.scale || 1) * factor, 0.42, 2.9, 1);
+        return { x: viewport?.x || 0, y: viewport?.y || 0, scale: nextScale };
+    }
+
+    function graphNodeGradientId(node) {
+        return `xana-node-gradient-${String(node.id || node.key || "node").replace(/[^a-z0-9_-]/gi, "-")}`;
+    }
+
+    function graphEdgeMarkerId(edge) {
+        return `xana-edge-marker-${String(edge.key || edge.type || "edge").replace(/[^a-z0-9_-]/gi, "-")}`;
+    }
+
+    function trimLabel(value, max) {
+        const text = String(value || "");
+        if (text.length <= max) return text;
+        return `${text.slice(0, Math.max(0, max - 1))}…`;
+    }
+
+    function saveGraphViewport(viewport) {
+        if (!viewport) return;
+        saveSetting(STORAGE_KEYS.graphZoom, viewport.scale);
+        saveSetting(STORAGE_KEYS.graphPan, { x: viewport.x, y: viewport.y });
+    }
+
+    function loadGraphViewport() {
+        const zoom = Number(loadSetting(STORAGE_KEYS.graphZoom, 1)) || 1;
+        const pan = loadSetting(STORAGE_KEYS.graphPan, null) || {};
+        return {
+            x: Number(pan.x || 0),
+            y: Number(pan.y || 0),
+            scale: clampNumber(zoom, 0.42, 2.9, 1)
+        };
+    }
+
+    function trimLabelText(value, max) {
+        const text = String(value || "");
+        if (text.length <= max) return text;
+        return `${text.slice(0, Math.max(0, max - 1))}...`;
+    }
+
+    function cssEscape(value) {
+        if (window.CSS?.escape) return window.CSS.escape(String(value || ""));
+        return String(value || "").replace(/["\\]/g, "\\$&");
+    }
+
+    function resolveNodeCollisionsPlain(nodes, width, height) {
+        resolveProjectionNodeCollisions(nodes, width, height, {
+            padding: isMobileLayout() ? 40 : 56,
+            passes: 14
+        });
     }
 
     function edgeIdentityKey(edge) {
@@ -2238,11 +2512,7 @@
     }
 
     function refreshAliveMotion(state) {
-        if (state.displaySettings?.graphAtmosphere === "alive") {
-            startAliveMotion(state);
-        } else {
-            stopAliveMotion();
-        }
+        stopAliveMotion();
     }
 
     function stopAliveMotion() {
@@ -2554,10 +2824,10 @@
         const notRecent = basePool.filter((node) => !recent.has(node.id()) && node.id() !== state.previousFocusId);
         const pool = (fresh.length ? fresh : notRecent.length ? notRecent : basePool)
             .sort((a, b) => {
-                const aDistance = a.hasClass("distance-1") ? 1 : a.hasClass("distance-2") ? 2 : 3;
-                const bDistance = b.hasClass("distance-1") ? 1 : b.hasClass("distance-2") ? 2 : 3;
+                const aDistance = a.distance || 3;
+                const bDistance = b.distance || 3;
                 if (aDistance !== bDistance) return aDistance - bDistance;
-                return Number(b.data("importance") || 3) - Number(a.data("importance") || 3);
+                return Number(b.importance || 3) - Number(a.importance || 3);
             });
         if (!pool.length) return null;
 
@@ -2565,7 +2835,7 @@
         const next = pool[state.tourIndex];
         state.tourIndex = (state.tourIndex + 1) % pool.length;
 
-        const nextId = next?.id() || null;
+        const nextId = next?.id || null;
         if (nextId) rememberTourVisit(nextId, state);
         return nextId;
     }
@@ -2690,7 +2960,7 @@
         state.tourRecent.push(nodeId);
         state.tourRecent = state.tourRecent.slice(-7);
 
-        const visibleCount = state.cy?.nodes().length || 0;
+        const visibleCount = state.graphModel?.nodes?.length || 0;
         if (visibleCount > 0 && state.tourVisited.size > Math.max(8, Math.floor(visibleCount * 0.7))) {
             state.tourVisited = new Set(state.tourRecent);
         }
@@ -2716,90 +2986,42 @@
         if (state.isTraveling) return;
         closeTransientUi(state, { clearSearch: true });
 
-        const cy = state.cy;
-        const currentId = state.focusId;
-        const currentNode = cy.getElementById(currentId);
-        const nextNode = cy.getElementById(nextId);
+        if (state.graph) {
+            const currentId = state.focusId;
+            const currentNode = state.graph.graphModel?.nodes?.find((node) => node.id === currentId);
+            const nextNode = state.graph.graphModel?.nodes?.find((node) => node.id === nextId);
 
-        if (!currentNode.length || !nextNode.length) {
-            // The destination isn't in the current graph (typical search jump).
-            // Don't carry previousFocusId — it's unrelated to where we're going
-            // and would wrongly anchor Wave 0 of the reveal animation.
-            state.previousFocusId = null;
-            state.focusId = nextId;
+            if (!currentNode || !nextNode) {
+                state.previousFocusId = null;
+                state.focusId = nextId;
+                renderVisibleGraph(state, {
+                    updateUrl: pushUrl,
+                    stagedReveal: true,
+                    preserveViewport: false
+                });
+                panelEl.classList.remove("panel-transitioning");
+                return;
+            }
 
-            renderVisibleGraph(state, {
-                updateUrl: pushUrl,
-                stagedReveal: true,
-                preserveViewport: false
-            });
-
+            state.isTraveling = true;
+            panelEl.classList.add("panel-transitioning");
+            const route = findProjectionRoute(state.graph.graphModel?.edges || [], currentId, nextId, { maxDepth: state.maxDepth || 4 });
+            const routeNodes = route?.nodeIds
+                ?.map((id) => state.graph.graphModel?.nodes?.find((node) => node.id === id))
+                .filter(Boolean);
+            state.graph.animateTravel(currentNode, nextNode, () => {
+                state.previousFocusId = currentId;
+                state.focusId = nextId;
+                renderVisibleGraph(state, {
+                    updateUrl: pushUrl,
+                    stagedReveal: true,
+                    preserveViewport: false
+                });
+                panelEl.classList.remove("panel-transitioning");
+                state.isTraveling = false;
+            }, { routeNodes });
             return;
         }
-
-        const connectingEdges = cy.edges().filter((edge) => {
-            return (
-                edge.source().id() === currentId && edge.target().id() === nextId
-            ) || (
-                    edge.source().id() === nextId && edge.target().id() === currentId
-                );
-        });
-
-        cy.elements().removeClass("travel-dim travel-origin travel-destination travel-path pre-exit");
-        cy.elements().addClass("travel-dim");
-        currentNode.removeClass("travel-dim").addClass("travel-origin");
-        nextNode.removeClass("travel-dim").addClass("travel-destination");
-        connectingEdges.removeClass("travel-dim").addClass("travel-path");
-
-        panelEl.classList.add("panel-transitioning");
-        state.isTraveling = true;
-
-        // Capture the current generation so we can detect if the graph was
-        // rebuilt (e.g. by a search clear or another tap) before we finish.
-        const travelGen = _navGen;
-
-        cy.animate(
-            {
-                center: { eles: nextNode },
-                zoom: Math.min(1.15, cy.maxZoom())
-            },
-            {
-                duration: 520,
-                easing: "ease-in-out",
-                complete: () => {
-                    // If renderVisibleGraph ran while we were zooming, abort.
-                    if (_navGen !== travelGen) {
-                        state.isTraveling = false;
-                        panelEl.classList.remove("panel-transitioning");
-                        return;
-                    }
-
-                    cy.elements().addClass("pre-exit");
-
-                    const t = window.setTimeout(() => {
-                        if (_navGen !== travelGen) {
-                            state.isTraveling = false;
-                            panelEl.classList.remove("panel-transitioning");
-                            return;
-                        }
-
-                        state.previousFocusId = currentId;
-                        state.focusId = nextId;
-
-                        renderVisibleGraph(state, {
-                            updateUrl: pushUrl,
-                            stagedReveal: true,
-                            preserveViewport: false
-                        });
-
-                        panelEl.classList.remove("panel-transitioning");
-                        state.isTraveling = false;
-                    }, 180);
-
-                    _revealTimers.push(t);
-                }
-            }
-        );
     }
 
     function renderPanel(node, relatedEdges, state) {
@@ -3560,9 +3782,9 @@
         graphEl.querySelector("[data-path-open]")?.classList.remove("active");
         graphEl.querySelector("[data-path-open]")?.setAttribute("aria-expanded", "false");
 
-        if (state.cy) {
-            state.cy.resize();
-            fitReadableNeighborhood(state.cy);
+        if (state.graph) {
+            state.graph.resize?.();
+            fitReadableNeighborhood(state.graph);
         }
     }
 
@@ -4121,9 +4343,9 @@
             if (auditClearBtn) auditClearBtn.hidden = true;
             if (metaEl) { metaEl.textContent = ""; metaEl.hidden = true; }
 
-            if (state.cy) {
-                state.cy.resize();
-                fitReadableNeighborhood(state.cy);
+            if (state.graph) {
+                state.graph.resize?.();
+                fitReadableNeighborhood(state.graph);
             }
 
             return;
@@ -4243,9 +4465,9 @@
             if (auditClearBtn) auditClearBtn.hidden = true;
             if (metaEl) { metaEl.textContent = ""; metaEl.hidden = true; }
 
-            if (state.cy) {
-                state.cy.resize();
-                fitReadableNeighborhood(state.cy);
+            if (state.graph) {
+                state.graph.resize?.();
+                fitReadableNeighborhood(state.graph);
             }
         });
     }
@@ -4427,10 +4649,10 @@
             const width = panelEl.getBoundingClientRect().width;
             saveSetting(STORAGE_KEYS.panelWidth, width);
 
-            if (state.cy) {
-                state.cy.resize();
-                fitReadableNeighborhood(state.cy);
-            }
+                if (state.graph) {
+                    state.graph.resize?.();
+                    fitReadableNeighborhood(state.graph);
+                }
         });
 
         window.addEventListener("mousemove", (event) => {
@@ -4444,8 +4666,8 @@
                 const panelWidth = Math.max(320, Math.min(1000, window.innerWidth - event.clientX));
                 app.style.gridTemplateColumns = `minmax(360px, 1fr) 8px ${panelWidth}px`;
 
-                if (state.cy) {
-                    state.cy.resize();
+                if (state.graph) {
+                    state.graph.resize?.();
                 }
             });
         });
@@ -4461,21 +4683,25 @@
         app.style.gridTemplateColumns = `minmax(360px, 1fr) 8px ${width}px`;
 
         window.setTimeout(() => {
-            if (state.cy) {
-                state.cy.resize();
-                fitReadableNeighborhood(state.cy);
+            if (state.graph) {
+                state.graph.resize?.();
+                fitReadableNeighborhood(state.graph);
             }
         }, 50);
     }
 
     function fitReadableNeighborhood(cy) {
-        if (!cy || cy.destroyed?.()) return;
-
-        const readableNodes = cy.nodes(".focused-node, .distance-1");
-        const target = readableNodes.length ? readableNodes : cy.nodes();
-
-        if (target.length) {
-            cy.fit(target, getFitPadding());
+        if (!cy) return;
+        if (typeof cy.fit === "function" && typeof cy.nodes === "function") {
+            const readableNodes = cy.nodes(".focused-node, .distance-1");
+            const target = readableNodes.length ? readableNodes : cy.nodes();
+            if (target.length) {
+                cy.fit(target, getFitPadding());
+            }
+            return;
+        }
+        if (typeof cy.fit === "function") {
+            cy.fit();
         }
     }
 

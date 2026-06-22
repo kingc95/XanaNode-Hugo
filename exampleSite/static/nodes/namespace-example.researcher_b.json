@@ -16,7 +16,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_namespace-example.researcher_b.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

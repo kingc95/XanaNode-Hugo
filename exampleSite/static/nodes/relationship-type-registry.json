@@ -27,6 +27,18 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-adapted_from",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-adapted_from",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-adapted_into",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-adapted_into",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-alias_of",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-alias_of",
@@ -141,6 +153,18 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-assembled_from",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-assembled_from",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-assembled_into",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-assembled_into",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-attribution_required_by",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-attribution_required_by",
@@ -198,6 +222,12 @@
       "id": "xananode.canonical:rel/registry-contains-relationship-type-clarifies",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-clarifies",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-co_authored_with",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-co_authored_with",
       "direction": "outgoing"
     },
     {
@@ -561,6 +591,18 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-format_translated_from",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-format_translated_from",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-format_translated_into",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-format_translated_into",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-frequently_misunderstood",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-frequently_misunderstood",
@@ -681,6 +723,12 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-has_ingredient",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-has_ingredient",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-has_primary_media",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-has_primary_media",
@@ -750,6 +798,12 @@
       "id": "xananode.canonical:rel/registry-contains-relationship-type-information_required_by",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-information_required_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-ingredient_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-ingredient_of",
       "direction": "outgoing"
     },
     {
@@ -831,6 +885,18 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-made_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-made_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-makes_up",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-makes_up",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-mapped_from",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-mapped_from",
@@ -840,6 +906,18 @@
       "id": "xananode.canonical:rel/registry-contains-relationship-type-maps_to",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-maps_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-medium_transition",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-medium_transition",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-medium_transitioned_from",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-medium_transitioned_from",
       "direction": "outgoing"
     },
     {
@@ -1503,6 +1581,12 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-evolution",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-category-evolution",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-explanation",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-category-explanation",
@@ -1617,7 +1701,18 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes.json",
+  "asset_path": "assets/raw/protocol/schemas/xananode-relationship-types.v0.5.0.json",
+  "asset_role": "canonical_raw_source",
+  "content_id": "sha256:742483160148d05ff915f24373167cd0945583946de853bd80486297301ed3a3",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/xananode-relationship-types.v0.5.0.json",
+    "method": "archive",
+    "content_id": "sha256:d3c1f953a10a32e569eab8d60056ce44111ccbf8c736ab84396b28880c0d96d5",
+    "rights_status": "canonical-public",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/schema_relationship-type-registry.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

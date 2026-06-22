@@ -1,21 +1,111 @@
 {
   "id": "xananode.canonical:schema/protocol-artifact-specs",
-  "title": "specs/",
+  "title": "Protocol Specs",
   "type": "schema",
-  "subtype": "protocol_artifact",
+  "subtype": "protocol_artifact_group",
   "importance": 3,
-  "summary": "XanaNode Protocol references the protocol artifact specs/.",
+  "summary": "Protocol files under specs/ preserved inside the canonical substrate.",
   "artifact_path": "specs/",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/specs/",
   "relationships": [
+    {
+      "id": "xananode.canonical:rel/concept-protocol-artifacts-contains-schema-protocol-artifact-specs-raw-group-specs",
+      "type": "contains",
+      "source": "xananode.canonical:concept/protocol-artifacts",
+      "direction": "incoming"
+    },
     {
       "id": "xananode.canonical:rel/project-xananode-protocol-uses-schema-protocol-artifact-specs-artifact-2",
       "type": "uses",
       "source": "xananode.canonical:project/xananode-protocol",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-specs-contains-source-protocol-artifact-specs-compatibility-levels.md-raw-file-specs-compatibility-levels.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-specs-compatibility-levels.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-specs-contains-source-protocol-artifact-specs-federation.md-raw-file-specs-federation.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-specs-federation.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-specs-contains-source-protocol-artifact-specs-implementation-compatibility.md-raw-file-specs-implementation-compatibility.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-specs-implementation-compatibility.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-specs-contains-source-protocol-artifact-specs-interoperability.md-raw-file-specs-interoperability.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-specs-interoperability.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-specs-contains-source-protocol-artifact-specs-merge-validation.md-raw-file-specs-merge-validation.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-specs-merge-validation.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-specs-contains-source-protocol-artifact-specs-namespaces.md-raw-file-specs-namespaces.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-specs-namespaces.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-specs-contains-source-protocol-artifact-specs-nodes.md-raw-file-specs-nodes.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-specs-nodes.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-specs-contains-source-protocol-artifact-specs-readme.md-raw-file-specs-readme.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-specs-readme.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-specs-contains-source-protocol-artifact-specs-relationships.md-raw-file-specs-relationships.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-specs-relationships.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-specs-contains-source-protocol-artifact-specs-studio.md-raw-file-specs-studio.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-specs-studio.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-specs-contains-source-protocol-artifact-specs-substrates.md-raw-file-specs-substrates.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-specs-substrates.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-specs-contains-source-protocol-artifact-specs-transclusion.md-raw-file-specs-transclusion.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-specs-transclusion.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-specs-contains-source-protocol-artifact-specs-tumbler-addressing.md-raw-file-specs-tumbler-addressing.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-specs-tumbler-addressing.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-specs-contains-source-protocol-artifact-specs-xananode-core.md-raw-file-specs-xananode-core.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-specs-xananode-core.md",
+      "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_protocol-artifact-specs.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

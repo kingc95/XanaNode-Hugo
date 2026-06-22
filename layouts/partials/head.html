@@ -9,6 +9,11 @@
 <link rel="canonical" href="{{ $canonical }}">
 <meta name="robots" content="{{ site.Params.robots | default "index, follow" }}">
 <meta name="theme-color" content="{{ site.Params.themeColor | default "#55d6be" }}">
+<link rel="xananode-well-known" type="application/json" href="{{ ".well-known/xananode" | relURL }}">
+<link rel="xananode-substrate" type="application/json" href="{{ "substrate.json" | relURL }}">
+<link rel="xananode-nodes-index" type="application/json" href="{{ "nodes-index.json" | relURL }}">
+<link rel="xananode-relationships" type="application/json" href="{{ "relationships.json" | relURL }}">
+<link rel="xananode-viewer" type="application/json" href="{{ "xananode-viewer.json" | relURL }}">
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $description }}">
@@ -49,9 +54,11 @@
 -}}
 {{- $themeConfig := dict
   "brand" $brandConfig
+  "namespace" (index $xanaParams "namespace" | default "")
   "homeNode" (index $xanaParams "homeNode" | default "start-here")
   "links" (index $xanaParams "links" | default (index $brandParams "links" | default slice))
   "searchPrompts" (index $xanaParams "searchPrompts" | default slice)
+  "downloadSubstrate" (index $xanaParams "downloadSubstrate" | default false)
 -}}
 <script>
   window.XanaNodeTheme = {{ $themeConfig | jsonify | safeJS }};
@@ -61,6 +68,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Fraunces:wght@700&display=swap">
 {{ $style := resources.Get "css/style.css" | minify }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{- with (index $xanaParams "downloadSubstrate") }}
+  {{- if (index . "enabled" | default false) }}
+    <link rel="xananode-substrate-archive" type="application/zip" href="{{ (index . "path" | default (printf "archives/%s.substrate" (index $xanaParams "namespace" | default "substrate"))) | relURL }}">
+  {{- end }}
+{{- end }}
 <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
 <link rel="icon" type="image/svg+xml" href="{{ "xananode-icon.svg" | relURL }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">

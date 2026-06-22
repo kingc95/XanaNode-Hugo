@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-publication-installment",
+  "title": "Publication subtype: installment",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "installment is an allowed subtype of the publication node type.",
+  "version": "0.3.0",
+  "registry_type": "installment",
+  "registry_namespace": "xananode",
+  "parent_node_type": "publication",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-installment-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-publication",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-installment",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-publication",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/schema_node-subtype-publication-installment.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

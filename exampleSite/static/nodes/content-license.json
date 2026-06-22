@@ -13,7 +13,7 @@
   "subtype": "distinction",
   "importance": 4,
   "summary": "A license applied to authored text, documentation, examples, or explanatory material rather than executable reference code.",
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/concept_content-license.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

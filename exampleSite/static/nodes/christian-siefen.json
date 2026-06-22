@@ -10,13 +10,25 @@
   "summary": "The personally identified author and maintainer of the canonical XanaNode substrate.",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/built-by-bots-created-icon",
+      "type": "created",
+      "target": "xananode.canonical:media/xananode-icon",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/christian-authored-xananode",
       "type": "authored",
       "target": "xananode.canonical:concept/xananode",
       "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/question-who-made-xananode-documents-person-christian-siefen-faq-1",
+      "type": "documents",
+      "source": "xananode.canonical:question/who-made-xananode",
+      "direction": "incoming"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/person_christian-siefen.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

@@ -1,21 +1,69 @@
 {
   "id": "xananode.canonical:schema/protocol-artifact-governance",
-  "title": "governance/",
+  "title": "Protocol Governance",
   "type": "schema",
-  "subtype": "protocol_artifact",
+  "subtype": "protocol_artifact_group",
   "importance": 3,
-  "summary": "XanaNode Protocol references the protocol artifact governance/.",
+  "summary": "Protocol files under governance/ preserved inside the canonical substrate.",
   "artifact_path": "governance/",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/governance/",
   "relationships": [
+    {
+      "id": "xananode.canonical:rel/concept-protocol-artifacts-contains-schema-protocol-artifact-governance-raw-group-governance",
+      "type": "contains",
+      "source": "xananode.canonical:concept/protocol-artifacts",
+      "direction": "incoming"
+    },
     {
       "id": "xananode.canonical:rel/project-xananode-protocol-uses-schema-protocol-artifact-governance-artifact-3",
       "type": "uses",
       "source": "xananode.canonical:project/xananode-protocol",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-governance-contains-source-protocol-artifact-governance-canonical-type-policy.md-raw-file-governance-canonical-type-policy.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-governance-canonical-type-policy.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-governance-contains-source-protocol-artifact-governance-dispute-resolution.md-raw-file-governance-dispute-resolution.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-governance-dispute-resolution.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-governance-contains-source-protocol-artifact-governance-federation-rules.md-raw-file-governance-federation-rules.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-governance-federation-rules.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-governance-contains-source-protocol-artifact-governance-moderation-model.md-raw-file-governance-moderation-model.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-governance-moderation-model.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-governance-contains-source-protocol-artifact-governance-readme.md-raw-file-governance-readme.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-governance-readme.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-governance-contains-source-protocol-artifact-governance-schema-extension-rules.md-raw-file-governance-schema-extension-rules.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-governance-schema-extension-rules.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-governance-contains-source-protocol-artifact-governance-versioning-policy.md-raw-file-governance-versioning-policy.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-governance-versioning-policy.md",
+      "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_protocol-artifact-governance.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

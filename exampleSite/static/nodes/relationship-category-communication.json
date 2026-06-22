@@ -14,6 +14,12 @@
   "inverse_line_style": "dashed",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-category-communication-projection-icon-represents-schema-relationship-category-communication",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-category-communication-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-announced",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-announced",
@@ -146,13 +152,19 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-has_primary_media-media-relationship-category-communication-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-category-communication-projection-icon",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-communication",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_relationship-category-communication.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

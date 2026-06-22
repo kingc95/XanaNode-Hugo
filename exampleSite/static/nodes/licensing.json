@@ -25,7 +25,7 @@
   "subtype": "governance",
   "importance": 5,
   "summary": "The legal layer that describes how documents, schemas, code, media, and names may be copied, reused, attributed, modified, or governed.",
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/concept_licensing.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

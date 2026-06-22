@@ -1,21 +1,34 @@
 {
-  "id": "xananode.canonical:schema/substrate-manifest-schema",
+  "id": "xananode.example:schema/substrate-manifest-schema",
   "title": "Substrate Manifest Schema",
   "type": "schema",
-  "subtype": "validation_rule",
+  "status": "draft",
   "importance": 5,
-  "summary": "The JSON Schema defining substrate manifests, repository metadata, federation hints, imports, trust data, and pack metadata.",
-  "version": "xananode-core@0.5.0",
-  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/substrate-manifest.schema.json",
+  "summary": "The JSON Schema that validates a XanaNode substrate manifest.",
   "relationships": [
     {
-      "id": "xananode.canonical:rel/protocol-contains-manifest-schema",
+      "id": "xananode.example:rel/xananode-core-schema-defines-substrate-manifest-schema-76",
+      "type": "defines",
+      "source": "xananode.example:schema/xananode-core-schema",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/substrate-manifest-schema-defines-substrate-manifest-87",
+      "type": "defines",
+      "target": "xananode.example:concept/substrate-manifest",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.example:rel/xananode-core-schema-contains-substrate-manifest-schema-88",
       "type": "contains",
-      "source": "xananode.canonical:project/xananode-protocol",
+      "source": "xananode.example:schema/xananode-core-schema",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.example:rel/compatibility-report-requires-substrate-manifest-schema-89",
+      "type": "requires",
+      "source": "xananode.example:concept/compatibility-report",
       "direction": "incoming"
     }
-  ],
-  "imported_from": "nodes.json",
-  "pack_id": "xananode.canonical",
-  "pack_mode": "mounted"
+  ]
 }

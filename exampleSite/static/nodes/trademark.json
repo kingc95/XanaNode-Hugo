@@ -13,7 +13,7 @@
   "subtype": "governance",
   "importance": 5,
   "summary": "A protected name, logo, or mark that identifies the source and reputation of a project, product, organization, or community.",
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/concept_trademark.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

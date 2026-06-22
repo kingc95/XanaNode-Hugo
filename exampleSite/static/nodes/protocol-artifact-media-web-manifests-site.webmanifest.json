@@ -1,10 +1,10 @@
 {
   "id": "xananode.canonical:schema/protocol-artifact-media-web-manifests-site.webmanifest",
-  "title": "media/web-manifests/site.webmanifest",
+  "title": "Media / Web Manifests / Site",
   "type": "schema",
-  "subtype": "protocol_artifact",
+  "subtype": "protocol_json_artifact",
   "importance": 3,
-  "summary": "Web app manifest for XanaNode projection branding.",
+  "summary": "media/web-manifests/site.webmanifest is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
   "artifact_path": "media/web-manifests/site.webmanifest",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/web-manifests/site.webmanifest",
   "relationships": [
@@ -13,9 +13,36 @@
       "type": "uses",
       "source": "xananode.canonical:project/xananode-protocol",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-media-contains-schema-protocol-artifact-media-web-manifests-site.webmanifest-raw-file-media-web-manifests-site.webmanifest",
+      "type": "contains",
+      "source": "xananode.canonical:schema/protocol-artifact-media",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-media-web-manifests-site.webmanifest-documents-concept-protocol-artifacts-raw-file-docs-media-web-manifests-site.webmanifest",
+      "type": "documents",
+      "target": "xananode.canonical:concept/protocol-artifacts",
+      "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes.json",
+  "asset_path": "assets/raw/protocol/media/web-manifests/site.webmanifest",
+  "asset_role": "canonical_raw_source",
+  "content_id": "sha256:7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f67173529c181bf04",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/web-manifests/site.webmanifest",
+    "method": "archive",
+    "content_id": "sha256:7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f67173529c181bf04",
+    "rights_status": "CC-BY-4.0",
+    "tool": "@xananode/core"
+  },
+  "media_type": "document",
+  "mime_type": "application/json",
+  "rights_status": "CC-BY-4.0",
+  "content": "{\"name\":\"\",\"short_name\":\"\",\"icons\":[{\"src\":\"/android-chrome-192x192.png\",\"sizes\":\"192x192\",\"type\":\"image/png\"},{\"src\":\"/android-chrome-512x512.png\",\"sizes\":\"512x512\",\"type\":\"image/png\"}],\"theme_color\":\"#ffffff\",\"background_color\":\"#ffffff\",\"display\":\"standalone\"}",
+  "imported_from": "nodes/schema_protocol-artifact-media-web-manifests-site.webmanifest.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

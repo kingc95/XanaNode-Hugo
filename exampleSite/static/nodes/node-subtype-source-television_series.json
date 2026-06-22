@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-source-television_series",
+  "title": "Source subtype: television series",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "television_series is an allowed subtype of the source node type.",
+  "version": "0.3.0",
+  "registry_type": "television_series",
+  "registry_namespace": "xananode",
+  "parent_node_type": "source",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-source-television_series-extension_of-schema-node-type-source",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-source",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-source-contains-schema-node-subtype-source-television_series",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-source",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/schema_node-subtype-source-television_series.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

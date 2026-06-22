@@ -14,6 +14,12 @@
   "inverse_line_style": "dotted",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-category-uncertainty-projection-icon-represents-schema-relationship-category-uncertainty",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-category-uncertainty-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-category-uncertainty-contains-schema-relationship-type-evidence_insufficient_for",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-evidence_insufficient_for",
@@ -62,13 +68,19 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-uncertainty-has_primary_media-media-relationship-category-uncertainty-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-category-uncertainty-projection-icon",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-uncertainty",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_relationship-category-uncertainty.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

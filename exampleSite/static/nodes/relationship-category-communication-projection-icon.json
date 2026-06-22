@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-category-communication-projection-icon",
+  "title": "communication Relationship Category Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-categories/communication.svg",
+  "asset_role": "relationship_category_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/communication.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the communication relationship category.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-category-communication-projection-icon-represents-schema-relationship-category-communication",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-category-communication",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-has_primary_media-media-relationship-category-communication-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-category-communication",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:66e741a47619846dfa178885cddc666d164a433fc3d63527a4a853496a458d53",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/communication.svg",
+    "method": "archive",
+    "content_id": "sha256:66e741a47619846dfa178885cddc666d164a433fc3d63527a4a853496a458d53",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/media_relationship-category-communication-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

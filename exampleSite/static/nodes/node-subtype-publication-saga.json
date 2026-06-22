@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-publication-saga",
+  "title": "Publication subtype: saga",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "saga is an allowed subtype of the publication node type.",
+  "version": "0.3.0",
+  "registry_type": "saga",
+  "registry_namespace": "xananode",
+  "parent_node_type": "publication",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-publication-saga-extension_of-schema-node-type-publication",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-publication",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-publication-contains-schema-node-subtype-publication-saga",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-publication",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/schema_node-subtype-publication-saga.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

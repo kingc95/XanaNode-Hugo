@@ -1,0 +1,41 @@
+{
+  "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-hypothesis.svg",
+  "title": "Media / Projection / Node Types / Hypothesis",
+  "type": "media",
+  "subtype": "protocol_media_asset",
+  "importance": 3,
+  "summary": "media/projection/node-types/hypothesis.svg is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "artifact_path": "media/projection/node-types/hypothesis.svg",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/node-types/hypothesis.svg",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_role": "canonical_raw_source",
+  "rights_status": "CC-BY-4.0",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-protocol-artifact-media-projection-node-types-hypothesis.svg-documents-concept-protocol-artifacts-raw-file-docs-media-projection-node-types-hypothesis.svg",
+      "type": "documents",
+      "target": "xananode.canonical:concept/protocol-artifacts",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-media-contains-media-protocol-artifact-media-projection-node-types-hypothesis.svg-raw-file-media-projection-node-types-hypothesis.svg",
+      "type": "contains",
+      "source": "xananode.canonical:schema/protocol-artifact-media",
+      "direction": "incoming"
+    }
+  ],
+  "asset_path": "assets/raw/protocol/media/projection/node-types/hypothesis.svg",
+  "content_id": "sha256:37546443b3c8835912c2e77cdf41f72358ad3a1319480359e5ef7f74c37dcf73",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/node-types/hypothesis.svg",
+    "method": "archive",
+    "content_id": "sha256:37546443b3c8835912c2e77cdf41f72358ad3a1319480359e5ef7f74c37dcf73",
+    "rights_status": "CC-BY-4.0",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/media_protocol-artifact-media-projection-node-types-hypothesis.svg.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

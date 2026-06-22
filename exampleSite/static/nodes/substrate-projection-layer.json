@@ -50,9 +50,15 @@
       "type": "enables",
       "source": "xananode.canonical:concept/protocol-artifacts",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/question-why-does-xananode-exist-supports-concept-substrate-projection-layer-faq-2",
+      "type": "supports",
+      "source": "xananode.canonical:question/why-does-xananode-exist",
+      "direction": "incoming"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/concept_substrate-projection-layer.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

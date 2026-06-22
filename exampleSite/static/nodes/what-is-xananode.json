@@ -7,13 +7,19 @@
   "summary": "An explanation of XanaNode as a layered protocol, not a single viewer, website, repository, or graph visualization.",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/question-why-does-xananode-exist-explains-essay-what-is-xananode-faq-1",
+      "type": "explains",
+      "source": "xananode.canonical:question/why-does-xananode-exist",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/what-is-xananode-explains-xananode",
       "type": "explains",
       "target": "xananode.canonical:concept/xananode",
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/essay_what-is-xananode.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

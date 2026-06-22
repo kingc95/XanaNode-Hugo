@@ -11,6 +11,12 @@
       "type": "created",
       "target": "example.minimal:essay/relationship-navigation-intro",
       "direction": "outgoing"
+    },
+    {
+      "id": "example.minimal:rel/maintainer-created-intro-essay",
+      "type": "created",
+      "target": "example.minimal:essay/relationship-navigation-intro",
+      "direction": "outgoing"
     }
   ],
   "imported_from": "nodes/person-example-maintainer.json",

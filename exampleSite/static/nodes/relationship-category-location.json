@@ -10,6 +10,12 @@
   "registry_namespace": "xananode",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-category-location-projection-icon-represents-schema-relationship-category-location",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-category-location-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-category-location-contains-schema-relationship-type-occurred_at",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-occurred_at",
@@ -19,6 +25,12 @@
       "id": "xananode.canonical:rel/schema-relationship-category-location-contains-schema-relationship-type-site_of",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-site_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-location-has_primary_media-media-relationship-category-location-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-category-location-projection-icon",
       "direction": "outgoing"
     },
     {
@@ -32,7 +44,7 @@
   "inverse_color": "#bef264",
   "line_style": "dotted",
   "inverse_line_style": "dotted",
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_relationship-category-location.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

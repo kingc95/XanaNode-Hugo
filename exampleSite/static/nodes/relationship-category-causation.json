@@ -10,6 +10,12 @@
   "registry_namespace": "xananode",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-category-causation-projection-icon-represents-schema-relationship-category-causation",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-category-causation-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-category-causation-contains-schema-relationship-type-generated",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-generated",
@@ -46,6 +52,12 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-causation-has_primary_media-media-relationship-category-causation-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-category-causation-projection-icon",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-causation",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
@@ -56,7 +68,7 @@
   "inverse_color": "#fdba74",
   "line_style": "solid",
   "inverse_line_style": "dashed",
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_relationship-category-causation.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

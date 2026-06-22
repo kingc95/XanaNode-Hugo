@@ -20,7 +20,7 @@
   "status": "asserted",
   "importance": 5,
   "summary": "XanaNode schemas, validators, tooling, and reference implementation code are licensed under Apache-2.0 for broad adoption.",
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/claim_schemas-validators-reference-code-apache-2-0.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

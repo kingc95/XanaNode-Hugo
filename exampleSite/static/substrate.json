@@ -22,7 +22,7 @@
     {
       "mode": "mounted",
       "id": "xananode.canonical",
-      "source": "packs/xananode-canonical",
+      "source": "../../XanaNode-Canonical-Substrate",
       "version": "0.1.0",
       "required": false
     },

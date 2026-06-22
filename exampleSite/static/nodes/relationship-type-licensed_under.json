@@ -42,7 +42,7 @@
   ],
   "default_weight": 4,
   "default_visibility": "secondary",
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_relationship-type-licensed_under.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

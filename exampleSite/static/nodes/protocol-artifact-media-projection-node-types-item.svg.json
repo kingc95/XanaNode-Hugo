@@ -1,0 +1,41 @@
+{
+  "id": "xananode.canonical:media/protocol-artifact-media-projection-node-types-item.svg",
+  "title": "Media / Projection / Node Types / Item",
+  "type": "media",
+  "subtype": "protocol_media_asset",
+  "importance": 3,
+  "summary": "media/projection/node-types/item.svg is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "artifact_path": "media/projection/node-types/item.svg",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/node-types/item.svg",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_role": "canonical_raw_source",
+  "rights_status": "CC-BY-4.0",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-protocol-artifact-media-projection-node-types-item.svg-documents-concept-protocol-artifacts-raw-file-docs-media-projection-node-types-item.svg",
+      "type": "documents",
+      "target": "xananode.canonical:concept/protocol-artifacts",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-media-contains-media-protocol-artifact-media-projection-node-types-item.svg-raw-file-media-projection-node-types-item.svg",
+      "type": "contains",
+      "source": "xananode.canonical:schema/protocol-artifact-media",
+      "direction": "incoming"
+    }
+  ],
+  "asset_path": "assets/raw/protocol/media/projection/node-types/item.svg",
+  "content_id": "sha256:5d2a7ada33b46025a3b52e7209312b46959d10b298694d81da0cc9fbb45285f2",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/node-types/item.svg",
+    "method": "archive",
+    "content_id": "sha256:5d2a7ada33b46025a3b52e7209312b46959d10b298694d81da0cc9fbb45285f2",
+    "rights_status": "CC-BY-4.0",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/media_protocol-artifact-media-projection-node-types-item.svg.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,13 @@
+{
+  "protocol": "xananode",
+  "title": "XanaNode Example Substrate",
+  "namespace": "xananode.example",
+  "substrate": "https://example.com/substrate.json",
+  "relationships": "https://example.com/relationships.json",
+  "nodes_index": "https://example.com/nodes-index.json",
+  "schemas": "https://example.com/schemas/",
+  "viewer": "https://example.com/",
+  "viewer_feed": "https://example.com/xananode-viewer.json",
+  "legacy_viewer_index": "https://example.com/index.json",
+  "substrate_archive": "https://example.com/archives/xananode.example.substrate"
+}

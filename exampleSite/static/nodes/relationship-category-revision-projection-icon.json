@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-category-revision-projection-icon",
+  "title": "revision Relationship Category Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-categories/revision.svg",
+  "asset_role": "relationship_category_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/revision.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the revision relationship category.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-category-revision-projection-icon-represents-schema-relationship-category-revision",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-category-revision",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-revision-has_primary_media-media-relationship-category-revision-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-category-revision",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:ecd2224f73ec84fb820b2e6c4018963ef55ef16d9d080d745ef3d3cac0ec8312",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/revision.svg",
+    "method": "archive",
+    "content_id": "sha256:ecd2224f73ec84fb820b2e6c4018963ef55ef16d9d080d745ef3d3cac0ec8312",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/media_relationship-category-revision-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -24,7 +24,18 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes.json",
+  "asset_path": "assets/raw/protocol/schemas/xananode-relationship-types.schema.v0.5.0.json",
+  "asset_role": "canonical_raw_source",
+  "content_id": "sha256:32aa53969c9cc55a7f258202c9910e7639bafb4a114abb93e2ca67e8b556c3c3",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/xananode-relationship-types.schema.v0.5.0.json",
+    "method": "archive",
+    "content_id": "sha256:05cca697d1cc06aa94c11fce8b0237e051ca4416e3f31eebf32a473e5e5e150d",
+    "rights_status": "canonical-public",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/schema_canonical-schema-xananode-relationship-types.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

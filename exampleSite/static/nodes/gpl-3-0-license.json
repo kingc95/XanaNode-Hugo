@@ -16,7 +16,7 @@
   "source_url": "https://www.gnu.org/licenses/gpl-3.0.en.html",
   "rights_status": "external",
   "license": "GPL-3.0",
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/source_gpl-3-0-license.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

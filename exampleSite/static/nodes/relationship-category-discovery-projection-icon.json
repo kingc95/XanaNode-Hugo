@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-category-discovery-projection-icon",
+  "title": "discovery Relationship Category Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-categories/discovery.svg",
+  "asset_role": "relationship_category_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/discovery.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the discovery relationship category.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-category-discovery-projection-icon-represents-schema-relationship-category-discovery",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-category-discovery",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-discovery-has_primary_media-media-relationship-category-discovery-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-category-discovery",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:6386db239ccd3bb475cf9340fdca205d364f17f4234459fdad986e44881cfb3d",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/discovery.svg",
+    "method": "archive",
+    "content_id": "sha256:6386db239ccd3bb475cf9340fdca205d364f17f4234459fdad986e44881cfb3d",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/media_relationship-category-discovery-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -8,7 +8,7 @@
   "version": "0.5.0",
   "registry_type": "superseded_by",
   "registry_namespace": "xananode",
-  "category": "revision",
+  "category": "evolution",
   "inverse": "supersedes",
   "derived_inverse": true,
   "default_weight": 5,
@@ -18,6 +18,12 @@
       "id": "xananode.canonical:rel/registry-contains-relationship-type-superseded_by",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-evolution-contains-schema-relationship-type-superseded_by",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-evolution",
       "direction": "incoming"
     },
     {
@@ -43,7 +49,7 @@
   "inverse_color": "#64748b",
   "line_style": "solid",
   "inverse_line_style": "dashed",
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_relationship-type-superseded_by.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

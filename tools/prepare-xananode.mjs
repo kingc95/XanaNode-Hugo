@@ -202,6 +202,188 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+const CRC32_TABLE = new Uint32Array(256);
+for (let index = 0; index < CRC32_TABLE.length; index += 1) {
+  let crc = index;
+  for (let bit = 0; bit < 8; bit += 1) {
+    crc = (crc & 1) ? (0xedb88320 ^ (crc >>> 1)) : (crc >>> 1);
+  }
+  CRC32_TABLE[index] = crc >>> 0;
+}
+
+function crc32(buffer) {
+  let crc = 0xffffffff;
+  for (const byte of buffer) {
+    crc = CRC32_TABLE[(crc ^ byte) & 0xff] ^ (crc >>> 8);
+  }
+  return (crc ^ 0xffffffff) >>> 0;
+}
+
+function dosDateTime(date = new Date()) {
+  const year = Math.max(1980, date.getFullYear());
+  const time = ((date.getHours() & 0x1f) << 11)
+    | ((date.getMinutes() & 0x3f) << 5)
+    | ((Math.floor(date.getSeconds() / 2)) & 0x1f);
+  const dosDate = (((year - 1980) & 0x7f) << 9)
+    | (((date.getMonth() + 1) & 0x0f) << 5)
+    | (date.getDate() & 0x1f);
+  return { time, date: dosDate };
+}
+
+function createStoredZip(entries = []) {
+  const localParts = [];
+  const centralParts = [];
+  let offset = 0;
+  const { time, date } = dosDateTime();
+
+  for (const entry of entries) {
+    const name = String(entry.name || "").replaceAll("\\", "/").replace(/^\/+/, "");
+    if (!name) continue;
+    const data = Buffer.isBuffer(entry.data) ? entry.data : Buffer.from(entry.data || "");
+    const nameBuffer = Buffer.from(name, "utf8");
+    const crc = crc32(data);
+    const localHeader = Buffer.alloc(30);
+    localHeader.writeUInt32LE(0x04034b50, 0);
+    localHeader.writeUInt16LE(20, 4);
+    localHeader.writeUInt16LE(0, 6);
+    localHeader.writeUInt16LE(0, 8);
+    localHeader.writeUInt16LE(time, 10);
+    localHeader.writeUInt16LE(date, 12);
+    localHeader.writeUInt32LE(crc, 14);
+    localHeader.writeUInt32LE(data.length, 18);
+    localHeader.writeUInt32LE(data.length, 22);
+    localHeader.writeUInt16LE(nameBuffer.length, 26);
+    localHeader.writeUInt16LE(0, 28);
+    localParts.push(localHeader, nameBuffer, data);
+
+    const centralHeader = Buffer.alloc(46);
+    centralHeader.writeUInt32LE(0x02014b50, 0);
+    centralHeader.writeUInt16LE(20, 4);
+    centralHeader.writeUInt16LE(20, 6);
+    centralHeader.writeUInt16LE(0, 8);
+    centralHeader.writeUInt16LE(0, 10);
+    centralHeader.writeUInt16LE(time, 12);
+    centralHeader.writeUInt16LE(date, 14);
+    centralHeader.writeUInt32LE(crc, 16);
+    centralHeader.writeUInt32LE(data.length, 20);
+    centralHeader.writeUInt32LE(data.length, 24);
+    centralHeader.writeUInt16LE(nameBuffer.length, 28);
+    centralHeader.writeUInt16LE(0, 30);
+    centralHeader.writeUInt16LE(0, 32);
+    centralHeader.writeUInt16LE(0, 34);
+    centralHeader.writeUInt16LE(0, 36);
+    centralHeader.writeUInt32LE(0, 38);
+    centralHeader.writeUInt32LE(offset, 42);
+    centralParts.push(centralHeader, nameBuffer);
+
+    offset += localHeader.length + nameBuffer.length + data.length;
+  }
+
+  const centralDirectory = Buffer.concat(centralParts);
+  const endRecord = Buffer.alloc(22);
+  endRecord.writeUInt32LE(0x06054b50, 0);
+  endRecord.writeUInt16LE(0, 4);
+  endRecord.writeUInt16LE(0, 6);
+  const entryCount = entries.filter((entry) => String(entry?.name || "").trim()).length;
+  endRecord.writeUInt16LE(entryCount, 8);
+  endRecord.writeUInt16LE(entryCount, 10);
+  endRecord.writeUInt32LE(centralDirectory.length, 12);
+  endRecord.writeUInt32LE(offset, 16);
+  endRecord.writeUInt16LE(0, 20);
+
+  return Buffer.concat([...localParts, centralDirectory, endRecord]);
+}
+
+function readFileIfExists(filePath) {
+  if (!fs.existsSync(filePath) || !fs.statSync(filePath).isFile()) return null;
+  return fs.readFileSync(filePath);
+}
+
+function collectPortableSubstrateEntries({ siteRoot, staticDir, dataDir, includeViewerArtifacts = false } = {}) {
+  const entries = [];
+  const projectionAssetExtensions = new Set([".css", ".scss", ".sass", ".js", ".mjs", ".cjs", ".ts", ".tsx", ".jsx", ".map", ".html", ".htm", ".xml"]);
+  const isProjectionAsset = (relativeFile) => projectionAssetExtensions.has(path.extname(relativeFile).toLowerCase());
+  const addFile = (sourcePath, archivePath) => {
+    const buffer = readFileIfExists(sourcePath);
+    if (buffer) entries.push({ name: archivePath, data: buffer });
+  };
+  const addTree = (sourceRoot, archiveRoot, filter = () => true) => {
+    if (!sourceRoot || !fs.existsSync(sourceRoot) || !fs.statSync(sourceRoot).isDirectory()) return;
+    const files = globSync("**/*", { cwd: sourceRoot, nodir: true });
+    for (const relativeFile of files) {
+      if (!filter(relativeFile)) continue;
+      const sourcePath = path.join(sourceRoot, relativeFile);
+      const archivePath = path.posix.join(archiveRoot, relativeFile.split(path.sep).join("/"));
+      addFile(sourcePath, archivePath);
+    }
+  };
+
+  addFile(path.join(staticDir, "substrate.json"), "substrate.json");
+  addFile(path.join(staticDir, "nodes-index.json"), "nodes-index.json");
+  addFile(path.join(staticDir, "relationships.json"), "relationships.json");
+  addFile(path.join(staticDir, "substrate-bundle.json"), "substrate-bundle.json");
+  addFile(path.join(staticDir, "substrate-bundle.jsonl"), "substrate-bundle.jsonl");
+  addFile(path.join(staticDir, "xananode-fragments.json"), "xananode-fragments.json");
+  addFile(path.join(staticDir, "xananode-suggestions.json"), "xananode-suggestions.json");
+  if (includeViewerArtifacts) {
+    addFile(path.join(staticDir, "xananode-viewer.json"), "xananode-viewer.json");
+    addFile(path.join(staticDir, "xananode-suggestions.md"), "xananode-suggestions.md");
+  }
+  addTree(path.join(staticDir, "nodes"), "nodes");
+  addTree(path.join(staticDir, "schemas"), "schemas");
+  addTree(path.join(siteRoot, "assets"), "assets", (relativeFile) => !isProjectionAsset(relativeFile));
+  addTree(path.join(siteRoot, "reports"), "reports");
+  addTree(path.join(siteRoot, "packs"), "packs");
+  addTree(path.join(siteRoot, "imports"), "imports");
+  addFile(path.join(siteRoot, "author-profile.json"), "author-profile.json");
+  addFile(path.join(siteRoot, "ro-crate-metadata.json"), "ro-crate-metadata.json");
+
+  return entries;
+}
+
+function configuredDownloadSubstrate() {
+  const text = readSiteConfigText();
+  const lines = text.split(/\r?\n/);
+  const defaultPath = `archives/${substrateNamespace}.substrate`;
+  const config = {
+    enabled: false,
+    label: "Download current substrate",
+    path: defaultPath,
+    includeViewerArtifacts: false
+  };
+
+  const directMatch = lines.find((line) => /^\s{4}downloadSubstrate:\s*(.+)$/.test(line));
+  if (directMatch) {
+    const match = directMatch.match(/^\s{4}downloadSubstrate:\s*(.+)$/);
+    const directValue = parseYamlScalar(match?.[1] || "");
+    config.enabled = Boolean(directValue);
+    return config;
+  }
+
+  const blockStart = lines.findIndex((line) => /^\s{4}downloadSubstrate:\s*$/.test(line));
+  if (blockStart < 0) return config;
+
+  for (let index = blockStart + 1; index < lines.length; index += 1) {
+    const line = lines[index];
+    if (/^\S/.test(line)) break;
+    const propertyMatch = line.match(/^\s{6}([\w-]+):\s*(.*)$/);
+    if (!propertyMatch) continue;
+    const key = propertyMatch[1];
+    const value = parseYamlScalar(propertyMatch[2]);
+    if (key === "enabled") {
+      config.enabled = Boolean(value);
+    } else if (key === "label") {
+      config.label = String(value || config.label);
+    } else if (key === "path") {
+      config.path = String(value || config.path).replace(/^\/+/, "");
+    } else if (key === "includeViewerArtifacts" || key === "include_viewer_artifacts") {
+      config.includeViewerArtifacts = Boolean(value);
+    }
+  }
+
+  return config;
+}
+
 function protocolRelationshipRecord(relationship) {
   const {
     imported_from,
@@ -217,6 +399,42 @@ function readSiteConfigText() {
     const filePath = path.join(siteRoot, fileName);
     if (fs.existsSync(filePath)) return fs.readFileSync(filePath, "utf8");
   }
+  return "";
+}
+
+function configuredTopLevelScalar(key) {
+  const text = readSiteConfigText();
+  const match = text.match(new RegExp(`^${key}:\\s*(.+)$`, "m"));
+  return match ? parseYamlScalar(match[1]) : "";
+}
+
+function configuredNestedScalar(pathParts) {
+  const text = readSiteConfigText();
+  const lines = text.split(/\r?\n/);
+  let startIndex = 0;
+  let baseIndent = 0;
+
+  for (const part of pathParts) {
+    const indent = " ".repeat(baseIndent);
+    const pattern = new RegExp(`^${indent}${part}:\\s*(.*)$`);
+    let foundIndex = -1;
+    let foundValue = "";
+    for (let index = startIndex; index < lines.length; index += 1) {
+      const line = lines[index];
+      const match = line.match(pattern);
+      if (match) {
+        foundIndex = index;
+        foundValue = match[1];
+        break;
+      }
+      if (index > startIndex && line.trim() && !line.startsWith(indent + " ")) break;
+    }
+    if (foundIndex < 0) return "";
+    if (part === pathParts.at(-1)) return parseYamlScalar(foundValue);
+    startIndex = foundIndex + 1;
+    baseIndent += 2;
+  }
+
   return "";
 }
 
@@ -297,6 +515,17 @@ function configuredThemeLinks() {
   }
   if (current) links.push(current);
   return links.filter((link) => link && link.label && link.url);
+}
+
+function trimTrailingSlash(value) {
+  return String(value || "").replace(/\/+$/, "");
+}
+
+function joinAbsoluteUrl(base, relativePath) {
+  const normalizedBase = trimTrailingSlash(base);
+  const normalizedPath = String(relativePath || "").replace(/^\/+/, "");
+  if (!normalizedBase) return `/${normalizedPath}`;
+  return `${normalizedBase}/${normalizedPath}`;
 }
 
 function localImportPackReferences() {
@@ -388,6 +617,76 @@ function copyProtocolBrandAssets(staticDir) {
       fs.copyFileSync(source, path.join(staticDir, targetName));
     }
   }
+}
+
+function copyProtocolProjectionAssets(staticDir) {
+  const protocolMediaRoot = sdkRootCandidates
+    .map((candidate) => path.join(candidate, "vendor", "xananode-protocol", "media"))
+    .find((candidate) => fs.existsSync(candidate));
+  if (!protocolMediaRoot) return;
+  const source = path.join(protocolMediaRoot, "projection");
+  if (!fs.existsSync(source)) return;
+  const target = path.join(staticDir, "assets", "projection");
+  fs.mkdirSync(path.dirname(target), { recursive: true });
+  fs.cpSync(source, target, { recursive: true });
+}
+
+function writeDiscoveryArtifacts(staticDir, substrateManifest) {
+  const downloadConfig = configuredDownloadSubstrate();
+  const configuredBaseUrl = process.env.XANANODE_BASE_URL
+    || configuredTopLevelScalar("baseURL")
+    || process.env.URL
+    || "";
+  const configuredNamespace = process.env.XANANODE_NAMESPACE
+    || configuredNestedScalar(["params", "xananode", "namespace"])
+    || substrateManifest.namespace;
+  const configuredTitle = process.env.XANANODE_NAME
+    || configuredTopLevelScalar("title")
+    || substrateManifest.name;
+  const viewerUrl = joinAbsoluteUrl(configuredBaseUrl, "");
+  const substrateUrl = joinAbsoluteUrl(configuredBaseUrl, "substrate.json");
+  const relationshipsUrl = joinAbsoluteUrl(configuredBaseUrl, "relationships.json");
+  const nodesIndexUrl = joinAbsoluteUrl(configuredBaseUrl, "nodes-index.json");
+  const schemasUrl = joinAbsoluteUrl(configuredBaseUrl, "schemas/");
+  const viewerFeedUrl = joinAbsoluteUrl(configuredBaseUrl, "xananode-viewer.json");
+  const legacyIndexUrl = joinAbsoluteUrl(configuredBaseUrl, "index.json");
+  const downloadArchiveUrl = downloadConfig.enabled
+    ? joinAbsoluteUrl(configuredBaseUrl, downloadConfig.path)
+    : "";
+  const wellKnownDir = path.join(staticDir, ".well-known");
+  fs.mkdirSync(wellKnownDir, { recursive: true });
+
+  const handshake = {
+    protocol: "xananode",
+    title: configuredTitle,
+    namespace: configuredNamespace,
+    substrate: substrateUrl,
+    relationships: relationshipsUrl,
+    nodes_index: nodesIndexUrl,
+    schemas: schemasUrl,
+    viewer: viewerUrl,
+    viewer_feed: viewerFeedUrl,
+    legacy_viewer_index: legacyIndexUrl,
+    ...(downloadArchiveUrl ? { substrate_archive: downloadArchiveUrl } : {})
+  };
+
+  fs.writeFileSync(path.join(wellKnownDir, "xananode"), JSON.stringify(handshake, null, 2) + "\n");
+  fs.writeFileSync(path.join(wellKnownDir, "xananode.json"), JSON.stringify(handshake, null, 2) + "\n");
+
+  const robots = [
+    "User-agent: *",
+    "Allow: /",
+    "",
+    `Sitemap: ${joinAbsoluteUrl(configuredBaseUrl, "sitemap.xml")}`,
+    `XanaNode-Well-Known: ${joinAbsoluteUrl(configuredBaseUrl, ".well-known/xananode")}`,
+    `XanaNode-Substrate: ${substrateUrl}`,
+    `XanaNode-Nodes-Index: ${nodesIndexUrl}`,
+    `XanaNode-Relationships: ${relationshipsUrl}`,
+    `XanaNode-Viewer: ${viewerFeedUrl}`,
+    ...(downloadArchiveUrl ? [`XanaNode-Substrate-Archive: ${downloadArchiveUrl}`] : [])
+  ].join("\n");
+
+  fs.writeFileSync(path.join(staticDir, "robots.txt"), `${robots}\n`);
 }
 
 function stripMarkdown(markdown) {
@@ -1520,7 +1819,7 @@ function renderProtocolNodeResolverPage(node) {
         <p class="panel-placeholder">Resolving ${escapeHtml(node.title || node.id)}...</p>
       </aside>
     </section>
-    <script src="/js/xananode.js"></script>
+    <script type="module" src="/js/xananode.js"></script>
   </main>
 </body>
 </html>
@@ -1691,6 +1990,7 @@ fs.mkdirSync(staticDir, { recursive: true });
 fs.mkdirSync(staticNodesDir, { recursive: true });
 copyProtocolSchemas(staticSchemaDir);
 copyProtocolBrandAssets(staticDir);
+copyProtocolProjectionAssets(staticDir);
 const fragmentsOutput = withStableGeneratedAt(fragments, path.join(dataDir, "xananode_fragments.json"));
 reviewSuggestions = withStableGeneratedAt(reviewSuggestions, path.join(dataDir, "xananode_suggestions.json"));
 fs.writeFileSync(path.join(dataDir, "xananode_fragments.json"), JSON.stringify(fragmentsOutput, null, 2) + "\n");
@@ -1702,6 +2002,54 @@ fs.writeFileSync(path.join(staticDir, "xananode-viewer.json"), JSON.stringify(vi
 fs.writeFileSync(path.join(staticDir, "nodes-index.json"), JSON.stringify(nodesIndex, null, 2) + "\n");
 fs.writeFileSync(path.join(staticDir, "substrate.json"), JSON.stringify(substrateManifest, null, 2) + "\n");
 fs.writeFileSync(path.join(staticDir, "relationships.json"), JSON.stringify(protocolRelationshipList, null, 2) + "\n");
+const substrateBundle = {
+  format: "xananode.substrate-bundle@0.1.0",
+  generated_at: new Date().toISOString(),
+  manifest: substrateManifest,
+  counts: {
+    nodes: protocolNodes.length,
+    relationships: Array.isArray(protocolRelationshipList?.relationships) ? protocolRelationshipList.relationships.length : Array.isArray(protocolRelationshipList) ? protocolRelationshipList.length : 0,
+    fragments: fragments.length,
+    suggestions: reviewSuggestions.length,
+    warnings: warnings.length
+  },
+  nodes: protocolNodes,
+  relationships: Array.isArray(protocolRelationshipList?.relationships) ? protocolRelationshipList.relationships : Array.isArray(protocolRelationshipList) ? protocolRelationshipList : [],
+  fragments,
+  suggestions: reviewSuggestions
+};
+fs.writeFileSync(path.join(staticDir, "substrate-bundle.json"), JSON.stringify(substrateBundle, null, 2) + "\n");
+fs.writeFileSync(
+  path.join(staticDir, "substrate-bundle.jsonl"),
+  [
+    JSON.stringify({
+      record_type: "bundle_manifest",
+      format: substrateBundle.format,
+      generated_at: substrateBundle.generated_at,
+      manifest: substrateBundle.manifest,
+      counts: substrateBundle.counts
+    }),
+    ...substrateBundle.nodes.map((node) => JSON.stringify({ record_type: "node", node })),
+    ...substrateBundle.relationships.map((relationship) => JSON.stringify({ record_type: "relationship", relationship })),
+    JSON.stringify({ record_type: "bundle_fragments", fragments: substrateBundle.fragments }),
+    JSON.stringify({ record_type: "bundle_suggestions", suggestions: substrateBundle.suggestions }),
+    JSON.stringify({ record_type: "bundle_report", warnings })
+  ].join("\n") + "\n"
+);
+const downloadSubstrateConfig = configuredDownloadSubstrate();
+if (downloadSubstrateConfig.enabled) {
+  const archiveEntries = collectPortableSubstrateEntries({
+    siteRoot,
+    staticDir,
+    dataDir,
+    includeViewerArtifacts: downloadSubstrateConfig.includeViewerArtifacts
+  });
+  const archiveBuffer = createStoredZip(archiveEntries);
+  const archivePath = path.join(staticDir, downloadSubstrateConfig.path);
+  fs.mkdirSync(path.dirname(archivePath), { recursive: true });
+  fs.writeFileSync(archivePath, archiveBuffer);
+}
+writeDiscoveryArtifacts(staticDir, substrateManifest);
 for (const protocolNode of protocolNodes) {
   const nodeFileName = `${slugify(protocolNode.id.split("/").at(-1), "node")}.json`;
   fs.writeFileSync(path.join(staticNodesDir, nodeFileName), JSON.stringify(protocolNode, null, 2) + "\n");

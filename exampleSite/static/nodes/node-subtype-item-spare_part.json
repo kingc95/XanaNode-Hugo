@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-item-spare_part",
+  "title": "Item subtype: spare part",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "spare_part is an allowed subtype of the item node type.",
+  "version": "0.3.0",
+  "registry_type": "spare_part",
+  "registry_namespace": "xananode",
+  "parent_node_type": "item",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-item-spare_part-extension_of-schema-node-type-item",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-item",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-item-contains-schema-node-subtype-item-spare_part",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-item",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/schema_node-subtype-item-spare_part.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

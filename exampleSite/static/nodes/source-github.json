@@ -9,7 +9,7 @@
   "rights_status": "external",
   "relationships": [
     {
-      "id": "xananode.example:rel/source-github-documents-xananode-245",
+      "id": "xananode.example:rel/source-github-documents-xananode-246",
       "type": "documents",
       "target": "xananode.example:concept/xananode",
       "direction": "outgoing"

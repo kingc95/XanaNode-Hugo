@@ -45,6 +45,42 @@
       "type": "supports",
       "source": "example.minimal:response/relationships-preserve-context",
       "direction": "incoming"
+    },
+    {
+      "id": "example.minimal:rel/source-supports-claim",
+      "type": "supports",
+      "source": "example.minimal:source/as-we-may-think",
+      "direction": "incoming"
+    },
+    {
+      "id": "example.minimal:rel/claim-defines-concept",
+      "type": "defines",
+      "target": "example.minimal:concept/knowledge-substrate",
+      "direction": "outgoing"
+    },
+    {
+      "id": "example.minimal:rel/concept-has-claim",
+      "type": "has_claim",
+      "source": "example.minimal:concept/knowledge-substrate",
+      "direction": "incoming"
+    },
+    {
+      "id": "example.minimal:rel/trail-continues-to-claim",
+      "type": "continues_to",
+      "source": "example.minimal:source/as-we-may-think",
+      "direction": "incoming"
+    },
+    {
+      "id": "example.minimal:rel/trail-continues-to-concept",
+      "type": "continues_to",
+      "target": "example.minimal:concept/knowledge-substrate",
+      "direction": "outgoing"
+    },
+    {
+      "id": "example.minimal:rel/response-supports-claim",
+      "type": "supports",
+      "source": "example.minimal:response/relationships-preserve-context",
+      "direction": "incoming"
     }
   ],
   "imported_from": "nodes/claim-substrate-structure.json",

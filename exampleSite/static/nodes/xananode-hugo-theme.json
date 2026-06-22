@@ -93,6 +93,18 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/question-how-do-i-use-xananode-myself-uses-project-xananode-hugo-theme-faq-2",
+      "type": "uses",
+      "source": "xananode.canonical:question/how-do-i-use-xananode-myself",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/question-is-xananode-a-real-working-stack-uses-project-xananode-hugo-theme-faq-3",
+      "type": "uses",
+      "source": "xananode.canonical:question/is-xananode-a-real-working-stack",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-known-implementations-registry-contains-project-xananode-hugo-theme",
       "type": "contains",
       "source": "xananode.canonical:schema/known-implementations-registry",
@@ -124,7 +136,7 @@
   "build_metadata": {
     "version": "",
     "repository": "kingc95/xananode-hugo",
-    "generated_at": "2026-06-19T21:46:06.039Z",
+    "generated_at": "2026-06-22T07:39:41.393Z",
     "built_by": "@xananode/core",
     "dependencies": [
       {
@@ -157,7 +169,7 @@
     "../schemas/substrate-relationships.schema.json",
     "../examples/minimal-substrate/"
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/project_xananode-hugo-theme.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

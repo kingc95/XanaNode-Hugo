@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-category-governance-projection-icon",
+  "title": "governance Relationship Category Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-categories/governance.svg",
+  "asset_role": "relationship_category_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/governance.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the governance relationship category.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-category-governance-projection-icon-represents-schema-relationship-category-governance",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-category-governance",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-governance-has_primary_media-media-relationship-category-governance-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-category-governance",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:1017913454ae9bf485b575abca9137209a171394f496237f319d6988058ffa65",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/governance.svg",
+    "method": "archive",
+    "content_id": "sha256:1017913454ae9bf485b575abca9137209a171394f496237f319d6988058ffa65",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/media_relationship-category-governance-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

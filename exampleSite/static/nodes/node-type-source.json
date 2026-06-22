@@ -23,6 +23,12 @@
     "social_profile",
     "support_page",
     "web_snapshot",
+    "radio_series",
+    "radio_episode",
+    "television_series",
+    "television_episode",
+    "stage_play",
+    "audio_drama",
     "archive",
     "license",
     "legal_policy",
@@ -72,6 +78,12 @@
       "id": "xananode.canonical:rel/schema-node-subtype-source-article-extension_of-schema-node-type-source",
       "type": "extension_of",
       "source": "xananode.canonical:schema/node-subtype-source-article",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-source-audio_drama-extension_of-schema-node-type-source",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-source-audio_drama",
       "direction": "incoming"
     },
     {
@@ -135,9 +147,27 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/schema-node-subtype-source-radio_episode-extension_of-schema-node-type-source",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-source-radio_episode",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-source-radio_series-extension_of-schema-node-type-source",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-source-radio_series",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-node-subtype-source-social_profile-extension_of-schema-node-type-source",
       "type": "extension_of",
       "source": "xananode.canonical:schema/node-subtype-source-social_profile",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-source-stage_play-extension_of-schema-node-type-source",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-source-stage_play",
       "direction": "incoming"
     },
     {
@@ -150,6 +180,18 @@
       "id": "xananode.canonical:rel/schema-node-subtype-source-talk-extension_of-schema-node-type-source",
       "type": "extension_of",
       "source": "xananode.canonical:schema/node-subtype-source-talk",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-source-television_episode-extension_of-schema-node-type-source",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-source-television_episode",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-source-television_series-extension_of-schema-node-type-source",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-source-television_series",
       "direction": "incoming"
     },
     {
@@ -186,6 +228,12 @@
       "id": "xananode.canonical:rel/schema-node-type-source-contains-schema-node-subtype-source-article",
       "type": "contains",
       "target": "xananode.canonical:schema/node-subtype-source-article",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-source-contains-schema-node-subtype-source-audio_drama",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-source-audio_drama",
       "direction": "outgoing"
     },
     {
@@ -249,9 +297,27 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-node-type-source-contains-schema-node-subtype-source-radio_episode",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-source-radio_episode",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-source-contains-schema-node-subtype-source-radio_series",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-source-radio_series",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-node-type-source-contains-schema-node-subtype-source-social_profile",
       "type": "contains",
       "target": "xananode.canonical:schema/node-subtype-source-social_profile",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-source-contains-schema-node-subtype-source-stage_play",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-source-stage_play",
       "direction": "outgoing"
     },
     {
@@ -264,6 +330,18 @@
       "id": "xananode.canonical:rel/schema-node-type-source-contains-schema-node-subtype-source-talk",
       "type": "contains",
       "target": "xananode.canonical:schema/node-subtype-source-talk",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-source-contains-schema-node-subtype-source-television_episode",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-source-television_episode",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-source-contains-schema-node-subtype-source-television_series",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-source-television_series",
       "direction": "outgoing"
     },
     {
@@ -303,7 +381,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_node-type-source.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

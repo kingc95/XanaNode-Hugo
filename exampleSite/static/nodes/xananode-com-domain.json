@@ -7,7 +7,7 @@
     "official_site"
   ],
   "importance": 5,
-  "summary": "The primary public home for the personally authored canonical XanaNode substrate.",
+  "summary": "The stable long-term public home of the canonical XanaNode projection. XanaNode.org and XanaNode.net are project-owned aliases that resolve here to avoid fragmentation and SEO conflict.",
   "source_url": "https://xananode.com/",
   "rights_status": "canonical-public",
   "relationships": [
@@ -18,7 +18,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/source_xananode-com-domain.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

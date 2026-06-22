@@ -69,6 +69,12 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/registry-contains-node-type-item",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-type-item",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-knowledge_gap",
       "type": "contains",
       "target": "xananode.canonical:schema/node-type-knowledge_gap",
@@ -177,7 +183,18 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes.json",
+  "asset_path": "assets/raw/protocol/schemas/xananode-node-types.v0.3.0.json",
+  "asset_role": "canonical_raw_source",
+  "content_id": "sha256:8b0e0470cf4f12b43772a8dddf27df56d6689abf9772d36b5693360230469fbc",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/xananode-node-types.v0.3.0.json",
+    "method": "archive",
+    "content_id": "sha256:d8a0628460ba11797103ffac6634d3201df91fee54f49d9d9911283fc32e8ec1",
+    "rights_status": "canonical-public",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/schema_node-type-registry.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

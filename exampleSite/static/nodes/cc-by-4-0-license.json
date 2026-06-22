@@ -28,7 +28,7 @@
   "source_url": "https://creativecommons.org/licenses/by/4.0/",
   "rights_status": "external",
   "license": "CC-BY-4.0",
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/source_cc-by-4-0-license.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-category-creation-projection-icon",
+  "title": "creation Relationship Category Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-categories/creation.svg",
+  "asset_role": "relationship_category_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/creation.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the creation relationship category.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-category-creation-projection-icon-represents-schema-relationship-category-creation",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-category-creation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-creation-has_primary_media-media-relationship-category-creation-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-category-creation",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:589b076490c1020527a425c130fffbad29826b135feed40404a0a865de17875d",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/creation.svg",
+    "method": "archive",
+    "content_id": "sha256:589b076490c1020527a425c130fffbad29826b135feed40404a0a865de17875d",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/media_relationship-category-creation-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

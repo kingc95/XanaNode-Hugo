@@ -1,0 +1,32 @@
+{
+  "id": "xananode.canonical:question/why-does-xananode-exist",
+  "title": "Why does XanaNode exist?",
+  "type": "question",
+  "subtype": "faq",
+  "importance": 5,
+  "summary": "XanaNode exists to preserve relationships, provenance, disagreement, lineage, and reusable fragments as durable knowledge structure.",
+  "content": "A normal website can publish text. XanaNode publishes the relationships behind the text. It is meant for authored knowledge substrates where sources, claims, trails, versions, transclusions, conflicts, and projection layers remain inspectable instead of disappearing into a flat page.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/question-why-does-xananode-exist-explains-concept-xananode-faq-0",
+      "type": "explains",
+      "target": "xananode.canonical:concept/xananode",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/question-why-does-xananode-exist-explains-essay-what-is-xananode-faq-1",
+      "type": "explains",
+      "target": "xananode.canonical:essay/what-is-xananode",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/question-why-does-xananode-exist-supports-concept-substrate-projection-layer-faq-2",
+      "type": "supports",
+      "target": "xananode.canonical:concept/substrate-projection-layer",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/question_why-does-xananode-exist.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

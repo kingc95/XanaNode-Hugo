@@ -23,6 +23,18 @@
       "type": "requires_source",
       "target": "example.minimal:source/as-we-may-think",
       "direction": "outgoing"
+    },
+    {
+      "id": "example.minimal:rel/question-raises-gap",
+      "type": "raises",
+      "source": "example.minimal:question/why-relationships-matter",
+      "direction": "incoming"
+    },
+    {
+      "id": "example.minimal:rel/gap-requires-source",
+      "type": "requires_source",
+      "target": "example.minimal:source/as-we-may-think",
+      "direction": "outgoing"
     }
   ],
   "imported_from": "nodes/knowledge-gap-missing-relationship-evidence.json",

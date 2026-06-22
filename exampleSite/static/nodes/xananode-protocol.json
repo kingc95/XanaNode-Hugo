@@ -55,25 +55,25 @@
     {
       "id": "xananode.canonical:rel/protocol-contains-author-profile-schema",
       "type": "contains",
-      "target": "xananode.canonical:schema/author-profile-schema",
+      "target": "xananode.canonical:schema/canonical-schema-author-profile",
       "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/protocol-contains-compatibility-report-schema",
       "type": "contains",
-      "target": "xananode.canonical:schema/compatibility-report-schema",
+      "target": "xananode.canonical:schema/canonical-schema-compatibility-report",
       "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/protocol-contains-manifest-schema",
       "type": "contains",
-      "target": "xananode.canonical:schema/substrate-manifest-schema",
+      "target": "xananode.canonical:schema/canonical-schema-substrate-manifest",
       "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/protocol-contains-merge-report-schema",
       "type": "contains",
-      "target": "xananode.canonical:schema/merge-report-schema",
+      "target": "xananode.canonical:schema/canonical-schema-merge-report",
       "direction": "outgoing"
     },
     {
@@ -85,13 +85,13 @@
     {
       "id": "xananode.canonical:rel/protocol-contains-nanopublication-schema",
       "type": "contains",
-      "target": "xananode.canonical:schema/nanopublication-schema",
+      "target": "xananode.canonical:schema/canonical-schema-nanopublication",
       "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/protocol-contains-node-schema",
       "type": "contains",
-      "target": "xananode.canonical:schema/substrate-node-schema",
+      "target": "xananode.canonical:schema/canonical-schema-substrate-node",
       "direction": "outgoing"
     },
     {
@@ -109,7 +109,7 @@
     {
       "id": "xananode.canonical:rel/protocol-contains-relationship-schema",
       "type": "contains",
-      "target": "xananode.canonical:schema/substrate-relationships-schema",
+      "target": "xananode.canonical:schema/canonical-schema-substrate-relationships",
       "direction": "outgoing"
     },
     {
@@ -127,13 +127,13 @@
     {
       "id": "xananode.canonical:rel/protocol-contains-substrate-diff-schema",
       "type": "contains",
-      "target": "xananode.canonical:schema/substrate-diff-schema",
+      "target": "xananode.canonical:schema/canonical-schema-substrate-diff",
       "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/protocol-documented-by-repository",
       "type": "documents",
-      "source": "xananode.canonical:source/xananode-protocol-repository",
+      "source": "xananode.canonical:source/repository-kingc95-xananode",
       "direction": "incoming"
     },
     {
@@ -197,6 +197,12 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/question-is-xananode-a-real-working-stack-requires-project-xananode-protocol-faq-1",
+      "type": "requires",
+      "source": "xananode.canonical:question/is-xananode-a-real-working-stack",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-known-implementations-registry-contains-project-xananode-protocol",
       "type": "contains",
       "source": "xananode.canonical:schema/known-implementations-registry",
@@ -217,7 +223,7 @@
   "build_metadata": {
     "version": "",
     "repository": "kingc95/XanaNode",
-    "generated_at": "2026-06-19T21:46:05.789Z",
+    "generated_at": "2026-06-22T07:39:41.207Z",
     "built_by": "@xananode/core",
     "git_commit": "",
     "git_branch": "",
@@ -231,7 +237,7 @@
     "../governance/",
     "../examples/minimal-substrate/"
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/project_xananode-protocol.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

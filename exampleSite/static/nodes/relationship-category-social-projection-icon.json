@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-category-social-projection-icon",
+  "title": "social Relationship Category Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-categories/social.svg",
+  "asset_role": "relationship_category_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/social.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the social relationship category.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-category-social-projection-icon-represents-schema-relationship-category-social",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-category-social",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-has_primary_media-media-relationship-category-social-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-category-social",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:8c2d79b7aeb182f6554e74dbcc2598a4aa1d39c0f75fd9c6836956f4d1cd986e",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/social.svg",
+    "method": "archive",
+    "content_id": "sha256:8c2d79b7aeb182f6554e74dbcc2598a4aa1d39c0f75fd9c6836956f4d1cd986e",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/media_relationship-category-social-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

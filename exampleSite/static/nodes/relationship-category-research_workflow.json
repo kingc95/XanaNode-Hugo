@@ -14,6 +14,12 @@
   "inverse_line_style": "solid",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-category-research_workflow-projection-icon-represents-schema-relationship-category-research_workflow",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-category-research_workflow-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-category-research_workflow-contains-schema-relationship-type-falsified_by",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-falsified_by",
@@ -50,13 +56,19 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-research_workflow-has_primary_media-media-relationship-category-research_workflow-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-category-research_workflow-projection-icon",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-research_workflow",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_relationship-category-research_workflow.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

@@ -14,6 +14,12 @@
   "inverse_line_style": "solid",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-category-discovery-projection-icon-represents-schema-relationship-category-discovery",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-category-discovery-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-category-discovery-contains-schema-relationship-type-possibly_related_to",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-possibly_related_to",
@@ -26,13 +32,19 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-discovery-has_primary_media-media-relationship-category-discovery-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-category-discovery-projection-icon",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-type-registry-contains-schema-relationship-category-discovery",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_relationship-category-discovery.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

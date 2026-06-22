@@ -10,13 +10,25 @@
   "rights_status": "external",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/github-profile-includes-protocol-repo",
+      "type": "includes",
+      "source": "xananode.canonical:source/github-profile",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/protocol-documented-by-repository",
+      "type": "documents",
+      "target": "xananode.canonical:project/xananode-protocol",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/source-repository-kingc95-xananode-documents-project-xananode-protocol",
       "type": "documents",
       "target": "xananode.canonical:project/xananode-protocol",
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/source_repository-kingc95-xananode.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

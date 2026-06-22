@@ -16,7 +16,7 @@
     {
       "id": "xananode.canonical:rel/core-documented-by-repository",
       "type": "documents",
-      "source": "xananode.canonical:source/xananode-core-sdk-repository",
+      "source": "xananode.canonical:source/repository-kingc95-xananode-core-sdk",
       "direction": "incoming"
     },
     {
@@ -104,6 +104,24 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/question-how-do-i-use-xananode-myself-requires-project-xananode-core-sdk-faq-1",
+      "type": "requires",
+      "source": "xananode.canonical:question/how-do-i-use-xananode-myself",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/question-how-do-sharing-rules-work-requires-project-xananode-core-sdk-faq-2",
+      "type": "requires",
+      "source": "xananode.canonical:question/how-do-sharing-rules-work",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/question-is-xananode-a-real-working-stack-requires-project-xananode-core-sdk-faq-2",
+      "type": "requires",
+      "source": "xananode.canonical:question/is-xananode-a-real-working-stack",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-known-implementations-registry-contains-project-xananode-core-sdk",
       "type": "contains",
       "source": "xananode.canonical:schema/known-implementations-registry",
@@ -141,10 +159,10 @@
   "build_metadata": {
     "version": "0.1.0",
     "repository": "kingc95/XanaNode-Core-SDK",
-    "generated_at": "2026-06-19T21:46:05.851Z",
+    "generated_at": "2026-06-22T07:39:41.282Z",
     "built_by": "@xananode/core",
-    "git_commit": "e03e1ff039cbc8640b9703d88e8883ece35008ac",
-    "git_branch": "main",
+    "git_commit": "",
+    "git_branch": "",
     "runtime": "node v24.16.0",
     "platform": "win32/x64",
     "dependencies": [
@@ -190,7 +208,7 @@
     "../schemas/xananode-node-types.v0.3.0.json",
     "../schemas/xananode-relationship-types.v0.5.0.json"
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/project_xananode-core-sdk.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

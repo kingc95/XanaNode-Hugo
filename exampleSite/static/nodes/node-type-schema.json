@@ -249,7 +249,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/schema_node-type-schema.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

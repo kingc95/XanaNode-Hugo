@@ -15,7 +15,7 @@
   "rights_status": "open-source",
   "asset_path": "media/images/android-chrome-512x512.png",
   "asset_role": "app_icon",
-  "creator": "Built By Bots",
+  "creator": "Christian Siefen",
   "created_at": "2026-06-19T00:00:00.000Z",
   "relationships": [
     {
@@ -37,7 +37,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes.json",
+  "imported_from": "nodes/media_xananode-android-chrome-512.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

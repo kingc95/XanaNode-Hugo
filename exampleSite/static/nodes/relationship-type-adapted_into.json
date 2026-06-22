@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-adapted_into",
+  "title": "Adapted into",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source was transformed into the target work or presentation form.",
+  "version": "0.5.0",
+  "registry_type": "adapted_into",
+  "registry_namespace": "xananode",
+  "category": "revision",
+  "inverse": "adapted_from",
+  "color": "#fdba74",
+  "inverse_color": "#fb923c",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-adapted_into",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-revision-contains-schema-relationship-type-adapted_into",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-revision",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-adapted_from-related_to-schema-relationship-type-adapted_into-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-adapted_from",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-adapted_into-related_to-schema-relationship-type-adapted_from-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-adapted_from",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/schema_relationship-type-adapted_into.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

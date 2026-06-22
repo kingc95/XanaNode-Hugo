@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-category-lineage-projection-icon",
+  "title": "lineage Relationship Category Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-categories/lineage.svg",
+  "asset_role": "relationship_category_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/lineage.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the lineage relationship category.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-category-lineage-projection-icon-represents-schema-relationship-category-lineage",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-category-lineage",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-lineage-has_primary_media-media-relationship-category-lineage-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-category-lineage",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:0bf1c4f6f900f8942f0ae8d9f2fd53d1b499ba6d85f2e2b22630cef4cd537ba3",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/lineage.svg",
+    "method": "archive",
+    "content_id": "sha256:0bf1c4f6f900f8942f0ae8d9f2fd53d1b499ba6d85f2e2b22630cef4cd537ba3",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/media_relationship-category-lineage-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

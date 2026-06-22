@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-category-reasoning-projection-icon",
+  "title": "reasoning Relationship Category Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-categories/reasoning.svg",
+  "asset_role": "relationship_category_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/reasoning.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the reasoning relationship category.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-category-reasoning-projection-icon-represents-schema-relationship-category-reasoning",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-category-reasoning",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-reasoning-has_primary_media-media-relationship-category-reasoning-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-category-reasoning",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:d21516c17ad8638796a0c9027a621f7a3455dd446772fa026591d89b646a7dde",
+  "source_snapshot": {
+    "captured_at": "2026-06-22T07:39:41.439Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/reasoning.svg",
+    "method": "archive",
+    "content_id": "sha256:d21516c17ad8638796a0c9027a621f7a3455dd446772fa026591d89b646a7dde",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/media_relationship-category-reasoning-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}
