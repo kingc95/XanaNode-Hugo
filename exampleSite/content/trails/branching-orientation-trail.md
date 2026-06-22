@@ -41,5 +41,5 @@ relationships:
 
 This trail deliberately branches after [XanaNode](/concept/xananode/) so the viewer can test a guided choose-your-path experience.
 
-{{< node ref="[start-here](start-here)" >}}
-{{< node ref="[xananode](xananode.canonical:concept/xananode)" >}}
+{{< node ref="start-here" >}}
+{{< node ref="xananode" >}}

@@ -19,6 +19,12 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-known-implementations-registry-contains-project-xananode-mobile",
+      "type": "contains",
+      "target": "xananode.canonical:project/xananode-mobile",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-known-implementations-registry-contains-project-xananode-protocol",
       "type": "contains",
       "target": "xananode.canonical:project/xananode-protocol",
@@ -42,10 +48,10 @@
   "asset_role": "canonical_raw_source",
   "content_id": "sha256:b5356bb3586e0758db7ece62321b614d525d9d900f5ec68fd9b6f957183dc5a0",
   "source_snapshot": {
-    "captured_at": "2026-06-22T08:23:26.983Z",
+    "captured_at": "2026-06-22T09:24:54.331Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/registry/known-implementations.json",
     "method": "archive",
-    "content_id": "sha256:e233016a166e0ff27e45fc46dc706567dfb0814f747c6d9cbd549fc915bc56ae",
+    "content_id": "sha256:40fad1a6f4f139207a09fe8c98c74b734a6706a21352f8fa8180a139800d58dd",
     "rights_status": "canonical-public",
     "tool": "@xananode/core"
   },

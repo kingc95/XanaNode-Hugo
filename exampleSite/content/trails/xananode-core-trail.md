@@ -35,16 +35,16 @@ This trail introduces [XanaNode](/node/xananode) as a protocol, ontology, and pu
 
 It moves from the problem of isolated documents to [typed relationships](/node/typed-relationships), [provenance](/node/provenance), stable fragments, namespaced schemas, [protocol artifacts](/node/protocol-artifacts), [merge validation](/node/merge-validation), [compatibility levels](/node/compatibility-levels), federation, and [civilizational memory](/node/civilizational-memory).
 
-{{< node ref="[start-here](start-here)" >}}
-{{< node ref="[xananode](xananode.canonical:concept/xananode)" >}}
-{{< node ref="[knowledge-substrate](knowledge-substrate)" >}}
+{{< node ref="start-here" >}}
+{{< node ref="xananode" >}}
+{{< node ref="knowledge-substrate" >}}
 {{< node ref="typed-relationships" >}}
 {{< node ref="provenance" >}}
-{{< node ref="[transclusion](transclusion)" >}}
-{{< node ref="[tumbler-addressing](tumbler-addressing)" >}}
-{{< node ref="[namespacing](namespacing)" >}}
+{{< node ref="transclusion" >}}
+{{< node ref="tumbler-addressing" >}}
+{{< node ref="namespacing" >}}
 {{< node ref="merge-validation" >}}
 {{< node ref="protocol-artifacts" >}}
 {{< node ref="compatibility-levels" >}}
-{{< node ref="[federated-knowledge-substrates](federated-knowledge-substrates)" >}}
+{{< node ref="federated-knowledge-substrates" >}}
 {{< node ref="civilizational-memory" >}}

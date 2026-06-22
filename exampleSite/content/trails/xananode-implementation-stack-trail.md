@@ -34,8 +34,8 @@ The [Workspace repository](/source/xananode-workspace-repository/) manages multi
 
 The [Studio repository](/source/xananode-studio-repository/) provides the desktop workbench for editing, previewing, validating, and navigating those substrates.
 
-{{< node ref="[xananode-protocol-repo](xananode-protocol-repo)" >}}
-{{< node ref="[xananode-core-sdk-repo](xananode-core-sdk-repo)" >}}
-{{< node ref="[xananode-hugo-repo](xananode-hugo-repo)" >}}
-{{< node ref="[xananode-workspace-repo](xananode-workspace-repo)" >}}
-{{< node ref="[xananode-studio-repo](xananode-studio-repo)" >}}
+{{< node ref="xananode-protocol-repo" >}}
+{{< node ref="xananode-core-sdk-repo" >}}
+{{< node ref="xananode-hugo-repo" >}}
+{{< node ref="xananode-workspace-repo" >}}
+{{< node ref="xananode-studio-repo" >}}

@@ -1,0 +1,20 @@
+{
+  "id": "xananode.canonical:technology/xananode-mobile-component-.substrate-bundles",
+  "title": "XanaNode Mobile: .substrate bundles",
+  "type": "technology",
+  "subtype": "software_component",
+  "importance": 3,
+  "summary": "XanaNode Mobile consumes or depends on .substrate bundles.",
+  "component_of": "xananode.canonical:project/xananode-mobile",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/project-xananode-mobile-uses-technology-xananode-mobile-component-.substrate-bundles-component-4",
+      "type": "uses",
+      "source": "xananode.canonical:project/xananode-mobile",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/technology_xananode-mobile-component-.substrate-bundles.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

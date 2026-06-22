@@ -28,6 +28,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/project-xananode-mobile-implements-concept-substrate-projection-layer",
+      "type": "implements",
+      "source": "xananode.canonical:project/xananode-mobile",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/project-xananode-protocol-implements-concept-substrate-projection-layer",
       "type": "implements",
       "source": "xananode.canonical:project/xananode-protocol",

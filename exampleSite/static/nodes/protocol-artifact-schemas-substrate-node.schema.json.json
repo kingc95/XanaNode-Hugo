@@ -21,6 +21,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/project-xananode-mobile-uses-schema-protocol-artifact-schemas-substrate-node.schema.json-artifact-2",
+      "type": "uses",
+      "source": "xananode.canonical:project/xananode-mobile",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/project-xananode-workspace-uses-schema-protocol-artifact-schemas-substrate-node.schema.json-artifact-2",
       "type": "uses",
       "source": "xananode.canonical:project/xananode-workspace",
@@ -43,7 +49,7 @@
   "asset_role": "canonical_raw_source",
   "content_id": "sha256:ccdc11cc758a71b7ec54db8aa9311ea9c22bddb59de1b6eb37fea51950a2e3f8",
   "source_snapshot": {
-    "captured_at": "2026-06-22T08:23:26.983Z",
+    "captured_at": "2026-06-22T09:24:54.331Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/substrate-node.schema.json",
     "method": "archive",
     "content_id": "sha256:ccdc11cc758a71b7ec54db8aa9311ea9c22bddb59de1b6eb37fea51950a2e3f8",

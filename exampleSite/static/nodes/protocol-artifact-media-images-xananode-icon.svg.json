@@ -4,10 +4,16 @@
   "type": "schema",
   "subtype": "protocol_artifact",
   "importance": 3,
-  "summary": "XanaNode Studio references the protocol artifact media/images/xananode-icon.svg.",
+  "summary": "XanaNode Mobile references the protocol artifact media/images/xananode-icon.svg.",
   "artifact_path": "media/images/xananode-icon.svg",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/images/xananode-icon.svg",
   "relationships": [
+    {
+      "id": "xananode.canonical:rel/project-xananode-mobile-uses-schema-protocol-artifact-media-images-xananode-icon.svg-artifact-4",
+      "type": "uses",
+      "source": "xananode.canonical:project/xananode-mobile",
+      "direction": "incoming"
+    },
     {
       "id": "xananode.canonical:rel/project-xananode-studio-uses-schema-protocol-artifact-media-images-xananode-icon.svg-artifact-2",
       "type": "uses",
@@ -19,7 +25,7 @@
   "asset_role": "canonical_raw_source",
   "content_id": "sha256:08f14405bb12b15981cff907975c9d7f910652465e6919b4f6908188549df17a",
   "source_snapshot": {
-    "captured_at": "2026-06-22T08:23:26.983Z",
+    "captured_at": "2026-06-22T09:24:54.331Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/images/xananode-icon.svg",
     "method": "archive",
     "content_id": "sha256:d7b60a3f9a05156041dae523790d3465e7909a54425dfbeea3e112eace5f9c9a",

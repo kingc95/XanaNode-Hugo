@@ -2578,6 +2578,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:project/xananode-mobile",
+      "path": "nodes/xananode-mobile.json",
+      "title": "XanaNode Mobile",
+      "type": "project",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:project/xananode-protocol",
       "path": "nodes/xananode-protocol.json",
       "title": "XanaNode Protocol",
@@ -7590,6 +7597,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:source/repository-kingc95-xananode-mobile",
+      "path": "nodes/repository-kingc95-xananode-mobile.json",
+      "title": "XanaNode Mobile Repository",
+      "type": "source",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:source/repository-kingc95-xananode-studio",
       "path": "nodes/repository-kingc95-xananode-studio.json",
       "title": "XanaNode Studio Repository",
@@ -7754,6 +7768,41 @@
       "id": "xananode.canonical:technology/xananode-hugo-theme-component-substrate-manifests",
       "path": "nodes/xananode-hugo-theme-component-substrate-manifests.json",
       "title": "XanaNode Hugo Theme: substrate manifests",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:technology/xananode-mobile-component-.substrate-bundles",
+      "path": "nodes/xananode-mobile-component-.substrate-bundles.json",
+      "title": "XanaNode Mobile: .substrate bundles",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:technology/xananode-mobile-component-core-sdk-apis",
+      "path": "nodes/xananode-mobile-component-core-sdk-apis.json",
+      "title": "XanaNode Mobile: Core SDK APIs",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:technology/xananode-mobile-component-protocol-branding",
+      "path": "nodes/xananode-mobile-component-protocol-branding.json",
+      "title": "XanaNode Mobile: protocol branding",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:technology/xananode-mobile-component-protocol-registries",
+      "path": "nodes/xananode-mobile-component-protocol-registries.json",
+      "title": "XanaNode Mobile: protocol registries",
+      "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:technology/xananode-mobile-component-workspace-apis",
+      "path": "nodes/xananode-mobile-component-workspace-apis.json",
+      "title": "XanaNode Mobile: Workspace APIs",
       "type": "technology",
       "imported": true
     },

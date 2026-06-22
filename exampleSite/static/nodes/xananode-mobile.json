@@ -1,0 +1,150 @@
+{
+  "id": "xananode.canonical:project/xananode-mobile",
+  "title": "XanaNode Mobile",
+  "type": "project",
+  "subtype": "mobile-capture-companion",
+  "importance": 4,
+  "summary": "Android capture companion for quick substrate intake, field notes, media capture, file import, URL import, QR intake, and portable .substrate handoff.",
+  "status": "active",
+  "source_url": "https://github.com/kingc95/XanaNode-Mobile",
+  "repository": "kingc95/XanaNode-Mobile",
+  "protocol_role": "mobile-capture-interface",
+  "software_version": "",
+  "build_metadata": {
+    "version": "",
+    "repository": "kingc95/XanaNode-Mobile",
+    "generated_at": "2026-06-22T09:24:54.287Z",
+    "built_by": "@xananode/core",
+    "dependencies": [
+      {
+        "name": "Workspace APIs",
+        "relationship": "consumes"
+      },
+      {
+        "name": "Core SDK APIs",
+        "relationship": "consumes"
+      },
+      {
+        "name": "protocol registries",
+        "relationship": "consumes"
+      },
+      {
+        "name": "protocol branding",
+        "relationship": "consumes"
+      },
+      {
+        "name": ".substrate bundles",
+        "relationship": "consumes"
+      }
+    ]
+  },
+  "consumes": [
+    "Workspace APIs",
+    "Core SDK APIs",
+    "protocol registries",
+    "protocol branding",
+    ".substrate bundles"
+  ],
+  "related_protocol_artifacts": [
+    "../schemas/author-profile.schema.json",
+    "../schemas/substrate-manifest.schema.json",
+    "../schemas/substrate-node.schema.json",
+    "../schemas/substrate-relationships.schema.json",
+    "../media/images/xananode-icon.svg"
+  ],
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/project-xananode-mobile-implements-concept-substrate-projection-layer",
+      "type": "implements",
+      "target": "xananode.canonical:concept/substrate-projection-layer",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-mobile-uses-schema-protocol-artifact-media-images-xananode-icon.svg-artifact-4",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-media-images-xananode-icon.svg",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-mobile-uses-schema-protocol-artifact-schemas-author-profile.schema.json-artifact-0",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas-author-profile.schema.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-mobile-uses-schema-protocol-artifact-schemas-substrate-manifest.schema.json-artifact-1",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas-substrate-manifest.schema.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-mobile-uses-schema-protocol-artifact-schemas-substrate-node.schema.json-artifact-2",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas-substrate-node.schema.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-mobile-uses-schema-protocol-artifact-schemas-substrate-relationships.schema.json-artifact-3",
+      "type": "uses",
+      "target": "xananode.canonical:schema/protocol-artifact-schemas-substrate-relationships.schema.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-mobile-uses-technology-xananode-mobile-component-.substrate-bundles-component-4",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-mobile-component-.substrate-bundles",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-mobile-uses-technology-xananode-mobile-component-core-sdk-apis-component-1",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-mobile-component-core-sdk-apis",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-mobile-uses-technology-xananode-mobile-component-protocol-branding-component-3",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-mobile-component-protocol-branding",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-mobile-uses-technology-xananode-mobile-component-protocol-registries-component-2",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-mobile-component-protocol-registries",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/project-xananode-mobile-uses-technology-xananode-mobile-component-workspace-apis-component-0",
+      "type": "uses",
+      "target": "xananode.canonical:technology/xananode-mobile-component-workspace-apis",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/question-how-do-i-use-xananode-myself-uses-project-xananode-mobile-faq-4",
+      "type": "uses",
+      "source": "xananode.canonical:question/how-do-i-use-xananode-myself",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/question-is-xananode-a-real-working-stack-uses-project-xananode-mobile-faq-5",
+      "type": "uses",
+      "source": "xananode.canonical:question/is-xananode-a-real-working-stack",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-known-implementations-registry-contains-project-xananode-mobile",
+      "type": "contains",
+      "source": "xananode.canonical:schema/known-implementations-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/source-repository-kingc95-xananode-mobile-documents-project-xananode-mobile",
+      "type": "documents",
+      "source": "xananode.canonical:source/repository-kingc95-xananode-mobile",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/project_xananode-mobile.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}
