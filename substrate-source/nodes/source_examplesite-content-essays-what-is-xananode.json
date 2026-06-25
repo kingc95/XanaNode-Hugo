@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-essays-what-is-xananode",
+  "title": "ExampleSite / Content / Essays / What Is Xananode",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/essays/what-is-xananode.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/essays/what-is-xananode.md",
+  "artifact_path": "exampleSite/content/essays/what-is-xananode.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/essays/what-is-xananode.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:0f2d02c6bbd61fa7e1236a7d9b47e532474f8316de7aac34405aac022193cf70",
+  "content": "---\ntitle: \"What Is XanaNode?\"\ndate: 2026-06-16\ntype: \"essay\"\nimportance: 5\nsummary: \"XanaNode is a protocol for interoperable knowledge substrates, not merely a graph viewer or static site theme.\"\nrelationships:\n  - type: \"defines\"\n    target: \"xananode\"\n  - type: \"explains\"\n    target: \"xananode-hugo-theme\"\n  - type: \"arrives_at\"\n    target: \"claim-merge-without-collapse\"\n  - type: \"context_for\"\n    target: \"federated-knowledge-substrates\"\n  - type: \"explains\"\n    target: \"protocol-artifacts\"\n---\n\n[XanaNode](/node/xananode) is best understood in layers.\n\nThe ontology defines what kinds of things can be represented.\n\nThe relationship vocabulary defines why those things are connected.\n\nA substrate is an independently authored graph using that vocabulary.\n\n[Protocol artifacts](/node/protocol-artifacts) make that graph portable: `substrate.json` identifies the substrate, node records describe addressable objects, `relationships.json` preserves typed edges, schemas validate the artifacts, and reports explain compatibility or merge decisions.\n\nA renderer, such as this [Hugo](/node/hugo) theme, is one way to publish and navigate a substrate. It is not the protocol itself.\n\nThe larger goal is federation: many independently moderated substrates that can still interoperate because they declare their schemas and relationships clearly.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/essays/what-is-xananode.md",
+    "method": "archive",
+    "content_id": "sha256:0f2d02c6bbd61fa7e1236a7d9b47e532474f8316de7aac34405aac022193cf70",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

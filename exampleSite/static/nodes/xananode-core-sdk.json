@@ -128,6 +128,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.core-documents-project-xananode-core-sdk",
+      "type": "documents",
+      "source": "xananode.canonical:source/federated-substrate-xananode.core",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/source-repository-kingc95-xananode-core-sdk-documents-project-xananode-core-sdk",
       "type": "documents",
       "source": "xananode.canonical:source/repository-kingc95-xananode-core-sdk",
@@ -159,7 +165,7 @@
   "build_metadata": {
     "version": "0.1.0",
     "repository": "kingc95/XanaNode-Core-SDK",
-    "generated_at": "2026-06-22T09:24:54.180Z",
+    "generated_at": "2026-06-24T22:13:02.206Z",
     "built_by": "@xananode/core",
     "git_commit": "",
     "git_branch": "",

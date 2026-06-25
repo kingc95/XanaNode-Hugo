@@ -1,0 +1,30 @@
+{
+  "id": "xananode.canonical:source/federated-substrate-xananode.lineage",
+  "title": "XanaNode Lost Lineage Substrate",
+  "type": "source",
+  "subtype": "federated_substrate",
+  "importance": 3,
+  "summary": "A lineage substrate for the historical and conceptual path into XanaNode.",
+  "namespace": "xananode.lineage",
+  "status": "community",
+  "recommended_mode": "mounted",
+  "source_url": "https://xananode.com/",
+  "repository": "https://github.com/kingc95/XanaNode-Core-SDK.git",
+  "repository_branch": "main",
+  "substrate_path": "packs/xananode-lineage",
+  "licenses": [
+    "CC-BY-4.0"
+  ],
+  "rights_status": "external",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.lineage",
+      "type": "contains",
+      "source": "xananode.canonical:schema/federation-targets-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/source_federated-substrate-xananode.lineage.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

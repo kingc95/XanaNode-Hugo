@@ -1,0 +1,68 @@
+{
+  "id": "xananode.canonical:concept/self-federating-stack",
+  "title": "Self-Federating Stack",
+  "type": "concept",
+  "subtype": "architecture_pattern",
+  "importance": 5,
+  "summary": "The XanaNode stack demonstrates federation by treating its own major layers as independently versioned substrates that can still interoperate as one system.",
+  "content": "XanaNode is not only a protocol with external federation examples. The stack itself is federated. Protocol, Core, Workspace, Studio, Mobile, Hugo, Canonical, Alphabet, and Lineage are all represented as distinct substrates or substrate targets with their own namespace, repository, transport shape, and governance path. The canonical bundle also carries embedded example namespaces for teaching and testing, but those are not the same thing as the real stack-layer substrate sources. Together, these two patterns show that each layer can stand on its own while the layers can still be mounted, compared, validated, projected, and carried together without collapsing into one monolithic blob.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/claim-canonical-assembles-federated-stack-layer-substrates-supports-concept-self-federating-stack",
+      "type": "supports",
+      "source": "xananode.canonical:claim/canonical-assembles-federated-stack-layer-substrates",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/claim-canonical-distinguishes-embedded-examples-from-federated-sources-supports-concept-self-federating-stack",
+      "type": "supports",
+      "source": "xananode.canonical:claim/canonical-distinguishes-embedded-examples-from-federated-sources",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/claim-stack-demonstrates-federation-through-layer-substrates-supports-concept-self-federating-stack",
+      "type": "supports",
+      "source": "xananode.canonical:claim/stack-demonstrates-federation-through-layer-substrates",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-embedded-example-namespaces-supports-concept-self-federating-stack",
+      "type": "supports",
+      "source": "xananode.canonical:concept/embedded-example-namespaces",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-self-federating-stack-explains-concept-xananode",
+      "type": "explains",
+      "target": "xananode.canonical:concept/xananode",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-self-federating-stack-requires-schema-federation-targets-registry",
+      "type": "requires",
+      "target": "xananode.canonical:schema/federation-targets-registry",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-self-federating-stack-requires-schema-known-implementations-registry",
+      "type": "requires",
+      "target": "xananode.canonical:schema/known-implementations-registry",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-self-federating-stack-supports-concept-substrate-projection-layer",
+      "type": "supports",
+      "target": "xananode.canonical:concept/substrate-projection-layer",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/trail-federated-stack-proof-explains-concept-self-federating-stack",
+      "type": "explains",
+      "source": "xananode.canonical:trail/federated-stack-proof",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/concept_self-federating-stack.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

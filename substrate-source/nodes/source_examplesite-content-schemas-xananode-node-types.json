@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-schemas-xananode-node-types",
+  "title": "ExampleSite / Content / Schemas / Xananode Node Types",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/schemas/xananode-node-types.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/schemas/xananode-node-types.md",
+  "artifact_path": "exampleSite/content/schemas/xananode-node-types.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/schemas/xananode-node-types.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:21606d32833c9279c8503c75322a8be7172a731ec57b774cf37f542312a1b6ba",
+  "content": "---\r\ntitle: \"XanaNode Node Types\"\r\ntype: \"schema\"\r\nimportance: 5\r\nsummary: \"The canonical node type registry for XanaNode substrates.\"\r\nversion: \"0.3.0\"\r\nstatus: \"draft\"\r\nrelationships:\r\n  - type: \"defines\"\r\n    target: \"xananode\"\r\n  - type: \"equivalent_to\"\r\n    target: \"xananode.canonical:schema/node-type-registry\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-person\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-concept\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-claim\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-source\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-essay\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-observation\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-media\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-event\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-place\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-organization\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-project\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-technology\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-publication\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-community\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-relationship\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-revision\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-trail\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-schema\"\r\n  - type: \"contains\"\r\n    target: \"xananode.canonical:schema/node-type-fragment\"\r\n---\r\n\r\nNode types describe what kind of thing a node represents.\r\n\r\nThe current canonical registry contains 19 core node types:\r\n\r\n- [Person](/schema/node-type-person/)\r\n- [Concept](/schema/node-type-concept/)\r\n- [Claim](/schema/node-type-claim/)\r\n- [Source](/schema/node-type-source/)\r\n- [Essay](/schema/node-type-essay/)\r\n- [Observation](/schema/node-type-observation/)\r\n- [Media](/schema/node-type-media/)\r\n- [Event](/schema/node-type-event/)\r\n- [Place](/schema/node-type-place/)\r\n- [Organization](/schema/node-type-organization/)\r\n- [Project](/schema/node-type-project/)\r\n- [Technology](/schema/node-type-technology/)\r\n- [Publication](/schema/node-type-publication/)\r\n- [Community](/schema/node-type-community/)\r\n- [Relationship](/schema/node-type-relationship/)\r\n- [Revision](/schema/node-type-revision/)\r\n- [Trail](/schema/node-type-trail/)\r\n- [Schema](/schema/node-type-schema/)\r\n- [Fragment](/schema/node-type-fragment/)\r\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/schemas/xananode-node-types.md",
+    "method": "archive",
+    "content_id": "sha256:21606d32833c9279c8503c75322a8be7172a731ec57b774cf37f542312a1b6ba",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

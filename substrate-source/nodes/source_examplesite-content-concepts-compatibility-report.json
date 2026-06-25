@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-concepts-compatibility-report",
+  "title": "ExampleSite / Content / Concepts / Compatibility Report",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/concepts/compatibility-report.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/compatibility-report.md",
+  "artifact_path": "exampleSite/content/concepts/compatibility-report.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/concepts/compatibility-report.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:1ec6e077238f247223a4eb4e06aeae8cb284c20ffa25708a85c729da6723109f",
+  "content": "---\ntitle: \"Compatibility Report\"\ntype: \"concept\"\nimportance: 5\nsummary: \"A report that records how one substrate or tool understands another substrate, including compatibility level, supported schemas, warnings, and blocking issues.\"\nrelationships:\n  - type: \"documents\"\n    target: \"compatibility-levels\"\n  - type: \"required_for\"\n    target: \"merge-validation\"\n---\n\nA compatibility report records how one implementation understands a substrate.\n\nIt names the compatibility level reached, the schema versions recognized, unsupported extensions, warnings, and any blocking issues.\n\nThe canonical protocol example publishes a compatibility report for its [federation example](/node/federation-example), and this [Hugo](/node/hugo) implementation publishes the schema needed to validate that report shape.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/compatibility-report.md",
+    "method": "archive",
+    "content_id": "sha256:1ec6e077238f247223a4eb4e06aeae8cb284c20ffa25708a85c729da6723109f",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-sources-xananode-studio-repo",
+  "title": "ExampleSite / Content / Sources / Xananode Studio Repo",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/sources/xananode-studio-repo.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/sources/xananode-studio-repo.md",
+  "artifact_path": "exampleSite/content/sources/xananode-studio-repo.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/sources/xananode-studio-repo.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:90e38aceae1b4e30120e5727462065fa4d226ef064062d17cea67d7bcf28b4e9",
+  "content": "---\r\ntitle: \"XanaNode Studio Repository\"\r\ntype: \"source\"\r\nimportance: 4\r\nauthor: \"XanaNode Contributors\"\r\nyear: \"2026\"\r\nsummary: \"The desktop workbench repository for editing, previewing, validating, and navigating local XanaNode substrates.\"\r\nsource_url: \"https://github.com/kingc95/XanaNode-Studio\"\r\nrights_status: \"open-source\"\r\nrelationships:\r\n  - type: \"uses\"\r\n    target: \"xananode-core-schema\"\r\n  - type: \"uses\"\r\n    target: \"xananode-hugo-theme\"\r\n  - type: \"demonstrates\"\r\n    target: \"knowledge-substrate\"\r\n---\r\n\r\nThe Studio repository provides the local-first desktop workbench for editing nodes, previewing [Hugo](hugo) output, validating substrates, and managing author workflows.\r\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/sources/xananode-studio-repo.md",
+    "method": "archive",
+    "content_id": "sha256:90e38aceae1b4e30120e5727462065fa4d226ef064062d17cea67d7bcf28b4e9",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

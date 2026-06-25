@@ -10,6 +10,18 @@
   "summary": "A renderer or lens that presents a substrate for a particular use without becoming the substrate itself.",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/concept-self-federating-stack-supports-concept-substrate-projection-layer",
+      "type": "supports",
+      "source": "xananode.canonical:concept/self-federating-stack",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/essay-kernel-thought-related-to-projection-layer",
+      "type": "related_to",
+      "source": "xananode.canonical:essay/xananode-as-a-kernel-for-human-thought",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/hugo-implements-projection-layer",
       "type": "implements",
       "source": "xananode.canonical:project/xananode-hugo-theme",
@@ -49,6 +61,12 @@
       "id": "xananode.canonical:rel/project-xananode-workspace-implements-concept-substrate-projection-layer",
       "type": "implements",
       "source": "xananode.canonical:project/xananode-workspace",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/projection-lenses-claim-defines-projection-layer",
+      "type": "defines",
+      "source": "xananode.canonical:claim/projections-are-lenses-over-a-stable-substrate",
       "direction": "incoming"
     },
     {

@@ -16,6 +16,12 @@
       "type": "example.museum:curatorial_context_for",
       "source": "example.museum:artifact/memex-illustration",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-memex-demonstrates-concept-embedded-example-namespaces",
+      "type": "demonstrates",
+      "target": "xananode.canonical:concept/embedded-example-namespaces",
+      "direction": "outgoing"
     }
   ],
   "imported_from": "nodes/concept_memex.json",

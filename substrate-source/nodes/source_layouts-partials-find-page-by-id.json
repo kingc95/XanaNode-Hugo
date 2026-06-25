@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-layouts-partials-find-page-by-id",
+  "title": "Layouts / Partials / Find Page By Id",
+  "type": "source",
+  "subtype": "reference_code",
+  "importance": 4,
+  "summary": "layouts/partials/find-page-by-id.html is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/layouts/partials/find-page-by-id.html",
+  "artifact_path": "layouts/partials/find-page-by-id.html",
+  "asset_path": "assets/raw/repository/layouts/partials/find-page-by-id.html",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/html",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:ae447bca5c94715bbb6fc54c90049bbd1bbdf41a9581676194aef418ef67f44d",
+  "content": "{{ $id := cond (reflect.IsMap .) .id . }}\n{{ $found := false }}\n{{ range site.RegularPages }}\n  {{ $nodeID := .Params.node_id | default .File.ContentBaseName }}\n  {{ if or (eq .File.ContentBaseName $id) (eq $nodeID $id) }}\n    {{ $found = . }}\n  {{ end }}\n{{ end }}\n{{ return $found }}\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/layouts/partials/find-page-by-id.html",
+    "method": "archive",
+    "content_id": "sha256:ae447bca5c94715bbb6fc54c90049bbd1bbdf41a9581676194aef418ef67f44d",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

@@ -22,6 +22,18 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/christian-created-kernel-thought-draft",
+      "type": "created",
+      "target": "xananode.canonical:source/xananode-kernel-for-human-thought-draft",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/christian-created-kernel-thought-essay",
+      "type": "created",
+      "target": "xananode.canonical:essay/xananode-as-a-kernel-for-human-thought",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/question-who-made-xananode-documents-person-christian-siefen-faq-1",
       "type": "documents",
       "source": "xananode.canonical:question/who-made-xananode",

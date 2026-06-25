@@ -2895,6 +2895,136 @@
       "asserted_at": "2026-06-19T00:00:00.000Z"
     },
     {
+      "id": "xananode.canonical:rel/christian-created-kernel-thought-draft",
+      "source": "xananode.canonical:person/christian-siefen",
+      "target": "xananode.canonical:source/xananode-kernel-for-human-thought-draft",
+      "type": "created",
+      "summary": "Christian Siefen authored the raw Linux-kernel comparison draft preserved in the canonical substrate.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/christian-created-kernel-thought-essay",
+      "source": "xananode.canonical:person/christian-siefen",
+      "target": "xananode.canonical:essay/xananode-as-a-kernel-for-human-thought",
+      "type": "created",
+      "summary": "Christian Siefen authored the canonical essay that reframes XanaNode as a kernel for knowledge.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/claim-canonical-assembles-federated-stack-layer-substrates-supports-concept-self-federating-stack",
+      "source": "xananode.canonical:claim/canonical-assembles-federated-stack-layer-substrates",
+      "target": "xananode.canonical:concept/self-federating-stack",
+      "type": "supports",
+      "summary": "This claim supports the self-federating stack concept.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/claim-canonical-assembles-federated-stack-layer-substrates-supports-essay-what-is-xananode",
+      "source": "xananode.canonical:claim/canonical-assembles-federated-stack-layer-substrates",
+      "target": "xananode.canonical:essay/what-is-xananode",
+      "type": "supports",
+      "summary": "This claim supports the main explanatory essay about XanaNode.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/claim-canonical-distinguishes-embedded-examples-from-federated-sources-supports-concept-embedded-example-namespaces",
+      "source": "xananode.canonical:claim/canonical-distinguishes-embedded-examples-from-federated-sources",
+      "target": "xananode.canonical:concept/embedded-example-namespaces",
+      "type": "supports",
+      "summary": "This claim supports the concept of embedded example namespaces.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/claim-canonical-distinguishes-embedded-examples-from-federated-sources-supports-concept-self-federating-stack",
+      "source": "xananode.canonical:claim/canonical-distinguishes-embedded-examples-from-federated-sources",
+      "target": "xananode.canonical:concept/self-federating-stack",
+      "type": "supports",
+      "summary": "This claim also supports the self-federating stack concept by clarifying what is embedded versus externally federated.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/claim-canonical-distinguishes-embedded-examples-from-federated-sources-supports-essay-what-is-xananode",
+      "source": "xananode.canonical:claim/canonical-distinguishes-embedded-examples-from-federated-sources",
+      "target": "xananode.canonical:essay/what-is-xananode",
+      "type": "supports",
+      "summary": "This claim helps the main explanatory essay distinguish bundled examples from real federated layer sources.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/claim-copy-paste-defines-trifecta",
+      "source": "xananode.canonical:claim/copy-paste-breaks-lineage",
+      "target": "xananode.canonical:concept/trifecta-of-computing-failure",
+      "type": "defines",
+      "summary": "Broken lineage through duplication defines one part of the computing failure XanaNode is meant to address.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/claim-document-boundaries-defines-trifecta",
+      "source": "xananode.canonical:claim/documents-collapse-knowledge-structure",
+      "target": "xananode.canonical:concept/trifecta-of-computing-failure",
+      "type": "defines",
+      "summary": "Document-centric knowledge boundaries define one part of the computing failure XanaNode is meant to address.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/claim-local-first-defines-trifecta",
+      "source": "xananode.canonical:claim/local-first-without-federation-is-not-enough",
+      "target": "xananode.canonical:concept/trifecta-of-computing-failure",
+      "type": "defines",
+      "summary": "The lack of a federation protocol defines one part of the computing failure XanaNode is meant to address.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/claim-stack-demonstrates-federation-through-layer-substrates-requires-source-federated-substrate-xananode.protocol",
+      "source": "xananode.canonical:claim/stack-demonstrates-federation-through-layer-substrates",
+      "target": "xananode.canonical:source/federated-substrate-xananode.protocol",
+      "type": "requires",
+      "summary": "The proof begins with the protocol substrate as the shared contract.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/claim-stack-demonstrates-federation-through-layer-substrates-supports-concept-self-federating-stack",
+      "source": "xananode.canonical:claim/stack-demonstrates-federation-through-layer-substrates",
+      "target": "xananode.canonical:concept/self-federating-stack",
+      "type": "supports",
+      "summary": "This claim supports the self-federating stack concept.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/claim-stack-demonstrates-federation-through-layer-substrates-supports-concept-xananode",
+      "source": "xananode.canonical:claim/stack-demonstrates-federation-through-layer-substrates",
+      "target": "xananode.canonical:concept/xananode",
+      "type": "supports",
+      "summary": "This claim says the stack itself is a live example of XanaNode's federation model.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
       "id": "xananode.canonical:rel/code-schemas-licensed-under-apache",
       "source": "xananode.canonical:claim/schemas-validators-reference-code-apache-2-0",
       "target": "xananode.canonical:source/apache-2-0-license",
@@ -2903,6 +3033,26 @@
       "weight": 5,
       "visibility": "primary",
       "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/comparison-essay-investigates-trifecta",
+      "source": "xananode.canonical:essay/xananode-compared-to-networked-notes-tools",
+      "target": "xananode.canonical:concept/trifecta-of-computing-failure",
+      "type": "investigates",
+      "summary": "The comparison essay investigates the same computing failure pattern through contemporary note-linking tools.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/comparison-essay-related-to-xananode",
+      "source": "xananode.canonical:essay/xananode-compared-to-networked-notes-tools",
+      "target": "xananode.canonical:concept/xananode",
+      "type": "related_to",
+      "summary": "The comparison essay explains XanaNode by contrasting it with current networked notes tools.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
     },
     {
       "id": "xananode.canonical:rel/compatibility-claim-supported-by-spec",
@@ -2920,6 +3070,46 @@
       "target": "xananode.canonical:concept/compatibility-attribution",
       "type": "defines",
       "summary": "The implementation compatibility spec defines compatibility attribution.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-embedded-example-namespaces-supports-concept-self-federating-stack",
+      "source": "xananode.canonical:concept/embedded-example-namespaces",
+      "target": "xananode.canonical:concept/self-federating-stack",
+      "type": "supports",
+      "summary": "Embedded example namespaces support the self-federating stack concept by showing bundled teaching-scale federation.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-knowledge-substrate-demonstrates-concept-embedded-example-namespaces",
+      "source": "example.researcher_a:concept/knowledge-substrate",
+      "target": "xananode.canonical:concept/embedded-example-namespaces",
+      "type": "demonstrates",
+      "summary": "Researcher A demonstrates an embedded example namespace used for federation patterns.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-memex-demonstrates-concept-embedded-example-namespaces",
+      "source": "example.museum:concept/memex",
+      "target": "xananode.canonical:concept/embedded-example-namespaces",
+      "type": "demonstrates",
+      "summary": "The museum example namespace demonstrates how extension-specific records can be embedded in the canonical bundle.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-memory-substrate-demonstrates-concept-embedded-example-namespaces",
+      "source": "example.researcher_b:concept/memory-substrate",
+      "target": "xananode.canonical:concept/embedded-example-namespaces",
+      "type": "demonstrates",
+      "summary": "Researcher B demonstrates an embedded example namespace used for federation patterns.",
       "weight": 4,
       "visibility": "secondary",
       "asserted_at": "2026-06-19T00:00:00.000Z"
@@ -3035,6 +3225,46 @@
       "asserted_at": "2026-06-19T00:00:00.000Z"
     },
     {
+      "id": "xananode.canonical:rel/concept-self-federating-stack-explains-concept-xananode",
+      "source": "xananode.canonical:concept/self-federating-stack",
+      "target": "xananode.canonical:concept/xananode",
+      "type": "explains",
+      "summary": "The self-federating stack concept explains XanaNode at the architectural level.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-self-federating-stack-requires-schema-federation-targets-registry",
+      "source": "xananode.canonical:concept/self-federating-stack",
+      "target": "xananode.canonical:schema/federation-targets-registry",
+      "type": "requires",
+      "summary": "The self-federating stack depends on explicit federation target records.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-self-federating-stack-requires-schema-known-implementations-registry",
+      "source": "xananode.canonical:concept/self-federating-stack",
+      "target": "xananode.canonical:schema/known-implementations-registry",
+      "type": "requires",
+      "summary": "The self-federating stack also depends on implementation registry records.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-self-federating-stack-supports-concept-substrate-projection-layer",
+      "source": "xananode.canonical:concept/self-federating-stack",
+      "target": "xananode.canonical:concept/substrate-projection-layer",
+      "type": "supports",
+      "summary": "The self-federating stack concept supports the idea that projection layers are only one part of a wider substrate ecosystem.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
       "id": "xananode.canonical:rel/core-builds-protocol-artifacts",
       "source": "xananode.canonical:project/xananode-core-sdk",
       "target": "xananode.canonical:concept/protocol-artifacts",
@@ -3083,6 +3313,88 @@
       "weight": 5,
       "visibility": "primary",
       "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/essay-kernel-thought-explains-xananode",
+      "source": "xananode.canonical:essay/xananode-as-a-kernel-for-human-thought",
+      "target": "xananode.canonical:concept/xananode",
+      "type": "explains",
+      "summary": "The essay explains XanaNode through the Linux kernel analogy.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/essay-kernel-thought-investigates-trifecta",
+      "source": "xananode.canonical:essay/xananode-as-a-kernel-for-human-thought",
+      "target": "xananode.canonical:concept/trifecta-of-computing-failure",
+      "type": "investigates",
+      "summary": "The essay investigates the same three-part failure from the angle of open infrastructure.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/essay-kernel-thought-related-to-projection-layer",
+      "source": "xananode.canonical:essay/xananode-as-a-kernel-for-human-thought",
+      "target": "xananode.canonical:concept/substrate-projection-layer",
+      "type": "related_to",
+      "summary": "The essay links the Linux distribution model to XanaNode projection layers.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/essay-kernel-thought-transcludes-fragment-0001",
+      "source": "xananode.canonical:essay/xananode-as-a-kernel-for-human-thought",
+      "target": "xananode.canonical:fragment/xananode-kernel-thought-0001",
+      "type": "transcludes",
+      "summary": "The essay transcludes the shared-plumbing fragment by stable reference.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_by": "xananode.canonical:person/christian-siefen",
+      "asserted_at": "2026-06-22T00:00:00.000Z",
+      "confidence": "high",
+      "tumbler": "xananode.canonical:source/xananode-kernel-for-human-thought-draft@sha256:xananode-kernel-for-human-thought-draft-source-v1#fragment/0001@sha256:xananode-kernel-thought-fragment-0001"
+    },
+    {
+      "id": "xananode.canonical:rel/essay-kernel-thought-transcludes-fragment-0002",
+      "source": "xananode.canonical:essay/xananode-as-a-kernel-for-human-thought",
+      "target": "xananode.canonical:fragment/xananode-kernel-thought-0002",
+      "type": "transcludes",
+      "summary": "The essay transcludes the distributions-versus-projections fragment by stable reference.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_by": "xananode.canonical:person/christian-siefen",
+      "asserted_at": "2026-06-22T00:00:00.000Z",
+      "confidence": "high",
+      "tumbler": "xananode.canonical:source/xananode-kernel-for-human-thought-draft@sha256:xananode-kernel-for-human-thought-draft-source-v1#fragment/0002@sha256:xananode-kernel-thought-fragment-0002"
+    },
+    {
+      "id": "xananode.canonical:rel/essay-kernel-thought-transcludes-fragment-0003",
+      "source": "xananode.canonical:essay/xananode-as-a-kernel-for-human-thought",
+      "target": "xananode.canonical:fragment/xananode-kernel-thought-0003",
+      "type": "transcludes",
+      "summary": "The essay transcludes the tool-hostage fragment by stable reference.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_by": "xananode.canonical:person/christian-siefen",
+      "asserted_at": "2026-06-22T00:00:00.000Z",
+      "confidence": "high",
+      "tumbler": "xananode.canonical:source/xananode-kernel-for-human-thought-draft@sha256:xananode-kernel-for-human-thought-draft-source-v1#fragment/0003@sha256:xananode-kernel-thought-fragment-0003"
+    },
+    {
+      "id": "xananode.canonical:rel/essay-kernel-thought-transcludes-fragment-0004",
+      "source": "xananode.canonical:essay/xananode-as-a-kernel-for-human-thought",
+      "target": "xananode.canonical:fragment/xananode-kernel-thought-0004",
+      "type": "transcludes",
+      "summary": "The essay transcludes the federation fragment by stable reference.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_by": "xananode.canonical:person/christian-siefen",
+      "asserted_at": "2026-06-22T00:00:00.000Z",
+      "confidence": "high",
+      "tumbler": "xananode.canonical:source/xananode-kernel-for-human-thought-draft@sha256:xananode-kernel-for-human-thought-draft-source-v1#fragment/0004@sha256:xananode-kernel-thought-fragment-0004"
     },
     {
       "id": "xananode.canonical:rel/github-profile-includes-core-repo",
@@ -3183,6 +3495,90 @@
       "weight": 4,
       "visibility": "secondary",
       "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/kernel-fragment-0001-derived-from-source",
+      "source": "xananode.canonical:fragment/xananode-kernel-thought-0001",
+      "target": "xananode.canonical:source/xananode-kernel-for-human-thought-draft",
+      "type": "derived_from",
+      "summary": "Fragment 0001 is derived from the authored kernel comparison draft.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-22T00:00:00.000Z",
+      "tumbler": "xananode.canonical:source/xananode-kernel-for-human-thought-draft@sha256:xananode-kernel-for-human-thought-draft-source-v1#fragment/0001@sha256:xananode-kernel-thought-fragment-0001"
+    },
+    {
+      "id": "xananode.canonical:rel/kernel-fragment-0001-supports-open-kernel-claim",
+      "source": "xananode.canonical:fragment/xananode-kernel-thought-0001",
+      "target": "xananode.canonical:claim/xananode-is-an-open-kernel-for-knowledge",
+      "type": "supports",
+      "summary": "The shared-plumbing fragment supports the claim that XanaNode should function as an open kernel for knowledge.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/kernel-fragment-0002-derived-from-source",
+      "source": "xananode.canonical:fragment/xananode-kernel-thought-0002",
+      "target": "xananode.canonical:source/xananode-kernel-for-human-thought-draft",
+      "type": "derived_from",
+      "summary": "Fragment 0002 is derived from the authored kernel comparison draft.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-22T00:00:00.000Z",
+      "tumbler": "xananode.canonical:source/xananode-kernel-for-human-thought-draft@sha256:xananode-kernel-for-human-thought-draft-source-v1#fragment/0002@sha256:xananode-kernel-thought-fragment-0002"
+    },
+    {
+      "id": "xananode.canonical:rel/kernel-fragment-0002-supports-projection-lenses-claim",
+      "source": "xananode.canonical:fragment/xananode-kernel-thought-0002",
+      "target": "xananode.canonical:claim/projections-are-lenses-over-a-stable-substrate",
+      "type": "supports",
+      "summary": "The distributions-versus-projections fragment supports the claim that projections are lenses over a stable substrate.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/kernel-fragment-0003-derived-from-source",
+      "source": "xananode.canonical:fragment/xananode-kernel-thought-0003",
+      "target": "xananode.canonical:source/xananode-kernel-for-human-thought-draft",
+      "type": "derived_from",
+      "summary": "Fragment 0003 is derived from the authored kernel comparison draft.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-22T00:00:00.000Z",
+      "tumbler": "xananode.canonical:source/xananode-kernel-for-human-thought-draft@sha256:xananode-kernel-for-human-thought-draft-source-v1#fragment/0003@sha256:xananode-kernel-thought-fragment-0003"
+    },
+    {
+      "id": "xananode.canonical:rel/kernel-fragment-0003-supports-local-first-federation-claim",
+      "source": "xananode.canonical:fragment/xananode-kernel-thought-0003",
+      "target": "xananode.canonical:claim/local-first-without-federation-is-not-enough",
+      "type": "supports",
+      "summary": "The tool-hostage fragment supports the claim that local-first alone is not enough without a federated protocol layer.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/kernel-fragment-0004-derived-from-source",
+      "source": "xananode.canonical:fragment/xananode-kernel-thought-0004",
+      "target": "xananode.canonical:source/xananode-kernel-for-human-thought-draft",
+      "type": "derived_from",
+      "summary": "Fragment 0004 is derived from the authored kernel comparison draft.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-22T00:00:00.000Z",
+      "tumbler": "xananode.canonical:source/xananode-kernel-for-human-thought-draft@sha256:xananode-kernel-for-human-thought-draft-source-v1#fragment/0004@sha256:xananode-kernel-thought-fragment-0004"
+    },
+    {
+      "id": "xananode.canonical:rel/kernel-fragment-0004-supports-open-kernel-claim",
+      "source": "xananode.canonical:fragment/xananode-kernel-thought-0004",
+      "target": "xananode.canonical:claim/xananode-is-an-open-kernel-for-knowledge",
+      "type": "supports",
+      "summary": "The federation fragment supports the claim that XanaNode should become an open substrate ecosystem rather than a single product.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
     },
     {
       "id": "xananode.canonical:rel/license-policy-defines-licensing",
@@ -5585,6 +5981,16 @@
       "asserted_at": "2026-06-19T00:00:00.000Z"
     },
     {
+      "id": "xananode.canonical:rel/open-kernel-claim-defines-xananode",
+      "source": "xananode.canonical:claim/xananode-is-an-open-kernel-for-knowledge",
+      "target": "xananode.canonical:concept/xananode",
+      "type": "defines",
+      "summary": "The kernel analogy helps define what XanaNode is trying to become in the stack.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
       "id": "xananode.canonical:rel/open-license-includes-content-license",
       "source": "xananode.canonical:concept/open-license",
       "target": "xananode.canonical:concept/content-license",
@@ -6143,6 +6549,16 @@
       "weight": 4,
       "visibility": "secondary",
       "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/projection-lenses-claim-defines-projection-layer",
+      "source": "xananode.canonical:claim/projections-are-lenses-over-a-stable-substrate",
+      "target": "xananode.canonical:concept/substrate-projection-layer",
+      "type": "defines",
+      "summary": "The claim defines why a projection layer is a lens rather than the substrate itself.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
     },
     {
       "id": "xananode.canonical:rel/protocol-artifacts-enable-projection-layers",
@@ -7120,7 +7536,7 @@
       "target": "xananode.canonical:schema/relationship-type-attribution_required_by",
       "type": "contains",
       "summary": "The relationship type registry documents the attribution_required_by inverse relationship term.",
-      "weight": 3,
+      "weight": 4,
       "visibility": "secondary",
       "asserted_at": "2026-06-19T00:00:00.000Z"
     },
@@ -7910,8 +8326,8 @@
       "target": "xananode.canonical:schema/relationship-type-governed_by",
       "type": "contains",
       "summary": "The relationship type registry contains the governed_by relationship type.",
-      "weight": 3,
-      "visibility": "secondary",
+      "weight": 5,
+      "visibility": "primary",
       "asserted_at": "2026-06-19T00:00:00.000Z"
     },
     {
@@ -7920,7 +8336,7 @@
       "target": "xananode.canonical:schema/relationship-type-governs",
       "type": "contains",
       "summary": "The relationship type registry documents the governs inverse relationship term.",
-      "weight": 3,
+      "weight": 4,
       "visibility": "secondary",
       "asserted_at": "2026-06-19T00:00:00.000Z"
     },
@@ -8300,7 +8716,7 @@
       "target": "xananode.canonical:schema/relationship-type-license_for",
       "type": "contains",
       "summary": "The relationship type registry documents the license_for inverse relationship term.",
-      "weight": 3,
+      "weight": 4,
       "visibility": "secondary",
       "asserted_at": "2026-06-19T00:00:00.000Z"
     },
@@ -8310,8 +8726,8 @@
       "target": "xananode.canonical:schema/relationship-type-licensed_under",
       "type": "contains",
       "summary": "The relationship type registry contains the licensed_under relationship type.",
-      "weight": 3,
-      "visibility": "secondary",
+      "weight": 5,
+      "visibility": "primary",
       "asserted_at": "2026-06-19T00:00:00.000Z"
     },
     {
@@ -8870,8 +9286,8 @@
       "target": "xananode.canonical:schema/relationship-type-requires_attribution",
       "type": "contains",
       "summary": "The relationship type registry contains the requires_attribution relationship type.",
-      "weight": 3,
-      "visibility": "secondary",
+      "weight": 5,
+      "visibility": "primary",
       "asserted_at": "2026-06-19T00:00:00.000Z"
     },
     {
@@ -9200,7 +9616,7 @@
       "target": "xananode.canonical:schema/relationship-type-trademark_holder_for",
       "type": "contains",
       "summary": "The relationship type registry documents the trademark_holder_for inverse relationship term.",
-      "weight": 3,
+      "weight": 4,
       "visibility": "secondary",
       "asserted_at": "2026-06-19T00:00:00.000Z"
     },
@@ -9210,8 +9626,8 @@
       "target": "xananode.canonical:schema/relationship-type-trademarked_by",
       "type": "contains",
       "summary": "The relationship type registry contains the trademarked_by relationship type.",
-      "weight": 3,
-      "visibility": "secondary",
+      "weight": 5,
+      "visibility": "primary",
       "asserted_at": "2026-06-19T00:00:00.000Z"
     },
     {
@@ -9490,6 +9906,96 @@
       "target": "xananode.canonical:schema/canonical-schema-xananode-relationship-types",
       "type": "contains",
       "summary": "The canonical schemas registry contains the xananode-relationship-types schema record.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.alphabet",
+      "source": "xananode.canonical:schema/federation-targets-registry",
+      "target": "xananode.canonical:source/federated-substrate-xananode.alphabet",
+      "type": "contains",
+      "summary": "The federation targets registry contains the XanaNode Alphabet Substrate substrate entry.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.canonical",
+      "source": "xananode.canonical:schema/federation-targets-registry",
+      "target": "xananode.canonical:source/federated-substrate-xananode.canonical",
+      "type": "contains",
+      "summary": "The federation targets registry contains the XanaNode Canonical Substrate substrate entry.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.core",
+      "source": "xananode.canonical:schema/federation-targets-registry",
+      "target": "xananode.canonical:source/federated-substrate-xananode.core",
+      "type": "contains",
+      "summary": "The federation targets registry contains the XanaNode Core SDK Substrate substrate entry.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.hugo",
+      "source": "xananode.canonical:schema/federation-targets-registry",
+      "target": "xananode.canonical:source/federated-substrate-xananode.hugo",
+      "type": "contains",
+      "summary": "The federation targets registry contains the XanaNode Hugo Theme Substrate substrate entry.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.lineage",
+      "source": "xananode.canonical:schema/federation-targets-registry",
+      "target": "xananode.canonical:source/federated-substrate-xananode.lineage",
+      "type": "contains",
+      "summary": "The federation targets registry contains the XanaNode Lost Lineage Substrate substrate entry.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.mobile",
+      "source": "xananode.canonical:schema/federation-targets-registry",
+      "target": "xananode.canonical:source/federated-substrate-xananode.mobile",
+      "type": "contains",
+      "summary": "The federation targets registry contains the XanaNode Mobile Substrate substrate entry.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.protocol",
+      "source": "xananode.canonical:schema/federation-targets-registry",
+      "target": "xananode.canonical:source/federated-substrate-xananode.protocol",
+      "type": "contains",
+      "summary": "The federation targets registry contains the XanaNode Protocol Substrate substrate entry.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.studio",
+      "source": "xananode.canonical:schema/federation-targets-registry",
+      "target": "xananode.canonical:source/federated-substrate-xananode.studio",
+      "type": "contains",
+      "summary": "The federation targets registry contains the XanaNode Studio Substrate substrate entry.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.workspace",
+      "source": "xananode.canonical:schema/federation-targets-registry",
+      "target": "xananode.canonical:source/federated-substrate-xananode.workspace",
+      "type": "contains",
+      "summary": "The federation targets registry contains the XanaNode Workspace Substrate substrate entry.",
       "weight": 5,
       "visibility": "primary",
       "asserted_at": "2026-06-19T00:00:00.000Z"
@@ -17515,6 +18021,16 @@
       "asserted_at": "2026-06-19T00:00:00.000Z"
     },
     {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-proposals-contains-source-protocol-artifact-proposals-xnp-0012-executable-tool-contract.md-raw-file-proposals-xnp-0012-executable-tool-contract.md",
+      "source": "xananode.canonical:schema/protocol-artifact-proposals",
+      "target": "xananode.canonical:source/protocol-artifact-proposals-xnp-0012-executable-tool-contract.md",
+      "type": "contains",
+      "summary": "Proposals contains proposals/XNP-0012-executable-tool-contract.md.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
       "id": "xananode.canonical:rel/schema-protocol-artifact-registry-canonical-schemas.json-documents-concept-protocol-artifacts-raw-file-docs-registry-canonical-schemas.json",
       "source": "xananode.canonical:schema/protocol-artifact-registry-canonical-schemas.json",
       "target": "xananode.canonical:concept/protocol-artifacts",
@@ -23805,6 +24321,156 @@
       "asserted_at": "2026-06-19T00:00:00.000Z"
     },
     {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.canonical-supports-claim-canonical-assembles-federated-stack-layer-substrates",
+      "source": "xananode.canonical:source/federated-substrate-xananode.canonical",
+      "target": "xananode.canonical:claim/canonical-assembles-federated-stack-layer-substrates",
+      "type": "supports",
+      "summary": "The canonical substrate source supports the claim that canonical now assembles federated stack-layer substrates.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.core-continues_to-source-federated-substrate-xananode.hugo",
+      "source": "xananode.canonical:source/federated-substrate-xananode.core",
+      "target": "xananode.canonical:source/federated-substrate-xananode.hugo",
+      "type": "continues_to",
+      "summary": "The stack proof also continues from Core to the Hugo projection layer substrate.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.core-continues_to-source-federated-substrate-xananode.workspace",
+      "source": "xananode.canonical:source/federated-substrate-xananode.core",
+      "target": "xananode.canonical:source/federated-substrate-xananode.workspace",
+      "type": "continues_to",
+      "summary": "The stack proof continues from the Core substrate to the Workspace substrate.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.core-documents-project-xananode-core-sdk",
+      "source": "xananode.canonical:source/federated-substrate-xananode.core",
+      "target": "xananode.canonical:project/xananode-core-sdk",
+      "type": "documents",
+      "summary": "XanaNode Core SDK Substrate is the actual federated substrate source for XanaNode Core SDK.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.hugo-arrives_at-source-federated-substrate-xananode.canonical",
+      "source": "xananode.canonical:source/federated-substrate-xananode.hugo",
+      "target": "xananode.canonical:source/federated-substrate-xananode.canonical",
+      "type": "arrives_at",
+      "summary": "Hugo projects the canonical substrate as a public readable lens.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.hugo-documents-project-xananode-hugo-theme",
+      "source": "xananode.canonical:source/federated-substrate-xananode.hugo",
+      "target": "xananode.canonical:project/xananode-hugo-theme",
+      "type": "documents",
+      "summary": "XanaNode Hugo Theme Substrate is the actual federated substrate source for XanaNode Hugo Theme.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.mobile-arrives_at-source-federated-substrate-xananode.canonical",
+      "source": "xananode.canonical:source/federated-substrate-xananode.mobile",
+      "target": "xananode.canonical:source/federated-substrate-xananode.canonical",
+      "type": "arrives_at",
+      "summary": "Mobile capture can eventually federate back into the canonical substrate.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.mobile-documents-project-xananode-mobile",
+      "source": "xananode.canonical:source/federated-substrate-xananode.mobile",
+      "target": "xananode.canonical:project/xananode-mobile",
+      "type": "documents",
+      "summary": "XanaNode Mobile Substrate is the actual federated substrate source for XanaNode Mobile.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.protocol-continues_to-source-federated-substrate-xananode.core",
+      "source": "xananode.canonical:source/federated-substrate-xananode.protocol",
+      "target": "xananode.canonical:source/federated-substrate-xananode.core",
+      "type": "continues_to",
+      "summary": "The stack proof continues from the protocol substrate to the Core substrate.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.protocol-documents-project-xananode-protocol",
+      "source": "xananode.canonical:source/federated-substrate-xananode.protocol",
+      "target": "xananode.canonical:project/xananode-protocol",
+      "type": "documents",
+      "summary": "XanaNode Protocol Substrate is the actual federated substrate source for XanaNode Protocol.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.studio-arrives_at-source-federated-substrate-xananode.canonical",
+      "source": "xananode.canonical:source/federated-substrate-xananode.studio",
+      "target": "xananode.canonical:source/federated-substrate-xananode.canonical",
+      "type": "arrives_at",
+      "summary": "Studio can participate in producing and editing the canonical substrate.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.studio-documents-project-xananode-studio",
+      "source": "xananode.canonical:source/federated-substrate-xananode.studio",
+      "target": "xananode.canonical:project/xananode-studio",
+      "type": "documents",
+      "summary": "XanaNode Studio Substrate is the actual federated substrate source for XanaNode Studio.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.workspace-continues_to-source-federated-substrate-xananode.mobile",
+      "source": "xananode.canonical:source/federated-substrate-xananode.workspace",
+      "target": "xananode.canonical:source/federated-substrate-xananode.mobile",
+      "type": "continues_to",
+      "summary": "The stack proof also continues from Workspace to Mobile.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.workspace-continues_to-source-federated-substrate-xananode.studio",
+      "source": "xananode.canonical:source/federated-substrate-xananode.workspace",
+      "target": "xananode.canonical:source/federated-substrate-xananode.studio",
+      "type": "continues_to",
+      "summary": "The stack proof continues from Workspace to Studio.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.workspace-documents-project-xananode-workspace",
+      "source": "xananode.canonical:source/federated-substrate-xananode.workspace",
+      "target": "xananode.canonical:project/xananode-workspace",
+      "type": "documents",
+      "summary": "XanaNode Workspace Substrate is the actual federated substrate source for XanaNode Workspace.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
       "id": "xananode.canonical:rel/source-protocol-artifact-examples-custom-extension-substrate-nodes-readme.md-documents-concept-protocol-artifacts-raw-file-docs-examples-custom-extension-substrate-nodes-readme.md",
       "source": "xananode.canonical:source/protocol-artifact-examples-custom-extension-substrate-nodes-readme.md",
       "target": "xananode.canonical:concept/protocol-artifacts",
@@ -24145,6 +24811,16 @@
       "asserted_at": "2026-06-19T00:00:00.000Z"
     },
     {
+      "id": "xananode.canonical:rel/source-protocol-artifact-proposals-xnp-0012-executable-tool-contract.md-documents-concept-protocol-artifacts-raw-file-docs-proposals-xnp-0012-executable-tool-contract.md",
+      "source": "xananode.canonical:source/protocol-artifact-proposals-xnp-0012-executable-tool-contract.md",
+      "target": "xananode.canonical:concept/protocol-artifacts",
+      "type": "documents",
+      "summary": "proposals/XNP-0012-executable-tool-contract.md documents the XanaNode protocol artifact set.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
       "id": "xananode.canonical:rel/source-protocol-artifact-readme.md-documents-concept-protocol-artifacts-raw-file-docs-readme.md",
       "source": "xananode.canonical:source/protocol-artifact-readme.md",
       "target": "xananode.canonical:concept/protocol-artifacts",
@@ -24435,6 +25111,86 @@
       "asserted_at": "2026-06-19T00:00:00.000Z"
     },
     {
+      "id": "xananode.canonical:rel/trail-federated-stack-proof-continues_to-claim-canonical-distinguishes-embedded-examples-from-federated-sources",
+      "source": "xananode.canonical:trail/federated-stack-proof",
+      "target": "xananode.canonical:claim/canonical-distinguishes-embedded-examples-from-federated-sources",
+      "type": "continues_to",
+      "summary": "The trail continues by clarifying the difference between embedded examples and real federated substrate sources.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/trail-federated-stack-proof-explains-concept-self-federating-stack",
+      "source": "xananode.canonical:trail/federated-stack-proof",
+      "target": "xananode.canonical:concept/self-federating-stack",
+      "type": "explains",
+      "summary": "The trail explains the self-federating stack concept.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/trail-federated-stack-proof-starts_with-claim-stack-demonstrates-federation-through-layer-substrates",
+      "source": "xananode.canonical:trail/federated-stack-proof",
+      "target": "xananode.canonical:claim/stack-demonstrates-federation-through-layer-substrates",
+      "type": "starts_with",
+      "summary": "The trail begins with the claim that the stack demonstrates federation through layer substrates.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/trail-federated-stack-proof-supports-concept-embedded-example-namespaces",
+      "source": "xananode.canonical:trail/federated-stack-proof",
+      "target": "xananode.canonical:concept/embedded-example-namespaces",
+      "type": "supports",
+      "summary": "The trail also supports the concept of embedded example namespaces.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/trail-start-here-demonstrates-concept-embedded-example-namespaces",
+      "source": "example.minimal:trail/start-here",
+      "target": "xananode.canonical:concept/embedded-example-namespaces",
+      "type": "demonstrates",
+      "summary": "The minimal example namespace demonstrates how a small teaching substrate can live inside the canonical bundle.",
+      "weight": 4,
+      "visibility": "secondary",
+      "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/trifecta-has-claim-copy-paste",
+      "source": "xananode.canonical:concept/trifecta-of-computing-failure",
+      "target": "xananode.canonical:claim/copy-paste-breaks-lineage",
+      "type": "has_claim",
+      "summary": "The trifecta concept includes the claim that copy and paste breaks lineage.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/trifecta-has-claim-document-boundaries",
+      "source": "xananode.canonical:concept/trifecta-of-computing-failure",
+      "target": "xananode.canonical:claim/documents-collapse-knowledge-structure",
+      "type": "has_claim",
+      "summary": "The trifecta concept includes the claim that document boundaries collapse knowledge structure.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/trifecta-has-claim-local-first-alone",
+      "source": "xananode.canonical:concept/trifecta-of-computing-failure",
+      "target": "xananode.canonical:claim/local-first-without-federation-is-not-enough",
+      "type": "has_claim",
+      "summary": "The trifecta concept includes the claim that local-first alone is not enough without a federation protocol.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
       "id": "xananode.canonical:rel/what-is-xananode-explains-xananode",
       "source": "xananode.canonical:essay/what-is-xananode",
       "target": "xananode.canonical:concept/xananode",
@@ -24605,6 +25361,26 @@
       "asserted_at": "2026-06-19T00:00:00.000Z"
     },
     {
+      "id": "xananode.canonical:rel/xananode-has-claim-open-kernel",
+      "source": "xananode.canonical:concept/xananode",
+      "target": "xananode.canonical:claim/xananode-is-an-open-kernel-for-knowledge",
+      "type": "has_claim",
+      "summary": "The XanaNode concept includes the claim that it should function as an open kernel for knowledge.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-has-claim-projection-lenses",
+      "source": "xananode.canonical:concept/xananode",
+      "target": "xananode.canonical:claim/projections-are-lenses-over-a-stable-substrate",
+      "type": "has_claim",
+      "summary": "The XanaNode concept includes the claim that projections are lenses over a stable substrate.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
+    },
+    {
       "id": "xananode.canonical:rel/xananode-has-claim-relationships-preserve-knowledge",
       "source": "xananode.canonical:concept/xananode",
       "target": "xananode.canonical:claim/relationships-preserve-knowledge",
@@ -24673,6 +25449,16 @@
       "weight": 5,
       "visibility": "primary",
       "asserted_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-related-to-trifecta",
+      "source": "xananode.canonical:concept/xananode",
+      "target": "xananode.canonical:concept/trifecta-of-computing-failure",
+      "type": "related_to",
+      "summary": "XanaNode is explicitly positioned as an answer to the trifecta of computing failure.",
+      "weight": 5,
+      "visibility": "primary",
+      "asserted_at": "2026-06-22T00:00:00.000Z"
     },
     {
       "id": "xananode.canonical:rel/xananode-studio-identifies-compatibility",

@@ -1,0 +1,10 @@
+{
+  "id": "xananode.hugo:technology/xananode-hugo-renderer",
+  "title": "XanaNode Hugo Renderer",
+  "type": "technology",
+  "subtype": "static_site_renderer",
+  "importance": 4,
+  "summary": "The static-site rendering surface that projects XanaNode substrates into HTML, machine discovery endpoints, and a graph-driven reading experience.",
+  "software_version": "0.1.0",
+  "relationships": []
+}

@@ -5,6 +5,7 @@
   "subtype": "protocol",
   "importance": 5,
   "summary": "A protocol for independently authored knowledge substrates that preserve relationships, provenance, lineage, disagreement, and addressable fragments so knowledge can move across tools and media without losing its structure.",
+  "content": "XanaNode is a protocol for independently authored knowledge substrates that preserve relationships, provenance, lineage, disagreement, and addressable fragments, so knowledge can move across tools and media without losing its structure.\n\nThe protocol does not define a single viewer or one mandatory application. It defines the durable substrate shape, the validation rules, the registries, and the artifact contracts that let many tools read, compare, merge, and project the same knowledge.\n\nA XanaNode-compatible stack should be able to carry people, places, things, ideas, claims, questions, evidence, uncertainty, raw assets, and typed relationships in a form that survives transmission. That is why the protocol centers relationships, authorship, source lineage, and stable references instead of treating a document as the only meaningful unit.",
   "primary_media": "xananode.canonical:media/xananode-icon",
   "relationships": [
     {
@@ -14,9 +15,39 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/claim-stack-demonstrates-federation-through-layer-substrates-supports-concept-xananode",
+      "type": "supports",
+      "source": "xananode.canonical:claim/stack-demonstrates-federation-through-layer-substrates",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/comparison-essay-related-to-xananode",
+      "type": "related_to",
+      "source": "xananode.canonical:essay/xananode-compared-to-networked-notes-tools",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-self-federating-stack-explains-concept-xananode",
+      "type": "explains",
+      "source": "xananode.canonical:concept/self-federating-stack",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/essay-kernel-thought-explains-xananode",
+      "type": "explains",
+      "source": "xananode.canonical:essay/xananode-as-a-kernel-for-human-thought",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/icon-depicts-xananode",
       "type": "depicts",
       "source": "xananode.canonical:media/xananode-icon",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/open-kernel-claim-defines-xananode",
+      "type": "defines",
+      "source": "xananode.canonical:claim/xananode-is-an-open-kernel-for-knowledge",
       "direction": "incoming"
     },
     {
@@ -98,6 +129,18 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/xananode-has-claim-open-kernel",
+      "type": "has_claim",
+      "target": "xananode.canonical:claim/xananode-is-an-open-kernel-for-knowledge",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-has-claim-projection-lenses",
+      "type": "has_claim",
+      "target": "xananode.canonical:claim/projections-are-lenses-over-a-stable-substrate",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/xananode-has-claim-relationships-preserve-knowledge",
       "type": "has_claim",
       "target": "xananode.canonical:claim/relationships-preserve-knowledge",
@@ -119,6 +162,12 @@
       "id": "xananode.canonical:rel/xananode-published-at-com",
       "type": "documents",
       "target": "xananode.canonical:source/xananode-com-domain",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-related-to-trifecta",
+      "type": "related_to",
+      "target": "xananode.canonical:concept/trifecta-of-computing-failure",
       "direction": "outgoing"
     }
   ],

@@ -1,0 +1,27 @@
+{{ $id := .Get "ref" | default (.Get 0) }}
+{{ $target := false }}
+
+{{ range site.RegularPages }}
+  {{ $nodeID := .Params.node_id | default .File.ContentBaseName }}
+  {{ if eq $nodeID $id }}
+    {{ $target = . }}
+  {{ end }}
+{{ end }}
+
+{{ if $target }}
+  <div class="xana-inline-node" data-node-ref="{{ $id }}">
+    <p class="xana-inline-type">
+      {{ $target.Params.node_type | default $target.Params.type | default $target.Section }}
+    </p>
+    <h3>
+      <a href="{{ $target.RelPermalink }}">{{ $target.Title }}</a>
+    </h3>
+    {{ with $target.Params.summary }}
+      <p>{{ . }}</p>
+    {{ end }}
+  </div>
+{{ else }}
+  <div class="xana-inline-node missing">
+    <p>Missing node: {{ $id }}</p>
+  </div>
+{{ end }}

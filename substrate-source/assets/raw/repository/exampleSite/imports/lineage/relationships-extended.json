@@ -1,0 +1,508 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/leibniz-anticipated-semantic-computation",
+      "source": "xananode.lineage:person/gottfried-wilhelm-leibniz",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "anticipated",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Leibniz anticipated semantic computation through universal symbolic reasoning."
+    },
+    {
+      "id": "xananode.lineage:rel/ostwald-parallel-to-otlet",
+      "source": "xananode.lineage:person/wilhelm-ostwald",
+      "target": "xananode.lineage:person/paul-otlet",
+      "type": "parallel_to",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Ostwald's Die Bruecke work runs parallel to Otlet's knowledge organization work."
+    },
+    {
+      "id": "xananode.lineage:rel/borges-authored-forking-paths",
+      "source": "xananode.lineage:person/jorge-luis-borges",
+      "target": "xananode.lineage:publication/the-garden-of-forking-paths",
+      "type": "authored",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Borges authored The Garden of Forking Paths."
+    },
+    {
+      "id": "xananode.lineage:rel/forking-paths-anticipated-nonlinear-text",
+      "source": "xananode.lineage:publication/the-garden-of-forking-paths",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "anticipated",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "The Garden of Forking Paths anticipated nonlinear textual structures."
+    },
+    {
+      "id": "xananode.lineage:rel/van-dam-collaborated-with-nelson",
+      "source": "xananode.lineage:person/andries-van-dam",
+      "target": "xananode.example:person/ted-nelson",
+      "type": "collaborated_with",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Andries van Dam belongs to the Brown hypertext lineage connected to Nelson's early hypertext work."
+    },
+    {
+      "id": "xananode.lineage:rel/brown-site-of-hes",
+      "source": "xananode.lineage:place/brown-university",
+      "target": "xananode.lineage:project/hypertext-editing-system",
+      "type": "occurred_at",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Brown University was a site of the Hypertext Editing System lineage."
+    },
+    {
+      "id": "xananode.lineage:rel/van-dam-implemented-fress",
+      "source": "xananode.lineage:person/andries-van-dam",
+      "target": "xananode.lineage:project/fress",
+      "type": "implements",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Van Dam's Brown lineage implemented FRESS."
+    },
+    {
+      "id": "xananode.lineage:rel/intermedia-implemented-scholarly-hypermedia",
+      "source": "xananode.lineage:project/intermedia",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "implements",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Intermedia implemented scholarly hypermedia as part of the larger lineage."
+    },
+    {
+      "id": "xananode.lineage:rel/alan-kay-extends-engelbart",
+      "source": "xananode.lineage:person/alan-kay",
+      "target": "xananode.example:person/douglas-engelbart",
+      "type": "extends",
+      "weight": 4,
+      "visibility": "primary",
+      "summary": "Kay extends Engelbart's augmentation ideas into personal dynamic media."
+    },
+    {
+      "id": "xananode.lineage:rel/xerox-parc-context-for-kay",
+      "source": "xananode.lineage:organization/xerox-parc",
+      "target": "xananode.lineage:person/alan-kay",
+      "type": "context_for",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Xerox PARC contextualizes Kay's major work."
+    },
+    {
+      "id": "xananode.lineage:rel/negroponte-shapes-media-lab",
+      "source": "xananode.lineage:person/nicholas-negroponte",
+      "target": "xananode.lineage:organization/mit-media-lab",
+      "type": "shapes",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Negroponte shaped the interactive media and information-space branch."
+    },
+    {
+      "id": "xananode.lineage:rel/papert-parallel-to-kay",
+      "source": "xananode.lineage:person/seymour-papert",
+      "target": "xananode.lineage:person/alan-kay",
+      "type": "parallel_to",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Papert's learning-media work runs parallel to Kay's dynamic media branch."
+    },
+    {
+      "id": "xananode.lineage:rel/minsky-context-for-agents",
+      "source": "xananode.lineage:person/marvin-minsky",
+      "target": "xananode.lineage:technology/apple-knowledge-navigator",
+      "type": "context_for",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Minsky's AI work contextualizes intelligent agents and cognitive modeling."
+    },
+    {
+      "id": "xananode.lineage:rel/brondmo-introduced-micons",
+      "source": "xananode.lineage:person/hans-peter-brondmo",
+      "target": "xananode.lineage:technology/micons",
+      "type": "introduced",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Hans Peter Brondmo introduced micons as animated conceptual representations."
+    },
+    {
+      "id": "xananode.lineage:rel/hyperland-features-micons",
+      "source": "xananode.lineage:publication/hyperland",
+      "target": "xananode.lineage:technology/micons",
+      "type": "features",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Hyperland features micons as part of its media-agent demonstration."
+    },
+    {
+      "id": "xananode.lineage:rel/winter-demonstrated-interactive-music",
+      "source": "xananode.lineage:person/robert-winter",
+      "target": "xananode.lineage:project/interactive-beethoven-ninth",
+      "type": "demonstrates",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Robert Winter demonstrated music as explorable structure."
+    },
+    {
+      "id": "xananode.lineage:rel/abel-demonstrated-guernica",
+      "source": "xananode.lineage:person/robert-abel",
+      "target": "xananode.lineage:project/interactive-guernica",
+      "type": "demonstrates",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Robert Abel demonstrated visual art as navigable knowledge."
+    },
+    {
+      "id": "xananode.lineage:rel/sutherland-anticipated-spatial-computing",
+      "source": "xananode.lineage:person/ivan-sutherland",
+      "target": "xananode.lineage:tool/hyperland-vr",
+      "type": "anticipated",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Sutherland anticipated visual and spatial computing."
+    },
+    {
+      "id": "xananode.lineage:rel/lanier-popularized-vr",
+      "source": "xananode.lineage:person/jaron-lanier",
+      "target": "xananode.lineage:organization/vpl-research",
+      "type": "popularized",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Lanier popularized virtual reality through VPL Research."
+    },
+    {
+      "id": "xananode.lineage:rel/fisher-demonstrated-nasa-vr",
+      "source": "xananode.lineage:person/scott-fisher",
+      "target": "xananode.lineage:organization/nasa",
+      "type": "demonstrates",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Scott Fisher demonstrated VR cases including NASA virtual environment work."
+    },
+    {
+      "id": "xananode.lineage:rel/dirk-gently-anticipated-hyperland",
+      "source": "xananode.lineage:publication/dirk-gentlys-holistic-detective-agency",
+      "target": "xananode.lineage:publication/hyperland",
+      "type": "anticipated",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Dirk Gently anticipates Hyperland's theme of interconnectedness."
+    },
+    {
+      "id": "xananode.lineage:rel/bbc-two-created-hyperland-broadcast-context",
+      "source": "xananode.lineage:organization/bbc-two",
+      "target": "xananode.lineage:publication/hyperland",
+      "type": "created",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "BBC Two provided the broadcast context for Hyperland."
+    },
+    {
+      "id": "xananode.lineage:rel/wurman-created-ted-context",
+      "source": "xananode.lineage:person/richard-saul-wurman",
+      "target": "xananode.lineage:event/ted2-1990",
+      "type": "created",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Richard Saul Wurman created the TED context that TED2 belongs to."
+    },
+    {
+      "id": "xananode.lineage:rel/harry-marks-participated-in-ted2",
+      "source": "xananode.lineage:person/harry-marks",
+      "target": "xananode.lineage:event/ted2-1990",
+      "type": "participated_in",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Harry Marks participated in TED2."
+    },
+    {
+      "id": "xananode.lineage:rel/sculley-presented-knowledge-navigator",
+      "source": "xananode.lineage:person/john-sculley",
+      "target": "xananode.lineage:technology/apple-knowledge-navigator",
+      "type": "presented",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "John Sculley presented Apple's agent and interactive-media future."
+    },
+    {
+      "id": "xananode.lineage:rel/knowledge-navigator-parallel-to-hyperland-agent",
+      "source": "xananode.lineage:technology/apple-knowledge-navigator",
+      "target": "xananode.lineage:person/tom-baker",
+      "type": "parallel_to",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Apple Knowledge Navigator runs parallel to Hyperland's software-agent persona."
+    },
+    {
+      "id": "xananode.lineage:rel/bill-atkinson-implemented-hypercard",
+      "source": "xananode.lineage:person/bill-atkinson",
+      "target": "xananode.lineage:technology/hypercard",
+      "type": "implements",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "Bill Atkinson implemented HyperCard."
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-robert-abel",
+      "source": "xananode.lineage:event/ted2-1990",
+      "target": "xananode.lineage:person/robert-abel",
+      "type": "features",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "TED2 featured Robert Abel's multimedia art navigation branch."
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-bill-atkinson",
+      "source": "xananode.lineage:event/ted2-1990",
+      "target": "xananode.lineage:person/bill-atkinson",
+      "type": "features",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "TED2 featured Bill Atkinson and accessible hypermedia authoring."
+    },
+    {
+      "id": "xananode.lineage:rel/berners-lee-collaborated-with-cailliau",
+      "source": "xananode.lineage:person/tim-berners-lee",
+      "target": "xananode.lineage:person/robert-cailliau",
+      "type": "collaborated_with",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Berners-Lee collaborated with Robert Cailliau on the Web proposal and promotion."
+    },
+    {
+      "id": "xananode.lineage:rel/cern-context-for-web",
+      "source": "xananode.lineage:place/cern",
+      "target": "xananode.lineage:technology/world-wide-web",
+      "type": "context_for",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "CERN provided the context for the Web's birth."
+    },
+    {
+      "id": "xananode.lineage:rel/html-implements-markup",
+      "source": "xananode.lineage:technology/html",
+      "target": "xananode.lineage:technology/world-wide-web",
+      "type": "implements",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "HTML implements document markup for the Web."
+    },
+    {
+      "id": "xananode.lineage:rel/http-enables-web",
+      "source": "xananode.lineage:technology/http",
+      "target": "xananode.lineage:technology/world-wide-web",
+      "type": "enables",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "HTTP enables distributed retrieval on the Web."
+    },
+    {
+      "id": "xananode.lineage:rel/url-uri-enables-addressability",
+      "source": "xananode.lineage:technology/url-uri",
+      "target": "xananode.lineage:technology/world-wide-web",
+      "type": "enables",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "URL and URI addressing enables Web addressability."
+    },
+    {
+      "id": "xananode.lineage:rel/ncsa-popularized-mosaic",
+      "source": "xananode.lineage:organization/ncsa",
+      "target": "xananode.lineage:technology/mosaic",
+      "type": "popularized",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "NCSA popularized Web browsing through Mosaic."
+    },
+    {
+      "id": "xananode.lineage:rel/andreessen-popularized-web",
+      "source": "xananode.lineage:person/marc-andreessen",
+      "target": "xananode.lineage:technology/world-wide-web",
+      "type": "popularized",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Marc Andreessen helped popularize the Web branch."
+    },
+    {
+      "id": "xananode.lineage:rel/web-incomplete-contrasts-with-xananode",
+      "source": "xananode.lineage:concept/web-as-incomplete-hypertext",
+      "target": "xananode.example:concept/xananode",
+      "type": "contrasts_with",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "The incomplete-hypertext frame contrasts the Web's missing provenance and relationship governance with XanaNode."
+    },
+    {
+      "id": "xananode.lineage:rel/guide-implemented-pc-hypertext",
+      "source": "xananode.lineage:technology/guide",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "implements",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Guide implemented personal-computer hypertext."
+    },
+    {
+      "id": "xananode.lineage:rel/storyspace-implemented-hypertext-literature",
+      "source": "xananode.lineage:project/storyspace",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "implements",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Storyspace implemented hypertext literature authoring."
+    },
+    {
+      "id": "xananode.lineage:rel/zog-kms-implemented-frame-navigation",
+      "source": "xananode.lineage:project/zog-kms",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "implements",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "ZOG/KMS implemented frame and card based knowledge management."
+    },
+    {
+      "id": "xananode.lineage:rel/xanadu-at-autodesk-implements-xanadu",
+      "source": "xananode.lineage:project/xanadu-at-autodesk",
+      "target": "xananode.example:project/project-xanadu",
+      "type": "implements",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Xanadu at Autodesk attempted a commercial implementation of Nelson's Xanadu vision."
+    },
+    {
+      "id": "xananode.lineage:rel/xananode-preserves-lost-lineage",
+      "source": "xananode.example:concept/xananode",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "preserves",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "XanaNode preserves the lost lineage as an intertwingled graph."
+    },
+    {
+      "id": "xananode.lineage:rel/xananode-extends-bush-trails",
+      "source": "xananode.example:concept/xananode",
+      "target": "xananode.example:project/memex",
+      "type": "extends",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "XanaNode extends Bush's associative trails into typed, portable substrate records."
+    },
+    {
+      "id": "xananode.lineage:rel/xananode-extends-transclusion",
+      "source": "xananode.example:concept/xananode",
+      "target": "xananode.example:concept/transclusion",
+      "type": "extends",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "XanaNode extends Nelson-style transclusion with stable fragments and protocol identity."
+    },
+    {
+      "id": "xananode.lineage:rel/conflict-preserves-disagreement",
+      "source": "xananode.lineage:concept/conflict-disputed-identity",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "type": "preserves",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Conflict and disputed identity preserve disagreement instead of flattening it."
+    },
+    {
+      "id": "xananode.lineage:rel/git-backed-substrate-enables-history",
+      "source": "xananode.lineage:technology/git-backed-substrate",
+      "target": "xananode.example:concept/provenance",
+      "type": "enables",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "A Git-backed substrate enables history, branching, merging, authorship, and preservation."
+    },
+    {
+      "id": "xananode.lineage:rel/babel-maps-to-translation",
+      "source": "xananode.lineage:tool/babel",
+      "target": "xananode.example:concept/schema-extension",
+      "type": "maps_to",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Babel maps to future translation across machine-readable formats, languages, and ontologies."
+    },
+    {
+      "id": "xananode.lineage:rel/hyperland-vr-implements-spatial-navigation",
+      "source": "xananode.lineage:tool/hyperland-vr",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "type": "implements",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Hyperland VR imagines spatial navigation across federated substrates."
+    },
+    {
+      "id": "xananode.lineage:rel/overlap-context-for-federation",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "target": "xananode.example:concept/federated-knowledge-substrates",
+      "type": "context_for",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "Authored overlap is the practical reason federated substrates need identity comparison and governed merge behavior."
+    },
+    {
+      "id": "xananode.lineage:rel/overlap-has-federation-signal-claim",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "target": "xananode.lineage:claim/overlap-is-federation-signal",
+      "type": "has_claim",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "The overlap concept claims that overlapping records are federation signals."
+    },
+    {
+      "id": "xananode.lineage:rel/overlap-has-merge-claim",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "target": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "type": "has_claim",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "The overlap concept claims that merge decisions are authored interpretations."
+    },
+    {
+      "id": "xananode.lineage:rel/overlap-has-lineage-pack-claim",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "target": "xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack",
+      "type": "has_claim",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "The overlap concept claims that the lineage pack can overlap the canonical pack without becoming the same substrate."
+    },
+    {
+      "id": "xananode.lineage:rel/overlap-preserves-disputed-identity",
+      "source": "xananode.lineage:concept/authored-substrate-overlap",
+      "target": "xananode.lineage:concept/conflict-disputed-identity",
+      "type": "preserves",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Authored overlap preserves possible identity conflicts until a merge decision is justified."
+    },
+    {
+      "id": "xananode.lineage:rel/federation-signal-supports-xananode",
+      "source": "xananode.lineage:claim/overlap-is-federation-signal",
+      "target": "xananode.example:concept/xananode",
+      "type": "supports",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Treating overlap as a signal supports XanaNode's relationship-first federation model."
+    },
+    {
+      "id": "xananode.lineage:rel/merge-claim-refines-conflict",
+      "source": "xananode.lineage:claim/merge-is-authored-interpretation",
+      "target": "xananode.lineage:concept/conflict-disputed-identity",
+      "type": "refines",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "The merge claim refines disputed identity by making identity resolution attributable and reversible."
+    },
+    {
+      "id": "xananode.lineage:rel/lineage-overlap-claim-explains-pack-boundary",
+      "source": "xananode.lineage:claim/lineage-pack-can-overlap-canonical-pack",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "explains",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "The lineage pack may name canonical XanaNode ideas when explaining the path that led to them."
+    }
+  ]
+}

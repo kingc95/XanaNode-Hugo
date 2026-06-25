@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-claims-claim-relationships-preserve-context",
+  "title": "ExampleSite / Content / Claims / Claim Relationships Preserve Context",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/claims/claim-relationships-preserve-context.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/claims/claim-relationships-preserve-context.md",
+  "artifact_path": "exampleSite/content/claims/claim-relationships-preserve-context.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/claims/claim-relationships-preserve-context.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:f7f62a04576e6f9c13f31d29667e3622cc79fcdd285f0e0dda078b231664621a",
+  "content": "---\ntitle: \"Typed relationships preserve context that hyperlinks lose\"\ntype: \"claim\"\nimportance: 5\nstatus: \"active\"\nsummary: \"Typed relationships preserve why nodes are connected, while ordinary hyperlinks usually preserve only that a connection exists.\"\nrelationships:\n  - type: \"claim_of\"\n    target: \"typed-relationships\"\n  - type: \"contrasts_with\"\n    target: \"unlabeled-hyperlink\"\n---\n\nA hyperlink can connect a source to a target without saying whether the source cites, defines, contradicts, explains, quotes, or merely mentions the target.\n\n[Typed relationships](/node/typed-relationships) make that missing meaning explicit.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/claims/claim-relationships-preserve-context.md",
+    "method": "archive",
+    "content_id": "sha256:f7f62a04576e6f9c13f31d29667e3622cc79fcdd285f0e0dda078b231664621a",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

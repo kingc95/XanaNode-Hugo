@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-imports-review-fixture-relationships",
+  "title": "ExampleSite / Imports / Review Fixture / Relationships",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/imports/review-fixture/relationships.json is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/imports/review-fixture/relationships.json",
+  "artifact_path": "exampleSite/imports/review-fixture/relationships.json",
+  "asset_path": "assets/raw/repository/exampleSite/imports/review-fixture/relationships.json",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "application/json",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:e945a29e4adfc1a0b7beb82af6f022f72c130940affd7b5cb2dee78e0cc723a3",
+  "content": "{\r\n  \"relationships\": [\r\n    {\r\n      \"id\": \"xananode.review:rel/fixture-context-for-review\",\r\n      \"source\": \"xananode.review:observation/unresolved-review-fixture\",\r\n      \"target\": \"xananode.example:concept/review-suggestions\",\r\n      \"type\": \"context_for\",\r\n      \"weight\": 1,\r\n      \"visibility\": \"background\",\r\n      \"summary\": \"The fixture exists to demonstrate pending review suggestions without polluting canonical or lineage packs.\"\r\n    }\r\n  ]\r\n}\r\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/imports/review-fixture/relationships.json",
+    "method": "archive",
+    "content_id": "sha256:e945a29e4adfc1a0b7beb82af6f022f72c130940affd7b5cb2dee78e0cc723a3",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

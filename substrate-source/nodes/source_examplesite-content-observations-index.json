@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-observations-index",
+  "title": "ExampleSite / Content / Observations /  Index",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/observations/_index.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/observations/_index.md",
+  "artifact_path": "exampleSite/content/observations/_index.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/observations/_index.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:b55f62c61b8570132ffc14ba9bd0037bd94b62e661d02da4aefe575caa75dae7",
+  "content": "---\ntitle: \"Observations\"\n---\n\nReal-world symptoms and cases that motivate the knowledge substrate model.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/observations/_index.md",
+    "method": "archive",
+    "content_id": "sha256:b55f62c61b8570132ffc14ba9bd0037bd94b62e661d02da4aefe575caa75dae7",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-layouts-default-single",
+  "title": "Layouts /  Default / Single",
+  "type": "source",
+  "subtype": "reference_code",
+  "importance": 4,
+  "summary": "layouts/_default/single.html is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/layouts/_default/single.html",
+  "artifact_path": "layouts/_default/single.html",
+  "asset_path": "assets/raw/repository/layouts/_default/single.html",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/html",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:ff5a59fb97bdb25d3f0e3d1259117fd06e04ef127b30f4ee9030c4fd37a9d1b8",
+  "content": "﻿{{ define \"main\" }}\r\n<section class=\"xana-app\">\r\n  <div id=\"xana-graph\"></div>\r\n\r\n  <aside id=\"xana-panel\" class=\"xana-panel\">\r\n    <p class=\"panel-placeholder\">Select a node.</p>\r\n  </aside>\r\n</section>\r\n\r\n<script type=\"module\" src=\"{{ \"js/xananode.js\" | relURL }}?v={{ now.UnixNano }}\"></script>\r\n{{ end }}\r\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/layouts/_default/single.html",
+    "method": "archive",
+    "content_id": "sha256:ff5a59fb97bdb25d3f0e3d1259117fd06e04ef127b30f4ee9030c4fd37a9d1b8",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

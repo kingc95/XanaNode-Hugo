@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-schemas-merge-report-schema",
+  "title": "ExampleSite / Content / Schemas / Merge Report Schema",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/schemas/merge-report-schema.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/schemas/merge-report-schema.md",
+  "artifact_path": "exampleSite/content/schemas/merge-report-schema.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/schemas/merge-report-schema.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:a8996201012dc087400f5ed96d4a56af86a315a58fa276c8021f31c9d636ae21",
+  "content": "---\ntitle: \"Merge Report Schema\"\ntype: \"schema\"\nimportance: 4\nsummary: \"The JSON Schema that validates merge reports for substrate comparison and federation workflows.\"\nversion: \"2020-12\"\nstatus: \"draft\"\nrelationships:\n  - type: \"defines\"\n    target: \"merge-report\"\n  - type: \"documents\"\n    target: \"merge-validation\"\n  - type: \"required_for\"\n    target: \"federation-example\"\n---\n\nThis schema validates the record of a proposed merge or comparison.\n\nIt preserves mappings, conflicts, identity decisions, unresolved questions, and warnings so downstream tools can inspect what happened without treating a comparison as a destructive merge.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/schemas/merge-report-schema.md",
+    "method": "archive",
+    "content_id": "sha256:a8996201012dc087400f5ed96d4a56af86a315a58fa276c8021f31c9d636ae21",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

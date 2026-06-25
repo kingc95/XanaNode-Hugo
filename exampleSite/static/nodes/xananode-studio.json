@@ -13,7 +13,7 @@
   "build_metadata": {
     "version": "",
     "repository": "kingc95/XanaNode-Studio",
-    "generated_at": "2026-06-22T09:24:54.287Z",
+    "generated_at": "2026-06-24T22:13:03.638Z",
     "built_by": "@xananode/core",
     "dependencies": [
       {
@@ -110,6 +110,12 @@
       "id": "xananode.canonical:rel/schema-known-implementations-registry-contains-project-xananode-studio",
       "type": "contains",
       "source": "xananode.canonical:schema/known-implementations-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.studio-documents-project-xananode-studio",
+      "type": "documents",
+      "source": "xananode.canonical:source/federated-substrate-xananode.studio",
       "direction": "incoming"
     },
     {

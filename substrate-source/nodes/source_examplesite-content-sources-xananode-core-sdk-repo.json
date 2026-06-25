@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-sources-xananode-core-sdk-repo",
+  "title": "ExampleSite / Content / Sources / Xananode Core Sdk Repo",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/sources/xananode-core-sdk-repo.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/sources/xananode-core-sdk-repo.md",
+  "artifact_path": "exampleSite/content/sources/xananode-core-sdk-repo.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/sources/xananode-core-sdk-repo.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:43260481d0496f0d7ac0b4a2c14390037f76a6dba966f69ace406be2c293fe89",
+  "content": "---\r\ntitle: \"XanaNode Core SDK Repository\"\r\ntype: \"source\"\r\nimportance: 5\r\nauthor: \"XanaNode Contributors\"\r\nyear: \"2026\"\r\nsummary: \"The reusable Core SDK repository for building, validating, and exporting XanaNode protocol artifacts across renderers and tools.\"\r\nsource_url: \"https://github.com/kingc95/XanaNode-Core-SDK\"\r\nrights_status: \"open-source\"\r\nrelationships:\r\n  - type: \"implements\"\r\n    target: \"xananode-core-schema\"\r\n  - type: \"uses\"\r\n    target: \"substrate-node-record\"\r\n  - type: \"uses\"\r\n    target: \"substrate-relationship-list\"\r\n---\r\n\r\nThe Core SDK is the shared implementation layer for protocol validation, fragment handling, relationship normalization, graph construction, and artifact export.\r\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/sources/xananode-core-sdk-repo.md",
+    "method": "archive",
+    "content_id": "sha256:43260481d0496f0d7ac0b4a2c14390037f76a6dba966f69ace406be2c293fe89",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

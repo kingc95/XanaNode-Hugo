@@ -1,0 +1,44 @@
+{
+  "id": "xananode.canonical:fragment/xananode-kernel-thought-0001",
+  "title": "XanaNode Kernel Thought Fragment 0001",
+  "type": "fragment",
+  "subtype": "paragraph",
+  "importance": 4,
+  "summary": "The shared-plumbing comparison between Linux and XanaNode.",
+  "source_node": "xananode.canonical:source/xananode-kernel-for-human-thought-draft",
+  "source_content_id": "sha256:xananode-kernel-for-human-thought-draft-source",
+  "source_version_id": "sha256:xananode-kernel-for-human-thought-draft-source-v1",
+  "fragment_id": "0001",
+  "tumbler": "xananode.canonical:source/xananode-kernel-for-human-thought-draft@sha256:xananode-kernel-for-human-thought-draft-source-v1#fragment/0001@sha256:xananode-kernel-thought-fragment-0001",
+  "selector": {
+    "type": "semantic-anchor",
+    "value": "shared-plumbing-model"
+  },
+  "content_id": "sha256:xananode-kernel-thought-fragment-0001",
+  "version_id": "sha256:xananode-kernel-thought-fragment-0001-v1",
+  "rights_status": "canonical-public",
+  "content": "The Core SDK plays the role of shared plumbing. It is renderer-independent and handles the baseline rules of structure, relationship typing, fragment tracking, validation, and export so every projection does not have to reinvent them.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/essay-kernel-thought-transcludes-fragment-0001",
+      "type": "transcludes",
+      "source": "xananode.canonical:essay/xananode-as-a-kernel-for-human-thought",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/kernel-fragment-0001-derived-from-source",
+      "type": "derived_from",
+      "target": "xananode.canonical:source/xananode-kernel-for-human-thought-draft",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/kernel-fragment-0001-supports-open-kernel-claim",
+      "type": "supports",
+      "target": "xananode.canonical:claim/xananode-is-an-open-kernel-for-knowledge",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/fragment_xananode-kernel-thought-0001.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "xananode.canonical:concept/embedded-example-namespaces",
+  "title": "Embedded Example Namespaces",
+  "type": "concept",
+  "subtype": "composition_pattern",
+  "importance": 4,
+  "summary": "The canonical substrate carries several teaching/example namespaces directly inside its own bundle without pretending they are all live mounted external substrates.",
+  "content": "The canonical substrate includes preserved namespaced records from example.minimal, example.museum, example.researcher_a, and example.researcher_b. These examples are embedded as part of the canonical teaching bundle so readers and tools can inspect federation patterns, extension patterns, claims, sources, trails, and possible-match mappings in one portable substrate. That is different from the real stack-layer substrate sources, which are represented as independently versioned federation targets.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/claim-canonical-distinguishes-embedded-examples-from-federated-sources-supports-concept-embedded-example-namespaces",
+      "type": "supports",
+      "source": "xananode.canonical:claim/canonical-distinguishes-embedded-examples-from-federated-sources",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-embedded-example-namespaces-supports-concept-self-federating-stack",
+      "type": "supports",
+      "target": "xananode.canonical:concept/self-federating-stack",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-knowledge-substrate-demonstrates-concept-embedded-example-namespaces",
+      "type": "demonstrates",
+      "source": "example.researcher_a:concept/knowledge-substrate",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-memex-demonstrates-concept-embedded-example-namespaces",
+      "type": "demonstrates",
+      "source": "example.museum:concept/memex",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-memory-substrate-demonstrates-concept-embedded-example-namespaces",
+      "type": "demonstrates",
+      "source": "example.researcher_b:concept/memory-substrate",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/trail-federated-stack-proof-supports-concept-embedded-example-namespaces",
+      "type": "supports",
+      "source": "xananode.canonical:trail/federated-stack-proof",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/trail-start-here-demonstrates-concept-embedded-example-namespaces",
+      "type": "demonstrates",
+      "source": "example.minimal:trail/start-here",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/concept_embedded-example-namespaces.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

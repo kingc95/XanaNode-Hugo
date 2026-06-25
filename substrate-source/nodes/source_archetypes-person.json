@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-archetypes-person",
+  "title": "Archetypes / Person",
+  "type": "source",
+  "subtype": "reference_code",
+  "importance": 3,
+  "summary": "archetypes/person.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/archetypes/person.md",
+  "artifact_path": "archetypes/person.md",
+  "asset_path": "assets/raw/repository/archetypes/person.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:bb106716679cfa66b7437846ef641c072a89cb8f4f7dd6b0ff610781e14da2f2",
+  "content": "---\ntitle: \"{{ replace .Name \"-\" \" \" | title }}\"\ntype: \"person\"\nsummary: \"\"\nroles: []\nconcepts: []\nsources: []\nrelationships: []\n---\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/archetypes/person.md",
+    "method": "archive",
+    "content_id": "sha256:bb106716679cfa66b7437846ef641c072a89cb8f4f7dd6b0ff610781e14da2f2",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-schemas-substrate-node-schema",
+  "title": "ExampleSite / Content / Schemas / Substrate Node Schema",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/schemas/substrate-node-schema.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/schemas/substrate-node-schema.md",
+  "artifact_path": "exampleSite/content/schemas/substrate-node-schema.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/schemas/substrate-node-schema.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:e64a411244efac8e89bd4335d4a8ef80f9d35e86497df87ae199c5368fe4539f",
+  "content": "---\ntitle: \"Substrate Node Schema\"\ntype: \"schema\"\nimportance: 5\nsummary: \"The JSON Schema that validates machine-readable XanaNode node records.\"\nversion: \"2020-12\"\nstatus: \"draft\"\nrelationships:\n  - type: \"defines\"\n    target: \"substrate-node-record\"\n  - type: \"uses\"\n    target: \"xananode-node-types\"\n  - type: \"part_of\"\n    target: \"xananode-core-schema\"\n---\n\nThis schema validates each exported node record.\n\nIt requires a protocol id, title, type, importance, summary, and relationship summaries. It also accepts [provenance](/node/provenance) fields and fragment metadata such as `source_node`, `fragment_id`, `tumbler`, and `selector`.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/schemas/substrate-node-schema.md",
+    "method": "archive",
+    "content_id": "sha256:e64a411244efac8e89bd4335d4a8ef80f9d35e86497df87ae199c5368fe4539f",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

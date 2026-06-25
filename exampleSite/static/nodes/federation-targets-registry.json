@@ -1,0 +1,85 @@
+{
+  "id": "xananode.canonical:schema/federation-targets-registry",
+  "title": "Federation Targets Registry",
+  "type": "schema",
+  "subtype": "governance_rule",
+  "importance": 4,
+  "summary": "The protocol registry of known substrate repositories, mounted substrate targets, and recommended federation entry points.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/concept-self-federating-stack-requires-schema-federation-targets-registry",
+      "type": "requires",
+      "source": "xananode.canonical:concept/self-federating-stack",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.alphabet",
+      "type": "contains",
+      "target": "xananode.canonical:source/federated-substrate-xananode.alphabet",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.canonical",
+      "type": "contains",
+      "target": "xananode.canonical:source/federated-substrate-xananode.canonical",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.core",
+      "type": "contains",
+      "target": "xananode.canonical:source/federated-substrate-xananode.core",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.hugo",
+      "type": "contains",
+      "target": "xananode.canonical:source/federated-substrate-xananode.hugo",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.lineage",
+      "type": "contains",
+      "target": "xananode.canonical:source/federated-substrate-xananode.lineage",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.mobile",
+      "type": "contains",
+      "target": "xananode.canonical:source/federated-substrate-xananode.mobile",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.protocol",
+      "type": "contains",
+      "target": "xananode.canonical:source/federated-substrate-xananode.protocol",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.studio",
+      "type": "contains",
+      "target": "xananode.canonical:source/federated-substrate-xananode.studio",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-federation-targets-registry-contains-source-federated-substrate-xananode.workspace",
+      "type": "contains",
+      "target": "xananode.canonical:source/federated-substrate-xananode.workspace",
+      "direction": "outgoing"
+    }
+  ],
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/registry/federation-targets.json",
+  "asset_path": "assets/raw/protocol/registry/federation-targets.json",
+  "asset_role": "canonical_raw_source",
+  "content_id": "sha256:d859aec5ab80bc7388b61c105bdc88465755e280652fd51c4bb9ea8165e66f38",
+  "source_snapshot": {
+    "captured_at": "2026-06-24T22:13:03.673Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/registry/federation-targets.json",
+    "method": "archive",
+    "content_id": "sha256:d859aec5ab80bc7388b61c105bdc88465755e280652fd51c4bb9ea8165e66f38",
+    "rights_status": "canonical-public",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/schema_federation-targets-registry.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,2300 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.hugo:rel/repository-documents-hugo-project",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "documents",
+      "summary": "The repository documents and carries the Hugo theme project.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/hugo-project-implements-core",
+      "source": "xananode.hugo:project/xananode-hugo-theme",
+      "target": "xananode.core:project/xananode-core-sdk",
+      "type": "implements",
+      "summary": "The Hugo theme uses Core as its validation and protocol-artifact engine.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/hugo-renderer-supports-hugo-project",
+      "source": "xananode.hugo:technology/xananode-hugo-renderer",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "The renderer is the human-facing projection surface of the Hugo theme.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-archetypes-concept",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-archetypes-concept",
+      "type": "contains",
+      "summary": "The Hugo repository contains archetypes/concept.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-archetypes-default",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-archetypes-default",
+      "type": "contains",
+      "summary": "The Hugo repository contains archetypes/default.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-archetypes-essay",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-archetypes-essay",
+      "type": "contains",
+      "summary": "The Hugo repository contains archetypes/essay.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-archetypes-observation",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-archetypes-observation",
+      "type": "contains",
+      "summary": "The Hugo repository contains archetypes/observation.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-archetypes-person",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-archetypes-person",
+      "type": "contains",
+      "summary": "The Hugo repository contains archetypes/person.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-archetypes-source",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-archetypes-source",
+      "type": "contains",
+      "summary": "The Hugo repository contains archetypes/source.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-assets-css-style",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-assets-css-style",
+      "type": "contains",
+      "summary": "The Hugo repository contains assets/css/style.css.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/assets-css-style-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-assets-css-style",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Assets / Css / Style supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-index",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-index",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/_index.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-index-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-index",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content /  Index demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-claims-index",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-claims-index",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/claims/_index.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-claims-index-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-claims-index",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Claims /  Index demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-claims-claim-merge-without-collapse",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-claims-claim-merge-without-collapse",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/claims/claim-merge-without-collapse.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-claims-claim-merge-without-collapse-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-claims-claim-merge-without-collapse",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Claims / Claim Merge Without Collapse demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-claims-claim-relationships-preserve-context",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-claims-claim-relationships-preserve-context",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/claims/claim-relationships-preserve-context.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-claims-claim-relationships-preserve-context-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-claims-claim-relationships-preserve-context",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Claims / Claim Relationships Preserve Context demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-claims-claim-substrate-is-structure",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-claims-claim-substrate-is-structure",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/claims/claim-substrate-is-structure.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-claims-claim-substrate-is-structure-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-claims-claim-substrate-is-structure",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Claims / Claim Substrate Is Structure demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-index",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-index",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/_index.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-index-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-index",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts /  Index demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-canonical-type-policy",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-canonical-type-policy",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/canonical-type-policy.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-canonical-type-policy-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-canonical-type-policy",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Canonical Type Policy demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-civilizational-memory",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-civilizational-memory",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/civilizational-memory.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-civilizational-memory-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-civilizational-memory",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Civilizational Memory demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-compatibility-levels",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-compatibility-levels",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/compatibility-levels.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-compatibility-levels-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-compatibility-levels",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Compatibility Levels demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-compatibility-report",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-compatibility-report",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/compatibility-report.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-compatibility-report-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-compatibility-report",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Compatibility Report demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-custom-extension-substrate",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-custom-extension-substrate",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/custom-extension-substrate.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-custom-extension-substrate-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-custom-extension-substrate",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Custom Extension Substrate demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-deep-linking",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-deep-linking",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/deep-linking.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-deep-linking-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-deep-linking",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Deep Linking demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-dispute-resolution",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-dispute-resolution",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/dispute-resolution.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-dispute-resolution-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-dispute-resolution",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Dispute Resolution demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-federated-knowledge-substrates",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-federated-knowledge-substrates",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/federated-knowledge-substrates.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-federated-knowledge-substrates-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-federated-knowledge-substrates",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Federated Knowledge Substrates demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-federation-example",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-federation-example",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/federation-example.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-federation-example-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-federation-example",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Federation Example demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-federation-rules",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-federation-rules",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/federation-rules.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-federation-rules-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-federation-rules",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Federation Rules demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-fragment-node",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-fragment-node",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/fragment-node.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-fragment-node-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-fragment-node",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Fragment Node demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-independent-moderation",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-independent-moderation",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/independent-moderation.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-independent-moderation-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-independent-moderation",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Independent Moderation demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-knowledge-substrate",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-knowledge-substrate",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/knowledge-substrate.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-knowledge-substrate-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-knowledge-substrate",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Knowledge Substrate demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-known-implementations-registry",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-known-implementations-registry",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/known-implementations-registry.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-known-implementations-registry-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-known-implementations-registry",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Known Implementations Registry demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-merge-report",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-merge-report",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/merge-report.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-merge-report-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-merge-report",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Merge Report demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-merge-validation",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-merge-validation",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/merge-validation.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-merge-validation-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-merge-validation",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Merge Validation demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-moderation-model",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-moderation-model",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/moderation-model.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-moderation-model-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-moderation-model",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Moderation Model demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-namespace-registry",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-namespace-registry",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/namespace-registry.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-namespace-registry-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-namespace-registry",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Namespace Registry demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-namespacing",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-namespacing",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/namespacing.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-namespacing-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-namespacing",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Namespacing demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-protocol-artifacts",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-protocol-artifacts",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/protocol-artifacts.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-protocol-artifacts-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-protocol-artifacts",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Protocol Artifacts demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-provenance",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-provenance",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/provenance.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-provenance-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-provenance",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Provenance demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-review-suggestions",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-review-suggestions",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/review-suggestions.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-review-suggestions-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-review-suggestions",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Review Suggestions demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-schema-extension",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-schema-extension",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/schema-extension.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-schema-extension-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-schema-extension",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Schema Extension demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-single-source-of-truth",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-single-source-of-truth",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/single-source-of-truth.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-single-source-of-truth-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-single-source-of-truth",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Single Source Of Truth demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-substrate-manifest",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-substrate-manifest",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/substrate-manifest.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-substrate-manifest-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-substrate-manifest",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Substrate Manifest demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-substrate-node-record",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-substrate-node-record",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/substrate-node-record.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-substrate-node-record-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-substrate-node-record",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Substrate Node Record demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-substrate-relationship-list",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-substrate-relationship-list",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/substrate-relationship-list.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-substrate-relationship-list-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-substrate-relationship-list",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Substrate Relationship List demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-transclusion",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-transclusion",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/transclusion.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-transclusion-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-transclusion",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Transclusion demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-tumbler-addressing",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-tumbler-addressing",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/tumbler-addressing.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-tumbler-addressing-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-tumbler-addressing",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Tumbler Addressing demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-typed-relationships",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-typed-relationships",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/typed-relationships.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-typed-relationships-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-typed-relationships",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Typed Relationships demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-unlabeled-hyperlink",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-unlabeled-hyperlink",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/unlabeled-hyperlink.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-unlabeled-hyperlink-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-unlabeled-hyperlink",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Unlabeled Hyperlink demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-concepts-xananode",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-concepts-xananode",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/concepts/xananode.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-concepts-xananode-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-concepts-xananode",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Concepts / Xananode demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-essays-index",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-essays-index",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/essays/_index.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-essays-index-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-essays-index",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Essays /  Index demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-essays-start-here",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-essays-start-here",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/essays/start-here.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-essays-start-here-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-essays-start-here",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Essays / Start Here demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-essays-using-hugo-with-protocol-json",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-essays-using-hugo-with-protocol-json",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/essays/using-hugo-with-protocol-json.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-essays-using-hugo-with-protocol-json-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-essays-using-hugo-with-protocol-json",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Essays / Using Hugo With Protocol Json demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-essays-what-is-xananode",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-essays-what-is-xananode",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/essays/what-is-xananode.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-essays-what-is-xananode-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-essays-what-is-xananode",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Essays / What Is Xananode demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-media-index",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-media-index",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/media/_index.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-media-index-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-media-index",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Media /  Index demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-media-xananode-icon",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-media-xananode-icon",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/media/xananode-icon.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-media-xananode-icon-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-media-xananode-icon",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Media / Xananode Icon demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-observations-index",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-observations-index",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/observations/_index.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-observations-index-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-observations-index",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Observations /  Index demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-observations-link-rot",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-observations-link-rot",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/observations/link-rot.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-observations-link-rot-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-observations-link-rot",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Observations / Link Rot demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-people-index",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-people-index",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/people/_index.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-people-index-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-people-index",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / People /  Index demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-people-douglas-engelbart",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-people-douglas-engelbart",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/people/douglas-engelbart.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-people-douglas-engelbart-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-people-douglas-engelbart",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / People / Douglas Engelbart demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-people-ted-nelson",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-people-ted-nelson",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/people/ted-nelson.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-people-ted-nelson-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-people-ted-nelson",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / People / Ted Nelson demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-people-vannevar-bush",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-people-vannevar-bush",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/people/vannevar-bush.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-people-vannevar-bush-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-people-vannevar-bush",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / People / Vannevar Bush demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-projects-index",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-projects-index",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/projects/_index.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-projects-index-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-projects-index",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Projects /  Index demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-projects-memex",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-projects-memex",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/projects/memex.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-projects-memex-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-projects-memex",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Projects / Memex demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-projects-nls",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-projects-nls",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/projects/nls.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-projects-nls-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-projects-nls",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Projects / Nls demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-projects-project-xanadu",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-projects-project-xanadu",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/projects/project-xanadu.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-projects-project-xanadu-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-projects-project-xanadu",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Projects / Project Xanadu demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-projects-xananode-hugo-theme",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-projects-xananode-hugo-theme",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/projects/xananode-hugo-theme.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-projects-xananode-hugo-theme-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-projects-xananode-hugo-theme",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Projects / Xananode Hugo Theme demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-schemas-index",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-schemas-index",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/schemas/_index.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-schemas-index-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-schemas-index",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Schemas /  Index demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-schemas-compatibility-report-schema",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-schemas-compatibility-report-schema",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/schemas/compatibility-report-schema.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-schemas-compatibility-report-schema-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-schemas-compatibility-report-schema",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Schemas / Compatibility Report Schema demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-schemas-merge-report-schema",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-schemas-merge-report-schema",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/schemas/merge-report-schema.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-schemas-merge-report-schema-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-schemas-merge-report-schema",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Schemas / Merge Report Schema demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-schemas-namespace-schema",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-schemas-namespace-schema",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/schemas/namespace-schema.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-schemas-namespace-schema-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-schemas-namespace-schema",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Schemas / Namespace Schema demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-schemas-substrate-manifest-schema",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-schemas-substrate-manifest-schema",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/schemas/substrate-manifest-schema.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-schemas-substrate-manifest-schema-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-schemas-substrate-manifest-schema",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Schemas / Substrate Manifest Schema demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-schemas-substrate-node-schema",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-schemas-substrate-node-schema",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/schemas/substrate-node-schema.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-schemas-substrate-node-schema-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-schemas-substrate-node-schema",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Schemas / Substrate Node Schema demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-schemas-substrate-relationships-schema",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-schemas-substrate-relationships-schema",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/schemas/substrate-relationships-schema.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-schemas-substrate-relationships-schema-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-schemas-substrate-relationships-schema",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Schemas / Substrate Relationships Schema demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-schemas-xananode-core-schema",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-schemas-xananode-core-schema",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/schemas/xananode-core-schema.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-schemas-xananode-core-schema-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-schemas-xananode-core-schema",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Schemas / Xananode Core Schema demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-schemas-xananode-node-types",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-schemas-xananode-node-types",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/schemas/xananode-node-types.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-schemas-xananode-node-types-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-schemas-xananode-node-types",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Schemas / Xananode Node Types demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-schemas-xananode-relationship-types",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-schemas-xananode-relationship-types",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/schemas/xananode-relationship-types.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-schemas-xananode-relationship-types-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-schemas-xananode-relationship-types",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Schemas / Xananode Relationship Types demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-sources-index",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-sources-index",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/sources/_index.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-sources-index-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-sources-index",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Sources /  Index demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-sources-as-we-may-think",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-sources-as-we-may-think",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/sources/as-we-may-think.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-sources-as-we-may-think-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-sources-as-we-may-think",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Sources / As We May Think demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-sources-mother-of-all-demos",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-sources-mother-of-all-demos",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/sources/mother-of-all-demos.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-sources-mother-of-all-demos-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-sources-mother-of-all-demos",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Sources / Mother Of All Demos demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-sources-source-code-link-decay-study",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-sources-source-code-link-decay-study",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/sources/source-code-link-decay-study.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-sources-source-code-link-decay-study-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-sources-source-code-link-decay-study",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Sources / Source Code Link Decay Study demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-sources-xanadu-document-interconnection",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-sources-xanadu-document-interconnection",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/sources/xanadu-document-interconnection.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-sources-xanadu-document-interconnection-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-sources-xanadu-document-interconnection",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Sources / Xanadu Document Interconnection demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-sources-xananode-core-sdk-repo",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-sources-xananode-core-sdk-repo",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/sources/xananode-core-sdk-repo.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-sources-xananode-core-sdk-repo-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-sources-xananode-core-sdk-repo",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Sources / Xananode Core Sdk Repo demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-sources-xananode-hugo-repo",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-sources-xananode-hugo-repo",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/sources/xananode-hugo-repo.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-sources-xananode-hugo-repo-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-sources-xananode-hugo-repo",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Sources / Xananode Hugo Repo demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-sources-xananode-protocol-repo",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-sources-xananode-protocol-repo",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/sources/xananode-protocol-repo.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-sources-xananode-protocol-repo-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-sources-xananode-protocol-repo",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Sources / Xananode Protocol Repo demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-sources-xananode-studio-repo",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-sources-xananode-studio-repo",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/sources/xananode-studio-repo.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-sources-xananode-studio-repo-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-sources-xananode-studio-repo",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Sources / Xananode Studio Repo demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-sources-xananode-workspace-repo",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-sources-xananode-workspace-repo",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/sources/xananode-workspace-repo.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-sources-xananode-workspace-repo-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-sources-xananode-workspace-repo",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Sources / Xananode Workspace Repo demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-technologies-index",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-technologies-index",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/technologies/_index.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-technologies-index-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-technologies-index",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Technologies /  Index demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-technologies-cytoscape-js",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-technologies-cytoscape-js",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/technologies/cytoscape-js.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-technologies-cytoscape-js-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-technologies-cytoscape-js",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Technologies / Cytoscape Js demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-technologies-hugo",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-technologies-hugo",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/technologies/hugo.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-technologies-hugo-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-technologies-hugo",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Technologies / Hugo demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-technologies-static-publishing",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-technologies-static-publishing",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/technologies/static-publishing.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-technologies-static-publishing-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-technologies-static-publishing",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Technologies / Static Publishing demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-trails-index",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-trails-index",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/trails/_index.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-trails-index-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-trails-index",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Trails /  Index demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-trails-branching-orientation-trail",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-trails-branching-orientation-trail",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/trails/branching-orientation-trail.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-trails-branching-orientation-trail-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-trails-branching-orientation-trail",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Trails / Branching Orientation Trail demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-trails-historical-lineage-trail",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-trails-historical-lineage-trail",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/trails/historical-lineage-trail.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-trails-historical-lineage-trail-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-trails-historical-lineage-trail",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Trails / Historical Lineage Trail demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-trails-protocol-artifacts-trail",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-trails-protocol-artifacts-trail",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/trails/protocol-artifacts-trail.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-trails-protocol-artifacts-trail-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-trails-protocol-artifacts-trail",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Trails / Protocol Artifacts Trail demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-trails-xananode-core-trail",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-trails-xananode-core-trail",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/trails/xananode-core-trail.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-trails-xananode-core-trail-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-trails-xananode-core-trail",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Trails / Xananode Core Trail demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-content-trails-xananode-implementation-stack-trail",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-content-trails-xananode-implementation-stack-trail",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/content/trails/xananode-implementation-stack-trail.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-content-trails-xananode-implementation-stack-trail-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-content-trails-xananode-implementation-stack-trail",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Content / Trails / Xananode Implementation Stack Trail demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-data-xananode-fragments",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-data-xananode-fragments",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/data/xananode_fragments.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-data-xananode-fragments-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-data-xananode-fragments",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Data / Xananode Fragments demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-data-xananode-suggestions",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-data-xananode-suggestions",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/data/xananode_suggestions.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-data-xananode-suggestions-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-data-xananode-suggestions",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Data / Xananode Suggestions demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-hugo",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-hugo",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/hugo.yaml.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-hugo-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-hugo",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Hugo demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-imports-lineage-nodes-extended",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-imports-lineage-nodes-extended",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/imports/lineage/nodes-extended.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-imports-lineage-nodes-extended-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-imports-lineage-nodes-extended",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Imports / Lineage / Nodes Extended demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-imports-lineage-nodes",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-imports-lineage-nodes",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/imports/lineage/nodes.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-imports-lineage-nodes-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-imports-lineage-nodes",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Imports / Lineage / Nodes demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-imports-lineage-relationships-extended",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-imports-lineage-relationships-extended",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/imports/lineage/relationships-extended.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-imports-lineage-relationships-extended-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-imports-lineage-relationships-extended",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Imports / Lineage / Relationships Extended demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-imports-lineage-relationships",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-imports-lineage-relationships",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/imports/lineage/relationships.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-imports-lineage-relationships-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-imports-lineage-relationships",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Imports / Lineage / Relationships demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-imports-review-fixture-nodes",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-imports-review-fixture-nodes",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/imports/review-fixture/nodes.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-imports-review-fixture-nodes-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-imports-review-fixture-nodes",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Imports / Review Fixture / Nodes demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-imports-review-fixture-relationships",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-imports-review-fixture-relationships",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/imports/review-fixture/relationships.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-imports-review-fixture-relationships-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-imports-review-fixture-relationships",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Imports / Review Fixture / Relationships demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-examplesite-imports-review-fixture-substrate",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-examplesite-imports-review-fixture-substrate",
+      "type": "contains",
+      "summary": "The Hugo repository contains exampleSite/imports/review-fixture/substrate.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/examplesite-imports-review-fixture-substrate-demonstrates-hugo-project",
+      "source": "xananode.hugo:source/artifact-examplesite-imports-review-fixture-substrate",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "demonstrates",
+      "summary": "ExampleSite / Imports / Review Fixture / Substrate demonstrates how the Hugo projection layer is used.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-hugo",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-hugo",
+      "type": "contains",
+      "summary": "The Hugo repository contains hugo.yaml.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-layouts-default-markup-render-link",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-layouts-default-markup-render-link",
+      "type": "contains",
+      "summary": "The Hugo repository contains layouts/_default/_markup/render-link.html.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/layouts-default-markup-render-link-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-layouts-default-markup-render-link",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Layouts /  Default /  Markup / Render Link supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-layouts-default-baseof",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-layouts-default-baseof",
+      "type": "contains",
+      "summary": "The Hugo repository contains layouts/_default/baseof.html.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/layouts-default-baseof-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-layouts-default-baseof",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Layouts /  Default / Baseof supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-layouts-default-list",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-layouts-default-list",
+      "type": "contains",
+      "summary": "The Hugo repository contains layouts/_default/list.html.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/layouts-default-list-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-layouts-default-list",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Layouts /  Default / List supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-layouts-default-single",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-layouts-default-single",
+      "type": "contains",
+      "summary": "The Hugo repository contains layouts/_default/single.html.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/layouts-default-single-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-layouts-default-single",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Layouts /  Default / Single supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-layouts-404",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-layouts-404",
+      "type": "contains",
+      "summary": "The Hugo repository contains layouts/404.html.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/layouts-404-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-layouts-404",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Layouts / 404 supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-layouts-index",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-layouts-index",
+      "type": "contains",
+      "summary": "The Hugo repository contains layouts/index.html.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/layouts-index-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-layouts-index",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Layouts / Index supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-layouts-index",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-layouts-index",
+      "type": "contains",
+      "summary": "The Hugo repository contains layouts/index.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/layouts-index-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-layouts-index",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Layouts / Index supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-layouts-partials-find-page-by-id",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-layouts-partials-find-page-by-id",
+      "type": "contains",
+      "summary": "The Hugo repository contains layouts/partials/find-page-by-id.html.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/layouts-partials-find-page-by-id-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-layouts-partials-find-page-by-id",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Layouts / Partials / Find Page By Id supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-layouts-partials-head",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-layouts-partials-head",
+      "type": "contains",
+      "summary": "The Hugo repository contains layouts/partials/head.html.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/layouts-partials-head-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-layouts-partials-head",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Layouts / Partials / Head supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-layouts-partials-youtube-embed",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-layouts-partials-youtube-embed",
+      "type": "contains",
+      "summary": "The Hugo repository contains layouts/partials/youtube-embed.html.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/layouts-partials-youtube-embed-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-layouts-partials-youtube-embed",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Layouts / Partials / Youtube Embed supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-layouts-shortcodes-claim",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-layouts-shortcodes-claim",
+      "type": "contains",
+      "summary": "The Hugo repository contains layouts/shortcodes/claim.html.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/layouts-shortcodes-claim-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-layouts-shortcodes-claim",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Layouts / Shortcodes / Claim supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-layouts-shortcodes-node",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-layouts-shortcodes-node",
+      "type": "contains",
+      "summary": "The Hugo repository contains layouts/shortcodes/node.html.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/layouts-shortcodes-node-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-layouts-shortcodes-node",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Layouts / Shortcodes / Node supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-layouts-shortcodes-relation",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-layouts-shortcodes-relation",
+      "type": "contains",
+      "summary": "The Hugo repository contains layouts/shortcodes/relation.html.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/layouts-shortcodes-relation-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-layouts-shortcodes-relation",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Layouts / Shortcodes / Relation supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-layouts-shortcodes-review-suggestions",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-layouts-shortcodes-review-suggestions",
+      "type": "contains",
+      "summary": "The Hugo repository contains layouts/shortcodes/review-suggestions.html.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/layouts-shortcodes-review-suggestions-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-layouts-shortcodes-review-suggestions",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Layouts / Shortcodes / Review Suggestions supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-layouts-shortcodes-transclude",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-layouts-shortcodes-transclude",
+      "type": "contains",
+      "summary": "The Hugo repository contains layouts/shortcodes/transclude.html.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/layouts-shortcodes-transclude-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-layouts-shortcodes-transclude",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Layouts / Shortcodes / Transclude supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-layouts-shortcodes-xana",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-layouts-shortcodes-xana",
+      "type": "contains",
+      "summary": "The Hugo repository contains layouts/shortcodes/xana.html.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/layouts-shortcodes-xana-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-layouts-shortcodes-xana",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Layouts / Shortcodes / Xana supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-license",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-license",
+      "type": "contains",
+      "summary": "The Hugo repository contains LICENSE.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-package-lock",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-package-lock",
+      "type": "contains",
+      "summary": "The Hugo repository contains package-lock.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-package",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-package",
+      "type": "contains",
+      "summary": "The Hugo repository contains package.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-readme",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-readme",
+      "type": "contains",
+      "summary": "The Hugo repository contains README.md.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-android-chrome-192x192",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:media/artifact-static-android-chrome-192x192",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/android-chrome-192x192.png.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-android-chrome-192x192-supports-hugo-project",
+      "source": "xananode.hugo:media/artifact-static-android-chrome-192x192",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Android Chrome 192x192 supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-android-chrome-512x512",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:media/artifact-static-android-chrome-512x512",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/android-chrome-512x512.png.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-android-chrome-512x512-supports-hugo-project",
+      "source": "xananode.hugo:media/artifact-static-android-chrome-512x512",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Android Chrome 512x512 supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-apple-touch-icon",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:media/artifact-static-apple-touch-icon",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/apple-touch-icon.png.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-apple-touch-icon-supports-hugo-project",
+      "source": "xananode.hugo:media/artifact-static-apple-touch-icon",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Apple Touch Icon supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-favicon-16x16",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:media/artifact-static-favicon-16x16",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/favicon-16x16.png.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-favicon-16x16-supports-hugo-project",
+      "source": "xananode.hugo:media/artifact-static-favicon-16x16",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Favicon 16x16 supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-favicon-32x32",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:media/artifact-static-favicon-32x32",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/favicon-32x32.png.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-favicon-32x32-supports-hugo-project",
+      "source": "xananode.hugo:media/artifact-static-favicon-32x32",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Favicon 32x32 supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-favicon",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:media/artifact-static-favicon",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/favicon.ico.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-favicon-supports-hugo-project",
+      "source": "xananode.hugo:media/artifact-static-favicon",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Favicon supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-js-projection",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-static-js-projection",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/js/projection.js.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-js-projection-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-static-js-projection",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Js / Projection supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-js-xananode",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-static-js-xananode",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/js/xananode.js.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-js-xananode-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-static-js-xananode",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Js / Xananode supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-schemas-property-registry-schema",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-static-schemas-property-registry-schema",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/schemas/property-registry.schema.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-schemas-property-registry-schema-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-static-schemas-property-registry-schema",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Schemas / Property Registry.Schema supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-schemas-substrate-manifest-schema",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-static-schemas-substrate-manifest-schema",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/schemas/substrate-manifest.schema.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-schemas-substrate-manifest-schema-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-static-schemas-substrate-manifest-schema",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Schemas / Substrate Manifest.Schema supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-schemas-substrate-node-schema",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-static-schemas-substrate-node-schema",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/schemas/substrate-node.schema.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-schemas-substrate-node-schema-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-static-schemas-substrate-node-schema",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Schemas / Substrate Node.Schema supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-schemas-substrate-relationships-schema",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-static-schemas-substrate-relationships-schema",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/schemas/substrate-relationships.schema.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-schemas-substrate-relationships-schema-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-static-schemas-substrate-relationships-schema",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Schemas / Substrate Relationships.Schema supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-schemas-xananode-node-types",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-static-schemas-xananode-node-types",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/schemas/xananode-node-types.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-schemas-xananode-node-types-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-static-schemas-xananode-node-types",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Schemas / Xananode Node Types supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-schemas-xananode-node-types-schema",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-static-schemas-xananode-node-types-schema",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/schemas/xananode-node-types.schema.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-schemas-xananode-node-types-schema-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-static-schemas-xananode-node-types-schema",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Schemas / Xananode Node Types.Schema supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-schemas-xananode-node-types-schema-v0-3-0",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-static-schemas-xananode-node-types-schema-v0-3-0",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/schemas/xananode-node-types.schema.v0.3.0.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-schemas-xananode-node-types-schema-v0-3-0-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-static-schemas-xananode-node-types-schema-v0-3-0",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Schemas / Xananode Node Types.Schema.V0.3.0 supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-schemas-xananode-node-types-v0-3-0",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-static-schemas-xananode-node-types-v0-3-0",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/schemas/xananode-node-types.v0.3.0.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-schemas-xananode-node-types-v0-3-0-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-static-schemas-xananode-node-types-v0-3-0",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Schemas / Xananode Node Types.V0.3.0 supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-schemas-xananode-property-registry-v0-1-0",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-static-schemas-xananode-property-registry-v0-1-0",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/schemas/xananode-property-registry.v0.1.0.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-schemas-xananode-property-registry-v0-1-0-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-static-schemas-xananode-property-registry-v0-1-0",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Schemas / Xananode Property Registry.V0.1.0 supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-schemas-xananode-relationship-types",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-static-schemas-xananode-relationship-types",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/schemas/xananode-relationship-types.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-schemas-xananode-relationship-types-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-static-schemas-xananode-relationship-types",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Schemas / Xananode Relationship Types supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-schemas-xananode-relationship-types-schema",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-static-schemas-xananode-relationship-types-schema",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/schemas/xananode-relationship-types.schema.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-schemas-xananode-relationship-types-schema-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-static-schemas-xananode-relationship-types-schema",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Schemas / Xananode Relationship Types.Schema supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-schemas-xananode-relationship-types-schema-v0-4-0",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-static-schemas-xananode-relationship-types-schema-v0-4-0",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/schemas/xananode-relationship-types.schema.v0.4.0.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-schemas-xananode-relationship-types-schema-v0-4-0-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-static-schemas-xananode-relationship-types-schema-v0-4-0",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Schemas / Xananode Relationship Types.Schema.V0.4.0 supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-schemas-xananode-relationship-types-v0-4-0",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-static-schemas-xananode-relationship-types-v0-4-0",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/schemas/xananode-relationship-types.v0.4.0.json.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-schemas-xananode-relationship-types-v0-4-0-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-static-schemas-xananode-relationship-types-v0-4-0",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Schemas / Xananode Relationship Types.V0.4.0 supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-static-xananode-icon",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:media/artifact-static-xananode-icon",
+      "type": "contains",
+      "summary": "The Hugo repository contains static/xananode-icon.svg.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/static-xananode-icon-supports-hugo-project",
+      "source": "xananode.hugo:media/artifact-static-xananode-icon",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Static / Xananode Icon supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-theme",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-theme",
+      "type": "contains",
+      "summary": "The Hugo repository contains theme.toml.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-tools-build-substrate-source",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-tools-build-substrate-source",
+      "type": "contains",
+      "summary": "The Hugo repository contains tools/build-substrate-source.mjs.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/tools-build-substrate-source-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-tools-build-substrate-source",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Tools / Build Substrate Source supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/repository-contains-tools-prepare-xananode",
+      "source": "xananode.hugo:source/repository-xananode-hugo",
+      "target": "xananode.hugo:source/artifact-tools-prepare-xananode",
+      "type": "contains",
+      "summary": "The Hugo repository contains tools/prepare-xananode.mjs.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    },
+    {
+      "id": "xananode.hugo:rel/tools-prepare-xananode-supports-hugo-project",
+      "source": "xananode.hugo:source/artifact-tools-prepare-xananode",
+      "target": "xananode.hugo:project/xananode-hugo-theme",
+      "type": "supports",
+      "summary": "Tools / Prepare Xananode supports the Hugo projection layer.",
+      "asserted_at": "2026-06-25T14:22:34.827Z"
+    }
+  ]
+}

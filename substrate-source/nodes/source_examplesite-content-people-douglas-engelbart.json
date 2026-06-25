@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-people-douglas-engelbart",
+  "title": "ExampleSite / Content / People / Douglas Engelbart",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/people/douglas-engelbart.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/people/douglas-engelbart.md",
+  "artifact_path": "exampleSite/content/people/douglas-engelbart.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/people/douglas-engelbart.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:a861b96683fdda404bca45d8dcfdb32e30b61d59109f49eeeaeceab087766cf4",
+  "content": "---\ntitle: \"Douglas Engelbart\"\ntype: \"person\"\nimportance: 5\nsummary: \"Computer pioneer focused on augmenting human intellect through interactive computing.\"\nrelationships:\n  - type: \"created\"\n    target: \"nls\"\n  - type: \"presented\"\n    target: \"mother-of-all-demos\"\n  - type: \"extended_by\"\n    target: \"xananode\"\n---\n\nEngelbart treated computers as tools for increasing human ability to reason, collaborate, and navigate complex problems.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/people/douglas-engelbart.md",
+    "method": "archive",
+    "content_id": "sha256:a861b96683fdda404bca45d8dcfdb32e30b61d59109f49eeeaeceab087766cf4",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

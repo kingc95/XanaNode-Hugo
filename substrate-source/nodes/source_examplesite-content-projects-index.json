@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-projects-index",
+  "title": "ExampleSite / Content / Projects /  Index",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/projects/_index.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/projects/_index.md",
+  "artifact_path": "exampleSite/content/projects/_index.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/projects/_index.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:d111f2a38ab983fa2d60f7218076be7190051b292203e6d5a7ebcd32f152eeed",
+  "content": "---\ntitle: \"Projects\"\n---\n\nBuilt, proposed, fictional, abandoned, or active systems with lineage.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/projects/_index.md",
+    "method": "archive",
+    "content_id": "sha256:d111f2a38ab983fa2d60f7218076be7190051b292203e6d5a7ebcd32f152eeed",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

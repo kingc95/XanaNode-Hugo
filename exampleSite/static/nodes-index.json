@@ -674,9 +674,51 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:claim/canonical-assembles-federated-stack-layer-substrates",
+      "path": "nodes/canonical-assembles-federated-stack-layer-substrates.json",
+      "title": "The canonical substrate assembles federated stack-layer substrates",
+      "type": "claim",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:claim/canonical-distinguishes-embedded-examples-from-federated-sources",
+      "path": "nodes/canonical-distinguishes-embedded-examples-from-federated-sources.json",
+      "title": "The canonical substrate distinguishes embedded examples from federated sources",
+      "type": "claim",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:claim/copy-paste-breaks-lineage",
+      "path": "nodes/copy-paste-breaks-lineage.json",
+      "title": "Copy and paste breaks lineage",
+      "type": "claim",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:claim/documents-collapse-knowledge-structure",
+      "path": "nodes/documents-collapse-knowledge-structure.json",
+      "title": "Document boundaries collapse knowledge structure",
+      "type": "claim",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:claim/implementations-identify-compatibility",
       "path": "nodes/implementations-identify-compatibility.json",
       "title": "Implementations Identify XanaNode Compatibility",
+      "type": "claim",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:claim/local-first-without-federation-is-not-enough",
+      "path": "nodes/local-first-without-federation-is-not-enough.json",
+      "title": "Local-first without federation is not enough",
+      "type": "claim",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:claim/projections-are-lenses-over-a-stable-substrate",
+      "path": "nodes/projections-are-lenses-over-a-stable-substrate.json",
+      "title": "Projections are lenses over a stable substrate",
       "type": "claim",
       "imported": true
     },
@@ -698,6 +740,20 @@
       "id": "xananode.canonical:claim/schemas-validators-reference-code-apache-2-0",
       "path": "nodes/schemas-validators-reference-code-apache-2-0.json",
       "title": "Schemas, Validators, And Reference Code Are Apache-2.0",
+      "type": "claim",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:claim/stack-demonstrates-federation-through-layer-substrates",
+      "path": "nodes/stack-demonstrates-federation-through-layer-substrates.json",
+      "title": "The XanaNode stack demonstrates federation through layer substrates",
+      "type": "claim",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:claim/xananode-is-an-open-kernel-for-knowledge",
+      "path": "nodes/xananode-is-an-open-kernel-for-knowledge.json",
+      "title": "XanaNode is an open kernel for knowledge",
       "type": "claim",
       "imported": true
     },
@@ -737,6 +793,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:concept/embedded-example-namespaces",
+      "path": "nodes/embedded-example-namespaces.json",
+      "title": "Embedded Example Namespaces",
+      "type": "concept",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:concept/knowledge-substrate",
       "path": "nodes/knowledge-substrate.json",
       "title": "Knowledge Substrate",
@@ -772,6 +835,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:concept/self-federating-stack",
+      "path": "nodes/self-federating-stack.json",
+      "title": "Self-Federating Stack",
+      "type": "concept",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:concept/software-license",
       "path": "nodes/software-license.json",
       "title": "Software License",
@@ -793,6 +863,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:concept/trifecta-of-computing-failure",
+      "path": "nodes/trifecta-of-computing-failure.json",
+      "title": "The Trifecta of Computing Failure",
+      "type": "concept",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:concept/xananode",
       "path": "nodes/xananode.json",
       "title": "XanaNode",
@@ -807,6 +884,20 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:essay/xananode-as-a-kernel-for-human-thought",
+      "path": "nodes/xananode-as-a-kernel-for-human-thought.json",
+      "title": "XanaNode As A Kernel For Human Thought",
+      "type": "essay",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:essay/xananode-compared-to-networked-notes-tools",
+      "path": "nodes/xananode-compared-to-networked-notes-tools.json",
+      "title": "XanaNode compared to networked notes tools",
+      "type": "essay",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:event/xananode-canonical-pack-bootstrap",
       "path": "nodes/xananode-canonical-pack-bootstrap.json",
       "title": "XanaNode Canonical Pack Bootstrap",
@@ -817,6 +908,34 @@
       "id": "xananode.canonical:fragment/relationships-preserve-knowledge-sentence",
       "path": "nodes/relationships-preserve-knowledge-sentence.json",
       "title": "Relationships Preserve Knowledge Sentence",
+      "type": "fragment",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:fragment/xananode-kernel-thought-0001",
+      "path": "nodes/xananode-kernel-thought-0001.json",
+      "title": "XanaNode Kernel Thought Fragment 0001",
+      "type": "fragment",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:fragment/xananode-kernel-thought-0002",
+      "path": "nodes/xananode-kernel-thought-0002.json",
+      "title": "XanaNode Kernel Thought Fragment 0002",
+      "type": "fragment",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:fragment/xananode-kernel-thought-0003",
+      "path": "nodes/xananode-kernel-thought-0003.json",
+      "title": "XanaNode Kernel Thought Fragment 0003",
+      "type": "fragment",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:fragment/xananode-kernel-thought-0004",
+      "path": "nodes/xananode-kernel-thought-0004.json",
+      "title": "XanaNode Kernel Thought Fragment 0004",
       "type": "fragment",
       "imported": true
     },
@@ -2749,6 +2868,13 @@
       "id": "xananode.canonical:schema/canonical-schemas-registry",
       "path": "nodes/canonical-schemas-registry.json",
       "title": "Canonical Schemas Registry",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/federation-targets-registry",
+      "path": "nodes/federation-targets-registry.json",
+      "title": "Federation Targets Registry",
       "type": "schema",
       "imported": true
     },
@@ -7177,6 +7303,69 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:source/federated-substrate-xananode.alphabet",
+      "path": "nodes/federated-substrate-xananode.alphabet.json",
+      "title": "XanaNode Alphabet Substrate",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/federated-substrate-xananode.canonical",
+      "path": "nodes/federated-substrate-xananode.canonical.json",
+      "title": "XanaNode Canonical Substrate",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/federated-substrate-xananode.core",
+      "path": "nodes/federated-substrate-xananode.core.json",
+      "title": "XanaNode Core SDK Substrate",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/federated-substrate-xananode.hugo",
+      "path": "nodes/federated-substrate-xananode.hugo.json",
+      "title": "XanaNode Hugo Theme Substrate",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/federated-substrate-xananode.lineage",
+      "path": "nodes/federated-substrate-xananode.lineage.json",
+      "title": "XanaNode Lost Lineage Substrate",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/federated-substrate-xananode.mobile",
+      "path": "nodes/federated-substrate-xananode.mobile.json",
+      "title": "XanaNode Mobile Substrate",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/federated-substrate-xananode.protocol",
+      "path": "nodes/federated-substrate-xananode.protocol.json",
+      "title": "XanaNode Protocol Substrate",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/federated-substrate-xananode.studio",
+      "path": "nodes/federated-substrate-xananode.studio.json",
+      "title": "XanaNode Studio Substrate",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/federated-substrate-xananode.workspace",
+      "path": "nodes/federated-substrate-xananode.workspace.json",
+      "title": "XanaNode Workspace Substrate",
+      "type": "source",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:source/github-profile",
       "path": "nodes/github-profile.json",
       "title": "GitHub Profile",
@@ -7443,6 +7632,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:source/protocol-artifact-proposals-xnp-0012-executable-tool-contract.md",
+      "path": "nodes/protocol-artifact-proposals-xnp-0012-executable-tool-contract.md.json",
+      "title": "Proposals / XNP 0012 Executable Tool Contract",
+      "type": "source",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:source/protocol-artifact-readme.md",
       "path": "nodes/protocol-artifact-readme.md.json",
       "title": "XanaNode Protocol README",
@@ -7635,6 +7831,13 @@
       "id": "xananode.canonical:source/xananode-hugo-repository",
       "path": "nodes/xananode-hugo-repository.json",
       "title": "XanaNode Hugo Repository",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/xananode-kernel-for-human-thought-draft",
+      "path": "nodes/xananode-kernel-for-human-thought-draft.json",
+      "title": "XanaNode As A Kernel For Human Thought Draft",
       "type": "source",
       "imported": true
     },
@@ -7867,6 +8070,13 @@
       "path": "nodes/xananode-workspace-component-substrate-manifests.json",
       "title": "XanaNode Workspace: substrate manifests",
       "type": "technology",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:trail/federated-stack-proof",
+      "path": "nodes/federated-stack-proof.json",
+      "title": "Federated Stack Proof",
+      "type": "trail",
       "imported": true
     },
     {

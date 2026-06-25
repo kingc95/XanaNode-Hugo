@@ -1,0 +1,35 @@
+{
+  "id": "xananode.hugo",
+  "name": "XanaNode Hugo Theme Substrate",
+  "version": "0.1.0",
+  "namespace": "xananode.hugo",
+  "description": "A substrate source built directly from the XanaNode Hugo repository, preserving the Hugo theme, static viewer assets, example site, layouts, build glue, and projection-facing documents as first-class XanaNode records.",
+  "schema_version": "xananode-core@0.5.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kingc95/XanaNode-Hugo.git",
+    "default_branch": "main"
+  },
+  "imports": [
+    "xananode.core"
+  ],
+  "build_metadata": {
+    "built_at": "2026-06-25T14:22:34.827Z",
+    "git_commit": "cf5312a10a6bb354442f7ab21fd5679ed614b3a4",
+    "git_branch": "main",
+    "built_by": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "sharing": {
+    "default_shareable": true,
+    "rules": [
+      {
+        "selector": {
+          "namespace": "xananode.hugo"
+        },
+        "shareable": true,
+        "scope": "public",
+        "reason": "The Hugo substrate is intended to be federated as a public projection implementation source."
+      }
+    ]
+  }
+}

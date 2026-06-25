@@ -20,6 +20,12 @@
       "direction": "outgoing",
       "external": true,
       "target_substrate": "example.researcher_a"
+    },
+    {
+      "id": "xananode.canonical:rel/concept-memory-substrate-demonstrates-concept-embedded-example-namespaces",
+      "type": "demonstrates",
+      "target": "xananode.canonical:concept/embedded-example-namespaces",
+      "direction": "outgoing"
     }
   ],
   "imported_from": "nodes/concept_memory-substrate.json",

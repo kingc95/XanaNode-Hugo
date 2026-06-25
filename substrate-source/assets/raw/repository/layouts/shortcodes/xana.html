@@ -1,0 +1,56 @@
+{{- $ref := .Get "ref" -}}
+{{- $label := .Get "label" -}}
+{{- $parts := split (replaceRE "^xana://" "" $ref) "/" -}}
+{{- $nodeVersion := index $parts 0 -}}
+{{- $range := cond (ge (len $parts) 2) (index $parts 1) "1" -}}
+{{- $nodeParts := split $nodeVersion "@" -}}
+{{- $nodeID := index $nodeParts 0 -}}
+{{- $version := cond (ge (len $nodeParts) 2) (index $nodeParts 1) "latest" -}}
+{{- $nodeData := index site.Data.xananode_fragments.nodes $nodeID -}}
+{{- $page := partial "find-page-by-id.html" (dict "id" $nodeID) -}}
+<aside class="transclusion xana-transclusion" id="xana-ref-{{ $nodeID | urlize }}-{{ $version | urlize }}-{{ $range | urlize }}" data-xana-ref="{{ $ref }}" data-xana-node="{{ $nodeID }}" data-xana-version="{{ $version }}" data-xana-range="{{ $range }}">
+  <div class="transclusion-label" data-tts-skip="">{{ if $label }}{{ $label }}{{ else }}Xana transclusion{{ end }}</div>
+  {{- if $nodeData -}}
+    {{- $versionData := index $nodeData.versions $version -}}
+    {{- if not $versionData }}{{ $versionData = index $nodeData.versions "latest" }}{{ end -}}
+    {{- $text := "" -}}
+    {{- $meta := false -}}
+    {{- if $versionData -}}
+      {{- $text = index $versionData.fragments $range -}}
+      {{- $meta = index $versionData.metadata $range -}}
+    {{- end -}}
+    {{- if $text -}}
+      <blockquote data-xana-transclusion-text="true">{{ $text | markdownify }}</blockquote>
+      <p class="xana-transclusion-citation" data-tts-skip="">
+        {{ if $page -}}
+          <a class="xana-transclusion-source" href="{{ $page.RelPermalink }}" data-node-jump="{{ $nodeID }}" title="Transcluded from {{ $page.Title }} fragment {{ if $meta }}{{ $meta.id }}{{ else }}{{ $range }}{{ end }}" aria-label="Transcluded from {{ $page.Title }} fragment {{ if $meta }}{{ $meta.id }}{{ else }}{{ $range }}{{ end }}">source</a>
+        {{ else -}}
+          <span class="xana-transclusion-source" title="Transcluded from {{ $nodeData.title }} fragment {{ if $meta }}{{ $meta.id }}{{ else }}{{ $range }}{{ end }}" aria-label="Transcluded from {{ $nodeData.title }} fragment {{ if $meta }}{{ $meta.id }}{{ else }}{{ $range }}{{ end }}">source</span>
+        {{ end -}}
+      </p>
+      <details class="xana-transclusion-details" data-tts-skip="">
+        <summary>Reference details</summary>
+        <dl class="xana-transclusion-meta">
+          <div>
+            <dt>Version</dt>
+            <dd><code>{{ $version }}</code></dd>
+          </div>
+          <div>
+            <dt>Address</dt>
+            <dd><code>{{ if $meta }}{{ $meta.tumbler }}{{ else }}{{ $ref }}{{ end }}</code></dd>
+          </div>
+          {{- if and $meta $meta.selector -}}
+            <div>
+              <dt>Selector</dt>
+              <dd><code>{{ $meta.selector.type }}:{{ $meta.selector.value }}</code></dd>
+            </div>
+          {{- end -}}
+        </dl>
+      </details>
+    {{- else -}}
+      <p>Fragment not found for range <code>{{ $range }}</code>. Run <code>npm run prepare</code> to regenerate fragment data.</p>
+    {{- end -}}
+  {{- else -}}
+    <p>Missing XanaNode reference: <code>{{ $ref }}</code></p>
+  {{- end -}}
+</aside>

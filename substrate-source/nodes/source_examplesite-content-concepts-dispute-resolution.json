@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-concepts-dispute-resolution",
+  "title": "ExampleSite / Content / Concepts / Dispute Resolution",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/concepts/dispute-resolution.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/dispute-resolution.md",
+  "artifact_path": "exampleSite/content/concepts/dispute-resolution.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/concepts/dispute-resolution.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:9ab1d588954c896371588695bba4b5705dc2c812b6e2f4aea6685cba2a828336",
+  "content": "---\ntitle: \"Dispute Resolution\"\ntype: \"concept\"\nimportance: 4\nsummary: \"A governance process for preserving contested claims, identity matches, relationships, and moderation decisions without pretending disagreement has disappeared.\"\nrelationships:\n  - type: \"requires\"\n    target: \"provenance\"\n  - type: \"supports\"\n    target: \"claim-merge-without-collapse\"\n  - type: \"context_for\"\n    target: \"merge-report\"\n  - type: \"required_for\"\n    target: \"federation-rules\"\n---\n\nDisputes are knowledge, not cleanup errors.\n\n[XanaNode](/node/xananode) preserves disagreement about claims, relationships, identity mappings, and merge decisions. The contested state remains traceable through [provenance](/node/provenance), evidence, counterevidence, and explicit relationship types such as `contradicts`, `disputes`, `possible_match`, and `disputed_identity`.\n\nThe goal is navigable uncertainty, not instant consensus.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/dispute-resolution.md",
+    "method": "archive",
+    "content_id": "sha256:9ab1d588954c896371588695bba4b5705dc2c812b6e2f4aea6685cba2a828336",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

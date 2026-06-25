@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-concepts-independent-moderation",
+  "title": "ExampleSite / Content / Concepts / Independent Moderation",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/concepts/independent-moderation.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/independent-moderation.md",
+  "artifact_path": "exampleSite/content/concepts/independent-moderation.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/concepts/independent-moderation.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:50858c01853402933e4745e5436c4cf998ac4a6b22ccb09ddf27d4ac0ddf3842",
+  "content": "---\ntitle: \"Independent Moderation\"\ntype: \"concept\"\nimportance: 4\nsummary: \"The principle that each substrate may govern its own content while still remaining interoperable with others.\"\nrelationships:\n  - type: \"contrasts_with\"\n    target: \"single-source-of-truth\"\n  - type: \"requires\"\n    target: \"provenance\"\n---\n\nIndependent moderation means each substrate controls what it accepts, rejects, disputes, hides, deprecates, or marks as uncertain.\n\nFederation does not require one moderation team to control validity for everyone. Local decisions remain visible as [provenance](/node/provenance), confidence, claims, counterclaims, evidence, and mappings across substrates.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/independent-moderation.md",
+    "method": "archive",
+    "content_id": "sha256:50858c01853402933e4745e5436c4cf998ac4a6b22ccb09ddf27d4ac0ddf3842",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

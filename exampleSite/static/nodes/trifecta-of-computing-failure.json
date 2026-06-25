@@ -1,0 +1,68 @@
+{
+  "id": "xananode.canonical:concept/trifecta-of-computing-failure",
+  "title": "The Trifecta of Computing Failure",
+  "type": "concept",
+  "subtype": "problem_frame",
+  "importance": 5,
+  "summary": "A three-part failure pattern in modern computing where knowledge is trapped in isolated documents, copied without durable lineage, and kept in tools that do not naturally federate.",
+  "content": "The Trifecta of Computing Failure names the pattern XanaNode is trying to escape.\n\nFirst, most systems treat the document or file as the primary container of meaning. Second, when people need to reuse or synthesize knowledge, they usually copy and paste excerpts into new places, which severs provenance, surrounding context, and revision lineage. Third, even tools that improve local note-linking rarely provide a durable protocol for independent authorship, portable raw assets, and federation across many tools and owners.\n\nXanaNode is meant to answer all three at once: relationships become first-class, transclusion and fragment identity preserve lineage, and the substrate can move between projection layers without collapsing back into one app's private format.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/claim-copy-paste-defines-trifecta",
+      "type": "defines",
+      "source": "xananode.canonical:claim/copy-paste-breaks-lineage",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/claim-document-boundaries-defines-trifecta",
+      "type": "defines",
+      "source": "xananode.canonical:claim/documents-collapse-knowledge-structure",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/claim-local-first-defines-trifecta",
+      "type": "defines",
+      "source": "xananode.canonical:claim/local-first-without-federation-is-not-enough",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/comparison-essay-investigates-trifecta",
+      "type": "investigates",
+      "source": "xananode.canonical:essay/xananode-compared-to-networked-notes-tools",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/essay-kernel-thought-investigates-trifecta",
+      "type": "investigates",
+      "source": "xananode.canonical:essay/xananode-as-a-kernel-for-human-thought",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/trifecta-has-claim-copy-paste",
+      "type": "has_claim",
+      "target": "xananode.canonical:claim/copy-paste-breaks-lineage",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/trifecta-has-claim-document-boundaries",
+      "type": "has_claim",
+      "target": "xananode.canonical:claim/documents-collapse-knowledge-structure",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/trifecta-has-claim-local-first-alone",
+      "type": "has_claim",
+      "target": "xananode.canonical:claim/local-first-without-federation-is-not-enough",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/xananode-related-to-trifecta",
+      "type": "related_to",
+      "source": "xananode.canonical:concept/xananode",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/concept_trifecta-of-computing-failure.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

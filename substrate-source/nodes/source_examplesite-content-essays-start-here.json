@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-essays-start-here",
+  "title": "ExampleSite / Content / Essays / Start Here",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/essays/start-here.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/essays/start-here.md",
+  "artifact_path": "exampleSite/content/essays/start-here.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/essays/start-here.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:ba1c80b30ccb797e8391081cfa20c6682da16a0521796c86c64ad344397fa7c0",
+  "content": "---\r\ntitle: \"Start Here\"\r\ndate: 2026-06-16\r\ntype: \"essay\"\r\nimportance: 5\r\nsummary: \"The canonical starting essay for the XanaNode example substrate.\"\r\nrelationships:\r\n  - type: \"explains\"\r\n    target: \"xananode\"\r\n  - type: \"explains\"\r\n    target: \"knowledge-substrate\"\r\n  - type: \"explains\"\r\n    target: \"federated-knowledge-substrates\"\r\n  - type: \"contrasts_with\"\r\n    target: \"single-source-of-truth\"\r\n  - type: \"continues_to\"\r\n    target: \"xananode-core-trail\"\r\n  - type: \"continues_to\"\r\n    target: \"protocol-artifacts-trail\"\r\n  - type: \"continues_to\"\r\n    target: \"using-hugo-with-protocol-json\"\r\n---\r\n\r\n[XanaNode](/node/xananode) begins with a simple claim: civilization is good at publishing information and bad at preserving the relationships that make information understandable.\r\n\r\nA page can say something. A graph can show where that statement came from, what supports it, what challenges it, what it depends on, and how it changed.\r\n\r\nThis substrate explains [XanaNode](xananode.canonical:concept/xananode) using [XanaNode](xananode.canonical:concept/xananode) itself. Each page is a node, and the graph around it carries the claims, sources, lineage, and relationships that make the page understandable.\r\n\r\nFollow the core trail from the problem of isolated documents, through [typed relationships](/node/typed-relationships), [provenance](/node/provenance), [transclusion](/node/transclusion), [namespacing](/node/namespacing), [merge validation](/node/merge-validation), and federation.\r\n\r\nThen follow the [protocol artifacts trail](/node/protocol-artifacts-trail) to see the manifest, node records, relationship list, schemas, registries, extension examples, reports, and governance rules that make federation concrete.\r\n\r\nIf you are building a [Hugo](hugo) site from existing protocol JSON, read [Using Hugo with Protocol JSON](/node/using-hugo-with-protocol-json).\r\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/essays/start-here.md",
+    "method": "archive",
+    "content_id": "sha256:ba1c80b30ccb797e8391081cfa20c6682da16a0521796c86c64ad344397fa7c0",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

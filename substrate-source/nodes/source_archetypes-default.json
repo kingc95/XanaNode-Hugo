@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-archetypes-default",
+  "title": "Archetypes / Default",
+  "type": "source",
+  "subtype": "reference_code",
+  "importance": 3,
+  "summary": "archetypes/default.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/archetypes/default.md",
+  "artifact_path": "archetypes/default.md",
+  "asset_path": "assets/raw/repository/archetypes/default.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:a62392bda48cc341c60b1d69840bfdd21c17240ff720de9b9805227fd541bc16",
+  "content": "---\ntitle: \"{{ replace .Name \"-\" \" \" | title }}\"\ndate: {{ .Date }}\ntype: \"node\"\nsummary: \"\"\nconcepts: []\nsources: []\nrelationships: []\n---\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/archetypes/default.md",
+    "method": "archive",
+    "content_id": "sha256:a62392bda48cc341c60b1d69840bfdd21c17240ff720de9b9805227fd541bc16",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

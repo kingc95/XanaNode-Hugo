@@ -1,0 +1,38 @@
+{
+  "id": "xananode.canonical:claim/stack-demonstrates-federation-through-layer-substrates",
+  "title": "The XanaNode stack demonstrates federation through layer substrates",
+  "type": "claim",
+  "subtype": "architectural_claim",
+  "importance": 5,
+  "summary": "The major XanaNode layers are published as their own substrate sources, so the stack demonstrates federation by example rather than only by description.",
+  "content": "Protocol, Core, Workspace, Studio, Mobile, and Hugo each publish or point to their own substrate source. The canonical substrate can therefore link to real substrate targets for the stack, not only to prose about the stack. This is a stronger proof than a diagram alone because each layer is addressable, versionable, and independently federatable.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/claim-stack-demonstrates-federation-through-layer-substrates-requires-source-federated-substrate-xananode.protocol",
+      "type": "requires",
+      "target": "xananode.canonical:source/federated-substrate-xananode.protocol",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/claim-stack-demonstrates-federation-through-layer-substrates-supports-concept-self-federating-stack",
+      "type": "supports",
+      "target": "xananode.canonical:concept/self-federating-stack",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/claim-stack-demonstrates-federation-through-layer-substrates-supports-concept-xananode",
+      "type": "supports",
+      "target": "xananode.canonical:concept/xananode",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/trail-federated-stack-proof-starts_with-claim-stack-demonstrates-federation-through-layer-substrates",
+      "type": "starts_with",
+      "source": "xananode.canonical:trail/federated-stack-proof",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/claim_stack-demonstrates-federation-through-layer-substrates.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

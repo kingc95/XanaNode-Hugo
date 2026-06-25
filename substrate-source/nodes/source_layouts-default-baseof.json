@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-layouts-default-baseof",
+  "title": "Layouts /  Default / Baseof",
+  "type": "source",
+  "subtype": "reference_code",
+  "importance": 4,
+  "summary": "layouts/_default/baseof.html is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/layouts/_default/baseof.html",
+  "artifact_path": "layouts/_default/baseof.html",
+  "asset_path": "assets/raw/repository/layouts/_default/baseof.html",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/html",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:36e59a3cc4b5f5ef6ee693707418404fe5632c95b395e5ea2435a91e9913966d",
+  "content": "﻿<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  {{ partial \"head.html\" . }}\n</head>\n<body>\n  <main class=\"site-main\">\n    {{ block \"main\" . }}{{ end }}\n  </main>\n</body>\n</html>\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/layouts/_default/baseof.html",
+    "method": "archive",
+    "content_id": "sha256:36e59a3cc4b5f5ef6ee693707418404fe5632c95b395e5ea2435a91e9913966d",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

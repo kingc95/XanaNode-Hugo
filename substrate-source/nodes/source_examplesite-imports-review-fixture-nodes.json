@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-imports-review-fixture-nodes",
+  "title": "ExampleSite / Imports / Review Fixture / Nodes",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/imports/review-fixture/nodes.json is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/imports/review-fixture/nodes.json",
+  "artifact_path": "exampleSite/imports/review-fixture/nodes.json",
+  "asset_path": "assets/raw/repository/exampleSite/imports/review-fixture/nodes.json",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "application/json",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:f995f0cdf2e90b969c8e39c5a65eb2583067fd96648cd5e1e5adb541961dd154",
+  "content": "{\r\n  \"nodes\": [\r\n    {\r\n      \"id\": \"xananode.review:observation/unresolved-review-fixture\",\r\n      \"title\": \"Unresolved Review Fixture\",\r\n      \"type\": \"observation\",\r\n      \"importance\": 1,\r\n      \"review_fixture\": true,\r\n      \"summary\": \"A deliberately incomplete review fixture used to keep pending suggestion examples out of real authored packs.\",\r\n      \"content\": \"This intentionally unfinished fixture mentions Hyperland, transclusion, and protocol artifacts without applying the links. Nelson's work provides a key source layer for transclusion, reusable media, and visible interconnection.\",\r\n      \"relationships\": []\r\n    }\r\n  ]\r\n}\r\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/imports/review-fixture/nodes.json",
+    "method": "archive",
+    "content_id": "sha256:f995f0cdf2e90b969c8e39c5a65eb2583067fd96648cd5e1e5adb541961dd154",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

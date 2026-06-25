@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-layouts-shortcodes-claim",
+  "title": "Layouts / Shortcodes / Claim",
+  "type": "source",
+  "subtype": "reference_code",
+  "importance": 4,
+  "summary": "layouts/shortcodes/claim.html is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/layouts/shortcodes/claim.html",
+  "artifact_path": "layouts/shortcodes/claim.html",
+  "asset_path": "assets/raw/repository/layouts/shortcodes/claim.html",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/html",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:41ef33fe06afa5da11ff71a590008ccb766320cc90e06dc994929935d5207801",
+  "content": "<aside class=\"claim\"{{ with .Get \"id\" }} id=\"{{ . }}\"{{ end }}>\n  <div class=\"claim-label\">Claim</div>\n  <div>{{ .Inner | markdownify }}</div>\n</aside>\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/layouts/shortcodes/claim.html",
+    "method": "archive",
+    "content_id": "sha256:41ef33fe06afa5da11ff71a590008ccb766320cc90e06dc994929935d5207801",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

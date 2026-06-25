@@ -1,0 +1,25 @@
+{
+  "id": "xananode.hugo:media/artifact-static-android-chrome-192x192",
+  "title": "Static / Android Chrome 192x192",
+  "type": "media",
+  "subtype": "projection_asset",
+  "importance": 3,
+  "summary": "static/android-chrome-192x192.png is preserved as a Hugo projection or branding asset in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/static/android-chrome-192x192.png",
+  "artifact_path": "static/android-chrome-192x192.png",
+  "asset_path": "assets/raw/repository/static/android-chrome-192x192.png",
+  "asset_role": "repository_source",
+  "media_type": "image",
+  "mime_type": "image/png",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:ff2ed35182f3e09a1c13fe6a8a1a0d5a78ba7a94f8fed8fed684c4d593379406",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/static/android-chrome-192x192.png",
+    "method": "archive",
+    "content_id": "sha256:ff2ed35182f3e09a1c13fe6a8a1a0d5a78ba7a94f8fed8fed684c4d593379406",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

@@ -68,6 +68,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/source-federated-substrate-xananode.workspace-documents-project-xananode-workspace",
+      "type": "documents",
+      "source": "xananode.canonical:source/federated-substrate-xananode.workspace",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/source-repository-kingc95-xananode-workspace-documents-project-xananode-workspace",
       "type": "documents",
       "source": "xananode.canonical:source/repository-kingc95-xananode-workspace",
@@ -99,7 +105,7 @@
   "build_metadata": {
     "version": "",
     "repository": "kingc95/XanaNode-Workspace",
-    "generated_at": "2026-06-22T09:24:54.287Z",
+    "generated_at": "2026-06-24T22:13:03.638Z",
     "built_by": "@xananode/core",
     "dependencies": [
       {

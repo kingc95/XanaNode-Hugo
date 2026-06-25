@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-layouts-partials-youtube-embed",
+  "title": "Layouts / Partials / Youtube Embed",
+  "type": "source",
+  "subtype": "reference_code",
+  "importance": 4,
+  "summary": "layouts/partials/youtube-embed.html is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/layouts/partials/youtube-embed.html",
+  "artifact_path": "layouts/partials/youtube-embed.html",
+  "asset_path": "assets/raw/repository/layouts/partials/youtube-embed.html",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/html",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:790cde75a28f5f42d3f931c649365c53bb58fd143426d97aa27e35de47624dd0",
+  "content": "{{- $url := .url | default \"\" -}}\n{{- $text := .text | default \"Watch on YouTube\" -}}\n{{- $videoID := \"\" -}}\n{{- $patterns := slice\n  `(https?:)?//(www\\.)?youtu\\.be/([^?&/]+)`\n  `(https?:)?//(www\\.)?youtube\\.com/watch\\?v=([^?&/]+)`\n  `(https?:)?//(www\\.)?youtube\\.com/embed/([^?&/]+)`\n  `(https?:)?//(www\\.)?youtube\\.com/shorts/([^?&/]+)`\n-}}\n{{- range $pattern := $patterns -}}\n  {{- if eq $videoID \"\" -}}\n    {{- $matches := findRE $pattern $url -}}\n    {{- if $matches -}}\n      {{- $match := index $matches 0 -}}\n      {{- $videoID = replaceRE $pattern `${3}` $match -}}\n    {{- end -}}\n  {{- end -}}\n{{- end -}}\n\n{{- if $videoID -}}\n  <div class=\"xana-youtube-embed\">\n    <div class=\"xana-youtube-embed__frame\">\n      <iframe\n        src=\"https://www.youtube-nocookie.com/embed/{{ $videoID }}\"\n        title=\"YouTube video player\"\n        loading=\"lazy\"\n        allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\"\n        allowfullscreen>\n      </iframe>\n    </div>\n    <a class=\"xana-youtube-embed__link\" href=\"{{ $url }}\" target=\"_blank\" rel=\"noopener noreferrer\">\n      {{ $text }}\n    </a>\n  </div>\n{{- else -}}\n  <a href=\"{{ $url }}\" target=\"_blank\" rel=\"noopener noreferrer\">{{ $text }}</a>\n{{- end -}}",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/layouts/partials/youtube-embed.html",
+    "method": "archive",
+    "content_id": "sha256:790cde75a28f5f42d3f931c649365c53bb58fd143426d97aa27e35de47624dd0",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

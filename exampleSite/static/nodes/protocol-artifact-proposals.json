@@ -85,6 +85,12 @@
       "type": "contains",
       "target": "xananode.canonical:source/protocol-artifact-proposals-xnp-0011-studio-local-first-authoring.md",
       "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-proposals-contains-source-protocol-artifact-proposals-xnp-0012-executable-tool-contract.md-raw-file-proposals-xnp-0012-executable-tool-contract.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-proposals-xnp-0012-executable-tool-contract.md",
+      "direction": "outgoing"
     }
   ],
   "imported_from": "nodes/schema_protocol-artifact-proposals.json",

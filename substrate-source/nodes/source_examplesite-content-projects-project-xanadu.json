@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-projects-project-xanadu",
+  "title": "ExampleSite / Content / Projects / Project Xanadu",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/projects/project-xanadu.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/projects/project-xanadu.md",
+  "artifact_path": "exampleSite/content/projects/project-xanadu.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/projects/project-xanadu.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:6c83b4c77f8cf94338bda4cf58fcf59cb7ec1ae9ea8d4119ef9f137b7df7ae46",
+  "content": "---\ntitle: \"Project Xanadu\"\ntype: \"project\"\nimportance: 5\nsummary: \"Ted Nelson's long-running hypertext project focused on deep linking, transclusion, versioning, and visible interconnection.\"\nrelationships:\n  - type: \"defines\"\n    target: \"transclusion\"\n  - type: \"influenced\"\n    target: \"xananode\"\n---\n\nProject Xanadu is the clearest historical predecessor for persistent [transclusion](/node/transclusion), [deep linking](/node/deep-linking), and relationship-preserving media.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/projects/project-xanadu.md",
+    "method": "archive",
+    "content_id": "sha256:6c83b4c77f8cf94338bda4cf58fcf59cb7ec1ae9ea8d4119ef9f137b7df7ae46",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

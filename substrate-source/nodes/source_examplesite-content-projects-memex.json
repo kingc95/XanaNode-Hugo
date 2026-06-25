@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-projects-memex",
+  "title": "ExampleSite / Content / Projects / Memex",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/projects/memex.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/projects/memex.md",
+  "artifact_path": "exampleSite/content/projects/memex.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/projects/memex.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:6b77857f5ef840c25bf7e128f02d9ee52d1add9a5305698bb11a5c279d1431c4",
+  "content": "---\r\ntitle: \"Memex\"\r\ntype: \"project\"\r\nimportance: 5\r\nsummary: \"Vannevar Bush's proposed associative memory device for navigating trails through recorded knowledge.\"\r\nrelationships:\r\n  - type: \"introduced_in\"\r\n    target: \"as-we-may-think\"\r\n  - type: \"anticipated\"\r\n    target: \"xananode\"\r\n---\r\n\r\nThe Memex is an ancestor concept for [associative trails](example.minimal:concept/associative-trails) and human-centered knowledge navigation.\r\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/projects/memex.md",
+    "method": "archive",
+    "content_id": "sha256:6b77857f5ef840c25bf7e128f02d9ee52d1add9a5305698bb11a5c279d1431c4",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

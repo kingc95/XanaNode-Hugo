@@ -1,0 +1,178 @@
+{{- $pages := where site.RegularPages "Params.type" "!=" nil -}}
+{{- $namespace := site.Params.xananode.namespace | default "xananode.example" -}}
+{
+  "namespace": {{ $namespace | jsonify }},
+  "nodes": [
+    {{- range $i, $p := $pages -}}
+      {{- $nodeID := $p.Params.node_id | default $p.File.ContentBaseName -}}
+      {{- $nodeType := $p.Params.node_type | default $p.Params.type | default $p.Section -}}
+      {{- if $i }},{{ end }}
+      {
+        "id": {{ $nodeID | jsonify }},
+        "protocol_id": {{ ($p.Params.protocol_id | default (printf "%s:%s/%s" $namespace ($nodeType | urlize) ($nodeID | urlize))) | jsonify }},
+        "title": {{ $p.Title | jsonify }},
+        "type": {{ $nodeType | jsonify }},
+        "subtype": {{ ($p.Params.subtype | default "") | jsonify }},
+        "subtypes": {{ ($p.Params.subtypes | default slice) | jsonify }},
+        "section": {{ $p.Section | jsonify }},
+        "importance": {{ ($p.Params.importance | default 3) | jsonify }},
+        "trail_nodes": {{ ($p.Params.nodes | default slice) | jsonify }},
+        "trail_branches": {{ ($p.Params.branches | default slice) | jsonify }},
+
+        "url": {{ $p.RelPermalink | jsonify }},
+        "summary": {{ ($p.Params.summary | default "") | jsonify }},
+        "html": {{ $p.Content | jsonify }},
+        "content": {{ ($p.Content | plainify | truncate 1200) | jsonify }},
+
+        "image": {{ ($p.Params.image | default "") | jsonify }},
+        "image_alt": {{ ($p.Params.image_alt | default $p.Title) | jsonify }},
+
+        "primary_media": {{ ($p.Params.primary_media | default "") | jsonify }},
+        "media_type": {{ ($p.Params.media_type | default "") | jsonify }},
+        "file": {{ ($p.Params.file | default "") | jsonify }},
+        "asset_path": {{ ($p.Params.asset_path | default "") | jsonify }},
+        "asset_role": {{ ($p.Params.asset_role | default "") | jsonify }},
+        "mime_type": {{ ($p.Params.mime_type | default "") | jsonify }},
+        "alt": {{ ($p.Params.alt | default "") | jsonify }},
+        "caption": {{ ($p.Params.caption | default "") | jsonify }},
+        "creator": {{ ($p.Params.creator | default "") | jsonify }},
+        "created_date": {{ ($p.Params.created_date | default "") | jsonify }},
+        "source_name": {{ ($p.Params.source_name | default "") | jsonify }},
+        "source_url": {{ ($p.Params.source_url | default "") | jsonify }},
+        "youtube_url": {{ ($p.Params.youtube_url | default "") | jsonify }},
+        "license": {{ ($p.Params.license | default "") | jsonify }},
+        "license_url": {{ ($p.Params.license_url | default "") | jsonify }},
+        "rights_status": {{ ($p.Params.rights_status | default "") | jsonify }},
+        "tumbler": {{ ($p.Params.tumbler | default "") | jsonify }},
+        "author": {{ ($p.Params.author | default "") | jsonify }},
+        "year": {{ ($p.Params.year | default "") | jsonify }}
+      }
+    {{- end }}
+  ],
+  "edges": [
+    {{- $first := true -}}
+    {{- range $p := $pages -}}
+      {{- $source := $p.Params.node_id | default $p.File.ContentBaseName -}}
+
+      {{- with $p.Params.primary_media -}}
+        {{- if not $first }},{{ end -}}{{- $first = false -}}
+        {
+          "source": {{ $source | jsonify }},
+          "target": {{ . | jsonify }},
+          "type": "represented_by",
+          "weight": 5,
+          "visibility": "primary",
+          "origin": "primary_media"
+        }
+      {{- end -}}
+
+      {{- range $p.Params.relationships -}}
+        {{- if not $first }},{{ end -}}{{- $first = false -}}
+        {
+          "source": {{ $source | jsonify }},
+          "target": {{ .target | jsonify }},
+          "type": {{ .type | jsonify }},
+          "weight": {{ (.weight | default 4) | jsonify }},
+          "visibility": {{ (.visibility | default "primary") | jsonify }},
+          "origin": "relationship"
+        }
+      {{- end -}}
+
+      {{- range $p.Params.concepts -}}
+        {{- if not $first }},{{ end -}}{{- $first = false -}}
+        {
+          "source": {{ $source | jsonify }},
+          "target": {{ . | jsonify }},
+          "type": "mentions",
+          "weight": 2,
+          "visibility": "secondary",
+          "origin": "concept"
+        }
+      {{- end -}}
+
+      {{- range $p.Params.sources -}}
+        {{- if not $first }},{{ end -}}{{- $first = false -}}
+        {
+          "source": {{ $source | jsonify }},
+          "target": {{ . | jsonify }},
+          "type": "cites",
+          "weight": 3,
+          "visibility": "secondary",
+          "origin": "source"
+        }
+      {{- end -}}
+
+      {{- range $p.Params.people -}}
+        {{- if not $first }},{{ end -}}{{- $first = false -}}
+        {
+          "source": {{ $source | jsonify }},
+          "target": {{ . | jsonify }},
+          "type": "mentions",
+          "weight": 2,
+          "visibility": "secondary",
+          "origin": "person"
+        }
+      {{- end -}}
+
+            {{- range $p.Params.artifacts -}}
+        {{- if not $first }},{{ end -}}{{- $first = false -}}
+        {
+          "source": {{ $source | jsonify }},
+          "target": {{ . | jsonify }},
+          "type": "mentions",
+          "weight": 2,
+          "visibility": "secondary",
+          "origin": "artifact"
+        }
+      {{- end -}}
+
+      {{- range $p.Params.organizations -}}
+        {{- if not $first }},{{ end -}}{{- $first = false -}}
+        {
+          "source": {{ $source | jsonify }},
+          "target": {{ . | jsonify }},
+          "type": "mentions",
+          "weight": 2,
+          "visibility": "secondary",
+          "origin": "organization"
+        }
+      {{- end -}}
+
+      {{- range $p.Params.depicts -}}
+        {{- if not $first }},{{ end -}}{{- $first = false -}}
+        {
+          "source": {{ $source | jsonify }},
+          "target": {{ . | jsonify }},
+          "type": "depicts",
+          "weight": 5,
+          "visibility": "primary",
+          "origin": "depicts"
+        }
+      {{- end -}}
+
+      {{- if and $p.Params.image (not $p.Params.primary_media) -}}
+        {{- if not $first }},{{ end -}}{{- $first = false -}}
+        {
+          "source": {{ $source | jsonify }},
+          "target": {{ $source | jsonify }},
+          "type": "unresolved_media",
+          "weight": 1,
+          "visibility": "background",
+          "origin": "legacy_image"
+        }
+      {{- end -}}
+
+      {{- range $p.Params.nodes -}}
+        {{- if not $first }},{{ end -}}{{- $first = false -}}
+        {
+          "source": {{ $source | jsonify }},
+          "target": {{ . | jsonify }},
+          "type": "contains",
+          "weight": 4,
+          "visibility": "primary",
+          "origin": "trail"
+        }
+      {{- end -}}
+    {{- end }}
+  ]
+}

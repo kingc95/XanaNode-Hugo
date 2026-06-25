@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-concepts-known-implementations-registry",
+  "title": "ExampleSite / Content / Concepts / Known Implementations Registry",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/concepts/known-implementations-registry.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/known-implementations-registry.md",
+  "artifact_path": "exampleSite/content/concepts/known-implementations-registry.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/concepts/known-implementations-registry.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:04f9270679d7f29deebc4707d81eefc950f1f3205184faaaf5319329d794bf1c",
+  "content": "---\r\ntitle: \"Known Implementations Registry\"\r\ntype: \"concept\"\r\nimportance: 4\r\nsummary: \"A registry of tools, themes, validators, renderers, and substrates that claim some level of XanaNode compatibility.\"\r\nrelationships:\r\n  - type: \"documents\"\r\n    target: \"xananode-hugo-theme\"\r\n  - type: \"supports\"\r\n    target: \"compatibility-levels\"\r\n---\r\n\r\nThe [known implementations registry](xananode.canonical:schema/known-implementations-registry) is a discovery aid for the ecosystem.\r\n\r\nIt lists tools, themes, validators, renderers, and example substrates that claim a level of [XanaNode](/node/xananode) compatibility.\r\n\r\nThe registry does not replace validation. It gives implementers real targets to inspect, compare, and test against.\r\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/known-implementations-registry.md",
+    "method": "archive",
+    "content_id": "sha256:04f9270679d7f29deebc4707d81eefc950f1f3205184faaaf5319329d794bf1c",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

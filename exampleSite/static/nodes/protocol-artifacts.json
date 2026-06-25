@@ -4,6 +4,7 @@
   "type": "concept",
   "importance": 5,
   "summary": "The portable JSON files, schemas, fragments, reports, and media references that allow tools to validate, compare, mount, import, merge, and render substrates.",
+  "content": "Protocol artifacts are the portable files that make a XanaNode substrate inspectable by both people and machines. They include the manifest, node records, relationship lists, fragments, validation reports, suggestions, registries, media references, and any other standardized outputs the protocol defines.\n\nThese artifacts matter because tools should not need private in-memory state or one specific application in order to understand a substrate. If the artifacts are present and valid, another compatible tool should be able to open the substrate, validate it, compare it, federate it, or project it.\n\nWhen the protocol stack is working properly, the artifacts are not a side effect. They are part of the knowledge being preserved and transmitted.",
   "relationships": [
     {
       "id": "xananode.canonical:rel/concept-protocol-artifacts-contains-schema-protocol-artifact-contexts-raw-group-contexts",
@@ -1881,6 +1882,12 @@
       "id": "xananode.canonical:rel/source-protocol-artifact-proposals-xnp-0011-studio-local-first-authoring.md-documents-concept-protocol-artifacts-raw-file-docs-proposals-xnp-0011-studio-local-first-authoring.md",
       "type": "documents",
       "source": "xananode.canonical:source/protocol-artifact-proposals-xnp-0011-studio-local-first-authoring.md",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/source-protocol-artifact-proposals-xnp-0012-executable-tool-contract.md-documents-concept-protocol-artifacts-raw-file-docs-proposals-xnp-0012-executable-tool-contract.md",
+      "type": "documents",
+      "source": "xananode.canonical:source/protocol-artifact-proposals-xnp-0012-executable-tool-contract.md",
       "direction": "incoming"
     },
     {

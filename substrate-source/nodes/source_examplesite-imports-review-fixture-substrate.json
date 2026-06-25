@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-imports-review-fixture-substrate",
+  "title": "ExampleSite / Imports / Review Fixture / Substrate",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/imports/review-fixture/substrate.json is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/imports/review-fixture/substrate.json",
+  "artifact_path": "exampleSite/imports/review-fixture/substrate.json",
+  "asset_path": "assets/raw/repository/exampleSite/imports/review-fixture/substrate.json",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "application/json",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:ab9e7edfeb2cff08ef3af921a949c18acf52231f85e32235e807770352c74942",
+  "content": "{\r\n  \"id\": \"xananode.review-fixture\",\r\n  \"name\": \"XanaNode Review Fixture\",\r\n  \"version\": \"0.1.0\",\r\n  \"namespace\": \"xananode.review\",\r\n  \"description\": \"A deliberately incomplete substrate pack used to demonstrate Core review suggestions without dirtying canonical or lineage packs.\",\r\n  \"repository\": {\r\n    \"type\": \"local\",\r\n    \"url\": \"exampleSite/imports/review-fixture\",\r\n    \"default_branch\": \"main\"\r\n  }\r\n}\r\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/imports/review-fixture/substrate.json",
+    "method": "archive",
+    "content_id": "sha256:ab9e7edfeb2cff08ef3af921a949c18acf52231f85e32235e807770352c74942",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

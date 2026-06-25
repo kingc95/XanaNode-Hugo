@@ -1,0 +1,28 @@
+{{- $dest := .Destination -}}
+{{- $isYouTube := findRE `(?i)^(https?:)?//(www\.)?(youtube\.com/watch\?v=|youtube\.com/embed/|youtube\.com/shorts/|youtu\.be/)` $dest -}}
+{{- $isPdf := findRE `(?i)\.pdf(?:[?#].*)?$` $dest -}}
+{{- $nodeRouteMatch := findRE `^/?(node|claim|concept|essay|media|observation|person|project|schema|source|technology|trail)/[^/?#]+/?$` $dest -}}
+{{- if $isYouTube -}}
+  {{ partial "youtube-embed.html" (dict "url" $dest "text" .Text) }}
+{{- else if $isPdf -}}
+  <div class="xana-pdf-embed">
+    <div class="xana-pdf-embed__frame">
+      <iframe
+        src="{{ $dest }}"
+        title="PDF viewer"
+        loading="lazy">
+      </iframe>
+    </div>
+    <a class="xana-pdf-embed__link" href="{{ $dest }}" target="_blank" rel="noopener noreferrer">{{ .Text | safeHTML }}</a>
+  </div>
+{{- else if $nodeRouteMatch -}}
+  {{- $nodeID := replaceRE `^/?(?:node|claim|concept|essay|media|observation|person|project|schema|source|technology|trail)/([^/?#]+)/?$` "$1" $dest | urlquery -}}
+  {{- $target := partial "find-page-by-id.html" (dict "id" $nodeID) -}}
+  {{- if $target -}}
+    <a href="{{ $target.RelPermalink }}" data-node-jump="{{ $nodeID }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+  {{- else -}}
+    <a href="{{ $dest }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+  {{- end -}}
+{{- else -}}
+  <a href="{{ $dest }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- end -}}

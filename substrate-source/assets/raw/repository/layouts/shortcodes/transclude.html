@@ -1,0 +1,18 @@
+{{ $sourceID := .Get "source" }}
+{{ $label := .Get "label" }}
+{{ $sourcePage := site.GetPage (printf "/sources/%s" $sourceID) }}
+<aside class="transclusion">
+  <div class="transclusion-label">{{ if $label }}{{ $label }}{{ else }}Transcluded source{{ end }}</div>
+  {{ if $sourcePage }}
+    <h3><a href="{{ $sourcePage.RelPermalink }}">{{ $sourcePage.Title }}</a></h3>
+    <dl class="source-details">
+      {{ with $sourcePage.Params.author }}<dt>Author</dt><dd>{{ . }}</dd>{{ end }}
+      {{ with $sourcePage.Params.year }}<dt>Year</dt><dd>{{ . }}</dd>{{ end }}
+      {{ with $sourcePage.Params.source_url }}<dt>Original</dt><dd><a href="{{ . }}">Source link</a></dd>{{ end }}
+      {{ with $sourcePage.Params.archive_url }}<dt>Archive</dt><dd><a href="{{ . }}">Archived link</a></dd>{{ end }}
+    </dl>
+    {{ with $sourcePage.Params.summary }}<p>{{ . }}</p>{{ else }}{{ with $sourcePage.Summary }}<p>{{ . }}</p>{{ end }}{{ end }}
+  {{ else }}
+    <p>Missing source node: <code>{{ $sourceID }}</code></p>
+  {{ end }}
+</aside>

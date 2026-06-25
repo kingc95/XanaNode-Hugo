@@ -1,0 +1,44 @@
+{
+  "id": "xananode.canonical:fragment/xananode-kernel-thought-0004",
+  "title": "XanaNode Kernel Thought Fragment 0004",
+  "type": "fragment",
+  "subtype": "paragraph",
+  "importance": 4,
+  "summary": "The federation and ecosystem argument.",
+  "source_node": "xananode.canonical:source/xananode-kernel-for-human-thought-draft",
+  "source_content_id": "sha256:xananode-kernel-for-human-thought-draft-source",
+  "source_version_id": "sha256:xananode-kernel-for-human-thought-draft-source-v1",
+  "fragment_id": "0004",
+  "tumbler": "xananode.canonical:source/xananode-kernel-for-human-thought-draft@sha256:xananode-kernel-for-human-thought-draft-source-v1#fragment/0004@sha256:xananode-kernel-thought-fragment-0004",
+  "selector": {
+    "type": "semantic-anchor",
+    "value": "federation-over-monopolies"
+  },
+  "content_id": "sha256:xananode-kernel-thought-fragment-0004",
+  "version_id": "sha256:xananode-kernel-thought-fragment-0004-v1",
+  "rights_status": "canonical-public",
+  "content": "Federation is the ecosystem layer. Linux did not become important because one company owned all computation. It mattered because many independent actors could build on a common base. XanaNode aims for the same pattern with independently authored substrates that can mount, compare, and merge without surrendering provenance, lineage, disagreement, or ownership.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/essay-kernel-thought-transcludes-fragment-0004",
+      "type": "transcludes",
+      "source": "xananode.canonical:essay/xananode-as-a-kernel-for-human-thought",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/kernel-fragment-0004-derived-from-source",
+      "type": "derived_from",
+      "target": "xananode.canonical:source/xananode-kernel-for-human-thought-draft",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/kernel-fragment-0004-supports-open-kernel-claim",
+      "type": "supports",
+      "target": "xananode.canonical:claim/xananode-is-an-open-kernel-for-knowledge",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/fragment_xananode-kernel-thought-0004.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

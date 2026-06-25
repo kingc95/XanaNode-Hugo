@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-projects-xananode-hugo-theme",
+  "title": "ExampleSite / Content / Projects / Xananode Hugo Theme",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/projects/xananode-hugo-theme.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/projects/xananode-hugo-theme.md",
+  "artifact_path": "exampleSite/content/projects/xananode-hugo-theme.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/projects/xananode-hugo-theme.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:aac637a52ad91dd1432356ca8a18edb7b7a0518577694dacccfae707f8af9634",
+  "content": "---\r\ntitle: \"XanaNode Hugo Theme\"\r\ntype: \"project\"\r\nimportance: 4\r\nsummary: \"A Hugo theme that publishes XanaNode substrates as readable pages and a navigable graph.\"\r\nstatus: \"prototype\"\r\nprimary_media: \"xananode-icon\"\r\nrelationships:\r\n  - type: \"implements\"\r\n    target: \"xananode\"\r\n  - type: \"uses\"\r\n    target: \"hugo\"\r\n  - type: \"uses\"\r\n    target: \"cytoscape-js\"\r\n  - type: \"demonstrates\"\r\n    target: \"knowledge-substrate\"\r\n---\r\n\r\nThe [Hugo](/node/hugo) theme is not [XanaNode](/node/xananode) itself.\r\n\r\nIt turns substrate nodes, relationships, media, and trails into a readable public site with a graph beside the prose.\r\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/projects/xananode-hugo-theme.md",
+    "method": "archive",
+    "content_id": "sha256:aac637a52ad91dd1432356ca8a18edb7b7a0518577694dacccfae707f8af9634",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

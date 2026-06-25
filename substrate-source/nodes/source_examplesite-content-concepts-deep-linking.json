@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-concepts-deep-linking",
+  "title": "ExampleSite / Content / Concepts / Deep Linking",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/concepts/deep-linking.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/deep-linking.md",
+  "artifact_path": "exampleSite/content/concepts/deep-linking.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/concepts/deep-linking.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:03d48a63c8a5d50cb42bd4bf2bbdae05c8c947fefd71db1c4a53b117ac0569ca",
+  "content": "---\ntitle: \"Deep Linking\"\ntype: \"concept\"\nimportance: 4\nsummary: \"Pointing to a specific addressable fragment rather than only to a whole document or node.\"\nrelationships:\n  - type: \"enables\"\n    target: \"transclusion\"\n  - type: \"contrasts_with\"\n    target: \"unlabeled-hyperlink\"\n---\n\nDeep linking points at an addressable part of a node rather than only at a whole page.\n\nIn [XanaNode](/node/xananode), stable fragment ids and tumbler addresses give those links protocol identity. A deep link can identify the source node, version, and fragment being discussed or transcluded.\n\nThat is the practical bridge between ordinary hyperlinks and the [provenance](/node/provenance)-preserving reuse imagined by Xanadu.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/deep-linking.md",
+    "method": "archive",
+    "content_id": "sha256:03d48a63c8a5d50cb42bd4bf2bbdae05c8c947fefd71db1c4a53b117ac0569ca",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

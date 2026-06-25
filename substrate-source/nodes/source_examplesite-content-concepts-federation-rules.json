@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-concepts-federation-rules",
+  "title": "ExampleSite / Content / Concepts / Federation Rules",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/concepts/federation-rules.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/federation-rules.md",
+  "artifact_path": "exampleSite/content/concepts/federation-rules.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/concepts/federation-rules.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:8dad98c7fb1be79c412d842ca93fdf24d9174e35a0974aac4631e79b05252fe0",
+  "content": "---\ntitle: \"Federation Rules\"\ntype: \"concept\"\nimportance: 5\nsummary: \"The rules for exchanging, comparing, and preserving independently governed substrates without collapsing them into one authority.\"\nrelationships:\n  - type: \"defines\"\n    target: \"federated-knowledge-substrates\"\n  - type: \"preserves\"\n    target: \"independent-moderation\"\n  - type: \"requires\"\n    target: \"compatibility-report\"\n  - type: \"requires\"\n    target: \"merge-report\"\n---\n\nFederation starts from substrate sovereignty.\n\nAnother substrate may import, map, compare, or reject data, but it must not silently overwrite [provenance](/node/provenance), collapse disagreement, or erase local moderation decisions.\n\nThe canonical rule is simple: merge by adding structure, not by destroying context.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/federation-rules.md",
+    "method": "archive",
+    "content_id": "sha256:8dad98c7fb1be79c412d842ca93fdf24d9174e35a0974aac4631e79b05252fe0",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

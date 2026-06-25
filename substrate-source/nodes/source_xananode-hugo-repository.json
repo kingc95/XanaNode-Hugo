@@ -1,0 +1,12 @@
+{
+  "id": "xananode.hugo:source/repository-xananode-hugo",
+  "title": "XanaNode Hugo Repository",
+  "type": "source",
+  "subtype": "git_repository",
+  "importance": 5,
+  "summary": "Public Git repository for the XanaNode Hugo theme and read-only substrate viewer.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo",
+  "repository": "kingc95/XanaNode-Hugo",
+  "rights_status": "external",
+  "relationships": []
+}

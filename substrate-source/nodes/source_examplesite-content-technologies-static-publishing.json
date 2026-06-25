@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-technologies-static-publishing",
+  "title": "ExampleSite / Content / Technologies / Static Publishing",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/technologies/static-publishing.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/technologies/static-publishing.md",
+  "artifact_path": "exampleSite/content/technologies/static-publishing.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/technologies/static-publishing.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:f318c3f84576d30024512add24c3a486ef794c07660eccf7b5368e437a29aa8a",
+  "content": "---\ntitle: \"Static Publishing\"\ntype: \"technology\"\nimportance: 3\nsummary: \"Publishing files that can be hosted without a dynamic application server.\"\nrelationships:\n  - type: \"enabled_by\"\n    target: \"xananode-hugo-theme\"\n---\n\nStatic publishing makes a substrate easy to host, mirror, archive, and inspect.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/technologies/static-publishing.md",
+    "method": "archive",
+    "content_id": "sha256:f318c3f84576d30024512add24c3a486ef794c07660eccf7b5368e437a29aa8a",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

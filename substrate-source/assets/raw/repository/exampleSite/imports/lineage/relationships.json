@@ -1,0 +1,195 @@
+{
+  "relationships": [
+    {
+      "id": "xananode.lineage:rel/lost-lineage-context-for-xananode",
+      "source": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "target": "xananode.example:concept/xananode",
+      "type": "context_for",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "The lost lineage frames XanaNode as a corrective for preserving connected, attributable knowledge."
+    },
+    {
+      "id": "xananode.lineage:rel/otlet-anticipated-knowledge-systems",
+      "source": "xananode.lineage:person/paul-otlet",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "anticipated",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Otlet anticipated global knowledge systems and networked documentation."
+    },
+    {
+      "id": "xananode.lineage:rel/wells-proposed-world-brain",
+      "source": "xananode.lineage:person/h-g-wells",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "proposed",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Wells proposed a planetary memory through the World Brain."
+    },
+    {
+      "id": "xananode.lineage:rel/bush-influenced-adams-lineage",
+      "source": "xananode.example:person/vannevar-bush",
+      "target": "xananode.lineage:person/douglas-adams",
+      "type": "influenced",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Bush's associative trails feed the lineage that Hyperland dramatized."
+    },
+    {
+      "id": "xananode.lineage:rel/nelson-influenced-hyperland",
+      "source": "xananode.example:person/ted-nelson",
+      "target": "xananode.lineage:publication/hyperland",
+      "type": "influenced",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "Nelson's hypertext and Xanadu ideas are central to Hyperland."
+    },
+    {
+      "id": "xananode.lineage:rel/adams-authored-hyperland",
+      "source": "xananode.lineage:person/douglas-adams",
+      "target": "xananode.lineage:publication/hyperland",
+      "type": "authored",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "Douglas Adams authored Hyperland."
+    },
+    {
+      "id": "xananode.lineage:rel/whitby-created-hyperland",
+      "source": "xananode.lineage:person/max-whitby",
+      "target": "xananode.lineage:publication/hyperland",
+      "type": "created",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Max Whitby produced and directed Hyperland."
+    },
+    {
+      "id": "xananode.lineage:rel/hyperland-features-tom-baker",
+      "source": "xananode.lineage:publication/hyperland",
+      "target": "xananode.lineage:person/tom-baker",
+      "type": "features",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Hyperland features Tom Baker as a software-agent persona."
+    },
+    {
+      "id": "xananode.lineage:rel/hyperland-contemporary-of-ted2",
+      "source": "xananode.lineage:publication/hyperland",
+      "target": "xananode.lineage:event/ted2-1990",
+      "type": "contemporary_of",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Hyperland and TED2 converge in the same 1990 hypermedia moment.",
+      "valid_from": "1990-01-01T00:00:00Z",
+      "valid_to": "1990-12-31T23:59:59Z"
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-occurred-at-monterey",
+      "source": "xananode.lineage:event/ted2-1990",
+      "target": "xananode.lineage:place/monterey-california",
+      "type": "occurred_at",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "TED2 occurred in Monterey, California."
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-adams",
+      "source": "xananode.lineage:event/ted2-1990",
+      "target": "xananode.lineage:person/douglas-adams",
+      "type": "features",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "TED2 featured Douglas Adams."
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-bob-stein",
+      "source": "xananode.lineage:event/ted2-1990",
+      "target": "xananode.lineage:person/bob-stein",
+      "type": "features",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "TED2 featured Bob Stein's interactive publishing branch."
+    },
+    {
+      "id": "xananode.lineage:rel/bob-stein-created-voyager",
+      "source": "xananode.lineage:person/bob-stein",
+      "target": "xananode.lineage:organization/voyager-company",
+      "type": "created",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "Bob Stein created interactive publishing contexts including Voyager."
+    },
+    {
+      "id": "xananode.lineage:rel/ted2-features-alan-kay",
+      "source": "xananode.lineage:event/ted2-1990",
+      "target": "xananode.lineage:person/alan-kay",
+      "type": "features",
+      "weight": 4,
+      "visibility": "secondary",
+      "summary": "TED2 featured Alan Kay's dynamic media branch."
+    },
+    {
+      "id": "xananode.lineage:rel/alan-kay-shaped-dynamic-media",
+      "source": "xananode.lineage:person/alan-kay",
+      "target": "xananode.lineage:organization/xerox-parc",
+      "type": "shapes",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "Kay's work belongs to the PARC dynamic-media and personal-computing lineage."
+    },
+    {
+      "id": "xananode.lineage:rel/hypercard-popularized-hypermedia",
+      "source": "xananode.lineage:technology/hypercard",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "popularized",
+      "weight": 3,
+      "visibility": "secondary",
+      "summary": "HyperCard popularized personal hypermedia authoring."
+    },
+    {
+      "id": "xananode.lineage:rel/berners-lee-implemented-web",
+      "source": "xananode.lineage:person/tim-berners-lee",
+      "target": "xananode.lineage:technology/world-wide-web",
+      "type": "implements",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "Tim Berners-Lee implemented the Web as simple distributed hypertext."
+    },
+    {
+      "id": "xananode.lineage:rel/web-contrasts-with-xananode",
+      "source": "xananode.lineage:technology/world-wide-web",
+      "target": "xananode.example:concept/xananode",
+      "type": "contrasts_with",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "The Web solved broad publishing, while XanaNode focuses on semantic relationships, provenance, transclusion, and governance."
+    },
+    {
+      "id": "xananode.lineage:rel/aspen-anticipated-spatial-media",
+      "source": "xananode.lineage:project/aspen-movie-map",
+      "target": "xananode.lineage:publication/hyperland",
+      "type": "anticipated",
+      "weight": 3,
+      "visibility": "background",
+      "summary": "Aspen Movie Map anticipates navigable spatial media adjacent to Hyperland's concerns."
+    },
+    {
+      "id": "xananode.lineage:rel/trail-starts-with-lost-lineage",
+      "source": "xananode.lineage:trail/lost-lineage-intertwingled-trail",
+      "target": "xananode.lineage:concept/lost-lineage-human-knowledge-augmentation",
+      "type": "starts_with",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "The imported lineage trail starts with the lost-lineage frame."
+    },
+    {
+      "id": "xananode.lineage:rel/trail-arrives-at-xananode",
+      "source": "xananode.lineage:trail/lost-lineage-intertwingled-trail",
+      "target": "xananode.example:concept/xananode",
+      "type": "arrives_at",
+      "weight": 5,
+      "visibility": "primary",
+      "summary": "The imported lineage trail arrives at XanaNode."
+    }
+  ]
+}

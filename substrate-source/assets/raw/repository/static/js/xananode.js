@@ -1,0 +1,5712 @@
+import {
+    createProjectionRegistry,
+    projectionEdgePath,
+    projectionEdgeArrowPoints,
+    findProjectionRoute,
+    buildHopNeighborhood,
+    layoutReadableProjection,
+    fitReadableProjectionViewport,
+    resolveProjectionNodeCollisions,
+    wrapProjectionText,
+    buildReadableTravelOverlayMarkup
+} from "/js/projection.js";
+
+(function () {
+    const graphEl = document.getElementById("xana-graph");
+    const panelEl = document.getElementById("xana-panel");
+
+    if (!graphEl || !panelEl) return;
+
+    // Pending stagedReveal timer IDs — cleared on every new reveal so
+    // in-flight timers from a previous navigation never fire against the new graph.
+    let _revealTimers = [];
+
+    // Monotonic counter bumped on every renderVisibleGraph call.
+    // travelToNode captures its value at call time and bails out if it changes,
+    // preventing stale zoom-complete callbacks from firing against a new graph.
+    let _navGen = 0;
+
+    // Tour timers — managed outside state so they survive renderVisibleGraph rebuilds.
+    let _tourTimer = null;
+    let _tourScrollInterval = null;
+    let _aliveTimer = null;
+    let TOUR_DWELL_MS = 9000;     // ms between node hops — updated by speed input
+    const NARRATION_AFTER_END_PAUSE_MS = 1200;
+
+    const STORAGE_KEYS = {
+        panelWidth: "xananode.panelWidth",
+        graphZoom: "xananode.graphZoom",
+        graphPan: "xananode.graphPan",
+        searchQuery: "xananode.searchQuery",
+        enabledTypes: "xananode.enabledTypes",
+        enabledMediaTypes: "xananode.enabledMediaTypes",
+        enabledRelationshipTypes: "xananode.enabledRelationshipTypes",
+        enabledSubtypes: "xananode.enabledSubtypes",
+        depth: "xananode.depth",
+        connectionsOpen: "xananode.connectionsOpen",
+        tourSpeed: "xananode.tourSpeed",
+        tourMode: "xananode.tourMode",
+        colorTheme: "xananode.colorTheme",
+        uiDensity: "xananode.uiDensity",
+        readerFontScale: "xananode.readerFontScale",
+        graphAtmosphere: "xananode.graphAtmosphere",
+        ttsNarrator: "xananode.ttsNarrator",
+        ttsVoice: "xananode.ttsVoice",
+        ttsRate: "xananode.ttsRate",
+        ttsPitch: "xananode.ttsPitch",
+        ttsDetail: "xananode.ttsDetail",
+        interfaceTourCompleted: "xananode.interfaceTourCompleted"
+    };
+
+    const COOKIE_KEYS = {
+        interfaceTourCompleted: "xananode_interface_tour_completed"
+    };
+
+    const DISPLAY_DEFAULTS = Object.freeze({
+        colorTheme: "dark",
+        uiDensity: "comfortable",
+        readerFontScale: 100,
+        graphAtmosphere: "still",
+        tourMode: "narration",
+        ttsNarrator: true,
+        ttsVoice: "",
+        ttsRate: 0.95,
+        ttsPitch: 1,
+        ttsDetail: "full"
+    });
+
+    const DEFAULT_SEARCH_PROMPTS = [
+        "explore the knowledge substrate",
+        "trace an idea across sources",
+        "follow a claim to evidence",
+        "compare connected nodes",
+        "search for provenance",
+        "map a trail through context"
+    ];
+
+    const THEME_CONFIG = normalizeThemeConfig(window.XanaNodeTheme);
+    const SEARCH_PROMPTS = THEME_CONFIG.searchPrompts.length
+        ? THEME_CONFIG.searchPrompts
+        : DEFAULT_SEARCH_PROMPTS;
+
+    const DEFAULT_TYPES = [
+        "essay",
+        "concept",
+        "claim",
+        "source",
+        "person",
+        "observation",
+        "trail",
+        "media",
+        "project",
+        "artifact",
+        "organization",
+        "event",
+        "place",
+        "technology",
+        "publication",
+        "community",
+        "relationship",
+        "revision",
+        "schema"
+    ];
+
+    function normalizeThemeConfig(config) {
+        const raw = config && typeof config === "object" ? config : {};
+        const brand = raw.brand && typeof raw.brand === "object" ? raw.brand : {};
+        const prompts = Array.isArray(raw.searchPrompts)
+            ? raw.searchPrompts
+                .map((prompt) => String(prompt || "").trim())
+                .filter(Boolean)
+            : [];
+
+        return {
+            namespace: String(raw.namespace || "").trim(),
+            homeNode: String(raw.homeNode || "start-here").trim() || "start-here",
+            brand: {
+                name: String(brand.name || "XanaNode"),
+                tagline: String(brand.tagline || "Relationships preserve knowledge"),
+                icon: String(brand.icon || "/xananode-icon.svg"),
+                homeLabel: String(brand.homeLabel || "Go to home node"),
+                attributionLabel: String(brand.attributionLabel || brand.name || "XanaNode"),
+                attributionText: String(brand.attributionText || "xananode.com"),
+                attributionUrl: String(brand.attributionUrl || "https://xananode.com")
+            },
+            links: normalizeThemeLinks(raw.links || brand.links || []),
+            downloadSubstrate: normalizeDownloadSubstrate(raw.downloadSubstrate, String(raw.namespace || "").trim()),
+            searchPrompts: prompts
+        };
+    }
+
+    function normalizeDownloadSubstrate(value, namespace = "") {
+        const basePath = `archives/${namespace || "substrate"}.substrate`;
+        if (!value || value === false) {
+            return {
+                enabled: false,
+                label: "Download current substrate",
+                path: basePath,
+                url: `/${basePath}`,
+                filename: `${namespace || "substrate"}.substrate`,
+                includeViewerArtifacts: false
+            };
+        }
+
+        const raw = value && typeof value === "object" ? value : { enabled: value };
+        const enabled = typeof raw.enabled === "boolean" ? raw.enabled : Boolean(raw.enabled ?? value);
+        const path = String(raw.path || basePath).replace(/^\/+/, "");
+        return {
+            enabled,
+            label: String(raw.label || "Download current substrate"),
+            path,
+            url: `/${path}`,
+            filename: String(raw.filename || path.split("/").pop() || `${namespace || "substrate"}.substrate`),
+            includeViewerArtifacts: Boolean(raw.includeViewerArtifacts || raw.include_viewer_artifacts || false)
+        };
+    }
+
+    function normalizeThemeLinks(links) {
+        if (!Array.isArray(links)) return [];
+
+        return links
+            .map((link) => {
+                const raw = link && typeof link === "object" ? link : {};
+                const label = String(raw.label || raw.title || "").trim();
+                const node = String(raw.node || raw.nodeId || "").trim();
+                const url = String(raw.url || raw.href || "").trim();
+
+                if (!label || (!node && !url)) return null;
+
+                return { label, node, url };
+            })
+            .filter(Boolean);
+    }
+
+    function resolveHomeNodeId(allNodes, nodeIds = new Set(allNodes.map((node) => node.id))) {
+        const configured = THEME_CONFIG.homeNode;
+        if (configured && nodeIds.has(configured)) return configured;
+        if (nodeIds.has("start-here")) return "start-here";
+        return allNodes[0]?.id || "";
+    }
+
+    // Fallback valid types — overridden at runtime by /schemas/xananode-node-types.json
+    // Note: "artifact" is intentionally absent — existing artifact nodes will be flagged.
+    let VALID_NODE_TYPES = new Set([
+        "person", "concept", "claim", "source", "essay", "observation",
+        "media", "event", "place", "organization", "project", "technology",
+        "publication", "community", "relationship", "revision", "trail", "schema"
+    ]);
+
+    // Fallback valid relationship types — overridden at runtime by /schemas/xananode-relationship-types.json
+    let VALID_RELATIONSHIP_TYPES = new Set([
+        "defines", "defined_by", "has_claim", "claim_of",
+        "supports", "supported_by", "contradicts", "contradicted_by",
+        "demonstrates", "demonstrated_by", "documents", "documented_by",
+        "evidence_for", "has_evidence", "derived_from", "originates",
+        "derives", "derived_from", "derived_into", "originates",
+        "extends", "extended_by", "created", "created_by",
+        "authored", "authored_by", "coined", "coined_by",
+        "implements", "implemented_by", "preserves", "preserved_by",
+        "enables", "enabled_by",
+        "cites", "cited_by", "quotes", "quoted_by",
+        "mentions", "mentioned_by", "participated_in", "had_participant",
+        "spoke_at", "featured_speaker", "features", "featured_in",
+        "influenced", "influenced_by", "popularized", "popularized_by",
+        "anticipated", "anticipated_by",
+        "contrasts_with", "alternative_to", "parallel_to",
+        "explains", "explained_by", "context_for", "has_context",
+        "motivated", "motivated_by",
+        "arrives_at", "arrived_from",
+        "part_of", "contains", "depends_on", "dependency_of", "required_by",
+        "requires", "required_for",
+        "depicts", "depicted_by", "represented_by", "represents",
+        "used_as_primary_media_for", "has_primary_media",
+        "occurred_at", "site_of",
+        "preceded", "followed", "contemporary_of",
+        "friend_of", "collaborated_with", "interviewed", "interviewed_by",
+        "approved", "approved_by", "disputes", "disputed_by",
+        "supersedes", "superseded_by", "related_to"
+    ]);
+
+    const RELATIONSHIP_TYPE_ALIASES = Object.freeze({
+        situates: "context_for",
+        contextualizes: "context_for",
+        interprets: "explains",
+        fundamental_to: "part_of",
+        core_to: "part_of",
+        instance_of: "included_in",
+        used_for: "enables",
+        produced_by: "created_by",
+        associated_with: "related_to",
+        featured: "features",
+        contributed_by: "influenced_by",
+        contributes_to: "influenced",
+        predecessor_to: "derived_from",
+        follows: "followed",
+        followed_by: "preceded",
+        traces: "derived_from",
+        evolved_into: "derived_into",
+        named_after: "derived_from",
+        cofounded: "created_by",
+        founded: "created",
+        hosted_by: "presented_by",
+        portrayed: "depicted_by",
+        influences: "influenced",
+        contributed_to: "participated_in",
+        proposes: "proposed",
+        introduces: "introduced",
+        used_in: "used_by",
+        used_objective: "uses",
+        foundation_for: "enables",
+        subclass_of: "extends",
+        addresses: "related_to",
+        demonstrated_in: "demonstrated_by",
+        realizes: "implements",
+        visualizes: "represents",
+        generalizes: "extends",
+        improves: "refines",
+        formalizes: "defines",
+        covers: "discusses",
+        referenced_in: "mentioned_by",
+        mentioned_in: "mentioned_by",
+        starts_at: "starts_with",
+        traverses: "includes",
+        converges_at: "arrives_at",
+        ends_at: "arrives_at"
+    });
+
+    const DEFAULT_MEDIA_TYPES = [
+        "image",
+        "svg",
+        "video",
+        "audio",
+        "document",
+        "diagram",
+        "screenshot"
+    ];
+
+    const PATH_MAX_HOPS = 24;
+
+    const TYPE_SECTION_PATHS = {
+        artifact: "artifacts",
+        claim: "claims",
+        concept: "concepts",
+        essay: "essays",
+        event: "events",
+        media: "media",
+        observation: "observations",
+        organization: "organizations",
+        person: "people",
+        project: "projects",
+        schema: "schemas",
+        source: "sources",
+        technology: "technologies",
+        trail: "trails"
+    };
+
+    const TYPE_PALETTE = {
+        essay: { bg: "#f59ec3", fg: "#1f1020", outline: "#ffe3f0" },
+        concept: { bg: "#91f2a6", fg: "#062010", outline: "#dcffe4" },
+        source: { bg: "#57707f", fg: "#eef9ff", outline: "#bdefff" },
+        person: { bg: "#8bd3ff", fg: "#071827", outline: "#d8f1ff" },
+        observation: { bg: "#ef476f", fg: "#2a0610", outline: "#ffd7e0" },
+        trail: { bg: "#fb8500", fg: "#241100", outline: "#ffe3be" },
+        project: { bg: "#ffd166", fg: "#1d1500", outline: "#fff0c2" },
+        artifact: { bg: "#a7f3d0", fg: "#042016", outline: "#dcfff0" },
+        organization: { bg: "#f0abfc", fg: "#1e1028", outline: "#fde8ff" },
+        media: { bg: "#55d6be", fg: "#04201a", outline: "#dcfff8" },
+        claim: { bg: "#ff6b6b", fg: "#1a0000", outline: "#ffe0e0" },
+        event: { bg: "#f59e0b", fg: "#1a0a00", outline: "#fff3e0" },
+        place: { bg: "#84cc16", fg: "#0a1a00", outline: "#e8ffe0" },
+        technology: { bg: "#06b6d4", fg: "#04131a", outline: "#d9fbff" },
+        publication: { bg: "#a78bfa", fg: "#140f22", outline: "#ede3ff" },
+        community: { bg: "#fb923c", fg: "#201006", outline: "#ffe7d6" },
+        relationship: { bg: "#ec4899", fg: "#240812", outline: "#ffd8ea" },
+        revision: { bg: "#94a3b8", fg: "#0f172a", outline: "#dde5f2" },
+        schema: { bg: "#e2e8f0", fg: "#111827", outline: "#ffffff" }
+    };
+
+    const ACCESSIBLE_TYPE_PALETTE = {
+        essay: { bg: "#cc79a7", fg: "#1a0712", outline: "#ffd8ed" },
+        concept: { bg: "#009e73", fg: "#001f17", outline: "#bfffea" },
+        source: { bg: "#0072b2", fg: "#eef9ff", outline: "#bdefff" },
+        person: { bg: "#56b4e9", fg: "#061823", outline: "#d8f2ff" },
+        observation: { bg: "#d55e00", fg: "#250d00", outline: "#ffd9c7" },
+        trail: { bg: "#f0e442", fg: "#1d1a00", outline: "#fffbc5" },
+        project: { bg: "#0072b2", fg: "#001524", outline: "#c7ecff" },
+        artifact: { bg: "#009e73", fg: "#001f17", outline: "#bfffea" },
+        organization: { bg: "#cc79a7", fg: "#1a0712", outline: "#ffd8ed" },
+        media: { bg: "#56b4e9", fg: "#061823", outline: "#d8f2ff" },
+        claim: { bg: "#d55e00", fg: "#250d00", outline: "#ffd9c7" },
+        event: { bg: "#e69f00", fg: "#211500", outline: "#ffe6ad" },
+        place: { bg: "#009e73", fg: "#001f17", outline: "#bfffea" },
+        technology: { bg: "#0072b2", fg: "#001524", outline: "#c7ecff" },
+        publication: { bg: "#cc79a7", fg: "#1a0712", outline: "#ffd8ed" },
+        community: { bg: "#f0e442", fg: "#1d1a00", outline: "#fffbc5" },
+        relationship: { bg: "#0072b2", fg: "#001524", outline: "#c7ecff" },
+        revision: { bg: "#999999", fg: "#111827", outline: "#eeeeee" },
+        schema: { bg: "#f7f7f7", fg: "#111827", outline: "#ffffff" }
+    };
+
+    function sourcePlatformFor(url) {
+        try {
+            const parsed = new URL(url);
+            const host = parsed.hostname.replace(/^www\./, "").toLowerCase();
+            const path = parsed.pathname.toLowerCase();
+
+            if (host === "github.com" && path.startsWith("/sponsors/")) {
+                return { key: "support", label: "Support", glyph: "$", color: "#55d6be", text: "#04201a" };
+            }
+            if (host === "github.com") return { key: "github", label: "GitHub", glyph: "GH", color: "#f8fafc", text: "#0f172a" };
+            if (host === "youtube.com" || host === "youtu.be") return { key: "youtube", label: "YouTube", glyph: "YT", color: "#ff0033", text: "#ffffff" };
+            if (host === "x.com" || host === "twitter.com") return { key: "x", label: "X", glyph: "X", color: "#f8fafc", text: "#0f172a" };
+            if (host === "linkedin.com") return { key: "linkedin", label: "LinkedIn", glyph: "in", color: "#0a66c2", text: "#ffffff" };
+            if (host === "mastodon.social" || host.endsWith(".social")) return { key: "social", label: "Social", glyph: "@", color: "#6364ff", text: "#ffffff" };
+            if (host.includes("patreon")) return { key: "support", label: "Support", glyph: "$", color: "#ff424d", text: "#ffffff" };
+            if (host.includes("opencollective")) return { key: "support", label: "Support", glyph: "$", color: "#7fadf2", text: "#071827" };
+
+            return { key: "web", label: "Website", glyph: "↗", color: "#55d6be", text: "#04201a" };
+        } catch (_) {
+            return null;
+        }
+    }
+
+    function sourcePlatformBadgeSvg(platform) {
+        if (!platform) return "";
+        const glyph = escapeHtml(platform.glyph || "↗");
+        const color = platform.color || "#55d6be";
+        const text = platform.text || "#04201a";
+        const fontSize = glyph.length > 1 ? 13 : 17;
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect x="2" y="2" width="28" height="28" rx="8" fill="${color}" stroke="rgba(5,7,10,.72)" stroke-width="2"/><text x="16" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="${fontSize}" font-weight="800" fill="${text}">${glyph}</text></svg>`;
+        return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+    }
+
+    Promise.all([
+        loadViewerData(),
+        fetch("/schemas/xananode-node-types.json").then((r) => r.json()).catch(() => null),
+        fetch("/schemas/xananode-relationship-types.json").then((r) => r.json()).catch(() => null)
+    ])
+        .then(([data, nodeSchema, relSchema]) => {
+            if (nodeSchema?.node_types) {
+                VALID_NODE_TYPES = new Set(nodeSchema.node_types.map((t) => t.type));
+            }
+            if (relSchema?.relationship_types) {
+                VALID_RELATIONSHIP_TYPES = new Set(relSchema.relationship_types.map((t) => t.type));
+            }
+            init(data, nodeSchema, relSchema);
+        })
+        .catch((err) => {
+            graphEl.innerHTML = `<p class="xana-error">${escapeHtml(err.message)}</p>`;
+        });
+
+    function loadViewerData() {
+        const renderedIndexPromise = fetch("/index.json")
+            .then((res) => {
+                if (!res.ok) throw new Error(`Could not load /index.json (${res.status}).`);
+                return res.json();
+            })
+            .catch(() => null);
+
+        return fetch("/xananode-viewer.json")
+            .then((res) => {
+                if (!res.ok) throw new Error(`Could not load /xananode-viewer.json (${res.status}).`);
+                return res.json();
+            })
+            .then((viewerData) => renderedIndexPromise.then((renderedIndex) => mergeRenderedHugoData(viewerData, renderedIndex)))
+            .catch(() => renderedIndexPromise.then((renderedIndex) => {
+                if (!renderedIndex) throw new Error("Could not load /xananode-viewer.json or /index.json.");
+                return renderedIndex;
+            }));
+    }
+
+    function mergeRenderedHugoData(viewerData, renderedIndex) {
+        if (!viewerData || !renderedIndex?.nodes?.length) return viewerData;
+
+        const renderedById = new Map();
+        for (const node of renderedIndex.nodes || []) {
+            if (!node) continue;
+            if (node.id) renderedById.set(String(node.id), node);
+            if (node.protocol_id) renderedById.set(String(node.protocol_id), node);
+        }
+
+        return {
+            ...viewerData,
+            nodes: (viewerData.nodes || []).map((node) => {
+                const rendered = renderedById.get(String(node.id)) || renderedById.get(String(node.protocol_id));
+                if (!rendered) return node;
+                return {
+                    ...node,
+                    html: rendered.html || node.html,
+                    content: rendered.content || node.content,
+                    url: rendered.url || node.url,
+                    section: rendered.section || node.section
+                };
+            })
+        };
+    }
+
+    function getTypeSectionHref(type) {
+        const section = TYPE_SECTION_PATHS[(type || "").toLowerCase()];
+        return section ? `/${section}/` : "";
+    }
+
+    function renderTypeBadge(type, sizeClass = "") {
+        const safeType = escapeHtml(type || "");
+        const label = escapeHtml(type || "node");
+        const href = getTypeSectionHref(type);
+        const classes = ["xana-type-badge", sizeClass].filter(Boolean).join(" ");
+
+        if (!href) {
+            return `<span class="${classes}" data-type="${safeType}">${label}</span>`;
+        }
+
+        return `<a class="${classes} xana-type-badge-link" data-type="${safeType}" href="${href}" title="Browse ${label} nodes">${label}</a>`;
+    }
+
+    function subtypeLabel(value) {
+        return String(value || "")
+            .replace(/^[a-z][a-z0-9_-]*:/, "")
+            .replaceAll("_", " ")
+            .replaceAll("-", " ");
+    }
+
+    function humanLabel(value) {
+        const text = subtypeLabel(value);
+        return text.charAt(0).toUpperCase() + text.slice(1);
+    }
+
+    function renderSubtypeBadges(node) {
+        const values = [
+            node.subtype,
+            ...(Array.isArray(node.subtypes) ? node.subtypes : [])
+        ].filter(Boolean);
+        const unique = [...new Set(values.map((value) => String(value).trim()).filter(Boolean))];
+        if (!unique.length) return "";
+
+        return `
+            <div class="xana-subtype-badges">
+                ${unique.map((value) => `<span class="xana-subtype-badge" data-subtype="${escapeHtml(value)}">${escapeHtml(subtypeLabel(value))}</span>`).join("")}
+            </div>
+        `;
+    }
+
+    function renderYouTubeEmbed(url, linkText = "Watch on YouTube") {
+        if (!url) return "";
+
+        const match = String(url).match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([^?&/]+)/i);
+        if (!match || !match[1]) {
+            return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(linkText)}</a>`;
+        }
+
+        const videoId = match[1];
+        const safeUrl = escapeHtml(url);
+        const safeText = escapeHtml(linkText);
+
+        return `
+            <div class="xana-youtube-embed">
+                <div class="xana-youtube-embed__frame">
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/${videoId}"
+                        title="YouTube video player"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <a class="xana-youtube-embed__link" href="${safeUrl}" target="_blank" rel="noopener noreferrer">${safeText}</a>
+            </div>
+        `;
+    }
+
+    function relationshipTypesFromEdges(edges = []) {
+        const types = new Set();
+        for (const edge of edges) {
+            const type = String(edge?.type || "").trim();
+            if (type) types.add(type);
+        }
+        return [...types].sort((a, b) => humanLabel(a).localeCompare(humanLabel(b)));
+    }
+
+    function subtypesFromNodes(nodes = []) {
+        const values = new Set();
+        for (const node of nodes) {
+            if (node?.subtype) values.add(String(node.subtype));
+            if (Array.isArray(node?.subtypes)) {
+                node.subtypes.forEach((subtype) => {
+                    if (subtype) values.add(String(subtype));
+                });
+            }
+            if (Array.isArray(node?.facets)) {
+                node.facets.forEach((facet) => {
+                    if (facet) values.add(String(facet));
+                });
+            }
+        }
+        return [...values].sort((a, b) => humanLabel(a).localeCompare(humanLabel(b)));
+    }
+
+    function nodeSubtypeValues(node) {
+        return [
+            node?.subtype,
+            ...(Array.isArray(node?.subtypes) ? node.subtypes : []),
+            ...(Array.isArray(node?.facets) ? node.facets : [])
+        ].filter(Boolean).map(String);
+    }
+
+    function init(data, nodeTypesData, relationshipTypesData) {
+        const allNodes = Array.isArray(data.nodes) ? data.nodes : [];
+        const nodeTypeColors = buildTypeColorMap(nodeTypesData);
+        const relationshipTypeStyles = buildRelationshipStyleMap(relationshipTypesData);
+        const projectionRegistry = createProjectionRegistry({
+            nodeTypes: Array.isArray(nodeTypesData?.node_types) ? nodeTypesData.node_types : [],
+            relationshipTypes: Array.isArray(relationshipTypesData?.relationship_types) ? relationshipTypesData.relationship_types : []
+        });
+        const nodeIds = new Set(allNodes.map((node) => node.id));
+
+        // allEdgesRaw: every edge as declared in frontmatter — used by audit to detect
+        // dangling references. allEdges: only edges where both endpoints exist — used
+        // for graph rendering and layout.
+        const allEdgesRaw = Array.isArray(data.edges) ? data.edges : [];
+        const allEdges = allEdgesRaw.map(normalizeRelationshipEdge).filter((edge) => {
+            return nodeIds.has(edge.source) && nodeIds.has(edge.target);
+        });
+
+        hydrateMedia(allNodes);
+
+        window.__xanaAllNodes = allNodes;
+        window.__xanaAllEdges = allEdges;
+
+        // Resolve the requested node from the URL. The current public route is
+        // type-aware (for example /concept/knowledge-substrate/), with support
+        // for old /node/<id> links as a compatibility alias.
+        const rawRequested = nodeIdFromUrl(allNodes);
+        // Try the raw ID, then strip a leading "node/" segment in case of a doubled prefix.
+        const requestedNode = rawRequested && (
+            nodeIds.has(rawRequested)
+                ? rawRequested
+                : nodeIds.has(rawRequested.replace(/^node\//, ""))
+                    ? rawRequested.replace(/^node\//, "")
+                    : null
+        );
+
+        const homeNodeId = resolveHomeNodeId(allNodes, nodeIds);
+
+        // Use the requested node if resolved; fall back to the configured home only when
+        // there is genuinely no URL node (e.g. landing on the bare home page).
+        let focusId = requestedNode
+            ? requestedNode
+            : rawRequested
+                ? (nodeIds.has(rawRequested) ? rawRequested : homeNodeId)
+                : homeNodeId;
+
+        if (!nodeIds.has(focusId)) {
+            focusId = allNodes[0]?.id || "";
+        }
+
+        const savedTypes = loadSetting(STORAGE_KEYS.enabledTypes, null);
+        const savedMediaTypes = loadSetting(STORAGE_KEYS.enabledMediaTypes, null);
+        const savedRelationshipTypes = loadSetting(STORAGE_KEYS.enabledRelationshipTypes, null);
+        const savedSubtypes = loadSetting(STORAGE_KEYS.enabledSubtypes, null);
+        const savedDepth = clampNumber(loadSetting(STORAGE_KEYS.depth, 2), 1, 4, 2);
+        const displaySettings = loadDisplaySettings();
+        applyDisplaySettings(displaySettings);
+
+        const state = {
+            focusId,
+            previousFocusId: null,
+            depth: savedDepth,
+            enabledTypes: savedTypes ? new Set(savedTypes) : new Set(DEFAULT_TYPES),
+            enabledMediaTypes: savedMediaTypes ? new Set(savedMediaTypes) : new Set(DEFAULT_MEDIA_TYPES),
+            enabledRelationshipTypes: savedRelationshipTypes ? new Set(savedRelationshipTypes) : new Set(relationshipTypesFromEdges(allEdges)),
+            enabledSubtypes: savedSubtypes ? new Set(savedSubtypes) : new Set(subtypesFromNodes(allNodes)),
+            searchQuery: loadSetting(STORAGE_KEYS.searchQuery, ""),
+            searchResults: [],
+            auditResults: [],
+            auditMode: false,
+            isTraveling: false,
+            hasRenderedGraph: false,
+            pathExplorer: {
+                active: false,
+                sourceQuery: focusId || "",
+                targetQuery: "",
+                allowReverse: true,
+                maxDepth: 6,
+                maxPaths: 6,
+                results: [],
+                summary: ""
+            },
+            tourActive: false,
+            tourIndex: 0,
+            tourVisited: new Set(),
+            tourRecent: [],
+            activeTrail: null,
+            trailChoicePending: false,
+            cy: null,
+            allNodes,
+            nodeIds,
+            allEdges,
+            allEdgesRaw,
+            fragmentsData: {},
+            pendingFragmentHighlight: null,
+            displaySettings,
+            nodeTypeColors,
+            relationshipTypeStyles,
+            projectionRegistry,
+            graph: null,
+            graphModel: { nodes: [], edges: [], distances: {} },
+            graphViewport: null
+        };
+
+        if (requestedNode && window.location.hash) {
+            state.pendingFragmentHighlight = fragmentHighlightFromHash(requestedNode.id, state);
+        }
+
+        if (rawRequested && !requestedNode) {
+            const protocolTarget = resolveProtocolAddress(rawRequested, state);
+            if (protocolTarget) {
+                state.focusId = protocolTarget.nodeId;
+                state.pendingFragmentHighlight = protocolTarget.fragmentId
+                    ? {
+                        nodeId: protocolTarget.nodeId,
+                        fragmentId: protocolTarget.fragmentId,
+                        fragment: protocolTarget.fragment
+                    }
+                    : null;
+                state.pathExplorer.sourceQuery = protocolTarget.nodeId;
+            }
+        }
+
+        if (state.focusId) {
+            updateUrl(state.focusId, true);
+        }
+
+        renderChrome(state);
+
+        const stageEl = document.getElementById("xana-stage");
+        state.graph = createGraphView(stageEl, state);
+
+        bindControls(state);
+        startSearchVerbRotation();
+        makeResizable(state);
+        restorePanelWidth(state);
+
+        window.addEventListener("resize", debounce(() => {
+            if (!state.graph) return;
+            state.graph.resize();
+            fitReadableNeighborhood(state.graph);
+        }, 180));
+
+        window.addEventListener("popstate", () => {
+            const nodeFromUrl = nodeIdFromUrl(allNodes);
+            const protocolTarget = nodeFromUrl ? resolveProtocolAddress(nodeFromUrl, state) : null;
+            const nextId = protocolTarget?.nodeId || nodeFromUrl;
+
+            if (protocolTarget || (nodeFromUrl && allNodes.some((node) => node.id === nodeFromUrl))) {
+                state.previousFocusId = state.focusId;
+                state.focusId = nextId;
+                state.pendingFragmentHighlight = protocolTarget?.fragmentId
+                    ? {
+                        nodeId: protocolTarget.nodeId,
+                        fragmentId: protocolTarget.fragmentId,
+                        fragment: protocolTarget.fragment
+                    }
+                    : fragmentHighlightFromHash(nextId, state);
+                renderVisibleGraph(state, {
+                    updateUrl: false,
+                    stagedReveal: true,
+                    preserveViewport: false
+                });
+            }
+        });
+
+        if (state.searchQuery.trim()) {
+            runSearch(state.searchQuery, state);
+        }
+
+        renderVisibleGraph(state, {
+            updateUrl: false,
+            preserveViewport: true
+        });
+
+        window.setTimeout(() => ensureInterfaceTourSeen(state), 450);
+    }
+
+    function renderChrome(state) {
+        const d = state.depth;
+        const t = state.enabledTypes;
+        const m = state.enabledMediaTypes;
+        const r = state.enabledRelationshipTypes;
+        const s = state.enabledSubtypes;
+
+        const chk = (type) => t.has(type) ? "checked" : "";
+        const mchk = (type) => m.has(type) ? "checked" : "";
+        const rchk = (type) => r.has(type) ? "checked" : "";
+        const schk = (type) => s.has(type) ? "checked" : "";
+        const dact = (n) => d === n ? "class=\"active\"" : "";
+        const brand = THEME_CONFIG.brand;
+        const projectLinks = renderThemeLinks(state);
+        const substrateDownload = renderThemeDownload();
+        const relationshipFilterItems = relationshipTypesFromEdges(state.allEdges)
+            .map((type) => `<label><input type="checkbox" data-relationship-type="${escapeHtml(type)}" ${rchk(type)}> ${escapeHtml(humanLabel(type))}</label>`)
+            .join("");
+        const subtypeFilterItems = subtypesFromNodes(state.allNodes)
+            .map((type) => `<label><input type="checkbox" data-subtype-filter="${escapeHtml(type)}" ${schk(type)}> ${escapeHtml(humanLabel(type))}</label>`)
+            .join("");
+
+        // Inject navbar into the .xana-app parent (runs once; guard against duplicates)
+        const appEl = graphEl.closest(".xana-app") || graphEl.parentElement;
+        if (appEl && !appEl.querySelector(".xana-navbar")) {
+            const nav = document.createElement("nav");
+            nav.className = "xana-navbar";
+            nav.setAttribute("aria-label", "XanaNode navigation");
+            nav.innerHTML = `
+                <button class="xana-brand-home" data-home-btn aria-label="${escapeHtml(brand.homeLabel)}">
+                    <img src="${escapeHtml(brand.icon)}" alt="" class="xana-brand-icon" aria-hidden="true">
+                    <div class="xana-brand-text">
+                        <span class="xana-brand-name">${escapeHtml(brand.name)}</span>
+                        <span class="xana-brand-tagline">${escapeHtml(brand.tagline)}</span>
+                    </div>
+                </button>
+            `;
+            appEl.insertBefore(nav, appEl.firstChild);
+        }
+
+        graphEl.innerHTML = `
+            <!-- Attribution: bottom-right watermark -->
+            <div class="xana-attribution">
+                <button class="xana-attribution-home" data-home-jump aria-label="Go to ${escapeHtml(brand.attributionLabel)} node">${escapeHtml(brand.attributionLabel)}</button>
+                &middot; <a href="${escapeHtml(brand.attributionUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(brand.attributionText)}</a>
+            </div>
+
+            <!-- Search portal: the primary navigation surface -->
+            <div class="xana-searcher">
+                <div class="xana-search-wrap">
+                    <form class="xana-search-form" role="search">
+                        <textarea
+                            id="xana-search-input"
+                            autocomplete="off"
+                            spellcheck="false"
+                            rows="1"
+                            placeholder=""
+                            aria-label="${escapeHtml(SEARCH_PROMPTS[0])}"
+                        >${escapeHtml(state.searchQuery)}</textarea>
+                        <span class="xana-search-prompt" data-search-prompt aria-hidden="true">
+                            <span data-search-prompt-text>${escapeHtml(SEARCH_PROMPTS[0])}</span><span class="xana-search-caret"></span>
+                        </span>
+                        <button
+                            type="button"
+                            class="xana-search-clear-btn"
+                            data-search-clear
+                            aria-label="Clear search"
+                            ${state.searchQuery ? "" : "hidden"}
+                        >&#x2715;</button>
+                    </form>
+                    <div class="xana-search-meta" aria-live="polite"></div>
+                    <div class="xana-search-results" hidden></div>
+                </div>
+                <div class="xana-depth-row" role="group" aria-label="Graph range">
+                    <button data-depth="1" ${dact(1)} title="Show direct neighbors">1 hop</button>
+                    <button data-depth="2" ${dact(2)} title="Show two relationship hops">2 hops</button>
+                    <button data-depth="3" ${dact(3)} title="Show three relationship hops">3 hops</button>
+                    <button data-depth="4" ${dact(4)} title="Show four relationship hops">4 hops</button>
+                </div>
+            </div>
+
+            <!-- Compact controls: zoom, exploration, reading, and secondary tools -->
+            <div class="xana-controls-strip">
+                <button class="xana-ctrl-btn" data-zoom="out" aria-label="Zoom out" title="Zoom out">&#x2212;</button>
+                <button class="xana-ctrl-btn" data-zoom="fit" aria-label="Fit graph" title="Fit to screen">&#x25A1;</button>
+                <button class="xana-ctrl-btn" data-zoom="in" aria-label="Zoom in" title="Zoom in">+</button>
+                <span class="xana-ctrl-sep"></span>
+                <button class="xana-ctrl-btn" data-filter-toggle aria-label="Filter graph" title="Filter graph">&#x2261;</button>
+                <button class="xana-ctrl-btn" data-path-open aria-label="Path explorer" title="Compare connective path">&#x2934;</button>
+                <span class="xana-ctrl-sep"></span>
+                <button class="xana-ctrl-btn" data-tour-toggle aria-label="Guided tour" title="Guided tour">&#x25B6;</button>
+                <button class="xana-ctrl-btn" data-settings-toggle aria-label="Display and narration settings" title="Settings">&#9881;</button>
+                <button class="xana-ctrl-btn" data-tools-toggle aria-label="Substrate tools" title="Substrate tools">&#x22EF;</button>
+            </div>
+
+            <div class="xana-tools-popover" hidden>
+                <div class="xana-tools-popover-header">
+                    <span>Tools</span>
+                    <button type="button" data-tools-close aria-label="Close substrate tools">&#x2715;</button>
+                </div>
+                <div class="xana-tools-list">
+                    <a class="xana-tools-link" href="/review/">Review suggestions</a>
+                    <button type="button" class="xana-tools-button" data-audit-run>Run schema audit</button>
+                    <button type="button" class="xana-tools-button" data-audit-clear hidden>Clear schema audit</button>
+                    <button type="button" class="xana-tools-button" data-interface-tour>Interface tour</button>
+                    ${substrateDownload}
+                    ${projectLinks}
+                </div>
+            </div>
+
+            <div class="xana-settings" hidden>
+                <div class="xana-settings-panel">
+                    <div class="xana-settings-header">
+                        <span>Display</span>
+                        <button type="button" data-settings-close aria-label="Close display settings">&#x2715;</button>
+                    </div>
+                    <div class="xana-settings-group" role="group" aria-label="Color theme">
+                        <span class="xana-settings-label">Theme</span>
+                        <button type="button" data-display-setting="colorTheme" data-value="dark">Dark</button>
+                        <button type="button" data-display-setting="colorTheme" data-value="light">Light</button>
+                        <button type="button" data-display-setting="colorTheme" data-value="accessible">Contrast</button>
+                        <button type="button" data-display-setting="colorTheme" data-value="classic">Classic</button>
+                    </div>
+                    <div class="xana-settings-group" role="group" aria-label="Interface density">
+                        <span class="xana-settings-label">Density</span>
+                        <button type="button" data-display-setting="uiDensity" data-value="roomy">Roomy</button>
+                        <button type="button" data-display-setting="uiDensity" data-value="comfortable">Balanced</button>
+                        <button type="button" data-display-setting="uiDensity" data-value="compact">Compact</button>
+                    </div>
+                    <label class="xana-settings-range xana-settings-range--inline">
+                        <span>Text size <output data-reader-font-output>${Number(state.displaySettings.readerFontScale || 100)}%</output></span>
+                        <input type="range" min="85" max="150" step="5" data-reader-font-scale value="${Number(state.displaySettings.readerFontScale || 100)}">
+                    </label>
+                    <div class="xana-settings-group" role="group" aria-label="Graph atmosphere">
+                        <span class="xana-settings-label">Graph</span>
+                        <button type="button" data-display-setting="graphAtmosphere" data-value="alive">Alive</button>
+                        <button type="button" data-display-setting="graphAtmosphere" data-value="still">Quiet</button>
+                        <button type="button" data-display-setting="graphAtmosphere" data-value="plain">Minimal</button>
+                    </div>
+                    <div class="xana-settings-group xana-settings-group--two" role="group" aria-label="Tour advance mode">
+                        <span class="xana-settings-label">Tour</span>
+                        <button type="button" data-display-setting="tourMode" data-value="narration">Narration</button>
+                        <button type="button" data-display-setting="tourMode" data-value="timed">Timed</button>
+                    </div>
+                    <label class="xana-settings-range" data-tour-timed-control>
+                        <span>Seconds per node</span>
+                        <input type="range" min="3" max="120" step="1" data-tour-speed value="${loadSetting(STORAGE_KEYS.tourSpeed, 9)}">
+                    </label>
+                    <div class="xana-settings-field" data-narration-control>
+                        <label for="xana-tts-voice">Voice</label>
+                        <select id="xana-tts-voice" data-tts-voice></select>
+                    </div>
+                    <div class="xana-settings-field" data-narration-control>
+                        <label for="xana-tts-detail">Read</label>
+                        <select id="xana-tts-detail" data-tts-detail>
+                            <option value="summary" ${state.displaySettings.ttsDetail === "summary" ? "selected" : ""}>Title and summary</option>
+                            <option value="full" ${state.displaySettings.ttsDetail === "full" ? "selected" : ""}>Title, summary, and content</option>
+                        </select>
+                    </div>
+                    <label class="xana-settings-range" data-narration-control>
+                        <span>Speed</span>
+                        <input type="range" min="0.65" max="1.35" step="0.05" data-tts-rate value="${Number(state.displaySettings.ttsRate || 0.95)}">
+                    </label>
+                    <label class="xana-settings-range" data-narration-control>
+                        <span>Pitch</span>
+                        <input type="range" min="0.75" max="1.35" step="0.05" data-tts-pitch value="${Number(state.displaySettings.ttsPitch || 1)}">
+                    </label>
+                </div>
+            </div>
+
+            <!-- Filter popover: types + media, opens above controls strip -->
+            <div class="xana-filter-popover" hidden aria-label="Filter controls">
+                <div class="xana-filter-popover-header">
+                    <span class="xana-filter-popover-title">Filter</span>
+                    <button class="xana-filter-popover-close" data-filter-close aria-label="Close filters">&#x2715;</button>
+                </div>
+                <div class="xana-filter-popover-body">
+                    <h4 class="xana-filter-section-title">Node Types</h4>
+                    <div class="xana-filter-grid">
+                        <label><input type="checkbox" data-type="essay" ${chk("essay")}> Essays</label>
+                        <label><input type="checkbox" data-type="concept" ${chk("concept")}> Concepts</label>
+                        <label><input type="checkbox" data-type="claim" ${chk("claim")}> Claims</label>
+                        <label><input type="checkbox" data-type="source" ${chk("source")}> Sources</label>
+                        <label><input type="checkbox" data-type="person" ${chk("person")}> People</label>
+                        <label><input type="checkbox" data-type="observation" ${chk("observation")}> Evidence</label>
+                        <label><input type="checkbox" data-type="trail" ${chk("trail")}> Trails</label>
+                        <label><input type="checkbox" data-type="project" ${chk("project")}> Projects</label>
+                        <label><input type="checkbox" data-type="organization" ${chk("organization")}> Orgs</label>
+                        <label><input type="checkbox" data-type="media" ${chk("media")}> Media</label>
+                        <label><input type="checkbox" data-type="event" ${chk("event")}> Events</label>
+                        <label><input type="checkbox" data-type="place" ${chk("place")}> Places</label>
+                        <label><input type="checkbox" data-type="technology" ${chk("technology")}> Tech</label>
+                        <label><input type="checkbox" data-type="publication" ${chk("publication")}> Pubs</label>
+                        <label><input type="checkbox" data-type="community" ${chk("community")}> Communities</label>
+                        <label><input type="checkbox" data-type="relationship" ${chk("relationship")}> Relations</label>
+                        <label><input type="checkbox" data-type="revision" ${chk("revision")}> Revisions</label>
+                        <label><input type="checkbox" data-type="schema" ${chk("schema")}> Schema</label>
+                        <label class="xana-filter-legacy"><input type="checkbox" data-type="artifact" ${chk("artifact")}> Artifacts &#x26A0;</label>
+                    </div>
+                    <h4 class="xana-filter-section-title second">Media Types</h4>
+                    <div class="xana-filter-grid">
+                        <label><input type="checkbox" data-media-type="image" ${mchk("image")}> Images</label>
+                        <label><input type="checkbox" data-media-type="video" ${mchk("video")}> Video</label>
+                        <label><input type="checkbox" data-media-type="audio" ${mchk("audio")}> Audio</label>
+                        <label><input type="checkbox" data-media-type="document" ${mchk("document")}> Docs</label>
+                        <label><input type="checkbox" data-media-type="diagram" ${mchk("diagram")}> Diagrams</label>
+                        <label><input type="checkbox" data-media-type="screenshot" ${mchk("screenshot")}> Screenshots</label>
+                    </div>
+                    ${subtypeFilterItems ? `
+                    <h4 class="xana-filter-section-title second">Subtypes and Facets</h4>
+                    <div class="xana-filter-grid">
+                        ${subtypeFilterItems}
+                    </div>
+                    ` : ""}
+                    ${relationshipFilterItems ? `
+                    <h4 class="xana-filter-section-title second">Relationship Types</h4>
+                    <div class="xana-filter-grid">
+                        ${relationshipFilterItems}
+                    </div>
+                    ` : ""}
+                </div>
+            </div>
+
+            <!-- Audit meta: shown when audit is active -->
+            <div class="xana-audit-meta" aria-live="polite" hidden></div>
+
+            <div class="xana-graph-atmosphere" aria-hidden="true"></div>
+            <div id="xana-stage"></div>
+            <div id="xana-audit-stage" hidden></div>
+            <div id="xana-path-stage" hidden></div>
+        `;
+    }
+
+    function renderThemeLinks(state) {
+        if (!THEME_CONFIG.links.length) return "";
+
+        const nodeById = new Map((state.allNodes || []).map((node) => [node.id, node]));
+        const nodeByProtocolId = new Map((state.allNodes || [])
+            .filter((node) => node.protocol_id)
+            .map((node) => [node.protocol_id, node]));
+        const nodeBySourceUrl = new Map((state.allNodes || [])
+            .filter((node) => node.source_url)
+            .map((node) => [normalizeUrlKey(node.source_url), node]));
+
+        const links = THEME_CONFIG.links.map((link) => {
+            const linkedNode = link.node
+                ? nodeById.get(link.node) || nodeByProtocolId.get(link.node)
+                : nodeBySourceUrl.get(normalizeUrlKey(link.url));
+            const href = linkedNode ? nodeHref(linkedNode, state) : link.url;
+            if (!href) return "";
+            const nodeJump = linkedNode ? ` data-node-jump="${escapeHtml(linkedNode.id)}"` : "";
+            const external = !linkedNode && isExternalUrl(href) ? ` target="_blank" rel="noopener noreferrer"` : "";
+
+            return `<a class="xana-tools-link" href="${escapeHtml(href)}"${nodeJump}${external}>${escapeHtml(link.label)}</a>`;
+        }).filter(Boolean).join("");
+
+        if (!links) return "";
+
+        return `
+                    <div class="xana-tools-section" aria-label="Project links">
+                        <span class="xana-tools-section-label">Links</span>
+                        ${links}
+                    </div>
+        `;
+    }
+
+    function renderThemeDownload() {
+        const download = THEME_CONFIG.downloadSubstrate || {};
+        if (!download.enabled || !download.url) return "";
+        return `
+                    <div class="xana-tools-section" aria-label="Portable substrate export">
+                        <span class="xana-tools-section-label">Export</span>
+                        <a class="xana-tools-link xana-tools-download" href="${escapeHtml(download.url)}" download="${escapeHtml(download.filename || "")}">${escapeHtml(download.label || "Download current substrate")}</a>
+                    </div>
+        `;
+    }
+
+    function normalizeUrlKey(url) {
+        try {
+            const parsed = new URL(String(url || ""));
+            parsed.hash = "";
+            return parsed.toString().replace(/\/$/, "").toLowerCase();
+        } catch {
+            return String(url || "").trim().replace(/\/$/, "").toLowerCase();
+        }
+    }
+
+    function bindControls(state) {
+        const graph = state.graph;
+        const searchForm = graphEl.querySelector(".xana-search-form");
+        const searchInput = graphEl.querySelector("#xana-search-input");
+        const searchWrap = graphEl.querySelector(".xana-search-wrap");
+        const clearSearchButton = graphEl.querySelector("[data-search-clear]");
+
+        resizeSearchInput();
+        updateSearchPromptState();
+
+        searchForm?.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const query = searchInput.value.trim();
+            state.searchQuery = query;
+            saveSetting(STORAGE_KEYS.searchQuery, query);
+            runSearch(query, state);
+            renderVisibleGraph(state, {
+                updateUrl: false,
+                preserveViewport: false
+            });
+        });
+
+        searchInput?.addEventListener("input", debounce(() => {
+            const query = searchInput.value.trim();
+            state.searchQuery = query;
+            saveSetting(STORAGE_KEYS.searchQuery, query);
+            runSearch(query, state);
+            resizeSearchInput();
+            renderVisibleGraph(state, {
+                updateUrl: false,
+                preserveViewport: true
+            });
+
+            if (clearSearchButton) clearSearchButton.hidden = !query;
+            updateSearchPromptState();
+        }, 180));
+
+        searchInput?.addEventListener("focus", () => {
+            if (searchInput.value.trim() || state.searchQuery.trim()) {
+                searchInput.value = "";
+                state.searchQuery = "";
+                state.searchResults = [];
+                saveSetting(STORAGE_KEYS.searchQuery, "");
+                if (clearSearchButton) clearSearchButton.hidden = true;
+                resizeSearchInput();
+                renderSearchResults(state);
+                renderVisibleGraph(state, {
+                    updateUrl: false,
+                    preserveViewport: false
+                });
+            }
+            updateSearchPromptState();
+        });
+
+        searchInput?.addEventListener("blur", updateSearchPromptState);
+        searchInput?.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" && !event.shiftKey) {
+                event.preventDefault();
+                searchForm?.requestSubmit();
+            }
+        });
+
+        clearSearchButton?.addEventListener("click", () => {
+            searchInput.value = "";
+            state.searchQuery = "";
+            state.searchResults = [];
+            saveSetting(STORAGE_KEYS.searchQuery, "");
+            clearSearchButton.hidden = true;
+            resizeSearchInput();
+            renderSearchResults(state);
+            renderVisibleGraph(state, {
+                updateUrl: false,
+                preserveViewport: false
+            });
+            searchInput.focus();
+            updateSearchPromptState();
+        });
+
+        function updateSearchPromptState() {
+            if (!searchWrap || !searchInput) return;
+            searchWrap.classList.toggle("is-focused", document.activeElement === searchInput);
+            searchWrap.classList.toggle("has-value", Boolean(searchInput.value.trim()));
+        }
+
+        function resizeSearchInput() {
+            if (!searchInput) return;
+            searchInput.style.height = "auto";
+            const nextHeight = Math.min(Math.max(searchInput.scrollHeight, 24), 128);
+            searchInput.style.height = `${nextHeight}px`;
+            searchWrap?.classList.toggle("has-multiline", nextHeight > 40);
+        }
+
+        graphEl.querySelectorAll("[data-depth]").forEach((button) => {
+            button.addEventListener("click", () => {
+                graphEl.querySelectorAll("[data-depth]").forEach((b) => {
+                    b.classList.remove("active");
+                });
+
+                button.classList.add("active");
+                state.depth = Number(button.getAttribute("data-depth"));
+                saveSetting(STORAGE_KEYS.depth, state.depth);
+                renderVisibleGraph(state, {
+                    updateUrl: false,
+                    preserveViewport: false,
+                    stagedReveal: true
+                });
+            });
+        });
+
+        graphEl.querySelectorAll("[data-zoom]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const action = button.getAttribute("data-zoom");
+
+                if (action === "in") {
+                    graph?.zoomBy?.(1.18);
+                }
+
+                if (action === "out") {
+                    graph?.zoomBy?.(1 / 1.18);
+                }
+
+                if (action === "fit") {
+                    fitReadableNeighborhood(graph);
+                }
+
+                saveSetting(STORAGE_KEYS.graphZoom, graph?.viewport?.scale || 1);
+                saveSetting(STORAGE_KEYS.graphPan, graph?.viewport ? { x: graph.viewport.x, y: graph.viewport.y } : { x: 0, y: 0 });
+            });
+        });
+
+        graphEl.querySelectorAll("[data-type]").forEach((input) => {
+            input.addEventListener("change", () => {
+                const type = input.getAttribute("data-type");
+
+                if (input.checked) {
+                    state.enabledTypes.add(type);
+                } else {
+                    state.enabledTypes.delete(type);
+                }
+
+                saveSetting(STORAGE_KEYS.enabledTypes, [...state.enabledTypes]);
+                renderVisibleGraph(state, {
+                    updateUrl: false,
+                    preserveViewport: false
+                });
+            });
+        });
+
+        graphEl.querySelectorAll("[data-media-type]").forEach((input) => {
+            input.addEventListener("change", () => {
+                const mediaType = input.getAttribute("data-media-type");
+
+                if (input.checked) {
+                    state.enabledMediaTypes.add(mediaType);
+                } else {
+                    state.enabledMediaTypes.delete(mediaType);
+                }
+
+                saveSetting(STORAGE_KEYS.enabledMediaTypes, [...state.enabledMediaTypes]);
+                renderVisibleGraph(state, {
+                    updateUrl: false,
+                    preserveViewport: false
+                });
+            });
+        });
+
+        graphEl.querySelectorAll("[data-relationship-type]").forEach((input) => {
+            input.addEventListener("change", () => {
+                const relationshipType = input.getAttribute("data-relationship-type");
+
+                if (input.checked) {
+                    state.enabledRelationshipTypes.add(relationshipType);
+                } else {
+                    state.enabledRelationshipTypes.delete(relationshipType);
+                }
+
+                saveSetting(STORAGE_KEYS.enabledRelationshipTypes, [...state.enabledRelationshipTypes]);
+                renderVisibleGraph(state, {
+                    updateUrl: false,
+                    preserveViewport: false
+                });
+            });
+        });
+
+        graphEl.querySelectorAll("[data-subtype-filter]").forEach((input) => {
+            input.addEventListener("change", () => {
+                const subtype = input.getAttribute("data-subtype-filter");
+
+                if (input.checked) {
+                    state.enabledSubtypes.add(subtype);
+                } else {
+                    state.enabledSubtypes.delete(subtype);
+                }
+
+                saveSetting(STORAGE_KEYS.enabledSubtypes, [...state.enabledSubtypes]);
+                renderVisibleGraph(state, {
+                    updateUrl: false,
+                    preserveViewport: false
+                });
+            });
+        });
+
+        // Filter popover
+        const filterToggleBtn = graphEl.querySelector("[data-filter-toggle]");
+        const filterCloseBtn = graphEl.querySelector("[data-filter-close]");
+        const filterPopover = graphEl.querySelector(".xana-filter-popover");
+        const pathOpenButton = graphEl.querySelector("[data-path-open]");
+        const settingsToggle = graphEl.querySelector("[data-settings-toggle]");
+        const settingsOverlay = graphEl.querySelector(".xana-settings");
+        const settingsPanel = graphEl.querySelector(".xana-settings-panel");
+        const settingsClose = graphEl.querySelector("[data-settings-close]");
+        const toolsToggleBtn = graphEl.querySelector("[data-tools-toggle]");
+        const toolsCloseBtn = graphEl.querySelector("[data-tools-close]");
+        const toolsPopover = graphEl.querySelector(".xana-tools-popover");
+        const voiceSelect = graphEl.querySelector("[data-tts-voice]");
+        const detailSelect = graphEl.querySelector("[data-tts-detail]");
+        const rateInput = graphEl.querySelector("[data-tts-rate]");
+        const pitchInput = graphEl.querySelector("[data-tts-pitch]");
+        const readerFontInput = graphEl.querySelector("[data-reader-font-scale]");
+        const readerFontOutput = graphEl.querySelector("[data-reader-font-output]");
+        const interfaceTourButton = graphEl.querySelector("[data-interface-tour]");
+
+        updateDisplaySettingButtons(state);
+        populateVoiceOptions(state);
+        if ("speechSynthesis" in window) {
+            window.speechSynthesis.onvoiceschanged = () => populateVoiceOptions(state);
+        }
+
+        const setOverlayOpen = (overlay, toggle, open) => {
+            if (!overlay) return;
+            overlay.hidden = !open;
+            toggle?.classList.toggle("active", open);
+            toggle?.setAttribute("aria-expanded", open ? "true" : "false");
+        };
+        const closeReaderOverlays = () => {
+            setOverlayOpen(settingsOverlay, settingsToggle, false);
+            setOverlayOpen(toolsPopover, toolsToggleBtn, false);
+            setOverlayOpen(filterPopover, filterToggleBtn, false);
+        };
+
+        [settingsToggle, toolsToggleBtn, filterToggleBtn].forEach((button) => {
+            button?.setAttribute("aria-expanded", "false");
+        });
+
+        settingsToggle?.addEventListener("click", (event) => {
+            event.stopPropagation();
+            const opening = Boolean(settingsOverlay?.hidden);
+            closeReaderOverlays();
+            setOverlayOpen(settingsOverlay, settingsToggle, opening);
+        });
+
+        settingsOverlay?.addEventListener("click", (event) => {
+            if (event.target === settingsOverlay) setOverlayOpen(settingsOverlay, settingsToggle, false);
+        });
+
+        settingsClose?.addEventListener("click", () => {
+            setOverlayOpen(settingsOverlay, settingsToggle, false);
+        });
+
+        toolsToggleBtn?.addEventListener("click", (event) => {
+            event.stopPropagation();
+            const opening = Boolean(toolsPopover?.hidden);
+            closeReaderOverlays();
+            setOverlayOpen(toolsPopover, toolsToggleBtn, opening);
+        });
+
+        toolsCloseBtn?.addEventListener("click", () => {
+            setOverlayOpen(toolsPopover, toolsToggleBtn, false);
+        });
+
+        interfaceTourButton?.addEventListener("click", () => {
+            startInterfaceTour(state);
+            setOverlayOpen(toolsPopover, toolsToggleBtn, false);
+        });
+
+        graphEl.querySelectorAll("[data-node-jump]").forEach((link) => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+
+                const id = link.getAttribute("data-node-jump");
+                if (!id) return;
+                closeTransientUi(state, { clearSearch: true });
+                setOverlayOpen(toolsPopover, toolsToggleBtn, false);
+                travelToNode(id, state, true);
+            });
+        });
+
+        graphEl.querySelectorAll("[data-display-setting]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const key = button.getAttribute("data-display-setting");
+                const value = button.getAttribute("data-value");
+                if (!key || !value || !state.displaySettings) return;
+
+                state.displaySettings[key] = value;
+                saveSetting(STORAGE_KEYS[key], value);
+                if (key === "tourMode") {
+                    state.displaySettings.ttsNarrator = value === "narration";
+                    saveSetting(STORAGE_KEYS.ttsNarrator, state.displaySettings.ttsNarrator);
+                    const narratorToggle = graphEl.querySelector("[data-display-toggle='ttsNarrator']");
+                    if (narratorToggle) narratorToggle.checked = state.displaySettings.ttsNarrator;
+                    if (state.tourActive) {
+                        clearTourTimers();
+                        stopNarration();
+                        const narrated = value === "narration"
+                            ? narrateNode(state.allNodes.find((node) => node.id === state.focusId), state)
+                            : false;
+                        restartTourRing();
+                        if (!narrated) scheduleTourAdvance(state, true);
+                    }
+                }
+                applyDisplaySettings(state.displaySettings);
+                updateDisplaySettingButtons(state);
+                if (key === "colorTheme" && state.graph) {
+                    state.graph.render?.(state.graphModel, { preserveViewport: true });
+                }
+                if (key === "graphAtmosphere") {
+                    refreshAliveMotion(state);
+                }
+            });
+        });
+
+        graphEl.querySelectorAll("[data-display-toggle]").forEach((input) => {
+            input.addEventListener("change", () => {
+                const key = input.getAttribute("data-display-toggle");
+                if (!key || !state.displaySettings) return;
+
+                state.displaySettings[key] = Boolean(input.checked);
+                saveSetting(STORAGE_KEYS[key], state.displaySettings[key]);
+                if (key === "ttsNarrator") {
+                    state.displaySettings.tourMode = state.displaySettings[key] ? "narration" : "timed";
+                    saveSetting(STORAGE_KEYS.tourMode, state.displaySettings.tourMode);
+                }
+                applyDisplaySettings(state.displaySettings);
+                updateDisplaySettingButtons(state);
+
+                if (key === "ttsNarrator" && !state.displaySettings[key]) {
+                    stopNarration();
+                    if (state.tourActive) scheduleTourAdvance(state, true);
+                } else if (key === "ttsNarrator" && state.tourActive) {
+                    narrateNode(state.allNodes.find((node) => node.id === state.focusId), state);
+                }
+            });
+        });
+
+        voiceSelect?.addEventListener("change", () => {
+            state.displaySettings.ttsVoice = voiceSelect.value;
+            saveSetting(STORAGE_KEYS.ttsVoice, state.displaySettings.ttsVoice);
+            if (state.tourActive && state.displaySettings.ttsNarrator) {
+                narrateNode(state.allNodes.find((node) => node.id === state.focusId), state);
+            }
+        });
+
+        detailSelect?.addEventListener("change", () => {
+            state.displaySettings.ttsDetail = detailSelect.value;
+            saveSetting(STORAGE_KEYS.ttsDetail, state.displaySettings.ttsDetail);
+            if (state.tourActive && state.displaySettings.ttsNarrator) {
+                narrateNode(state.allNodes.find((node) => node.id === state.focusId), state);
+            }
+        });
+
+        rateInput?.addEventListener("input", () => {
+            state.displaySettings.ttsRate = Number(rateInput.value) || DISPLAY_DEFAULTS.ttsRate;
+            saveSetting(STORAGE_KEYS.ttsRate, state.displaySettings.ttsRate);
+        });
+
+        pitchInput?.addEventListener("input", () => {
+            state.displaySettings.ttsPitch = Number(pitchInput.value) || DISPLAY_DEFAULTS.ttsPitch;
+            saveSetting(STORAGE_KEYS.ttsPitch, state.displaySettings.ttsPitch);
+        });
+
+        readerFontInput?.addEventListener("input", () => {
+            const scale = clampNumber(readerFontInput.value, 85, 150, DISPLAY_DEFAULTS.readerFontScale);
+            state.displaySettings.readerFontScale = scale;
+            saveSetting(STORAGE_KEYS.readerFontScale, scale);
+            if (readerFontOutput) readerFontOutput.textContent = `${scale}%`;
+            applyDisplaySettings(state.displaySettings);
+        });
+
+        filterToggleBtn?.addEventListener("click", (event) => {
+            event.stopPropagation();
+
+            const opening = Boolean(filterPopover?.hidden);
+            closeReaderOverlays();
+            setOverlayOpen(filterPopover, filterToggleBtn, opening);
+        });
+
+        filterCloseBtn?.addEventListener("click", () => {
+            setOverlayOpen(filterPopover, filterToggleBtn, false);
+        });
+
+        document.addEventListener("click", (event) => {
+            if (settingsOverlay && !settingsOverlay.hidden && !event.target.closest(".xana-settings")) {
+                setOverlayOpen(settingsOverlay, settingsToggle, false);
+            }
+
+            if (toolsPopover && !toolsPopover.hidden && !event.target.closest(".xana-tools-popover") && !event.target.closest("[data-tools-toggle]")) {
+                setOverlayOpen(toolsPopover, toolsToggleBtn, false);
+            }
+
+            if (!filterPopover || filterPopover.hidden) return;
+            if (event.target.closest(".xana-filter-popover") || event.target.closest("[data-filter-toggle]")) return;
+
+            setOverlayOpen(filterPopover, filterToggleBtn, false);
+        });
+
+        const auditRunButton = graphEl.querySelector("[data-audit-run]");
+        const auditClearButton = graphEl.querySelector("[data-audit-clear]");
+
+        auditRunButton?.addEventListener("click", () => {
+            runSchemaAudit(state);
+            setOverlayOpen(toolsPopover, toolsToggleBtn, false);
+        });
+
+        auditClearButton?.addEventListener("click", () => {
+            state.auditResults = [];
+            state.auditPassed = undefined;
+            state.auditMode = false;
+            if (auditRunButton) {
+                auditRunButton.classList.remove("audit-active", "audit-pass", "audit-fail");
+                auditRunButton.textContent = "Run schema audit";
+                auditRunButton.title = "Run schema audit";
+            }
+            renderAuditResults(state);
+            if (toolsPopover) toolsPopover.hidden = true;
+            toolsToggleBtn?.classList.remove("active");
+        });
+
+        pathOpenButton?.addEventListener("click", () => {
+            if (state.pathExplorer?.active) {
+                closePathExplorer(state);
+            } else {
+                closeReaderOverlays();
+                openPathExplorer(state);
+            }
+        });
+
+        const homeBtn = (graphEl.closest(".xana-app") || document).querySelector("[data-home-btn]");
+        homeBtn?.addEventListener("click", () => {
+            const homeId = resolveHomeNodeId(state.allNodes, state.nodeIds);
+            if (homeId) travelToNode(homeId, state, true);
+        });
+
+        // Attribution "XanaNode" text → navigate to the xananode node
+        graphEl.querySelector("[data-home-jump]")?.addEventListener("click", () => {
+            const id = state.allNodes.some((n) => n.id === "xananode") ? "xananode" : "knowledge-substrate";
+            travelToNode(id, state, true);
+        });
+
+        // Guided tour toggle
+        graphEl.querySelector("[data-tour-toggle]")?.addEventListener("click", () => {
+            if (state.tourActive) {
+                stopTour(state);
+            } else {
+                startTour(state);
+            }
+        });
+
+        // Tour speed input — update dwell time immediately and persist
+        graphEl.querySelector("[data-tour-speed]")?.addEventListener("input", (e) => {
+            const secs = Math.max(3, Math.min(120, Number(e.target.value) || 9));
+            TOUR_DWELL_MS = secs * 1000;
+            saveSetting(STORAGE_KEYS.tourSpeed, secs);
+            if (state.tourActive && state.displaySettings?.tourMode === "timed") {
+                restartTourRing();
+                if (_tourTimer) {
+                    window.clearTimeout(_tourTimer);
+                    _tourTimer = null;
+                }
+                scheduleTourAdvance(state, true);
+            }
+        });
+    }
+
+    function hydrateMedia(allNodes) {
+        const nodesById = new Map(allNodes.map((node) => [node.id, node]));
+        const nodesByProtocolId = new Map(allNodes
+            .filter((node) => node.protocol_id)
+            .map((node) => [node.protocol_id, node]));
+
+        function isVisualAsset(file, mediaType) {
+            return ["image", "diagram", "screenshot", "clip", "scan", "svg"].includes(String(mediaType || "").toLowerCase()) ||
+                /\.(svg|png|jpe?g|webp|gif|avif)$/i.test(String(file || ""));
+        }
+
+        allNodes.forEach((node) => {
+            node.media_warning = "";
+            const platform = node.source_url ? sourcePlatformFor(node.source_url) : null;
+            if (platform) {
+                node.source_platform = platform.key;
+                node.source_platform_label = platform.label;
+                node.source_icon_svg = sourcePlatformBadgeSvg(platform);
+            }
+            if (!node.file && node.asset_path) {
+                node.file = node.asset_path;
+            }
+
+            if (node.type === "media" && node.file && isVisualAsset(node.file, node.media_type)) {
+                node.image = node.file;
+                node.image_alt = node.alt || node.image_alt || node.title;
+            }
+
+            if (node.primary_media) {
+                const mediaNode = nodesById.get(node.primary_media) || nodesByProtocolId.get(node.primary_media);
+
+                if (mediaNode) {
+                    node.image = mediaNode.file || node.image || "";
+                    node.image_alt = mediaNode.alt || node.image_alt || node.title;
+
+                    node.primary_media_node = {
+                        id: mediaNode.id,
+                        title: mediaNode.title,
+                        media_type: mediaNode.media_type || "",
+                        file: mediaNode.file || "",
+                        alt: mediaNode.alt || "",
+                        caption: mediaNode.caption || "",
+                        creator: mediaNode.creator || "",
+                        created_date: mediaNode.created_date || "",
+                        source_name: mediaNode.source_name || "",
+                        source_url: mediaNode.source_url || "",
+                        license: mediaNode.license || "",
+                        license_url: mediaNode.license_url || "",
+                        rights_status: mediaNode.rights_status || "",
+                        youtube_url: mediaNode.youtube_url || ""
+                    };
+                } else {
+                    node.media_warning = `Missing media node: ${node.primary_media}`;
+
+                    if (node.image) {
+                        node.image_alt = node.image_alt || node.title;
+                    }
+                }
+
+                return;
+            }
+
+            if (node.image) {
+                node.image_alt = node.image_alt || node.title;
+
+                if (node.type !== "media") {
+                    node.media_warning = "Legacy image path without media node. Create a media node and set primary_media.";
+                }
+            }
+        });
+    }
+
+    function runSearch(query, state) {
+        const searchPlan = buildSearchPlan(query);
+        const normalizedQuery = searchPlan.normalized;
+
+        if (!normalizedQuery) {
+            state.searchResults = [];
+            state.searchPlan = searchPlan;
+            renderSearchResults(state);
+            return;
+        }
+
+        const queryTokens = searchPlan.tokens;
+
+        state.searchResults = state.allNodes
+            .map((node) => {
+                const haystack = buildNodeSearchText(node);
+                const score = scoreSearchResult(node, haystack, normalizedQuery, queryTokens);
+
+                return {
+                    node,
+                    score,
+                    snippet: makeSearchSnippet(node, queryTokens)
+                };
+            })
+            .filter((result) => result.score > 0)
+            .sort((a, b) => {
+                if (b.score !== a.score) return b.score - a.score;
+
+                const aImportance = Number(a.node.importance || 0);
+                const bImportance = Number(b.node.importance || 0);
+
+                if (bImportance !== aImportance) return bImportance - aImportance;
+
+                return String(a.node.title || "").localeCompare(String(b.node.title || ""));
+            })
+            .slice(0, 30);
+
+        state.searchPlan = searchPlan;
+        renderSearchResults(state);
+        trackSearch(query, state.searchResults.length);
+    }
+
+    function renderSearchResults(state) {
+        const metaEl = graphEl.querySelector(".xana-search-meta");
+        const resultsEl = graphEl.querySelector(".xana-search-results");
+
+        if (!metaEl || !resultsEl) return;
+
+        const query = state.searchQuery.trim();
+
+        if (!query) {
+            metaEl.textContent = "";
+            resultsEl.hidden = true;
+            resultsEl.innerHTML = "";
+            return;
+        }
+
+        const interpretedQuery = state.searchPlan?.display || "";
+
+        if (!state.searchResults.length) {
+            metaEl.textContent = interpretedQuery && interpretedQuery !== query
+                ? `No matches for ${interpretedQuery}.`
+                : "No matches.";
+            resultsEl.hidden = true;
+            resultsEl.innerHTML = "";
+            return;
+        }
+
+        metaEl.textContent = interpretedQuery && interpretedQuery !== query
+            ? `${state.searchResults.length} match${state.searchResults.length === 1 ? "" : "es"} for ${interpretedQuery}`
+            : `${state.searchResults.length} match${state.searchResults.length === 1 ? "" : "es"}`;
+        resultsEl.hidden = false;
+
+        resultsEl.innerHTML = `
+            <ol>
+                ${state.searchResults.slice(0, 10).map((result) => {
+            const node = result.node;
+
+            return `
+                        <li>
+                            <button type="button" data-search-jump="${escapeHtml(node.id)}">
+                                <span class="xana-search-result-title">${escapeHtml(node.title || node.id)}</span>
+                                <span class="xana-search-result-meta">${escapeHtml(node.type || "node")} · score ${Math.round(result.score)}${(node.youtube_url || node.primary_media_node?.youtube_url) ? " · YouTube video" : ""}</span>
+                                ${result.snippet ? `<span class="xana-search-result-snippet">${escapeHtml(result.snippet)}</span>` : ""}
+                            </button>
+                        </li>
+                    `;
+        }).join("")}
+            </ol>
+        `;
+
+        resultsEl.querySelectorAll("[data-search-jump]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const id = button.getAttribute("data-search-jump");
+                clearSearchUi(state);
+                travelToNode(id, state, true);
+            });
+        });
+    }
+
+    function buildNodeSearchText(node) {
+        return normalizeSearchText([
+            node.id,
+            node.title,
+            node.type,
+            node.summary,
+            node.content,
+            stripHtml(node.html || ""),
+            node.url,
+            node.youtube_url,
+            node.primary_media_node?.youtube_url,
+            node.youtube_url ? "youtube video" : "",
+            node.primary_media_node?.youtube_url ? "youtube video" : "",
+            node.media_type,
+            node.creator,
+            node.source_name,
+            node.rights_status,
+            node.caption,
+            Array.isArray(node.tags) ? node.tags.join(" ") : "",
+            Array.isArray(node.aliases) ? node.aliases.join(" ") : ""
+        ].filter(Boolean).join(" "));
+    }
+
+    function resolveProtocolAddress(value, state) {
+        const raw = decodeURIComponent(String(value || "").trim()).replace(/^xana:\/\//, "");
+        if (!raw) return null;
+
+        const nodes = state.allNodes || [];
+        const fragmentMatch = raw.match(/^(.*?)(?:@[^#]+)?#fragment\/([A-Za-z0-9._-]+)(?:@.+)?$/);
+        const nodeAddress = fragmentMatch ? fragmentMatch[1] : raw.replace(/@[^/#]+$/, "");
+        const fragmentId = fragmentMatch?.[2] || "";
+
+        const node = nodes.find((candidate) => {
+            return candidate.id === nodeAddress ||
+                candidate.protocol_id === nodeAddress ||
+                candidate.tumbler === nodeAddress;
+        });
+
+        if (!node) return null;
+        if (!fragmentId) return { nodeId: node.id, fragmentId: "", fragment: null };
+
+        const fragment = findFragmentRecord(node.id, fragmentId, raw, state);
+        return { nodeId: node.id, fragmentId, fragment };
+    }
+
+    function findFragmentRecord(nodeId, fragmentId, rawAddress, state) {
+        const versions = state.fragmentsData?.nodes?.[nodeId]?.versions || {};
+        for (const version of Object.values(versions)) {
+            const metadata = version?.metadata || {};
+            for (const fragment of Object.values(metadata)) {
+                if (!fragment) continue;
+                const tumblerNoVersion = String(fragment.tumbler || "").replace(/@[^#]+(?=#fragment\/)/, "").replace(/@[^@#]+$/, "");
+                const rawNoVersion = rawAddress.replace(/@[^#]+(?=#fragment\/)/, "").replace(/@[^@#]+$/, "");
+                if (
+                    fragment.id === fragmentId ||
+                    fragment.fragment_id === fragmentId ||
+                    fragment.protocol_id === rawAddress ||
+                    fragment.tumbler === rawAddress ||
+                    (tumblerNoVersion && tumblerNoVersion === rawNoVersion)
+                ) {
+                    return {
+                        ...fragment,
+                        text: version.fragments?.[fragment.id || fragmentId] || ""
+                    };
+                }
+            }
+        }
+        return null;
+    }
+
+    function fragmentHighlightFromHash(nodeId, state) {
+        return fragmentHighlightFromHref(nodeId, window.location.href, state);
+    }
+
+    function fragmentHighlightFromHref(nodeId, href, state) {
+        const fragmentId = extractFragmentId(href);
+        if (!nodeId || !fragmentId) return null;
+        const node = state.allNodes.find((candidate) => candidate.id === nodeId);
+        const rawAddress = `${node?.protocol_id || nodeId}#fragment/${fragmentId}`;
+        return {
+            nodeId,
+            fragmentId,
+            fragment: findFragmentRecord(nodeId, fragmentId, rawAddress, state)
+        };
+    }
+
+    function extractFragmentId(value) {
+        try {
+            return decodeURIComponent(new URL(value, window.location.origin).hash || "").match(/^#fragment\/([A-Za-z0-9._-]+)/)?.[1] || "";
+        } catch {
+            return decodeURIComponent(String(value || "")).match(/#fragment\/([A-Za-z0-9._-]+)/)?.[1] || "";
+        }
+    }
+
+    function scoreSearchResult(node, haystack, normalizedQuery, queryTokens) {
+        let score = 0;
+
+        if (!haystack) return 0;
+
+        const title = normalizeSearchText(node.title || "");
+        const id = normalizeSearchText(node.id || "");
+        const summary = normalizeSearchText(node.summary || "");
+
+        if (id === normalizedQuery) score += 120;
+        if (title === normalizedQuery) score += 100;
+        if (title.includes(normalizedQuery)) score += 70;
+        if (id.includes(normalizedQuery)) score += 55;
+        if (summary.includes(normalizedQuery)) score += 35;
+        if (haystack.includes(normalizedQuery)) score += 25;
+
+        queryTokens.forEach((token) => {
+            if (title.includes(token)) score += 18;
+            if (id.includes(token)) score += 14;
+            if (summary.includes(token)) score += 10;
+            if (haystack.includes(token)) score += 5;
+        });
+
+        const tokenMatches = queryTokens.filter((token) =>
+            title.includes(token) ||
+            id.includes(token) ||
+            summary.includes(token) ||
+            haystack.includes(token)
+        ).length;
+
+        if (queryTokens.length) {
+            const coverage = tokenMatches / queryTokens.length;
+            score += coverage * 40;
+            if (queryTokens.length >= 3 && coverage < 0.34) score -= 18;
+            if (queryTokens.length >= 5 && coverage < 0.2) score -= 30;
+        }
+
+        score += Number(node.importance || 0);
+
+        return score;
+    }
+
+    function makeSearchSnippet(node, queryTokens) {
+        const source = stripHtml(node.summary || node.content || node.html || "");
+        const text = source.replace(/\s+/g, " ").trim();
+
+        if (!text) return "";
+
+        const lower = text.toLowerCase();
+        const firstMatch = queryTokens
+            .map((token) => lower.indexOf(token))
+            .filter((index) => index >= 0)
+            .sort((a, b) => a - b)[0];
+
+        if (firstMatch === undefined) {
+            return text.length > 140 ? `${text.slice(0, 140)}…` : text;
+        }
+
+        const start = Math.max(0, firstMatch - 55);
+        const end = Math.min(text.length, firstMatch + 120);
+        const prefix = start > 0 ? "…" : "";
+        const suffix = end < text.length ? "…" : "";
+
+        return `${prefix}${text.slice(start, end)}${suffix}`;
+    }
+
+    function renderVisibleGraph(state, options = {}) {
+        if (!state) return;
+
+        _navGen++;
+        _revealTimers.forEach((id) => window.clearTimeout(id));
+        _revealTimers = [];
+
+        const visible = getVisibleSubgraph(
+            state.allNodes,
+            state.allEdges,
+            state.focusId,
+            state.depth,
+            state.enabledTypes,
+            state.enabledMediaTypes,
+            state.enabledRelationshipTypes,
+            state.enabledSubtypes,
+            state.previousFocusId,
+            state.searchResults
+        );
+
+        const focusNode = visible.nodes.find((node) => node.id === state.focusId) || state.allNodes.find((node) => node.id === state.focusId) || null;
+        const graphModel = layoutGraphNodes(visible, focusNode, state);
+        state.graphModel = graphModel;
+        state.graph?.render?.(graphModel, {
+            preserveViewport: Boolean(options.preserveViewport && state.hasRenderedGraph),
+            stagedReveal: Boolean(options.stagedReveal)
+        });
+
+        const relatedEdges = state.allEdges
+            .filter((edge) => edge.source === state.focusId || edge.target === state.focusId)
+            .sort((a, b) => {
+                return scoreEdge(b, state.allNodes, state.focusId) - scoreEdge(a, state.allNodes, state.focusId);
+            });
+
+        renderPanel(focusNode, relatedEdges, state);
+
+        if (state.previousFocusId && state.previousFocusId !== state.focusId) {
+            panelEl.scrollTop = 0;
+        }
+
+        if (state.tourActive && state.displaySettings?.tourMode === "timed") {
+            panelEl.scrollTop = 0;
+            startTourPanelScroll(TOUR_DWELL_MS);
+        }
+
+        if (options.updateUrl) {
+            updateUrl(state.focusId, false);
+        }
+
+        trackNodeView(focusNode);
+
+        if (!options.preserveViewport || !state.hasRenderedGraph) {
+            fitReadableNeighborhood(state.graph);
+        }
+        state.hasRenderedGraph = true;
+
+        refreshAliveMotion(state);
+    }
+
+    function layoutGraphNodes(visible, focusNode, state) {
+        return layoutReadableProjection(visible, {
+            focusId: state.focusId,
+            registry: state.projectionRegistry,
+            width: 900,
+            height: 620,
+            maxDepth: 4,
+            labelForEdge: (edge) => humanLabel(edge.type || "related_to")
+        });
+    }
+
+    function getVisibleSubgraph(
+        allNodes,
+        allEdges,
+        focusId,
+        maxDepth,
+        enabledTypes,
+        enabledMediaTypes,
+        enabledRelationshipTypes,
+        enabledSubtypes,
+        previousFocusId,
+        searchResults
+    ) {
+        function nodePassesFilters(node) {
+            if (node.id === focusId) return true;
+            if (!enabledTypes.has(node.type)) return false;
+            const nodeSubtypes = nodeSubtypeValues(node);
+            if (nodeSubtypes.length && !nodeSubtypes.some((value) => enabledSubtypes.has(value))) return false;
+
+            if (node.type === "media") {
+                return enabledMediaTypes.has(node.media_type || "image");
+            }
+
+            return true;
+        }
+
+        const neighborhood = buildHopNeighborhood(allNodes, allEdges, {
+            focusId,
+            maxDepth,
+            nodeFilter: nodePassesFilters,
+            edgeFilter: (edge) => enabledRelationshipTypes.has(edge.type || "related_to"),
+            edgeScore: (edge) => scoreEdge(edge, allNodes, focusId)
+        });
+
+        return neighborhood;
+    }
+
+    function createGraphView(stageEl, state) {
+        const view = {
+            viewport: loadGraphViewport(),
+            graphModel: { nodes: [], edges: [], distances: {}, focusId: state.focusId },
+            travelFrame: null,
+            isPanning: false,
+            panStart: null,
+            render(graphModel, options = {}) {
+                this.graphModel = graphModel || { nodes: [], edges: [], distances: {}, focusId: state.focusId };
+                if (!options.preserveViewport || !this.viewport) {
+                    this.viewport = fitGraphViewport(this.graphModel.nodes || []);
+                }
+                saveGraphViewport(this.viewport);
+                stageEl.innerHTML = buildGraphStageMarkup(this.graphModel, this.viewport, state, options);
+                bindGraphInteractions(stageEl, state, this);
+                this.applyViewport();
+            },
+            animateTravel(fromNode, toNode, done, options = {}) {
+                if (!fromNode || !toNode) {
+                    done?.();
+                    return;
+                }
+                if (this.travelFrame?.cancel) {
+                    this.travelFrame.cancel();
+                }
+
+                const start = { ...this.viewport };
+                const targetScale = clampNumber(Math.max(start.scale || 1, 1.08), 0.65, 2.15, 1.1);
+                const end = {
+                    scale: targetScale,
+                    x: 450 - (Number(toNode.x || 450) * targetScale),
+                    y: 310 - (Number(toNode.y || 310) * targetScale)
+                };
+
+                const overlay = buildGraphTravelOverlayMarkup(fromNode, toNode, start, options);
+                const overlayHost = stageEl.querySelector(".graph-travel-layer");
+                if (overlayHost) {
+                    overlayHost.innerHTML = overlay;
+                }
+
+                const duration = Math.max(560, Number(options.routeNodes?.length || 2) * 240);
+                const startedAt = performance.now();
+                const ease = (t) => 1 - Math.pow(1 - t, 3);
+                let cancelled = false;
+
+                const tick = (now) => {
+                    if (cancelled) return;
+                    const raw = Math.min(1, (now - startedAt) / duration);
+                    const t = ease(raw);
+                    this.viewport = {
+                        x: start.x + (end.x - start.x) * t,
+                        y: start.y + (end.y - start.y) * t,
+                        scale: start.scale + (end.scale - start.scale) * t
+                    };
+                    this.applyViewport();
+                    if (raw < 1) {
+                        this.travelFrame.raf = window.requestAnimationFrame(tick);
+                    } else {
+                        saveGraphViewport(this.viewport);
+                        overlayHost && (overlayHost.innerHTML = "");
+                        this.travelFrame = null;
+                        done?.();
+                    }
+                };
+
+                this.travelFrame = {
+                    cancel: () => {
+                        cancelled = true;
+                        if (this.travelFrame?.raf) {
+                            window.cancelAnimationFrame(this.travelFrame.raf);
+                        }
+                        overlayHost && (overlayHost.innerHTML = "");
+                        this.travelFrame = null;
+                    }
+                };
+
+                this.travelFrame.raf = window.requestAnimationFrame(tick);
+            },
+            resize() {
+                if (!this.graphModel) return;
+                this.applyViewport();
+            },
+            fit() {
+                this.viewport = fitGraphViewport(this.graphModel.nodes || []);
+                saveGraphViewport(this.viewport);
+                this.applyViewport();
+            },
+            reset() {
+                this.viewport = { x: 0, y: 0, scale: 1 };
+                saveGraphViewport(this.viewport);
+                this.applyViewport();
+            },
+            zoomBy(factor) {
+                this.viewport = scaleGraphViewport(this.viewport, factor);
+                saveGraphViewport(this.viewport);
+                this.applyViewport();
+            },
+            panBy(dx, dy) {
+                this.viewport = {
+                    ...this.viewport,
+                    x: this.viewport.x + dx,
+                    y: this.viewport.y + dy
+                };
+                saveGraphViewport(this.viewport);
+                this.applyViewport();
+            },
+            graphPointFromClient(clientX, clientY) {
+                const svg = stageEl.querySelector(".xana-graph-svg");
+                const rect = svg?.getBoundingClientRect();
+                if (!rect || !this.viewport) return { x: 0, y: 0 };
+                const svgX = ((clientX - rect.left) / Math.max(1, rect.width)) * 900;
+                const svgY = ((clientY - rect.top) / Math.max(1, rect.height)) * 620;
+                return {
+                    x: (svgX - this.viewport.x) / this.viewport.scale,
+                    y: (svgY - this.viewport.y) / this.viewport.scale
+                };
+            },
+            moveNode(nodeId, x, y) {
+                const node = this.graphModel?.nodes?.find((candidate) => candidate.id === nodeId);
+                if (!node) return;
+                node.x = clampNumber(x, -400, 1300, node.x);
+                node.y = clampNumber(y, -400, 1020, node.y);
+                const nodeEl = stageEl.querySelector(`[data-node-id="${cssEscape(nodeId)}"]`);
+                if (nodeEl) {
+                    nodeEl.setAttribute("transform", `translate(${node.x} ${node.y})`);
+                }
+                this.updateConnectedEdges(nodeId);
+            },
+            updateConnectedEdges(nodeId) {
+                for (const edge of this.graphModel?.edges || []) {
+                    if (edge.source?.id !== nodeId && edge.target?.id !== nodeId) continue;
+                    const edgeEl = stageEl.querySelector(`[data-edge-source="${cssEscape(edge.source.id)}"][data-edge-target="${cssEscape(edge.target.id)}"]`);
+                    if (!edgeEl) continue;
+                    const targetInset = Math.max(22, Number(edge.target?.r || 24) + 8);
+                    const sourceInset = Math.max(12, Number(edge.source?.r || 24) + 3);
+                    const path = projectionEdgePath(edge, { sourceInset, targetInset });
+                    const arrow = projectionEdgeArrowPoints(edge, 11, targetInset).map(([x, y]) => `${x},${y}`).join(" ");
+                    edgeEl.querySelector("path")?.setAttribute("d", path);
+                    edgeEl.querySelector("polygon")?.setAttribute("points", arrow);
+                    const labelEl = edgeEl.querySelector(".graph-edge-label");
+                    if (labelEl) {
+                        labelEl.setAttribute("x", String((edge.source.x + edge.target.x) / 2));
+                        labelEl.setAttribute("y", String((edge.source.y + edge.target.y) / 2 - 6));
+                    }
+                }
+            },
+            redraw() {
+                stageEl.innerHTML = buildGraphStageMarkup(this.graphModel, this.viewport, state, {});
+                bindGraphInteractions(stageEl, state, this);
+                this.applyViewport();
+            },
+            applyViewport() {
+                const layer = stageEl.querySelector(".graph-layer");
+                if (layer) {
+                    layer.setAttribute("transform", `translate(${this.viewport.x} ${this.viewport.y}) scale(${this.viewport.scale})`);
+                }
+            }
+        };
+
+        return view;
+    }
+
+    function buildGraphStageMarkup(graphModel, viewport, state, options = {}) {
+        const nodes = graphModel.nodes || [];
+        const edges = graphModel.edges || [];
+        const stagedClass = options.stagedReveal ? " is-staged" : "";
+        const caption = graphModel.focusId
+            ? `${nodes.length} visible node${nodes.length === 1 ? "" : "s"} connected to ${escapeHtml(state.allNodes.find((node) => node.id === graphModel.focusId)?.title || graphModel.focusId)}`
+            : `${nodes.length} visible node${nodes.length === 1 ? "" : "s"}`;
+
+        return `
+            <svg class="xana-graph-svg${stagedClass}" viewBox="0 0 900 620" role="img" aria-label="XanaNode graph projection">
+                <defs>
+                    ${nodes.filter((node) => node.style?.fills?.length > 1).map((node) => {
+                        const colors = node.style.fills;
+                        return `
+                            <linearGradient id="${graphNodeGradientId(node)}" gradientUnits="objectBoundingBox" x1="0%" y1="0%" x2="100%" y2="100%">
+                                ${colors.map((color, index) => `<stop offset="${Math.round((index / Math.max(1, colors.length - 1)) * 100)}%" stop-color="${escapeHtml(color)}"></stop>`).join("")}
+                            </linearGradient>
+                        `;
+                    }).join("")}
+                    ${edges.map((edge) => `
+                        <marker id="${graphEdgeMarkerId(edge)}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                            <path d="M 0 0 L 10 5 L 0 10 z" fill="${escapeHtml(edge.style.color)}"></path>
+                        </marker>
+                    `).join("")}
+                </defs>
+                <rect class="graph-surface" x="0" y="0" width="900" height="620"></rect>
+                <g class="graph-layer" transform="translate(${viewport.x} ${viewport.y}) scale(${viewport.scale})">
+                    ${edges.map((edge) => buildGraphEdgeMarkup(edge)).join("")}
+                    ${nodes.map((node) => buildGraphNodeMarkup(node, state)).join("")}
+                </g>
+                <g class="graph-travel-layer"></g>
+            </svg>
+            <div class="xana-graph-caption">${caption}</div>
+        `;
+    }
+
+    function buildGraphTravelOverlayMarkup(fromNode, toNode, viewport, options = {}) {
+        return buildReadableTravelOverlayMarkup(fromNode, toNode, viewport, options);
+    }
+
+    function buildGraphEdgeMarkup(edge) {
+        const targetInset = Math.max(22, Number(edge.target?.r || 24) + 8);
+        const sourceInset = Math.max(12, Number(edge.source?.r || 24) + 3);
+        const path = projectionEdgePath(edge, { sourceInset, targetInset });
+        const arrow = projectionEdgeArrowPoints(edge, 11, targetInset).map(([x, y]) => `${x},${y}`).join(" ");
+        const weight = Number(edge.style?.strokeWidth || 2.4);
+        const opacity = Number(edge.opacity || 1);
+        const arrowOpacity = Number(edge.arrowOpacity || opacity);
+        const label = edge.showLabel === false ? "" : `<text class="graph-edge-label" x="${(edge.source.x + edge.target.x) / 2}" y="${(edge.source.y + edge.target.y) / 2 - 6}" opacity="${Math.min(1, opacity + 0.15)}">${escapeHtml(edge.label || humanLabel(edge.type || "related_to"))}</text>`;
+        return `
+            <g class="graph-edge distance-${edge.distance || 1} ${edge.source.id === edge.target.id ? "self-edge" : ""}" data-edge-source="${escapeHtml(edge.source.id)}" data-edge-target="${escapeHtml(edge.target.id)}" style="--reveal-delay: ${Math.min(420, Number(edge.distance || 1) * 90)}ms; --graph-depth-opacity: ${opacity}">
+                <path d="${path}" fill="none" stroke="${escapeHtml(edge.style.color)}" stroke-width="${weight}" stroke-dasharray="${escapeHtml(edge.style.dash || "")}" opacity="${opacity}"></path>
+                <polygon points="${arrow}" fill="${escapeHtml(edge.style.color)}" opacity="${arrowOpacity}"></polygon>
+                ${label}
+            </g>
+        `;
+    }
+
+    function buildGraphNodeMarkup(node, state) {
+        const fill = node.style?.fills?.length > 1 ? `url(#${graphNodeGradientId(node)})` : escapeHtml(node.style?.fills?.[0] || "#55d6be");
+        const radius = node.r || (node.selected ? 46 : 32);
+        const mediaSrc = node.image || "";
+        const hasMedia = Boolean(mediaSrc);
+        const labelLines = wrapProjectionText(node.title || node.id || "Untitled", { maxCharsPerLine: node.selected ? 18 : 16 });
+        const labelOpacity = Number(node.labelOpacity || 1);
+        const nodeOpacity = Number(node.opacity || 1);
+        const strokeOpacity = Number(node.strokeOpacity || nodeOpacity);
+        const rawTypeLabel = node.type || "node";
+        const rawSubtype = node.subtype || "";
+        const chipText = rawSubtype ? `${rawTypeLabel} / ${rawSubtype}` : rawTypeLabel;
+        const typeLabel = node.showType === false ? "" : escapeHtml(chipText);
+        const longestLabelLine = Math.max(8, ...labelLines.map((line) => line.length));
+        const labelWidth = Math.min(240, Math.max(72, longestLabelLine * 8 + 22));
+        const labelHeight = Math.max(22, labelLines.length * 14 + 8);
+        const typeWidth = Math.min(132, Math.max(44, String(chipText).length * 6.2 + 18));
+        const labelY = -radius - labelHeight - 8;
+        const typeY = radius + 4;
+        const iconLabel = node.style?.projection?.iconLabel || rawTypeLabel.slice(0, 2).toUpperCase();
+        const iconAssetPath = node.style?.projection?.subtypeAssetPath || node.style?.projection?.assetPath || "";
+        const iconAssetSrc = iconAssetPath ? `/${String(iconAssetPath).replace(/^\/+/, "")}` : "";
+        const imageRadius = Math.max(8, radius - 7);
+        const clipId = `xana-node-clip-${String(node.id || node.key || "node").replace(/[^a-z0-9_-]/gi, "-")}`;
+        const labelTextMarkup = labelLines.map((line, index) => `
+            <tspan x="0" dy="${index === 0 ? 0 : 14}">${escapeHtml(line)}</tspan>
+        `).join("");
+        const labelMarkup = node.showLabel === false ? "" : `
+            <g class="graph-node-title-chip graph-node-title-chip--top" opacity="${labelOpacity}">
+                <rect x="${-labelWidth / 2}" y="${labelY}" width="${labelWidth}" height="${labelHeight}" rx="6"></rect>
+                <text class="graph-node-title" text-anchor="middle" y="${labelY + 15}" fill="#f8fafc">${labelTextMarkup}</text>
+            </g>
+        `;
+        const centerMarkup = hasMedia ? `
+            <clipPath id="${clipId}">
+                <circle r="${imageRadius}"></circle>
+            </clipPath>
+            <image class="graph-node-media" href="${escapeHtml(mediaSrc)}" x="${-imageRadius}" y="${-imageRadius}" width="${imageRadius * 2}" height="${imageRadius * 2}" preserveAspectRatio="xMidYMid slice" clip-path="url(#${clipId})"></image>
+        ` : iconAssetSrc ? `
+            <image class="graph-node-type-media" href="${escapeHtml(iconAssetSrc)}" x="${-imageRadius}" y="${-imageRadius}" width="${imageRadius * 2}" height="${imageRadius * 2}" preserveAspectRatio="xMidYMid meet"></image>
+        ` : `
+            <text class="graph-node-icon" text-anchor="middle" y="8" fill="${escapeHtml(node.style?.text || "#06131a")}">${escapeHtml(iconLabel)}</text>
+        `;
+        const typeMarkup = typeLabel ? `
+            <g class="graph-type-badge" opacity="${Math.min(0.76, labelOpacity)}">
+                <rect x="${-typeWidth / 2}" y="${typeY}" width="${typeWidth}" height="18" rx="9"></rect>
+                <text class="graph-type" text-anchor="middle" y="${typeY + 13}" fill="#9ff7e8">${typeLabel}</text>
+            </g>
+        ` : "";
+        return `
+            <g class="graph-node ${node.selected ? "selected" : ""} distance-${node.distance || 0}" transform="translate(${node.x} ${node.y})" data-node-id="${escapeHtml(node.id)}" title="${escapeHtml(node.title || node.id || "Untitled")}" opacity="${nodeOpacity}" style="--reveal-delay: ${Math.min(560, Number(node.distance || 0) * 110)}ms; --graph-depth-opacity: ${nodeOpacity}">
+                <circle r="${radius}" fill="${fill}" stroke="${escapeHtml(node.style?.outline || "#ffffff")}" stroke-width="${node.selected ? 5 : 2.4}" stroke-opacity="${strokeOpacity}"></circle>
+                ${centerMarkup}
+                ${labelMarkup}
+                ${typeMarkup}
+            </g>
+        `;
+    }
+
+    function bindGraphInteractions(stageEl, state, view) {
+        const svg = stageEl.querySelector(".xana-graph-svg");
+        if (!svg || svg.dataset.bound === "1") return;
+        svg.dataset.bound = "1";
+
+        svg.addEventListener("click", (event) => {
+            if (view.suppressNextClick) {
+                view.suppressNextClick = false;
+                return;
+            }
+            const node = event.target.closest?.("[data-node-id]");
+            if (!node) return;
+            const nodeId = node.getAttribute("data-node-id");
+            if (!nodeId || nodeId === state.focusId) {
+                if (nodeId) notifyStudioNodeSelection(nodeId);
+                return;
+            }
+            travelToNode(nodeId, state, true);
+        });
+
+        let panStart = null;
+        let dragStart = null;
+        const activateNode = (nodeId) => {
+            if (!nodeId || nodeId === state.focusId) {
+                if (nodeId) notifyStudioNodeSelection(nodeId);
+                return;
+            }
+            travelToNode(nodeId, state, true);
+        };
+        svg.addEventListener("pointerdown", (event) => {
+            const node = event.target.closest?.("[data-node-id]");
+            if (node) {
+                event.preventDefault();
+                const nodeId = node.getAttribute("data-node-id");
+                const modelNode = view.graphModel?.nodes?.find((candidate) => candidate.id === nodeId);
+                const point = view.graphPointFromClient(event.clientX, event.clientY);
+                dragStart = {
+                    nodeId,
+                    pointerId: event.pointerId,
+                    clientX: event.clientX,
+                    clientY: event.clientY,
+                    moved: false,
+                    offsetX: point.x - Number(modelNode?.x || 0),
+                    offsetY: point.y - Number(modelNode?.y || 0)
+                };
+                node.classList.add("dragging");
+                svg.setPointerCapture?.(event.pointerId);
+                return;
+            }
+            event.preventDefault();
+            panStart = { x: event.clientX, y: event.clientY };
+            svg.setPointerCapture?.(event.pointerId);
+        });
+        svg.addEventListener("pointermove", (event) => {
+            if (dragStart) {
+                event.preventDefault();
+                const point = view.graphPointFromClient(event.clientX, event.clientY);
+                const movedPx = Math.hypot(event.clientX - dragStart.clientX, event.clientY - dragStart.clientY);
+                if (movedPx < 6 && !dragStart.moved) return;
+                dragStart.moved = true;
+                view.moveNode(dragStart.nodeId, point.x - dragStart.offsetX, point.y - dragStart.offsetY);
+                return;
+            }
+            if (!panStart) return;
+            event.preventDefault();
+            const dx = event.clientX - panStart.x;
+            const dy = event.clientY - panStart.y;
+            panStart = { x: event.clientX, y: event.clientY };
+            view.panBy(dx, dy);
+        });
+        const endPan = (event) => {
+            if (dragStart) {
+                const nodeId = dragStart.nodeId;
+                const moved = dragStart.moved;
+                const draggedNode = stageEl.querySelector(`[data-node-id="${cssEscape(dragStart.nodeId)}"]`);
+                draggedNode?.classList.remove("dragging");
+                if (moved) {
+                    view.suppressNextClick = true;
+                    view.redraw();
+                }
+                dragStart = null;
+                svg.releasePointerCapture?.(event.pointerId);
+                if (!moved) {
+                    view.suppressNextClick = true;
+                    activateNode(nodeId);
+                }
+                return;
+            }
+            if (!panStart) return;
+            panStart = null;
+            svg.releasePointerCapture?.(event.pointerId);
+        };
+        svg.addEventListener("pointerup", endPan);
+        svg.addEventListener("pointercancel", endPan);
+        svg.addEventListener("wheel", (event) => {
+            event.preventDefault();
+            view.zoomBy(event.deltaY < 0 ? 1.08 : 0.92);
+        }, { passive: false });
+    }
+
+    function resolveGraphNodeRadius(node) {
+        return node.selected ? 46 : node.distance === 1 ? 34 : node.distance === 2 ? 29 : node.distance === 3 ? 24 : 20;
+    }
+
+    function fitGraphViewport(nodes = []) {
+        const readableNodes = nodes.filter((node) => node.selected || Number(node.distance || 0) <= 1);
+        const targetNodes = readableNodes.length ? readableNodes : nodes;
+        return fitReadableProjectionViewport(targetNodes, {
+            padding: getFitPadding(),
+            width: 900,
+            height: 620,
+            maxScale: 1.45,
+            minScale: 0.66
+        });
+    }
+
+    function scaleGraphViewport(viewport, factor = 1) {
+        const nextScale = clampNumber((viewport?.scale || 1) * factor, 0.42, 2.9, 1);
+        return { x: viewport?.x || 0, y: viewport?.y || 0, scale: nextScale };
+    }
+
+    function graphNodeGradientId(node) {
+        return `xana-node-gradient-${String(node.id || node.key || "node").replace(/[^a-z0-9_-]/gi, "-")}`;
+    }
+
+    function graphEdgeMarkerId(edge) {
+        return `xana-edge-marker-${String(edge.key || edge.type || "edge").replace(/[^a-z0-9_-]/gi, "-")}`;
+    }
+
+    function trimLabel(value, max) {
+        const text = String(value || "");
+        if (text.length <= max) return text;
+        return `${text.slice(0, Math.max(0, max - 1))}…`;
+    }
+
+    function saveGraphViewport(viewport) {
+        if (!viewport) return;
+        saveSetting(STORAGE_KEYS.graphZoom, viewport.scale);
+        saveSetting(STORAGE_KEYS.graphPan, { x: viewport.x, y: viewport.y });
+    }
+
+    function loadGraphViewport() {
+        const zoom = Number(loadSetting(STORAGE_KEYS.graphZoom, 1)) || 1;
+        const pan = loadSetting(STORAGE_KEYS.graphPan, null) || {};
+        return {
+            x: Number(pan.x || 0),
+            y: Number(pan.y || 0),
+            scale: clampNumber(zoom, 0.42, 2.9, 1)
+        };
+    }
+
+    function trimLabelText(value, max) {
+        const text = String(value || "");
+        if (text.length <= max) return text;
+        return `${text.slice(0, Math.max(0, max - 1))}...`;
+    }
+
+    function cssEscape(value) {
+        if (window.CSS?.escape) return window.CSS.escape(String(value || ""));
+        return String(value || "").replace(/["\\]/g, "\\$&");
+    }
+
+    function resolveNodeCollisionsPlain(nodes, width, height) {
+        resolveProjectionNodeCollisions(nodes, width, height, {
+            padding: isMobileLayout() ? 40 : 56,
+            passes: 14
+        });
+    }
+
+    function edgeIdentityKey(edge) {
+        return [edge.source, edge.target, edge.type || "related_to"].join("::");
+    }
+
+    function dedupeEdges(edges) {
+        const seen = new Set();
+
+        return edges.filter((edge) => {
+            const pair = [edge.source, edge.target].sort().join("::");
+            const key = `${pair}::${edge.type || "related"}`;
+
+            if (seen.has(key)) return false;
+
+            seen.add(key);
+            return true;
+        });
+    }
+
+    function scoreEdge(edge, allNodes, focusId) {
+        const source = allNodes.find((node) => node.id === edge.source);
+        const target = allNodes.find((node) => node.id === edge.target);
+
+        const sourceImportance = Number(source?.importance || 3);
+        const targetImportance = Number(target?.importance || 3);
+        const weight = Number(edge.weight || 1);
+
+        const relationshipPriority = {
+            defines: 10,
+            created: 9,
+            created_by: 9,
+            participated_in: 8,
+            originated_by: 9,
+            coined: 9,
+            represented_by: 9,
+            used_as_primary_media_for: 9,
+            depicts: 9,
+            authored: 8,
+            features: 8,
+            featured_in: 8,
+            presented: 8,
+            presented_by: 8,
+            proposed: 7,
+            demonstrates: 7,
+            demonstrated_by: 7,
+            explains: 7,
+            explained_by: 7,
+            context_for: 6,
+            documents: 6,
+            extends: 6,
+            supports: 6,
+            supported_by: 6,
+            contrasts: 6,
+            depends_on: 6,
+            exposes: 6,
+            anticipates: 6,
+            contains: 6,
+            includes: 6,
+            uses: 5,
+            used_by: 5,
+            cites: 5,
+            related_to: 4,
+            related: 3,
+            mentions: 1,
+            unresolved_media: 1
+        };
+
+        const typePriority = relationshipPriority[edge.type] || 3;
+        const directBonus = edge.source === focusId || edge.target === focusId ? 20 : 0;
+        const explicitBonus = edge.origin === "relationship" ? 8 : 0;
+        const visibilityBonus = edge.visibility === "primary" ? 5 : edge.visibility === "secondary" ? 2 : 0;
+
+        return directBonus + explicitBonus + visibilityBonus + weight * 10 + typePriority + sourceImportance + targetImportance;
+    }
+
+    function positionAsFocusCloud(cy, focusId, distances) {
+        const width = cy.container().clientWidth || 1000;
+        const height = cy.container().clientHeight || 700;
+        const centerX = width / 2;
+        const centerY = height / 2;
+
+        const focus = cy.getElementById(focusId);
+
+        if (focus.length) {
+            focus.position({ x: centerX, y: centerY });
+        }
+
+        [1, 2, 3, 4].forEach((distance) => {
+            const nodes = cy.nodes()
+                .filter((node) => distances[node.id()] === distance)
+                .sort((a, b) => {
+                    const ai = Number(a.data("importance") || 3);
+                    const bi = Number(b.data("importance") || 3);
+
+                    return bi - ai;
+                });
+
+            const count = nodes.length;
+            if (count === 0) return;
+
+            const largestNodeSize = Math.max(...nodes.map((node) => Number(node.width() || 92)));
+            const focusSize = focus.length ? Number(focus.width() || 160) : 160;
+            const isGlobalLayer = distance === 4 && count > 18;
+
+            const baseRadius = focusSize / 2 + largestNodeSize + 90 + distance * 150;
+            const radius = Math.max(baseRadius, Math.min(width, height) * (0.2 + distance * 0.18));
+            const fullCircle = Math.PI * 2;
+            const nodesPerRing = isGlobalLayer ? 22 : count;
+            const ringCount = isGlobalLayer ? Math.ceil(count / nodesPerRing) : 1;
+
+            nodes.forEach((node, index) => {
+                const stagger = distance * 0.37;
+                const ringIndex = isGlobalLayer ? Math.floor(index / nodesPerRing) : 0;
+                const indexInRing = isGlobalLayer ? index % nodesPerRing : index;
+                const ringSize = isGlobalLayer && ringIndex === ringCount - 1
+                    ? count - ringIndex * nodesPerRing
+                    : nodesPerRing;
+                const angleStep = fullCircle / Math.max(1, ringSize);
+                const ringRadius = isGlobalLayer
+                    ? radius + ringIndex * Math.max(150, largestNodeSize + 80)
+                    : radius;
+                const angle = -Math.PI / 2 + indexInRing * angleStep + stagger + ringIndex * 0.29;
+
+                node.position({
+                    x: centerX + Math.cos(angle) * ringRadius,
+                    y: centerY + Math.sin(angle) * ringRadius
+                });
+            });
+        });
+    }
+
+    function resolveNodeCollisions(cy, iterations) {
+        const padding = isMobileLayout() ? 32 : 46;
+        const nodes = cy.nodes();
+
+        for (let pass = 0; pass < iterations; pass++) {
+            nodes.forEach((a) => {
+                nodes.forEach((b) => {
+                    if (a.id() === b.id()) return;
+
+                    const ax = a.position("x");
+                    const ay = a.position("y");
+                    const bx = b.position("x");
+                    const by = b.position("y");
+                    const dx = bx - ax;
+                    const dy = by - ay;
+                    const distance = Math.sqrt(dx * dx + dy * dy) || 1;
+                    const minDistance = Number(a.width() || 92) / 2 + Number(b.width() || 92) / 2 + padding;
+
+                    if (distance >= minDistance) return;
+
+                    const overlap = (minDistance - distance) / 2;
+                    const nx = dx / distance;
+                    const ny = dy / distance;
+                    const aIsFocus = a.hasClass("focused-node");
+                    const bIsFocus = b.hasClass("focused-node");
+
+                    if (!aIsFocus) {
+                        a.position({
+                            x: ax - nx * overlap,
+                            y: ay - ny * overlap
+                        });
+                    }
+
+                    if (!bIsFocus) {
+                        b.position({
+                            x: bx + nx * overlap,
+                            y: by + ny * overlap
+                        });
+                    }
+                });
+            });
+        }
+    }
+
+    function refreshAliveMotion(state) {
+        stopAliveMotion();
+    }
+
+    function stopAliveMotion() {
+        if (_aliveTimer) {
+            window.clearInterval(_aliveTimer);
+            _aliveTimer = null;
+        }
+    }
+
+    function startAliveMotion(state) {
+        stopAliveMotion();
+        if (state.displaySettings?.graphAtmosphere !== "alive") return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        _aliveTimer = window.setInterval(() => {
+            const cy = state.cy;
+            if (!cy || state.isTraveling || state.tourActive) return;
+
+            const nodes = cy.nodes().filter((node) => !node.grabbed() && !node.hasClass("focused-node"));
+            if (!nodes.length) return;
+
+            nodes.slice(0, Math.min(5, nodes.length)).forEach((node, index) => {
+                const phase = Date.now() / 900 + index * 1.7;
+                slideNode(node, {
+                    x: Math.cos(phase) * 6,
+                    y: Math.sin(phase * 0.8) * 5
+                }, cy, 900);
+            });
+        }, 1600);
+    }
+
+    function enlivenDraggedNode(node, state, strength) {
+        const cy = state.cy;
+        if (!cy || !node?.length) return;
+
+        const origin = node.position();
+        const draggedLayer = getNodeLayer(node);
+        const radius = 220;
+
+        cy.nodes().not(node).forEach((other) => {
+            if (other.hasClass("focused-node")) return;
+            if (getNodeLayer(other) !== draggedLayer) return;
+            const pos = other.position();
+            const dx = pos.x - origin.x;
+            const dy = pos.y - origin.y;
+            const distance = Math.sqrt(dx * dx + dy * dy) || 1;
+            const minDistance = Number(node.width() || 92) / 2 + Number(other.width() || 92) / 2 + 18;
+            if (distance > Math.max(radius, minDistance)) return;
+
+            const overlapPush = Math.max(0, minDistance - distance) * 0.9;
+            const fieldPush = Math.max(0, 1 - distance / radius) * 16;
+            const push = (overlapPush + fieldPush) * strength;
+            if (push <= 0) return;
+            slideNode(other, {
+                x: (dx / distance) * push,
+                y: (dy / distance) * push
+            }, cy, 180);
+        });
+
+        node.connectedEdges().forEach((edge) => {
+            const other = edge.source().id() === node.id() ? edge.target() : edge.source();
+            if (!other.length || other.hasClass("focused-node")) return;
+            if (getNodeLayer(other) !== draggedLayer) return;
+
+            const pos = other.position();
+            const dx = pos.x - origin.x;
+            const dy = pos.y - origin.y;
+            const distance = Math.sqrt(dx * dx + dy * dy) || 1;
+            if (distance > radius * 0.75) return;
+
+            const ripple = (1 - distance / (radius * 0.75)) * 10 * strength;
+            slideNode(other, {
+                x: (dx / distance) * ripple,
+                y: (dy / distance) * ripple
+            }, cy, 180);
+        });
+    }
+
+    function getNodeLayer(node) {
+        if (node.hasClass("focused-node")) return 0;
+        if (node.hasClass("distance-1")) return 1;
+        if (node.hasClass("distance-2")) return 2;
+        if (node.hasClass("distance-3")) return 3;
+        return 4;
+    }
+
+    function slideNode(node, delta, cy, duration) {
+        const container = cy.container();
+        const width = container.clientWidth || 1000;
+        const height = container.clientHeight || 700;
+        const pos = node.position();
+        const padding = 42;
+        const next = {
+            x: clampNumber(pos.x + delta.x, padding, width - padding, pos.x),
+            y: clampNumber(pos.y + delta.y, padding, height - padding, pos.y)
+        };
+
+        node.stop(true, false);
+        node.animate({ position: next }, { duration, easing: "ease-out" });
+    }
+
+    function stagedReveal(cy, previousFocusId) {
+        // Cancel any timers from a previous in-flight reveal (e.g. navigating
+        // via search while the last animation is still running).
+        _revealTimers.forEach((id) => window.clearTimeout(id));
+        _revealTimers = [];
+
+        const after = (fn, delay) => {
+            const id = window.setTimeout(fn, delay);
+            _revealTimers.push(id);
+        };
+
+        const focus = cy.nodes(".focused-node").first();
+        const focusId = focus.id();
+
+        // Hide everything at its computed position, then reveal by graph layer.
+        // Keeping nodes in place avoids the "black hole" effect when depth changes.
+        cy.elements().style("opacity", 0);
+        focus.style("opacity", 1);
+        focus.style("width", "");
+        focus.style("height", "");
+
+        const revealNode = (node, opacity, delay, duration) => {
+            after(() => {
+                const originalWidth = parseFloat(node.style("width")) || Number(node.data("size")) || 54;
+                const originalHeight = parseFloat(node.style("height")) || originalWidth;
+                node.style({
+                    opacity: 0,
+                    width: Math.max(18, originalWidth * 0.72),
+                    height: Math.max(18, originalHeight * 0.72)
+                });
+                node.animate(
+                    { style: { opacity, width: originalWidth, height: originalHeight } },
+                    { duration, easing: "spring(360, 30)" }
+                );
+            }, delay);
+        };
+
+        // Fade in edges connected to a given node
+        const revealEdges = (nodeId, opacity, delay, duration) => {
+            after(() => {
+                cy.edges().filter((e) =>
+                    e.source().id() === nodeId || e.target().id() === nodeId
+                ).animate({ style: { opacity } }, { duration, easing: "ease-out" });
+            }, delay);
+        };
+
+        let cursor = 60;
+
+        // Wave 0 — the node we just came from (appears before the rest, anchors context)
+        const prevNode = previousFocusId ? cy.getElementById(previousFocusId) : null;
+        const hasPrev = prevNode && prevNode.length && prevNode.id() !== focusId;
+
+        if (hasPrev) {
+            const prevOpacity = prevNode.hasClass("distance-1") ? 0.95 : 0.32;
+            revealNode(prevNode, prevOpacity, cursor, 360);
+            revealEdges(prevNode.id(), 0.6, cursor + 80, 260);
+            cursor += 160;
+        }
+
+        // Wave 1 — distance-1 nodes, heaviest first
+        const d1 = cy.nodes(".distance-1")
+            .filter((n) => !hasPrev || n.id() !== prevNode.id())
+            .sort((a, b) => Number(b.data("importance") || 3) - Number(a.data("importance") || 3));
+
+        d1.forEach((node, i) => {
+            revealNode(node, 0.95, cursor + i * 60, 420);
+            revealEdges(node.id(), 0.6, cursor + i * 60 + 110, 280);
+        });
+
+        cursor += Math.max(d1.length, 1) * 60 + 200;
+
+        // Wave 2 — distance-2 nodes, heaviest first
+        const d2 = cy.nodes(".distance-2")
+            .sort((a, b) => Number(b.data("importance") || 3) - Number(a.data("importance") || 3));
+
+        d2.forEach((node, i) => {
+            revealNode(node, 0.32, cursor + i * 40, 500);
+        });
+
+        cursor += Math.max(d2.length, 1) * 40 + 220;
+
+        // Wave 3 — distance-3 nodes, subtle drift in
+        cy.nodes(".distance-3").forEach((node, i) => {
+            revealNode(node, 0.16, cursor + i * 25, 580);
+        });
+
+        cursor += Math.max(cy.nodes(".distance-3").length, 1) * 25 + 180;
+
+        cy.nodes(".distance-4").forEach((node, i) => {
+            revealNode(node, 0.08, cursor + i * 18, 620);
+        });
+
+        after(() => {
+            cy.edges(".mist-edge").animate({ style: { opacity: 0.08 } }, { duration: 500, easing: "ease-out" });
+        }, cursor);
+    }
+
+    // ── Guided Tour ──────────────────────────────────────────────────────────
+
+    function updateTourButton() {
+        const tourBtn = graphEl.querySelector("[data-tour-toggle]");
+        if (!tourBtn) return;
+
+        const isActive = graphEl.dataset.tourActive === "1";
+        tourBtn.innerHTML = isActive ? "&#x23F8;" : "&#x25B6;";
+        tourBtn.classList.toggle("tour-active", isActive);
+        tourBtn.title = isActive ? "Stop tour" : "Guided tour";
+    }
+
+    // Restart the conic-gradient countdown ring on the tour button.
+    // Must cancel the old animation by removing/re-adding the class (forces reflow).
+    function restartTourRing() {
+        const tourBtn = graphEl.querySelector("[data-tour-toggle]");
+        if (!tourBtn) return;
+        tourBtn.classList.remove("tour-ring-anim");
+        tourBtn.style.setProperty("--tour-dur", `${TOUR_DWELL_MS}ms`);
+        void tourBtn.offsetWidth; // force reflow so browser sees class removal
+        tourBtn.classList.add("tour-ring-anim");
+    }
+
+    function startTour(state) {
+        TOUR_DWELL_MS = Math.max(3000, (loadSetting(STORAGE_KEYS.tourSpeed, 9) || 9) * 1000);
+        state.tourActive = true;
+        state.tourIndex = 0;
+        state.tourVisited = new Set([state.focusId].filter(Boolean));
+        state.tourRecent = [state.focusId].filter(Boolean);
+        state.activeTrail = buildActiveTrail(state);
+        graphEl.dataset.tourActive = "1";
+        updateTourButton();
+        panelEl.scrollTop = 0;
+        const narrated = state.displaySettings?.tourMode === "narration"
+            ? narrateNode(state.allNodes.find((node) => node.id === state.focusId), state)
+            : false;
+        restartTourRing();
+        if (!narrated) {
+            startTourPanelScroll(TOUR_DWELL_MS);
+            scheduleTourAdvance(state);
+        }
+    }
+
+    function stopTour(state) {
+        state.tourActive = false;
+        state.activeTrail = null;
+        state.trailChoicePending = false;
+        graphEl.dataset.tourActive = "0";
+        clearTourTimers();
+        closeTrailChoice();
+        stopNarration();
+        updateTourButton();
+        const tourBtn = graphEl.querySelector("[data-tour-toggle]");
+        if (tourBtn) tourBtn.classList.remove("tour-ring-anim");
+    }
+
+    function clearTourTimers() {
+        if (_tourTimer) { window.clearTimeout(_tourTimer); _tourTimer = null; }
+        if (_tourScrollInterval) { window.cancelAnimationFrame(_tourScrollInterval); _tourScrollInterval = null; }
+    }
+
+    function startTourPanelScroll(durationMs = TOUR_DWELL_MS, options = {}) {
+        if (_tourScrollInterval) window.cancelAnimationFrame(_tourScrollInterval);
+
+        // Measure total scrollable distance once the panel has rendered.
+        // Scroll position is time-based so short content scrolls slowly and
+        // long content scrolls faster. The caller decides which clock owns it.
+        const delayMs = Math.max(0, Number(options.delayMs) || 0);
+        const startTime = performance.now() + delayMs;
+        const duration = Math.max(1200, Number(durationMs) || TOUR_DWELL_MS);
+        const totalDistance = Math.max(0, panelEl.scrollHeight - panelEl.clientHeight);
+
+        if (totalDistance < 24) return; // nothing meaningful to scroll
+
+        const scroll = (now) => {
+            if (!_tourScrollInterval) return;
+            if (now < startTime) {
+                _tourScrollInterval = window.requestAnimationFrame(scroll);
+                return;
+            }
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            panelEl.scrollTop = totalDistance * progress;
+            if (progress < 1) {
+                _tourScrollInterval = window.requestAnimationFrame(scroll);
+            } else {
+                _tourScrollInterval = null;
+            }
+        };
+
+        _tourScrollInterval = window.requestAnimationFrame(scroll);
+    }
+
+    function pickNextTourNode(state) {
+        if (state.activeTrail?.nodes?.length) {
+            const trailNext = pickNextTrailNode(state);
+            if (trailNext) return trailNext;
+            if (state.trailChoicePending) return null;
+            stopTour(state);
+            return null;
+        }
+
+        const cy = state.cy;
+        if (!cy) return null;
+
+        const visibleNodes = cy.nodes().filter((node) => node.id() !== state.focusId);
+        const localNodes = visibleNodes.filter((node) => node.hasClass("distance-1") || node.hasClass("distance-2"));
+        const basePool = localNodes.length ? localNodes : visibleNodes;
+        const recent = new Set(state.tourRecent || []);
+        const fresh = basePool.filter((node) => !state.tourVisited?.has(node.id()) && !recent.has(node.id()));
+        const notRecent = basePool.filter((node) => !recent.has(node.id()) && node.id() !== state.previousFocusId);
+        const pool = (fresh.length ? fresh : notRecent.length ? notRecent : basePool)
+            .sort((a, b) => {
+                const aDistance = a.distance || 3;
+                const bDistance = b.distance || 3;
+                if (aDistance !== bDistance) return aDistance - bDistance;
+                return Number(b.importance || 3) - Number(a.importance || 3);
+            });
+        if (!pool.length) return null;
+
+        state.tourIndex = state.tourIndex % pool.length;
+        const next = pool[state.tourIndex];
+        state.tourIndex = (state.tourIndex + 1) % pool.length;
+
+        const nextId = next?.id || null;
+        if (nextId) rememberTourVisit(nextId, state);
+        return nextId;
+    }
+
+    function buildActiveTrail(state) {
+        const focusNode = state.allNodes.find((node) => node.id === state.focusId);
+        const trailNodes = getTrailNodeIds(focusNode, state);
+        if (!trailNodes.length) return null;
+        return {
+            trailId: focusNode.id,
+            nodes: trailNodes,
+            index: 0,
+            branches: getTrailBranches(focusNode, state),
+            branchChoices: {}
+        };
+    }
+
+    function getTrailNodeIds(node, state) {
+        if (!node) return [];
+
+        const explicitNodes = Array.isArray(node.trail_nodes)
+            ? node.trail_nodes.filter((id) => state.nodeIds.has(id))
+            : [];
+        if (explicitNodes.length) return explicitNodes;
+
+        return (state.allEdgesRaw || [])
+            .filter((edge) => edge.source === node.id && edge.origin === "trail" && state.nodeIds.has(edge.target))
+            .map((edge) => edge.target)
+            .filter((id, index, ids) => ids.indexOf(id) === index);
+    }
+
+    function getTrailBranches(node, state) {
+        if (!Array.isArray(node?.trail_branches)) return [];
+        return node.trail_branches
+            .map((branch) => ({
+                after: branch?.after || "",
+                prompt: branch?.prompt || "Choose the next path",
+                choices: Array.isArray(branch?.choices)
+                    ? branch.choices
+                        .map((choice) => ({
+                            label: choice?.label || "Continue",
+                            summary: choice?.summary || "",
+                            nodes: Array.isArray(choice?.nodes)
+                                ? choice.nodes.filter((id) => state.nodeIds.has(id))
+                                : []
+                        }))
+                        .filter((choice) => choice.nodes.length)
+                    : []
+            }))
+            .filter((branch) => branch.after && branch.choices.length);
+    }
+
+    function pickNextTrailNode(state) {
+        const trail = state.activeTrail;
+        if (!trail?.nodes?.length) return null;
+        const branch = trail.branches?.find((candidate) => {
+            return candidate.after === state.focusId && !trail.branchChoices?.[candidate.after];
+        });
+        if (branch) {
+            showTrailChoice(branch, state);
+            return null;
+        }
+        const currentIndex = trail.nodes.indexOf(state.focusId);
+        const nextIndex = currentIndex >= 0 ? currentIndex + 1 : trail.index;
+        const nextId = trail.nodes[nextIndex];
+        trail.index = nextIndex + 1;
+        if (!nextId) {
+            state.activeTrail = null;
+            return null;
+        }
+        rememberTourVisit(nextId, state);
+        return nextId;
+    }
+
+    function showTrailChoice(branch, state) {
+        if (state.trailChoicePending) return;
+        state.trailChoicePending = true;
+        closeTrailChoice();
+
+        const overlay = document.createElement("div");
+        overlay.className = "xana-trail-choice";
+        overlay.setAttribute("data-tts-skip", "");
+        overlay.innerHTML = `
+            <div class="xana-trail-choice-card" role="dialog" aria-modal="true" aria-label="Choose trail branch">
+                <div class="xana-trail-choice-kicker">Trail branch</div>
+                <h2>${escapeHtml(branch.prompt)}</h2>
+                <div class="xana-trail-choice-options">
+                    ${branch.choices.map((choice, index) => `
+                        <button type="button" data-trail-choice="${index}">
+                            <span>${index + 1}</span>
+                            <strong>${escapeHtml(choice.label)}</strong>
+                            ${choice.summary ? `<em>${escapeHtml(choice.summary)}</em>` : ""}
+                        </button>
+                    `).join("")}
+                </div>
+            </div>
+        `;
+        document.body.appendChild(overlay);
+
+        overlay.querySelectorAll("[data-trail-choice]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const choice = branch.choices[Number(button.getAttribute("data-trail-choice"))];
+                if (!choice?.nodes?.length) return;
+                state.activeTrail.branchChoices[branch.after] = choice.label;
+                state.activeTrail.nodes = choice.nodes;
+                state.activeTrail.index = 0;
+                state.trailChoicePending = false;
+                closeTrailChoice();
+                travelToNode(choice.nodes[0], state, !state.tourActive);
+            });
+        });
+    }
+
+    function closeTrailChoice() {
+        document.querySelectorAll(".xana-trail-choice").forEach((el) => el.remove());
+    }
+
+    function rememberTourVisit(nodeId, state) {
+        state.tourVisited = state.tourVisited || new Set();
+        state.tourRecent = state.tourRecent || [];
+        state.tourVisited.add(nodeId);
+        state.tourRecent.push(nodeId);
+        state.tourRecent = state.tourRecent.slice(-7);
+
+        const visibleCount = state.graphModel?.nodes?.length || 0;
+        if (visibleCount > 0 && state.tourVisited.size > Math.max(8, Math.floor(visibleCount * 0.7))) {
+            state.tourVisited = new Set(state.tourRecent);
+        }
+    }
+
+    function scheduleTourAdvance(state, forceTimer = false) {
+        if (_tourTimer) window.clearTimeout(_tourTimer);
+        if (!forceTimer && state.displaySettings?.tourMode === "narration" && state.displaySettings?.ttsNarrator && canNarrate()) return;
+
+        _tourTimer = window.setTimeout(() => {
+            if (!state.tourActive) return;
+            const nextId = pickNextTourNode(state);
+            if (nextId) travelToNode(nextId, state, false);
+            if (state.tourActive && !state.trailChoicePending) scheduleTourAdvance(state);
+        }, TOUR_DWELL_MS);
+    }
+
+    // ── End Guided Tour ──────────────────────────────────────────────────────
+
+    function travelToNode(nextId, state, pushUrl) {
+        if (!nextId || nextId === state.focusId) return;
+        if (state.nodeIds && !state.nodeIds.has(nextId)) return;
+        if (state.isTraveling) return;
+        closeTransientUi(state, { clearSearch: true });
+
+        if (state.graph) {
+            const currentId = state.focusId;
+            const currentNode = state.graph.graphModel?.nodes?.find((node) => node.id === currentId);
+            const nextNode = state.graph.graphModel?.nodes?.find((node) => node.id === nextId);
+
+            if (!currentNode || !nextNode) {
+                state.previousFocusId = null;
+                state.focusId = nextId;
+                renderVisibleGraph(state, {
+                    updateUrl: pushUrl,
+                    stagedReveal: true,
+                    preserveViewport: false
+                });
+                panelEl.classList.remove("panel-transitioning");
+                return;
+            }
+
+            state.isTraveling = true;
+            panelEl.classList.add("panel-transitioning");
+            const route = findProjectionRoute(state.graph.graphModel?.edges || [], currentId, nextId, { maxDepth: state.maxDepth || 4 });
+            const routeNodes = route?.nodeIds
+                ?.map((id) => state.graph.graphModel?.nodes?.find((node) => node.id === id))
+                .filter(Boolean);
+            state.graph.animateTravel(currentNode, nextNode, () => {
+                state.previousFocusId = currentId;
+                state.focusId = nextId;
+                renderVisibleGraph(state, {
+                    updateUrl: pushUrl,
+                    stagedReveal: true,
+                    preserveViewport: false
+                });
+                panelEl.classList.remove("panel-transitioning");
+                state.isTraveling = false;
+            }, { routeNodes });
+            return;
+        }
+    }
+
+    function renderPanel(node, relatedEdges, state) {
+        if (!node) {
+            panelEl.innerHTML = `<p class="xana-empty">No node selected.</p>`;
+            return;
+        }
+
+        const outgoing = relatedEdges.filter((edge) => edge.source === node.id);
+        const incoming = relatedEdges.filter((edge) => edge.target === node.id);
+        const totalConns = outgoing.length + incoming.length;
+
+        const panelMediaType = node.primary_media_node?.media_type || "";
+        const panelIsVisual = ["image", "diagram", "screenshot"].includes(panelMediaType) ||
+            /\.(svg|png|jpe?g|webp|gif|avif)$/i.test(node.image || "");
+
+        panelEl.innerHTML = `
+            <div class="xana-node-header ${(node.image && panelIsVisual) ? "has-media" : node.image ? "has-media has-doc-media" : "no-media"}">
+                ${renderPanelImage(node, state)}
+                <div class="xana-node-heading-text">
+                    <div class="xana-node-badges">
+                        ${renderTypeBadge(node.type)}
+                        ${renderSubtypeBadges(node)}
+                    </div>
+                    <h1>${escapeHtml(node.title || node.id)}</h1>
+                    ${node.summary ? `<p class="xana-summary">${escapeHtml(node.summary)}</p>` : ""}
+                    ${renderMediaProvenance(node)}
+                    ${renderMediaWarning(node)}
+                </div>
+            </div>
+
+            ${(node.youtube_url || node.primary_media_node?.youtube_url) ? renderYouTubeEmbed(node.youtube_url || node.primary_media_node?.youtube_url, node.primary_media_node?.title || "Watch on YouTube") : ""}
+
+            ${node.type === "trail" ? renderTrailPlaylist(node, state) : ""}
+
+            ${node.html || node.content ? `<div class="xana-node-content">${node.html || escapeHtml(node.content)}</div>` : ""}
+
+            ${renderSourceInfo(node)}
+
+            ${renderProtocolFooter(node)}
+
+            ${node.type === "trail" ? "" : renderTrailPlaylist(node, state)}
+
+            <details class="xana-connections" ${loadSetting(STORAGE_KEYS.connectionsOpen, false) ? "open" : ""}>
+                <summary class="xana-connections-summary">
+                    <span>Connections</span>
+                    ${totalConns > 0 ? `<span class="xana-conn-count">${totalConns}</span>` : ""}
+                </summary>
+                ${outgoing.length > 0 ? `
+                    <div class="xana-connections-group">
+                        <div class="xana-connections-dir-label">From this node</div>
+                        ${relationshipList(outgoing, "target", state.allNodes)}
+                    </div>
+                ` : ""}
+                ${incoming.length > 0 ? `
+                    <div class="xana-connections-group">
+                        <div class="xana-connections-dir-label">To this node</div>
+                        ${relationshipList(incoming, "source", state.allNodes)}
+                    </div>
+                ` : ""}
+                ${totalConns === 0 ? `<p class="xana-empty">No connections.</p>` : ""}
+            </details>
+
+            ${renderNodeViolations(node, state.allEdgesRaw, state.allNodes)}
+        `;
+
+        if (state.previousFocusId && state.previousFocusId !== state.focusId) {
+            panelEl.scrollTop = 0;
+        }
+
+        normalizePanelLinks(state);
+        bindTrailPlaylist(state);
+        highlightPendingFragment(state);
+
+        // Tour: reset scroll and restart both the panel-scroll loop and the
+        // countdown ring animation so both are in sync with the new node's dwell.
+        if (state.tourActive) {
+            panelEl.scrollTop = 0;
+            const narrated = narrateNode(node, state);
+            restartTourRing();
+            if (!narrated) {
+                startTourPanelScroll(TOUR_DWELL_MS);
+                scheduleTourAdvance(state);
+            }
+        }
+    }
+
+    function renderTrailPlaylist(node, state) {
+        const trailNodes = getTrailPlaylistNodeIds(node, state);
+        if (!trailNodes.length) return "";
+        const items = trailNodes
+            .map((id, index) => {
+                const target = state.allNodes.find((candidate) => candidate.id === id);
+                if (!target) return "";
+                return `
+                    <button type="button" data-trail-jump="${escapeHtml(target.id)}">
+                        <span>${index + 1}</span>
+                        <strong>${escapeHtml(target.title || target.id)}</strong>
+                        <em>${escapeHtml(target.type || "node")}</em>
+                    </button>
+                `;
+            })
+            .filter(Boolean)
+            .join("");
+
+        if (!items) return "";
+        return `
+            <section class="xana-trail-playlist" data-tts-skip>
+                <div class="xana-trail-playlist-head">
+                    <span>Trail playlist</span>
+                    <button type="button" data-trail-start="${escapeHtml(node.id)}">Play trail</button>
+                </div>
+                <div class="xana-trail-playlist-items">${items}</div>
+            </section>
+        `;
+    }
+
+    function getTrailPlaylistNodeIds(node, state) {
+        const ids = [];
+        const add = (id) => {
+            if (!id || !state.nodeIds.has(id) || ids.includes(id)) return;
+            ids.push(id);
+        };
+
+        getTrailNodeIds(node, state).forEach(add);
+        getTrailBranches(node, state).forEach((branch) => {
+            branch.choices.forEach((choice) => {
+                choice.nodes.forEach(add);
+            });
+        });
+
+        return ids;
+    }
+
+    function bindTrailPlaylist(state) {
+        panelEl.querySelectorAll("[data-trail-jump]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const id = button.getAttribute("data-trail-jump");
+                const trailNodes = getTrailNodeIds(state.allNodes.find((node) => node.id === state.focusId), state);
+                const trailNode = state.allNodes.find((node) => node.id === state.focusId);
+                state.activeTrail = {
+                    trailId: state.focusId,
+                    nodes: trailNodes,
+                    index: Math.max(0, trailNodes.indexOf(id) + 1),
+                    branches: getTrailBranches(trailNode, state),
+                    branchChoices: {}
+                };
+                travelToNode(id, state, true);
+            });
+        });
+
+        panelEl.querySelector("[data-trail-start]")?.addEventListener("click", () => {
+            state.activeTrail = buildActiveTrail(state);
+            const nextId = pickNextTrailNode(state);
+            if (nextId) travelToNode(nextId, state, true);
+        });
+    }
+
+    function renderProtocolFooter(node) {
+        const rows = [
+            node.protocol_id ? ["Protocol", node.protocol_id] : null,
+            node.tumbler ? ["Tumbler", node.tumbler] : null
+        ].filter(Boolean);
+
+        if (!rows.length) return "";
+
+        return `
+            <footer class="xana-protocol-footer" data-tts-skip aria-hidden="true">
+                ${rows.map(([label, value]) => `
+                    <div>
+                        <span>${escapeHtml(label)}</span>
+                        <code>${escapeHtml(value)}</code>
+                    </div>
+                `).join("")}
+            </footer>
+        `;
+    }
+
+    function highlightPendingFragment(state) {
+        const pending = state.pendingFragmentHighlight;
+        if (!pending || pending.nodeId !== state.focusId) return;
+
+        panelEl.querySelectorAll(".xana-fragment-highlight").forEach((el) => {
+            el.classList.remove("xana-fragment-highlight");
+        });
+        panelEl.querySelectorAll(".xana-fragment-note").forEach((el) => el.remove());
+
+        const text = normalizeFragmentText(pending.fragment?.text || "");
+        const candidates = [...panelEl.querySelectorAll(".xana-node-content p, .xana-node-content li, .xana-node-content blockquote, .xana-node-content pre")];
+        const target = candidates.find((el) => {
+            const candidate = normalizeFragmentText(el.textContent || "");
+            if (!candidate || !text) return false;
+            return candidate.includes(text) || text.includes(candidate) || candidate.includes(text.slice(0, 80));
+        });
+
+        if (target) {
+            target.classList.add("xana-fragment-highlight");
+            target.setAttribute("data-fragment-label", `Fragment ${pending.fragmentId}`);
+            target.scrollIntoView({ block: "center", behavior: "smooth" });
+            const note = buildFragmentNote(pending, state, "Highlighted fragment");
+            target.insertAdjacentElement("beforebegin", note);
+            state.pendingFragmentHighlight = null;
+            return;
+        }
+
+        const note = buildFragmentNote(pending, state, "Fragment address");
+        const content = panelEl.querySelector(".xana-node-content");
+        if (content) content.prepend(note);
+        note.scrollIntoView({ block: "center", behavior: "smooth" });
+        state.pendingFragmentHighlight = null;
+    }
+
+    function buildFragmentNote(pending, state, label) {
+        const note = document.createElement("aside");
+        note.className = "xana-fragment-note";
+        note.setAttribute("data-tts-skip", "");
+        note.setAttribute("aria-hidden", "true");
+        note.innerHTML = `
+            <span>${escapeHtml(label)}</span>
+            <code>${escapeHtml(pending.fragment?.tumbler || `${state.allNodes.find((node) => node.id === pending.nodeId)?.protocol_id || pending.nodeId}#fragment/${pending.fragmentId}`)}</code>
+        `;
+        return note;
+    }
+
+    function normalizeFragmentText(value) {
+        return stripHtml(value)
+            .replace(/\s+/g, " ")
+            .trim()
+            .toLowerCase();
+    }
+
+    function narrateNode(node, state) {
+        if (!node || state?.displaySettings?.tourMode !== "narration" || !state?.displaySettings?.ttsNarrator) return false;
+        if (!canNarrate()) return false;
+
+        const title = node.title || node.id || "Untitled node";
+        const summary = stripHtml(node.summary || "").replace(/\s+/g, " ").trim();
+        const renderedContent = panelNarrationText();
+        const content = (renderedContent || stripHtml(node.html || node.content || "")).replace(/\s+/g, " ").trim();
+        const wantsFull = state.displaySettings.ttsDetail !== "summary";
+        const readableContent = wantsFull && content && content !== summary
+            ? content
+            : "";
+        const text = [title, summary, readableContent].filter(Boolean).join(". ");
+
+        if (!text) return false;
+        stopNarration();
+
+        const rate = clampNumber(state.displaySettings.ttsRate, 0.65, 1.35, DISPLAY_DEFAULTS.ttsRate);
+        startTourPanelScroll(estimateNarrationDurationMs(text, rate) + 1800, { delayMs: 900 });
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        const voices = getAvailableVoices();
+        const selectedVoice = voices.find((voice) => voice.voiceURI === state.displaySettings.ttsVoice)
+            || findPreferredNarratorVoice(voices)
+            || voices.find((voice) => voice.default)
+            || voices[0];
+
+        if (selectedVoice) utterance.voice = selectedVoice;
+        utterance.rate = rate;
+        utterance.pitch = clampNumber(state.displaySettings.ttsPitch, 0.75, 1.35, DISPLAY_DEFAULTS.ttsPitch);
+        utterance.volume = 0.88;
+        utterance.onend = () => {
+            if (!state.tourActive) return;
+            window.setTimeout(() => {
+                if (!state.tourActive) return;
+                const nextId = pickNextTourNode(state);
+                if (nextId) travelToNode(nextId, state, false);
+                if (!nextId && !state.trailChoicePending) stopTour(state);
+            }, NARRATION_AFTER_END_PAUSE_MS);
+        };
+        utterance.onerror = () => {
+            if (state.tourActive) scheduleTourAdvance(state, true);
+        };
+        window.speechSynthesis.speak(utterance);
+        return true;
+    }
+
+    function panelNarrationText() {
+        const content = panelEl.querySelector(".xana-node-content");
+        if (!content) return "";
+        const clone = content.cloneNode(true);
+        clone.querySelectorAll("[data-tts-skip], script, style, noscript").forEach((el) => el.remove());
+        return clone.textContent || "";
+    }
+
+    function estimateNarrationDurationMs(text, rate) {
+        const words = String(text || "").trim().split(/\s+/).filter(Boolean).length;
+        const punctuationPauses = (String(text || "").match(/[.!?;:]/g) || []).length * 180;
+        const baseWordsPerMinute = 155;
+        const effectiveWordsPerMinute = baseWordsPerMinute * clampNumber(rate, 0.65, 1.35, DISPLAY_DEFAULTS.ttsRate);
+        const spokenMs = (words / effectiveWordsPerMinute) * 60000;
+        return Math.max(2600, spokenMs + punctuationPauses);
+    }
+
+    function stopNarration() {
+        if ("speechSynthesis" in window) {
+            window.speechSynthesis.cancel();
+        }
+    }
+
+    function canNarrate() {
+        return "speechSynthesis" in window && Boolean(window.SpeechSynthesisUtterance);
+    }
+
+    function getAvailableVoices() {
+        return canNarrate() ? window.speechSynthesis.getVoices() : [];
+    }
+
+    function findPreferredNarratorVoice(voices) {
+        return voices.find((voice) => /google/i.test(voice.name) && /uk|united kingdom|gb|en-gb/i.test(`${voice.name} ${voice.lang}`) && /male/i.test(voice.name))
+            || voices.find((voice) => /google/i.test(voice.name) && /en-gb/i.test(voice.lang || ""))
+            || voices.find((voice) => /en-gb/i.test(voice.lang || ""));
+    }
+
+    function populateVoiceOptions(state) {
+        const select = graphEl.querySelector("[data-tts-voice]");
+        if (!select) return;
+
+        const voices = getAvailableVoices();
+        let current = state.displaySettings.ttsVoice || "";
+        if (!current && voices.length) {
+            const preferred = findPreferredNarratorVoice(voices);
+            if (preferred) current = preferred.voiceURI;
+            if (preferred && !loadSetting(STORAGE_KEYS.ttsVoice, "")) {
+                state.displaySettings.ttsVoice = preferred.voiceURI;
+            }
+        }
+        select.innerHTML = [
+            `<option value="">Browser default</option>`,
+            ...voices.map((voice) => {
+                const label = `${voice.name}${voice.lang ? ` (${voice.lang})` : ""}${voice.localService ? "" : " - network"}`;
+                return `<option value="${escapeHtml(voice.voiceURI)}" ${voice.voiceURI === current ? "selected" : ""}>${escapeHtml(label)}</option>`;
+            })
+        ].join("");
+
+        if (current && !voices.some((voice) => voice.voiceURI === current)) {
+            select.value = "";
+        } else if (current) {
+            select.value = current;
+        }
+    }
+
+    function ensureInterfaceTourSeen(state) {
+        if (hasCompletedInterfaceTour()) return;
+        if (document.querySelector(".xana-interface-tour")) return;
+        startInterfaceTour(state, { forced: true });
+    }
+
+    function startInterfaceTour(state, options = {}) {
+        document.querySelectorAll(".xana-interface-tour").forEach((el) => el.remove());
+        document.querySelectorAll(".xana-tour-target").forEach((el) => el.classList.remove("xana-tour-target"));
+
+        const forced = Boolean(options.forced);
+        const steps = [
+            {
+                selector: ".xana-searcher",
+                title: "Search",
+                body: "Type a title, alias, person, claim, source, concept, or protocol address. Results update the visible graph and jump directly to matching nodes."
+            },
+            {
+                selector: ".xana-depth-row",
+                title: "Graph Range",
+                body: "Choose how many relationship hops to show around the focused node. Start with 1 or 2 hops for reading, then widen the graph when you want more context."
+            },
+            {
+                selector: "#xana-stage",
+                title: "Graph",
+                body: "Click a node to travel to it. Drag nodes to rearrange the local view. The focused node stays connected to its visible relationships."
+            },
+            {
+                selector: ".xana-controls-strip",
+                title: "Controls",
+                body: "- zooms out, □ fits the graph, and + zooms in. The rest of this bar opens filters, path tracing, tours, settings, and tools."
+            },
+            {
+                selector: "[data-filter-toggle]",
+                title: "Filters",
+                body: "≡ opens graph filters for node types, relationship types, media kinds, subtypes, and facets. Use it to isolate schemas, sources, implementations, evidence, or any other layer in the substrate."
+            },
+            {
+                selector: "[data-path-open]",
+                title: "Paths",
+                body: "⤴ compares two nodes. XanaNode traces connective paths and also writes a short story of the semantic route between them."
+            },
+            {
+                selector: "[data-tour-toggle]",
+                title: "Node Tour",
+                body: "▶ starts the guided node tour. It moves through connected nodes by narration or timed advance, depending on your settings."
+            },
+            {
+                selector: "#xana-panel",
+                title: "Reader",
+                body: "This is the reading view for the selected node. It puts the human-facing page first, then keeps protocol, source, media, and relationship details close by."
+            },
+            {
+                selector: ".xana-connections",
+                title: "Follow relationships",
+                body: "Connections lists the selected node's incoming and outgoing relationships. Open it to jump along sources, claims, implementations, people, places, works, trails, or disagreements."
+            },
+            {
+                selector: "[data-settings-toggle]",
+                title: "Settings",
+                body: "⚙ opens display and narration settings: theme, density, text size, graph motion, tour behavior, and voice preferences."
+            },
+            {
+                selector: "[data-tools-toggle]",
+                title: "Tools",
+                body: "⋯ opens authoring utilities such as review suggestions and schema audit. You can reopen this tour later from ⋯, then Interface tour."
+            }
+        ];
+
+        let index = 0;
+        renderInterfaceTourStep();
+
+        function renderInterfaceTourStep() {
+            document.querySelectorAll(".xana-interface-tour, .xana-tour-spotlight").forEach((el) => el.remove());
+            document.querySelectorAll(".xana-tour-target").forEach((el) => el.classList.remove("xana-tour-target"));
+
+            const step = steps[index];
+            const target = document.querySelector(step.selector);
+            if (target) target.classList.add("xana-tour-target");
+
+            const overlay = document.createElement("div");
+            overlay.className = "xana-interface-tour";
+            overlay.setAttribute("data-tts-skip", "");
+            overlay.innerHTML = `
+                <div class="xana-interface-tour-card">
+                    <div class="xana-interface-tour-count">${index + 1} / ${steps.length}</div>
+                    <h2>${escapeHtml(step.title)}</h2>
+                    <p>${escapeHtml(step.body)}</p>
+                    <div class="xana-interface-tour-actions">
+                        <button type="button" data-tour-close>${forced ? "Skip" : "Close"}</button>
+                        <button type="button" data-tour-prev ${index === 0 ? "disabled" : ""}>Back</button>
+                        <button type="button" data-tour-next>${index === steps.length - 1 ? "Done" : "Next"}</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+
+            overlay.querySelector("[data-tour-close]")?.addEventListener("click", closeInterfaceTour);
+            overlay.querySelector("[data-tour-prev]")?.addEventListener("click", () => {
+                index = Math.max(0, index - 1);
+                renderInterfaceTourStep();
+            });
+            overlay.querySelector("[data-tour-next]")?.addEventListener("click", () => {
+                if (index >= steps.length - 1) {
+                    closeInterfaceTour();
+                    return;
+                }
+                index += 1;
+                renderInterfaceTourStep();
+            });
+        }
+
+        function closeInterfaceTour() {
+            markInterfaceTourCompleted();
+            document.querySelectorAll(".xana-interface-tour").forEach((el) => el.remove());
+            document.querySelectorAll(".xana-tour-target").forEach((el) => el.classList.remove("xana-tour-target"));
+        }
+    }
+
+    function renderPanelImage(node, state) {
+        if (!node.image) return "";
+
+        const mediaType = node.primary_media_node?.media_type || "";
+        const src = node.image || "";
+
+        // Non-visual media: render a square icon placeholder instead of a broken <img>
+        if (["document", "audio", "video"].includes(mediaType) ||
+            (!mediaType && (src.endsWith(".pdf") || src.endsWith(".mp3") || src.endsWith(".mp4")))) {
+            const isAudio = mediaType === "audio" || src.endsWith(".mp3");
+            const isVideo = mediaType === "video" || src.endsWith(".mp4");
+            const iconSvg = isAudio
+                ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z"/></svg>`
+                : isVideo
+                    ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>`
+                    : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>`;
+            const ext = src.split(".").pop().toUpperCase();
+            const nodeId = node.primary_media_node?.id;
+            const linkHref = src;
+            return `
+                <a
+                    class="xana-node-image xana-node-image--doc-placeholder"
+                    href="${escapeHtml(linkHref)}"
+                    target="_blank"
+                    rel="noopener"
+                    title="${escapeHtml(node.primary_media_node?.title || ext + " file")}"
+                    ${nodeId ? `data-node-jump="${escapeHtml(nodeId)}"` : ""}
+                >
+                    ${iconSvg}
+                    <span class="xana-doc-placeholder-ext">${escapeHtml(ext)}</span>
+                </a>
+            `;
+        }
+
+        const isContain = ["diagram", "screenshot"].includes(mediaType) || src.toLowerCase().endsWith(".svg");
+        const imageClass = `xana-node-image${isContain ? " xana-node-image--contain" : ""}`;
+
+        if (node.primary_media_node) {
+            return `
+                <a
+                    class="xana-node-image-link"
+                    href="${escapeHtml(nodeHref(node.primary_media_node, state))}"
+                    data-node-jump="${escapeHtml(node.primary_media_node.id)}"
+                >
+                    <img
+                        class="${imageClass} xana-node-image--panel"
+                        src="${escapeHtml(src)}"
+                        alt="${escapeHtml(node.image_alt || node.title || "")}"
+                    >
+                </a>
+            `;
+        }
+
+        return `
+            <div class="xana-node-image-link${node.type === "media" ? "" : " unresolved-media"}">
+                <img
+                    class="${imageClass} xana-node-image--panel"
+                    src="${escapeHtml(src)}"
+                    alt="${escapeHtml(node.image_alt || node.title || "")}"
+                >
+            </div>
+        `;
+    }
+
+    function renderMediaProvenance(node) {
+        if (!node.primary_media_node) return "";
+
+        const media = node.primary_media_node;
+
+        return `
+            <div class="xana-media-credit">
+                <a
+                    href="${escapeHtml(nodeHref(media, { allNodes: [media] }))}"
+                    data-node-jump="${escapeHtml(media.id)}"
+                >
+                    ${escapeHtml(media.title || "Media node")}
+                </a>
+                ${media.creator ? `<span>Creator: ${escapeHtml(media.creator)}</span>` : ""}
+                ${media.created_date ? `<span>Date: ${escapeHtml(media.created_date)}</span>` : ""}
+                ${media.rights_status ? `<span>Rights: ${escapeHtml(media.rights_status)}</span>` : ""}
+            </div>
+        `;
+    }
+
+    function renderMediaWarning(node) {
+        if (!node.media_warning) return "";
+
+        return `
+            <div class="xana-media-warning">
+                ${escapeHtml(node.media_warning)}
+            </div>
+        `;
+    }
+
+    function renderSourceInfo(node) {
+        const type = node.type;
+        const isSource = type === "source" || type === "publication";
+        const isMedia = type === "media";
+        if (!isSource && !isMedia) return "";
+
+        const rows = [];
+
+        if (isSource) {
+            if (node.author) rows.push(`<tr><th>Author</th><td>${escapeHtml(node.author)}</td></tr>`);
+            if (node.year) rows.push(`<tr><th>Year</th><td>${escapeHtml(String(node.year))}</td></tr>`);
+        }
+        if (isMedia) {
+            if (node.creator) rows.push(`<tr><th>Creator</th><td>${escapeHtml(node.creator)}</td></tr>`);
+            if (node.created_date) rows.push(`<tr><th>Date</th><td>${escapeHtml(node.created_date)}</td></tr>`);
+            if (node.source_name) rows.push(`<tr><th>Source</th><td>${escapeHtml(node.source_name)}</td></tr>`);
+        }
+        if (node.source_url) {
+            rows.push(`<tr><th>URL</th><td><a href="${escapeHtml(node.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(node.source_url)}</a></td></tr>`);
+        }
+        if (node.rights_status) rows.push(`<tr><th>Rights</th><td>${escapeHtml(node.rights_status)}</td></tr>`);
+        if (node.license) {
+            const cell = node.license_url
+                ? `<a href="${escapeHtml(node.license_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(node.license)}</a>`
+                : escapeHtml(node.license);
+            rows.push(`<tr><th>License</th><td>${cell}</td></tr>`);
+        }
+
+        if (!rows.length) return "";
+
+        return `<div class="xana-source-info">${renderSourceActions(node)}<table class="xana-source-table">${rows.join("")}</table></div>`;
+    }
+
+    function renderSourceActions(node) {
+        if (!node.source_url) return "";
+        const label = node.source_platform_label || "Open source";
+        const platform = node.source_platform || "web";
+        const glyph = sourcePlatformFor(node.source_url)?.glyph || "↗";
+
+        return `
+            <div class="xana-source-actions">
+                <a class="xana-source-chip" data-platform="${escapeHtml(platform)}" href="${escapeHtml(node.source_url)}" target="_blank" rel="noopener noreferrer">
+                    <span class="xana-source-chip-icon" aria-hidden="true">${escapeHtml(glyph)}</span>
+                    <span>${escapeHtml(label)}</span>
+                </a>
+            </div>
+        `;
+    }
+
+    function relationshipList(edges, otherKey, allNodes) {
+        const items = edges.map((edge) => {
+            const other = allNodes.find((node) => node.id === edge[otherKey]);
+            if (!other) return "";
+
+            const relDisplay = (edge.type || "related").replace(/_/g, " ");
+            const weight = Math.min(5, Math.max(1, Number(edge.weight || 1)));
+            const weightDots = "\u25CF".repeat(weight) + "\u25CB".repeat(5 - weight);
+
+            return `
+                <li class="xana-rel-item">
+                    <a class="xana-rel-link" href="${escapeHtml(nodeHref(other, { allNodes }))}" data-node-jump="${escapeHtml(other.id)}">
+                        <span class="xana-rel-title">${escapeHtml(other.title || other.id)}</span>
+                        <span class="xana-rel-meta">
+                            ${renderTypeBadge(other.type, "xana-type-badge--sm")}
+                            <span class="xana-rel-edge-type">${escapeHtml(relDisplay)}</span>
+                            <span class="xana-rel-weight" title="weight ${weight}">${weightDots}</span>
+                        </span>
+                    </a>
+                </li>
+            `;
+        }).filter(Boolean);
+
+        if (!items.length) return `<p class="xana-empty">None.</p>`;
+
+        return `<ul class="xana-relations">${items.join("")}</ul>`;
+    }
+
+    function getNodeViolations(node, allEdges, allNodes) {
+        const violations = [];
+        const nodeIds = allNodes ? new Set(allNodes.map((n) => n.id)) : null;
+
+        if (!node.type) {
+            violations.push({ code: "missing_type", message: "Missing type field." });
+        } else if (!VALID_NODE_TYPES.has(node.type)) {
+            violations.push({ code: "invalid_type", message: `Invalid type "${node.type}". Not in schema (v0.2.0).` });
+        }
+
+        if (!node.title) {
+            violations.push({ code: "missing_title", message: "Missing title." });
+        }
+
+        if (node.importance === undefined || node.importance === null || node.importance === "") {
+            violations.push({ code: "missing_importance", message: "Missing importance value." });
+        }
+
+        if (!node.summary) {
+            violations.push({ code: "missing_summary", message: "Missing summary." });
+        }
+
+        if (node.type !== "media" && node.image && !node.primary_media) {
+            violations.push({ code: "naked_image", message: "Legacy image field without media node. Create a media node and set primary_media." });
+        }
+
+        if (node.type === "media") {
+            if (!node.file) violations.push({ code: "media_missing_file", message: "Media node missing file field." });
+            if (!node.alt) violations.push({ code: "media_missing_alt", message: "Media node missing alt field." });
+            if (!node.rights_status) violations.push({ code: "media_missing_rights", message: "Media node missing rights_status field." });
+        }
+
+        const seenInvalidRelTypes = new Set();
+        const seenDanglingTargets = new Set();
+        allEdges.forEach((edge) => {
+            if (edge.source !== node.id && edge.target !== node.id) return;
+            const normalizedType = normalizeRelationshipType(edge.type);
+            if (!normalizedType) return;
+            if (!VALID_RELATIONSHIP_TYPES.has(normalizedType) && !seenInvalidRelTypes.has(normalizedType)) {
+                seenInvalidRelTypes.add(normalizedType);
+                violations.push({ code: "invalid_rel_type", message: `Invalid relationship type "${normalizedType}".` });
+            }
+            // Dangling reference: edge points to a node that doesn't exist
+            if (nodeIds && edge.source === node.id && !nodeIds.has(edge.target) && !seenDanglingTargets.has(edge.target)) {
+                seenDanglingTargets.add(edge.target);
+                violations.push({ code: "dangling_ref", message: `Target "${edge.target}" not found.` });
+            }
+        });
+
+        return violations;
+    }
+
+    function renderNodeViolations(node, allEdges, allNodes) {
+        const violations = getNodeViolations(node, allEdges, allNodes);
+        if (!violations.length) return "";
+
+        return `
+            <section class="xana-violations-section">
+                <h2>&#9888; Schema violations (${violations.length})</h2>
+                <ul class="xana-violations-list">
+                    ${violations.map((v) => `<li class="xana-violation xana-violation-${escapeHtml(v.code)}">${escapeHtml(v.message)}</li>`).join("")}
+                </ul>
+            </section>
+        `;
+    }
+
+    function formatViolationCode(code) {
+        const labels = {
+            missing_type: "Missing type",
+            invalid_type: "Invalid type",
+            missing_title: "Missing title",
+            missing_importance: "Missing importance",
+            missing_summary: "Missing summary",
+            naked_image: "Naked image (no media node)",
+            media_missing_file: "Media — missing file",
+            media_missing_alt: "Media — missing alt text",
+            media_missing_rights: "Media — missing rights_status",
+            invalid_rel_type: "Invalid relationship type",
+            dangling_ref: "Dangling reference (target not found)"
+        };
+        return labels[code] || code.replace(/_/g, " ");
+    }
+
+    function runSchemaAudit(state) {
+        const results = [];
+
+        state.allNodes.forEach((node) => {
+            const violations = getNodeViolations(node, state.allEdgesRaw, state.allNodes);
+            if (violations.length > 0) {
+                results.push({ node, violations });
+            }
+        });
+
+        results.sort((a, b) => b.violations.length - a.violations.length);
+        state.auditResults = results;
+        state.auditPassed = results.length === 0;
+        renderAuditResults(state);
+    }
+
+    function openPathExplorer(state) {
+        state.pathExplorer.active = true;
+        state.pathExplorer.sourceQuery = state.focusId || state.pathExplorer.sourceQuery || "";
+        state.pathExplorer.targetQuery = state.previousFocusId || state.pathExplorer.targetQuery || "";
+        state.pathExplorer.results = [];
+        state.pathExplorer.summary = "";
+        state.auditMode = false;
+        state.auditResults = [];
+        graphEl.querySelector("[data-path-open]")?.classList.add("active");
+        graphEl.querySelector("[data-path-open]")?.setAttribute("aria-expanded", "true");
+        renderPathExplorer(state);
+    }
+
+    function closePathExplorer(state) {
+        state.pathExplorer.active = false;
+        state.pathExplorer.results = [];
+        state.pathExplorer.summary = "";
+
+        const stageEl = document.getElementById("xana-stage");
+        const pathStageEl = document.getElementById("xana-path-stage");
+        if (pathStageEl) {
+            pathStageEl.hidden = true;
+            pathStageEl.innerHTML = "";
+        }
+        if (stageEl) stageEl.hidden = false;
+        graphEl.querySelector("[data-path-open]")?.classList.remove("active");
+        graphEl.querySelector("[data-path-open]")?.setAttribute("aria-expanded", "false");
+
+        if (state.graph) {
+            state.graph.resize?.();
+            fitReadableNeighborhood(state.graph);
+        }
+    }
+
+    function resolveNodeSelection(query, allNodes) {
+        const raw = String(query || "").trim();
+        if (!raw) return null;
+
+        const rawLower = raw.toLowerCase();
+        const normalized = normalizeSearchText(raw);
+
+        return allNodes.find((node) => {
+            if (!node) return false;
+
+            const id = String(node.id || "").toLowerCase();
+            const title = String(node.title || "");
+            const titleNormalized = normalizeSearchText(title);
+
+            return id === rawLower || titleNormalized === normalized || normalizeSearchText(node.id || "") === normalized;
+        }) || null;
+    }
+
+    function buildPathOptions(allNodes) {
+        return allNodes.map((node) => {
+            const title = escapeHtml(node.title || node.id || "");
+            const id = escapeHtml(node.id || "");
+            return `<option value="${id}" label="${title}"></option>`;
+        }).join("");
+    }
+
+    function buildPathGraph(allEdges, allowReverse) {
+        const adjacency = new Map();
+
+        const addEdge = (fromId, toId, edge, reversed) => {
+            if (!adjacency.has(fromId)) adjacency.set(fromId, []);
+            adjacency.get(fromId).push({ toId, edge, reversed });
+        };
+
+        allEdges.forEach((edge, index) => {
+            const normalizedEdge = { ...edge, _edgeIndex: index };
+            addEdge(normalizedEdge.source, normalizedEdge.target, normalizedEdge, false);
+
+            if (allowReverse) {
+                addEdge(normalizedEdge.target, normalizedEdge.source, normalizedEdge, true);
+            }
+        });
+
+        return adjacency;
+    }
+
+    function findConnectivePaths(allEdges, sourceId, targetId, options = {}) {
+        const allowReverse = options.allowReverse !== false;
+        const maxDepth = Number(options.maxDepth || 6);
+        const maxPaths = Number(options.maxPaths || 6);
+        const searchLimit = Math.max(maxPaths * 12, 48);
+        const adjacency = buildPathGraph(allEdges, allowReverse);
+        const results = [];
+        const visited = new Set([sourceId]);
+        const path = [];
+        const pathNodeIds = [sourceId];
+
+        const dfs = (currentId, depth) => {
+            if (results.length >= searchLimit) return;
+            if (depth > maxDepth) return;
+
+            if (currentId === targetId) {
+                results.push({
+                    nodes: [...pathNodeIds],
+                    hops: path.map((step) => ({ ...step }))
+                });
+                return;
+            }
+
+            const neighbors = adjacency.get(currentId) || [];
+
+            for (const step of neighbors) {
+                if (visited.has(step.toId)) continue;
+
+                visited.add(step.toId);
+                path.push({
+                    fromId: currentId,
+                    toId: step.toId,
+                    edge: step.edge,
+                    reversed: step.reversed
+                });
+                pathNodeIds.push(step.toId);
+
+                dfs(step.toId, depth + 1);
+
+                pathNodeIds.pop();
+                path.pop();
+                visited.delete(step.toId);
+
+                if (results.length >= searchLimit) return;
+            }
+        };
+
+        dfs(sourceId, 0);
+
+        return results.sort((a, b) => {
+            const scoreDiff = scoreConnectivePath(b) - scoreConnectivePath(a);
+            if (scoreDiff) return scoreDiff;
+            if (a.hops.length !== b.hops.length) return a.hops.length - b.hops.length;
+            return a.nodes.join(" ").localeCompare(b.nodes.join(" "));
+        }).slice(0, maxPaths);
+    }
+
+    function scoreConnectivePath(path) {
+        const hopCount = path.hops.length || 1;
+        const edgeScore = path.hops.reduce((sum, hop) => {
+            const edge = hop.edge || {};
+            const weight = Number(edge.weight || 1);
+            const visibility = edge.visibility === "primary" ? 8 : edge.visibility === "secondary" ? 4 : 0;
+            const directionPenalty = hop.reversed ? -1 : 0;
+            return sum + weight * 6 + visibility + relationshipStoryPriority(edge.type) + directionPenalty;
+        }, 0);
+        return edgeScore - hopCount * 5;
+    }
+
+    function relationshipStoryPriority(type) {
+        const priorities = {
+            defines: 10,
+            has_claim: 10,
+            supports: 9,
+            evidence_for: 9,
+            derived_from: 9,
+            authored: 8,
+            created: 8,
+            influenced: 8,
+            implements: 8,
+            enables: 8,
+            contains: 8,
+            uses: 7,
+            explains: 7,
+            documents: 7,
+            context_for: 6,
+            continues_to: 6,
+            related_to: 2,
+            mentions: 1
+        };
+        return priorities[type] || 4;
+    }
+
+    function renderPathNodeChip(node, direction = "") {
+        const label = escapeHtml(node?.title || node?.id || "unknown");
+        const type = escapeHtml(node?.type || "node");
+        const suffix = direction ? ` <span class="xana-path-node-dir">${escapeHtml(direction)}</span>` : "";
+
+        return `<span class="xana-path-node-chip" title="${label} (${type})">${label}${suffix}</span>`;
+    }
+
+    function renderPathExplorer(state) {
+        const pathStageEl = document.getElementById("xana-path-stage");
+        const auditStageEl = document.getElementById("xana-audit-stage");
+        const stageEl = document.getElementById("xana-stage");
+
+        if (!pathStageEl) return;
+
+        if (auditStageEl) {
+            auditStageEl.hidden = true;
+            auditStageEl.innerHTML = "";
+        }
+
+        if (stageEl) stageEl.hidden = true;
+        pathStageEl.hidden = false;
+
+        const optionsHtml = buildPathOptions(state.allNodes);
+        const pathState = state.pathExplorer;
+        const sourceNode = resolveNodeSelection(pathState.sourceQuery, state.allNodes);
+        const targetNode = resolveNodeSelection(pathState.targetQuery, state.allNodes);
+        pathStageEl.innerHTML = `
+            <div class="xana-path-page">
+                <div class="xana-path-page-header">
+                    <div class="xana-path-header-row">
+                        <div>
+                            <h2 class="xana-path-title">Connective Path Explorer</h2>
+                            <p class="xana-path-summary">Trace relationship paths between two nodes and read the route as a short semantic story.</p>
+                        </div>
+                        <button type="button" class="xana-path-dismiss" data-path-dismiss>&larr; Back to graph</button>
+                    </div>
+                </div>
+
+                <div class="xana-path-page-body">
+                    <form class="xana-path-form" data-path-form>
+                        <datalist id="xana-path-node-list">
+                            ${optionsHtml}
+                        </datalist>
+
+                        <div class="xana-path-grid">
+                            <label class="xana-path-field">
+                                <span>From</span>
+                                <input type="text" list="xana-path-node-list" data-path-source value="${escapeHtml(pathState.sourceQuery)}" placeholder="Node id or title">
+                                <button type="button" class="xana-path-field-btn" data-path-use-focus="source">Use focus</button>
+                            </label>
+
+                            <label class="xana-path-field">
+                                <span>To</span>
+                                <input type="text" list="xana-path-node-list" data-path-target value="${escapeHtml(pathState.targetQuery)}" placeholder="Node id or title">
+                                <button type="button" class="xana-path-field-btn" data-path-use-focus="target">Use focus</button>
+                            </label>
+                        </div>
+
+                        <div class="xana-path-actions">
+                            <label class="xana-path-hop-limit">
+                                <span>Hop limit</span>
+                                <input type="number" min="1" max="${PATH_MAX_HOPS}" step="1" data-path-max-depth value="${clampNumber(pathState.maxDepth, 1, PATH_MAX_HOPS, 6)}">
+                            </label>
+                            <label class="xana-path-toggle">
+                                <input type="checkbox" data-path-allow-reverse ${pathState.allowReverse ? "checked" : ""}>
+                                <span>Trace both directions</span>
+                            </label>
+                            <button type="button" class="xana-path-swap" data-path-swap>Swap</button>
+                            <button type="submit" class="xana-path-trace">Trace paths</button>
+                        </div>
+                    </form>
+
+                    <div class="xana-path-meta" aria-live="polite">
+                        ${sourceNode ? `From <strong>${escapeHtml(sourceNode.title || sourceNode.id)}</strong>` : `<span>Choose a source node.</span>`}
+                        ${targetNode ? `To <strong>${escapeHtml(targetNode.title || targetNode.id)}</strong>` : `<span>Choose a target node.</span>`}
+                    </div>
+
+                    ${renderPathResults(state, sourceNode, targetNode)}
+                </div>
+            </div>
+        `;
+
+        const sourceInput = pathStageEl.querySelector("[data-path-source]");
+        const targetInput = pathStageEl.querySelector("[data-path-target]");
+
+        sourceInput?.addEventListener("input", () => {
+            pathState.sourceQuery = sourceInput.value;
+        });
+
+        targetInput?.addEventListener("input", () => {
+            pathState.targetQuery = targetInput.value;
+        });
+
+        pathStageEl.querySelector("[data-path-form]")?.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const sourceValue = sourceInput?.value || "";
+            const targetValue = targetInput?.value || "";
+            const reverseToggle = pathStageEl.querySelector("[data-path-allow-reverse]");
+            const maxDepthInput = pathStageEl.querySelector("[data-path-max-depth]");
+
+            pathState.sourceQuery = sourceValue;
+            pathState.targetQuery = targetValue;
+            pathState.allowReverse = Boolean(reverseToggle?.checked);
+            pathState.maxDepth = clampNumber(maxDepthInput?.value, 1, PATH_MAX_HOPS, 6);
+
+            runPathExplorer(state);
+        });
+
+        pathStageEl.querySelector("[data-path-dismiss]")?.addEventListener("click", () => {
+            closePathExplorer(state);
+        });
+
+        pathStageEl.querySelectorAll("[data-path-use-focus]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const slot = button.getAttribute("data-path-use-focus");
+                if (slot === "source") {
+                    pathState.sourceQuery = state.focusId || "";
+                    if (sourceInput) sourceInput.value = pathState.sourceQuery;
+                }
+                if (slot === "target") {
+                    pathState.targetQuery = state.focusId || "";
+                    if (targetInput) targetInput.value = pathState.targetQuery;
+                }
+            });
+        });
+
+        pathStageEl.querySelector("[data-path-swap]")?.addEventListener("click", () => {
+            const nextSource = pathState.targetQuery;
+            const nextTarget = pathState.sourceQuery;
+            pathState.sourceQuery = nextSource;
+            pathState.targetQuery = nextTarget;
+            if (sourceInput) sourceInput.value = nextSource;
+            if (targetInput) targetInput.value = nextTarget;
+        });
+
+        pathStageEl.querySelector("[data-path-allow-reverse]")?.addEventListener("change", (event) => {
+            pathState.allowReverse = Boolean(event.target.checked);
+        });
+
+        pathStageEl.querySelector("[data-path-max-depth]")?.addEventListener("input", (event) => {
+            pathState.maxDepth = clampNumber(event.target.value, 1, PATH_MAX_HOPS, 6);
+        });
+    }
+
+    function runPathExplorer(state) {
+        const pathState = state.pathExplorer;
+        const sourceNode = resolveNodeSelection(pathState.sourceQuery, state.allNodes);
+        const targetNode = resolveNodeSelection(pathState.targetQuery, state.allNodes);
+
+        if (!sourceNode || !targetNode) {
+            pathState.results = [];
+            pathState.summary = "Choose valid source and target nodes.";
+            renderPathExplorer(state);
+            return;
+        }
+
+        if (sourceNode.id === targetNode.id) {
+            pathState.results = [];
+            pathState.summary = "Source and target are the same node.";
+            renderPathExplorer(state);
+            return;
+        }
+
+        const paths = findConnectivePaths(state.allEdges, sourceNode.id, targetNode.id, {
+            allowReverse: pathState.allowReverse,
+            maxDepth: pathState.maxDepth,
+            maxPaths: pathState.maxPaths
+        });
+
+        pathState.results = paths;
+
+        if (!paths.length) {
+            pathState.summary = `No connective path found within ${pathState.maxDepth} hops.`;
+        } else if (paths.length >= pathState.maxPaths) {
+            pathState.summary = `Showing the top ${pathState.maxPaths} scored paths within ${pathState.maxDepth} hops.`;
+        } else {
+            pathState.summary = `${paths.length} connective path${paths.length === 1 ? "" : "s"} found within ${pathState.maxDepth} hops.`;
+        }
+
+        renderPathExplorer(state);
+    }
+
+    function renderPathResults(state, sourceNode, targetNode) {
+        const pathState = state.pathExplorer;
+
+        if (!sourceNode || !targetNode) {
+            return `<p class="xana-path-empty">Pick a source and target node, then trace the connective path.</p>`;
+        }
+
+        if (sourceNode.id === targetNode.id) {
+            return `<p class="xana-path-empty">Choose two different nodes.</p>`;
+        }
+
+        if (!pathState.results.length) {
+            return `<p class="xana-path-empty">${escapeHtml(pathState.summary || "No connective path found yet.")}</p>`;
+        }
+
+        return `
+            <div class="xana-path-results">
+                <p class="xana-path-summary-line">${escapeHtml(pathState.summary || "")}</p>
+                <ol class="xana-path-list">
+                    ${pathState.results.map((path, index) => renderPathCard(path, index, state.allNodes)).join("")}
+                </ol>
+            </div>
+        `;
+    }
+
+    function renderPathCard(path, index, allNodes) {
+        const nodeById = new Map(allNodes.map((node) => [node.id, node]));
+        const firstNode = nodeById.get(path.nodes[0]);
+        const lastNode = nodeById.get(path.nodes[path.nodes.length - 1]);
+        const story = renderPathStory(path, nodeById);
+
+        const hopsHtml = path.hops.map((hop, hopIndex) => {
+            const fromNode = nodeById.get(hop.fromId);
+            const toNode = nodeById.get(hop.toId);
+            const relationLabel = escapeHtml((hop.edge.type || "related").replace(/_/g, " "));
+            const arrow = hop.reversed ? "&larr;" : "&rarr;";
+            const weight = Number(hop.edge.weight || 1);
+
+            return `
+                <li class="xana-path-hop">
+                    <span class="xana-path-hop-index">${hopIndex + 1}</span>
+                    <span class="xana-path-hop-from">${renderPathNodeChip(fromNode, "from")}</span>
+                    <span class="xana-path-hop-arrow">${arrow}</span>
+                    <span class="xana-path-hop-rel" title="weight ${weight}">${relationLabel}</span>
+                    <span class="xana-path-hop-arrow">${arrow}</span>
+                    <span class="xana-path-hop-to">${renderPathNodeChip(toNode, hop.reversed ? "reverse" : "to")}</span>
+                </li>
+            `;
+        }).join("");
+
+        return `
+            <li class="xana-path-card">
+                <div class="xana-path-card-header">
+                    <div>
+                        <h3>Path ${index + 1}</h3>
+                        <p>${path.hops.length} hop${path.hops.length === 1 ? "" : "s"}</p>
+                    </div>
+                    <div class="xana-path-card-endpoints">
+                        ${renderPathNodeChip(firstNode)}
+                        <span>&rarr;</span>
+                        ${renderPathNodeChip(lastNode)}
+                    </div>
+                </div>
+                <p class="xana-path-story">${story}</p>
+                <ol class="xana-path-hop-list">
+                    ${hopsHtml}
+                </ol>
+            </li>
+        `;
+    }
+
+    function renderPathStory(path, nodeById) {
+        const parts = path.hops.map((hop, index) => {
+            const fromNode = nodeById.get(hop.fromId);
+            const toNode = nodeById.get(hop.toId);
+            const fromTitle = escapeHtml(fromNode?.title || hop.fromId);
+            const toTitle = escapeHtml(toNode?.title || hop.toId);
+            const phrase = relationshipPhrase(hop.edge?.type || "related_to", hop.reversed);
+            const lead = index === 0 ? "" : "Then ";
+            return `${lead}${fromTitle} ${phrase} ${toTitle}`;
+        });
+        return `${parts.join(". ")}.`;
+    }
+
+    function relationshipPhrase(type, reversed = false) {
+        const forwardPhrases = {
+            supports: "supports",
+            contradicts: "contradicts",
+            explains: "explains",
+            defines: "defines",
+            has_claim: "has claim",
+            claim_of: "is a claim of",
+            demonstrates: "demonstrates",
+            derives_from: "derives from",
+            derived_from: "derives from",
+            cites: "cites",
+            quotes: "quotes",
+            mentions: "mentions",
+            references: "references",
+            documents: "documents",
+            authored: "authored",
+            authored_by: "was authored by",
+            created: "created",
+            created_by: "was created by",
+            participated_in: "participated in",
+            spoke_at: "spoke at",
+            features: "features",
+            presented: "presented",
+            introduced: "introduced",
+            proposed: "proposed",
+            influenced: "influenced",
+            influenced_by: "was influenced by",
+            popularized: "popularized",
+            anticipated: "anticipated",
+            anticipates: "anticipates",
+            shaped: "shaped",
+            shapes: "shapes",
+            implements: "implements",
+            implemented_by: "is implemented by",
+            enables: "enables",
+            preserves: "preserves",
+            transcludes: "transcludes",
+            deep_links_to: "deep-links to",
+            has_primary_media: "has primary media",
+            depicts: "depicts",
+            represents: "represents",
+            located_in: "is located in",
+            part_of: "is part of",
+            contains: "contains",
+            includes: "includes",
+            uses: "uses",
+            depends_on: "depends on",
+            requires: "requires",
+            starts_with: "starts with",
+            continues_to: "continues to",
+            member_of: "is a member of",
+            related_to: "relates to"
+        };
+        const reversePhrases = {
+            supports: "is supported by",
+            contradicts: "is contradicted by",
+            explains: "is explained by",
+            defines: "is defined by",
+            has_claim: "is a claim of",
+            claim_of: "has claim",
+            demonstrates: "is demonstrated by",
+            derives_from: "is the source for",
+            derived_from: "is the source for",
+            cites: "is cited by",
+            quotes: "is quoted by",
+            mentions: "is mentioned by",
+            references: "is referenced by",
+            documents: "is documented by",
+            authored: "was authored by",
+            authored_by: "authored",
+            created: "was created by",
+            created_by: "created",
+            participated_in: "had participant",
+            spoke_at: "featured speaker",
+            features: "is featured in",
+            presented: "was presented by",
+            introduced: "was introduced by",
+            proposed: "was proposed by",
+            influenced: "was influenced by",
+            influenced_by: "influenced",
+            popularized: "was popularized by",
+            anticipated: "was anticipated by",
+            anticipates: "is anticipated by",
+            shaped: "was shaped by",
+            shapes: "was shaped by",
+            implements: "is implemented by",
+            implemented_by: "implements",
+            enables: "is enabled by",
+            preserves: "is preserved by",
+            transcludes: "is transcluded by",
+            deep_links_to: "is deep-linked from",
+            has_primary_media: "is primary media for",
+            depicts: "is depicted by",
+            represents: "is represented by",
+            located_in: "contains",
+            part_of: "contains",
+            contains: "is contained by",
+            includes: "is included in",
+            uses: "is used by",
+            depends_on: "is a dependency of",
+            requires: "is required by",
+            starts_with: "starts",
+            continues_to: "appears in",
+            member_of: "has member",
+            related_to: "relates to"
+        };
+        const phrases = reversed ? reversePhrases : forwardPhrases;
+        return phrases[type] || String(type || "related_to").replace(/_/g, " ");
+    }
+
+    function renderAuditResults(state) {
+        const stageEl = document.getElementById("xana-stage");
+        const auditStageEl = document.getElementById("xana-audit-stage");
+        const pathStageEl = document.getElementById("xana-path-stage");
+        const auditRunBtn = graphEl.querySelector("[data-audit-run]");
+        const auditClearBtn = graphEl.querySelector("[data-audit-clear]");
+        const metaEl = graphEl.querySelector(".xana-audit-meta");
+
+        if (!auditStageEl) return;
+
+        if (!state.auditResults.length) {
+            state.auditMode = false;
+
+            if (stageEl) stageEl.hidden = false;
+            auditStageEl.hidden = true;
+            auditStageEl.innerHTML = "";
+            if (pathStageEl) {
+                pathStageEl.hidden = true;
+                pathStageEl.innerHTML = "";
+            }
+
+            if (auditRunBtn) {
+                auditRunBtn.classList.remove("audit-active", "audit-pass", "audit-fail");
+                // Show pass/fail icon if we just ran the audit (auditPassed is set),
+                // otherwise restore the default warning icon.
+                if (state.auditPassed === true) {
+                    auditRunBtn.textContent = "Schema audit passed";
+                    auditRunBtn.classList.add("audit-pass");
+                    auditRunBtn.title = "Audit passed \u2014 no violations";
+                } else {
+                    auditRunBtn.textContent = "Run schema audit";
+                    auditRunBtn.title = "Run schema audit";
+                }
+            }
+            if (auditClearBtn) auditClearBtn.hidden = true;
+            if (metaEl) { metaEl.textContent = ""; metaEl.hidden = true; }
+
+            if (state.graph) {
+                state.graph.resize?.();
+                fitReadableNeighborhood(state.graph);
+            }
+
+            return;
+        }
+
+        state.auditMode = true;
+
+        if (stageEl) stageEl.hidden = true;
+        auditStageEl.hidden = false;
+        if (pathStageEl) {
+            pathStageEl.hidden = true;
+            pathStageEl.innerHTML = "";
+        }
+
+        const total = state.auditResults.length;
+        const violationCount = state.auditResults.reduce((sum, r) => sum + r.violations.length, 0);
+
+        if (auditRunBtn) {
+            auditRunBtn.classList.remove("audit-pass");
+            auditRunBtn.classList.add("audit-active", "audit-fail");
+            auditRunBtn.textContent = "Schema audit issues";
+            auditRunBtn.title = `Audit: ${total} node${total === 1 ? "" : "s"} \u00B7 ${violationCount} issue${violationCount === 1 ? "" : "s"}`;
+        }
+
+        if (auditClearBtn) auditClearBtn.hidden = false;
+
+        if (metaEl) {
+            metaEl.textContent = `${total} node${total === 1 ? "" : "s"} · ${violationCount} issue${violationCount === 1 ? "" : "s"}`;
+            metaEl.hidden = false;
+        }
+
+        // Group violations by code
+        const byCode = {};
+        state.auditResults.forEach(({ node, violations }) => {
+            violations.forEach((v) => {
+                if (!byCode[v.code]) byCode[v.code] = [];
+                byCode[v.code].push({ node, message: v.message });
+            });
+        });
+
+        const sortedGroups = Object.entries(byCode).sort((a, b) => b[1].length - a[1].length);
+
+        auditStageEl.innerHTML = `
+            <div class="xana-audit-page">
+                <div class="xana-audit-page-header">
+                    <div class="xana-audit-header-row">
+                        <div>
+                            <h2 class="xana-audit-title">Schema Audit</h2>
+                            <p class="xana-audit-summary">${total} node${total === 1 ? "" : "s"} with violations &middot; ${violationCount} total issue${violationCount === 1 ? "" : "s"}</p>
+                        </div>
+                        <button type="button" class="xana-audit-dismiss" data-audit-dismiss>&#8592; Back to graph</button>
+                    </div>
+                </div>
+                <div class="xana-audit-page-body">
+                    ${sortedGroups.map(([code, items]) => `
+                        <section class="xana-audit-group">
+                            <h3 class="xana-audit-group-title">
+                                ${escapeHtml(formatViolationCode(code))}
+                                <span class="xana-audit-count">${items.length}</span>
+                            </h3>
+                            <ul class="xana-audit-node-list">
+                                ${items.map(({ node, message }) => `
+                                    <li>
+                                        <button type="button" class="xana-audit-node-btn" data-audit-jump="${escapeHtml(node.id)}">
+                                            <span class="xana-audit-node-title">${escapeHtml(node.title || node.id)}</span>
+                                            <span class="xana-audit-node-type">${escapeHtml(node.type || "unknown")}</span>
+                                            <span class="xana-audit-node-msg">${escapeHtml(message)}</span>
+                                        </button>
+                                    </li>
+                                `).join("")}
+                            </ul>
+                        </section>
+                    `).join("")}
+                </div>
+            </div>
+        `;
+
+        auditStageEl.querySelectorAll("[data-audit-jump]").forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const id = btn.getAttribute("data-audit-jump");
+                state.auditMode = false;
+                state.auditResults = [];
+
+                if (stageEl) stageEl.hidden = false;
+                if (auditStageEl) {
+                    auditStageEl.hidden = true;
+                    auditStageEl.innerHTML = "";
+                }
+
+                if (auditRunBtn) {
+                    auditRunBtn.classList.remove("audit-active", "audit-pass", "audit-fail");
+                    auditRunBtn.textContent = "Run schema audit";
+                    auditRunBtn.title = "Run schema audit";
+                }
+                if (auditClearBtn) auditClearBtn.hidden = true;
+                if (metaEl) { metaEl.textContent = ""; metaEl.hidden = true; }
+
+                travelToNode(id, state, true);
+            });
+        });
+
+        auditStageEl.querySelector("[data-audit-dismiss]")?.addEventListener("click", () => {
+            state.auditMode = false;
+            state.auditResults = [];
+
+            if (stageEl) stageEl.hidden = false;
+            if (auditStageEl) {
+                auditStageEl.hidden = true;
+                auditStageEl.innerHTML = "";
+            }
+
+            if (auditRunBtn) {
+                auditRunBtn.classList.remove("audit-active", "audit-pass", "audit-fail");
+                auditRunBtn.textContent = "Run schema audit";
+                auditRunBtn.title = "Run schema audit";
+            }
+            if (auditClearBtn) auditClearBtn.hidden = true;
+            if (metaEl) { metaEl.textContent = ""; metaEl.hidden = true; }
+
+            if (state.graph) {
+                state.graph.resize?.();
+                fitReadableNeighborhood(state.graph);
+            }
+        });
+    }
+
+    function normalizePanelLinks(state) {
+        const nodeById = new Map(state.allNodes.map((n) => [n.id, n]));
+
+        panelEl.querySelectorAll("a").forEach((link) => {
+            const href = link.getAttribute("href");
+
+            if (!href || href.startsWith("#")) return;
+            if (link.hasAttribute("data-node-jump")) return;
+
+            const protocolTarget = resolveProtocolAddress(href, state);
+            if (protocolTarget) {
+                link.setAttribute("href", nodeHref(protocolTarget.nodeId, state));
+                link.dataset.nodeJump = protocolTarget.nodeId;
+                if (protocolTarget.fragmentId) {
+                    link.dataset.fragmentJump = protocolTarget.fragmentId;
+                }
+
+                link.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    closeTransientUi(state, { clearSearch: true });
+                    state.pendingFragmentHighlight = protocolTarget.fragmentId
+                        ? {
+                            nodeId: protocolTarget.nodeId,
+                            fragmentId: protocolTarget.fragmentId,
+                            fragment: protocolTarget.fragment
+                        }
+                        : null;
+                    travelToNode(protocolTarget.nodeId, state, true);
+                    if (protocolTarget.nodeId === state.focusId) {
+                        highlightPendingFragment(state);
+                    }
+                });
+                return;
+            }
+
+            // Primary match: compare normalized URL paths (works for absolute hrefs).
+            let matchingNode = state.allNodes.find((node) => {
+                return normalizePath(node.url) === normalizePath(href);
+            });
+
+            // Fallback: treat type-aware routes and old "node/<id>" routes as
+            // local node links.
+            if (!matchingNode) {
+                const stripped = href.replace(/^\//, "").replace(/\/$/, "");
+                const routeParts = stripped.split("/");
+                const candidateId = routeParts.length >= 2 ? routeParts.at(-1) : stripped;
+                matchingNode = nodeById.get(candidateId);
+            }
+
+            if (matchingNode) {
+                link.setAttribute("href", nodeHref(matchingNode, state));
+
+                link.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    closeTransientUi(state, { clearSearch: true });
+                    state.pendingFragmentHighlight = fragmentHighlightFromHref(matchingNode.id, href, state);
+                    travelToNode(matchingNode.id, state, true);
+                    if (matchingNode.id === state.focusId) {
+                        highlightPendingFragment(state);
+                    }
+                });
+
+                return;
+            }
+
+            if (isExternalUrl(href)) {
+                link.setAttribute("target", "_blank");
+                link.setAttribute("rel", "noopener noreferrer");
+            }
+        });
+
+        panelEl.querySelectorAll("[data-node-jump]").forEach((link) => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+
+                const id = link.getAttribute("data-node-jump");
+                closeTransientUi(state, { clearSearch: true });
+                travelToNode(id, state, true);
+            });
+        });
+
+        // Persist connections open/closed state across panel re-renders
+        const connectionsEl = panelEl.querySelector(".xana-connections");
+        if (connectionsEl) {
+            connectionsEl.addEventListener("toggle", () => {
+                saveSetting(STORAGE_KEYS.connectionsOpen, connectionsEl.open);
+            });
+        }
+    }
+
+    let lastTrackedNodeId = null;
+    let activeNode = null;
+    let activeNodeStartedAt = 0;
+
+    function flushNodeTiming() {
+        if (!activeNode || typeof window.gtag !== "function") return;
+
+        const durationMs = Date.now() - activeNodeStartedAt;
+        if (durationMs < 3000) return;
+
+        window.gtag("event", "node_timing", {
+            node_id: activeNode.id,
+            node_title: activeNode.title || activeNode.id,
+            node_type: activeNode.type || "node",
+            engagement_time_msec: durationMs,
+            value: Math.round(durationMs / 1000)
+        });
+    }
+
+    function trackNodeView(node) {
+        if (!node || typeof window.gtag !== "function") return;
+        if (node.id === lastTrackedNodeId) return;
+
+        flushNodeTiming();
+
+        lastTrackedNodeId = node.id;
+        activeNode = node;
+        activeNodeStartedAt = Date.now();
+
+        const title = `${node.title || node.id} · XanaNode`;
+        const pagePath = `${window.location.pathname}${window.location.search}` || "/";
+        document.title = title;
+
+        window.gtag("event", "page_view", {
+            page_title: title,
+            page_location: window.location.href,
+            page_path: pagePath,
+            node_id: node.id,
+            node_title: node.title || node.id,
+            node_type: node.type || "node"
+        });
+    }
+
+    window.addEventListener("beforeunload", flushNodeTiming);
+    document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "hidden") {
+            flushNodeTiming();
+        }
+    });
+
+    function trackSearch(query, resultsCount) {
+        if (!query || typeof window.gtag !== "function") return;
+
+        window.gtag("event", "search", {
+            search_term: query,
+            results_count: resultsCount
+        });
+    }
+
+    function makeResizable(state) {
+        const app = document.querySelector(".xana-app");
+
+        if (!app || document.querySelector(".xana-resizer")) return;
+
+        const resizer = document.createElement("div");
+        resizer.className = "xana-resizer";
+        app.insertBefore(resizer, panelEl);
+
+        let isDragging = false;
+        let raf = null;
+
+        resizer.addEventListener("mousedown", () => {
+            if (isMobileLayout()) return;
+
+            isDragging = true;
+            document.body.classList.add("is-resizing");
+        });
+
+        window.addEventListener("mouseup", () => {
+            if (!isDragging) return;
+
+            isDragging = false;
+            document.body.classList.remove("is-resizing");
+
+            const width = panelEl.getBoundingClientRect().width;
+            saveSetting(STORAGE_KEYS.panelWidth, width);
+
+                if (state.graph) {
+                    state.graph.resize?.();
+                    fitReadableNeighborhood(state.graph);
+                }
+        });
+
+        window.addEventListener("mousemove", (event) => {
+            if (!isDragging) return;
+
+            if (raf) cancelAnimationFrame(raf);
+
+            raf = requestAnimationFrame(() => {
+                if (isMobileLayout()) return;
+
+                const panelWidth = Math.max(320, Math.min(1000, window.innerWidth - event.clientX));
+                app.style.gridTemplateColumns = `minmax(360px, 1fr) 8px ${panelWidth}px`;
+
+                if (state.graph) {
+                    state.graph.resize?.();
+                }
+            });
+        });
+    }
+
+    function restorePanelWidth(state) {
+        const app = document.querySelector(".xana-app");
+        const savedWidth = loadSetting(STORAGE_KEYS.panelWidth, null);
+
+        if (!app || !savedWidth || isMobileLayout()) return;
+
+        const width = Math.max(320, Math.min(1000, Number(savedWidth)));
+        app.style.gridTemplateColumns = `minmax(360px, 1fr) 8px ${width}px`;
+
+        window.setTimeout(() => {
+            if (state.graph) {
+                state.graph.resize?.();
+                fitReadableNeighborhood(state.graph);
+            }
+        }, 50);
+    }
+
+    function fitReadableNeighborhood(cy) {
+        if (!cy) return;
+        if (typeof cy.fit === "function" && typeof cy.nodes === "function") {
+            const readableNodes = cy.nodes(".focused-node, .distance-1");
+            const target = readableNodes.length ? readableNodes : cy.nodes();
+            if (target.length) {
+                cy.fit(target, getFitPadding());
+            }
+            return;
+        }
+        if (typeof cy.fit === "function") {
+            cy.fit();
+        }
+    }
+
+    function updateUrl(nodeId, replace) {
+        if (!nodeId) return;
+
+        const node = window.__xanaAllNodes?.find((candidate) => candidate.id === nodeId);
+        const url = new URL(window.location.href);
+        url.pathname = nodeHref(node || { id: nodeId, type: "node" }, { allNodes: window.__xanaAllNodes || [] });
+        url.search = "";
+
+        if (replace) {
+            window.history.replaceState({ node: nodeId }, "", url);
+        } else {
+            window.history.pushState({ node: nodeId }, "", url);
+        }
+
+        notifyStudioNodeSelection(nodeId);
+    }
+
+    function notifyStudioNodeSelection(nodeId) {
+        if (!nodeId || window.parent === window) return;
+
+        window.parent.postMessage({
+            source: "xananode-preview",
+            type: "node-selected",
+            nodeId,
+            path: nodeHref(window.__xanaAllNodes?.find((node) => node.id === nodeId) || { id: nodeId, type: "node" }, { allNodes: window.__xanaAllNodes || [] }),
+            url: window.location.href
+        }, "*");
+    }
+
+    function nodeIdFromUrl(allNodes = []) {
+        const pathname = window.location.pathname.replace(/\/$/, "");
+        const protocolPath = pathname.replace(/^\//, "");
+        if (/^[a-z][a-z0-9_-]*(\.[a-z][a-z0-9_-]*)*:[a-z][a-z0-9_-]*\/.+/i.test(protocolPath)) {
+            return `${protocolPath}${window.location.hash || ""}`;
+        }
+        const match = pathname.match(/^\/node\/(.+)$/);
+        if (match) return decodeURIComponent(match[1]);
+        const matchingNode = allNodes.find((node) => normalizePath(node.url) === normalizePath(pathname));
+        if (matchingNode) return matchingNode.id;
+
+        const parts = pathname.replace(/^\//, "").split("/");
+        if (parts.length >= 2) {
+            try {
+                const candidateId = decodeURIComponent(parts.at(-1));
+                if (allNodes.some((node) => node.id === candidateId)) return candidateId;
+            } catch {
+                const candidateId = parts.at(-1);
+                if (allNodes.some((node) => node.id === candidateId)) return candidateId;
+            }
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        return params.get("node") || params.get("ref");
+    }
+
+    function getFitPadding() {
+        return isMobileLayout() ? 30 : 72;
+    }
+
+    function isMobileLayout() {
+        return window.matchMedia("(max-width: 900px)").matches;
+    }
+
+    function isExternalUrl(href) {
+        try {
+            const url = new URL(href, window.location.origin);
+            return url.origin !== window.location.origin;
+        } catch {
+            return false;
+        }
+    }
+
+    function normalizePath(path) {
+        try {
+            return new URL(path, window.location.origin).pathname.replace(/\/$/, "");
+        } catch {
+            return String(path || "").replace(/\/$/, "");
+        }
+    }
+
+    function nodeHref(nodeOrId, state = {}) {
+        const id = typeof nodeOrId === "string" ? nodeOrId : nodeOrId?.id;
+        if (!id) return "/";
+
+        const node = typeof nodeOrId === "string"
+            ? state.allNodes?.find((candidate) => candidate.id === nodeOrId)
+            : nodeOrId;
+
+        if (node?.url) return node.url;
+        const typeSegment = slugSegment(node?.type || "node");
+        return `/${typeSegment}/${encodeURIComponent(id)}/`;
+    }
+
+    function slugSegment(value) {
+        return String(value || "node")
+            .trim()
+            .toLowerCase()
+            .replace(/[^a-z0-9._-]+/g, "-")
+            .replace(/^-+|-+$/g, "") || "node";
+    }
+
+    function normalizeSearchText(value) {
+        return String(value || "")
+            .toLowerCase()
+            .normalize("NFKD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/[^\w\s.-]/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+    }
+
+    function tokenize(value) {
+        return normalizeSearchText(value)
+            .split(/\s+/)
+            .map((token) => token.trim())
+            .filter((token) => token.length >= 2);
+    }
+
+    function buildSearchPlan(value) {
+        const raw = String(value || "").trim();
+        const normalizedRaw = normalizeSearchText(raw);
+        const conversational = stripSearchLeadIn(normalizedRaw);
+        const rawTokens = tokenize(conversational);
+        const filteredTokens = rawTokens.filter((token) => !SEARCH_STOPWORDS.has(token));
+        const finalTokens = filteredTokens.length ? filteredTokens : rawTokens;
+        const normalized = finalTokens.join(" ").trim();
+
+        return {
+            raw,
+            normalized,
+            tokens: finalTokens,
+            display: normalized || normalizedRaw || raw
+        };
+    }
+
+    function stripSearchLeadIn(value) {
+        let next = String(value || "").trim();
+        const prefixes = [
+            /^who\s+is\s+/,
+            /^what\s+is\s+/,
+            /^what\s+are\s+/,
+            /^tell\s+me\s+about\s+/,
+            /^show\s+me\s+/,
+            /^find\s+/,
+            /^search\s+for\s+/,
+            /^i\s+want\s+to\s+know\s+about\s+/,
+            /^can\s+you\s+find\s+/,
+            /^where\s+is\s+/,
+            /^why\s+is\s+/,
+            /^how\s+does\s+/,
+            /^how\s+do\s+/,
+            /^give\s+me\s+/,
+            /^trace\s+/,
+            /^follow\s+/
+        ];
+
+        prefixes.forEach((pattern) => {
+            next = next.replace(pattern, "");
+        });
+
+        return next.trim();
+    }
+
+    const SEARCH_STOPWORDS = new Set([
+        "a", "an", "and", "are", "as", "at", "be", "by", "for", "from", "how",
+        "i", "in", "into", "is", "it", "me", "my", "of", "on", "or", "please",
+        "show", "tell", "that", "the", "their", "them", "this", "to", "want",
+        "was", "what", "when", "where", "which", "who", "why", "with", "you",
+        "your", "about", "find", "search", "trace", "follow", "explain"
+    ]);
+
+    function stripHtml(value) {
+        const div = document.createElement("div");
+        div.innerHTML = String(value || "");
+        return div.textContent || div.innerText || "";
+    }
+
+    function edgeId(edge, index) {
+        return `edge-${index}-${edge.source}-${edge.target}-${edge.type || "related"}-${edge.weight || 1}`;
+    }
+
+    function normalizeRelationshipType(type) {
+        const rawType = String(type || "").trim();
+        const canonicalType = RELATIONSHIP_TYPE_ALIASES[rawType] || rawType;
+
+        if (VALID_RELATIONSHIP_TYPES.has(canonicalType)) {
+            return canonicalType;
+        }
+
+        return "related_to";
+    }
+
+    function normalizeRelationshipEdge(edge) {
+        const normalizedType = normalizeRelationshipType(edge?.type);
+        const normalizedEdge = { ...edge, type: normalizedType };
+
+        if (normalizedType === "related_to" && edge?.type && edge.type !== "related_to") {
+            normalizedEdge.visibility = "background";
+
+            const weight = Number(edge.weight || 2);
+            normalizedEdge.weight = Number.isFinite(weight) ? Math.min(weight, 2) : 2;
+        }
+
+        return normalizedEdge;
+    }
+
+    function debounce(fn, delay) {
+        let timer = null;
+
+        return function (...args) {
+            window.clearTimeout(timer);
+            timer = window.setTimeout(() => fn.apply(this, args), delay);
+        };
+    }
+
+    function saveSetting(key, value) {
+        try {
+            localStorage.setItem(key, JSON.stringify(value));
+        } catch {
+            // Ignore storage failures.
+        }
+    }
+
+    function loadSetting(key, fallback) {
+        try {
+            const raw = localStorage.getItem(key);
+            return raw ? JSON.parse(raw) : fallback;
+        } catch {
+            return fallback;
+        }
+    }
+
+    function markInterfaceTourCompleted() {
+        saveSetting(STORAGE_KEYS.interfaceTourCompleted, true);
+        setCookie(COOKIE_KEYS.interfaceTourCompleted, "1", 365);
+    }
+
+    function hasCompletedInterfaceTour() {
+        return getCookie(COOKIE_KEYS.interfaceTourCompleted) === "1"
+            || loadSetting(STORAGE_KEYS.interfaceTourCompleted, false) === true;
+    }
+
+    function setCookie(name, value, days) {
+        try {
+            const maxAge = Math.max(1, Number(days) || 365) * 24 * 60 * 60;
+            document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}; Max-Age=${maxAge}; Path=/; SameSite=Lax`;
+        } catch {
+            // Ignore cookie failures.
+        }
+    }
+
+    function getCookie(name) {
+        try {
+            const encodedName = `${encodeURIComponent(name)}=`;
+            const parts = document.cookie ? document.cookie.split(";") : [];
+            for (const part of parts) {
+                const value = part.trim();
+                if (value.startsWith(encodedName)) {
+                    return decodeURIComponent(value.slice(encodedName.length));
+                }
+            }
+        } catch {
+            // Ignore cookie failures.
+        }
+        return "";
+    }
+
+    function loadDisplaySettings() {
+        const tourMode = loadSetting(STORAGE_KEYS.tourMode, DISPLAY_DEFAULTS.tourMode);
+        return {
+            colorTheme: loadSetting(STORAGE_KEYS.colorTheme, DISPLAY_DEFAULTS.colorTheme),
+            uiDensity: loadSetting(STORAGE_KEYS.uiDensity, DISPLAY_DEFAULTS.uiDensity),
+            readerFontScale: clampNumber(loadSetting(STORAGE_KEYS.readerFontScale, DISPLAY_DEFAULTS.readerFontScale), 85, 150, DISPLAY_DEFAULTS.readerFontScale),
+            graphAtmosphere: loadSetting(STORAGE_KEYS.graphAtmosphere, DISPLAY_DEFAULTS.graphAtmosphere),
+            tourMode,
+            ttsNarrator: tourMode === "narration" ? loadSetting(STORAGE_KEYS.ttsNarrator, DISPLAY_DEFAULTS.ttsNarrator) : false,
+            ttsVoice: loadSetting(STORAGE_KEYS.ttsVoice, DISPLAY_DEFAULTS.ttsVoice),
+            ttsRate: clampNumber(loadSetting(STORAGE_KEYS.ttsRate, DISPLAY_DEFAULTS.ttsRate), 0.65, 1.35, DISPLAY_DEFAULTS.ttsRate),
+            ttsPitch: clampNumber(loadSetting(STORAGE_KEYS.ttsPitch, DISPLAY_DEFAULTS.ttsPitch), 0.75, 1.35, DISPLAY_DEFAULTS.ttsPitch),
+            ttsDetail: loadSetting(STORAGE_KEYS.ttsDetail, DISPLAY_DEFAULTS.ttsDetail)
+        };
+    }
+
+    function clampNumber(value, min, max, fallback) {
+        const number = Number(value);
+        if (!Number.isFinite(number)) return fallback;
+        return Math.min(max, Math.max(min, number));
+    }
+
+    function applyDisplaySettings(settings) {
+        const resolved = { ...DISPLAY_DEFAULTS, ...(settings || {}) };
+        document.documentElement.dataset.xanaTheme = resolved.colorTheme;
+        document.documentElement.dataset.xanaDensity = resolved.uiDensity;
+        document.documentElement.dataset.xanaAtmosphere = resolved.graphAtmosphere;
+        graphEl.dataset.tourMode = resolved.tourMode;
+        document.documentElement.style.setProperty("--xana-reader-scale", `${clampNumber(resolved.readerFontScale, 85, 150, 100) / 100}`);
+    }
+
+    function updateDisplaySettingButtons(state) {
+        const settings = { ...DISPLAY_DEFAULTS, ...(state.displaySettings || {}) };
+        graphEl.querySelectorAll("[data-display-setting]").forEach((button) => {
+            const key = button.getAttribute("data-display-setting");
+            const value = button.getAttribute("data-value");
+            const active = settings[key] === value;
+            button.classList.toggle("active", active);
+            button.setAttribute("aria-pressed", active ? "true" : "false");
+        });
+    }
+
+    function clearSearchUi(state) {
+        const input = graphEl.querySelector("#xana-search-input");
+        const clearButton = graphEl.querySelector("[data-search-clear]");
+        const searchWrap = graphEl.querySelector(".xana-search-wrap");
+
+        state.searchQuery = "";
+        state.searchResults = [];
+        saveSetting(STORAGE_KEYS.searchQuery, "");
+        if (input) input.value = "";
+        if (clearButton) clearButton.hidden = true;
+        if (searchWrap) searchWrap.classList.remove("has-value");
+        renderSearchResults(state);
+    }
+
+    function closeTransientUi(state, options = {}) {
+        const settingsOverlay = graphEl.querySelector(".xana-settings");
+        const settingsToggle = graphEl.querySelector("[data-settings-toggle]");
+        const filterPanel = graphEl.querySelector(".xana-filter-popover");
+        const filterToggle = graphEl.querySelector("[data-filter-toggle]");
+        const toolsPanel = graphEl.querySelector(".xana-tools-popover");
+        const toolsToggle = graphEl.querySelector("[data-tools-toggle]");
+        const pathToggle = graphEl.querySelector("[data-path-open]");
+        const pathStage = graphEl.querySelector("#xana-path-stage");
+        const stage = graphEl.querySelector("#xana-stage");
+
+        if (options.clearSearch) clearSearchUi(state);
+        if (settingsOverlay) settingsOverlay.hidden = true;
+        if (settingsToggle) settingsToggle.classList.remove("active");
+        if (filterPanel) filterPanel.hidden = true;
+        if (filterToggle) filterToggle.classList.remove("active");
+        if (toolsPanel) toolsPanel.hidden = true;
+        if (toolsToggle) toolsToggle.classList.remove("active");
+        pathToggle?.classList.remove("active");
+        pathToggle?.setAttribute("aria-expanded", "false");
+
+        if (state.pathExplorer) {
+            state.pathExplorer.active = false;
+            state.pathExplorer.results = [];
+            state.pathExplorer.summary = "";
+        }
+
+        if (pathStage) {
+            pathStage.hidden = true;
+            pathStage.innerHTML = "";
+        }
+        if (stage && !state.auditMode) stage.hidden = false;
+    }
+
+    function startSearchVerbRotation() {
+        const input = graphEl.querySelector("#xana-search-input");
+        const promptText = graphEl.querySelector("[data-search-prompt-text]");
+        if (!input || !promptText || input.dataset.verbRotation === "1") return;
+
+        input.dataset.verbRotation = "1";
+        let promptIndex = 0;
+        let charIndex = SEARCH_PROMPTS[0].length;
+        let direction = -1;
+        let pauseUntil = performance.now() + 1500;
+        window.setInterval(() => {
+            if (document.activeElement === input || input.value.trim()) return;
+
+            const now = performance.now();
+            if (now < pauseUntil) return;
+
+            const prompt = SEARCH_PROMPTS[promptIndex];
+            charIndex += direction;
+            const visiblePrompt = prompt.slice(0, Math.max(0, charIndex));
+            promptText.textContent = visiblePrompt;
+            input.setAttribute("aria-label", visiblePrompt || SEARCH_PROMPTS[promptIndex]);
+
+            if (charIndex <= 0) {
+                direction = 1;
+                promptIndex = (promptIndex + 1) % SEARCH_PROMPTS.length;
+                pauseUntil = now + 260;
+            } else if (charIndex >= SEARCH_PROMPTS[promptIndex].length) {
+                direction = -1;
+                pauseUntil = now + 1600;
+            }
+        }, 48);
+    }
+
+    function escapeHtml(value) {
+        return String(value ?? "")
+            .replaceAll("&", "&amp;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;")
+            .replaceAll('"', "&quot;")
+            .replaceAll("'", "&#039;");
+    }
+
+    function buildTypeColorMap(nodeTypesData) {
+        const map = new Map();
+
+        if (nodeTypesData?.node_types) {
+            nodeTypesData.node_types.forEach((entry) => {
+                if (entry?.type && entry?.color) {
+                    map.set(entry.type, entry.color);
+                }
+            });
+        }
+
+        return map;
+    }
+
+    function buildRelationshipStyleMap(relationshipTypesData) {
+        const map = new Map();
+
+        if (relationshipTypesData?.relationship_types) {
+            relationshipTypesData.relationship_types.forEach((entry) => {
+                if (entry?.type) {
+                    map.set(entry.type, {
+                        color: entry.color || "#55d6be",
+                        inverse_color: entry.inverse_color || entry.color || "#9ae6db",
+                        line_style: entry.line_style || "solid",
+                        inverse_line_style: entry.inverse_line_style || entry.line_style || "dashed"
+                    });
+                }
+            });
+        }
+
+        return map;
+    }
+
+    function relationshipTypeStyle(state, type) {
+        return state?.relationshipTypeStyles?.get(type) || {
+            color: "#55d6be",
+            inverse_color: "#9ae6db",
+            line_style: "solid",
+            inverse_line_style: "dashed"
+        };
+    }
+
+    function mapRelationshipLineStyle(style) {
+        const clean = String(style || "solid").toLowerCase();
+        if (clean === "dashed" || clean === "dotted") return clean;
+        return "solid";
+    }
+
+    function getTypeColor(type, nodeTypeColors) {
+        const key = (type || "").toLowerCase();
+        if (document.documentElement.dataset.xanaTheme === "accessible") {
+            return ACCESSIBLE_TYPE_PALETTE[key] || ACCESSIBLE_TYPE_PALETTE.concept;
+        }
+        return nodeTypeColors.get(key) || TYPE_PALETTE[key] || TYPE_PALETTE.concept;
+    }
+
+    function nodeRoleTypes(node, nodeTypeColors) {
+        const values = [node?.type, ...(Array.isArray(node?.facets) ? node.facets : [])]
+            .filter(Boolean)
+            .map((value) => String(value).toLowerCase());
+        const known = values.filter((value) => nodeTypeColors.has(value) || TYPE_PALETTE[value] || ACCESSIBLE_TYPE_PALETTE[value]);
+        return [...new Set(known)].slice(0, 6);
+    }
+
+    function nodeVisualData(node, nodeTypeColors) {
+        const roles = nodeRoleTypes(node, nodeTypeColors);
+        const primary = getTypeColor(node?.type, nodeTypeColors);
+        const mixed = roles.length > 1;
+        const base = {
+            primaryColor: primary.bg || "#55d6be",
+            labelColor: primary.fg || "#f8fafc",
+            textOutlineColor: primary.outline || primary.bg || "#05070a",
+            roleSummary: roles.map(humanLabel).join(", "),
+            hasMixedRoles: mixed,
+            pie1Color: primary.bg || "#55d6be",
+            pie1Size: 100,
+            pie2Color: primary.bg || "#55d6be",
+            pie2Size: 0,
+            pie3Color: primary.bg || "#55d6be",
+            pie3Size: 0,
+            pie4Color: primary.bg || "#55d6be",
+            pie4Size: 0,
+            pie5Color: primary.bg || "#55d6be",
+            pie5Size: 0,
+            pie6Color: primary.bg || "#55d6be",
+            pie6Size: 0
+        };
+
+        if (!mixed) return base;
+
+        const size = Math.floor(100 / roles.length);
+        const remainder = 100 - (size * roles.length);
+        roles.forEach((role, index) => {
+            const colors = getTypeColor(role, nodeTypeColors);
+            const slot = index + 1;
+            base[`pie${slot}Color`] = colors.bg || base.primaryColor;
+            base[`pie${slot}Size`] = size + (index === 0 ? remainder : 0);
+        });
+        return base;
+    }
+
+    function nodeTypeStyle(type, nodeTypeColors, overrides = {}) {
+        const colors = getTypeColor(type, nodeTypeColors);
+
+        return {
+            "background-color": colors.bg,
+            color: colors.fg || "#f8fafc",
+            "text-outline-color": colors.outline || colors.bg,
+            ...overrides
+        };
+    }
+
+    function getCyStyle(nodeTypeColors, relationshipTypeStyles = new Map()) {
+        return [
+            {
+                selector: "node",
+                style: {
+                    label: "data(title)",
+                    "text-wrap": "wrap",
+                    "text-max-width": 88,
+                    "text-valign": "center",
+                    "text-halign": "center",
+                    color: "#f8fafc",
+                    "font-family": "IBM Plex Sans, Segoe UI, sans-serif",
+                    "font-size": 14,
+                    "font-weight": 800,
+                    "text-outline-width": 4,
+                    "text-outline-color": "#05070a",
+                    "text-background-color": "#05070a",
+                    "text-background-opacity": 0.72,
+                    "text-background-padding": 4,
+                    "text-background-shape": "roundrectangle",
+                    "background-color": "data(primaryColor)",
+                    "border-width": 3,
+                    "border-color": "data(textOutlineColor)",
+                    width: 92,
+                    height: 92
+                }
+            },
+            {
+                selector: ".multi-role",
+                style: {
+                    "pie-size": "92%",
+                    "pie-1-background-color": "data(pie1Color)",
+                    "pie-1-background-size": "data(pie1Size)",
+                    "pie-2-background-color": "data(pie2Color)",
+                    "pie-2-background-size": "data(pie2Size)",
+                    "pie-3-background-color": "data(pie3Color)",
+                    "pie-3-background-size": "data(pie3Size)",
+                    "pie-4-background-color": "data(pie4Color)",
+                    "pie-4-background-size": "data(pie4Size)",
+                    "pie-5-background-color": "data(pie5Color)",
+                    "pie-5-background-size": "data(pie5Size)",
+                    "pie-6-background-color": "data(pie6Color)",
+                    "pie-6-background-size": "data(pie6Size)",
+                    "border-width": 5
+                }
+            },
+            {
+                selector: ".has-image",
+                style: {
+                    shape: "round-rectangle",
+                    "background-color": "#111827",
+                    "background-image": "data(image)",
+                    "background-fit": "contain",
+                    "background-clip": "node",
+                    "background-repeat": "no-repeat",
+                    "background-position-x": "50%",
+                    "background-position-y": "50%",
+                    "background-opacity": 1,
+                    "border-color": "#55d6be",
+                    "border-width": 4,
+                    "text-valign": "bottom",
+                    "text-margin-y": 8,
+                    "text-background-shape": "roundrectangle"
+                }
+            },
+            {
+                selector: ".has-image.image-contain",
+                style: {
+                    "background-fit": "contain",
+                    "background-position-x": "50%",
+                    "background-position-y": "50%"
+                }
+            },
+            {
+                selector: ".focused-node",
+                style: {
+                    width: 160,
+                    height: 160,
+                    "font-size": 19,
+                    "text-max-width": 170,
+                    "text-outline-width": 5,
+                    "text-background-opacity": 0.82,
+                    "text-background-padding": 5,
+                    "border-width": 8,
+                    "border-color": "#ffffff",
+                    "z-index": 999
+                }
+            },
+            {
+                selector: ".distance-1",
+                style: {
+                    width: 118,
+                    height: 118,
+                    "font-size": 15,
+                    "text-max-width": 128,
+                    "text-outline-width": 4,
+                    "text-background-opacity": 0.76,
+                    opacity: 0.95,
+                    "z-index": 500
+                }
+            },
+            {
+                selector: ".distance-2",
+                style: {
+                    width: 78,
+                    height: 78,
+                    "font-size": 12,
+                    "text-max-width": 96,
+                    "text-outline-width": 3,
+                    "text-background-opacity": 0.58,
+                    opacity: 0.62,
+                    "z-index": 100
+                }
+            },
+            {
+                selector: ".distance-3",
+                style: {
+                    width: 52,
+                    height: 52,
+                    "font-size": 10,
+                    "text-max-width": 80,
+                    "text-outline-width": 3,
+                    "text-background-opacity": 0.42,
+                    opacity: 0.32,
+                    "z-index": 10
+                }
+            },
+            {
+                selector: ".distance-4",
+                style: {
+                    width: 38,
+                    height: 38,
+                    "font-size": 9,
+                    "text-max-width": 70,
+                    "text-outline-width": 2,
+                    "text-background-opacity": 0.28,
+                    opacity: 0.18,
+                    "z-index": 1
+                }
+            },
+            {
+                selector: ".search-match",
+                style: {
+                    "border-color": "#ffd166",
+                    "border-width": 7
+                }
+            },
+            {
+                selector: ".essay",
+                style: nodeTypeStyle("essay", nodeTypeColors)
+            },
+            {
+                selector: ".concept",
+                style: nodeTypeStyle("concept", nodeTypeColors)
+            },
+            {
+                selector: ".source",
+                style: nodeTypeStyle("source", nodeTypeColors, {
+                    shape: "ellipse",
+                    width: 78,
+                    height: 78,
+                    "text-valign": "bottom",
+                    "text-margin-y": 9,
+                    "text-max-width": 132,
+                    "text-background-color": "#05070a",
+                    "text-background-opacity": 0.84,
+                    "text-background-padding": 3,
+                    "text-background-shape": "roundrectangle"
+                })
+            },
+            {
+                selector: ".person",
+                style: nodeTypeStyle("person", nodeTypeColors)
+            },
+            {
+                selector: ".observation",
+                style: nodeTypeStyle("observation", nodeTypeColors)
+            },
+            {
+                selector: ".trail",
+                style: nodeTypeStyle("trail", nodeTypeColors)
+            },
+            {
+                selector: ".project",
+                style: nodeTypeStyle("project", nodeTypeColors)
+            },
+            {
+                selector: ".artifact",
+                style: nodeTypeStyle("artifact", nodeTypeColors)
+            },
+            {
+                selector: ".organization",
+                style: nodeTypeStyle("organization", nodeTypeColors, {
+                    shape: "round-rectangle",
+                    width: 130,
+                    height: 72,
+                    "text-max-width": 190
+                })
+            },
+            {
+                selector: ".media",
+                style: nodeTypeStyle("media", nodeTypeColors, {
+                    "border-color": "#55d6be"
+                })
+            },
+            {
+                selector: ".media.has-image",
+                style: {
+                    "background-color": "#111827",
+                    "border-color": "#55d6be"
+                }
+            },
+            {
+                selector: ".focused-node.has-image",
+                style: {
+                    width: 118,
+                    height: 118,
+                    opacity: 1
+                }
+            },
+            {
+                selector: ".distance-1.has-image",
+                style: {
+                    width: 118,
+                    height: 118,
+                    opacity: 1
+                }
+            },
+            {
+                selector: ".distance-2.has-image",
+                style: {
+                    width: 118,
+                    height: 118,
+                    opacity: 0.92
+                }
+            },
+            {
+                selector: ".distance-3.has-image",
+                style: {
+                    width: 118,
+                    height: 118,
+                    opacity: 0.82
+                }
+            },
+            {
+                selector: ".distance-4.has-image",
+                style: {
+                    width: 84,
+                    height: 84,
+                    opacity: 0.46
+                }
+            },
+            {
+                selector: "edge",
+                style: {
+                    width: "mapData(weight, 1, 5, 1, 5)",
+                    "line-color": "data(color)",
+                    "target-arrow-color": "data(color)",
+                    "line-style": "data(lineStyle)",
+                    "target-arrow-shape": "triangle",
+                    "curve-style": "bezier",
+                    label: "data(label)",
+                    "font-family": "IBM Plex Sans, Segoe UI, sans-serif",
+                    "font-size": 11,
+                    "font-weight": 600,
+                    color: "#e2e8f0",
+                    "text-outline-width": 3,
+                    "text-outline-color": "#05070a",
+                    opacity: 0.62
+                }
+            },
+            {
+                selector: ".focus-edge",
+                style: {
+                    width: "mapData(weight, 1, 5, 3, 7)",
+                    opacity: 0.95,
+                    "line-color": "data(color)",
+                    "target-arrow-color": "data(color)",
+                    "line-style": "data(lineStyle)",
+                    "font-size": 13,
+                    "font-weight": 700,
+                    color: "#f0fdfa",
+                    "text-outline-width": 3,
+                    "text-outline-color": "#05070a"
+                }
+            },
+            {
+                selector: ".mist-edge",
+                style: {
+                    opacity: 0.08,
+                    label: ""
+                }
+            },
+            {
+                selector: ".travel-dim",
+                style: {
+                    opacity: 0.08
+                }
+            },
+            {
+                selector: ".travel-origin",
+                style: {
+                    opacity: 1,
+                    "border-color": "#ffd166",
+                    "border-width": 7,
+                    "z-index": 900
+                }
+            },
+            {
+                selector: ".travel-destination",
+                style: {
+                    opacity: 1,
+                    "border-color": "#ffffff",
+                    "border-width": 9,
+                    "z-index": 999
+                }
+            },
+            {
+                selector: ".travel-path",
+                style: {
+                    opacity: 1,
+                    width: 7,
+                    "line-color": "#ffd166",
+                    "target-arrow-color": "#ffd166",
+                    "z-index": 950
+                }
+            },
+            {
+                selector: ".pre-exit",
+                style: {
+                    opacity: 0.02
+                }
+            },
+            {
+                selector: ".claim",
+                style: nodeTypeStyle("claim", nodeTypeColors, {
+                    shape: "round-rectangle",
+                    width: 155,
+                    height: 68,
+                    "text-max-width": 218
+                })
+            },
+            // Compound overrides — claim dimensions per distance (placed after distance rules so they win)
+            {
+                selector: ".focused-node.claim",
+                style: { width: 260, height: 110, "text-max-width": 300, "font-size": 16 }
+            },
+            {
+                selector: ".distance-1.claim",
+                style: { width: 175, height: 76 }
+            },
+            {
+                selector: ".distance-2.claim",
+                style: { width: 115, height: 50 }
+            },
+            {
+                selector: ".distance-3.claim",
+                style: { width: 75, height: 32 }
+            },
+            {
+                selector: ".distance-4.claim",
+                style: { width: 54, height: 26 }
+            },
+            // Source nodes stay compact; labels live outside the marker so
+            // repositories and web sources do not read as banner ads.
+            {
+                selector: ".focused-node.source",
+                style: { width: 112, height: 112, "text-max-width": 160, "font-size": 15, "text-margin-y": 10 }
+            },
+            {
+                selector: ".distance-1.source",
+                style: { width: 86, height: 86, "text-max-width": 130, "font-size": 13, "text-margin-y": 8 }
+            },
+            {
+                selector: ".distance-2.source",
+                style: { width: 64, height: 64, "text-max-width": 112, "font-size": 11, "text-margin-y": 7 }
+            },
+            {
+                selector: ".distance-3.source",
+                style: { width: 48, height: 48, "text-max-width": 96, "font-size": 10, "text-margin-y": 6 }
+            },
+            {
+                selector: ".distance-4.source",
+                style: { width: 36, height: 36, "text-max-width": 82, "font-size": 9, "text-margin-y": 5 }
+            },
+            // Organization nodes remain compact labels, but are larger than
+            // simple sources because they often name institutions.
+            {
+                selector: ".focused-node.organization",
+                style: { width: 220, height: 96, "text-max-width": 270, "font-size": 16 }
+            },
+            {
+                selector: ".distance-1.organization",
+                style: { width: 150, height: 82 }
+            },
+            {
+                selector: ".distance-2.organization",
+                style: { width: 98, height: 54 }
+            },
+            {
+                selector: ".distance-3.organization",
+                style: { width: 64, height: 34 }
+            },
+            {
+                selector: ".distance-4.organization",
+                style: { width: 52, height: 30 }
+            },
+            {
+                selector: ".event",
+                style: nodeTypeStyle("event", nodeTypeColors)
+            },
+            {
+                selector: ".place",
+                style: nodeTypeStyle("place", nodeTypeColors)
+            },
+            {
+                selector: ".technology",
+                style: nodeTypeStyle("technology", nodeTypeColors)
+            },
+            {
+                selector: ".publication",
+                style: nodeTypeStyle("publication", nodeTypeColors)
+            },
+            {
+                selector: ".community",
+                style: nodeTypeStyle("community", nodeTypeColors)
+            },
+            {
+                selector: ".relationship",
+                style: nodeTypeStyle("relationship", nodeTypeColors)
+            },
+            {
+                selector: ".revision",
+                style: nodeTypeStyle("revision", nodeTypeColors)
+            },
+            {
+                selector: ".schema",
+                style: {
+                    "background-color": "#e2e8f0",
+                    color: "#0a0f1a",
+                    "text-outline-color": "#ffffff"
+                }
+            },
+            {
+                selector: ".schema-violation",
+                style: {
+                    "border-color": "#ff6b6b",
+                    "border-width": 5,
+                    "border-style": "dashed"
+                }
+            }
+        ];
+    }
+})();

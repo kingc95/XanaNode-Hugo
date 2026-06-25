@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-sources-xanadu-document-interconnection",
+  "title": "ExampleSite / Content / Sources / Xanadu Document Interconnection",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/sources/xanadu-document-interconnection.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/sources/xanadu-document-interconnection.md",
+  "artifact_path": "exampleSite/content/sources/xanadu-document-interconnection.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/sources/xanadu-document-interconnection.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:b9e6532690fabd0b512c2180aef7d9267eb70bce4f0c5fd58ce575424cc4a92d",
+  "content": "---\ntitle: \"Xanadu: Document Interconnection Enabling Re-use\"\ntype: \"source\"\nimportance: 5\nauthor: \"Ted Nelson\"\nyear: \"1994\"\nsummary: \"A paper describing Xanadu concepts including reusable media, visible interconnection, and transclusion.\"\nsource_url: \"https://www.xanadu.net/\"\nrights_status: \"copyrighted\"\nfragments:\n  - id: \"0001\"\n    title: \"Reusable Media Fragment\"\n    summary: \"Nelson's work as a source layer for transclusion, reusable media, and visible interconnection.\"\n    text: \"Nelson's work provides a key source layer for transclusion, reusable media, and visible interconnection.\"\n    selector:\n      type: \"semantic-anchor\"\n      value: \"reusable-media-visible-interconnection\"\nrelationships:\n  - type: \"documents\"\n    target: \"project-xanadu\"\n  - type: \"defines\"\n    target: \"transclusion\"\n  - type: \"supports\"\n    target: \"claim-relationships-preserve-context\"\n---\n\nNelson's work provides a key source layer for [transclusion](/node/transclusion), reusable media, and visible interconnection.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/sources/xanadu-document-interconnection.md",
+    "method": "archive",
+    "content_id": "sha256:b9e6532690fabd0b512c2180aef7d9267eb70bce4f0c5fd58ce575424cc4a92d",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

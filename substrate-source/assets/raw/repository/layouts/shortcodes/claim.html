@@ -1,0 +1,4 @@
+<aside class="claim"{{ with .Get "id" }} id="{{ . }}"{{ end }}>
+  <div class="claim-label">Claim</div>
+  <div>{{ .Inner | markdownify }}</div>
+</aside>

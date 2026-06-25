@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-essays-index",
+  "title": "ExampleSite / Content / Essays /  Index",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/essays/_index.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/essays/_index.md",
+  "artifact_path": "exampleSite/content/essays/_index.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/essays/_index.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:1d3b9befea6ec5b444cd7971dd98ca7859c2f12a431e488d7c49fdfbf050cfc1",
+  "content": "---\ntitle: \"Essays\"\n---\n\nLong-form arguments that connect claims, concepts, sources, and trails.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/essays/_index.md",
+    "method": "archive",
+    "content_id": "sha256:1d3b9befea6ec5b444cd7971dd98ca7859c2f12a431e488d7c49fdfbf050cfc1",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

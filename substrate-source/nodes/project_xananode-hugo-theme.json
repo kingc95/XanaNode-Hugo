@@ -1,0 +1,12 @@
+{
+  "id": "xananode.hugo:project/xananode-hugo-theme",
+  "title": "XanaNode Hugo Theme",
+  "type": "project",
+  "subtype": "projection_layer",
+  "importance": 5,
+  "summary": "The Hugo-based projection layer that renders XanaNode substrates as readable pages, protocol artifacts, and a navigable graph.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo",
+  "repository": "kingc95/XanaNode-Hugo",
+  "software_version": "0.1.0",
+  "relationships": []
+}

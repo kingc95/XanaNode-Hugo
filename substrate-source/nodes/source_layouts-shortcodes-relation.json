@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-layouts-shortcodes-relation",
+  "title": "Layouts / Shortcodes / Relation",
+  "type": "source",
+  "subtype": "reference_code",
+  "importance": 4,
+  "summary": "layouts/shortcodes/relation.html is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/layouts/shortcodes/relation.html",
+  "artifact_path": "layouts/shortcodes/relation.html",
+  "asset_path": "assets/raw/repository/layouts/shortcodes/relation.html",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/html",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:d47569927a9d2998bc9b319348e09b58d4cfd8778f91e358edc30532fdbb5a54",
+  "content": "{{ $type := .Get \"type\" }}\n{{ $targetID := .Get \"target\" }}\n{{ $target := partial \"find-page-by-id.html\" $targetID }}\n<span class=\"inline-relation\"><span class=\"relation-type\">{{ $type }}</span>{{ if $target }}<a href=\"{{ $target.RelPermalink }}\">{{ $target.Title }}</a>{{ else }}{{ $targetID }}{{ end }}</span>\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/layouts/shortcodes/relation.html",
+    "method": "archive",
+    "content_id": "sha256:d47569927a9d2998bc9b319348e09b58d4cfd8778f91e358edc30532fdbb5a54",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

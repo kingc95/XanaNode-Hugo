@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-concepts-index",
+  "title": "ExampleSite / Content / Concepts /  Index",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/concepts/_index.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/_index.md",
+  "artifact_path": "exampleSite/content/concepts/_index.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/concepts/_index.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:526970314250980d3773941c948de644b54e280efe454d5b5ddb45df50614479",
+  "content": "---\ntitle: \"Concepts\"\n---\n\nCore ideas used by this XanaNode example substrate.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/_index.md",
+    "method": "archive",
+    "content_id": "sha256:526970314250980d3773941c948de644b54e280efe454d5b5ddb45df50614479",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

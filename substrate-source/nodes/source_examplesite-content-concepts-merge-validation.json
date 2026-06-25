@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-concepts-merge-validation",
+  "title": "ExampleSite / Content / Concepts / Merge Validation",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/concepts/merge-validation.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/merge-validation.md",
+  "artifact_path": "exampleSite/content/concepts/merge-validation.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/concepts/merge-validation.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:61a7be943dc273d65ae94ea30fe3886db83b43d658e42a4521cb16c044464856",
+  "content": "---\ntitle: \"Merge Validation\"\ntype: \"concept\"\nimportance: 5\nsummary: \"The process of safely combining or comparing substrates without destroying authorship, provenance, disagreement, or local moderation.\"\nrelationships:\n  - type: \"requires\"\n    target: \"namespacing\"\n  - type: \"requires\"\n    target: \"provenance\"\n  - type: \"requires\"\n    target: \"schema-extension\"\n  - type: \"uses\"\n    target: \"merge-report\"\n  - type: \"uses\"\n    target: \"compatibility-report\"\n  - type: \"arrives_at\"\n    target: \"claim-merge-without-collapse\"\n---\n\nMerge validation is not deduplication.\n\nA merge-safe system does not automatically collapse two nodes with similar titles into one truth. It compares identity, [provenance](/node/provenance), source lineage, schema compatibility, and relationship meaning.\n\nThe goal is to preserve both substrates while making their overlaps and differences navigable.\n\nCompatibility reports explain whether two substrates can be compared safely. Merge reports preserve the proposed mappings, conflicts, unresolved issues, and identity decisions produced by that comparison.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/merge-validation.md",
+    "method": "archive",
+    "content_id": "sha256:61a7be943dc273d65ae94ea30fe3886db83b43d658e42a4521cb16c044464856",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

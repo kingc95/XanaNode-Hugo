@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-examplesite-content-concepts-federation-example",
+  "title": "ExampleSite / Content / Concepts / Federation Example",
+  "type": "source",
+  "subtype": "example_substrate_projection",
+  "importance": 4,
+  "summary": "exampleSite/content/concepts/federation-example.md is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/federation-example.md",
+  "artifact_path": "exampleSite/content/concepts/federation-example.md",
+  "asset_path": "assets/raw/repository/exampleSite/content/concepts/federation-example.md",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:dbd62c847a8f954eef3f6676d6e5df2d70d52a89d6ac48291be8b8c0bfdd77f3",
+  "content": "---\ntitle: \"Federation Example\"\ntype: \"concept\"\nimportance: 5\nsummary: \"A protocol example showing two independently authored substrates being compared through compatibility and merge reports.\"\nrelationships:\n  - type: \"demonstrates\"\n    target: \"federated-knowledge-substrates\"\n  - type: \"uses\"\n    target: \"compatibility-report\"\n  - type: \"uses\"\n    target: \"merge-report\"\n  - type: \"preserves\"\n    target: \"independent-moderation\"\n---\n\nThe canonical federation example makes the protocol concrete.\n\nIt compares two independently authored substrates: one models a [knowledge substrate](/node/knowledge-substrate), the other models a memory substrate. Each keeps its own namespace and local records.\n\nThe [compatibility report](/node/compatibility-report) records how much interoperability is safe. The [merge report](/node/merge-report) records mappings and the decision not to collapse overlapping concepts into one forced truth.\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-25T14:22:34.827Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/federation-example.md",
+    "method": "archive",
+    "content_id": "sha256:dbd62c847a8f954eef3f6676d6e5df2d70d52a89d6ac48291be8b8c0bfdd77f3",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}
