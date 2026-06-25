@@ -15,7 +15,7 @@
   "content_id": "sha256:ae447bca5c94715bbb6fc54c90049bbd1bbdf41a9581676194aef418ef67f44d",
   "content": "{{ $id := cond (reflect.IsMap .) .id . }}\n{{ $found := false }}\n{{ range site.RegularPages }}\n  {{ $nodeID := .Params.node_id | default .File.ContentBaseName }}\n  {{ if or (eq .File.ContentBaseName $id) (eq $nodeID $id) }}\n    {{ $found = . }}\n  {{ end }}\n{{ end }}\n{{ return $found }}\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:22:34.827Z",
+    "captured_at": "2026-06-25T14:24:42.948Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/layouts/partials/find-page-by-id.html",
     "method": "archive",
     "content_id": "sha256:ae447bca5c94715bbb6fc54c90049bbd1bbdf41a9581676194aef418ef67f44d",

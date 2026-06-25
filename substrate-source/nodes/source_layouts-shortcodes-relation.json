@@ -15,7 +15,7 @@
   "content_id": "sha256:d47569927a9d2998bc9b319348e09b58d4cfd8778f91e358edc30532fdbb5a54",
   "content": "{{ $type := .Get \"type\" }}\n{{ $targetID := .Get \"target\" }}\n{{ $target := partial \"find-page-by-id.html\" $targetID }}\n<span class=\"inline-relation\"><span class=\"relation-type\">{{ $type }}</span>{{ if $target }}<a href=\"{{ $target.RelPermalink }}\">{{ $target.Title }}</a>{{ else }}{{ $targetID }}{{ end }}</span>\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:22:34.827Z",
+    "captured_at": "2026-06-25T14:24:42.948Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/layouts/shortcodes/relation.html",
     "method": "archive",
     "content_id": "sha256:d47569927a9d2998bc9b319348e09b58d4cfd8778f91e358edc30532fdbb5a54",

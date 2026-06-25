@@ -15,7 +15,7 @@
   "content_id": "sha256:4d6de208709cf7177ec942c1711a893388b2d52770c4067d08cdabb5fce3b1e1",
   "content": "---\ntitle: \"As We May Think\"\ntype: \"source\"\nimportance: 5\nauthor: \"Vannevar Bush\"\nyear: \"1945\"\nsummary: \"Bush's essay proposing associative trails and the Memex as responses to information overload.\"\nsource_url: \"https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/\"\nrights_status: \"copyrighted\"\nfragments:\n  - id: \"0004\"\n    title: \"Associative Trails Fragment\"\n    summary: \"Bush's argument that knowledge systems need associative navigation and recall.\"\n    text: \"Bush argued that the growing record of knowledge required better associative methods for navigation and recall.\"\n    selector:\n      type: \"semantic-anchor\"\n      value: \"associative-trails-discussion\"\nrelationships:\n  - type: \"documents\"\n    target: \"memex\"\n  - type: \"supports\"\n    target: \"claim-substrate-is-structure\"\n---\n\nBush argued that the growing record of knowledge required better associative methods for navigation and recall.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:22:34.827Z",
+    "captured_at": "2026-06-25T14:24:42.948Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/sources/as-we-may-think.md",
     "method": "archive",
     "content_id": "sha256:4d6de208709cf7177ec942c1711a893388b2d52770c4067d08cdabb5fce3b1e1",

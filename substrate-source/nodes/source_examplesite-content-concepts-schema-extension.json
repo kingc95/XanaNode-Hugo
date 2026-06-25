@@ -15,7 +15,7 @@
   "content_id": "sha256:2be8da2d5fd8fc41224be850854379f00b5f37619d1e17636a8426bd9b8daf3f",
   "content": "---\r\ntitle: \"Schema Extension\"\r\ntype: \"concept\"\r\nimportance: 4\r\nsummary: \"The ability for a substrate to add custom node or relationship types while remaining compatible with XanaNode Core.\"\r\nrelationships:\r\n  - type: \"enabled_by\"\r\n    target: \"namespacing\"\r\n  - type: \"requires\"\r\n    target: \"xananode-core-schema\"\r\n  - type: \"required_for\"\r\n    target: \"federated-knowledge-substrates\"\r\n---\r\n\r\n[XanaNode](/node/xananode) Core is intentionally shared, but it is not the only vocabulary a substrate can use.\r\n\r\nThe core schema provides shared interoperability. Extension schemas allow local domains to define additional meanings without breaking the whole system.\r\n\r\nA custom type is valid when it is namespaced, described, versioned, machine-readable, and preserved even by tools that do not understand it.\r\n\r\nThe [custom extension substrate](/node/custom-extension-substrate) example shows this in practice: a local domain can define additional types while still publishing the core manifest, node, relationship, and schema files expected by [XanaNode](xananode.canonical:concept/xananode) tools.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:22:34.827Z",
+    "captured_at": "2026-06-25T14:24:42.948Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/schema-extension.md",
     "method": "archive",
     "content_id": "sha256:2be8da2d5fd8fc41224be850854379f00b5f37619d1e17636a8426bd9b8daf3f",

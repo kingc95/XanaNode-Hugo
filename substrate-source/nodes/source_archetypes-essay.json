@@ -15,7 +15,7 @@
   "content_id": "sha256:fc1fafaa7abd45b427728e99f62b63434fcd15bb9631bafb8131334fe8be6075",
   "content": "---\ntitle: \"{{ replace .Name \"-\" \" \" | title }}\"\ndate: {{ .Date }}\ntype: \"essay\"\nsummary: \"\"\nconcepts: []\npeople: []\nsources: []\nrelationships: []\n---\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:22:34.827Z",
+    "captured_at": "2026-06-25T14:24:42.948Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/archetypes/essay.md",
     "method": "archive",
     "content_id": "sha256:fc1fafaa7abd45b427728e99f62b63434fcd15bb9631bafb8131334fe8be6075",

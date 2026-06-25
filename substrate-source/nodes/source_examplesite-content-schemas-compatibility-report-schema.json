@@ -15,7 +15,7 @@
   "content_id": "sha256:d14cc40afbc9e07c91aba13390f021887f36c9ba178ff0d97f60a0fbfb52e214",
   "content": "---\ntitle: \"Compatibility Report Schema\"\ntype: \"schema\"\nimportance: 4\nsummary: \"The JSON Schema that validates compatibility reports between tools and substrates.\"\nversion: \"2020-12\"\nstatus: \"draft\"\nrelationships:\n  - type: \"defines\"\n    target: \"compatibility-report\"\n  - type: \"documents\"\n    target: \"compatibility-levels\"\n  - type: \"required_for\"\n    target: \"federation-example\"\n---\n\nThis schema validates reports about what one implementation can safely understand.\n\nThose reports let a tool say more than pass or fail. They record the achieved compatibility level, recognized schemas, unsupported extensions, warnings, and blocking issues.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:22:34.827Z",
+    "captured_at": "2026-06-25T14:24:42.948Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/schemas/compatibility-report-schema.md",
     "method": "archive",
     "content_id": "sha256:d14cc40afbc9e07c91aba13390f021887f36c9ba178ff0d97f60a0fbfb52e214",

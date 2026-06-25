@@ -15,7 +15,7 @@
   "content_id": "sha256:dbd62c847a8f954eef3f6676d6e5df2d70d52a89d6ac48291be8b8c0bfdd77f3",
   "content": "---\ntitle: \"Federation Example\"\ntype: \"concept\"\nimportance: 5\nsummary: \"A protocol example showing two independently authored substrates being compared through compatibility and merge reports.\"\nrelationships:\n  - type: \"demonstrates\"\n    target: \"federated-knowledge-substrates\"\n  - type: \"uses\"\n    target: \"compatibility-report\"\n  - type: \"uses\"\n    target: \"merge-report\"\n  - type: \"preserves\"\n    target: \"independent-moderation\"\n---\n\nThe canonical federation example makes the protocol concrete.\n\nIt compares two independently authored substrates: one models a [knowledge substrate](/node/knowledge-substrate), the other models a memory substrate. Each keeps its own namespace and local records.\n\nThe [compatibility report](/node/compatibility-report) records how much interoperability is safe. The [merge report](/node/merge-report) records mappings and the decision not to collapse overlapping concepts into one forced truth.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:22:34.827Z",
+    "captured_at": "2026-06-25T14:24:42.948Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/federation-example.md",
     "method": "archive",
     "content_id": "sha256:dbd62c847a8f954eef3f6676d6e5df2d70d52a89d6ac48291be8b8c0bfdd77f3",

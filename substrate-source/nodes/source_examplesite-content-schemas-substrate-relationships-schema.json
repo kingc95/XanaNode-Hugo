@@ -15,7 +15,7 @@
   "content_id": "sha256:f6f6baff8ac04c4facd4a1b687ed5244d54a0eadfa2046573432c0ce69e93fab",
   "content": "---\ntitle: \"Substrate Relationships Schema\"\ntype: \"schema\"\nimportance: 5\nsummary: \"The JSON Schema that validates the protocol relationship list for a substrate.\"\nversion: \"2020-12\"\nstatus: \"draft\"\nrelationships:\n  - type: \"defines\"\n    target: \"substrate-relationship-list\"\n  - type: \"uses\"\n    target: \"xananode-relationship-types\"\n  - type: \"part_of\"\n    target: \"xananode-core-schema\"\n---\n\nThis schema validates `relationships.json`.\n\nIt requires each relationship to have an id, source, target, type, and summary. Optional fields preserve weight, visibility, assertion [provenance](/node/provenance), confidence, evidence, tumbler address, external-target metadata, and federation metadata.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:22:34.827Z",
+    "captured_at": "2026-06-25T14:24:42.948Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/schemas/substrate-relationships-schema.md",
     "method": "archive",
     "content_id": "sha256:f6f6baff8ac04c4facd4a1b687ed5244d54a0eadfa2046573432c0ce69e93fab",

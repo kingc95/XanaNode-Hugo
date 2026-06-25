@@ -15,7 +15,7 @@
   "content_id": "sha256:61341632f03de1d94a139af5d3d104fa986140561cc6dc43e813a31838b301ab",
   "content": "---\ntitle: \"Ted Nelson\"\ntype: \"person\"\nimportance: 5\nsummary: \"Hypertext theorist and founder of Project Xanadu, associated with transclusion, visible interconnection, and nonsequential writing.\"\nrelationships:\n  - type: \"created\"\n    target: \"project-xanadu\"\n  - type: \"introduced\"\n    target: \"transclusion\"\n  - type: \"authored\"\n    target: \"xanadu-document-interconnection\"\n  - type: \"influenced\"\n    target: \"xananode\"\n---\n\nTed Nelson argued that documents were the wrong primitive and that systems should preserve reusable, visibly connected media.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:22:34.827Z",
+    "captured_at": "2026-06-25T14:24:42.948Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/people/ted-nelson.md",
     "method": "archive",
     "content_id": "sha256:61341632f03de1d94a139af5d3d104fa986140561cc6dc43e813a31838b301ab",

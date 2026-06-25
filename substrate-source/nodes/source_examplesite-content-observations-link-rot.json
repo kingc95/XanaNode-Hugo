@@ -15,7 +15,7 @@
   "content_id": "sha256:e0189c94db1369ad245c021ace4874280aabd562c644c75c2497edd060f5dc2d",
   "content": "---\ntitle: \"Link Rot\"\ntype: \"observation\"\nimportance: 4\nsummary: \"A failure mode where references embedded in digital artifacts decay, move, disappear, or lose context over time.\"\nrelationships:\n  - type: \"demonstrates\"\n    target: \"unlabeled-hyperlink\"\n  - type: \"threatens\"\n    target: \"provenance\"\n  - type: \"supported_by\"\n    target: \"source-code-link-decay-study\"\n  - type: \"explained_by\"\n    target: \"knowledge-substrate\"\n---\n\nLink rot shows why ordinary document-embedded references are fragile.\n\nThe target may disappear, move, change meaning, or lose its surrounding context.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:22:34.827Z",
+    "captured_at": "2026-06-25T14:24:42.948Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/observations/link-rot.md",
     "method": "archive",
     "content_id": "sha256:e0189c94db1369ad245c021ace4874280aabd562c644c75c2497edd060f5dc2d",

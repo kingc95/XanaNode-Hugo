@@ -15,7 +15,7 @@
   "content_id": "sha256:41ef33fe06afa5da11ff71a590008ccb766320cc90e06dc994929935d5207801",
   "content": "<aside class=\"claim\"{{ with .Get \"id\" }} id=\"{{ . }}\"{{ end }}>\n  <div class=\"claim-label\">Claim</div>\n  <div>{{ .Inner | markdownify }}</div>\n</aside>\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:22:34.827Z",
+    "captured_at": "2026-06-25T14:24:42.948Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/layouts/shortcodes/claim.html",
     "method": "archive",
     "content_id": "sha256:41ef33fe06afa5da11ff71a590008ccb766320cc90e06dc994929935d5207801",

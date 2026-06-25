@@ -15,7 +15,7 @@
   "content_id": "sha256:48e2f2983e8f0a604056129085e7090bda5390d15ca83bd2eb31477ae447bc12",
   "content": "---\r\ntitle: \"Namespace Registry\"\r\ntype: \"concept\"\r\nimportance: 4\r\nsummary: \"A registry of known namespace identifiers used to avoid collisions and help tools recognize who owns a substrate, schema, or extension vocabulary.\"\r\nrelationships:\r\n  - type: \"implements\"\r\n    target: \"namespacing\"\r\n  - type: \"required_for\"\r\n    target: \"schema-extension\"\r\n---\r\n\r\nThe [namespace registry](xananode.canonical:schema/namespace-registry) records known namespace ids and their owners.\r\n\r\nIt does not make every other namespace invalid. It helps tools distinguish recognized namespaces from private, experimental, or not-yet-registered ones while still preserving unknown data.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:22:34.827Z",
+    "captured_at": "2026-06-25T14:24:42.948Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/namespace-registry.md",
     "method": "archive",
     "content_id": "sha256:48e2f2983e8f0a604056129085e7090bda5390d15ca83bd2eb31477ae447bc12",

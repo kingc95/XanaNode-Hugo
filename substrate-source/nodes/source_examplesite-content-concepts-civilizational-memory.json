@@ -15,7 +15,7 @@
   "content_id": "sha256:123d790f6e008dbe895e5ae9b80a9d59d0c265046449cf5e23e22929310973b0",
   "content": "---\ntitle: \"Civilizational Memory\"\ntype: \"concept\"\nimportance: 5\nsummary: \"A long-term, federated memory layer where knowledge remains traceable, disputed, interoperable, and navigable across generations.\"\nrelationships:\n  - type: \"enabled_by\"\n    target: \"federated-knowledge-substrates\"\n  - type: \"requires\"\n    target: \"knowledge-substrate\"\n  - type: \"requires\"\n    target: \"provenance\"\n  - type: \"requires\"\n    target: \"merge-validation\"\n---\n\nCivilizational memory is the long-term horizon for [XanaNode](/node/xananode).\n\nIt is not one website, database, or moderation team. It is a network of independently authored substrates that preserve lineage, disagreement, evidence, and context while remaining interoperable.\n\nThe protocol pieces in this example are deliberately small, but they point at that larger pattern: locally owned knowledge that can still be compared, mapped, cited, and preserved across systems.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:22:34.827Z",
+    "captured_at": "2026-06-25T14:24:42.948Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/civilizational-memory.md",
     "method": "archive",
     "content_id": "sha256:123d790f6e008dbe895e5ae9b80a9d59d0c265046449cf5e23e22929310973b0",

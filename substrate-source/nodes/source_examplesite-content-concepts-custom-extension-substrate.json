@@ -15,7 +15,7 @@
   "content_id": "sha256:7dc8c11489a381a3ae316d7ac0a45d27633d39bae0db380a9349015204cf6a40",
   "content": "---\ntitle: \"Custom Extension Substrate\"\ntype: \"concept\"\nimportance: 4\nsummary: \"An example substrate that defines namespaced domain-specific node and relationship types while preserving compatibility with XanaNode Core.\"\nrelationships:\n  - type: \"demonstrates\"\n    target: \"schema-extension\"\n  - type: \"requires\"\n    target: \"namespace-registry\"\n  - type: \"uses\"\n    target: \"substrate-manifest\"\n  - type: \"features\"\n    target: \"canonical-type-policy\"\n---\n\nThe custom extension substrate example shows local vocabulary coexisting with [XanaNode](/node/xananode) Core.\n\nThe canonical example defines a museum namespace with a custom artifact node type and custom curatorial relationship types.\n\nTools that do not understand those custom types still preserve them as declared, namespaced, versioned extensions instead of discarding them.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:22:34.827Z",
+    "captured_at": "2026-06-25T14:24:42.948Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/custom-extension-substrate.md",
     "method": "archive",
     "content_id": "sha256:7dc8c11489a381a3ae316d7ac0a45d27633d39bae0db380a9349015204cf6a40",
