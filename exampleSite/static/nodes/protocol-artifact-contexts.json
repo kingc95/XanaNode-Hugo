@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_artifact_group",
   "importance": 3,
-  "summary": "Protocol files under contexts/ preserved inside the canonical substrate.",
+  "summary": "The linked-data context files published by the XanaNode protocol.",
   "artifact_path": "contexts/",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/contexts/",
   "relationships": [
@@ -21,7 +21,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/schema_protocol-artifact-contexts.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-contexts.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

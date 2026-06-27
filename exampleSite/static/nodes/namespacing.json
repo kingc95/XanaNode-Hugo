@@ -48,7 +48,7 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/canonical-type-policy-requires-namespacing-238",
+      "id": "xananode.example:rel/canonical-type-policy-requires-namespacing-234",
       "type": "requires",
       "source": "xananode.example:concept/canonical-type-policy",
       "direction": "incoming"

@@ -80,7 +80,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/schema_relationship-category-uncertainty.json",
+  "imported_from": "nodes/xananode.canonical_schema_relationship-category-uncertainty.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

@@ -37,7 +37,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/media_xananode-android-chrome-192.json",
+  "imported_from": "nodes/xananode.canonical_media_xananode-android-chrome-192.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

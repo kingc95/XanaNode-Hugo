@@ -11,7 +11,7 @@
   "source_url": "https://xananode.net/",
   "rights_status": "canonical-public",
   "relationships": [],
-  "imported_from": "nodes/source_xananode-net-domain.json",
+  "imported_from": "nodes/xananode.canonical_source_xananode-net-domain.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

@@ -32,7 +32,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/essay_what-is-xananode.json",
+  "imported_from": "nodes/xananode.canonical_essay_what-is-xananode.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

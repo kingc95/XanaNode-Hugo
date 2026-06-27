@@ -1,10 +1,10 @@
 {
   "id": "xananode.canonical:media/protocol-artifact-examples-minimal-substrate-assets-branding-xananode-icon.svg",
-  "title": "Examples / Minimal Substrate / Assets / Branding / Xananode Icon",
+  "title": "Examples / Minimal Substrate / Assets / Branding / XanaNode Icon Svg",
   "type": "media",
   "subtype": "protocol_media_asset",
   "importance": 3,
-  "summary": "examples/minimal-substrate/assets/branding/xananode-icon.svg is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "An example protocol artifact used by Examples / Minimal Substrate / Assets / Branding / XanaNode Icon Svg.",
   "artifact_path": "examples/minimal-substrate/assets/branding/xananode-icon.svg",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/assets/branding/xananode-icon.svg",
   "media_type": "image",
@@ -28,14 +28,14 @@
   "asset_path": "assets/raw/protocol/examples/minimal-substrate/assets/branding/xananode-icon.svg",
   "content_id": "sha256:d7b60a3f9a05156041dae523790d3465e7909a54425dfbeea3e112eace5f9c9a",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/assets/branding/xananode-icon.svg",
     "method": "archive",
     "content_id": "sha256:d7b60a3f9a05156041dae523790d3465e7909a54425dfbeea3e112eace5f9c9a",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/media_protocol-artifact-examples-minimal-substrate-assets-branding-xananode-icon.svg.json",
+  "imported_from": "nodes/xananode.canonical_media_protocol-artifact-examples-minimal-substrate-assets-branding-xananode-icon.svg.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

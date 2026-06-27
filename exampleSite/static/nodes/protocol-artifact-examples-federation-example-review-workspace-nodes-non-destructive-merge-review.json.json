@@ -1,0 +1,42 @@
+{
+  "id": "xananode.canonical:schema/protocol-artifact-examples-federation-example-review-workspace-nodes-non-destructive-merge-review.json",
+  "title": "Examples / Federation Example / Review Workspace / Nodes / Non Destructive Merge Review",
+  "type": "schema",
+  "subtype": "protocol_json_artifact",
+  "importance": 3,
+  "summary": "A node record from examples/federation-example/review-workspace.",
+  "artifact_path": "examples/federation-example/review-workspace/nodes/non-destructive-merge-review.json",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/federation-example/review-workspace/nodes/non-destructive-merge-review.json",
+  "media_type": "document",
+  "mime_type": "application/json",
+  "asset_role": "canonical_raw_source",
+  "rights_status": "Apache-2.0",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-review-workspace-nodes-non-destructive-merge-review.json-raw-file-examples-federation-example-review-workspace-nodes-non-destructive-merge-review.json",
+      "type": "contains",
+      "source": "xananode.canonical:schema/protocol-artifact-examples",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-federation-example-review-workspace-nodes-non-destructive-merge-review.json-documents-concept-protocol-artifacts-raw-file-docs-examples-federation-example-review-workspace-nodes-non-destructive-merge-review.json",
+      "type": "documents",
+      "target": "xananode.canonical:concept/protocol-artifacts",
+      "direction": "outgoing"
+    }
+  ],
+  "content": "{\n  \"id\": \"example.merge:concept/non-destructive-merge-review\",\n  \"title\": \"Non-Destructive Merge Review\",\n  \"type\": \"concept\",\n  \"importance\": 4,\n  \"summary\": \"A review state where overlapping nodes are mounted together, compared, and kept distinct until a human approves stronger identity claims.\",\n  \"relationships\": []\n}\n",
+  "asset_path": "assets/raw/protocol/examples/federation-example/review-workspace/nodes/non-destructive-merge-review.json",
+  "content_id": "sha256:8ba0ca1f2020b131895ff030638a5ed07e4ef111433cdce14c2e0a6687a4373a",
+  "source_snapshot": {
+    "captured_at": "2026-06-27T06:48:18.530Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/federation-example/review-workspace/nodes/non-destructive-merge-review.json",
+    "method": "archive",
+    "content_id": "sha256:8ba0ca1f2020b131895ff030638a5ed07e4ef111433cdce14c2e0a6687a4373a",
+    "rights_status": "Apache-2.0",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-examples-federation-example-review-workspace-nodes-non-destructive-merge-review.json.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

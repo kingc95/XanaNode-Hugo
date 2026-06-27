@@ -1,10 +1,10 @@
 {
   "id": "xananode.canonical:schema/protocol-artifact-schemas-ro-crate-metadata.schema.json",
-  "title": "Schemas / Ro Crate Metadata.Schema",
+  "title": "Schemas / RO-Crate Metadata Schema",
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 4,
-  "summary": "schemas/ro-crate-metadata.schema.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "The JSON Schema for the ro crate metadata.",
   "artifact_path": "schemas/ro-crate-metadata.schema.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/ro-crate-metadata.schema.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/schemas/ro-crate-metadata.schema.json",
   "content_id": "sha256:03fdce6d70b6263728eefba0e97bbea6b441e310a33760af0786ec44812465df",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/ro-crate-metadata.schema.json",
     "method": "archive",
     "content_id": "sha256:03fdce6d70b6263728eefba0e97bbea6b441e310a33760af0786ec44812465df",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-schemas-ro-crate-metadata.schema.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-schemas-ro-crate-metadata.schema.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

@@ -15,7 +15,7 @@
   "content_id": "sha256:4d6576bbbf60ef00fec63632455283638cbef1c88c29f81ecf54c1fa4c966d5c",
   "content": "---\r\ntitle: \"Hugo\"\r\ntype: \"technology\"\r\nimportance: 3\r\nsummary: \"A static site generator used to publish XanaNode substrates as public websites.\"\r\nrelationships:\r\n  - type: \"implements\"\r\n    target: \"static-publishing\"\r\n---\r\n\r\n[Hugo](xananode.canonical:technology/hugo) provides the [static publishing](/node/static-publishing) layer for [XanaNode](xananode) sites.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:24:42.948Z",
+    "captured_at": "2026-06-27T07:05:44.386Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/technologies/hugo.md",
     "method": "archive",
     "content_id": "sha256:4d6576bbbf60ef00fec63632455283638cbef1c88c29f81ecf54c1fa4c966d5c",

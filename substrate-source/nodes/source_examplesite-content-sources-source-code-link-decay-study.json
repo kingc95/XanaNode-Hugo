@@ -15,7 +15,7 @@
   "content_id": "sha256:ec99126455ab4fee9dc4caf34c1d431262979d94a4341a8dd0612939a28dde1e",
   "content": "---\ntitle: \"9.6 Million Links in Source Code Comments\"\ntype: \"source\"\nimportance: 4\nauthor: \"Hideaki Hata; Christoph Treude; Raula Gaikovina Kula; Takashi Ishio\"\nyear: \"2019\"\nsummary: \"A large-scale empirical study of link decay in source-code comments.\"\nsource_url: \"https://arxiv.org/abs/1901.07440\"\nrights_status: \"open-access\"\nrelationships:\n  - type: \"documents\"\n    target: \"link-rot\"\n  - type: \"supports\"\n    target: \"claim-relationships-preserve-context\"\n---\n\nThis source records empirical evidence that embedded references in digital artifacts can decay or lose context over time.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:24:42.948Z",
+    "captured_at": "2026-06-27T07:05:44.386Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/sources/source-code-link-decay-study.md",
     "method": "archive",
     "content_id": "sha256:ec99126455ab4fee9dc4caf34c1d431262979d94a4341a8dd0612939a28dde1e",

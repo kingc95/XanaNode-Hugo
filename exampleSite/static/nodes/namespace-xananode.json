@@ -22,7 +22,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/schema_namespace-xananode.json",
+  "imported_from": "nodes/xananode.canonical_schema_namespace-xananode.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

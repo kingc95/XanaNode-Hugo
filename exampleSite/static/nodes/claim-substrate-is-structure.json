@@ -19,7 +19,7 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-substrate-is-structure-239",
+      "id": "xananode.example:rel/xanadu-document-interconnection-supports-claim-substrate-is-structure-235",
       "type": "supports",
       "source": "xananode.example:source/xanadu-document-interconnection",
       "direction": "incoming"

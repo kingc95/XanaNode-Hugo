@@ -46,7 +46,7 @@
   "source_url": "https://www.apache.org/licenses/LICENSE-2.0",
   "rights_status": "external",
   "license": "Apache-2.0",
-  "imported_from": "nodes/source_apache-2-0-license.json",
+  "imported_from": "nodes/xananode.canonical_source_apache-2-0-license.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

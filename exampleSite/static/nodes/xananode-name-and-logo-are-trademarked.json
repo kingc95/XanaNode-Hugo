@@ -14,7 +14,7 @@
   "status": "asserted",
   "importance": 5,
   "summary": "The XanaNode name, logo, and related brand assets are governed as trademarks even when protocol docs and code are openly licensed.",
-  "imported_from": "nodes/claim_xananode-name-and-logo-are-trademarked.json",
+  "imported_from": "nodes/xananode.canonical_claim_xananode-name-and-logo-are-trademarked.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

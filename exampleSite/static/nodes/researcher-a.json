@@ -6,7 +6,7 @@
   "summary": "The local actor responsible for assertions in federation example substrate A.",
   "created_at": "2026-01-01T00:00:00Z",
   "relationships": [],
-  "imported_from": "nodes/person_researcher-a.json",
+  "imported_from": "nodes/example.researcher_a_person_researcher-a.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

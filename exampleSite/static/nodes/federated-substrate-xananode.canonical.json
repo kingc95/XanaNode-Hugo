@@ -49,7 +49,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/source_federated-substrate-xananode.canonical.json",
+  "imported_from": "nodes/xananode.canonical_source_federated-substrate-xananode.canonical.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

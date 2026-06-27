@@ -1,10 +1,10 @@
 {
   "id": "xananode.canonical:schema/protocol-artifact-schemas-xananode-property-registry.v0.1.0.json",
-  "title": "Schemas / Xananode Property Registry.V0.1.0",
+  "title": "Schemas / XanaNode Property Registry v0.1.0",
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 4,
-  "summary": "schemas/xananode-property-registry.v0.1.0.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A canonical schema or registry artifact published as XanaNode Property Registry v0.1.0.",
   "artifact_path": "schemas/xananode-property-registry.v0.1.0.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/xananode-property-registry.v0.1.0.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/schemas/xananode-property-registry.v0.1.0.json",
   "content_id": "sha256:09c0306032e01170c92bfa0bc044c0983e980b68e8bd88b3e8c9f37110acf39b",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/xananode-property-registry.v0.1.0.json",
     "method": "archive",
     "content_id": "sha256:09c0306032e01170c92bfa0bc044c0983e980b68e8bd88b3e8c9f37110acf39b",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-schemas-xananode-property-registry.v0.1.0.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-schemas-xananode-property-registry.v0.1.0.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

@@ -13,7 +13,7 @@
   "build_metadata": {
     "version": "",
     "repository": "kingc95/XanaNode-Mobile",
-    "generated_at": "2026-06-24T22:13:03.638Z",
+    "generated_at": "2026-06-27T06:48:18.461Z",
     "built_by": "@xananode/core",
     "dependencies": [
       {
@@ -60,9 +60,9 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.canonical:rel/project-xananode-mobile-uses-schema-protocol-artifact-media-images-xananode-icon.svg-artifact-4",
+      "id": "xananode.canonical:rel/project-xananode-mobile-uses-media-protocol-artifact-media-images-xananode-icon.svg-artifact-4",
       "type": "uses",
-      "target": "xananode.canonical:schema/protocol-artifact-media-images-xananode-icon.svg",
+      "target": "xananode.canonical:media/protocol-artifact-media-images-xananode-icon.svg",
       "direction": "outgoing"
     },
     {
@@ -150,7 +150,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/project_xananode-mobile.json",
+  "imported_from": "nodes/xananode.canonical_project_xananode-mobile.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

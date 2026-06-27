@@ -1,10 +1,10 @@
 {
   "id": "xananode.canonical:source/protocol-artifact-specs-xananode-core.md",
-  "title": "Specs / Xananode Core",
+  "title": "Specs / XanaNode Core",
   "type": "source",
   "subtype": "protocol_document",
   "importance": 4,
-  "summary": "specs/xananode-core.md is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A protocol specification covering XanaNode Core.",
   "artifact_path": "specs/xananode-core.md",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/specs/xananode-core.md",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/specs/xananode-core.md",
   "content_id": "sha256:dde21bd72733f48e0092eaccad02e9debdf7cb0ebdcbed436cb2367f5e53e23b",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/specs/xananode-core.md",
     "method": "archive",
     "content_id": "sha256:dde21bd72733f48e0092eaccad02e9debdf7cb0ebdcbed436cb2367f5e53e23b",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_protocol-artifact-specs-xananode-core.md.json",
+  "imported_from": "nodes/xananode.canonical_source_protocol-artifact-specs-xananode-core.md.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

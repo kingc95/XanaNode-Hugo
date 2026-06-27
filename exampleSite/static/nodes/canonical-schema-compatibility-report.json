@@ -28,14 +28,14 @@
   "asset_role": "canonical_raw_source",
   "content_id": "sha256:cebce9e3ddbe9349982bdb25881dddc7a0ecbf03bd1f7cbaec5bf318c5789b28",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/compatibility-report.schema.json",
     "method": "archive",
     "content_id": "sha256:be8ea01644e2468dd965bc7704f0ae3a7ece61943eb4f8b96de4167115297762",
     "rights_status": "canonical-public",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_canonical-schema-compatibility-report.json",
+  "imported_from": "nodes/xananode.canonical_schema_canonical-schema-compatibility-report.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

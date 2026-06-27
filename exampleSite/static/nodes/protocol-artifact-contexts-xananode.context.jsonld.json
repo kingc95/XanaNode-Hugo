@@ -1,10 +1,10 @@
 {
   "id": "xananode.canonical:schema/protocol-artifact-contexts-xananode.context.jsonld",
-  "title": "Contexts / Xananode.Context",
+  "title": "Contexts / XanaNode Context",
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 3,
-  "summary": "contexts/xananode.context.jsonld is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "The JSON-LD context that maps XanaNode terms into linked-data form.",
   "artifact_path": "contexts/xananode.context.jsonld",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/contexts/xananode.context.jsonld",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/contexts/xananode.context.jsonld",
   "content_id": "sha256:8192a5d5477e28549cb66d77aed71019e071084fd92f9163e0f57d3dc5608a9f",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/contexts/xananode.context.jsonld",
     "method": "archive",
     "content_id": "sha256:8192a5d5477e28549cb66d77aed71019e071084fd92f9163e0f57d3dc5608a9f",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-contexts-xananode.context.jsonld.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-contexts-xananode.context.jsonld.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

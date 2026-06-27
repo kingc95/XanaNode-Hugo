@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "federated_substrate",
   "importance": 4,
-  "summary": "A substrate source built directly from the XanaNode Workspace repository, preserving the local-first workspace engine, CLI surface, templates, tests, raw project documents, and packaged executable artifacts as first-class XanaNode records.",
+  "summary": "A substrate source built directly from the XanaNode Workspace repository, preserving the workspace engine, CLI surface, templates, packaged executable artifacts, and key documents while carrying lower-level repository files as attached assets unless they merit their own nodes.",
   "namespace": "xananode.workspace",
   "status": "official",
   "recommended_mode": "mounted",
@@ -48,7 +48,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/source_federated-substrate-xananode.workspace.json",
+  "imported_from": "nodes/xananode.canonical_source_federated-substrate-xananode.workspace.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

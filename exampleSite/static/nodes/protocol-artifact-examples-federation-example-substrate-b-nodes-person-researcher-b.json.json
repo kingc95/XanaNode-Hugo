@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 3,
-  "summary": "examples/federation-example/substrate-b/nodes/person-researcher-b.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A node record from examples/federation-example/substrate-b.",
   "artifact_path": "examples/federation-example/substrate-b/nodes/person-researcher-b.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/federation-example/substrate-b/nodes/person-researcher-b.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/examples/federation-example/substrate-b/nodes/person-researcher-b.json",
   "content_id": "sha256:d7988858eaeb7bc3979438cc40946e9b2ecf24e7bf32c34a23012f09bd35d1a3",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/federation-example/substrate-b/nodes/person-researcher-b.json",
     "method": "archive",
     "content_id": "sha256:d7988858eaeb7bc3979438cc40946e9b2ecf24e7bf32c34a23012f09bd35d1a3",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-examples-federation-example-substrate-b-nodes-person-researcher-b.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-examples-federation-example-substrate-b-nodes-person-researcher-b.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

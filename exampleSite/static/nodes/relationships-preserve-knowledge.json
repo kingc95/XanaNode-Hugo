@@ -21,7 +21,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/claim_relationships-preserve-knowledge.json",
+  "imported_from": "nodes/xananode.canonical_claim_relationships-preserve-knowledge.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

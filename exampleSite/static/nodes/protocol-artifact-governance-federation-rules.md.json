@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "protocol_document",
   "importance": 3,
-  "summary": "governance/federation-rules.md is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A governance document covering Federation Rules.",
   "artifact_path": "governance/federation-rules.md",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/governance/federation-rules.md",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/governance/federation-rules.md",
   "content_id": "sha256:a9f33cdd2a8eea27097f01a0dedfbb1659a81c2f3bb4094053f3544cd703fd23",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/governance/federation-rules.md",
     "method": "archive",
     "content_id": "sha256:a9f33cdd2a8eea27097f01a0dedfbb1659a81c2f3bb4094053f3544cd703fd23",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_protocol-artifact-governance-federation-rules.md.json",
+  "imported_from": "nodes/xananode.canonical_source_protocol-artifact-governance-federation-rules.md.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

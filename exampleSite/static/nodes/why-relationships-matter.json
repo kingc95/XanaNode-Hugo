@@ -31,15 +31,15 @@
       "direction": "incoming"
     },
     {
-      "id": "example.minimal:rel/question-raises-gap",
-      "type": "raises",
-      "target": "example.minimal:knowledge_gap/missing-relationship-evidence",
-      "direction": "outgoing"
-    },
-    {
       "id": "example.minimal:rel/question-asked-in-communication",
       "type": "asked_in",
       "target": "example.minimal:communication/minimal-substrate-discussion",
+      "direction": "outgoing"
+    },
+    {
+      "id": "example.minimal:rel/question-raises-gap",
+      "type": "raises",
+      "target": "example.minimal:knowledge_gap/missing-relationship-evidence",
       "direction": "outgoing"
     },
     {

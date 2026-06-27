@@ -1,10 +1,10 @@
 {
   "id": "xananode.canonical:schema/protocol-artifact-registry-federation-targets.schema.json",
-  "title": "Registry / Federation Targets.Schema",
+  "title": "Registry / Federation Targets Schema",
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 3,
-  "summary": "registry/federation-targets.schema.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A registry artifact covering Federation Targets Schema.",
   "artifact_path": "registry/federation-targets.schema.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/registry/federation-targets.schema.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/registry/federation-targets.schema.json",
   "content_id": "sha256:7b360af2b0aec0db05e2f411fe2d14b8d12629ac4dab85c87240daf5c0e1c1ed",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/registry/federation-targets.schema.json",
     "method": "archive",
     "content_id": "sha256:7b360af2b0aec0db05e2f411fe2d14b8d12629ac4dab85c87240daf5c0e1c1ed",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-registry-federation-targets.schema.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-registry-federation-targets.schema.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

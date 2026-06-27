@@ -16,7 +16,7 @@
   "source_url": "https://opensource.org/license/mit/",
   "rights_status": "external",
   "license": "MIT",
-  "imported_from": "nodes/source_mit-license.json",
+  "imported_from": "nodes/xananode.canonical_source_mit-license.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

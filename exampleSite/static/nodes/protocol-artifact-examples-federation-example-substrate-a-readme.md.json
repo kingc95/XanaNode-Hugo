@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "protocol_document",
   "importance": 3,
-  "summary": "examples/federation-example/substrate-a/README.md is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "The README for Examples / Federation Example / Substrate A.",
   "artifact_path": "examples/federation-example/substrate-a/README.md",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/federation-example/substrate-a/README.md",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/examples/federation-example/substrate-a/README.md",
   "content_id": "sha256:d9db627e558abdc967856811b9642bcd16013587100ec7b9bbcb19ef194e3e73",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/federation-example/substrate-a/README.md",
     "method": "archive",
     "content_id": "sha256:d9db627e558abdc967856811b9642bcd16013587100ec7b9bbcb19ef194e3e73",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_protocol-artifact-examples-federation-example-substrate-a-readme.md.json",
+  "imported_from": "nodes/xananode.canonical_source_protocol-artifact-examples-federation-example-substrate-a-readme.md.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

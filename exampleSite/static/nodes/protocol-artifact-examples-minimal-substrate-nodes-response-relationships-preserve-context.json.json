@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 3,
-  "summary": "examples/minimal-substrate/nodes/response-relationships-preserve-context.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A node record from examples/minimal-substrate.",
   "artifact_path": "examples/minimal-substrate/nodes/response-relationships-preserve-context.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/nodes/response-relationships-preserve-context.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/examples/minimal-substrate/nodes/response-relationships-preserve-context.json",
   "content_id": "sha256:479c37d7a9e310ba81bdb5a8de649da83af99fce536d6719fc6ca03b18ae1131",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/nodes/response-relationships-preserve-context.json",
     "method": "archive",
     "content_id": "sha256:479c37d7a9e310ba81bdb5a8de649da83af99fce536d6719fc6ca03b18ae1131",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-examples-minimal-substrate-nodes-response-relationships-preserve-context.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-examples-minimal-substrate-nodes-response-relationships-preserve-context.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

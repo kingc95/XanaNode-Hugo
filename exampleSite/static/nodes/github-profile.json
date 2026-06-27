@@ -9,6 +9,12 @@
   "rights_status": "external",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/github-profile-documents-christian-siefen",
+      "type": "documents",
+      "target": "xananode.canonical:person/christian-siefen",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/github-profile-includes-core-repo",
       "type": "includes",
       "target": "xananode.canonical:source/repository-kingc95-xananode-core-sdk",
@@ -27,7 +33,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/source_github-profile.json",
+  "imported_from": "nodes/xananode.canonical_source_github-profile.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

@@ -36,7 +36,7 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/typed-relationships-has_claim-claim-relationships-preserve-context-240",
+      "id": "xananode.example:rel/typed-relationships-has_claim-claim-relationships-preserve-context-236",
       "type": "has_claim",
       "target": "xananode.example:claim/claim-relationships-preserve-context",
       "direction": "outgoing"

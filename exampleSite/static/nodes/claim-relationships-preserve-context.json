@@ -31,13 +31,13 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/typed-relationships-has_claim-claim-relationships-preserve-context-240",
+      "id": "xananode.example:rel/typed-relationships-has_claim-claim-relationships-preserve-context-236",
       "type": "has_claim",
       "source": "xananode.example:concept/typed-relationships",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/claim-relationships-preserve-context-contrasts_with-unlabeled-hyperlink-241",
+      "id": "xananode.example:rel/claim-relationships-preserve-context-contrasts_with-unlabeled-hyperlink-237",
       "type": "contrasts_with",
       "target": "xananode.example:concept/unlabeled-hyperlink",
       "direction": "outgoing"

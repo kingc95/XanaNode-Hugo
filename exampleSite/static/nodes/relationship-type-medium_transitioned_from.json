@@ -42,7 +42,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/schema_relationship-type-medium_transitioned_from.json",
+  "imported_from": "nodes/xananode.canonical_schema_relationship-type-medium_transitioned_from.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

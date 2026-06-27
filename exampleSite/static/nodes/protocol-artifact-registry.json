@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_artifact_group",
   "importance": 3,
-  "summary": "Protocol files under registry/ preserved inside the canonical substrate.",
+  "summary": "The registry artifacts that list namespaces, canonical schemas, federation targets, and known implementations.",
   "artifact_path": "registry/",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/registry/",
   "relationships": [
@@ -57,7 +57,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/schema_protocol-artifact-registry.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-registry.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

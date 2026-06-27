@@ -14,7 +14,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/technology_hugo.json",
+  "imported_from": "nodes/xananode.canonical_technology_hugo.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

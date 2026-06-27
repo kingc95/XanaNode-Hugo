@@ -77,7 +77,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/media_xananode-icon.json",
+  "imported_from": "nodes/xananode.canonical_media_xananode-icon.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

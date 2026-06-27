@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_artifact_group",
   "importance": 3,
-  "summary": "Protocol files under examples/ preserved inside the canonical substrate.",
+  "summary": "The bundled protocol examples used to teach substrate structure, federation, and review behavior.",
   "artifact_path": "examples/",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/",
   "relationships": [
@@ -21,48 +21,6 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-custom-extension-substrate-nodes-memex-concept.json-raw-file-examples-custom-extension-substrate-nodes-memex-concept.json",
-      "type": "contains",
-      "target": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-nodes-memex-concept.json",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-custom-extension-substrate-nodes-memex-illustration.json-raw-file-examples-custom-extension-substrate-nodes-memex-illustration.json",
-      "type": "contains",
-      "target": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-nodes-memex-illustration.json",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-custom-extension-substrate-nodes-person-example-curator.json-raw-file-examples-custom-extension-substrate-nodes-person-example-curator.json",
-      "type": "contains",
-      "target": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-nodes-person-example-curator.json",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-custom-extension-substrate-relationships.json-raw-file-examples-custom-extension-substrate-relationships.json",
-      "type": "contains",
-      "target": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-relationships.json",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-custom-extension-substrate-schemas-node-types.example.museum.json-raw-file-examples-custom-extension-substrate-schemas-node-types.example.museum.json",
-      "type": "contains",
-      "target": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-schemas-node-types.example.museum.json",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-custom-extension-substrate-schemas-relationship-types.example.museum.json-raw-file-examples-custom-extension-substrate-schemas-relationship-types.example.museum.json",
-      "type": "contains",
-      "target": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-schemas-relationship-types.example.museum.json",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-custom-extension-substrate-substrate.json-raw-file-examples-custom-extension-substrate-substrate.json",
-      "type": "contains",
-      "target": "xananode.canonical:schema/protocol-artifact-examples-custom-extension-substrate-substrate.json",
-      "direction": "outgoing"
-    },
-    {
       "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-compatibility-report.json-raw-file-examples-federation-example-compatibility-report.json",
       "type": "contains",
       "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-compatibility-report.json",
@@ -72,6 +30,54 @@
       "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-merge-report.json-raw-file-examples-federation-example-merge-report.json",
       "type": "contains",
       "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-merge-report.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-review-workspace-nodes-federation-review-proof.json-raw-file-examples-federation-example-review-workspace-nodes-federation-review-proof.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-review-workspace-nodes-federation-review-proof.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-review-workspace-nodes-knowledge-substrate.json-raw-file-examples-federation-example-review-workspace-nodes-knowledge-substrate.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-review-workspace-nodes-knowledge-substrate.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-review-workspace-nodes-memory-substrate.json-raw-file-examples-federation-example-review-workspace-nodes-memory-substrate.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-review-workspace-nodes-memory-substrate.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-review-workspace-nodes-non-destructive-merge-review.json-raw-file-examples-federation-example-review-workspace-nodes-non-destructive-merge-review.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-review-workspace-nodes-non-destructive-merge-review.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-review-workspace-nodes-person-researcher-a.json-raw-file-examples-federation-example-review-workspace-nodes-person-researcher-a.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-review-workspace-nodes-person-researcher-a.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-review-workspace-nodes-person-researcher-b.json-raw-file-examples-federation-example-review-workspace-nodes-person-researcher-b.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-review-workspace-nodes-person-researcher-b.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-review-workspace-relationships.json-raw-file-examples-federation-example-review-workspace-relationships.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-review-workspace-relationships.json",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-review-workspace-substrate.json-raw-file-examples-federation-example-review-workspace-substrate.json",
+      "type": "contains",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-review-workspace-substrate.json",
       "direction": "outgoing"
     },
     {
@@ -237,27 +243,15 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-source-protocol-artifact-examples-custom-extension-substrate-nodes-readme.md-raw-file-examples-custom-extension-substrate-nodes-readme.md",
-      "type": "contains",
-      "target": "xananode.canonical:source/protocol-artifact-examples-custom-extension-substrate-nodes-readme.md",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-source-protocol-artifact-examples-custom-extension-substrate-readme.md-raw-file-examples-custom-extension-substrate-readme.md",
-      "type": "contains",
-      "target": "xananode.canonical:source/protocol-artifact-examples-custom-extension-substrate-readme.md",
-      "direction": "outgoing"
-    },
-    {
-      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-source-protocol-artifact-examples-custom-extension-substrate-schemas-readme.md-raw-file-examples-custom-extension-substrate-schemas-readme.md",
-      "type": "contains",
-      "target": "xananode.canonical:source/protocol-artifact-examples-custom-extension-substrate-schemas-readme.md",
-      "direction": "outgoing"
-    },
-    {
       "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-source-protocol-artifact-examples-federation-example-readme.md-raw-file-examples-federation-example-readme.md",
       "type": "contains",
       "target": "xananode.canonical:source/protocol-artifact-examples-federation-example-readme.md",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-source-protocol-artifact-examples-federation-example-review-workspace-readme.md-raw-file-examples-federation-example-review-workspace-readme.md",
+      "type": "contains",
+      "target": "xananode.canonical:source/protocol-artifact-examples-federation-example-review-workspace-readme.md",
       "direction": "outgoing"
     },
     {
@@ -291,7 +285,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/schema_protocol-artifact-examples.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-examples.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

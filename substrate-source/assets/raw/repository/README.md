@@ -287,6 +287,16 @@ node-id   = stable node identifier
 
 Generated ranges are useful for drafts and review suggestions, but authored fragment ids are safer for stable quotation identity because paragraph numbering can drift after edits.
 
+Fragments are not limited to paragraph-like chunks. Across the protocol, a selector may also point to:
+
+- a quoted sentence or exact text span
+- a word or character range
+- a page or bounded document region
+- an audio/video time segment
+- an image or media region
+
+In practice that means the tumbler remains the durable address, while the selector carries the granular locating detail for that source version. If you later build a richer viewer, the same fragment can still resolve cleanly.
+
 ## Automatic Review Suggestions
 
 The build tool scans Markdown for possible links and transclusions, but it does not rewrite content.
@@ -309,6 +319,8 @@ static/xananode-suggestions.md
 ```
 
 Every suggestion is marked `approved: false`. Apply approved changes manually or with a future review tool.
+
+Official authoring tools should go one step further when a user intentionally pastes quoted source material into a node: create or reuse the fragment immediately, preserve the direction with a `transcludes` relationship, and let the person confirm the result instead of forcing a later cleanup pass.
 
 ## Quick Start
 

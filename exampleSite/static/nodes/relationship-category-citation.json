@@ -80,7 +80,7 @@
   "inverse_color": "#bae6fd",
   "line_style": "dotted",
   "inverse_line_style": "dotted",
-  "imported_from": "nodes/schema_relationship-category-citation.json",
+  "imported_from": "nodes/xananode.canonical_schema_relationship-category-citation.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

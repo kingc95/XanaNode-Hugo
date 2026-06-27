@@ -19,7 +19,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/community_xananode-contributors.json",
+  "imported_from": "nodes/xananode.canonical_community_xananode-contributors.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

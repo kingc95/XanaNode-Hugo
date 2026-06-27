@@ -25,7 +25,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/fragment_relationships-preserve-knowledge-sentence.json",
+  "imported_from": "nodes/xananode.canonical_fragment_relationships-preserve-knowledge-sentence.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

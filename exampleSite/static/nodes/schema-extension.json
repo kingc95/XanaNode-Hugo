@@ -54,13 +54,7 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/custom-extension-substrate-demonstrates-schema-extension-224",
-      "type": "demonstrates",
-      "source": "xananode.example:concept/custom-extension-substrate",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/canonical-type-policy-context_for-schema-extension-237",
+      "id": "xananode.example:rel/canonical-type-policy-context_for-schema-extension-233",
       "type": "context_for",
       "source": "xananode.example:concept/canonical-type-policy",
       "direction": "incoming"

@@ -24,7 +24,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/source_federated-substrate-xananode.alphabet.json",
+  "imported_from": "nodes/xananode.canonical_source_federated-substrate-xananode.alphabet.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

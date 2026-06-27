@@ -28,14 +28,14 @@
   "asset_role": "canonical_raw_source",
   "content_id": "sha256:82b8269890a6469a83d597b5d2132aea5f1e790b37dd379b5dd96fc7fb904485",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/substrate-diff.schema.json",
     "method": "archive",
     "content_id": "sha256:18ab06e82d3dd8718900b8e06704585d8d38e8b5af725d2241e6da19f1358ab5",
     "rights_status": "canonical-public",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_canonical-schema-substrate-diff.json",
+  "imported_from": "nodes/xananode.canonical_schema_canonical-schema-substrate-diff.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

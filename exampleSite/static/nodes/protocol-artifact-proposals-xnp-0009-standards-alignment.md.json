@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "protocol_document",
   "importance": 3,
-  "summary": "proposals/XNP-0009-standards-alignment.md is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A XanaNode proposal covering XNP 0009 Standards Alignment.",
   "artifact_path": "proposals/XNP-0009-standards-alignment.md",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/proposals/XNP-0009-standards-alignment.md",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/proposals/XNP-0009-standards-alignment.md",
   "content_id": "sha256:c7e019264ebe4e77fee11f412a2e13a7c55315be5987025ff0c4ddacebf67b40",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/proposals/XNP-0009-standards-alignment.md",
     "method": "archive",
     "content_id": "sha256:c7e019264ebe4e77fee11f412a2e13a7c55315be5987025ff0c4ddacebf67b40",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_protocol-artifact-proposals-xnp-0009-standards-alignment.md.json",
+  "imported_from": "nodes/xananode.canonical_source_protocol-artifact-proposals-xnp-0009-standards-alignment.md.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

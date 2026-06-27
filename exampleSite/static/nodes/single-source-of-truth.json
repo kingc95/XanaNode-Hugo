@@ -42,7 +42,7 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/claim-merge-without-collapse-contradicts-single-source-of-truth-244",
+      "id": "xananode.example:rel/claim-merge-without-collapse-contradicts-single-source-of-truth-240",
       "type": "contradicts",
       "source": "xananode.example:claim/claim-merge-without-collapse",
       "direction": "incoming"

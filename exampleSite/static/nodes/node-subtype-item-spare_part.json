@@ -23,7 +23,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/schema_node-subtype-item-spare_part.json",
+  "imported_from": "nodes/xananode.canonical_schema_node-subtype-item-spare_part.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

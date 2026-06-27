@@ -12,25 +12,25 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-enables-civilizational-memory-233",
+      "id": "xananode.example:rel/federated-knowledge-substrates-enables-civilizational-memory-229",
       "type": "enables",
       "source": "xananode.example:concept/federated-knowledge-substrates",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/civilizational-memory-requires-knowledge-substrate-234",
+      "id": "xananode.example:rel/civilizational-memory-requires-knowledge-substrate-230",
       "type": "requires",
       "target": "xananode.example:concept/knowledge-substrate",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/civilizational-memory-requires-provenance-235",
+      "id": "xananode.example:rel/civilizational-memory-requires-provenance-231",
       "type": "requires",
       "target": "xananode.example:concept/provenance",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/civilizational-memory-requires-merge-validation-236",
+      "id": "xananode.example:rel/civilizational-memory-requires-merge-validation-232",
       "type": "requires",
       "target": "xananode.example:concept/merge-validation",
       "direction": "outgoing"

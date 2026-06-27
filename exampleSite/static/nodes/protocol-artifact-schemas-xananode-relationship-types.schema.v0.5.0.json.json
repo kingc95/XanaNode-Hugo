@@ -1,10 +1,10 @@
 {
   "id": "xananode.canonical:schema/protocol-artifact-schemas-xananode-relationship-types.schema.v0.5.0.json",
-  "title": "Schemas / Xananode Relationship Types.Schema.V0.5.0",
+  "title": "Schemas / XanaNode Relationship Types Schema v0.5.0",
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 4,
-  "summary": "schemas/xananode-relationship-types.schema.v0.5.0.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "The JSON Schema for XanaNode Relationship Types Schema v0.5.0.",
   "artifact_path": "schemas/xananode-relationship-types.schema.v0.5.0.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/xananode-relationship-types.schema.v0.5.0.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/schemas/xananode-relationship-types.schema.v0.5.0.json",
   "content_id": "sha256:05cca697d1cc06aa94c11fce8b0237e051ca4416e3f31eebf32a473e5e5e150d",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/xananode-relationship-types.schema.v0.5.0.json",
     "method": "archive",
     "content_id": "sha256:05cca697d1cc06aa94c11fce8b0237e051ca4416e3f31eebf32a473e5e5e150d",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-schemas-xananode-relationship-types.schema.v0.5.0.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-schemas-xananode-relationship-types.schema.v0.5.0.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

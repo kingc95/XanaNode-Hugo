@@ -488,6 +488,29 @@ function parseYamlScalar(value) {
   return text;
 }
 
+function cleanDir(dir) {
+  if (!fs.existsSync(dir)) return;
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    fs.rmSync(path.join(dir, entry.name), { recursive: true, force: true });
+  }
+}
+
+const STATIC_DIRS_TO_KEEP = new Set([
+  ".well-known",
+  "archives",
+  "assets",
+  "schemas"
+]);
+
+function cleanGeneratedStaticDirs(staticDir) {
+  if (!fs.existsSync(staticDir)) return;
+  for (const entry of fs.readdirSync(staticDir, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    if (STATIC_DIRS_TO_KEEP.has(entry.name)) continue;
+    fs.rmSync(path.join(staticDir, entry.name), { recursive: true, force: true });
+  }
+}
+
 function configuredThemeLinks() {
   const text = readSiteConfigText();
   const lines = text.split(/\r?\n/);
@@ -1987,6 +2010,11 @@ const staticSchemaDir = path.join(staticDir, "schemas");
 const staticNodesDir = path.join(staticDir, "nodes");
 fs.mkdirSync(dataDir, { recursive: true });
 fs.mkdirSync(staticDir, { recursive: true });
+cleanGeneratedStaticDirs(staticDir);
+cleanDir(staticNodesDir);
+for (const generatedRouteDir of [...PUBLIC_ROUTE_TYPES, "review"]) {
+  cleanDir(path.join(staticDir, generatedRouteDir));
+}
 fs.mkdirSync(staticNodesDir, { recursive: true });
 copyProtocolSchemas(staticSchemaDir);
 copyProtocolBrandAssets(staticDir);

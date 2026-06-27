@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 3,
-  "summary": "examples/minimal-substrate/nodes/person-example-maintainer.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A node record from examples/minimal-substrate.",
   "artifact_path": "examples/minimal-substrate/nodes/person-example-maintainer.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/nodes/person-example-maintainer.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/examples/minimal-substrate/nodes/person-example-maintainer.json",
   "content_id": "sha256:a2ee929f0385650182710c527877012c60020bd5d5ec200bce9596c58b9ae974",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/nodes/person-example-maintainer.json",
     "method": "archive",
     "content_id": "sha256:a2ee929f0385650182710c527877012c60020bd5d5ec200bce9596c58b9ae974",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-examples-minimal-substrate-nodes-person-example-maintainer.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-examples-minimal-substrate-nodes-person-example-maintainer.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

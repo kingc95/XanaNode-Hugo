@@ -24,16 +24,16 @@
       "direction": "incoming"
     },
     {
-      "id": "example.minimal:rel/source-discusses-associative-trails",
-      "type": "discusses",
-      "source": "example.minimal:source/as-we-may-think",
-      "direction": "incoming"
-    },
-    {
       "id": "example.minimal:rel/associative-trails-context-for-substrate",
       "type": "related_to",
       "target": "example.minimal:concept/knowledge-substrate",
       "direction": "outgoing"
+    },
+    {
+      "id": "example.minimal:rel/source-discusses-associative-trails",
+      "type": "discusses",
+      "source": "example.minimal:source/as-we-may-think",
+      "direction": "incoming"
     },
     {
       "id": "example.minimal:rel/trail-includes-associative-trails",

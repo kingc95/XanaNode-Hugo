@@ -15,7 +15,7 @@
   "content_id": "sha256:4cf8cac4344b65e8f4cf253ddb5d952d2e0fd7c39de496b17aa971b52333d957",
   "content": "---\ntitle: \"Vannevar Bush\"\ntype: \"person\"\nimportance: 5\nsummary: \"Engineer and science administrator whose Memex proposal described associative trails as a response to information overload.\"\nrelationships:\n  - type: \"authored\"\n    target: \"as-we-may-think\"\n  - type: \"proposed\"\n    target: \"memex\"\n  - type: \"anticipated\"\n    target: \"knowledge-substrate\"\n---\n\nVannevar Bush framed the problem as one of navigation through a growing record of knowledge.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:24:42.948Z",
+    "captured_at": "2026-06-27T07:05:44.386Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/people/vannevar-bush.md",
     "method": "archive",
     "content_id": "sha256:4cf8cac4344b65e8f4cf253ddb5d952d2e0fd7c39de496b17aa971b52333d957",

@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 3,
-  "summary": "examples/minimal-substrate/nodes/fragment-as-we-may-think-0004.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A node record from examples/minimal-substrate.",
   "artifact_path": "examples/minimal-substrate/nodes/fragment-as-we-may-think-0004.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/nodes/fragment-as-we-may-think-0004.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/examples/minimal-substrate/nodes/fragment-as-we-may-think-0004.json",
   "content_id": "sha256:f0c4f8b1ac22a733c1893242413d6970f5f2734f15f7a66bd09cb8bccc8116fe",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/nodes/fragment-as-we-may-think-0004.json",
     "method": "archive",
     "content_id": "sha256:f0c4f8b1ac22a733c1893242413d6970f5f2734f15f7a66bd09cb8bccc8116fe",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-examples-minimal-substrate-nodes-fragment-as-we-may-think-0004.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-examples-minimal-substrate-nodes-fragment-as-we-may-think-0004.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

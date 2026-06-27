@@ -13,7 +13,7 @@
   "subtype": "distinction",
   "importance": 4,
   "summary": "A license pattern that allows reuse while requiring credit to the original author or project.",
-  "imported_from": "nodes/concept_attribution-license.json",
+  "imported_from": "nodes/xananode.canonical_concept_attribution-license.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

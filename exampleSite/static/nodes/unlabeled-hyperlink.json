@@ -30,7 +30,7 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/claim-relationships-preserve-context-contrasts_with-unlabeled-hyperlink-241",
+      "id": "xananode.example:rel/claim-relationships-preserve-context-contrasts_with-unlabeled-hyperlink-237",
       "type": "contrasts_with",
       "source": "xananode.example:claim/claim-relationships-preserve-context",
       "direction": "incoming"

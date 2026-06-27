@@ -84,7 +84,7 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/civilizational-memory-requires-provenance-235",
+      "id": "xananode.example:rel/civilizational-memory-requires-provenance-231",
       "type": "requires",
       "source": "xananode.example:concept/civilizational-memory",
       "direction": "incoming"

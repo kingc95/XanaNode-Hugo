@@ -15,7 +15,7 @@
   "content_id": "sha256:3ba6f76c34b00c9e1ca2324fbdf8b73086fb2701944d66c99e0b58c78b5613a6",
   "content": "---\ntitle: \"Unlabeled Hyperlink\"\ntype: \"concept\"\nimportance: 3\nsummary: \"A link that connects two resources without preserving why the connection matters.\"\nrelationships:\n  - type: \"threatens\"\n    target: \"provenance\"\n---\n\nThe web hyperlink is powerful because it is simple. It spread because it was easy.\n\nIts weakness is that it usually does not say whether the target supports, contradicts, defines, documents, quotes, explains, or merely mentions the source.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:24:42.948Z",
+    "captured_at": "2026-06-27T07:05:44.386Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/unlabeled-hyperlink.md",
     "method": "archive",
     "content_id": "sha256:3ba6f76c34b00c9e1ca2324fbdf8b73086fb2701944d66c99e0b58c78b5613a6",

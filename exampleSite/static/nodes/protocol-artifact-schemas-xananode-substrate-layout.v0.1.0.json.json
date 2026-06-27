@@ -1,10 +1,10 @@
 {
   "id": "xananode.canonical:schema/protocol-artifact-schemas-xananode-substrate-layout.v0.1.0.json",
-  "title": "Schemas / Xananode Substrate Layout.V0.1.0",
+  "title": "Schemas / XanaNode Substrate Layout v0.1.0",
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 4,
-  "summary": "schemas/xananode-substrate-layout.v0.1.0.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A canonical schema or registry artifact published as XanaNode Substrate Layout v0.1.0.",
   "artifact_path": "schemas/xananode-substrate-layout.v0.1.0.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/xananode-substrate-layout.v0.1.0.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/schemas/xananode-substrate-layout.v0.1.0.json",
   "content_id": "sha256:0ef1a5307ba2e725c2ee4be1e3f4e7d40f8250695b38d1d9ef76b4801b02460b",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/xananode-substrate-layout.v0.1.0.json",
     "method": "archive",
     "content_id": "sha256:0ef1a5307ba2e725c2ee4be1e3f4e7d40f8250695b38d1d9ef76b4801b02460b",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-schemas-xananode-substrate-layout.v0.1.0.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-schemas-xananode-substrate-layout.v0.1.0.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

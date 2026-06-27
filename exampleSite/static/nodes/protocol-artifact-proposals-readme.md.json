@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "protocol_document",
   "importance": 3,
-  "summary": "proposals/README.md is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A XanaNode proposal covering README.",
   "artifact_path": "proposals/README.md",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/proposals/README.md",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/proposals/README.md",
   "content_id": "sha256:2247432bc955a1cb08c44001def4fe58ec5889aabe10da14f80902cd3a9a8e5a",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/proposals/README.md",
     "method": "archive",
     "content_id": "sha256:2247432bc955a1cb08c44001def4fe58ec5889aabe10da14f80902cd3a9a8e5a",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_protocol-artifact-proposals-readme.md.json",
+  "imported_from": "nodes/xananode.canonical_source_protocol-artifact-proposals-readme.md.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

@@ -165,16 +165,16 @@
   "build_metadata": {
     "version": "0.1.0",
     "repository": "kingc95/XanaNode-Core-SDK",
-    "generated_at": "2026-06-24T22:13:02.206Z",
+    "generated_at": "2026-06-27T06:48:18.191Z",
     "built_by": "@xananode/core",
-    "git_commit": "",
-    "git_branch": "",
+    "git_commit": "08ee42fc795dbb2fea499196f3bc4851c2ebca4d",
+    "git_branch": "main",
     "runtime": "node v24.16.0",
     "platform": "win32/x64",
     "dependencies": [
       {
         "name": "XanaNode Protocol",
-        "version": "",
+        "version": "2157f16",
         "repository": "kingc95/XanaNode",
         "relationship": "uses"
       },
@@ -214,7 +214,7 @@
     "../schemas/xananode-node-types.v0.3.0.json",
     "../schemas/xananode-relationship-types.v0.5.0.json"
   ],
-  "imported_from": "nodes/project_xananode-core-sdk.json",
+  "imported_from": "nodes/xananode.canonical_project_xananode-core-sdk.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

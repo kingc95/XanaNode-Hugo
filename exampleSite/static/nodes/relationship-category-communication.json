@@ -164,7 +164,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/schema_relationship-category-communication.json",
+  "imported_from": "nodes/xananode.canonical_schema_relationship-category-communication.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

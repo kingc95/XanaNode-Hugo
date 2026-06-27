@@ -381,7 +381,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/schema_node-type-source.json",
+  "imported_from": "nodes/xananode.canonical_schema_node-type-source.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

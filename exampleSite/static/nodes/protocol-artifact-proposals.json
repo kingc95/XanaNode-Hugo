@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_artifact_group",
   "importance": 3,
-  "summary": "Protocol files under proposals/ preserved inside the canonical substrate.",
+  "summary": "The proposal records for protocol changes, experiments, and accepted design decisions.",
   "artifact_path": "proposals/",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/proposals/",
   "relationships": [
@@ -93,7 +93,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/schema_protocol-artifact-proposals.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-proposals.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

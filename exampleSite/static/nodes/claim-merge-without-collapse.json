@@ -31,19 +31,19 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/merge-validation-has_claim-claim-merge-without-collapse-242",
+      "id": "xananode.example:rel/merge-validation-has_claim-claim-merge-without-collapse-238",
       "type": "has_claim",
       "source": "xananode.example:concept/merge-validation",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/xananode-core-schema-supports-claim-merge-without-collapse-243",
+      "id": "xananode.example:rel/xananode-core-schema-supports-claim-merge-without-collapse-239",
       "type": "supports",
       "source": "xananode.example:schema/xananode-core-schema",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/claim-merge-without-collapse-contradicts-single-source-of-truth-244",
+      "id": "xananode.example:rel/claim-merge-without-collapse-contradicts-single-source-of-truth-240",
       "type": "contradicts",
       "target": "xananode.example:concept/single-source-of-truth",
       "direction": "outgoing"

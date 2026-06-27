@@ -38,7 +38,7 @@
   "inverse_color": "#e9d5ff",
   "line_style": "dashed",
   "inverse_line_style": "solid",
-  "imported_from": "nodes/schema_relationship-category-historical.json",
+  "imported_from": "nodes/xananode.canonical_schema_relationship-category-historical.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

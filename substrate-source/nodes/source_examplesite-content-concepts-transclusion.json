@@ -15,7 +15,7 @@
   "content_id": "sha256:f3a278b1dd073113c70baa23b991c7710b7473794e75492426bfbfc3e3427679",
   "content": "---\ntitle: \"Transclusion\"\ntype: \"concept\"\nimportance: 5\nsummary: \"Including a specific versioned fragment by reference rather than copying it, preserving identity, attribution, and revision lineage.\"\nrelationships:\n  - type: \"preserves\"\n    target: \"provenance\"\n  - type: \"uses\"\n    target: \"fragment-node\"\n---\n\nTransclusion includes a source fragment by reference instead of turning it into an anonymous copy.\n\nIn this [XanaNode](/node/xananode) substrate, a transclusion points to a stable fragment id inside a versioned source node.\n\nThe rendered passage keeps its source identity, selector metadata, attribution path, and protocol tumbler address.\n\nThis page includes fragment `0001` from the Xanadu source node:\n\n{{< xana ref=\"xanadu-document-interconnection@v1/0001\" label=\"Transcluded source fragment\" >}}\n\nThe block above is backed by `xanadu-document-interconnection@v1/0001`, which resolves to the protocol address `xananode.example:source/xanadu-document-interconnection#fragment/0001`.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:24:42.948Z",
+    "captured_at": "2026-06-27T07:05:44.386Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/transclusion.md",
     "method": "archive",
     "content_id": "sha256:f3a278b1dd073113c70baa23b991c7710b7473794e75492426bfbfc3e3427679",

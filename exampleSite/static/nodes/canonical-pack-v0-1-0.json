@@ -15,7 +15,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/revision_canonical-pack-v0-1-0.json",
+  "imported_from": "nodes/xananode.canonical_revision_canonical-pack-v0-1-0.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

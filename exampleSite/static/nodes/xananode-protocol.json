@@ -155,12 +155,6 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.canonical:rel/protocol-uses-site-webmanifest",
-      "type": "uses",
-      "target": "xananode.canonical:schema/protocol-artifact-media-web-manifests-site.webmanifest",
-      "direction": "outgoing"
-    },
-    {
       "id": "xananode.canonical:rel/protocol-uses-xananode-android-chrome-192",
       "type": "uses",
       "target": "xananode.canonical:media/xananode-android-chrome-192",
@@ -229,10 +223,10 @@
   "build_metadata": {
     "version": "",
     "repository": "kingc95/XanaNode",
-    "generated_at": "2026-06-24T22:13:01.926Z",
+    "generated_at": "2026-06-27T06:48:18.127Z",
     "built_by": "@xananode/core",
-    "git_commit": "",
-    "git_branch": "",
+    "git_commit": "2157f16df0944df0e4ba101458dc967a2abeb0cb",
+    "git_branch": "main",
     "dependencies": []
   },
   "consumes": [],
@@ -243,7 +237,7 @@
     "../governance/",
     "../examples/minimal-substrate/"
   ],
-  "imported_from": "nodes/project_xananode-protocol.json",
+  "imported_from": "nodes/xananode.canonical_project_xananode-protocol.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

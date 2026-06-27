@@ -1,0 +1,18 @@
+{
+  "id": "example.merge:trail/federation-review-proof",
+  "title": "Federation Review Proof",
+  "type": "trail",
+  "importance": 4,
+  "summary": "A short trail showing that mounted overlap can stay visible and reviewable without forcing a final merge.",
+  "relationships": [
+    {
+      "id": "example.merge:rel/federation-review-proof-starts-with-knowledge-substrate",
+      "type": "starts_with",
+      "target": "example.researcher_a:concept/knowledge-substrate",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/example.merge_trail_federation-review-proof.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -62,7 +62,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/concept_trifecta-of-computing-failure.json",
+  "imported_from": "nodes/xananode.canonical_concept_trifecta-of-computing-failure.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

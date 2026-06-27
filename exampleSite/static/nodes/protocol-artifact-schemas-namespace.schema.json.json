@@ -1,10 +1,10 @@
 {
   "id": "xananode.canonical:schema/protocol-artifact-schemas-namespace.schema.json",
-  "title": "Schemas / Namespace.Schema",
+  "title": "Schemas / Namespace Schema",
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 4,
-  "summary": "schemas/namespace.schema.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "The JSON Schema for the namespace.",
   "artifact_path": "schemas/namespace.schema.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/namespace.schema.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/schemas/namespace.schema.json",
   "content_id": "sha256:a0e1c68ae07d72ee631ab37aee421fd21a5003f968adab7ea7296199ddd24ea6",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/namespace.schema.json",
     "method": "archive",
     "content_id": "sha256:a0e1c68ae07d72ee631ab37aee421fd21a5003f968adab7ea7296199ddd24ea6",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-schemas-namespace.schema.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-schemas-namespace.schema.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

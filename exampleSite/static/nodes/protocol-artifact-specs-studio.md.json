@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "protocol_document",
   "importance": 4,
-  "summary": "specs/studio.md is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A protocol specification covering Studio.",
   "artifact_path": "specs/studio.md",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/specs/studio.md",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/specs/studio.md",
   "content_id": "sha256:9e041388f1da9c6b3c40048f3850d7bb61482f4939b25681e2fadc7f05aa8df6",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/specs/studio.md",
     "method": "archive",
     "content_id": "sha256:9e041388f1da9c6b3c40048f3850d7bb61482f4939b25681e2fadc7f05aa8df6",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_protocol-artifact-specs-studio.md.json",
+  "imported_from": "nodes/xananode.canonical_source_protocol-artifact-specs-studio.md.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

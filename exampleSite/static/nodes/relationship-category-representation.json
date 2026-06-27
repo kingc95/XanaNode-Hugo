@@ -116,7 +116,7 @@
   "inverse_color": "#fcd34d",
   "line_style": "solid",
   "inverse_line_style": "dashed",
-  "imported_from": "nodes/schema_relationship-category-representation.json",
+  "imported_from": "nodes/xananode.canonical_schema_relationship-category-representation.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

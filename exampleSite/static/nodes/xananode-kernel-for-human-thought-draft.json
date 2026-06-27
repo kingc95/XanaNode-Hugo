@@ -42,7 +42,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/source_xananode-kernel-for-human-thought-draft.json",
+  "imported_from": "nodes/xananode.canonical_source_xananode-kernel-for-human-thought-draft.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

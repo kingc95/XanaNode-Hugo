@@ -1,10 +1,10 @@
 {
   "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-ro-crate-metadata.json",
-  "title": "Examples / Minimal Substrate / Ro Crate Metadata",
+  "title": "Examples / Minimal Substrate / RO-Crate Metadata",
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 3,
-  "summary": "examples/minimal-substrate/ro-crate-metadata.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "The RO-Crate companion metadata for the minimal substrate example.",
   "artifact_path": "examples/minimal-substrate/ro-crate-metadata.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/ro-crate-metadata.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/examples/minimal-substrate/ro-crate-metadata.json",
   "content_id": "sha256:91de93fab24f24bcc6e3b8e5b0bc9a488a2475383b5f4be37e587b23d161ea44",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/ro-crate-metadata.json",
     "method": "archive",
     "content_id": "sha256:91de93fab24f24bcc6e3b8e5b0bc9a488a2475383b5f4be37e587b23d161ea44",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-examples-minimal-substrate-ro-crate-metadata.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-examples-minimal-substrate-ro-crate-metadata.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

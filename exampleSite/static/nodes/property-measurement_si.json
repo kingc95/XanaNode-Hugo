@@ -51,7 +51,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/schema_property-measurement_si.json",
+  "imported_from": "nodes/xananode.canonical_schema_property-measurement_si.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_artifact_group",
   "importance": 3,
-  "summary": "Protocol files under specs/ preserved inside the canonical substrate.",
+  "summary": "The protocol specifications describing substrate behavior, interoperability, federation, and compatibility.",
   "artifact_path": "specs/",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/specs/",
   "relationships": [
@@ -105,7 +105,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/schema_protocol-artifact-specs.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-specs.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

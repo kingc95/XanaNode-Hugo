@@ -14,7 +14,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/technology_xananode-core-sdk-component-substrate-packs.json",
+  "imported_from": "nodes/xananode.canonical_technology_xananode-core-sdk-component-substrate-packs.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

@@ -1514,7 +1514,7 @@ import {
                 node.file = node.asset_path;
             }
 
-            if (node.type === "media" && node.file && isVisualAsset(node.file, node.media_type)) {
+            if (node.file && isVisualAsset(node.file, node.media_type)) {
                 node.image = node.file;
                 node.image_alt = node.alt || node.image_alt || node.title;
             }
@@ -1523,14 +1523,15 @@ import {
                 const mediaNode = nodesById.get(node.primary_media) || nodesByProtocolId.get(node.primary_media);
 
                 if (mediaNode) {
-                    node.image = mediaNode.file || node.image || "";
+                    const mediaFile = mediaNode.file || mediaNode.asset_path || mediaNode.asset || "";
+                    node.image = mediaFile || node.image || "";
                     node.image_alt = mediaNode.alt || node.image_alt || node.title;
 
                     node.primary_media_node = {
                         id: mediaNode.id,
                         title: mediaNode.title,
                         media_type: mediaNode.media_type || "",
-                        file: mediaNode.file || "",
+                        file: mediaFile,
                         alt: mediaNode.alt || "",
                         caption: mediaNode.caption || "",
                         creator: mediaNode.creator || "",
@@ -1556,8 +1557,8 @@ import {
             if (node.image) {
                 node.image_alt = node.image_alt || node.title;
 
-                if (node.type !== "media") {
-                    node.media_warning = "Legacy image path without media node. Create a media node and set primary_media.";
+                if (!node.media_type && node.type !== "media") {
+                    node.media_warning = "Image asset is present, but media_type is missing. Add media_type when this node directly carries visual media.";
                 }
             }
         });
@@ -3074,7 +3075,7 @@ import {
         const incoming = relatedEdges.filter((edge) => edge.target === node.id);
         const totalConns = outgoing.length + incoming.length;
 
-        const panelMediaType = node.primary_media_node?.media_type || "";
+        const panelMediaType = node.primary_media_node?.media_type || node.media_type || "";
         const panelIsVisual = ["image", "diagram", "screenshot"].includes(panelMediaType) ||
             /\.(svg|png|jpe?g|webp|gif|avif)$/i.test(node.image || "");
 
@@ -3527,7 +3528,7 @@ import {
     function renderPanelImage(node, state) {
         if (!node.image) return "";
 
-        const mediaType = node.primary_media_node?.media_type || "";
+        const mediaType = node.primary_media_node?.media_type || node.media_type || "";
         const src = node.image || "";
 
         // Non-visual media: render a square icon placeholder instead of a broken <img>
@@ -3549,7 +3550,7 @@ import {
                     href="${escapeHtml(linkHref)}"
                     target="_blank"
                     rel="noopener"
-                    title="${escapeHtml(node.primary_media_node?.title || ext + " file")}"
+                    title="${escapeHtml(node.primary_media_node?.title || node.title || ext + " file")}"
                     ${nodeId ? `data-node-jump="${escapeHtml(nodeId)}"` : ""}
                 >
                     ${iconSvg}
@@ -3578,7 +3579,7 @@ import {
         }
 
         return `
-            <div class="xana-node-image-link${node.type === "media" ? "" : " unresolved-media"}">
+            <div class="xana-node-image-link">
                 <img
                     class="${imageClass} xana-node-image--panel"
                     src="${escapeHtml(src)}"
@@ -3589,15 +3590,14 @@ import {
     }
 
     function renderMediaProvenance(node) {
-        if (!node.primary_media_node) return "";
-
-        const media = node.primary_media_node;
+        const media = node.primary_media_node || ((node.image && (node.source_url || node.creator || node.rights_status || node.license_url || node.media_type)) ? node : null);
+        if (!media) return "";
 
         return `
             <div class="xana-media-credit">
                 <a
-                    href="${escapeHtml(nodeHref(media, { allNodes: [media] }))}"
-                    data-node-jump="${escapeHtml(media.id)}"
+                    href="${escapeHtml(media.id ? nodeHref(media, { allNodes: [media] }) : (media.source_url || media.file || media.asset_path || "#"))}"
+                    ${media.id ? `data-node-jump="${escapeHtml(media.id)}"` : ""}
                 >
                     ${escapeHtml(media.title || "Media node")}
                 </a>
@@ -3717,8 +3717,8 @@ import {
             violations.push({ code: "missing_summary", message: "Missing summary." });
         }
 
-        if (node.type !== "media" && node.image && !node.primary_media) {
-            violations.push({ code: "naked_image", message: "Legacy image field without media node. Create a media node and set primary_media." });
+        if (node.type !== "media" && node.image && !node.primary_media && !node.media_type) {
+            violations.push({ code: "naked_image", message: "Image field is present without primary_media or media_type. Add media_type when the node directly carries the asset, or set primary_media when it should point to a separate media node." });
         }
 
         if (node.type === "media") {

@@ -20,7 +20,7 @@
   "status": "asserted",
   "importance": 5,
   "summary": "XanaNode protocol documentation is licensed under CC-BY 4.0 so the docs can be shared and adapted with attribution.",
-  "imported_from": "nodes/claim_protocol-docs-licensed-cc-by-4-0.json",
+  "imported_from": "nodes/xananode.canonical_claim_protocol-docs-licensed-cc-by-4-0.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

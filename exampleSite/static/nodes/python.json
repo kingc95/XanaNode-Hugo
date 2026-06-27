@@ -14,7 +14,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/technology_python.json",
+  "imported_from": "nodes/xananode.canonical_technology_python.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

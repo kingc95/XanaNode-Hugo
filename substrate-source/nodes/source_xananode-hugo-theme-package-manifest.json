@@ -15,7 +15,7 @@
   "content_id": "sha256:96df28f49d1cd70d313a12b015b0f80378948508696a68e68e611872570a8194",
   "content": "{\r\n  \"name\": \"xananode-hugo\",\r\n  \"version\": \"0.1.0\",\r\n  \"private\": true,\r\n  \"license\": \"Apache-2.0\",\r\n  \"type\": \"module\",\r\n  \"scripts\": {\n    \"build:substrate-source\": \"node tools/build-substrate-source.mjs\",\n    \"prepare\": \"node tools/prepare-xananode.mjs exampleSite\",\n    \"validate\": \"node tools/prepare-xananode.mjs exampleSite\",\n    \"example:dev\": \"npm run prepare && hugo server --source exampleSite --themesDir ../..\",\r\n    \"example:build\": \"npm run prepare && hugo --source exampleSite --themesDir ../.. --gc --cleanDestinationDir --minify\",\r\n    \"core:init\": \"git submodule update --init --recursive vendor/xananode-core\",\r\n    \"core:update\": \"git submodule update --init --remote --merge --recursive vendor/xananode-core\",\r\n    \"core:status\": \"git submodule status --recursive vendor/xananode-core\"\r\n  },\r\n  \"dependencies\": {\r\n    \"@xananode/core\": \"file:./vendor/xananode-core\"\r\n  },\r\n  \"devDependencies\": {\r\n    \"ajv\": \"^8.17.1\",\r\n    \"gray-matter\": \"^4.0.3\",\r\n    \"glob\": \"^11.0.0\"\r\n  }\r\n}\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:24:42.948Z",
+    "captured_at": "2026-06-27T07:05:44.386Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/package.json",
     "method": "archive",
     "content_id": "sha256:96df28f49d1cd70d313a12b015b0f80378948508696a68e68e611872570a8194",

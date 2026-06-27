@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 3,
-  "summary": "registry/known-implementations.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A registry artifact covering Known Implementations.",
   "artifact_path": "registry/known-implementations.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/registry/known-implementations.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/registry/known-implementations.json",
   "content_id": "sha256:e233016a166e0ff27e45fc46dc706567dfb0814f747c6d9cbd549fc915bc56ae",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/registry/known-implementations.json",
     "method": "archive",
     "content_id": "sha256:40fad1a6f4f139207a09fe8c98c74b734a6706a21352f8fa8180a139800d58dd",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-registry-known-implementations.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-registry-known-implementations.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

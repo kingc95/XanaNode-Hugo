@@ -8,7 +8,7 @@
   "rights_status": "external",
   "relationships": [
     {
-      "id": "xananode.example:rel/source-creator-documents-xananode-245",
+      "id": "xananode.example:rel/source-creator-documents-xananode-241",
       "type": "documents",
       "target": "xananode.example:concept/xananode",
       "direction": "outgoing"

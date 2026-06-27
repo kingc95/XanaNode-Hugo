@@ -14,7 +14,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/technology_xananode-hugo-theme-component-node-files.json",
+  "imported_from": "nodes/xananode.canonical_technology_xananode-hugo-theme-component-node-files.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

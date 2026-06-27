@@ -43,7 +43,7 @@
   "inverse_color": "#38bdf8",
   "line_style": "dotted",
   "inverse_line_style": "dotted",
-  "imported_from": "nodes/schema_relationship-type-cited_by.json",
+  "imported_from": "nodes/xananode.canonical_schema_relationship-type-cited_by.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

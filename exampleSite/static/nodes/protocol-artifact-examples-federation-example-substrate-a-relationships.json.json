@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 3,
-  "summary": "examples/federation-example/substrate-a/relationships.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "The relationship list for Examples / Federation Example / Substrate A.",
   "artifact_path": "examples/federation-example/substrate-a/relationships.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/federation-example/substrate-a/relationships.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/examples/federation-example/substrate-a/relationships.json",
   "content_id": "sha256:31a3ca9034fc485d42dccc11e26149c325abf8589af45ebf834a7ee948ec0d34",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/federation-example/substrate-a/relationships.json",
     "method": "archive",
     "content_id": "sha256:31a3ca9034fc485d42dccc11e26149c325abf8589af45ebf834a7ee948ec0d34",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-examples-federation-example-substrate-a-relationships.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-examples-federation-example-substrate-a-relationships.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

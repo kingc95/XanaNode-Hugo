@@ -1,10 +1,10 @@
 {
   "id": "xananode.canonical:schema/protocol-artifact-schemas-compatibility-report.schema.json",
-  "title": "Schemas / Compatibility Report.Schema",
+  "title": "Schemas / Compatibility Report Schema",
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 4,
-  "summary": "schemas/compatibility-report.schema.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "The JSON Schema for the compatibility report.",
   "artifact_path": "schemas/compatibility-report.schema.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/compatibility-report.schema.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/schemas/compatibility-report.schema.json",
   "content_id": "sha256:be8ea01644e2468dd965bc7704f0ae3a7ece61943eb4f8b96de4167115297762",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/compatibility-report.schema.json",
     "method": "archive",
     "content_id": "sha256:be8ea01644e2468dd965bc7704f0ae3a7ece61943eb4f8b96de4167115297762",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-schemas-compatibility-report.schema.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-schemas-compatibility-report.schema.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

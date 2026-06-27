@@ -142,7 +142,7 @@
   "build_metadata": {
     "version": "",
     "repository": "kingc95/xananode-hugo",
-    "generated_at": "2026-06-24T22:13:03.638Z",
+    "generated_at": "2026-06-27T06:48:18.461Z",
     "built_by": "@xananode/core",
     "dependencies": [
       {
@@ -175,7 +175,7 @@
     "../schemas/substrate-relationships.schema.json",
     "../examples/minimal-substrate/"
   ],
-  "imported_from": "nodes/project_xananode-hugo-theme.json",
+  "imported_from": "nodes/xananode.canonical_project_xananode-hugo-theme.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

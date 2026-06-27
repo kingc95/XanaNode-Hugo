@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "protocol_document",
   "importance": 3,
-  "summary": "registry/README.md is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A registry artifact covering README.",
   "artifact_path": "registry/README.md",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/registry/README.md",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/registry/README.md",
   "content_id": "sha256:2e57be35097a7f0fba2619f97a5839dca73f3b4ca5ea472523f147a9e6108e74",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/registry/README.md",
     "method": "archive",
     "content_id": "sha256:2e57be35097a7f0fba2619f97a5839dca73f3b4ca5ea472523f147a9e6108e74",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_protocol-artifact-registry-readme.md.json",
+  "imported_from": "nodes/xananode.canonical_source_protocol-artifact-registry-readme.md.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

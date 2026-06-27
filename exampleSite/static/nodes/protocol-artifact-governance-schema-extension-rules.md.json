@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "protocol_document",
   "importance": 3,
-  "summary": "governance/schema-extension-rules.md is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A governance document covering Schema Extension Rules.",
   "artifact_path": "governance/schema-extension-rules.md",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/governance/schema-extension-rules.md",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/governance/schema-extension-rules.md",
   "content_id": "sha256:faf22ba3636ce404d1ceee0e1829c44a87a9b44859eb00bbaec4c0935ee565ab",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/governance/schema-extension-rules.md",
     "method": "archive",
     "content_id": "sha256:faf22ba3636ce404d1ceee0e1829c44a87a9b44859eb00bbaec4c0935ee565ab",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_protocol-artifact-governance-schema-extension-rules.md.json",
+  "imported_from": "nodes/xananode.canonical_source_protocol-artifact-governance-schema-extension-rules.md.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

@@ -60,19 +60,19 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/merge-validation-requires-compatibility-report-229",
+      "id": "xananode.example:rel/merge-validation-requires-compatibility-report-225",
       "type": "requires",
       "target": "xananode.example:concept/compatibility-report",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/civilizational-memory-requires-merge-validation-236",
+      "id": "xananode.example:rel/civilizational-memory-requires-merge-validation-232",
       "type": "requires",
       "source": "xananode.example:concept/civilizational-memory",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/merge-validation-has_claim-claim-merge-without-collapse-242",
+      "id": "xananode.example:rel/merge-validation-has_claim-claim-merge-without-collapse-238",
       "type": "has_claim",
       "target": "xananode.example:claim/claim-merge-without-collapse",
       "direction": "outgoing"

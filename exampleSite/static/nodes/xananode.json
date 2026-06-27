@@ -27,6 +27,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/concept-addressable-fragment-selectors-explains-concept-xananode",
+      "type": "explains",
+      "source": "xananode.canonical:concept/addressable-fragment-selectors",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/concept-self-federating-stack-explains-concept-xananode",
       "type": "explains",
       "source": "xananode.canonical:concept/self-federating-stack",
@@ -171,7 +177,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/concept_xananode.json",
+  "imported_from": "nodes/xananode.canonical_concept_xananode.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

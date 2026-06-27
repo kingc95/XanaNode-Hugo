@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "protocol_document",
   "importance": 4,
-  "summary": "specs/federation.md is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A protocol specification covering Federation.",
   "artifact_path": "specs/federation.md",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/specs/federation.md",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/specs/federation.md",
   "content_id": "sha256:a197a48cf7aba6a0a0cc1a75587edfedeca59676283ee3039710eaddc23bbd6f",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/specs/federation.md",
     "method": "archive",
     "content_id": "sha256:a197a48cf7aba6a0a0cc1a75587edfedeca59676283ee3039710eaddc23bbd6f",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_protocol-artifact-specs-federation.md.json",
+  "imported_from": "nodes/xananode.canonical_source_protocol-artifact-specs-federation.md.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

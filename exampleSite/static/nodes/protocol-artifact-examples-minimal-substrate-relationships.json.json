@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 3,
-  "summary": "examples/minimal-substrate/relationships.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "The relationship list for Examples / Minimal Substrate.",
   "artifact_path": "examples/minimal-substrate/relationships.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/relationships.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/examples/minimal-substrate/relationships.json",
   "content_id": "sha256:c61676a7fd8e82bd034f80ab28fdef5eefd0d4cbc7c205c3d510ad601076c290",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/relationships.json",
     "method": "archive",
     "content_id": "sha256:c61676a7fd8e82bd034f80ab28fdef5eefd0d4cbc7c205c3d510ad601076c290",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-examples-minimal-substrate-relationships.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-examples-minimal-substrate-relationships.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

@@ -58,7 +58,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/essay_xananode-as-a-kernel-for-human-thought.json",
+  "imported_from": "nodes/xananode.canonical_essay_xananode-as-a-kernel-for-human-thought.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

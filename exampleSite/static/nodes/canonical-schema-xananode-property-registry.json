@@ -1,6 +1,6 @@
 {
   "id": "xananode.canonical:schema/canonical-schema-xananode-property-registry",
-  "title": "Xananode Property Registry Schema",
+  "title": "XanaNode Property Registry Schema",
   "type": "schema",
   "subtype": "canonical_schema_record",
   "importance": 5,
@@ -28,14 +28,14 @@
   "asset_role": "canonical_raw_source",
   "content_id": "sha256:5200668eff49a37c9e0af11bfd09a709c17c65f93e1777b7e72dbc75c703411e",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/property-registry.schema.json",
     "method": "archive",
     "content_id": "sha256:74c45259c0200a27c9f879511c8557b33da3b9b6c2f5c34a14c219c89c91a216",
     "rights_status": "canonical-public",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_canonical-schema-xananode-property-registry.json",
+  "imported_from": "nodes/xananode.canonical_schema_canonical-schema-xananode-property-registry.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

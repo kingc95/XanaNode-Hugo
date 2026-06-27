@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "federated_substrate",
   "importance": 5,
-  "summary": "A substrate source built directly from the XanaNode Protocol repository, preserving schemas, registries, specs, governance, raw source files, and protocol-defining documents as first-class XanaNode records.",
+  "summary": "A substrate source built directly from the XanaNode Protocol repository, preserving the protocol's schemas, registries, specs, governance artifacts, and canonical documents while carrying lower-level repository files as attached assets when they do not deserve independent node status.",
   "namespace": "xananode.protocol",
   "status": "canonical",
   "recommended_mode": "mounted",
@@ -43,7 +43,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/source_federated-substrate-xananode.protocol.json",
+  "imported_from": "nodes/xananode.canonical_source_federated-substrate-xananode.protocol.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

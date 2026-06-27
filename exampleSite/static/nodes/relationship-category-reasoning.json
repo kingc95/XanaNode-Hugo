@@ -44,7 +44,7 @@
   "inverse_color": "#c7d2fe",
   "line_style": "dashed",
   "inverse_line_style": "solid",
-  "imported_from": "nodes/schema_relationship-category-reasoning.json",
+  "imported_from": "nodes/xananode.canonical_schema_relationship-category-reasoning.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

@@ -30,13 +30,7 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/custom-extension-substrate-uses-substrate-manifest-226",
-      "type": "uses",
-      "source": "xananode.example:concept/custom-extension-substrate",
-      "direction": "incoming"
-    },
-    {
-      "id": "xananode.example:rel/compatibility-levels-requires-substrate-manifest-231",
+      "id": "xananode.example:rel/compatibility-levels-requires-substrate-manifest-227",
       "type": "requires",
       "source": "xananode.example:concept/compatibility-levels",
       "direction": "incoming"

@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 3,
-  "summary": "examples/minimal-substrate/substrate.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "The substrate manifest for the minimal substrate example.",
   "artifact_path": "examples/minimal-substrate/substrate.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/substrate.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/examples/minimal-substrate/substrate.json",
   "content_id": "sha256:7e022016422780a1d6564862972483fa0f7db8b491fc294fafd09edf4c73a6ac",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/substrate.json",
     "method": "archive",
     "content_id": "sha256:7e022016422780a1d6564862972483fa0f7db8b491fc294fafd09edf4c73a6ac",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-examples-minimal-substrate-substrate.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-examples-minimal-substrate-substrate.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

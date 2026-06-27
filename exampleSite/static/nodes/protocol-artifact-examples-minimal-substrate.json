@@ -21,7 +21,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/schema_protocol-artifact-examples-minimal-substrate.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-examples-minimal-substrate.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

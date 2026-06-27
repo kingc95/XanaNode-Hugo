@@ -96,13 +96,13 @@
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-requires-compatibility-levels-232",
+      "id": "xananode.example:rel/federated-knowledge-substrates-requires-compatibility-levels-228",
       "type": "requires",
       "target": "xananode.example:concept/compatibility-levels",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/federated-knowledge-substrates-enables-civilizational-memory-233",
+      "id": "xananode.example:rel/federated-knowledge-substrates-enables-civilizational-memory-229",
       "type": "enables",
       "target": "xananode.example:concept/civilizational-memory",
       "direction": "outgoing"

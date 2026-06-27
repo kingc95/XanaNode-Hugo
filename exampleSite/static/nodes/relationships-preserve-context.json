@@ -30,15 +30,15 @@
       "direction": "outgoing"
     },
     {
-      "id": "example.minimal:rel/response-answers-question",
-      "type": "answers",
-      "target": "example.minimal:question/why-relationships-matter",
-      "direction": "outgoing"
-    },
-    {
       "id": "example.minimal:rel/response-answered-in-communication",
       "type": "answered_in",
       "target": "example.minimal:communication/minimal-substrate-discussion",
+      "direction": "outgoing"
+    },
+    {
+      "id": "example.minimal:rel/response-answers-question",
+      "type": "answers",
+      "target": "example.minimal:question/why-relationships-matter",
       "direction": "outgoing"
     },
     {

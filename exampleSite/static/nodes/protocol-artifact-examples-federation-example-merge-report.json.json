@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 3,
-  "summary": "examples/federation-example/merge-report.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "The merge report for the federation example.",
   "artifact_path": "examples/federation-example/merge-report.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/federation-example/merge-report.json",
   "media_type": "document",
@@ -13,10 +13,22 @@
   "rights_status": "Apache-2.0",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/concept-memory-substrate-documents-schema-protocol-artifact-examples-federation-example-merge-report.json",
+      "type": "documents",
+      "source": "example.researcher_b:concept/memory-substrate",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-protocol-artifact-examples-contains-schema-protocol-artifact-examples-federation-example-merge-report.json-raw-file-examples-federation-example-merge-report.json",
       "type": "contains",
       "source": "xananode.canonical:schema/protocol-artifact-examples",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-federation-example-merge-report.json-continues_to-schema-protocol-artifact-examples-federation-example-compatibility-report.json",
+      "type": "continues_to",
+      "target": "xananode.canonical:schema/protocol-artifact-examples-federation-example-compatibility-report.json",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-protocol-artifact-examples-federation-example-merge-report.json-documents-concept-protocol-artifacts-raw-file-docs-examples-federation-example-merge-report.json",
@@ -29,14 +41,14 @@
   "asset_path": "assets/raw/protocol/examples/federation-example/merge-report.json",
   "content_id": "sha256:5ef3669d327ba167955d42868fee5e3975fb15d7ecb786ea10d20b8cb3ebad50",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/federation-example/merge-report.json",
     "method": "archive",
     "content_id": "sha256:5ef3669d327ba167955d42868fee5e3975fb15d7ecb786ea10d20b8cb3ebad50",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-examples-federation-example-merge-report.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-examples-federation-example-merge-report.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

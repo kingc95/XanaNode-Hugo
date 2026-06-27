@@ -20,16 +20,16 @@
       "direction": "outgoing"
     },
     {
-      "id": "example.minimal:rel/maintainer-created-intro-essay",
-      "type": "created",
-      "source": "example.minimal:person/example-maintainer",
-      "direction": "incoming"
-    },
-    {
       "id": "example.minimal:rel/essay-transcludes-fragment",
       "type": "transcludes",
       "target": "example.minimal:fragment/as-we-may-think-0004",
       "direction": "outgoing"
+    },
+    {
+      "id": "example.minimal:rel/maintainer-created-intro-essay",
+      "type": "created",
+      "source": "example.minimal:person/example-maintainer",
+      "direction": "incoming"
     }
   ],
   "imported_from": "nodes/essay-relationship-navigation-intro.json",

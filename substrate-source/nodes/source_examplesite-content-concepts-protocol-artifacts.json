@@ -15,7 +15,7 @@
   "content_id": "sha256:77ea2df6df594323fc8d1ee95af116ddff62a2382c9ec101e83a459a0fbf317a",
   "content": "---\r\ntitle: \"Protocol Artifacts\"\r\ntype: \"concept\"\r\nimportance: 5\r\nsummary: \"The machine-readable files and reports that let a XanaNode substrate be validated, compared, merged, and federated.\"\r\nrelationships:\r\n  - type: \"defined_by\"\r\n    target: \"xananode-core-schema\"\r\n  - type: \"contains\"\r\n    target: \"substrate-manifest\"\r\n  - type: \"contains\"\r\n    target: \"substrate-node-record\"\r\n  - type: \"contains\"\r\n    target: \"substrate-relationship-list\"\r\n  - type: \"contains\"\r\n    target: \"review-suggestions\"\r\n  - type: \"required_for\"\r\n    target: \"federated-knowledge-substrates\"\r\n---\r\n\r\nThe protocol is not only a set of ideas. It is a set of publishable artifacts.\r\n\r\nA published substrate can expose those artifacts as static JSON: `substrate.json`, `relationships.json`, one JSON record per node, schema files, fragment data, and pending [review suggestions](/node/review-suggestions).\r\n\r\nHuman pages make the substrate readable. [Protocol artifacts](xananode.canonical:concept/protocol-artifacts) make it inspectable, validatable, comparable, and federatable by other tools.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:24:42.948Z",
+    "captured_at": "2026-06-27T07:05:44.386Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/protocol-artifacts.md",
     "method": "archive",
     "content_id": "sha256:77ea2df6df594323fc8d1ee95af116ddff62a2382c9ec101e83a459a0fbf317a",

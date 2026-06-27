@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "protocol_document",
   "importance": 3,
-  "summary": "examples/minimal-substrate/README.md is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "The README for Examples / Minimal Substrate.",
   "artifact_path": "examples/minimal-substrate/README.md",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/README.md",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/examples/minimal-substrate/README.md",
   "content_id": "sha256:f79ef045ea95cdee1511be66dca29b3ae6b3d944b98f3d9fb6645e8c9216a6b8",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/README.md",
     "method": "archive",
     "content_id": "sha256:f79ef045ea95cdee1511be66dca29b3ae6b3d944b98f3d9fb6645e8c9216a6b8",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_protocol-artifact-examples-minimal-substrate-readme.md.json",
+  "imported_from": "nodes/xananode.canonical_source_protocol-artifact-examples-minimal-substrate-readme.md.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

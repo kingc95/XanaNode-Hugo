@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 3,
-  "summary": "examples/minimal-substrate/author-profile.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "The example author profile used by the minimal substrate fixture.",
   "artifact_path": "examples/minimal-substrate/author-profile.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/author-profile.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/examples/minimal-substrate/author-profile.json",
   "content_id": "sha256:9663891d09582c1e5af0dedae6f811ea5aae883eae0e77137b3a451f07cdbae7",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/minimal-substrate/author-profile.json",
     "method": "archive",
     "content_id": "sha256:9663891d09582c1e5af0dedae6f811ea5aae883eae0e77137b3a451f07cdbae7",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-examples-minimal-substrate-author-profile.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-examples-minimal-substrate-author-profile.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

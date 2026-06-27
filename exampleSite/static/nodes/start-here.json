@@ -24,15 +24,15 @@
       "direction": "outgoing"
     },
     {
-      "id": "example.minimal:rel/trail-starts-with-source",
-      "type": "starts_with",
-      "target": "example.minimal:source/as-we-may-think",
-      "direction": "outgoing"
-    },
-    {
       "id": "example.minimal:rel/trail-includes-associative-trails",
       "type": "features",
       "target": "example.minimal:concept/associative-trails",
+      "direction": "outgoing"
+    },
+    {
+      "id": "example.minimal:rel/trail-starts-with-source",
+      "type": "starts_with",
+      "target": "example.minimal:source/as-we-may-think",
       "direction": "outgoing"
     },
     {

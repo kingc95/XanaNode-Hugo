@@ -8,7 +8,7 @@
   "source_url": "https://gohugo.io/",
   "rights_status": "external",
   "relationships": [],
-  "imported_from": "nodes/source_hugo-official-site.json",
+  "imported_from": "nodes/xananode.canonical_source_hugo-official-site.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

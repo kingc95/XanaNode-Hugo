@@ -27,14 +27,14 @@
   ],
   "content_id": "sha256:1017913454ae9bf485b575abca9137209a171394f496237f319d6988058ffa65",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/governance.svg",
     "method": "archive",
     "content_id": "sha256:1017913454ae9bf485b575abca9137209a171394f496237f319d6988058ffa65",
     "rights_status": "open-source",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/media_relationship-category-governance-projection-icon.json",
+  "imported_from": "nodes/xananode.canonical_media_relationship-category-governance-projection-icon.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

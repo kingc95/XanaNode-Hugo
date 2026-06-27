@@ -27,14 +27,14 @@
   ],
   "content_id": "sha256:d87f0cf0457e32b99c9a692191e4aa027e4c6d5da6e8b26af2885fab8ece44ed",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-categories/research_workflow.svg",
     "method": "archive",
     "content_id": "sha256:d87f0cf0457e32b99c9a692191e4aa027e4c6d5da6e8b26af2885fab8ece44ed",
     "rights_status": "open-source",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/media_relationship-category-research_workflow-projection-icon.json",
+  "imported_from": "nodes/xananode.canonical_media_relationship-category-research_workflow-projection-icon.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

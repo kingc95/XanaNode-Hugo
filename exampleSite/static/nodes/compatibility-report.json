@@ -36,19 +36,19 @@
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/compatibility-report-documents-compatibility-levels-228",
+      "id": "xananode.example:rel/compatibility-report-documents-compatibility-levels-224",
       "type": "documents",
       "target": "xananode.example:concept/compatibility-levels",
       "direction": "outgoing"
     },
     {
-      "id": "xananode.example:rel/merge-validation-requires-compatibility-report-229",
+      "id": "xananode.example:rel/merge-validation-requires-compatibility-report-225",
       "type": "requires",
       "source": "xananode.example:concept/merge-validation",
       "direction": "incoming"
     },
     {
-      "id": "xananode.example:rel/compatibility-levels-uses-compatibility-report-230",
+      "id": "xananode.example:rel/compatibility-levels-uses-compatibility-report-226",
       "type": "uses",
       "source": "xananode.example:concept/compatibility-levels",
       "direction": "incoming"

@@ -19,7 +19,7 @@
   "subtype": "distinction",
   "importance": 4,
   "summary": "An open source license family that allows broad reuse, modification, distribution, and commercial adoption with limited obligations.",
-  "imported_from": "nodes/concept_permissive-open-source-license.json",
+  "imported_from": "nodes/xananode.canonical_concept_permissive-open-source-license.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

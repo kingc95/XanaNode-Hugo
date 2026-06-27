@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_artifact_group",
   "importance": 3,
-  "summary": "Protocol files under schemas/ preserved inside the canonical substrate.",
+  "summary": "The canonical schemas and machine-readable validation artifacts published by the XanaNode protocol.",
   "artifact_path": "schemas/",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/",
   "relationships": [
@@ -135,7 +135,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/schema_protocol-artifact-schemas.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-schemas.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

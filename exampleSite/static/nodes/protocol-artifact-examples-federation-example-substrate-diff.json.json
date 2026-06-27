@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 3,
-  "summary": "examples/federation-example/substrate-diff.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "The structural diff produced by comparing the federation example substrates.",
   "artifact_path": "examples/federation-example/substrate-diff.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/federation-example/substrate-diff.json",
   "media_type": "document",
@@ -19,6 +19,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/schema-protocol-artifact-examples-federation-example-compatibility-report.json-continues_to-schema-protocol-artifact-examples-federation-example-substrate-diff.json",
+      "type": "continues_to",
+      "source": "xananode.canonical:schema/protocol-artifact-examples-federation-example-compatibility-report.json",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-protocol-artifact-examples-federation-example-substrate-diff.json-documents-concept-protocol-artifacts-raw-file-docs-examples-federation-example-substrate-diff.json",
       "type": "documents",
       "target": "xananode.canonical:concept/protocol-artifacts",
@@ -29,14 +35,14 @@
   "asset_path": "assets/raw/protocol/examples/federation-example/substrate-diff.json",
   "content_id": "sha256:b171629889cb8036138939eff5b98f5f1e147d0ae91adb26b028240874dcb78c",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/federation-example/substrate-diff.json",
     "method": "archive",
     "content_id": "sha256:b171629889cb8036138939eff5b98f5f1e147d0ae91adb26b028240874dcb78c",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-examples-federation-example-substrate-diff.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-examples-federation-example-substrate-diff.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

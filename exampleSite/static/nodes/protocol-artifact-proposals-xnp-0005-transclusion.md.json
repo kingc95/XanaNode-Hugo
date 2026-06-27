@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "protocol_document",
   "importance": 3,
-  "summary": "proposals/XNP-0005-transclusion.md is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A XanaNode proposal covering XNP 0005 Transclusion.",
   "artifact_path": "proposals/XNP-0005-transclusion.md",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/proposals/XNP-0005-transclusion.md",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/proposals/XNP-0005-transclusion.md",
   "content_id": "sha256:398aa00de8a8e7b71ae9af6271f4c06d43c0546707b346c8ae299993e3f3e7a7",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/proposals/XNP-0005-transclusion.md",
     "method": "archive",
     "content_id": "sha256:398aa00de8a8e7b71ae9af6271f4c06d43c0546707b346c8ae299993e3f3e7a7",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_protocol-artifact-proposals-xnp-0005-transclusion.md.json",
+  "imported_from": "nodes/xananode.canonical_source_protocol-artifact-proposals-xnp-0005-transclusion.md.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

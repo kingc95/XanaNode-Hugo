@@ -15,7 +15,7 @@
   "content_id": "sha256:c55cce6d1fe69a7b1854fd7544f0382ab83dc8c7a92b08cd127557d5ff752afe",
   "content": "---\ntitle: \"Substrate Manifest\"\ntype: \"concept\"\nimportance: 5\nsummary: \"The root metadata file that identifies a substrate, its namespace, version, schema version, imports, maintainers, and extension declarations.\"\nrelationships:\n  - type: \"requires\"\n    target: \"namespacing\"\n---\n\n`substrate.json` is the first file another tool should read.\n\nIt identifies the substrate, namespace, substrate version, targeted core schema version, imports, maintainers, and extension declarations.\n\nThis theme generates `substrate.json` during preparation so the human site and machine-readable substrate stay aligned.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:24:42.948Z",
+    "captured_at": "2026-06-27T07:05:44.386Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/substrate-manifest.md",
     "method": "archive",
     "content_id": "sha256:c55cce6d1fe69a7b1854fd7544f0382ab83dc8c7a92b08cd127557d5ff752afe",

@@ -44,14 +44,14 @@
   "asset_role": "canonical_raw_source",
   "content_id": "sha256:daf662fca1d1ec595a2302e4edc28559e3398b243ece831c36d3b7807590626f",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/TRADEMARK.md",
     "method": "archive",
     "content_id": "sha256:920cc1e4e4719f3383ec0c50e4eafba89f848b730b4d297b3a22ab576edde81c",
     "rights_status": "canonical-public",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_xananode-trademark-policy.json",
+  "imported_from": "nodes/xananode.canonical_source_xananode-trademark-policy.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

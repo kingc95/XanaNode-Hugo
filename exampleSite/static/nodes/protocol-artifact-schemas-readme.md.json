@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "protocol_document",
   "importance": 4,
-  "summary": "schemas/README.md is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A canonical schema or registry artifact published as README.",
   "artifact_path": "schemas/README.md",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/README.md",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/schemas/README.md",
   "content_id": "sha256:dd085f93c87166a671d409a35823ebe52037ba0055fa6e63bc81e5ed2ba81481",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/README.md",
     "method": "archive",
     "content_id": "sha256:dd085f93c87166a671d409a35823ebe52037ba0055fa6e63bc81e5ed2ba81481",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_protocol-artifact-schemas-readme.md.json",
+  "imported_from": "nodes/xananode.canonical_source_protocol-artifact-schemas-readme.md.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

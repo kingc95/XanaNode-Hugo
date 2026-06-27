@@ -31,7 +31,7 @@
   "subtype": "principle",
   "importance": 4,
   "summary": "A license that grants broad public permission to use, share, adapt, or implement a work while preserving stated conditions such as attribution or notices.",
-  "imported_from": "nodes/concept_open-license.json",
+  "imported_from": "nodes/xananode.canonical_concept_open-license.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

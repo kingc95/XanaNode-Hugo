@@ -27,7 +27,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/claim_local-first-without-federation-is-not-enough.json",
+  "imported_from": "nodes/xananode.canonical_claim_local-first-without-federation-is-not-enough.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

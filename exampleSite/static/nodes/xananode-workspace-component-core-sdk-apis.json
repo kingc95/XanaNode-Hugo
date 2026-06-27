@@ -14,7 +14,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/technology_xananode-workspace-component-core-sdk-apis.json",
+  "imported_from": "nodes/xananode.canonical_technology_xananode-workspace-component-core-sdk-apis.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

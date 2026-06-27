@@ -38,7 +38,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/fragment_xananode-kernel-thought-0003.json",
+  "imported_from": "nodes/xananode.canonical_fragment_xananode-kernel-thought-0003.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

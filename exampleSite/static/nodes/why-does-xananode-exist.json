@@ -26,7 +26,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/question_why-does-xananode-exist.json",
+  "imported_from": "nodes/xananode.canonical_question_why-does-xananode-exist.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

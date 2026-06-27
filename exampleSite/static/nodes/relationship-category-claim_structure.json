@@ -44,7 +44,7 @@
   "inverse_color": "#fda4af",
   "line_style": "solid",
   "inverse_line_style": "dashed",
-  "imported_from": "nodes/schema_relationship-category-claim_structure.json",
+  "imported_from": "nodes/xananode.canonical_schema_relationship-category-claim_structure.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

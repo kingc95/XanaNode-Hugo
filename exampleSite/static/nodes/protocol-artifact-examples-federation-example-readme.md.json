@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "protocol_document",
   "importance": 3,
-  "summary": "examples/federation-example/README.md is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "The README for Examples / Federation Example.",
   "artifact_path": "examples/federation-example/README.md",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/federation-example/README.md",
   "media_type": "document",
@@ -25,18 +25,18 @@
       "direction": "outgoing"
     }
   ],
-  "content": "# Federation Example\n\nThis example shows how two independently authored substrates can be compared without forcing a single source of truth.\n\n- `substrate-a/` models \"knowledge substrate\" as a concept.\n- `substrate-b/` models \"memory substrate\" as a similar concept.\n- each substrate records an outbound `possible_match` relationship to the other substrate's local concept.\n- `merge-report.json` records the result of a federation/merge pass, including the decision not to collapse the two concepts.\n- `compatibility-report.json` records the practical compatibility level reached by the example.\n\nThe merge report does not overwrite either substrate. It creates mapping claims and compatibility notes so the two graphs can be analyzed together.\n",
+  "content": "# Federation Example\n\nThis example shows how two independently authored substrates can be compared and partially merged without forcing a single source of truth.\n\n- `substrate-a/` models \"knowledge substrate\" as a concept.\n- `substrate-b/` models \"memory substrate\" as a similar concept.\n- `review-workspace/` shows the temporary mounted review state where both concepts stay visible together with their possible-match overlap.\n- each substrate records an outbound `possible_match` relationship to the other substrate's local concept.\n- `merge-report.json` records the result of a federation/merge pass, including the decision to preserve both local concepts instead of collapsing them.\n- `compatibility-report.json` records the practical compatibility level reached by the example.\n- `substrate-diff.json` shows the exact node and relationship additions that appear when the two substrates are analyzed together.\n\nThe merge report does not overwrite either substrate. It records a reviewable mapping, keeps both local nodes intact, and makes the overlap explicit enough for tools to compare, mount, inspect, or later merge with human approval. The review workspace exists so the example does not stop at prose about merge behavior; it also shows an openable temporary substrate where the overlap is already visible.\n",
   "asset_path": "assets/raw/protocol/examples/federation-example/README.md",
   "content_id": "sha256:2189af21476cb584b5115b722863a872ca3cee3645e28966d617cdb02747b603",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/federation-example/README.md",
     "method": "archive",
-    "content_id": "sha256:2189af21476cb584b5115b722863a872ca3cee3645e28966d617cdb02747b603",
+    "content_id": "sha256:374ef31120c43c6748b888265d3213caaea8420668f76e850887bd401e7c7eb2",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_protocol-artifact-examples-federation-example-readme.md.json",
+  "imported_from": "nodes/xananode.canonical_source_protocol-artifact-examples-federation-example-readme.md.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

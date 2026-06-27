@@ -13,7 +13,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/organization_built-by-bots.json",
+  "imported_from": "nodes/xananode.canonical_organization_built-by-bots.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

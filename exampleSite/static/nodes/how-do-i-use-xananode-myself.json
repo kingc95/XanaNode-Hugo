@@ -38,7 +38,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/question_how-do-i-use-xananode-myself.json",
+  "imported_from": "nodes/xananode.canonical_question_how-do-i-use-xananode-myself.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

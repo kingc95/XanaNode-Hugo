@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:trail/federation-merge-proof",
+  "title": "Federation Merge Proof",
+  "type": "trail",
+  "subtype": "evidence_path",
+  "importance": 5,
+  "summary": "A short trail showing how XanaNode records overlap between two substrates without flattening their differences.",
+  "content": "This trail walks through the federation example itself. Start with the two local concepts, follow the possible-match overlap, then inspect the merge report, compatibility report, and diff. The important point is that the protocol does not force one concept to replace the other. It makes the overlap explicit, reviewable, and preservable.",
+  "nodes": [
+    "example.researcher_a:concept/knowledge-substrate",
+    "example.researcher_b:concept/memory-substrate",
+    "xananode.canonical:claim/possible-match-preserves-local-identity-until-review",
+    "xananode.canonical:schema/protocol-artifact-examples-federation-example-merge-report.json",
+    "xananode.canonical:schema/protocol-artifact-examples-federation-example-compatibility-report.json",
+    "xananode.canonical:schema/protocol-artifact-examples-federation-example-substrate-diff.json"
+  ],
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/trail-federation-merge-proof-continues_to-concept-knowledge-substrate",
+      "type": "continues_to",
+      "target": "example.researcher_a:concept/knowledge-substrate",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/trail-federation-merge-proof-explains-concept-non-destructive-merge-review",
+      "type": "explains",
+      "target": "xananode.canonical:concept/non-destructive-merge-review",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/trail-federation-merge-proof-starts_with-claim-possible-match-preserves-local-identity-until-review",
+      "type": "starts_with",
+      "target": "xananode.canonical:claim/possible-match-preserves-local-identity-until-review",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_trail_federation-merge-proof.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

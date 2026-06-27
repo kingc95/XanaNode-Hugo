@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "protocol_document",
   "importance": 3,
-  "summary": "governance/canonical-type-policy.md is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A governance document covering Canonical Type Policy.",
   "artifact_path": "governance/canonical-type-policy.md",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/governance/canonical-type-policy.md",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/governance/canonical-type-policy.md",
   "content_id": "sha256:52aec3764ac7edef089f6dbd4782dd902dce04e2c5d388d5fceaaa62c24ad9ad",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/governance/canonical-type-policy.md",
     "method": "archive",
     "content_id": "sha256:52aec3764ac7edef089f6dbd4782dd902dce04e2c5d388d5fceaaa62c24ad9ad",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_protocol-artifact-governance-canonical-type-policy.md.json",
+  "imported_from": "nodes/xananode.canonical_source_protocol-artifact-governance-canonical-type-policy.md.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

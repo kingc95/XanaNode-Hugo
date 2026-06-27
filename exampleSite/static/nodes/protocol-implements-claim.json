@@ -9,7 +9,7 @@
   "target_node": "xananode.canonical:claim/relationships-preserve-knowledge",
   "relationship_type": "implements",
   "relationships": [],
-  "imported_from": "nodes/relationship_protocol-implements-claim.json",
+  "imported_from": "nodes/xananode.canonical_relationship_protocol-implements-claim.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

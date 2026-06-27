@@ -1,10 +1,10 @@
 {
   "id": "xananode.canonical:schema/protocol-artifact-schemas-xananode-node-types.schema.v0.3.0.json",
-  "title": "Schemas / Xananode Node Types.Schema.V0.3.0",
+  "title": "Schemas / XanaNode Node Types Schema v0.3.0",
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 4,
-  "summary": "schemas/xananode-node-types.schema.v0.3.0.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "The JSON Schema for XanaNode Node Types Schema v0.3.0.",
   "artifact_path": "schemas/xananode-node-types.schema.v0.3.0.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/xananode-node-types.schema.v0.3.0.json",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/schemas/xananode-node-types.schema.v0.3.0.json",
   "content_id": "sha256:6f038080085a297c4d44de43617dc8ac621c433b28c63a1b4aa8d67e10c3ec5b",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/schemas/xananode-node-types.schema.v0.3.0.json",
     "method": "archive",
     "content_id": "sha256:6f038080085a297c4d44de43617dc8ac621c433b28c63a1b4aa8d67e10c3ec5b",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-schemas-xananode-node-types.schema.v0.3.0.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-schemas-xananode-node-types.schema.v0.3.0.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

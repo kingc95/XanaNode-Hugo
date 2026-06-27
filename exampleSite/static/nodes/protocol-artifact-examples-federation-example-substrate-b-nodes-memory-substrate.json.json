@@ -4,7 +4,7 @@
   "type": "schema",
   "subtype": "protocol_json_artifact",
   "importance": 3,
-  "summary": "examples/federation-example/substrate-b/nodes/memory-substrate.json is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A node record from examples/federation-example/substrate-b.",
   "artifact_path": "examples/federation-example/substrate-b/nodes/memory-substrate.json",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/federation-example/substrate-b/nodes/memory-substrate.json",
   "media_type": "document",
@@ -25,18 +25,18 @@
       "direction": "outgoing"
     }
   ],
-  "content": "{\n  \"id\": \"example.researcher_b:concept/memory-substrate\",\n  \"title\": \"Memory Substrate\",\n  \"type\": \"concept\",\n  \"importance\": 4,\n  \"summary\": \"A system for preserving context, lineage, and navigable memory over time.\",\n  \"relationships\": [\n    {\n      \"id\": \"example.researcher_b:rel/memory-substrate-possible-match-knowledge-substrate\",\n      \"type\": \"possible_match\",\n      \"target\": \"example.researcher_a:concept/knowledge-substrate\",\n      \"direction\": \"outgoing\",\n      \"external\": true,\n      \"target_substrate\": \"example.researcher_a\"\n    }\n  ]\n}\n",
+  "content": "{\n  \"id\": \"example.researcher_b:concept/memory-substrate\",\n  \"title\": \"Memory Substrate\",\n  \"type\": \"concept\",\n  \"importance\": 4,\n  \"summary\": \"A system for preserving context, lineage, and navigable memory over time.\",\n  \"aliases\": [\n    \"Knowledge Substrate\",\n    \"Relationship-Preserving Memory Structure\"\n  ],\n  \"relationships\": [\n    {\n      \"id\": \"example.researcher_b:rel/memory-substrate-possible-match-knowledge-substrate\",\n      \"type\": \"possible_match\",\n      \"target\": \"example.researcher_a:concept/knowledge-substrate\",\n      \"direction\": \"outgoing\",\n      \"external\": true,\n      \"target_substrate\": \"example.researcher_a\"\n    }\n  ]\n}\n",
   "asset_path": "assets/raw/protocol/examples/federation-example/substrate-b/nodes/memory-substrate.json",
   "content_id": "sha256:cebdfc6609bcd32591521e46b11490f859c66b97729461ccc00185c111ec6c8f",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/examples/federation-example/substrate-b/nodes/memory-substrate.json",
     "method": "archive",
-    "content_id": "sha256:cebdfc6609bcd32591521e46b11490f859c66b97729461ccc00185c111ec6c8f",
+    "content_id": "sha256:40ef6943fe330dcfbc0a27ac6f0ebce4341f378663bcaf682d8cdb1436ecef4f",
     "rights_status": "Apache-2.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_protocol-artifact-examples-federation-example-substrate-b-nodes-memory-substrate.json.json",
+  "imported_from": "nodes/xananode.canonical_schema_protocol-artifact-examples-federation-example-substrate-b-nodes-memory-substrate.json.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

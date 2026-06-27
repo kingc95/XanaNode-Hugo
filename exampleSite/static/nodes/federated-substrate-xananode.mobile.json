@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "federated_substrate",
   "importance": 4,
-  "summary": "A substrate source built directly from the XanaNode Mobile repository, preserving the Android companion app, Compose screens, intake flows, mobile assets, verifier bridge scripts, and raw project documents as first-class XanaNode records.",
+  "summary": "A substrate source built directly from the XanaNode Mobile repository, preserving the mobile application's identity, capture workflows, and key documents while carrying lower-level implementation files as attached assets unless they have independent semantic weight.",
   "namespace": "xananode.mobile",
   "status": "official",
   "recommended_mode": "mounted",
@@ -42,7 +42,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/source_federated-substrate-xananode.mobile.json",
+  "imported_from": "nodes/xananode.canonical_source_federated-substrate-xananode.mobile.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

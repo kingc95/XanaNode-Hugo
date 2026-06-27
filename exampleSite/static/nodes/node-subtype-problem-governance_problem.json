@@ -23,7 +23,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/schema_node-subtype-problem-governance_problem.json",
+  "imported_from": "nodes/xananode.canonical_schema_node-subtype-problem-governance_problem.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

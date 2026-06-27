@@ -92,7 +92,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/schema_property-geo_coordinates.json",
+  "imported_from": "nodes/xananode.canonical_schema_property-geo_coordinates.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

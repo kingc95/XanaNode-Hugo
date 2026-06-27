@@ -15,7 +15,6 @@ nodes:
   - known-implementations-registry
   - review-suggestions
   - canonical-type-policy
-  - custom-extension-substrate
   - federation-example
   - federation-rules
 relationships:
@@ -35,7 +34,7 @@ relationships:
 
 This trail follows the artifacts a [XanaNode](/node/xananode) implementation publishes or consumes.
 
-It begins with the manifest, node records, and relationship list, then moves through compatibility reports, merge reports, registries, extension policy, custom extensions, federation examples, and governance rules.
+It begins with the manifest, node records, and relationship list, then moves through compatibility reports, merge reports, registries, extension policy, federation examples, and governance rules.
 
 {{< node ref="protocol-artifacts" >}}
 {{< node ref="substrate-manifest" >}}
@@ -48,6 +47,5 @@ It begins with the manifest, node records, and relationship list, then moves thr
 {{< node ref="known-implementations-registry" >}}
 {{< node ref="review-suggestions" >}}
 {{< node ref="canonical-type-policy" >}}
-{{< node ref="custom-extension-substrate" >}}
 {{< node ref="federation-example" >}}
 {{< node ref="federation-rules" >}}

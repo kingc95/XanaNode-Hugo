@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "protocol_document",
   "importance": 3,
-  "summary": "proposals/XNP-0007-git-backed-substrates.md is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A XanaNode proposal covering XNP 0007 Git Backed Substrates.",
   "artifact_path": "proposals/XNP-0007-git-backed-substrates.md",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/proposals/XNP-0007-git-backed-substrates.md",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/proposals/XNP-0007-git-backed-substrates.md",
   "content_id": "sha256:b24c29fbe0a89e6b6d6ba67997a6e674e4fe5ba2811bdf4f858255aedb295c6d",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/proposals/XNP-0007-git-backed-substrates.md",
     "method": "archive",
     "content_id": "sha256:b24c29fbe0a89e6b6d6ba67997a6e674e4fe5ba2811bdf4f858255aedb295c6d",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_protocol-artifact-proposals-xnp-0007-git-backed-substrates.md.json",
+  "imported_from": "nodes/xananode.canonical_source_protocol-artifact-proposals-xnp-0007-git-backed-substrates.md.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

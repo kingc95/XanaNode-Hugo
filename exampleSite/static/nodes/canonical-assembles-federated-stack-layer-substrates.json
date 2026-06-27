@@ -26,7 +26,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/claim_canonical-assembles-federated-stack-layer-substrates.json",
+  "imported_from": "nodes/xananode.canonical_claim_canonical-assembles-federated-stack-layer-substrates.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

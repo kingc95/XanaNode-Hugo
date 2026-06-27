@@ -27,7 +27,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/claim_projections-are-lenses-over-a-stable-substrate.json",
+  "imported_from": "nodes/xananode.canonical_claim_projections-are-lenses-over-a-stable-substrate.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

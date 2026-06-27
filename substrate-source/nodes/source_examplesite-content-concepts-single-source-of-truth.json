@@ -15,7 +15,7 @@
   "content_id": "sha256:eea3f35d7df729a0aa0f2cb90840595c5128700668819ac21b5739e7e779c667",
   "content": "---\ntitle: \"Single Source of Truth\"\ntype: \"concept\"\nimportance: 4\nsummary: \"A centralized model where one canonical location or authority controls what is treated as valid.\"\nrelationships:\n  - type: \"contrasts_with\"\n    target: \"federated-knowledge-substrates\"\n  - type: \"threatens\"\n    target: \"independent-moderation\"\n  - type: \"alternative_to\"\n    target: \"knowledge-substrate\"\n---\n\nSingle-source-of-truth systems are useful when consensus, control, and simplicity matter.\n\nThey become fragile when knowledge is disputed, partial, culturally specific, politically sensitive, or evolving.\n\n[XanaNode](/node/xananode) favors interoperable sources of context over one enforced source of truth.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:24:42.948Z",
+    "captured_at": "2026-06-27T07:05:44.386Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/single-source-of-truth.md",
     "method": "archive",
     "content_id": "sha256:eea3f35d7df729a0aa0f2cb90840595c5128700668819ac21b5739e7e779c667",

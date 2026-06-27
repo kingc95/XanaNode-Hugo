@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "protocol_document",
   "importance": 3,
-  "summary": "governance/dispute-resolution.md is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A governance document covering Dispute Resolution.",
   "artifact_path": "governance/dispute-resolution.md",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/governance/dispute-resolution.md",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/governance/dispute-resolution.md",
   "content_id": "sha256:ce5f64b3bd7d9d47b1314a3431aa0d9195482f3c73a3ed87c32f0b6b2d6bce2d",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/governance/dispute-resolution.md",
     "method": "archive",
     "content_id": "sha256:ce5f64b3bd7d9d47b1314a3431aa0d9195482f3c73a3ed87c32f0b6b2d6bce2d",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_protocol-artifact-governance-dispute-resolution.md.json",
+  "imported_from": "nodes/xananode.canonical_source_protocol-artifact-governance-dispute-resolution.md.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

@@ -15,7 +15,7 @@
   "content_id": "sha256:bc8b7146d85f913a782fd9ec9f78445388fc3673d751a51b4d2da229fdfa2b1e",
   "content": "{{ $id := .Get \"ref\" | default (.Get 0) }}\n{{ $target := false }}\n\n{{ range site.RegularPages }}\n  {{ $nodeID := .Params.node_id | default .File.ContentBaseName }}\n  {{ if eq $nodeID $id }}\n    {{ $target = . }}\n  {{ end }}\n{{ end }}\n\n{{ if $target }}\n  <div class=\"xana-inline-node\" data-node-ref=\"{{ $id }}\">\n    <p class=\"xana-inline-type\">\n      {{ $target.Params.node_type | default $target.Params.type | default $target.Section }}\n    </p>\n    <h3>\n      <a href=\"{{ $target.RelPermalink }}\">{{ $target.Title }}</a>\n    </h3>\n    {{ with $target.Params.summary }}\n      <p>{{ . }}</p>\n    {{ end }}\n  </div>\n{{ else }}\n  <div class=\"xana-inline-node missing\">\n    <p>Missing node: {{ $id }}</p>\n  </div>\n{{ end }}\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:24:42.948Z",
+    "captured_at": "2026-06-27T07:05:44.386Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/layouts/shortcodes/node.html",
     "method": "archive",
     "content_id": "sha256:bc8b7146d85f913a782fd9ec9f78445388fc3673d751a51b4d2da229fdfa2b1e",

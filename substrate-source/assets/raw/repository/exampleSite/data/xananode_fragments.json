@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T08:58:32.392Z",
+  "generated_at": "2026-06-25T21:38:04.503Z",
   "nodes": {
     "xananode-implementation-stack-trail": {
       "versions": {
@@ -45,15 +45,15 @@
       "versions": {
         "v1": {
           "fragments": {
-            "1": "This trail follows the artifacts a XanaNode implementation publishes or consumes. It begins with the manifest, node records, and relationship list, then moves through compatibility reports, merge reports, registries, extension policy, custom extensions, federation examples, and governance rules. {{< node ref=\"protocol artifacts\" }} {{< node ref=\"substrate manifest\" }} {{< node ref=\"substrate node record\" }} {{< node ref=\"substrate relationship list\" }} {{< node ref=\"compatibility levels\" }} {{< node ref=\"compatibility report\" }} {{< node ref=\"merge report\" }} {{< node ref=\"namespace registry\" }} {{< node ref=\"known implementations registry\" }} {{< node ref=\"review suggestions\" }} {{< node ref=\"canonical type policy\" }} {{< node ref=\"custom extension substrate\" }} {{< node ref=\"federation example\" }} {{< node ref=\"federation rules\" }}",
-            "0001": "This trail follows the artifacts a XanaNode implementation publishes or consumes. It begins with the manifest, node records, and relationship list, then moves through compatibility reports, merge reports, registries, extension policy, custom extensions, federation examples, and governance rules. {{< node ref=\"protocol artifacts\" }} {{< node ref=\"substrate manifest\" }} {{< node ref=\"substrate node record\" }} {{< node ref=\"substrate relationship list\" }} {{< node ref=\"compatibility levels\" }} {{< node ref=\"compatibility report\" }} {{< node ref=\"merge report\" }} {{< node ref=\"namespace registry\" }} {{< node ref=\"known implementations registry\" }} {{< node ref=\"review suggestions\" }} {{< node ref=\"canonical type policy\" }} {{< node ref=\"custom extension substrate\" }} {{< node ref=\"federation example\" }} {{< node ref=\"federation rules\" }}"
+            "1": "This trail follows the artifacts a XanaNode implementation publishes or consumes. It begins with the manifest, node records, and relationship list, then moves through compatibility reports, merge reports, registries, extension policy, federation examples, and governance rules. {{< node ref=\"protocol artifacts\" }} {{< node ref=\"substrate manifest\" }} {{< node ref=\"substrate node record\" }} {{< node ref=\"substrate relationship list\" }} {{< node ref=\"compatibility levels\" }} {{< node ref=\"compatibility report\" }} {{< node ref=\"merge report\" }} {{< node ref=\"namespace registry\" }} {{< node ref=\"known implementations registry\" }} {{< node ref=\"review suggestions\" }} {{< node ref=\"canonical type policy\" }} {{< node ref=\"federation example\" }} {{< node ref=\"federation rules\" }}",
+            "0001": "This trail follows the artifacts a XanaNode implementation publishes or consumes. It begins with the manifest, node records, and relationship list, then moves through compatibility reports, merge reports, registries, extension policy, federation examples, and governance rules. {{< node ref=\"protocol artifacts\" }} {{< node ref=\"substrate manifest\" }} {{< node ref=\"substrate node record\" }} {{< node ref=\"substrate relationship list\" }} {{< node ref=\"compatibility levels\" }} {{< node ref=\"compatibility report\" }} {{< node ref=\"merge report\" }} {{< node ref=\"namespace registry\" }} {{< node ref=\"known implementations registry\" }} {{< node ref=\"review suggestions\" }} {{< node ref=\"canonical type policy\" }} {{< node ref=\"federation example\" }} {{< node ref=\"federation rules\" }}"
           },
           "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "This trail follows the artifacts a XanaNode implementation publishes or consumes. It begins with the manifest, node records, and relationship list, then moves through compatibility reports, merge reports, registries, extension policy, custom extensions, federation examples, and governance rules. {{< node ref=\"protocol artifacts\" }} {{< node ref=\"substrate manifest\" }} {{< node ref=\"substrate node record\" }} {{< node ref=\"substrate relationship list\" }} {{< node ref=\"compatibility levels\" }} {{< node ref=\"compatibility report\" }} {{< node ref=\"merge report\" }} {{< node ref=\"namespace registry\" }} {{< node ref=\"known implementations registry\" }} {{< node ref=\"review suggestions\" }} {{< node ref=\"canonical type policy\" }} {{< node ref=\"custom extension substrate\" }} {{< node ref=\"federation example\" }} {{< node ref=\"federation rules\" }}",
-            "0001": "This trail follows the artifacts a XanaNode implementation publishes or consumes. It begins with the manifest, node records, and relationship list, then moves through compatibility reports, merge reports, registries, extension policy, custom extensions, federation examples, and governance rules. {{< node ref=\"protocol artifacts\" }} {{< node ref=\"substrate manifest\" }} {{< node ref=\"substrate node record\" }} {{< node ref=\"substrate relationship list\" }} {{< node ref=\"compatibility levels\" }} {{< node ref=\"compatibility report\" }} {{< node ref=\"merge report\" }} {{< node ref=\"namespace registry\" }} {{< node ref=\"known implementations registry\" }} {{< node ref=\"review suggestions\" }} {{< node ref=\"canonical type policy\" }} {{< node ref=\"custom extension substrate\" }} {{< node ref=\"federation example\" }} {{< node ref=\"federation rules\" }}"
+            "1": "This trail follows the artifacts a XanaNode implementation publishes or consumes. It begins with the manifest, node records, and relationship list, then moves through compatibility reports, merge reports, registries, extension policy, federation examples, and governance rules. {{< node ref=\"protocol artifacts\" }} {{< node ref=\"substrate manifest\" }} {{< node ref=\"substrate node record\" }} {{< node ref=\"substrate relationship list\" }} {{< node ref=\"compatibility levels\" }} {{< node ref=\"compatibility report\" }} {{< node ref=\"merge report\" }} {{< node ref=\"namespace registry\" }} {{< node ref=\"known implementations registry\" }} {{< node ref=\"review suggestions\" }} {{< node ref=\"canonical type policy\" }} {{< node ref=\"federation example\" }} {{< node ref=\"federation rules\" }}",
+            "0001": "This trail follows the artifacts a XanaNode implementation publishes or consumes. It begins with the manifest, node records, and relationship list, then moves through compatibility reports, merge reports, registries, extension policy, federation examples, and governance rules. {{< node ref=\"protocol artifacts\" }} {{< node ref=\"substrate manifest\" }} {{< node ref=\"substrate node record\" }} {{< node ref=\"substrate relationship list\" }} {{< node ref=\"compatibility levels\" }} {{< node ref=\"compatibility report\" }} {{< node ref=\"merge report\" }} {{< node ref=\"namespace registry\" }} {{< node ref=\"known implementations registry\" }} {{< node ref=\"review suggestions\" }} {{< node ref=\"canonical type policy\" }} {{< node ref=\"federation example\" }} {{< node ref=\"federation rules\" }}"
           },
           "metadata": {}
         }
@@ -1127,15 +1127,15 @@
       "versions": {
         "v1": {
           "fragments": {
-            "1": "XanaNode Core is intentionally shared, but it is not the only vocabulary a substrate can use. The core schema provides shared interoperability. Extension schemas allow local domains to define additional meanings without breaking the whole system. A custom type is valid when it is namespaced, described, versioned, machine readable, and preserved even by tools that do not understand it. The custom extension substrate example shows this in practice: a local domain can define additional types while still publishing the core manifest, node, relationship, and schema files expected by XanaNode tools.",
-            "0001": "XanaNode Core is intentionally shared, but it is not the only vocabulary a substrate can use. The core schema provides shared interoperability. Extension schemas allow local domains to define additional meanings without breaking the whole system. A custom type is valid when it is namespaced, described, versioned, machine readable, and preserved even by tools that do not understand it. The custom extension substrate example shows this in practice: a local domain can define additional types while still publishing the core manifest, node, relationship, and schema files expected by XanaNode tools."
+            "1": "XanaNode Core is intentionally shared, but it is not the only vocabulary a substrate can use. The core schema provides shared interoperability. Extension schemas allow local domains to define additional meanings without breaking the whole system. A custom type is valid when it is namespaced, described, versioned, machine readable, and preserved even by tools that do not understand it. The federation example shows the more important interoperability rule in practice: independent substrates can publish local meaning, preserve identity, and still exchange reviewable merge artifacts through the shared core manifest, node, relationship, and schema files expected by XanaNode tools.",
+            "0001": "XanaNode Core is intentionally shared, but it is not the only vocabulary a substrate can use. The core schema provides shared interoperability. Extension schemas allow local domains to define additional meanings without breaking the whole system. A custom type is valid when it is namespaced, described, versioned, machine readable, and preserved even by tools that do not understand it. The federation example shows the more important interoperability rule in practice: independent substrates can publish local meaning, preserve identity, and still exchange reviewable merge artifacts through the shared core manifest, node, relationship, and schema files expected by XanaNode tools."
           },
           "metadata": {}
         },
         "latest": {
           "fragments": {
-            "1": "XanaNode Core is intentionally shared, but it is not the only vocabulary a substrate can use. The core schema provides shared interoperability. Extension schemas allow local domains to define additional meanings without breaking the whole system. A custom type is valid when it is namespaced, described, versioned, machine readable, and preserved even by tools that do not understand it. The custom extension substrate example shows this in practice: a local domain can define additional types while still publishing the core manifest, node, relationship, and schema files expected by XanaNode tools.",
-            "0001": "XanaNode Core is intentionally shared, but it is not the only vocabulary a substrate can use. The core schema provides shared interoperability. Extension schemas allow local domains to define additional meanings without breaking the whole system. A custom type is valid when it is namespaced, described, versioned, machine readable, and preserved even by tools that do not understand it. The custom extension substrate example shows this in practice: a local domain can define additional types while still publishing the core manifest, node, relationship, and schema files expected by XanaNode tools."
+            "1": "XanaNode Core is intentionally shared, but it is not the only vocabulary a substrate can use. The core schema provides shared interoperability. Extension schemas allow local domains to define additional meanings without breaking the whole system. A custom type is valid when it is namespaced, described, versioned, machine readable, and preserved even by tools that do not understand it. The federation example shows the more important interoperability rule in practice: independent substrates can publish local meaning, preserve identity, and still exchange reviewable merge artifacts through the shared core manifest, node, relationship, and schema files expected by XanaNode tools.",
+            "0001": "XanaNode Core is intentionally shared, but it is not the only vocabulary a substrate can use. The core schema provides shared interoperability. Extension schemas allow local domains to define additional meanings without breaking the whole system. A custom type is valid when it is namespaced, described, versioned, machine readable, and preserved even by tools that do not understand it. The federation example shows the more important interoperability rule in practice: independent substrates can publish local meaning, preserve identity, and still exchange reviewable merge artifacts through the shared core manifest, node, relationship, and schema files expected by XanaNode tools."
           },
           "metadata": {}
         }
@@ -1531,30 +1531,6 @@
         }
       },
       "title": "Deep Linking",
-      "type": "concept"
-    },
-    "custom-extension-substrate": {
-      "versions": {
-        "v1": {
-          "fragments": {
-            "1": "The custom extension substrate example shows local vocabulary coexisting with XanaNode Core.\n\nThe canonical example defines a museum namespace with a custom artifact node type and custom curatorial relationship types.\n\nTools that do not understand those custom types still preserve them as declared, namespaced, versioned extensions instead of discarding them.",
-            "0001": "The custom extension substrate example shows local vocabulary coexisting with XanaNode Core.",
-            "0002": "The canonical example defines a museum namespace with a custom artifact node type and custom curatorial relationship types.",
-            "0003": "Tools that do not understand those custom types still preserve them as declared, namespaced, versioned extensions instead of discarding them."
-          },
-          "metadata": {}
-        },
-        "latest": {
-          "fragments": {
-            "1": "The custom extension substrate example shows local vocabulary coexisting with XanaNode Core.\n\nThe canonical example defines a museum namespace with a custom artifact node type and custom curatorial relationship types.\n\nTools that do not understand those custom types still preserve them as declared, namespaced, versioned extensions instead of discarding them.",
-            "0001": "The custom extension substrate example shows local vocabulary coexisting with XanaNode Core.",
-            "0002": "The canonical example defines a museum namespace with a custom artifact node type and custom curatorial relationship types.",
-            "0003": "Tools that do not understand those custom types still preserve them as declared, namespaced, versioned extensions instead of discarding them."
-          },
-          "metadata": {}
-        }
-      },
-      "title": "Custom Extension Substrate",
       "type": "concept"
     },
     "compatibility-report": {

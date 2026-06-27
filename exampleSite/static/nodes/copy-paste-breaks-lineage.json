@@ -15,13 +15,19 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/claim-fragments-can-address-ranges-timecodes-and-media-regions-explains-claim-copy-paste-breaks-lineage",
+      "type": "explains",
+      "source": "xananode.canonical:claim/fragments-can-address-ranges-timecodes-and-media-regions",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/trifecta-has-claim-copy-paste",
       "type": "has_claim",
       "source": "xananode.canonical:concept/trifecta-of-computing-failure",
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/claim_copy-paste-breaks-lineage.json",
+  "imported_from": "nodes/xananode.canonical_claim_copy-paste-breaks-lineage.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

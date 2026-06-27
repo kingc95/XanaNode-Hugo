@@ -43,7 +43,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/schema_relationship-type-misunderstanding_context_for.json",
+  "imported_from": "nodes/xananode.canonical_schema_relationship-type-misunderstanding_context_for.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

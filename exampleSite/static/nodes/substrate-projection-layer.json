@@ -82,7 +82,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/concept_substrate-projection-layer.json",
+  "imported_from": "nodes/xananode.canonical_concept_substrate-projection-layer.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

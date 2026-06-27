@@ -4,7 +4,7 @@
   "type": "source",
   "subtype": "protocol_document",
   "importance": 3,
-  "summary": "governance/moderation-model.md is preserved as a raw protocol artifact in the XanaNode canonical substrate.",
+  "summary": "A governance document covering Moderation Model.",
   "artifact_path": "governance/moderation-model.md",
   "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/governance/moderation-model.md",
   "media_type": "document",
@@ -29,14 +29,14 @@
   "asset_path": "assets/raw/protocol/governance/moderation-model.md",
   "content_id": "sha256:ed7db2a6ee2c8ab204059c8835ebcff1d326372271771931af8c684691a13bb2",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/governance/moderation-model.md",
     "method": "archive",
     "content_id": "sha256:ed7db2a6ee2c8ab204059c8835ebcff1d326372271771931af8c684691a13bb2",
     "rights_status": "CC-BY-4.0",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/source_protocol-artifact-governance-moderation-model.md.json",
+  "imported_from": "nodes/xananode.canonical_source_protocol-artifact-governance-moderation-model.md.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

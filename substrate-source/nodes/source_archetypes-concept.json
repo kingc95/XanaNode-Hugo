@@ -15,7 +15,7 @@
   "content_id": "sha256:406ccd7c5f7622cbb10da51f78bcb8929b81c8072f8643510e53a9a26eeb529a",
   "content": "---\ntitle: \"{{ replace .Name \"-\" \" \" | title }}\"\ntype: \"concept\"\nsummary: \"\"\nconcepts: []\nsources: []\nrelationships: []\n---\n",
   "source_snapshot": {
-    "captured_at": "2026-06-25T14:24:42.948Z",
+    "captured_at": "2026-06-27T07:05:44.386Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/archetypes/concept.md",
     "method": "archive",
     "content_id": "sha256:406ccd7c5f7622cbb10da51f78bcb8929b81c8072f8643510e53a9a26eeb529a",

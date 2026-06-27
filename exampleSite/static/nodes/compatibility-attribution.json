@@ -3,7 +3,7 @@
     {
       "id": "xananode.canonical:rel/compatibility-spec-defines-compatibility-attribution",
       "type": "defines",
-      "source": "xananode.canonical:schema/protocol-artifact-specs-implementation-compatibility.md",
+      "source": "xananode.canonical:source/protocol-artifact-specs-implementation-compatibility.md",
       "direction": "incoming"
     },
     {
@@ -37,7 +37,7 @@
   "subtype": "principle",
   "importance": 5,
   "summary": "The convention that implementations should identify themselves as XanaNode-compatible and point to the canonical specification without implying ownership or endorsement.",
-  "imported_from": "nodes/concept_compatibility-attribution.json",
+  "imported_from": "nodes/xananode.canonical_concept_compatibility-attribution.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

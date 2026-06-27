@@ -72,14 +72,14 @@
   "asset_role": "canonical_raw_source",
   "content_id": "sha256:d859aec5ab80bc7388b61c105bdc88465755e280652fd51c4bb9ea8165e66f38",
   "source_snapshot": {
-    "captured_at": "2026-06-24T22:13:03.673Z",
+    "captured_at": "2026-06-27T06:48:18.530Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/registry/federation-targets.json",
     "method": "archive",
-    "content_id": "sha256:d859aec5ab80bc7388b61c105bdc88465755e280652fd51c4bb9ea8165e66f38",
+    "content_id": "sha256:b91e7d8b531ac3a9905b9ba70335a791ea44f7212e93d987c3224e6cf32678fe",
     "rights_status": "canonical-public",
     "tool": "@xananode/core"
   },
-  "imported_from": "nodes/schema_federation-targets-registry.json",
+  "imported_from": "nodes/xananode.canonical_schema_federation-targets-registry.json",
   "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

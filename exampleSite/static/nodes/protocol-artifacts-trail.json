@@ -16,7 +16,6 @@
     "xananode.example:concept/known-implementations-registry",
     "xananode.example:concept/review-suggestions",
     "xananode.example:concept/canonical-type-policy",
-    "xananode.example:concept/custom-extension-substrate",
     "xananode.example:concept/federation-example",
     "xananode.example:concept/federation-rules"
   ],
