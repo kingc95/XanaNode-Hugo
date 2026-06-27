@@ -15,7 +15,7 @@
   "content_id": "sha256:58dec2a86445710c6e50dfed710bca6906c5d0165c20899993d4d6e7351653f8",
   "content": "---\ntitle: \"Mother of All Demos\"\ntype: \"source\"\nimportance: 4\nauthor: \"Douglas Engelbart\"\nyear: \"1968\"\nsummary: \"Engelbart's demonstration of interactive computing, hypertext navigation, collaboration, and tools for thought.\"\nsource_url: \"https://www.dougengelbart.org/content/view/209/\"\nfragments:\n  - id: \"0001\"\n    title: \"Augmenting Human Intelligence Fragment\"\n    summary: \"Engelbart's demonstration as an example of computers augmenting structured knowledge work.\"\n    text: \"The demonstration showed computers as tools for augmenting human intelligence and navigating structured knowledge work.\"\n    selector:\n      type: \"semantic-anchor\"\n      value: \"augmenting-human-intelligence\"\nrelationships:\n  - type: \"documents\"\n    target: \"nls\"\n  - type: \"supports\"\n    target: \"knowledge-substrate\"\n---\n\nThe demonstration showed computers as tools for augmenting human intelligence and navigating structured knowledge work.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/sources/mother-of-all-demos.md",
     "method": "archive",
     "content_id": "sha256:58dec2a86445710c6e50dfed710bca6906c5d0165c20899993d4d6e7351653f8",

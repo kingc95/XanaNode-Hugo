@@ -15,7 +15,7 @@
   "content_id": "sha256:6497f74f04c823faa429128efc3ad226d7fb24bf150392d674edbbb157544388",
   "content": "---\ntitle: \"Schemas\"\n---\n\nSchema and governance records used to keep substrates interoperable.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/schemas/_index.md",
     "method": "archive",
     "content_id": "sha256:6497f74f04c823faa429128efc3ad226d7fb24bf150392d674edbbb157544388",

@@ -15,7 +15,7 @@
   "content_id": "sha256:fe578f5c6e548fff67fd76bf31786baefa6d7f2b5322f503736385dcbf9322e4",
   "content": "---\r\ntitle: \"Substrate Node Record\"\r\ntype: \"concept\"\r\nimportance: 5\r\nsummary: \"A JSON representation of a node with a protocol identifier, type, summary, importance, provenance fields, and incoming or outgoing relationship summaries.\"\r\nrelationships:\r\n  - type: \"uses\"\r\n    target: \"xananode-node-types\"\r\n  - type: \"contains\"\r\n    target: \"fragment-node\"\r\n---\r\n\r\nA node record is the machine-readable counterpart to a human-readable page.\r\n\r\nIt preserves the protocol id, title, type, importance, summary, [provenance](/node/provenance) fields, and incoming or outgoing relationship summaries needed for tools to traverse the substrate without scraping [HTML](xananode.lineage:technology/html).\r\n\r\nAddressable fragments can also be published as protocol `fragment` node records with `source_node`, `fragment_id`, `tumbler`, and `selector` metadata.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/substrate-node-record.md",
     "method": "archive",
     "content_id": "sha256:fe578f5c6e548fff67fd76bf31786baefa6d7f2b5322f503736385dcbf9322e4",

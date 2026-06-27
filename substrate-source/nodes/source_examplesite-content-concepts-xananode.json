@@ -15,7 +15,7 @@
   "content_id": "sha256:618386337a33f8d831c213adb256d646ce343cfd51f35707803ad65c22f27125",
   "content": "---\r\ntitle: \"XanaNode\"\r\ntype: \"concept\"\r\nimportance: 5\r\nsummary: \"A protocol for interoperable, independently authored knowledge substrates that preserve relationships, provenance, lineage, disagreement, and addressable fragments.\"\r\nprimary_media: \"xananode-icon\"\r\nrelationships:\r\n  - type: \"defines\"\r\n    target: \"knowledge-substrate\"\r\n  - type: \"explains\"\r\n    target: \"federated-knowledge-substrates\"\r\n  - type: \"requires\"\r\n    target: \"xananode-core-schema\"\r\n  - type: \"preserves\"\r\n    target: \"provenance\"\r\n  - type: \"extends\"\r\n    target: \"project-xanadu\"\r\n  - type: \"extends\"\r\n    target: \"memex\"\r\n---\r\n\r\n[XanaNode](xananode.canonical:concept/xananode) is a protocol, ontology, and publishing architecture for interoperable knowledge substrates.\r\n\r\nIt treats relationships as first-class structures, not decoration around documents. Claims, sources, people, events, media, trails, schemas, fragments, and revisions become addressable nodes connected by [typed relationships](/node/typed-relationships).\r\n\r\nThe core schema gives independently authored substrates enough shared meaning to validate, compare, merge, federate, or analyze them without requiring a single central source of truth.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/xananode.md",
     "method": "archive",
     "content_id": "sha256:618386337a33f8d831c213adb256d646ce343cfd51f35707803ad65c22f27125",

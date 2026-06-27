@@ -15,7 +15,7 @@
   "content_id": "sha256:3f2d5cecd98fb84779d557bb4a974df8e6c8a639938d0775097540864f550c6b",
   "content": "---\ntitle: \"Compatibility Levels\"\ntype: \"concept\"\nimportance: 5\nsummary: \"A staged way to describe how much of a substrate another implementation can recognize, validate, extend, merge, or federate.\"\nrelationships:\n  - type: \"uses\"\n    target: \"compatibility-report\"\n  - type: \"requires\"\n    target: \"substrate-manifest\"\n  - type: \"required_for\"\n    target: \"federated-knowledge-substrates\"\n---\n\nCompatibility is not all-or-nothing.\n\nThe protocol describes six practical levels: opaque storage, manifest recognition, core validation, declared extensions, merge candidacy, and federation readiness.\n\nThe point is preservation. A tool can keep data it does not fully understand, report the compatibility level it reached, and avoid pretending that unknown extensions are invalid knowledge.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/compatibility-levels.md",
     "method": "archive",
     "content_id": "sha256:3f2d5cecd98fb84779d557bb4a974df8e6c8a639938d0775097540864f550c6b",

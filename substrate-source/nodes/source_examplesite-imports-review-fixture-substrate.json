@@ -15,7 +15,7 @@
   "content_id": "sha256:ab9e7edfeb2cff08ef3af921a949c18acf52231f85e32235e807770352c74942",
   "content": "{\r\n  \"id\": \"xananode.review-fixture\",\r\n  \"name\": \"XanaNode Review Fixture\",\r\n  \"version\": \"0.1.0\",\r\n  \"namespace\": \"xananode.review\",\r\n  \"description\": \"A deliberately incomplete substrate pack used to demonstrate Core review suggestions without dirtying canonical or lineage packs.\",\r\n  \"repository\": {\r\n    \"type\": \"local\",\r\n    \"url\": \"exampleSite/imports/review-fixture\",\r\n    \"default_branch\": \"main\"\r\n  }\r\n}\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/imports/review-fixture/substrate.json",
     "method": "archive",
     "content_id": "sha256:ab9e7edfeb2cff08ef3af921a949c18acf52231f85e32235e807770352c74942",

@@ -15,7 +15,7 @@
   "content_id": "sha256:7335d18dbb3f4cb6aaa2f551623d40f740c74d43ec128b89d0b8635191de9f5f",
   "content": "---\r\ntitle: \"XanaNode Workspace Repository\"\r\ntype: \"source\"\r\nimportance: 4\r\nauthor: \"XanaNode Contributors\"\r\nyear: \"2026\"\r\nsummary: \"The workspace orchestration repository for managing multiple local XanaNode substrates, imports, Git state, and build workflows.\"\r\nsource_url: \"https://github.com/kingc95/XanaNode-Workspace\"\r\nrights_status: \"open-source\"\r\nrelationships:\r\n  - type: \"uses\"\r\n    target: \"xananode-core-schema\"\r\n  - type: \"required_for\"\r\n    target: \"federated-knowledge-substrates\"\r\n---\r\n\r\nThe Workspace repository manages multiple substrates and their operational lifecycle: folder layout, imports, [Git](xananode.canonical:technology/git) state, builds, and health checks.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/sources/xananode-workspace-repo.md",
     "method": "archive",
     "content_id": "sha256:7335d18dbb3f4cb6aaa2f551623d40f740c74d43ec128b89d0b8635191de9f5f",

@@ -15,7 +15,7 @@
   "content_id": "sha256:6c3407d3a9fde22321bb41c84fed2355f1d12d1eeb07a6ca47cd343f6423021c",
   "content": "---\r\ntitle: \"XanaNode Protocol Repository\"\r\ntype: \"source\"\r\nimportance: 5\r\nauthor: \"XanaNode Contributors\"\r\nyear: \"2026\"\r\nsummary: \"The canonical XanaNode protocol repository containing schemas, registries, examples, specs, governance, and proposals.\"\r\nsource_url: \"https://github.com/kingc95/xananode\"\r\nrights_status: \"open-source\"\r\nrelationships:\r\n  - type: \"defines\"\r\n    target: \"xananode\"\r\n  - type: \"defines\"\r\n    target: \"xananode-core-schema\"\r\n  - type: \"documents\"\r\n    target: \"protocol-artifacts\"\r\n---\r\n\r\nThe protocol repository is the source of truth for [XanaNode](xananode) schemas, registries, specs, examples, governance, and proposals.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/sources/xananode-protocol-repo.md",
     "method": "archive",
     "content_id": "sha256:6c3407d3a9fde22321bb41c84fed2355f1d12d1eeb07a6ca47cd343f6423021c",

@@ -15,7 +15,7 @@
   "content_id": "sha256:44c4528f9ed148d231eeedd9b6aec606dd8da23dae9fc2c34f1eeb0576b0a79a",
   "content": "---\r\ntitle: \"Cytoscape.js\"\r\ntype: \"technology\"\r\nimportance: 3\r\nsummary: \"A JavaScript graph visualization library used by the reference viewer to render nodes and relationships.\"\r\nrelationships:\r\n  - type: \"represents\"\r\n    target: \"knowledge-substrate\"\r\n---\r\n\r\n[Cytoscape.js](xananode.canonical:technology/cytoscape-js) renders the visible graph. It is a presentation dependency, not the knowledge model itself.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/technologies/cytoscape-js.md",
     "method": "archive",
     "content_id": "sha256:44c4528f9ed148d231eeedd9b6aec606dd8da23dae9fc2c34f1eeb0576b0a79a",

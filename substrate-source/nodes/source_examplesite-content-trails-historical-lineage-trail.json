@@ -15,7 +15,7 @@
   "content_id": "sha256:625d18c907d5a8dac9c7e2e4863ad1ce6e649450850f76baa97595cd0887438a",
   "content": "---\r\ntitle: \"Historical Lineage Trail\"\r\ntype: \"trail\"\r\nimportance: 4\r\nsummary: \"A curated path through Bush, Engelbart, Nelson, and XanaNode.\"\r\nnodes:\r\n  - vannevar-bush\r\n  - as-we-may-think\r\n  - memex\r\n  - douglas-engelbart\r\n  - nls\r\n  - ted-nelson\r\n  - project-xanadu\r\n  - transclusion\r\n  - xananode\r\nrelationships:\r\n  - type: \"starts_with\"\r\n    target: \"vannevar-bush\"\r\n  - type: \"continues_to\"\r\n    target: \"douglas-engelbart\"\r\n  - type: \"continues_to\"\r\n    target: \"ted-nelson\"\r\n  - type: \"arrives_at\"\r\n    target: \"xananode\"\r\n---\r\n\r\nThis trail follows the historical lineage behind [XanaNode](/node/xananode): Bush's [associative trails](example.minimal:concept/associative-trails), Engelbart's augmentation work, Nelson's [transclusion](/node/transclusion) and visible interconnection, and the protocol's current focus on [typed relationships](/node/typed-relationships) and stable fragments.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/trails/historical-lineage-trail.md",
     "method": "archive",
     "content_id": "sha256:625d18c907d5a8dac9c7e2e4863ad1ce6e649450850f76baa97595cd0887438a",

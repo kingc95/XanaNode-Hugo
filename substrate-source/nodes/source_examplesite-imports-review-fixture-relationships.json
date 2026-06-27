@@ -15,7 +15,7 @@
   "content_id": "sha256:e945a29e4adfc1a0b7beb82af6f022f72c130940affd7b5cb2dee78e0cc723a3",
   "content": "{\r\n  \"relationships\": [\r\n    {\r\n      \"id\": \"xananode.review:rel/fixture-context-for-review\",\r\n      \"source\": \"xananode.review:observation/unresolved-review-fixture\",\r\n      \"target\": \"xananode.example:concept/review-suggestions\",\r\n      \"type\": \"context_for\",\r\n      \"weight\": 1,\r\n      \"visibility\": \"background\",\r\n      \"summary\": \"The fixture exists to demonstrate pending review suggestions without polluting canonical or lineage packs.\"\r\n    }\r\n  ]\r\n}\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/imports/review-fixture/relationships.json",
     "method": "archive",
     "content_id": "sha256:e945a29e4adfc1a0b7beb82af6f022f72c130940affd7b5cb2dee78e0cc723a3",

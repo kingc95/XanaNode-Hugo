@@ -15,7 +15,7 @@
   "content_id": "sha256:86f1a4db9cd3b307ce9bf3feee577c635a4a19740adeee0079741c383214a098",
   "content": "---\ntitle: \"Substrates should merge without collapsing disagreement\"\ntype: \"claim\"\nimportance: 5\nstatus: \"active\"\nsummary: \"Federated substrates should preserve authorship, provenance, and disagreement rather than forcing one merged source of truth.\"\nrelationships:\n  - type: \"claim_of\"\n    target: \"merge-validation\"\n  - type: \"supported_by\"\n    target: \"xananode-core-schema\"\n  - type: \"contradicts\"\n    target: \"single-source-of-truth\"\n---\n\nThe goal of merging substrates is not to erase differences.\n\nThe goal is to expose correspondences, conflicts, overlaps, and gaps while preserving who asserted what and why.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/claims/claim-merge-without-collapse.md",
     "method": "archive",
     "content_id": "sha256:86f1a4db9cd3b307ce9bf3feee577c635a4a19740adeee0079741c383214a098",

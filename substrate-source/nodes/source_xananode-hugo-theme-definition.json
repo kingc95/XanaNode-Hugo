@@ -15,7 +15,7 @@
   "content_id": "sha256:ce6a7f03506d2a866db7e72ca8e297d710f135e28702639b23813617828ff59f",
   "content": "name = \"XanaNode Hugo\"\r\nlicense = \"MIT\"\r\nlicenselink = \"https://opensource.org/licenses/MIT\"\r\ndescription = \"A relationship-first Hugo theme for essays, concepts, sources, evidence, claims, and trails.\"\r\nhomepage = \"https://xananode.com/\"\r\ntags = [\"knowledge\", \"graph\", \"hypertext\", \"xanadu\", \"provenance\", \"digital garden\"]\r\nfeatures = [\"relationship graph\", \"concept nodes\", \"source cards\", \"claim blocks\", \"trail pages\", \"JSON graph export\"]\r\nmin_version = \"0.120.0\"\r\n\r\n[author]\r\n  name = \"Christian Siefen\"\r\n  homepage = \"https://xananode.com/\"\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/theme.toml",
     "method": "archive",
     "content_id": "sha256:ce6a7f03506d2a866db7e72ca8e297d710f135e28702639b23813617828ff59f",

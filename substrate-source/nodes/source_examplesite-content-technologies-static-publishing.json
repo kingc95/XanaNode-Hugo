@@ -15,7 +15,7 @@
   "content_id": "sha256:f318c3f84576d30024512add24c3a486ef794c07660eccf7b5368e437a29aa8a",
   "content": "---\ntitle: \"Static Publishing\"\ntype: \"technology\"\nimportance: 3\nsummary: \"Publishing files that can be hosted without a dynamic application server.\"\nrelationships:\n  - type: \"enabled_by\"\n    target: \"xananode-hugo-theme\"\n---\n\nStatic publishing makes a substrate easy to host, mirror, archive, and inspect.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/technologies/static-publishing.md",
     "method": "archive",
     "content_id": "sha256:f318c3f84576d30024512add24c3a486ef794c07660eccf7b5368e437a29aa8a",

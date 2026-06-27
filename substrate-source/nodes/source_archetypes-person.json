@@ -15,7 +15,7 @@
   "content_id": "sha256:bb106716679cfa66b7437846ef641c072a89cb8f4f7dd6b0ff610781e14da2f2",
   "content": "---\ntitle: \"{{ replace .Name \"-\" \" \" | title }}\"\ntype: \"person\"\nsummary: \"\"\nroles: []\nconcepts: []\nsources: []\nrelationships: []\n---\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/archetypes/person.md",
     "method": "archive",
     "content_id": "sha256:bb106716679cfa66b7437846ef641c072a89cb8f4f7dd6b0ff610781e14da2f2",

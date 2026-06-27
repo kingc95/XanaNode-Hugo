@@ -15,7 +15,7 @@
   "content_id": "sha256:0e8af192bd7b6f33ab9f2446a6cebde8ff67bd13d2848dd1e79973a90cc1b0e8",
   "content": "---\ntitle: \"Federated Knowledge Substrates\"\ntype: \"concept\"\nimportance: 5\nsummary: \"Independently authored XanaNode substrates that can interoperate, merge, compare, and preserve disagreement without a central authority.\"\nrelationships:\n  - type: \"requires\"\n    target: \"namespacing\"\n  - type: \"requires\"\n    target: \"merge-validation\"\n  - type: \"requires\"\n    target: \"federation-rules\"\n  - type: \"preserves\"\n    target: \"independent-moderation\"\n  - type: \"alternative_to\"\n    target: \"single-source-of-truth\"\n---\n\nFederation connects independently authored substrates without making them surrender ownership.\n\nEach person, lab, community, archive, or institution keeps its own namespace, governance, and [provenance](/node/provenance). Those substrates do not need to agree. They need to describe nodes, relationships, schemas, and provenance clearly enough that another tool can ingest, map, compare, or ignore them safely.\n\nFederation turns isolated knowledge graphs into comparable [civilizational memory](/node/civilizational-memory).\n\nIn protocol terms, federation depends on manifests, namespaces, compatibility reports, merge reports, and governance rules that prevent one substrate from silently overwriting another.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/federated-knowledge-substrates.md",
     "method": "archive",
     "content_id": "sha256:0e8af192bd7b6f33ab9f2446a6cebde8ff67bd13d2848dd1e79973a90cc1b0e8",

@@ -15,7 +15,7 @@
   "content_id": "sha256:a62392bda48cc341c60b1d69840bfdd21c17240ff720de9b9805227fd541bc16",
   "content": "---\ntitle: \"{{ replace .Name \"-\" \" \" | title }}\"\ndate: {{ .Date }}\ntype: \"node\"\nsummary: \"\"\nconcepts: []\nsources: []\nrelationships: []\n---\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/archetypes/default.md",
     "method": "archive",
     "content_id": "sha256:a62392bda48cc341c60b1d69840bfdd21c17240ff720de9b9805227fd541bc16",

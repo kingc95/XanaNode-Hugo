@@ -15,7 +15,7 @@
   "content_id": "sha256:5d57b56ba675f4ac3fa6aba7d35516ac618a6a4b78963cce807b6821cb727785",
   "content": "---\ntitle: \"{{ replace .Name \"-\" \" \" | title }}\"\ndate: {{ .Date }}\ntype: \"observation\"\nsummary: \"\"\nsurface_issue: \"\"\nsubstrate_issue: []\nsource_url: \"\"\narchive_url: \"\"\nconcepts: []\npeople: []\nsources: []\nrelationships: []\nrating:\n  substrate_relevance: 0\n  provenance_awareness: 0\n  relationship_awareness: 0\n  memetic_awareness: 0\n---\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/archetypes/observation.md",
     "method": "archive",
     "content_id": "sha256:5d57b56ba675f4ac3fa6aba7d35516ac618a6a4b78963cce807b6821cb727785",

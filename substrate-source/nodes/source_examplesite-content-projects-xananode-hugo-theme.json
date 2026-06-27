@@ -15,7 +15,7 @@
   "content_id": "sha256:aac637a52ad91dd1432356ca8a18edb7b7a0518577694dacccfae707f8af9634",
   "content": "---\r\ntitle: \"XanaNode Hugo Theme\"\r\ntype: \"project\"\r\nimportance: 4\r\nsummary: \"A Hugo theme that publishes XanaNode substrates as readable pages and a navigable graph.\"\r\nstatus: \"prototype\"\r\nprimary_media: \"xananode-icon\"\r\nrelationships:\r\n  - type: \"implements\"\r\n    target: \"xananode\"\r\n  - type: \"uses\"\r\n    target: \"hugo\"\r\n  - type: \"uses\"\r\n    target: \"cytoscape-js\"\r\n  - type: \"demonstrates\"\r\n    target: \"knowledge-substrate\"\r\n---\r\n\r\nThe [Hugo](/node/hugo) theme is not [XanaNode](/node/xananode) itself.\r\n\r\nIt turns substrate nodes, relationships, media, and trails into a readable public site with a graph beside the prose.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/projects/xananode-hugo-theme.md",
     "method": "archive",
     "content_id": "sha256:aac637a52ad91dd1432356ca8a18edb7b7a0518577694dacccfae707f8af9634",

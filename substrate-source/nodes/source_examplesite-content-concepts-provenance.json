@@ -15,7 +15,7 @@
   "content_id": "sha256:04192ae966f8c5d8fb1cbb5583d15fa71c1cdf5d38f473e95a4837d27a91f27a",
   "content": "---\ntitle: \"Provenance\"\ntype: \"concept\"\nimportance: 5\nsummary: \"The visible lineage of where information came from, how it changed, who asserted it, and what evidence it depends on.\"\nrelationships:\n  - type: \"has_evidence\"\n    target: \"claim-relationships-preserve-context\"\n---\n\nProvenance is not decorative metadata. It is part of meaning.\n\nA claim without provenance may still be useful, but its status is different from a claim tied to sources, authorship, revisions, and evidence.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T07:05:44.386Z",
+    "captured_at": "2026-06-27T16:35:32.292Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/provenance.md",
     "method": "archive",
     "content_id": "sha256:04192ae966f8c5d8fb1cbb5583d15fa71c1cdf5d38f473e95a4837d27a91f27a",
