@@ -2,14 +2,20 @@ import {
     createProjectionRegistry,
     projectionEdgePath,
     projectionEdgeArrowPoints,
-    findProjectionRoute,
-    buildHopNeighborhood,
-    layoutReadableProjection,
+    projectionEdgeLabelPoint,
     fitReadableProjectionViewport,
     resolveProjectionNodeCollisions,
     wrapProjectionText,
     buildReadableTravelOverlayMarkup
 } from "/js/projection.js";
+import {
+    buildSearchPlan,
+    buildViewerGraphModel,
+    buildViewerTravelPlan,
+    normalizeSearchText,
+    pickNextViewerTourNode,
+    scoreViewerEdge
+} from "/js/viewer-engine.js";
 
 (function () {
     const graphEl = document.getElementById("xana-graph");
@@ -542,14 +548,6 @@ import {
             }
         }
         return [...values].sort((a, b) => humanLabel(a).localeCompare(humanLabel(b)));
-    }
-
-    function nodeSubtypeValues(node) {
-        return [
-            node?.subtype,
-            ...(Array.isArray(node?.subtypes) ? node.subtypes : []),
-            ...(Array.isArray(node?.facets) ? node.facets : [])
-        ].filter(Boolean).map(String);
     }
 
     function init(data, nodeTypesData, relationshipTypesData) {
@@ -1511,11 +1509,13 @@ import {
                 node.source_icon_svg = sourcePlatformBadgeSvg(platform);
             }
             if (!node.file && node.asset_path) {
-                node.file = node.asset_path;
+                node.file = normalizeSiteAssetUrl(node.asset_path);
+            } else if (node.file) {
+                node.file = normalizeSiteAssetUrl(node.file);
             }
 
             if (node.file && isVisualAsset(node.file, node.media_type)) {
-                node.image = node.file;
+                node.image = normalizeSiteAssetUrl(node.file);
                 node.image_alt = node.alt || node.image_alt || node.title;
             }
 
@@ -1523,7 +1523,7 @@ import {
                 const mediaNode = nodesById.get(node.primary_media) || nodesByProtocolId.get(node.primary_media);
 
                 if (mediaNode) {
-                    const mediaFile = mediaNode.file || mediaNode.asset_path || mediaNode.asset || "";
+                    const mediaFile = normalizeSiteAssetUrl(mediaNode.file || mediaNode.asset_path || mediaNode.asset || "");
                     node.image = mediaFile || node.image || "";
                     node.image_alt = mediaNode.alt || node.image_alt || node.title;
 
@@ -1831,21 +1831,21 @@ import {
         _revealTimers.forEach((id) => window.clearTimeout(id));
         _revealTimers = [];
 
-        const visible = getVisibleSubgraph(
-            state.allNodes,
-            state.allEdges,
-            state.focusId,
-            state.depth,
-            state.enabledTypes,
-            state.enabledMediaTypes,
-            state.enabledRelationshipTypes,
-            state.enabledSubtypes,
-            state.previousFocusId,
-            state.searchResults
-        );
+        const { visible, graph: graphModel } = buildViewerGraphModel(state.allNodes, state.allEdges, {
+            focusId: state.focusId,
+            maxDepth: state.depth,
+            enabledTypes: state.enabledTypes,
+            enabledMediaTypes: state.enabledMediaTypes,
+            enabledRelationshipTypes: state.enabledRelationshipTypes,
+            enabledSubtypes: state.enabledSubtypes,
+            registry: state.projectionRegistry,
+            width: 900,
+            height: 620,
+            edgeScore: (edge) => scoreViewerEdge(edge, state.allNodes, state.focusId),
+            labelForEdge: (edge) => humanLabel(edge.type || "related_to")
+        });
 
         const focusNode = visible.nodes.find((node) => node.id === state.focusId) || state.allNodes.find((node) => node.id === state.focusId) || null;
-        const graphModel = layoutGraphNodes(visible, focusNode, state);
         state.graphModel = graphModel;
         state.graph?.render?.(graphModel, {
             preserveViewport: Boolean(options.preserveViewport && state.hasRenderedGraph),
@@ -1855,7 +1855,7 @@ import {
         const relatedEdges = state.allEdges
             .filter((edge) => edge.source === state.focusId || edge.target === state.focusId)
             .sort((a, b) => {
-                return scoreEdge(b, state.allNodes, state.focusId) - scoreEdge(a, state.allNodes, state.focusId);
+                return scoreViewerEdge(b, state.allNodes, state.focusId) - scoreViewerEdge(a, state.allNodes, state.focusId);
             });
 
         renderPanel(focusNode, relatedEdges, state);
@@ -1881,53 +1881,6 @@ import {
         state.hasRenderedGraph = true;
 
         refreshAliveMotion(state);
-    }
-
-    function layoutGraphNodes(visible, focusNode, state) {
-        return layoutReadableProjection(visible, {
-            focusId: state.focusId,
-            registry: state.projectionRegistry,
-            width: 900,
-            height: 620,
-            maxDepth: 4,
-            labelForEdge: (edge) => humanLabel(edge.type || "related_to")
-        });
-    }
-
-    function getVisibleSubgraph(
-        allNodes,
-        allEdges,
-        focusId,
-        maxDepth,
-        enabledTypes,
-        enabledMediaTypes,
-        enabledRelationshipTypes,
-        enabledSubtypes,
-        previousFocusId,
-        searchResults
-    ) {
-        function nodePassesFilters(node) {
-            if (node.id === focusId) return true;
-            if (!enabledTypes.has(node.type)) return false;
-            const nodeSubtypes = nodeSubtypeValues(node);
-            if (nodeSubtypes.length && !nodeSubtypes.some((value) => enabledSubtypes.has(value))) return false;
-
-            if (node.type === "media") {
-                return enabledMediaTypes.has(node.media_type || "image");
-            }
-
-            return true;
-        }
-
-        const neighborhood = buildHopNeighborhood(allNodes, allEdges, {
-            focusId,
-            maxDepth,
-            nodeFilter: nodePassesFilters,
-            edgeFilter: (edge) => enabledRelationshipTypes.has(edge.type || "related_to"),
-            edgeScore: (edge) => scoreEdge(edge, allNodes, focusId)
-        });
-
-        return neighborhood;
     }
 
     function createGraphView(stageEl, state) {
@@ -2061,7 +2014,7 @@ import {
             updateConnectedEdges(nodeId) {
                 for (const edge of this.graphModel?.edges || []) {
                     if (edge.source?.id !== nodeId && edge.target?.id !== nodeId) continue;
-                    const edgeEl = stageEl.querySelector(`[data-edge-source="${cssEscape(edge.source.id)}"][data-edge-target="${cssEscape(edge.target.id)}"]`);
+                    const edgeEl = stageEl.querySelector(`[data-edge-key="${cssEscape(edge.key)}"]`);
                     if (!edgeEl) continue;
                     const targetInset = Math.max(22, Number(edge.target?.r || 24) + 8);
                     const sourceInset = Math.max(12, Number(edge.source?.r || 24) + 3);
@@ -2071,8 +2024,18 @@ import {
                     edgeEl.querySelector("polygon")?.setAttribute("points", arrow);
                     const labelEl = edgeEl.querySelector(".graph-edge-label");
                     if (labelEl) {
-                        labelEl.setAttribute("x", String((edge.source.x + edge.target.x) / 2));
-                        labelEl.setAttribute("y", String((edge.source.y + edge.target.y) / 2 - 6));
+                        const lm = path.match(/M\s*([\d.-]+)\s+([\d.-]+)\s+Q\s*([\d.-]+)\s+([\d.-]+)\s+([\d.-]+)\s+([\d.-]+)/);
+                        if (lm) {
+                            const [lsx, lsy, lcx, lcy, ltx, lty] = lm.slice(1).map(Number);
+                            const goesLeft = ltx < lsx;
+                            const textD = goesLeft ? `M ${ltx} ${lty} Q ${lcx} ${lcy} ${lsx} ${lsy}` : path;
+                            const startOffset = goesLeft ? "25%" : "75%";
+                            const safeKey = edge.key.replace(/[^a-zA-Z0-9]/g, "_");
+                            const defsPath = edgeEl.querySelector(`#ep-${safeKey}`);
+                            if (defsPath) defsPath.setAttribute("d", textD);
+                            const textPathEl = labelEl.querySelector("textPath");
+                            if (textPathEl) textPathEl.setAttribute("startOffset", startOffset);
+                        }
                     }
                 }
             },
@@ -2140,9 +2103,21 @@ import {
         const weight = Number(edge.style?.strokeWidth || 2.4);
         const opacity = Number(edge.opacity || 1);
         const arrowOpacity = Number(edge.arrowOpacity || opacity);
-        const label = edge.showLabel === false ? "" : `<text class="graph-edge-label" x="${(edge.source.x + edge.target.x) / 2}" y="${(edge.source.y + edge.target.y) / 2 - 6}" opacity="${Math.min(1, opacity + 0.15)}">${escapeHtml(edge.label || humanLabel(edge.type || "related_to"))}</text>`;
+        let label = "";
+        if (edge.showLabel !== false) {
+            const labelText = escapeHtml(edge.label || humanLabel(edge.type || "related_to"));
+            const pm = path.match(/M\s*([\d.-]+)\s+([\d.-]+)\s+Q\s*([\d.-]+)\s+([\d.-]+)\s+([\d.-]+)\s+([\d.-]+)/);
+            if (pm) {
+                const [psx, psy, pcx, pcy, ptx, pty] = pm.slice(1).map(Number);
+                const goesLeft = ptx < psx;
+                const textD = goesLeft ? `M ${ptx} ${pty} Q ${pcx} ${pcy} ${psx} ${psy}` : path;
+                const startOffset = goesLeft ? "25%" : "75%";
+                const safeKey = edge.key.replace(/[^a-zA-Z0-9]/g, "_");
+                label = `<defs><path id="ep-${safeKey}" d="${textD}"/></defs><text class="graph-edge-label" opacity="${Math.min(1, opacity + 0.15)}"><textPath href="#ep-${safeKey}" startOffset="${startOffset}" dy="-5">${labelText}</textPath></text>`;
+            }
+        }
         return `
-            <g class="graph-edge distance-${edge.distance || 1} ${edge.source.id === edge.target.id ? "self-edge" : ""}" data-edge-source="${escapeHtml(edge.source.id)}" data-edge-target="${escapeHtml(edge.target.id)}" style="--reveal-delay: ${Math.min(420, Number(edge.distance || 1) * 90)}ms; --graph-depth-opacity: ${opacity}">
+            <g class="graph-edge distance-${edge.distance || 1} ${edge.source.id === edge.target.id ? "self-edge" : ""}" data-edge-key="${escapeHtml(edge.key)}" data-edge-source="${escapeHtml(edge.source.id)}" data-edge-target="${escapeHtml(edge.target.id)}" style="--reveal-delay: ${Math.min(420, Number(edge.distance || 1) * 90)}ms; --graph-depth-opacity: ${opacity}">
                 <path d="${path}" fill="none" stroke="${escapeHtml(edge.style.color)}" stroke-width="${weight}" stroke-dasharray="${escapeHtml(edge.style.dash || "")}" opacity="${opacity}"></path>
                 <polygon points="${arrow}" fill="${escapeHtml(edge.style.color)}" opacity="${arrowOpacity}"></polygon>
                 ${label}
@@ -2153,7 +2128,10 @@ import {
     function buildGraphNodeMarkup(node, state) {
         const fill = node.style?.fills?.length > 1 ? `url(#${graphNodeGradientId(node)})` : escapeHtml(node.style?.fills?.[0] || "#55d6be");
         const radius = node.r || (node.selected ? 46 : 32);
-        const mediaSrc = node.image || "";
+        const mediaSrcRaw = node.image || "";
+        const mediaSrc = mediaSrcRaw && !/^(https?:|data:|blob:|file:)/i.test(mediaSrcRaw)
+            ? `/${mediaSrcRaw.replace(/^\/+/, "")}`
+            : mediaSrcRaw;
         const hasMedia = Boolean(mediaSrc);
         const labelLines = wrapProjectionText(node.title || node.id || "Untitled", { maxCharsPerLine: node.selected ? 18 : 16 });
         const labelOpacity = Number(node.labelOpacity || 1);
@@ -2394,62 +2372,6 @@ import {
             seen.add(key);
             return true;
         });
-    }
-
-    function scoreEdge(edge, allNodes, focusId) {
-        const source = allNodes.find((node) => node.id === edge.source);
-        const target = allNodes.find((node) => node.id === edge.target);
-
-        const sourceImportance = Number(source?.importance || 3);
-        const targetImportance = Number(target?.importance || 3);
-        const weight = Number(edge.weight || 1);
-
-        const relationshipPriority = {
-            defines: 10,
-            created: 9,
-            created_by: 9,
-            participated_in: 8,
-            originated_by: 9,
-            coined: 9,
-            represented_by: 9,
-            used_as_primary_media_for: 9,
-            depicts: 9,
-            authored: 8,
-            features: 8,
-            featured_in: 8,
-            presented: 8,
-            presented_by: 8,
-            proposed: 7,
-            demonstrates: 7,
-            demonstrated_by: 7,
-            explains: 7,
-            explained_by: 7,
-            context_for: 6,
-            documents: 6,
-            extends: 6,
-            supports: 6,
-            supported_by: 6,
-            contrasts: 6,
-            depends_on: 6,
-            exposes: 6,
-            anticipates: 6,
-            contains: 6,
-            includes: 6,
-            uses: 5,
-            used_by: 5,
-            cites: 5,
-            related_to: 4,
-            related: 3,
-            mentions: 1,
-            unresolved_media: 1
-        };
-
-        const typePriority = relationshipPriority[edge.type] || 3;
-        const directBonus = edge.source === focusId || edge.target === focusId ? 20 : 0;
-        const explicitBonus = edge.origin === "relationship" ? 8 : 0;
-        const visibilityBonus = edge.visibility === "primary" ? 5 : edge.visibility === "secondary" ? 2 : 0;
-
-        return directBonus + explicitBonus + visibilityBonus + weight * 10 + typePriority + sourceImportance + targetImportance;
     }
 
     function positionAsFocusCloud(cy, focusId, distances) {
@@ -2860,23 +2782,20 @@ import {
         const visibleNodes = cy.nodes().filter((node) => node.id() !== state.focusId);
         const localNodes = visibleNodes.filter((node) => node.hasClass("distance-1") || node.hasClass("distance-2"));
         const basePool = localNodes.length ? localNodes : visibleNodes;
-        const recent = new Set(state.tourRecent || []);
-        const fresh = basePool.filter((node) => !state.tourVisited?.has(node.id()) && !recent.has(node.id()));
-        const notRecent = basePool.filter((node) => !recent.has(node.id()) && node.id() !== state.previousFocusId);
-        const pool = (fresh.length ? fresh : notRecent.length ? notRecent : basePool)
-            .sort((a, b) => {
-                const aDistance = a.distance || 3;
-                const bDistance = b.distance || 3;
-                if (aDistance !== bDistance) return aDistance - bDistance;
-                return Number(b.importance || 3) - Number(a.importance || 3);
-            });
-        if (!pool.length) return null;
-
-        state.tourIndex = state.tourIndex % pool.length;
-        const next = pool[state.tourIndex];
-        state.tourIndex = (state.tourIndex + 1) % pool.length;
-
-        const nextId = next?.id || null;
+        const choice = pickNextViewerTourNode({
+            nodes: basePool.map((node) => ({
+                id: node.id(),
+                distance: node.distance,
+                importance: node.importance
+            })),
+            focusId: state.focusId,
+            previousFocusId: state.previousFocusId,
+            tourRecent: state.tourRecent || [],
+            tourVisited: state.tourVisited || [],
+            tourIndex: state.tourIndex || 0
+        });
+        state.tourIndex = choice.nextIndex;
+        const nextId = choice.nextId;
         if (nextId) rememberTourVisit(nextId, state);
         return nextId;
     }
@@ -3046,10 +2965,9 @@ import {
 
             state.isTraveling = true;
             panelEl.classList.add("panel-transitioning");
-            const route = findProjectionRoute(state.graph.graphModel?.edges || [], currentId, nextId, { maxDepth: state.maxDepth || 4 });
-            const routeNodes = route?.nodeIds
-                ?.map((id) => state.graph.graphModel?.nodes?.find((node) => node.id === id))
-                .filter(Boolean);
+            const travelPlan = buildViewerTravelPlan(state.graph.graphModel, currentId, nextId, {
+                maxDepth: state.maxDepth || 4
+            });
             state.graph.animateTravel(currentNode, nextNode, () => {
                 state.previousFocusId = currentId;
                 state.focusId = nextId;
@@ -3060,7 +2978,7 @@ import {
                 });
                 panelEl.classList.remove("panel-transitioning");
                 state.isTraveling = false;
-            }, { routeNodes });
+            }, { routeNodes: travelPlan?.routeNodes || [] });
             return;
         }
     }
@@ -4278,6 +4196,8 @@ import {
             depicts: "depicts",
             represents: "represents",
             located_in: "is located in",
+            headquartered_in: "is headquartered in",
+            based_in: "is based in",
             part_of: "is part of",
             contains: "contains",
             includes: "includes",
@@ -4331,6 +4251,8 @@ import {
             depicts: "is depicted by",
             represents: "is represented by",
             located_in: "contains",
+            headquartered_in: "is headquarters of",
+            based_in: "is base of",
             part_of: "contains",
             contains: "is contained by",
             includes: "is included in",
@@ -4829,13 +4751,32 @@ import {
         const id = typeof nodeOrId === "string" ? nodeOrId : nodeOrId?.id;
         if (!id) return "/";
 
+        const lookedUpNode = state.allNodes?.find((candidate) => candidate.id === id || candidate.protocol_id === id || candidate.protocolId === id);
         const node = typeof nodeOrId === "string"
-            ? state.allNodes?.find((candidate) => candidate.id === nodeOrId)
-            : nodeOrId;
+            ? lookedUpNode
+            : (nodeOrId?.url || nodeOrId?.type ? nodeOrId : (lookedUpNode || nodeOrId));
 
         if (node?.url) return node.url;
         const typeSegment = slugSegment(node?.type || "node");
         return `/${typeSegment}/${encodeURIComponent(id)}/`;
+    }
+
+    function normalizeSiteAssetUrl(value) {
+        const raw = String(value || "").trim();
+        if (!raw) return "";
+        if (/^(https?:|data:|blob:|file:)/i.test(raw)) return raw;
+        if (raw.startsWith("/")) return raw;
+        try {
+            return new URL(raw.replace(/^\.\/+/, ""), siteRootHref()).pathname;
+        } catch {
+            return `/${raw.replace(/^\/+/, "")}`;
+        }
+    }
+
+    function siteRootHref() {
+        const viewerLink = document.querySelector('link[rel="xananode-viewer"]')?.href;
+        if (viewerLink) return new URL(".", viewerLink).href;
+        return new URL("/", window.location.origin).href;
     }
 
     function slugSegment(value) {
@@ -4845,76 +4786,6 @@ import {
             .replace(/[^a-z0-9._-]+/g, "-")
             .replace(/^-+|-+$/g, "") || "node";
     }
-
-    function normalizeSearchText(value) {
-        return String(value || "")
-            .toLowerCase()
-            .normalize("NFKD")
-            .replace(/[\u0300-\u036f]/g, "")
-            .replace(/[^\w\s.-]/g, " ")
-            .replace(/\s+/g, " ")
-            .trim();
-    }
-
-    function tokenize(value) {
-        return normalizeSearchText(value)
-            .split(/\s+/)
-            .map((token) => token.trim())
-            .filter((token) => token.length >= 2);
-    }
-
-    function buildSearchPlan(value) {
-        const raw = String(value || "").trim();
-        const normalizedRaw = normalizeSearchText(raw);
-        const conversational = stripSearchLeadIn(normalizedRaw);
-        const rawTokens = tokenize(conversational);
-        const filteredTokens = rawTokens.filter((token) => !SEARCH_STOPWORDS.has(token));
-        const finalTokens = filteredTokens.length ? filteredTokens : rawTokens;
-        const normalized = finalTokens.join(" ").trim();
-
-        return {
-            raw,
-            normalized,
-            tokens: finalTokens,
-            display: normalized || normalizedRaw || raw
-        };
-    }
-
-    function stripSearchLeadIn(value) {
-        let next = String(value || "").trim();
-        const prefixes = [
-            /^who\s+is\s+/,
-            /^what\s+is\s+/,
-            /^what\s+are\s+/,
-            /^tell\s+me\s+about\s+/,
-            /^show\s+me\s+/,
-            /^find\s+/,
-            /^search\s+for\s+/,
-            /^i\s+want\s+to\s+know\s+about\s+/,
-            /^can\s+you\s+find\s+/,
-            /^where\s+is\s+/,
-            /^why\s+is\s+/,
-            /^how\s+does\s+/,
-            /^how\s+do\s+/,
-            /^give\s+me\s+/,
-            /^trace\s+/,
-            /^follow\s+/
-        ];
-
-        prefixes.forEach((pattern) => {
-            next = next.replace(pattern, "");
-        });
-
-        return next.trim();
-    }
-
-    const SEARCH_STOPWORDS = new Set([
-        "a", "an", "and", "are", "as", "at", "be", "by", "for", "from", "how",
-        "i", "in", "into", "is", "it", "me", "my", "of", "on", "or", "please",
-        "show", "tell", "that", "the", "their", "them", "this", "to", "want",
-        "was", "what", "when", "where", "which", "who", "why", "with", "you",
-        "your", "about", "find", "search", "trace", "follow", "explain"
-    ]);
 
     function stripHtml(value) {
         const div = document.createElement("div");

@@ -5,9 +5,10 @@
   "license": "Apache-2.0",
   "type": "module",
   "scripts": {
-    "build:substrate-source": "node tools/build-substrate-source.mjs",
-    "prepare": "node tools/prepare-xananode.mjs exampleSite",
-    "validate": "node tools/prepare-xananode.mjs exampleSite",
+    "sync:viewer-runtime": "node tools/sync-core-viewer-runtime.mjs",
+    "build:substrate-source": "npm run sync:viewer-runtime && node tools/build-substrate-source.mjs",
+    "prepare": "npm run sync:viewer-runtime && node tools/prepare-xananode.mjs exampleSite",
+    "validate": "npm run sync:viewer-runtime && node tools/prepare-xananode.mjs exampleSite",
     "example:dev": "npm run prepare && hugo server --source exampleSite --themesDir ../..",
     "example:build": "npm run prepare && hugo --source exampleSite --themesDir ../.. --gc --cleanDestinationDir --minify",
     "core:init": "git submodule update --init --recursive vendor/xananode-core",
