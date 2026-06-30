@@ -13,6 +13,8 @@ jobs:
         uses: actions/checkout@v5
         with:
           submodules: recursive
+      - name: Check out canonical substrate sibling
+        run: git clone --depth 1 https://github.com/kingc95/XanaNode-Canonical-Substrate.git ../XanaNode-Canonical-Substrate
       - name: Set up Node
         uses: actions/setup-node@v5
         with:
