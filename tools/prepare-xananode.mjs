@@ -1560,7 +1560,7 @@ function authoredEdgeNode(id) {
   if (importedNode) {
     return {
       id: importedNode.id,
-      protocolId: importedNode.id,
+      protocolId: importedNode.protocolId || importedNode.protocol_id || importedNode.id,
       title: importedNode.title,
       data: importedNode,
       local: false
@@ -1665,11 +1665,18 @@ for (const edge of authoredEdges) {
   }
 }
 
-const authoredProtocolEdges = authoredEdges.map((edge, index) => {
+const authoredProtocolEdges = authoredEdges.flatMap((edge, index) => {
   const sourceNode = authoredEdgeNode(edge.source);
   const targetNode = authoredEdgeNode(edge.target);
+  if (!sourceNode || !targetNode) {
+    errors.push(
+      `${edge.file}: authored relationship "${edge.type}" points to a missing node endpoint `
+      + `(source: ${edge.source}, target: ${edge.target}).`
+    );
+    return [];
+  }
   const relationship = edge.relationship || {};
-  return {
+  return [{
     id: relationship.id || relationship.protocol_id || relationshipIdFor(substrateNamespace, sourceNode.protocolId, edge.type, targetNode.protocolId, index),
     source: sourceNode.protocolId,
     target: targetNode.protocolId,
@@ -1692,7 +1699,7 @@ const authoredProtocolEdges = authoredEdges.map((edge, index) => {
     ...(relationship.evidence ? { evidence: asArray(relationship.evidence).map((item) => nodes.get(item)?.protocolId || item) } : {}),
     ...(relationship.external ? { external: true } : {}),
     ...(relationship.target_substrate ? { target_substrate: relationship.target_substrate } : {})
-  };
+  }];
 });
 
 const fragmentDerivedEdges = authoredFragmentNodes.map((fragment, index) => ({
