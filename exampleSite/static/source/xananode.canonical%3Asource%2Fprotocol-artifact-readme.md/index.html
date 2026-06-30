@@ -21,7 +21,230 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving XanaNode Protocol README...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>XanaNode Protocol README</h1>
+          <p class="xana-summary">The main human-readable overview of the XanaNode protocol.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># XanaNode</p>
+<p>!<a href="media/images/xananode-icon.svg">XanaNode Logo</a></p>
+<h2>What is XanaNode?</h2>
+<p>Short:</p>
+<p>Relationships preserve knowledge.</p>
+<p>Canonical:</p>
+<p>XanaNode is a protocol for independently authored knowledge substrates that preserve relationships, provenance, lineage, disagreement, and addressable fragments, so knowledge can move across tools and media without losing its structure.</p>
+<p>Expanded:</p>
+<p>XanaNode is a protocol for independently authoring, transmitting, and federating knowledge substrates that preserve relationships, provenance, lineage, disagreement, and addressable fragments, enabling durable human-to-machine knowledge transfer through many possible projection layers.</p>
+<p>Rather than treating documents as the primary unit of knowledge, XanaNode treats relationships as first-class entities and models knowledge as a connected network of people, concepts, claims, questions, hypotheses, problems, knowledge gaps, communications, responses, sources, events, media, organizations, technologies, and their relationships.</p>
+<p>XanaNode is designed to be both human-readable and machine-interpretable.</p>
+<p>XanaNode is also a working software stack. The protocol, Core SDK, Workspace engine, Studio workbench, Mobile capture companion, Hugo projection layer, and canonical XanaNode.com substrate are designed to run together and to describe themselves as XanaNode data. The canonical substrate is not only documentation about the project; it is a living example of the protocol carrying its own schemas, registries, media assets, source snapshots, project history, implementation links, build metadata, governance notes, and unresolved work.</p>
+<p>This repository now also publishes an explicit substrate source at <code>substrate-source/</code>. That folder is generated from the protocol repository itself so the rest of the stack can federate with the protocol as a normal substrate instead of treating this repository as a private implementation detail.</p>
+<p>That recursive quality is intentional. If XanaNode says relationships preserve knowledge, the XanaNode project itself must preserve the relationships that explain XanaNode: why files exist, where schemas came from, which tools consume them, what changed, what is pending, and how the public website was produced.</p>
+<p>Documentation is licensed under <code>CC-BY-4.0</code>. Schemas, validators, and reference code are licensed under <code>Apache-2.0</code>. The XanaNode name and logo are trademarks of the XanaNode project; see <a href="LICENSE.md">LICENSE.md</a> and <a href="TRADEMARK.md">TRADEMARK.md</a>.</p>
+<p>Implementations should identify themselves as XanaNode-compatible and link to the canonical specification when accurate:</p>
+<p>``<code>text This project is a XanaNode-compatible implementation. Canonical specification: https://github.com/kingc95/XanaNode </code>``</p>
+<p>It is not a wiki.</p>
+<p>It is not a graph database.</p>
+<p>It is not a note-taking application.</p>
+<p>It is a protocol for knowledge substrates and the rules that let them move, federate, and be projected without losing their structure.</p>
+<p>Fragments are not limited to paragraph chunks. The protocol&#39;s fragment/tumbler model can also describe quoted spans, character or word ranges, page regions, and time-based media segments. The stable address is the tumbler; the selector carries the granular &quot;where inside this source version&quot; detail.</p>
+<p>---</p>
+<h2>The Core Problem</h2>
+<p>Humanity has become exceptionally good at publishing information.</p>
+<p>We have become far less successful at preserving the relationships that give information meaning.</p>
+<p>Modern publishing systems prioritize documents:</p>
+<p>* web pages * articles * books * PDFs * databases</p>
+<p>Yet knowledge does not exist inside isolated documents.</p>
+<p>Knowledge exists in:</p>
+<p>* provenance * context * lineage * contradiction * influence * evidence * explanation * association</p>
+<p>The result is a civilization-scale memory problem.</p>
+<p>Information survives.</p>
+<p>Relationships disappear.</p>
+<p>Sources become detached from conclusions.</p>
+<p>Claims lose context.</p>
+<p>Links decay.</p>
+<p>Authority becomes difficult to evaluate.</p>
+<p>The problem becomes increasingly visible in artificial intelligence systems, but it predates AI by decades.</p>
+<p>XanaNode is an attempt to address this deeper problem.</p>
+<p>---</p>
+<p># Core Principles</p>
+<h2>1. Relationships Are First-Class</h2>
+<p>Traditional systems primarily store content.</p>
+<p>XanaNode stores both content and the relationships that connect content.</p>
+<p>Examples:</p>
+<p>* supports * contradicts * explains * derived_from * created * memorializes * documents * participates_in</p>
+<p>Relationships are explicit, queryable, versioned structures.</p>
+<p>---</p>
+<h2>2. Provenance Matters</h2>
+<p>Every claim should be traceable.</p>
+<p>Users should be able to answer:</p>
+<p>* Where did this come from? * Who said it? * What evidence supports it? * What contradicts it? * What changed over time?</p>
+<p>XanaNode prioritizes preserving knowledge lineage rather than merely preserving information.</p>
+<p>---</p>
+<h2>3. Claims Are Not Facts</h2>
+<p>Claims, observations, concepts, essays, and sources are distinct node types.</p>
+<p>XanaNode does not assume consensus.</p>
+<p>Instead it preserves:</p>
+<p>* claims * counterclaims * evidence * disagreement * uncertainty * open questions * hypotheses * knowledge gaps * review status</p>
+<p>The goal is not enforced truth.</p>
+<p>The goal is navigable knowledge.</p>
+<p>---</p>
+<h2>4. Knowledge Is Structure</h2>
+<p>A knowledge substrate is not information.</p>
+<p>A knowledge substrate is the structure that determines how information relates, persists, evolves, and can be understood.</p>
+<p>The same information arranged differently produces different knowledge capabilities.</p>
+<p>---</p>
+<h2>5. Human Readable and Machine Interpretable</h2>
+<p>Most semantic systems optimize for machines.</p>
+<p>Most publishing systems optimize for humans.</p>
+<p>XanaNode attempts to support both.</p>
+<p>Humans should be able to browse, understand, and author the graph.</p>
+<p>Machines should be able to query, reason over, and analyze it.</p>
+<p>---</p>
+<p># Knowledge Substrates</p>
+<p>A knowledge substrate is an independently authored graph of knowledge.</p>
+<p>In XanaNode, a production substrate is backed by a Git repository. Git supplies history, branching, review, merge, and synchronization; XanaNode supplies the knowledge model, schemas, validation rules, and federation semantics.</p>
+<p>A substrate is portable. A hand-built substrate should be able to follow the standard folder tree, include its own files, and open in compatible tools without private state. A <code>.substrate</code> archive carries the whole substrate as data: manifest, nodes, relationships, media, source files, schemas, reports, and workspace metadata needed for round trips.</p>
+<p>Examples:</p>
+<p>* personal knowledge substrates * research substrates * organizational substrates * historical archives * educational collections * institutional memory systems</p>
+<p>Each substrate remains independently owned and moderated.</p>
+<p>There is no requirement for a central authority.</p>
+<h2>Repository Files, Assets, And Knowledge Objects</h2>
+<p>XanaNode does not treat every file in a Git repository as equally worthy of becoming its own node.</p>
+<p>Portable substrates should preserve important local files, but preservation and elevation are different actions:</p>
+<p>* **Preserve as an attached asset** when the file is implementation support, packaging glue, projection inventory, test scaffolding, or another file whose meaning is already carried by a higher-level node. * **Promote to a first-class node** when the file is itself a knowledge-bearing object that should be citable, discussable, governable, reviewable, or traversable on its own.</p>
+<p>A raw repository file generally deserves its own node when one or more of these are true:</p>
+<p>* it defines protocol, schema, registry, compatibility, or governance behavior * it is an independently citable specification, proposal, policy, source document, or canonical example * it is itself a portable substrate/report/registry artifact that other tools may inspect directly * authors are likely to discuss its contents semantically, not merely acknowledge that the file exists</p>
+<p>A raw repository file should usually remain an attached asset, snapshot, or supporting file when:</p>
+<p>* it exists mainly to make another node render, build, test, package, or execute * it is one item in a large projection-asset inventory such as icons, thumbnails, static images, or generated output * it is better modeled as provenance on a higher-level source, media, project, schema, or substrate node</p>
+<p>This rule also applies to source/media modeling. A file does not need two separate nodes just because it is both readable and visual.</p>
+<p>* If the knowledge object being cited is the file itself, prefer one <code>source</code> node. * If that same node carries a local image, PDF, audio, video, or other file, it may also carry the <code>media</code> facet and related <code>media_type</code> fields. * Use a separate <code>media</code> node only when the media object is distinct from the source object it previews, documents, depicts, or was derived from.</p>
+<p>The practical goal is simple: preserve the bytes, but only promote the files that carry real semantic weight.</p>
+<p>---</p>
+<p># Federation</p>
+<p>XanaNode is designed for federation.</p>
+<p>Multiple independent substrates can interoperate without surrendering ownership.</p>
+<p>Example:</p>
+<p>Researcher A maintains a substrate.</p>
+<p>Researcher B maintains a substrate.</p>
+<p>A university maintains a substrate.</p>
+<p>A museum maintains a substrate.</p>
+<p>Each can preserve its own interpretations and governance policies.</p>
+<p>Federation allows these substrates to be connected and analyzed together.</p>
+<p>The goal is not one global database.</p>
+<p>The goal is a network of interoperable knowledge substrates.</p>
+<p>---</p>
+<p># Schema Architecture</p>
+<p>XanaNode uses a layered schema model.</p>
+<h2>Core Schema</h2>
+<p>Provides the canonical node and relationship registries for the protocol.</p>
+<p>The current core registry files are versioned and live in <a href="schemas">schemas/</a>:</p>
+<p>* <a href="schemas/xananode-node-types.v0.3.0.json">xananode-node-types.v0.3.0.json</a> * <a href="schemas/xananode-node-types.schema.v0.3.0.json">xananode-node-types.schema.v0.3.0.json</a> * <a href="schemas/xananode-relationship-types.v0.5.0.json">xananode-relationship-types.v0.5.0.json</a> * <a href="schemas/xananode-relationship-types.schema.v0.5.0.json">xananode-relationship-types.schema.v0.5.0.json</a></p>
+<p>The node registry currently centers on core types such as person, concept, claim, question, hypothesis, problem, knowledge_gap, communication, response, source, essay, and observation.</p>
+<p>The relationship registry currently centers on core types such as defines, has_claim, supports, contradicts, documents, derived_from, answers, investigates, requires_source, possibly_related_to, and communicated_to.</p>
+<p>The core property registry standardizes common open properties such as <code>uncertainty_level</code>, <code>review_status</code>, <code>research_priority</code>, <code>evidence_strength</code>, <code>communication_model</code>, and <code>communication_pattern</code>.</p>
+<p>The substrate layout registry defines the standard folder tree that compatible tools should understand:</p>
+<p>* <a href="schemas/substrate-layout.schema.json">substrate-layout.schema.json</a> * <a href="schemas/xananode-substrate-layout.v0.1.0.json">xananode-substrate-layout.v0.1.0.json</a></p>
+<p>This makes the substrate format tight enough that someone can manually build a substrate outside the XanaNode tools, drop it into Core, Workspace, Studio, Hugo, or another compatible implementation, and expect the records and files to be discoverable.</p>
+<p>The core schema provides interoperability while still allowing extension schemas to define namespaced custom types.</p>
+<p>Validation tools live in <a href="tools">tools/</a>. The repository validator checks JSON Schema conformance plus XanaNode-specific integrity rules such as declared relationship types, registered namespaces, and resolvable relationship endpoints.</p>
+<p>---</p>
+<p># Implementations</p>
+<p>The protocol repository is implementation-neutral. It defines the canonical schemas, registries, examples, governance material, and validation rules. The active implementation stack is maintained in separate repositories that consume this protocol:</p>
+<p>* <a href="https://github.com/kingc95/XanaNode-Core-SDK">XanaNode Core SDK</a> is the renderer-independent parser, validator, graph builder, fragment engine, and exporter. It includes this protocol repository as <code>vendor/xananode-protocol</code>. * <a href="https://github.com/kingc95/XanaNode-Workspace">XanaNode Workspace</a> is the local-first workspace engine used by Studio, CLIs, and editor integrations. It includes Core SDK as <code>vendor/xananode-core</code>. * <a href="https://github.com/kingc95/XanaNode-Hugo">XanaNode Hugo Theme</a> is the static-site renderer and graph viewer for XanaNode-compatible substrates. * <a href="https://github.com/kingc95/XanaNode-Studio">XanaNode Studio</a> is the desktop authoring workbench. It includes Hugo and Workspace as submodules. * <a href="https://github.com/kingc95/XanaNode-Mobile">XanaNode Mobile</a> is the Android capture companion for field intake, media capture, quick notes, portable <code>.substrate</code> handoff, and later federation back into the rest of the stack.</p>
+<p>The intended dependency chain is:</p>
+<p>```text xananode protocol -&gt; XanaNode-Core-SDK -&gt; XanaNode-Workspace -&gt; XanaNode-Studio -&gt; XanaNode-Mobile</p>
+<p>XanaNode-Hugo consumes the protocol artifacts as the published/static preview renderer. ```</p>
+<p>For a full local Studio checkout:</p>
+<p>``<code>bash git clone --recurse-submodules https://github.com/kingc95/XanaNode-Studio.git cd XanaNode-Studio npm install npm test </code>``</p>
+<p>---</p>
+<h2>How The Stack Fits Together</h2>
+<p>XanaNode is designed so the same substrate can move through the whole stack without being reinvented at each layer.</p>
+<p>``<code>text Protocol defines the rules Core reads, validates, analyzes, and exports substrates Workspace manages substrate folders, registry targets, working copies, and .substrate bundles Studio uses Workspace/Core for authoring and federation UX Mobile uses Workspace/Core for capture-first intake and portable handoff Hugo uses Core to validate and mount substrate sources, then projects them as a static site </code>``</p>
+<p>Once you are past Core, the thing is still a substrate. Sometimes it is a Git-backed substrate folder. Sometimes it is a portable <code>.substrate</code> bundle. Sometimes it is a mounted registry target cloned locally. These are transport and governance forms of the same thing, not separate knowledge objects.</p>
+<p>The protocol registry can list known federation targets. Official tools should prefer that registry when offering online substrate choices, while still allowing federation with valid external substrates that are not yet listed there.</p>
+<p>To regenerate the Protocol repo&#39;s own substrate source:</p>
+<p>``<code>powershell node tools/build-substrate-source.mjs </code>``</p>
+<p>Or from the <code>XanaNode-Master</code> workspace root:</p>
+<p>``<code>powershell npm run protocol:build-substrate-source </code>``</p>
+<p>The protocol itself is not tied to Node.js. The current reference stack happens to be Node-based, but the protocol-facing contract should be callable from any stack. Official tooling should converge on stable <code>xananode-core</code> and <code>xananode-workspace</code> executable interfaces so Studio, Mobile, Hugo helpers, AI agents, and future third-party tools can operate on substrates without embedding one implementation language directly. See <a href="specs/substrates.md">specs/substrates.md</a> and <a href="proposals/XNP-0012-executable-tool-contract.md">proposals/XNP-0012-executable-tool-contract.md</a>.</p>
+<h2>FAQ</h2>
+<h3>Is this a real working stack?</h3>
+<p>Yes. XanaNode is not just a schema set. The protocol, Core SDK, Workspace engine, Studio authoring tool, Mobile capture companion, Hugo projection layer, and canonical XanaNode substrate are meant to run together right now.</p>
+<h3>What is a <code>.substrate</code> file?</h3>
+<p>A <code>.substrate</code> file is a portable bundled substrate. It can carry the manifest, nodes, relationships, media, source snapshots, schemas, and supporting metadata needed to move a substrate between tools without losing pieces.</p>
+<h3>Is a <code>.substrate</code> different from a substrate folder?</h3>
+<p>No. It is the same substrate in a packaged transmission form. A Git-backed folder is better for active authorship and history. A <code>.substrate</code> bundle is better for shipping, handoff, offline import, and archival release.</p>
+<h3>Where does federation happen?</h3>
+<p>Federation begins at the protocol level and is enforced through Core. Workspace is the management layer that should clone, mount, compare, import, or merge external substrates. Studio is the human-facing authoring interface for that workflow. Hugo is a projection layer that can mount configured substrate sources at build time and render the result.</p>
+<h3>Do I have to rewrite imported substrate data as Markdown for Hugo?</h3>
+<p>No. Markdown is an authoring convenience, not the only source form. Hugo should be able to mount or import validated substrate JSON through Core and render it directly.</p>
+<h3>Can substrates overlap?</h3>
+<p>Yes. Overlap is expected. Independent substrates may describe the same people, organizations, concepts, or works differently. XanaNode is meant to preserve that overlap, carry the provenance, and let tools surface the comparison instead of flattening it away.</p>
+<p>---</p>
+<h2>Extension Schema</h2>
+<p>Substrates may define custom node types and relationship types.</p>
+<p>Examples:</p>
+<p>museum:artifact</p>
+<p>biology:species</p>
+<p>legal:precedent</p>
+<p>genealogy:ancestor_of</p>
+<p>Custom types are:</p>
+<p>* namespaced * documented * versioned * machine-readable</p>
+<p>This allows evolution without breaking compatibility.</p>
+<p>---</p>
+<p># Namespaces</p>
+<p>XanaNode supports schema namespaces.</p>
+<p>Examples:</p>
+<p>xananode:claim</p>
+<p>museum:artifact</p>
+<p>research:experiment</p>
+<p>Namespaces prevent collisions and allow independent schema development.</p>
+<p>Relationships between schemas can themselves be represented.</p>
+<p>Examples:</p>
+<p>equivalent_to</p>
+<p>broader_than</p>
+<p>narrower_than</p>
+<p>related_to</p>
+<p>---</p>
+<p># Tumbler Addressing</p>
+<p>XanaNode is intended to support persistent, location-independent addressing.</p>
+<p>The goal is to move beyond URLs and document paths.</p>
+<p>Objects should remain addressable even if:</p>
+<p>* files move * websites migrate * structures change</p>
+<p>Future implementations may support:</p>
+<p>* node-level addressing * relationship-level addressing * claim-level addressing * fragment-level addressing * transcluded content references</p>
+<p>This provides durable references across time.</p>
+<p>---</p>
+<p># Transclusion</p>
+<p>XanaNode embraces transclusion principles inspired by Project Xanadu.</p>
+<p>Rather than duplicating information repeatedly, knowledge should be referenced and reused.</p>
+<p>Benefits include:</p>
+<p>* provenance preservation * reduction of duplication * easier revision tracking * stronger lineage visibility</p>
+<p>Practical implementations may initially focus on partial transclusion while preserving compatibility with existing publishing systems.</p>
+<p>---</p>
+<p># Mergeability</p>
+<p>Mergeability is a core design goal.</p>
+<p>Two substrates should be able to exchange knowledge without requiring identical governance.</p>
+<p>Merge operations should preserve:</p>
+<p>* authorship * provenance * disagreement * source attribution * local moderation decisions</p>
+<p>Merging should add structure rather than destroy context.</p>
+<p>---</p>
+<p># Civilizational Memory</p>
+<p>The long-term goal of XanaNode is not merely better note-taking, search, or AI retrieval.</p>
+<p>The goal is the creation of a federated civilizational memory system.</p>
+<p>A system where:</p>
+<p>* knowledge remains locally owned * provenance remains visible * disagreement remains preserved * schemas remain interoperable * relationships remain navigable</p>
+<p>A civilization-scale memory substrate built from independently maintained knowledge systems rather than a single centralized authority.</p>
+<p>XanaNode is an open protocol for building interoperable knowledge substrates that preserve relationships, provenance, lineage, and disagreement across independently authored and federated knowledge systems.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-readme.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

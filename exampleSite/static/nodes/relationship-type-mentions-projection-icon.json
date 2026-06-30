@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-type-mentions-projection-icon",
+  "title": "Mentions Relationship Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-types/mentions.svg",
+  "asset_role": "relationship_type_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/mentions.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the mentions relationship type.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-mentions-projection-icon-represents-schema-relationship-type-mentions",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-type-mentions",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-mentions-has_primary_media-media-relationship-type-mentions-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-type-mentions",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:327bb650b20f229497ade775d8f4837560724a850ba7c3afc4c81f5b93ec0cd4",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:31.104Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/mentions.svg",
+    "method": "archive",
+    "content_id": "sha256:327bb650b20f229497ade775d8f4837560724a850ba7c3afc4c81f5b93ec0cd4",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_media_relationship-type-mentions-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -21,7 +21,28 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Specs / XanaNode Core...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Specs / XanaNode Core</h1>
+          <p class="xana-summary">A protocol specification covering XanaNode Core.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># XanaNode Core</p>
+<p>XanaNode is an open protocol for interoperable knowledge substrates.</p>
+<p>The core specification defines the shared vocabulary, object model, and protocol-level assumptions used across the rest of the repository.</p>
+<h2>Scope</h2>
+<ul><li>the canonical node registry in <a href="../schemas/xananode-node-types.v0.3.0.json">schemas/xananode-node-types.v0.3.0.json</a></li><li>the canonical relationship registry in <a href="../schemas/xananode-relationship-types.v0.5.0.json">schemas/xananode-relationship-types.v0.5.0.json</a></li><li>the versioned JSON Schemas that validate those registries</li></ul>
+<h2>Core Model</h2>
+<p>The current node registry centers on person, concept, claim, source, essay, and observation.</p>
+<p>The current relationship registry centers on definitions, evidence, claim structure, lineage, identity, creation, participation, location, revision, and related semantic links.</p>
+<p>The core model is designed to preserve provenance and disagreement rather than flattening distinct knowledge states into one asserted fact.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-specs-xananode-core.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

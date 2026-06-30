@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/node-type-place-projection-icon",
+  "title": "Place Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/node-types/place.svg",
+  "asset_role": "node_type_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/node-types/place.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the place node type.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-node-type-place-projection-icon-represents-schema-node-type-place",
+      "type": "represents",
+      "target": "xananode.canonical:schema/node-type-place",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-place-has_primary_media-media-node-type-place-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/node-type-place",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:e25710ae51afda721810b386306056c3b8487f52ba5e944b11b7ca7bfd0ade47",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:31.104Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/node-types/place.svg",
+    "method": "archive",
+    "content_id": "sha256:e25710ae51afda721810b386306056c3b8487f52ba5e944b11b7ca7bfd0ade47",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_media_node-type-place-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

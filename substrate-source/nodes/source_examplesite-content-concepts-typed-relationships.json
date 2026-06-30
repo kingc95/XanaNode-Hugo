@@ -15,7 +15,7 @@
   "content_id": "sha256:a1a2a96bfd14e33b093a9a6941c934d9220039d7743573439c6361ea8db5afb5",
   "content": "---\ntitle: \"Typed Relationships\"\ntype: \"concept\"\nimportance: 5\nsummary: \"Explicit relationship meanings that explain why two nodes are connected.\"\nrelationships:\n  - type: \"contrasts_with\"\n    target: \"unlabeled-hyperlink\"\n  - type: \"supports\"\n    target: \"claim-relationships-preserve-context\"\n---\n\nA normal hyperlink says that two things are connected.\n\nA typed relationship says how they are connected.\n\nThat difference matters. `supports`, `contradicts`, `explains`, `derived_from`, `memorializes`, `transcludes`, and `deep_links_to` carry different meanings and should not be flattened into generic relatedness.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/typed-relationships.md",
     "method": "archive",
     "content_id": "sha256:a1a2a96bfd14e33b093a9a6941c934d9220039d7743573439c6361ea8db5afb5",

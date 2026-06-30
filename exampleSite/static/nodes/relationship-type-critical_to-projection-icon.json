@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-type-critical_to-projection-icon",
+  "title": "Critical to Relationship Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-types/critical_to.svg",
+  "asset_role": "relationship_type_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/critical_to.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the critical_to relationship type.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-critical_to-projection-icon-represents-schema-relationship-type-critical_to",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-type-critical_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-critical_to-has_primary_media-media-relationship-type-critical_to-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-type-critical_to",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:e1c72f5a716f5ea29bc0aa52912ecb77c9650435d88f99ef4a93dae74f131f4d",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:31.104Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/critical_to.svg",
+    "method": "archive",
+    "content_id": "sha256:e1c72f5a716f5ea29bc0aa52912ecb77c9650435d88f99ef4a93dae74f131f4d",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_media_relationship-type-critical_to-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

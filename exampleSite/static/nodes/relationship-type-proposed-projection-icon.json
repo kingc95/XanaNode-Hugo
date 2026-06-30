@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-type-proposed-projection-icon",
+  "title": "Proposed Relationship Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-types/proposed.svg",
+  "asset_role": "relationship_type_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/proposed.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the proposed relationship type.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-proposed-projection-icon-represents-schema-relationship-type-proposed",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-type-proposed",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-proposed-has_primary_media-media-relationship-type-proposed-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-type-proposed",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:a44e58ff7646daed41c4ec9d5f2a17c00a45dad9dd10f8c9069a5c51d6cb8a97",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:31.104Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/proposed.svg",
+    "method": "archive",
+    "content_id": "sha256:a44e58ff7646daed41c4ec9d5f2a17c00a45dad9dd10f8c9069a5c51d6cb8a97",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_media_relationship-type-proposed-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

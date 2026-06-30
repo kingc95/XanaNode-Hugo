@@ -21,7 +21,46 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Specs / Tumbler Addressing...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Specs / Tumbler Addressing</h1>
+          <p class="xana-summary">A protocol specification covering Tumbler Addressing.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># Tumbler Addressing</p>
+<p>Tumbler addressing refers to persistent, location-independent addressing of knowledge objects and fragments.</p>
+<p>The goal is to address a thing even if:</p>
+<ul><li>files move</li><li>folders change</li><li>URLs change</li><li>renderers change</li><li>the substrate is mirrored or federated</li></ul>
+<p>XanaNode begins with stable node IDs and a minimal fragment addressing profile.</p>
+<h2>Address Profile</h2>
+<p>Node addresses use:</p>
+<p>``<code>text &lt;namespace&gt;:&lt;node-kind&gt;/&lt;local-id&gt; </code>``</p>
+<p>Versioned node addresses add an immutable version identity:</p>
+<p>``<code>text &lt;namespace&gt;:&lt;node-kind&gt;/&lt;local-id&gt;@&lt;version-id&gt; </code>``</p>
+<p>Fragment addresses append a fragment selector and must preserve both the source node version and the fragment version:</p>
+<p>``<code>text &lt;namespace&gt;:&lt;node-kind&gt;/&lt;local-id&gt;@&lt;source-version-id&gt;#fragment/&lt;fragment-id&gt;@&lt;fragment-version-id&gt; </code>``</p>
+<p>Rules:</p>
+<ul><li><code>namespace</code> is a registered namespace such as <code>xananode</code> or <code>example.minimal</code>.</li><li><code>node-kind</code> is the node type family used in the substrate path, such as <code>source</code>, <code>claim</code>, <code>concept</code>, <code>essay</code>, or <code>fragment</code>.</li><li><code>local-id</code> is stable within the namespace.</li><li><code>source-version-id</code> identifies the exact source node version being addressed, such as a Git commit/path identity or immutable content ID.</li><li><code>fragment-id</code> is stable within the addressed node.</li><li><code>fragment-version-id</code> identifies the exact fragment extraction/version, usually a content hash or generated fragment revision ID.</li><li>Fragment nodes must store <code>source_node</code>, <code>source_version_id</code>, <code>source_content_id</code>, <code>fragment_id</code>, <code>content_id</code>, <code>version_id</code>, and <code>tumbler</code>.</li><li>A <code>tumbler</code> field must preserve the full versioned node or fragment address when a record depends on persistent addressing.</li></ul>
+<p>Examples:</p>
+<p>``<code>text example.minimal:concept/knowledge-substrate example.minimal:source/as-we-may-think@git:8e47e70:examples/minimal-substrate/nodes/source-as-we-may-think.json#fragment/0004@sha256:example-as-we-may-think-fragment-0004 </code>``</p>
+<p>Unversioned node addresses are stable identities. Versioned node and fragment tumblers are fixed references to an exact historical chunk. A transclusion should use the versioned fragment tumbler, not the floating node identity.</p>
+<h2>Selector Granularity</h2>
+<p>The tumbler gives the durable address. The selector explains how the chunk was found inside the source.</p>
+<p>Across the protocol, selectors are allowed to be more granular than a paragraph block:</p>
+<ul><li><code>TextQuoteSelector</code> for an exact quoted span with optional prefix/suffix context</li><li><code>TextPositionSelector</code> for character offsets inside a source version</li><li><code>RangeSelector</code> for generic start/end ranges</li><li><code>FragmentSelector</code> for a stable local fragment id</li><li><code>MediaFragmentSelector</code> or <code>TimecodeRangeSelector</code> for audio/video segments, image regions, or other media-native chunking</li></ul>
+<p>For time-based media, the current interoperable shape is:</p>
+<p>``<code>json { &quot;type&quot;: &quot;TimecodeRangeSelector&quot;, &quot;unit&quot;: &quot;ms&quot;, &quot;start_ms&quot;: 12340, &quot;end_ms&quot;: 18750, &quot;start_timecode&quot;: &quot;00:00:12.340&quot;, &quot;end_timecode&quot;: &quot;00:00:18.750&quot; } </code>``</p>
+<p>For text or structured documents, the selector may instead use:</p>
+<p>``<code>json { &quot;type&quot;: &quot;RangeSelector&quot;, &quot;unit&quot;: &quot;word&quot;, &quot;start&quot;: 120, &quot;end&quot;: 135 } </code>``</p>
+<p>That means XanaNode&#39;s equivalent of &quot;start at this exact word&quot; is not a different address family. It is the same fragment tumbler plus a selector precise enough to identify the span within that specific source version.</p>
+<p>This profile is intentionally small. Future versions may add richer selectors, byte ranges, media regions, and additional revision systems without invalidating these base addresses.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-specs-tumbler-addressing.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

@@ -23,16 +23,11 @@ params:
     namespace: "xananode.example"
     homeNode: "start-here"
     packs:
-      - id: "example.minimal"
-        source: "../vendor/xananode-core/vendor/xananode-protocol/examples/minimal-substrate"
-        mode: "mounted"
-        version: "0.2.0"
-        required: true
       - id: "xananode.canonical"
         source: "../../XanaNode-Canonical-Substrate"
         mode: "mounted"
         version: "0.1.0"
-        required: false
+        required: true
         enabled: true
     brand:
       name: "XanaNode"

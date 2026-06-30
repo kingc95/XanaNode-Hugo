@@ -21,7 +21,23 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Examples / Federation Example / README...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Examples / Federation Example / README</h1>
+          <p class="xana-summary">The README for Examples / Federation Example.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># Federation Example</p>
+<p>This example shows how two independently authored substrates can be compared and partially merged without forcing a single source of truth.</p>
+<ul><li><code>substrate-a/</code> models &quot;knowledge substrate&quot; as a concept.</li><li><code>substrate-b/</code> models &quot;memory substrate&quot; as a similar concept.</li><li><code>review-workspace/</code> shows the temporary mounted review state where both concepts stay visible together with their possible-match overlap.</li><li>each substrate records an outbound <code>possible_match</code> relationship to the other substrate&#39;s local concept.</li><li><code>merge-report.json</code> records the result of a federation/merge pass, including the decision to preserve both local concepts instead of collapsing them.</li><li><code>compatibility-report.json</code> records the practical compatibility level reached by the example.</li><li><code>substrate-diff.json</code> shows the exact node and relationship additions that appear when the two substrates are analyzed together.</li></ul>
+<p>The merge report does not overwrite either substrate. It records a reviewable mapping, keeps both local nodes intact, and makes the overlap explicit enough for tools to compare, mount, inspect, or later merge with human approval. The review workspace exists so the example does not stop at prose about merge behavior; it also shows an openable temporary substrate where the overlap is already visible.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-examples-federation-example-readme.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

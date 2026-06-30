@@ -1,0 +1,74 @@
+{
+  "id": "xananode.canonical:schema/property-communication_pattern",
+  "title": "Communication pattern",
+  "type": "schema",
+  "subtype": "property_registry_entry",
+  "importance": 4,
+  "summary": "The semantic pattern of a communication beyond participant count.",
+  "registry_type": "communication_pattern",
+  "category": "communication",
+  "aliases": [
+    "interaction_pattern",
+    "discourse_pattern"
+  ],
+  "applies_to": [
+    "communication",
+    "event",
+    "publication",
+    "source"
+  ],
+  "unit_system": "none",
+  "value_schema": {
+    "type": "string",
+    "enum": [
+      "dialogue",
+      "broadcast",
+      "collection",
+      "coordination",
+      "negotiation",
+      "debate",
+      "consensus",
+      "instruction",
+      "query_response",
+      "publication"
+    ]
+  },
+  "examples": [
+    "query_response"
+  ],
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-property-communication_pattern-uses-schema-node-type-communication",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-communication",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-communication_pattern-uses-schema-node-type-event",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-event",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-communication_pattern-uses-schema-node-type-publication",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-publication",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-communication_pattern-uses-schema-node-type-source",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-source",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-communication_pattern",
+      "type": "contains",
+      "source": "xananode.canonical:schema/property-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_property-communication_pattern.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

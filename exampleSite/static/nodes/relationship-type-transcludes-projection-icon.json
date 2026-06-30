@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-type-transcludes-projection-icon",
+  "title": "Transcludes Relationship Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-types/transcludes.svg",
+  "asset_role": "relationship_type_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/transcludes.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the transcludes relationship type.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-transcludes-projection-icon-represents-schema-relationship-type-transcludes",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-type-transcludes",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-transcludes-has_primary_media-media-relationship-type-transcludes-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-type-transcludes",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:e4d8acb52451b01f168e98103e96b76f6baca3c6ec97b983dc50f772f013c96b",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:31.104Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/transcludes.svg",
+    "method": "archive",
+    "content_id": "sha256:e4d8acb52451b01f168e98103e96b76f6baca3c6ec97b983dc50f772f013c96b",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_media_relationship-type-transcludes-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

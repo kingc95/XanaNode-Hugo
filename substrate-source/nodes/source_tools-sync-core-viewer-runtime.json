@@ -1,0 +1,26 @@
+{
+  "id": "xananode.hugo:source/artifact-tools-sync-core-viewer-runtime",
+  "title": "Tools / Sync Core Viewer Runtime",
+  "type": "source",
+  "subtype": "reference_code",
+  "importance": 4,
+  "summary": "tools/sync-core-viewer-runtime.mjs is preserved as a raw Hugo source artifact in the XanaNode Hugo substrate.",
+  "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/tools/sync-core-viewer-runtime.mjs",
+  "artifact_path": "tools/sync-core-viewer-runtime.mjs",
+  "asset_path": "assets/raw/repository/tools/sync-core-viewer-runtime.mjs",
+  "asset_role": "repository_source",
+  "media_type": "document",
+  "mime_type": "text/plain",
+  "rights_status": "Apache-2.0",
+  "content_id": "sha256:6f805a1310e87bd258ae37787a5cd44da04e8e8b5c48056bcf02063feb366a84",
+  "content": "import fs from \"node:fs\";\nimport path from \"node:path\";\nimport { fileURLToPath } from \"node:url\";\n\nconst hugoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), \"..\");\nconst coreRoot = path.resolve(hugoRoot, \"vendor\", \"xananode-core\");\nconst mappings = [\n  {\n    from: path.join(coreRoot, \"src\", \"projection.js\"),\n    to: path.join(hugoRoot, \"static\", \"js\", \"projection.js\")\n  },\n  {\n    from: path.join(coreRoot, \"src\", \"viewer-engine.js\"),\n    to: path.join(hugoRoot, \"static\", \"js\", \"viewer-engine.js\")\n  }\n];\n\nlet changed = false;\nfor (const mapping of mappings) {\n  if (!fs.existsSync(mapping.from)) {\n    throw new Error(`Missing Core viewer runtime source: ${mapping.from}`);\n  }\n  fs.mkdirSync(path.dirname(mapping.to), { recursive: true });\n  const source = fs.readFileSync(mapping.from, \"utf8\");\n  const current = fs.existsSync(mapping.to) ? fs.readFileSync(mapping.to, \"utf8\") : null;\n  if (current !== source) {\n    fs.writeFileSync(mapping.to, source, \"utf8\");\n    changed = true;\n    console.log(`synced ${path.relative(hugoRoot, mapping.to)} <- ${path.relative(hugoRoot, mapping.from)}`);\n  }\n}\n\nif (!changed) {\n  console.log(\"viewer runtime already matches Core\");\n}\n",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:29.991Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/tools/sync-core-viewer-runtime.mjs",
+    "method": "archive",
+    "content_id": "sha256:6f805a1310e87bd258ae37787a5cd44da04e8e8b5c48056bcf02063feb366a84",
+    "rights_status": "Apache-2.0",
+    "tool": "xananode-hugo/tools/build-substrate-source.mjs"
+  },
+  "relationships": []
+}

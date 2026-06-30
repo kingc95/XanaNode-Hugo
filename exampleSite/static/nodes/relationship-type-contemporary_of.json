@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source existed or worked during the same relevant period as the target.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "contemporary_of",
   "registry_namespace": "xananode",
   "category": "temporal",
@@ -13,6 +13,12 @@
   "default_weight": 3,
   "default_visibility": "secondary",
   "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-contemporary_of-projection-icon-represents-schema-relationship-type-contemporary_of",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-contemporary_of-projection-icon",
+      "direction": "incoming"
+    },
     {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-contemporary_of",
       "type": "contains",
@@ -24,6 +30,12 @@
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-category-temporal",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-contemporary_of-has_primary_media-media-relationship-type-contemporary_of-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-contemporary_of-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-contemporary_of-related_to-schema-relationship-type-contemporary_of-inverse",

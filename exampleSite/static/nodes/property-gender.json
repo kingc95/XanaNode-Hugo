@@ -1,0 +1,46 @@
+{
+  "id": "xananode.canonical:schema/property-gender",
+  "title": "Gender",
+  "type": "schema",
+  "subtype": "property_registry_entry",
+  "importance": 4,
+  "summary": "A gender value when it matters to the record or to kinship inference.",
+  "registry_type": "gender",
+  "category": "identity",
+  "aliases": [
+    "sex_gender"
+  ],
+  "applies_to": [
+    "person"
+  ],
+  "unit_system": "none",
+  "value_schema": {
+    "type": "string",
+    "enum": [
+      "female",
+      "male",
+      "nonbinary",
+      "unknown"
+    ]
+  },
+  "examples": [
+    "female"
+  ],
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-property-gender-uses-schema-node-type-person",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-person",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-gender",
+      "type": "contains",
+      "source": "xananode.canonical:schema/property-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_property-gender.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

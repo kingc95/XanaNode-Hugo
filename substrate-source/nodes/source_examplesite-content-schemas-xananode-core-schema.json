@@ -15,7 +15,7 @@
   "content_id": "sha256:947ba224157bda809b1c38534e1640ef6c8ef693e6439a1bd9d16de1885bf5c8",
   "content": "---\ntitle: \"XanaNode Core Schema\"\ntype: \"schema\"\nimportance: 5\nsummary: \"The canonical core node and relationship vocabulary used to make independent substrates interoperable.\"\nversion: \"0.4\"\nstatus: \"draft\"\nrelationships:\n  - type: \"defines\"\n    target: \"xananode-node-types\"\n  - type: \"defines\"\n    target: \"xananode-relationship-types\"\n  - type: \"defines\"\n    target: \"substrate-manifest-schema\"\n  - type: \"defines\"\n    target: \"substrate-node-schema\"\n  - type: \"defines\"\n    target: \"substrate-relationships-schema\"\n  - type: \"required_for\"\n    target: \"federated-knowledge-substrates\"\n  - type: \"enables\"\n    target: \"schema-extension\"\n---\n\n[XanaNode](/node/xananode) Core is the shared compatibility layer.\n\nA substrate may extend it, but the core gives other tools a stable set of meanings to validate, display, map, and merge.\n\nIn the current protocol, Core includes the `xananode-node-types.v0.3.0.json` registry, the `xananode-relationship-types.v0.4.0.json` registry, and JSON Schemas for substrate manifests, node records, relationship lists, namespace records, merge reports, and compatibility reports.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/schemas/xananode-core-schema.md",
     "method": "archive",
     "content_id": "sha256:947ba224157bda809b1c38534e1640ef6c8ef693e6439a1bd9d16de1885bf5c8",

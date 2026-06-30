@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/node-type-essay-projection-icon",
+  "title": "Essay Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/node-types/essay.svg",
+  "asset_role": "node_type_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/node-types/essay.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the essay node type.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-node-type-essay-projection-icon-represents-schema-node-type-essay",
+      "type": "represents",
+      "target": "xananode.canonical:schema/node-type-essay",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-essay-has_primary_media-media-node-type-essay-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/node-type-essay",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:ba02c1af9532218d1ba0c01fb5d3824820004027f589cf14c8f072642c07a1d9",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:31.104Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/node-types/essay.svg",
+    "method": "archive",
+    "content_id": "sha256:ba02c1af9532218d1ba0c01fb5d3824820004027f589cf14c8f072642c07a1d9",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_media_node-type-essay-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

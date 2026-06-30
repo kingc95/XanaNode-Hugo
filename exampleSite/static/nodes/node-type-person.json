@@ -16,7 +16,8 @@
     "artist",
     "founder",
     "scientist",
-    "programmer"
+    "programmer",
+    "fictional_character"
   ],
   "required_frontmatter": [
     "title",
@@ -47,6 +48,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/media-node-type-person-projection-icon-represents-schema-node-type-person",
+      "type": "represents",
+      "source": "xananode.canonical:media/node-type-person-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-person",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
@@ -68,6 +75,12 @@
       "id": "xananode.canonical:rel/schema-node-subtype-person-engineer-extension_of-schema-node-type-person",
       "type": "extension_of",
       "source": "xananode.canonical:schema/node-subtype-person-engineer",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-person-fictional_character-extension_of-schema-node-type-person",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-person-fictional_character",
       "direction": "incoming"
     },
     {
@@ -119,6 +132,12 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-node-type-person-contains-schema-node-subtype-person-fictional_character",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-person-fictional_character",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-node-type-person-contains-schema-node-subtype-person-founder",
       "type": "contains",
       "target": "xananode.canonical:schema/node-subtype-person-founder",
@@ -149,9 +168,81 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-node-type-person-has_primary_media-media-node-type-person-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/node-type-person-projection-icon",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-aliases-uses-schema-node-type-person",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-aliases",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-property-birth_date-uses-schema-node-type-person",
       "type": "uses",
       "source": "xananode.canonical:schema/property-birth_date",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-death_date-uses-schema-node-type-person",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-death_date",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-facets-uses-schema-node-type-person",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-facets",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-gender-uses-schema-node-type-person",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-gender",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-nationality-uses-schema-node-type-person",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-nationality",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-occupation-uses-schema-node-type-person",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-occupation",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-sharing-uses-schema-node-type-person",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-sharing",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtype-uses-schema-node-type-person",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-subtype",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-person",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-subtypes",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-summary-uses-schema-node-type-person",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-summary",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-title-uses-schema-node-type-person",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-title",
       "direction": "incoming"
     }
   ],

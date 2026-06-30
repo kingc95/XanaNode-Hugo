@@ -1,0 +1,47 @@
+{
+  "id": "xananode.canonical:schema/property-mime_type",
+  "title": "MIME type",
+  "type": "schema",
+  "subtype": "property_registry_entry",
+  "importance": 4,
+  "summary": "The MIME type for a bundled media or source asset.",
+  "registry_type": "mime_type",
+  "category": "reference",
+  "aliases": [
+    "content_type"
+  ],
+  "applies_to": [
+    "media",
+    "source"
+  ],
+  "unit_system": "none",
+  "value_schema": {
+    "type": "string"
+  },
+  "examples": [
+    "image/jpeg"
+  ],
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-property-mime_type-uses-schema-node-type-media",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-media",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-mime_type-uses-schema-node-type-source",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-source",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-mime_type",
+      "type": "contains",
+      "source": "xananode.canonical:schema/property-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_property-mime_type.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,9 +1,37 @@
-﻿{{ define "main" }}
+{{ define "main" }}
 <section class="xana-app">
   <div id="xana-graph"></div>
 
   <aside id="xana-panel" class="xana-panel">
-    <p class="panel-placeholder">Select a node.</p>
+    <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            {{ with .Params.type }}
+            <span class="xana-type-badge" data-type="{{ . }}">{{ humanize (replace (replace . "_" " ") "-" " ") }}</span>
+            {{ end }}
+            {{ with .Params.subtype }}
+            <span class="xana-subtype-badge">{{ humanize (replace (replace . "_" " ") "-" " ") }}</span>
+            {{ end }}
+          </div>
+          <h1>{{ .Title }}</h1>
+          {{ with .Params.summary }}<p class="xana-summary">{{ . }}</p>{{ end }}
+        </div>
+      </div>
+
+      {{ if .Content }}
+      <div class="xana-node-content">{{ .Content }}</div>
+      {{ else }}
+      <p class="panel-placeholder">Select a node.</p>
+      {{ end }}
+
+      {{ with or .Params.protocol_id .Params.node_id }}
+      <div class="xana-protocol-footer">
+        <p class="xana-protocol-label">Protocol</p>
+        <code>{{ . }}</code>
+      </div>
+      {{ end }}
+    </article>
   </aside>
 </section>
 

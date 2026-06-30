@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source negotiated with the target actor, group, or position.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "negotiated_with",
   "registry_namespace": "xananode",
   "category": "communication",
@@ -18,6 +18,12 @@
   "default_visibility": "primary",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-type-negotiated_with-projection-icon-represents-schema-relationship-type-negotiated_with",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-negotiated_with-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-negotiated_with",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
@@ -28,6 +34,12 @@
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-category-communication",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-negotiated_with-has_primary_media-media-relationship-type-negotiated_with-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-negotiated_with-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-negotiated_with-related_to-schema-relationship-type-negotiated_with-inverse",

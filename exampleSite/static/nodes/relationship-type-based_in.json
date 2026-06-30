@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-based_in",
+  "title": "Based in",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source person, project, or organization is principally based in the target place.",
+  "version": "0.5.1",
+  "registry_type": "based_in",
+  "registry_namespace": "xananode",
+  "category": "location",
+  "inverse": "base_of",
+  "color": "#84cc16",
+  "inverse_color": "#bef264",
+  "line_style": "dotted",
+  "inverse_line_style": "dashed",
+  "default_weight": 3,
+  "default_visibility": "secondary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-based_in",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-location-contains-schema-relationship-type-based_in",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-location",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-base_of-related_to-schema-relationship-type-based_in-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-base_of",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-based_in-related_to-schema-relationship-type-base_of-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-base_of",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_relationship-type-based_in.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

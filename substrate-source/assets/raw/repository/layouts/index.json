@@ -16,8 +16,10 @@
         "subtypes": {{ ($p.Params.subtypes | default slice) | jsonify }},
         "section": {{ $p.Section | jsonify }},
         "importance": {{ ($p.Params.importance | default 3) | jsonify }},
-        "trail_nodes": {{ ($p.Params.nodes | default slice) | jsonify }},
-        "trail_branches": {{ ($p.Params.branches | default slice) | jsonify }},
+        "nodes": {{ (or $p.Params.nodes $p.Params.trail_nodes | default slice) | jsonify }},
+        "trail_nodes": {{ (or $p.Params.nodes $p.Params.trail_nodes | default slice) | jsonify }},
+        "branches": {{ (or $p.Params.branches $p.Params.trail_branches | default slice) | jsonify }},
+        "trail_branches": {{ (or $p.Params.branches $p.Params.trail_branches | default slice) | jsonify }},
 
         "url": {{ $p.RelPermalink | jsonify }},
         "summary": {{ ($p.Params.summary | default "") | jsonify }},
@@ -162,7 +164,7 @@
         }
       {{- end -}}
 
-      {{- range $p.Params.nodes -}}
+      {{- range (or $p.Params.nodes $p.Params.trail_nodes) -}}
         {{- if not $first }},{{ end -}}{{- $first = false -}}
         {
           "source": {{ $source | jsonify }},

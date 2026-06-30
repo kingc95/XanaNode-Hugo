@@ -21,7 +21,20 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Schemas / Author Profile Schema...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="schema">schema</span>
+            
+          </div>
+          <h1>Schemas / Author Profile Schema</h1>
+          <p class="xana-summary">The JSON Schema for the author profile.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p>{ &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;, &quot;$id&quot;: &quot;https://xananode.org/schemas/author-profile.schema.json&quot;, &quot;title&quot;: &quot;Author Profile&quot;, &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: false, &quot;required&quot;: [&quot;id&quot;, &quot;name&quot;], &quot;properties&quot;: { &quot;id&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;name&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;orcid&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;github&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;website&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uri&quot; }, &quot;branding&quot;: { &quot;$ref&quot;: &quot;#/$defs/branding&quot; }, &quot;public_key&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;default_rights&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;default_license&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;default_role&quot;: { &quot;type&quot;: &quot;string&quot; } }, &quot;$defs&quot;: { &quot;branding&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;description&quot;: &quot;Portable branding metadata for an author, organization, substrate, pack, or projection. Branding is knowledge provenance, not renderer-only decoration.&quot;, &quot;additionalProperties&quot;: false, &quot;properties&quot;: { &quot;brand_name&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;tagline&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;description&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;primary_media&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;logo_media&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;icon_media&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;primary_color&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;pattern&quot;: &quot;^#[0-9A-Fa-f]{6}$&quot; }, &quot;accent_color&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;pattern&quot;: &quot;^#[0-9A-Fa-f]{6}$&quot; }, &quot;background_color&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;pattern&quot;: &quot;^#[0-9A-Fa-f]{6}$&quot; }, &quot;text_color&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;pattern&quot;: &quot;^#[0-9A-Fa-f]{6}$&quot; }, &quot;source_node&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;rights_status&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;license&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;updated_at&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date-time&quot; }, &quot;reason&quot;: { &quot;type&quot;: &quot;string&quot; } } } } }</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:schema/protocol-artifact-schemas-author-profile.schema.json</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

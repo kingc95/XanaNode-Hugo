@@ -21,7 +21,20 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Registry / Federation Targets Schema...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="schema">schema</span>
+            
+          </div>
+          <h1>Registry / Federation Targets Schema</h1>
+          <p class="xana-summary">A registry artifact covering Federation Targets Schema.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p>{ &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;, &quot;$id&quot;: &quot;https://xananode.org/registry/federation-targets.schema.json&quot;, &quot;title&quot;: &quot;XanaNode Federation Targets Registry&quot;, &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: false, &quot;required&quot;: [&quot;federation_targets&quot;], &quot;properties&quot;: { &quot;federation_targets&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: false, &quot;required&quot;: [&quot;id&quot;, &quot;name&quot;, &quot;namespace&quot;, &quot;repository&quot;], &quot;properties&quot;: { &quot;id&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;name&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;namespace&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;description&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;status&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;canonical&quot;, &quot;community&quot;, &quot;example&quot;, &quot;experimental&quot;, &quot;archived&quot;] }, &quot;repository&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: false, &quot;required&quot;: [&quot;type&quot;, &quot;url&quot;, &quot;default_branch&quot;], &quot;properties&quot;: { &quot;type&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;git&quot;] }, &quot;url&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;default_branch&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;substrate_path&quot;: { &quot;type&quot;: &quot;string&quot; } } }, &quot;recommended_mode&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;mounted&quot;, &quot;imported&quot;, &quot;merged&quot;, &quot;absorbed&quot;] }, &quot;licenses&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }, &quot;homepage&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uri&quot; } } } } } }</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:schema/protocol-artifact-registry-federation-targets.schema.json</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

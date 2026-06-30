@@ -21,7 +21,29 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Governance / Federation Rules...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Governance / Federation Rules</h1>
+          <p class="xana-summary">A governance document covering Federation Rules.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># Federation Rules</p>
+<p>Federation connects independently authored substrates without forcing one source of truth.</p>
+<p>A federation process should:</p>
+<p>1. Load each substrate manifest. 2. Resolve each substrate&#39;s Git repository metadata. 3. Validate each substrate against declared schemas. 4. Preserve original node IDs and namespaces. 5. Detect likely overlaps. 6. Generate mapping relationships. 7. Preserve conflicts and uncertainty. 8. Avoid destructive merging.</p>
+<p>Federation should create more knowledge, not erase local context.</p>
+<h2>Never Collapse by Default</h2>
+<p>Two nodes that look similar should not automatically become one node.</p>
+<p>Prefer:</p>
+<ul><li><code>same_entity</code></li><li><code>possible_match</code></li><li><code>disputed_identity</code></li><li><code>equivalent_to</code></li></ul>
+<p>depending on confidence and review status.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-governance-federation-rules.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

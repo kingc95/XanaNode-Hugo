@@ -5,7 +5,7 @@
   "subtype": "relationship_category_schema",
   "importance": 4,
   "summary": "The inquiry category groups relationship types with related meaning.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "inquiry",
   "registry_namespace": "xananode",
   "color": "#2dd4bf",
@@ -77,6 +77,18 @@
       "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-partially_answers",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-partially_answers",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-questioned_by",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-questioned_by",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-questions",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-questions",
       "direction": "outgoing"
     },
     {

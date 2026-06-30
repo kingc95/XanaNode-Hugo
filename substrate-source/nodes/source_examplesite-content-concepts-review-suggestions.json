@@ -15,7 +15,7 @@
   "content_id": "sha256:ad27d70814116987ad8087ed2a750a6dd609dae44e286640616708665646bfea",
   "content": "---\r\ntitle: \"Review Suggestions\"\r\ntype: \"concept\"\r\nimportance: 4\r\nsummary: \"Generated, user-approved suggestions for autolinking node titles, aliases, repeated fragments, and imported substrate changes without rewriting content automatically.\"\r\nrelationships:\r\n  - type: \"uses\"\r\n    target: \"typed-relationships\"\r\n  - type: \"uses\"\r\n    target: \"transclusion\"\r\n---\r\n\r\nThe suggestion scanner looks for existing node titles and aliases in Markdown content, plus repeated fragment text that could become a [transclusion](/node/transclusion).\r\n\r\nReview suggestions are invitations, not automatic edits. The [review queue](/review/) lets an author decide which ordinary links, transclusions, merge candidates, or imported relationships should become part of the substrate.\r\n\r\n{{< review-suggestions >}}\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/review-suggestions.md",
     "method": "archive",
     "content_id": "sha256:ad27d70814116987ad8087ed2a750a6dd609dae44e286640616708665646bfea",

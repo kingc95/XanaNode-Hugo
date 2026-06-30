@@ -15,7 +15,7 @@
   "content_id": "sha256:04f9270679d7f29deebc4707d81eefc950f1f3205184faaaf5319329d794bf1c",
   "content": "---\r\ntitle: \"Known Implementations Registry\"\r\ntype: \"concept\"\r\nimportance: 4\r\nsummary: \"A registry of tools, themes, validators, renderers, and substrates that claim some level of XanaNode compatibility.\"\r\nrelationships:\r\n  - type: \"documents\"\r\n    target: \"xananode-hugo-theme\"\r\n  - type: \"supports\"\r\n    target: \"compatibility-levels\"\r\n---\r\n\r\nThe [known implementations registry](xananode.canonical:schema/known-implementations-registry) is a discovery aid for the ecosystem.\r\n\r\nIt lists tools, themes, validators, renderers, and example substrates that claim a level of [XanaNode](/node/xananode) compatibility.\r\n\r\nThe registry does not replace validation. It gives implementers real targets to inspect, compare, and test against.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/known-implementations-registry.md",
     "method": "archive",
     "content_id": "sha256:04f9270679d7f29deebc4707d81eefc950f1f3205184faaaf5319329d794bf1c",

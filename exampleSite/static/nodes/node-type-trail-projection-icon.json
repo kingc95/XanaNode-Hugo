@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/node-type-trail-projection-icon",
+  "title": "Trail Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/node-types/trail.svg",
+  "asset_role": "node_type_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/node-types/trail.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the trail node type.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-node-type-trail-projection-icon-represents-schema-node-type-trail",
+      "type": "represents",
+      "target": "xananode.canonical:schema/node-type-trail",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-trail-has_primary_media-media-node-type-trail-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/node-type-trail",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:7b7ee676908e329202fd0e385b2068acfdde55624a719df3ad3a1417fb19bb65",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:31.104Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/node-types/trail.svg",
+    "method": "archive",
+    "content_id": "sha256:7b7ee676908e329202fd0e385b2068acfdde55624a719df3ad3a1417fb19bb65",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_media_node-type-trail-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

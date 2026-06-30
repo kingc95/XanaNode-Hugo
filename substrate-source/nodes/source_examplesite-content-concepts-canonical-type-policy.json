@@ -15,7 +15,7 @@
   "content_id": "sha256:6a893c883a99ac5f6cba432e5675cf4a83f3d793d6960a4730469708a064ae95",
   "content": "---\ntitle: \"Canonical Type Policy\"\ntype: \"concept\"\nimportance: 4\nsummary: \"The governance rule that separates shared core node and relationship types from namespaced extension types.\"\nrelationships:\n  - type: \"context_for\"\n    target: \"schema-extension\"\n  - type: \"requires\"\n    target: \"namespacing\"\n---\n\nCanonical types are the shared vocabulary that let independent substrates understand one another.\n\nThe core stays small, stable, and broadly useful. Domain-specific meanings belong in namespaced extension schemas unless they become common enough to justify canonical status.\n\nThis keeps the core interoperable while still letting local substrates model museums, legal records, biology, archives, or other specialized domains precisely.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/canonical-type-policy.md",
     "method": "archive",
     "content_id": "sha256:6a893c883a99ac5f6cba432e5675cf4a83f3d793d6960a4730469708a064ae95",

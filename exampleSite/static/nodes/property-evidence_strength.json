@@ -1,0 +1,70 @@
+{
+  "id": "xananode.canonical:schema/property-evidence_strength",
+  "title": "Evidence strength",
+  "type": "schema",
+  "subtype": "property_registry_entry",
+  "importance": 4,
+  "summary": "A compact assessment of the strength of evidence available for a claim, hypothesis, answer, or relationship.",
+  "registry_type": "evidence_strength",
+  "category": "epistemology",
+  "aliases": [
+    "support_strength",
+    "evidence_quality"
+  ],
+  "applies_to": [
+    "claim",
+    "hypothesis",
+    "response",
+    "relationship"
+  ],
+  "unit_system": "none",
+  "value_schema": {
+    "type": "string",
+    "enum": [
+      "none",
+      "weak",
+      "moderate",
+      "strong",
+      "decisive",
+      "contested"
+    ]
+  },
+  "examples": [
+    "moderate"
+  ],
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-property-evidence_strength-uses-schema-node-type-claim",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-claim",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-evidence_strength-uses-schema-node-type-hypothesis",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-hypothesis",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-evidence_strength-uses-schema-node-type-relationship",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-relationship",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-evidence_strength-uses-schema-node-type-response",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-response",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-evidence_strength",
+      "type": "contains",
+      "source": "xananode.canonical:schema/property-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_property-evidence_strength.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

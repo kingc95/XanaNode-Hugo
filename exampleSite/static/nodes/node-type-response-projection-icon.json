@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/node-type-response-projection-icon",
+  "title": "Response Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/node-types/response.svg",
+  "asset_role": "node_type_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/node-types/response.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the response node type.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-node-type-response-projection-icon-represents-schema-node-type-response",
+      "type": "represents",
+      "target": "xananode.canonical:schema/node-type-response",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-response-has_primary_media-media-node-type-response-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/node-type-response",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:10c2d0181fec2eef6c1cacbba01e926ce7ca0ac8cf303567ca01e4496e7ca75d",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:31.104Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/node-types/response.svg",
+    "method": "archive",
+    "content_id": "sha256:10c2d0181fec2eef6c1cacbba01e926ce7ca0ac8cf303567ca01e4496e7ca75d",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_media_node-type-response-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

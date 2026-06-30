@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source communicated the target message, claim, question, or source to a receiver or audience.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "communicated_to",
   "registry_namespace": "xananode",
   "category": "communication",
@@ -18,6 +18,12 @@
   "default_visibility": "primary",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-type-communicated_to-projection-icon-represents-schema-relationship-type-communicated_to",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-communicated_to-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-communicated_to",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
@@ -28,6 +34,12 @@
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-category-communication",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-communicated_to-has_primary_media-media-relationship-type-communicated_to-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-communicated_to-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-communicated_to-related_to-schema-relationship-type-communication_received_from-inverse",

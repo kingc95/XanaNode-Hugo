@@ -15,7 +15,7 @@
   "content_id": "sha256:20d88d7fa2eb0ed61ae068358367b0d1c05b71a4af15dfea9c93fd18ea7f18c9",
   "content": "---\r\ntitle: \"Knowledge Substrate\"\r\ntype: \"concept\"\r\nimportance: 5\r\nsummary: \"The structure that determines how information relates, persists, evolves, and can be navigated as knowledge.\"\r\nrelationships:\r\n  - type: \"has_claim\"\r\n    target: \"claim-substrate-is-structure\"\r\n  - type: \"requires\"\r\n    target: \"provenance\"\r\n  - type: \"requires\"\r\n    target: \"typed-relationships\"\r\n  - type: \"enabled_by\"\r\n    target: \"xananode-core-schema\"\r\n---\r\n\r\nA [knowledge substrate](example.minimal:concept/knowledge-substrate) is not the information itself. It is the structure that lets information remain understandable across time.\r\n\r\nThe same facts arranged as isolated documents, unlabeled hyperlinks, or [typed relationships](/node/typed-relationships) produce different knowledge capabilities. [XanaNode](/node/xananode) makes that structure explicit.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/knowledge-substrate.md",
     "method": "archive",
     "content_id": "sha256:20d88d7fa2eb0ed61ae068358367b0d1c05b71a4af15dfea9c93fd18ea7f18c9",

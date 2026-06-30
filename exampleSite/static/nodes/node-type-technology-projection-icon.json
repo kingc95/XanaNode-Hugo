@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/node-type-technology-projection-icon",
+  "title": "Technology Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/node-types/technology.svg",
+  "asset_role": "node_type_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/node-types/technology.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the technology node type.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-node-type-technology-projection-icon-represents-schema-node-type-technology",
+      "type": "represents",
+      "target": "xananode.canonical:schema/node-type-technology",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-technology-has_primary_media-media-node-type-technology-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/node-type-technology",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:fba27205f83d807e11b844b75fbc8f45748ae0014b89fc3f7428bda394f5c57c",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:31.104Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/node-types/technology.svg",
+    "method": "archive",
+    "content_id": "sha256:fba27205f83d807e11b844b75fbc8f45748ae0014b89fc3f7428bda394f5c57c",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_media_node-type-technology-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

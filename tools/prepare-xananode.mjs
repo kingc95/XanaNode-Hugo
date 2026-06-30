@@ -202,6 +202,109 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+function renderInlineProtocolText(value) {
+  let html = escapeHtml(String(value || ""));
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_match, label, href) => `<a href="${escapeHtml(href)}">${escapeHtml(label)}</a>`);
+  html = html.replace(/`([^`]+)`/g, "<code>$1</code>");
+  return html;
+}
+
+function renderProtocolContentHtml(value) {
+  const text = String(value || "").trim();
+  if (!text) return "";
+  const lines = text.split(/\r?\n/);
+  const html = [];
+  let paragraph = [];
+  let list = [];
+  let quote = [];
+
+  const flushParagraph = () => {
+    if (!paragraph.length) return;
+    html.push(`<p>${renderInlineProtocolText(paragraph.join(" "))}</p>`);
+    paragraph = [];
+  };
+  const flushList = () => {
+    if (!list.length) return;
+    html.push(`<ul>${list.map((item) => `<li>${renderInlineProtocolText(item)}</li>`).join("")}</ul>`);
+    list = [];
+  };
+  const flushQuote = () => {
+    if (!quote.length) return;
+    html.push(`<blockquote>${quote.map((item) => `<p>${renderInlineProtocolText(item)}</p>`).join("")}</blockquote>`);
+    quote = [];
+  };
+  const flushAll = () => {
+    flushParagraph();
+    flushList();
+    flushQuote();
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trimEnd();
+    const trimmed = line.trim();
+    if (!trimmed) {
+      flushAll();
+      continue;
+    }
+    if (trimmed.startsWith("### ")) {
+      flushAll();
+      html.push(`<h3>${renderInlineProtocolText(trimmed.slice(4))}</h3>`);
+      continue;
+    }
+    if (trimmed.startsWith("## ")) {
+      flushAll();
+      html.push(`<h2>${renderInlineProtocolText(trimmed.slice(3))}</h2>`);
+      continue;
+    }
+    if (trimmed.startsWith(">")) {
+      flushParagraph();
+      flushList();
+      quote.push(trimmed.replace(/^>\s?/, ""));
+      continue;
+    }
+    if (trimmed.startsWith("- ")) {
+      flushParagraph();
+      flushQuote();
+      list.push(trimmed.slice(2));
+      continue;
+    }
+    flushList();
+    flushQuote();
+    paragraph.push(trimmed);
+  }
+
+  flushAll();
+  return html.join("\n");
+}
+
+function renderProtocolSubtypeBadgesHtml(node) {
+  const subtypes = [...new Set(asArray(node?.subtypes || node?.subtype).map((value) => String(value || "").trim()).filter(Boolean))];
+  if (!subtypes.length) return "";
+  return `<div class="xana-subtype-badges">${subtypes.map((subtype) => `<span class="xana-subtype-badge">${escapeHtml(subtype.replaceAll("_", " "))}</span>`).join("")}</div>`;
+}
+
+function renderProtocolFooterHtml(node) {
+  if (!node?.protocol_id && !node?.id) return "";
+  return `<div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>${escapeHtml(node.protocol_id || node.id)}</code></div>`;
+}
+
+function renderProtocolPanelHtml(node) {
+  return `<article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="${escapeHtml(node.type || "node")}">${escapeHtml(String(node.type || "node").replaceAll("_", " "))}</span>
+            ${renderProtocolSubtypeBadgesHtml(node)}
+          </div>
+          <h1>${escapeHtml(node.title || node.id || "Untitled node")}</h1>
+          ${node.summary ? `<p class="xana-summary">${escapeHtml(node.summary)}</p>` : ""}
+        </div>
+      </div>
+      ${node.content ? `<div class="xana-node-content">${renderProtocolContentHtml(node.content)}</div>` : `<p class="panel-placeholder">Select a node.</p>`}
+      ${renderProtocolFooterHtml(node)}
+    </article>`;
+}
+
 const CRC32_TABLE = new Uint32Array(256);
 for (let index = 0; index < CRC32_TABLE.length; index += 1) {
   let crc = index;
@@ -332,6 +435,7 @@ function collectPortableSubstrateEntries({ siteRoot, staticDir, dataDir, include
   addTree(path.join(staticDir, "nodes"), "nodes");
   addTree(path.join(staticDir, "schemas"), "schemas");
   addTree(path.join(siteRoot, "assets"), "assets", (relativeFile) => !isProjectionAsset(relativeFile));
+  addTree(path.join(siteRoot, "attached_assets"), "attached_assets");
   addTree(path.join(siteRoot, "reports"), "reports");
   addTree(path.join(siteRoot, "packs"), "packs");
   addTree(path.join(siteRoot, "imports"), "imports");
@@ -491,7 +595,7 @@ function parseYamlScalar(value) {
 function cleanDir(dir) {
   if (!fs.existsSync(dir)) return;
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    fs.rmSync(path.join(dir, entry.name), { recursive: true, force: true });
+    removePathWithRetry(path.join(dir, entry.name));
   }
 }
 
@@ -507,8 +611,40 @@ function cleanGeneratedStaticDirs(staticDir) {
   for (const entry of fs.readdirSync(staticDir, { withFileTypes: true })) {
     if (!entry.isDirectory()) continue;
     if (STATIC_DIRS_TO_KEEP.has(entry.name)) continue;
-    fs.rmSync(path.join(staticDir, entry.name), { recursive: true, force: true });
+    removePathWithRetry(path.join(staticDir, entry.name));
   }
+}
+
+function removePathWithRetry(targetPath, attempts = 6) {
+  let lastError = null;
+  for (let attempt = 0; attempt < attempts; attempt += 1) {
+    try {
+      fs.rmSync(targetPath, { recursive: true, force: true, maxRetries: 4, retryDelay: 80 });
+      return;
+    } catch (error) {
+      lastError = error;
+      if (error?.code !== "EPERM" && error?.code !== "EBUSY" && error?.code !== "ENOTEMPTY") {
+        throw error;
+      }
+      if (!fs.existsSync(targetPath)) return;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 80 * (attempt + 1));
+    }
+  }
+
+  if (fs.existsSync(targetPath) && fs.statSync(targetPath).isDirectory()) {
+    for (const entry of fs.readdirSync(targetPath, { withFileTypes: true })) {
+      removePathWithRetry(path.join(targetPath, entry.name), attempts);
+    }
+    try {
+      fs.rmdirSync(targetPath);
+      return;
+    } catch (error) {
+      if (error?.code === "ENOENT") return;
+      lastError = error;
+    }
+  }
+
+  throw lastError;
 }
 
 function configuredThemeLinks() {
@@ -1391,7 +1527,12 @@ for (const node of nodes.values()) {
   nodeLookup.set(node.protocolId, node);
   nodeLookup.set(node.data.protocol_id, node);
 }
-const importedNodeLookup = new Map(importedNodes.map((node) => [node.id, node]));
+const importedNodeLookup = new Map();
+for (const node of importedNodes) {
+  importedNodeLookup.set(node.id, node);
+  if (node.protocolId) importedNodeLookup.set(node.protocolId, node);
+  if (node.protocol_id) importedNodeLookup.set(node.protocol_id, node);
+}
 
 function resolveNodeRef(ref) {
   const normalized = String(ref || "").trim();
@@ -1760,6 +1901,7 @@ function viewerNodeFromProtocolNode(node) {
   const localNode = localProtocolNodeLookup.get(node.id);
   const localId = localNode?.id || viewerIdForProtocolId(node.id);
   const localType = localNode?.data?.type || node.type;
+  const protocolContent = node.content || node.summary || "";
   return {
     id: localId,
     protocol_id: node.id,
@@ -1769,15 +1911,18 @@ function viewerNodeFromProtocolNode(node) {
     section: `${protocolTypePath(localType)}s`,
     importance: localNode?.data?.importance || node.importance || 3,
     summary: localNode?.data?.summary || node.summary || "",
-    content: localNode ? stripMarkdown(localNode.body).slice(0, 1200) : node.content || node.summary || "",
+    content: localNode ? stripMarkdown(localNode.body).slice(0, 1200) : protocolContent,
+    html: localNode ? "" : renderProtocolContentHtml(protocolContent),
     url: localNode
       ? `/${protocolTypePath(localType)}/${slugify(localNode.id, "node")}/`
       : `/${protocolTypePath(localType)}/${slugify(String(localId).split("/").at(-1), "node")}/`,
     primary_media: localNode?.data?.primary_media
-      ? nodes.get(localNode.data.primary_media)?.protocolId || localNode.data.primary_media
-      : node.primary_media || "",
+      ? viewerIdForProtocolId(nodes.get(localNode.data.primary_media)?.protocolId || localNode.data.primary_media)
+      : (node.primary_media ? viewerIdForProtocolId(node.primary_media) : ""),
     media_type: localNode?.data?.media_type || node.media_type || "",
-    file: localNode?.data?.file || node.file || "",
+    file: localNode?.data?.file || localNode?.data?.asset_path || localNode?.data?.asset || node.file || node.asset_path || node.asset || "",
+    asset: localNode?.data?.asset || localNode?.data?.asset_path || node.asset || "",
+    asset_path: localNode?.data?.asset_path || node.asset_path || "",
     alt: localNode?.data?.alt || node.alt || "",
     caption: localNode?.data?.caption || node.caption || "",
     creator: localNode?.data?.creator || node.creator || "",
@@ -1804,11 +1949,14 @@ function protocolOnlyNodeRoutes(node) {
   const tail = slugify(id.split("/").at(-1), "node");
   const routes = [
     `${typeSegment}/${encodeURIComponent(addressId)}/index.html`,
-    `${typeSegment}/${tail}/index.html`
+    `${typeSegment}/${tail}/index.html`,
+    `page/${tail}/index.html`,
+    `page/${typeSegment}/${tail}/index.html`
   ];
   const parts = addressId.split("/");
   if (parts.length >= 2) {
     routes.push(`${typeSegment}/${encodeURIComponent(parts[0])}/${encodeURIComponent(parts.slice(1).join("/"))}/index.html`);
+    routes.push(`page/${encodeURIComponent(parts[0])}/${encodeURIComponent(parts.slice(1).join("/"))}/index.html`);
   }
   return [...new Set(routes)];
 }
@@ -1816,6 +1964,7 @@ function protocolOnlyNodeRoutes(node) {
 function renderProtocolNodeResolverPage(node) {
   const title = `${node.title || node.id} | ${substrateManifest.name}`;
   const description = node.summary || substrateManifest.description || "";
+  const canonicalPath = `/${protocolTypePath(node.type || "node")}/${slugify(String(node.id || "").split("/").at(-1), "node")}/`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1823,7 +1972,7 @@ function renderProtocolNodeResolverPage(node) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}">
-  <link rel="canonical" href="/${protocolTypePath(node.type || "node")}/${slugify(String(node.id || "").split("/").at(-1), "node")}/">
+  <link rel="canonical" href="${canonicalPath}">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#55d6be">
   <link rel="stylesheet" href="/css/style.min.css">
@@ -1839,7 +1988,7 @@ function renderProtocolNodeResolverPage(node) {
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving ${escapeHtml(node.title || node.id)}...</p>
+        ${renderProtocolPanelHtml(node)}
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>
@@ -1968,30 +2117,95 @@ function renderSuggestionReviewPage(suggestions) {
 `;
 }
 
+// Build trail sequence map: trail viewer ID → ordered list of member viewer IDs
+const trailSequenceMap = new Map();
+for (const node of protocolNodes) {
+  if (node.type !== "trail") continue;
+  const trailViewerId = viewerIdForProtocolId(node.id);
+  const memberProtocolIds = asArray(node.nodes || node.trail_nodes).filter(Boolean);
+  const memberViewerIds = memberProtocolIds.map((m) => viewerIdForProtocolId(String(m))).filter(Boolean);
+  if (memberViewerIds.length) trailSequenceMap.set(trailViewerId, memberViewerIds);
+}
+
+function makeViewerEdge(sourceId, targetId, type, edgeDef, originLabel, extraFields = {}) {
+  return {
+    source: sourceId,
+    target: targetId,
+    type,
+    color: edgeDef?.color || "",
+    inverse_color: edgeDef?.inverse_color || "",
+    line_style: edgeDef?.line_style || "",
+    inverse_line_style: edgeDef?.inverse_line_style || "",
+    weight: extraFields.weight ?? edgeDef?.default_weight ?? 3,
+    visibility: extraFields.visibility || edgeDef?.default_visibility || "secondary",
+    origin: originLabel,
+    protocol_id: extraFields.protocol_id || "",
+    summary: extraFields.summary || "",
+    asserted_by: extraFields.asserted_by || "",
+    asserted_at: extraFields.asserted_at || "",
+    valid_from: extraFields.valid_from || "",
+    valid_to: extraFields.valid_to || "",
+    confidence: extraFields.confidence || "",
+    external: Boolean(extraFields.external),
+    target_substrate: extraFields.target_substrate || ""
+  };
+}
+
+// Map protocol edges to viewer format, then apply trail synthesis
+const rawViewerEdges = protocolEdges.map((edge) =>
+  makeViewerEdge(
+    viewerIdForProtocolId(edge.source),
+    viewerIdForProtocolId(edge.target),
+    edge.type,
+    relationshipDefinitionFor(edge.type),
+    edge.imported_from ? "imported_relationship" : "protocol_relationship",
+    { weight: edge.weight, visibility: edge.visibility, protocol_id: edge.id, summary: edge.summary,
+      asserted_by: edge.asserted_by, asserted_at: edge.asserted_at, valid_from: edge.valid_from,
+      valid_to: edge.valid_to, confidence: edge.confidence, external: edge.external,
+      target_substrate: edge.target_substrate }
+  )
+);
+
+// Prune trail→member continues_to edges (replaced by synthesized sequential edges)
+const prunedViewerEdges = rawViewerEdges.filter((edge) => {
+  if (edge.type !== "continues_to") return true;
+  const memberIds = trailSequenceMap.get(edge.source);
+  if (!memberIds) return true;
+  return !memberIds.includes(edge.target);
+});
+
+// Synthesize sequential continues_to edges between consecutive trail members
+const seenViewerEdges = new Set(prunedViewerEdges.map((e) => `${e.source}::${e.type}::${e.target}`));
+const syntheticViewerEdges = [];
+const continuesToDef = relationshipDefinitionFor("continues_to");
+for (const [, memberIds] of trailSequenceMap) {
+  for (let i = 1; i < memberIds.length; i++) {
+    const source = memberIds[i - 1];
+    const target = memberIds[i];
+    const key = `${source}::continues_to::${target}`;
+    if (seenViewerEdges.has(key)) continue;
+    seenViewerEdges.add(key);
+    syntheticViewerEdges.push(makeViewerEdge(source, target, "continues_to", continuesToDef, "trail", { weight: 6, visibility: "primary" }));
+  }
+}
+
+const rawViewerNodes = protocolNodes.map(viewerNodeFromProtocolNode);
+
+// Post-process: fill primary_media for nodes that declare it via has_primary_media relationship
+const primaryMediaBySourceId = new Map();
+for (const edge of rawViewerEdges) {
+  if (edge.type === "has_primary_media") primaryMediaBySourceId.set(edge.source, edge.target);
+}
+for (const vNode of rawViewerNodes) {
+  if (!vNode.primary_media && primaryMediaBySourceId.has(vNode.id)) {
+    vNode.primary_media = primaryMediaBySourceId.get(vNode.id);
+  }
+}
+
 const viewerFeed = {
   namespace: substrateNamespace,
-  nodes: protocolNodes.map(viewerNodeFromProtocolNode),
-  edges: protocolEdges.map((edge) => ({
-    source: viewerIdForProtocolId(edge.source),
-    target: viewerIdForProtocolId(edge.target),
-    type: edge.type,
-    color: relationshipDefinitionFor(edge.type)?.color || "",
-    inverse_color: relationshipDefinitionFor(edge.type)?.inverse_color || "",
-    line_style: relationshipDefinitionFor(edge.type)?.line_style || "",
-    inverse_line_style: relationshipDefinitionFor(edge.type)?.inverse_line_style || "",
-    weight: edge.weight || 3,
-    visibility: edge.visibility || "secondary",
-    origin: edge.imported_from ? "imported_relationship" : "protocol_relationship",
-    protocol_id: edge.id,
-    summary: edge.summary || "",
-    asserted_by: edge.asserted_by || "",
-    asserted_at: edge.asserted_at || "",
-    valid_from: edge.valid_from || "",
-    valid_to: edge.valid_to || "",
-    confidence: edge.confidence || "",
-    external: Boolean(edge.external),
-    target_substrate: edge.target_substrate || ""
-  }))
+  nodes: rawViewerNodes,
+  edges: [...prunedViewerEdges, ...syntheticViewerEdges]
 };
 const nodesIndex = {
   namespace: substrateNamespace,

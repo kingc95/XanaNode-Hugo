@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-questions",
+  "title": "Questions",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source questions, challenges, or casts doubt on the target claim, hypothesis, answer, method, or interpretation.",
+  "version": "0.5.1",
+  "registry_type": "questions",
+  "registry_namespace": "xananode",
+  "category": "inquiry",
+  "inverse": "questioned_by",
+  "color": "#2dd4bf",
+  "inverse_color": "#99f6e4",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "default_weight": 3,
+  "default_visibility": "secondary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-questions",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-inquiry-contains-schema-relationship-type-questions",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-inquiry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-questioned_by-related_to-schema-relationship-type-questions-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-questioned_by",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-questions-related_to-schema-relationship-type-questioned_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-questioned_by",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_relationship-type-questions.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-type-includes-projection-icon",
+  "title": "Includes Relationship Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-types/includes.svg",
+  "asset_role": "relationship_type_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/includes.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the includes relationship type.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-includes-projection-icon-represents-schema-relationship-type-includes",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-type-includes",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-includes-has_primary_media-media-relationship-type-includes-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-type-includes",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:84ae834f812e465da1bb8248707e752cf9a45060571166e0a6b99aededdfeb10",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:31.104Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/includes.svg",
+    "method": "archive",
+    "content_id": "sha256:84ae834f812e465da1bb8248707e752cf9a45060571166e0a6b99aededdfeb10",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_media_relationship-type-includes-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -1,4 +1,4 @@
-import {
+﻿import {
     createProjectionRegistry,
     projectionEdgePath,
     projectionEdgeArrowPoints,
@@ -9,21 +9,31 @@ import {
     buildReadableTravelOverlayMarkup
 } from "/js/projection.js";
 import {
+    applyViewerTrailBranchChoice,
     buildSearchPlan,
+    buildViewerPathStory,
     buildViewerGraphModel,
+    buildViewerTrailPlaybackState,
     buildViewerTravelPlan,
+    getViewerTimedDwellMs,
+    findViewerTrailContext,
+    findViewerConnectivePaths,
+    getViewerTrailLeadId,
+    getViewerTrailPlaylistNodeIds,
     normalizeSearchText,
     pickNextViewerTourNode,
-    scoreViewerEdge
+    pickNextViewerTrailNode,
+    resolveViewerNodeSelection,
+    scoreViewerEdge,
+    viewerRelationshipPhrase
 } from "/js/viewer-engine.js";
-
 (function () {
     const graphEl = document.getElementById("xana-graph");
     const panelEl = document.getElementById("xana-panel");
 
     if (!graphEl || !panelEl) return;
 
-    // Pending stagedReveal timer IDs — cleared on every new reveal so
+    // Pending stagedReveal timer IDs â€” cleared on every new reveal so
     // in-flight timers from a previous navigation never fire against the new graph.
     let _revealTimers = [];
 
@@ -32,11 +42,11 @@ import {
     // preventing stale zoom-complete callbacks from firing against a new graph.
     let _navGen = 0;
 
-    // Tour timers — managed outside state so they survive renderVisibleGraph rebuilds.
+    // Tour timers â€” managed outside state so they survive renderVisibleGraph rebuilds.
     let _tourTimer = null;
     let _tourScrollInterval = null;
     let _aliveTimer = null;
-    let TOUR_DWELL_MS = 9000;     // ms between node hops — updated by speed input
+    let TOUR_DWELL_MS = 9000;     // ms between node hops â€” updated by speed input
     const NARRATION_AFTER_END_PAUSE_MS = 1200;
 
     const STORAGE_KEYS = {
@@ -194,15 +204,15 @@ import {
         return allNodes[0]?.id || "";
     }
 
-    // Fallback valid types — overridden at runtime by /schemas/xananode-node-types.json
-    // Note: "artifact" is intentionally absent — existing artifact nodes will be flagged.
+    // Fallback valid types â€” overridden at runtime by /schemas/xananode-node-types.json
+    // Note: "artifact" is intentionally absent â€” existing artifact nodes will be flagged.
     let VALID_NODE_TYPES = new Set([
         "person", "concept", "claim", "source", "essay", "observation",
         "media", "event", "place", "organization", "project", "technology",
         "publication", "community", "relationship", "revision", "trail", "schema"
     ]);
 
-    // Fallback valid relationship types — overridden at runtime by /schemas/xananode-relationship-types.json
+    // Fallback valid relationship types â€” overridden at runtime by /schemas/xananode-relationship-types.json
     let VALID_RELATIONSHIP_TYPES = new Set([
         "defines", "defined_by", "has_claim", "claim_of",
         "supports", "supported_by", "contradicts", "contradicted_by",
@@ -370,7 +380,7 @@ import {
             if (host.includes("patreon")) return { key: "support", label: "Support", glyph: "$", color: "#ff424d", text: "#ffffff" };
             if (host.includes("opencollective")) return { key: "support", label: "Support", glyph: "$", color: "#7fadf2", text: "#071827" };
 
-            return { key: "web", label: "Website", glyph: "↗", color: "#55d6be", text: "#04201a" };
+            return { key: "web", label: "Website", glyph: "â†—", color: "#55d6be", text: "#04201a" };
         } catch (_) {
             return null;
         }
@@ -378,7 +388,7 @@ import {
 
     function sourcePlatformBadgeSvg(platform) {
         if (!platform) return "";
-        const glyph = escapeHtml(platform.glyph || "↗");
+        const glyph = escapeHtml(platform.glyph || "â†—");
         const color = platform.color || "#55d6be";
         const text = platform.text || "#04201a";
         const fontSize = glyph.length > 1 ? 13 : 17;
@@ -560,8 +570,8 @@ import {
         });
         const nodeIds = new Set(allNodes.map((node) => node.id));
 
-        // allEdgesRaw: every edge as declared in frontmatter — used by audit to detect
-        // dangling references. allEdges: only edges where both endpoints exist — used
+        // allEdgesRaw: every edge as declared in frontmatter â€” used by audit to detect
+        // dangling references. allEdges: only edges where both endpoints exist â€” used
         // for graph rendering and layout.
         const allEdgesRaw = Array.isArray(data.edges) ? data.edges : [];
         const allEdges = allEdgesRaw.map(normalizeRelationshipEdge).filter((edge) => {
@@ -822,6 +832,8 @@ import {
                 <button class="xana-ctrl-btn" data-settings-toggle aria-label="Display and narration settings" title="Settings">&#9881;</button>
                 <button class="xana-ctrl-btn" data-tools-toggle aria-label="Substrate tools" title="Substrate tools">&#x22EF;</button>
             </div>
+
+            <div class="xana-trail-player" hidden aria-live="polite"></div>
 
             <div class="xana-tools-popover" hidden>
                 <div class="xana-tools-popover-header">
@@ -1458,7 +1470,7 @@ import {
             if (homeId) travelToNode(homeId, state, true);
         });
 
-        // Attribution "XanaNode" text → navigate to the xananode node
+        // Attribution "XanaNode" text â†’ navigate to the xananode node
         graphEl.querySelector("[data-home-jump]")?.addEventListener("click", () => {
             const id = state.allNodes.some((n) => n.id === "xananode") ? "xananode" : "knowledge-substrate";
             travelToNode(id, state, true);
@@ -1473,7 +1485,7 @@ import {
             }
         });
 
-        // Tour speed input — update dwell time immediately and persist
+        // Tour speed input â€” update dwell time immediately and persist
         graphEl.querySelector("[data-tour-speed]")?.addEventListener("input", (e) => {
             const secs = Math.max(3, Math.min(120, Number(e.target.value) || 9));
             TOUR_DWELL_MS = secs * 1000;
@@ -1646,7 +1658,7 @@ import {
                         <li>
                             <button type="button" data-search-jump="${escapeHtml(node.id)}">
                                 <span class="xana-search-result-title">${escapeHtml(node.title || node.id)}</span>
-                                <span class="xana-search-result-meta">${escapeHtml(node.type || "node")} · score ${Math.round(result.score)}${(node.youtube_url || node.primary_media_node?.youtube_url) ? " · YouTube video" : ""}</span>
+                                <span class="xana-search-result-meta">${escapeHtml(node.type || "node")} Â· score ${Math.round(result.score)}${(node.youtube_url || node.primary_media_node?.youtube_url) ? " Â· YouTube video" : ""}</span>
                                 ${result.snippet ? `<span class="xana-search-result-snippet">${escapeHtml(result.snippet)}</span>` : ""}
                             </button>
                         </li>
@@ -1813,13 +1825,13 @@ import {
             .sort((a, b) => a - b)[0];
 
         if (firstMatch === undefined) {
-            return text.length > 140 ? `${text.slice(0, 140)}…` : text;
+            return text.length > 140 ? `${text.slice(0, 140)}â€¦` : text;
         }
 
         const start = Math.max(0, firstMatch - 55);
         const end = Math.min(text.length, firstMatch + 120);
-        const prefix = start > 0 ? "…" : "";
-        const suffix = end < text.length ? "…" : "";
+        const prefix = start > 0 ? "â€¦" : "";
+        const suffix = end < text.length ? "â€¦" : "";
 
         return `${prefix}${text.slice(start, end)}${suffix}`;
     }
@@ -1859,6 +1871,7 @@ import {
             });
 
         renderPanel(focusNode, relatedEdges, state);
+        renderActiveTrailPlayer(state);
 
         if (state.previousFocusId && state.previousFocusId !== state.focusId) {
             panelEl.scrollTop = 0;
@@ -2319,7 +2332,7 @@ import {
     function trimLabel(value, max) {
         const text = String(value || "");
         if (text.length <= max) return text;
-        return `${text.slice(0, Math.max(0, max - 1))}…`;
+        return `${text.slice(0, Math.max(0, max - 1))}â€¦`;
     }
 
     function saveGraphViewport(viewport) {
@@ -2625,7 +2638,7 @@ import {
 
         let cursor = 60;
 
-        // Wave 0 — the node we just came from (appears before the rest, anchors context)
+        // Wave 0 â€” the node we just came from (appears before the rest, anchors context)
         const prevNode = previousFocusId ? cy.getElementById(previousFocusId) : null;
         const hasPrev = prevNode && prevNode.length && prevNode.id() !== focusId;
 
@@ -2636,7 +2649,7 @@ import {
             cursor += 160;
         }
 
-        // Wave 1 — distance-1 nodes, heaviest first
+        // Wave 1 â€” distance-1 nodes, heaviest first
         const d1 = cy.nodes(".distance-1")
             .filter((n) => !hasPrev || n.id() !== prevNode.id())
             .sort((a, b) => Number(b.data("importance") || 3) - Number(a.data("importance") || 3));
@@ -2648,7 +2661,7 @@ import {
 
         cursor += Math.max(d1.length, 1) * 60 + 200;
 
-        // Wave 2 — distance-2 nodes, heaviest first
+        // Wave 2 â€” distance-2 nodes, heaviest first
         const d2 = cy.nodes(".distance-2")
             .sort((a, b) => Number(b.data("importance") || 3) - Number(a.data("importance") || 3));
 
@@ -2658,7 +2671,7 @@ import {
 
         cursor += Math.max(d2.length, 1) * 40 + 220;
 
-        // Wave 3 — distance-3 nodes, subtle drift in
+        // Wave 3 â€” distance-3 nodes, subtle drift in
         cy.nodes(".distance-3").forEach((node, i) => {
             revealNode(node, 0.16, cursor + i * 25, 580);
         });
@@ -2674,7 +2687,7 @@ import {
         }, cursor);
     }
 
-    // ── Guided Tour ──────────────────────────────────────────────────────────
+    // â”€â”€ Guided Tour â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
     function updateTourButton() {
         const tourBtn = graphEl.querySelector("[data-tour-toggle]");
@@ -2698,7 +2711,7 @@ import {
     }
 
     function startTour(state) {
-        TOUR_DWELL_MS = Math.max(3000, (loadSetting(STORAGE_KEYS.tourSpeed, 9) || 9) * 1000);
+        TOUR_DWELL_MS = getViewerTimedDwellMs({ timedSeconds: loadSetting(STORAGE_KEYS.tourSpeed, 9) || 9 });
         state.tourActive = true;
         state.tourIndex = 0;
         state.tourVisited = new Set([state.focusId].filter(Boolean));
@@ -2802,72 +2815,60 @@ import {
 
     function buildActiveTrail(state) {
         const focusNode = state.allNodes.find((node) => node.id === state.focusId);
-        const trailNodes = getTrailNodeIds(focusNode, state);
-        if (!trailNodes.length) return null;
-        return {
-            trailId: focusNode.id,
-            nodes: trailNodes,
-            index: 0,
-            branches: getTrailBranches(focusNode, state),
-            branchChoices: {}
-        };
+        return buildViewerTrailPlaybackState(focusNode, {
+            nodeIds: state.nodeIds,
+            allEdges: state.allEdgesRaw,
+            playback: false
+        });
     }
 
-    function getTrailNodeIds(node, state) {
-        if (!node) return [];
-
-        const explicitNodes = Array.isArray(node.trail_nodes)
-            ? node.trail_nodes.filter((id) => state.nodeIds.has(id))
-            : [];
-        if (explicitNodes.length) return explicitNodes;
-
-        return (state.allEdgesRaw || [])
-            .filter((edge) => edge.source === node.id && edge.origin === "trail" && state.nodeIds.has(edge.target))
-            .map((edge) => edge.target)
-            .filter((id, index, ids) => ids.indexOf(id) === index);
+    function isTrailPlaybackActive(state) {
+        return Boolean(state?.activeTrail?.playback);
     }
 
-    function getTrailBranches(node, state) {
-        if (!Array.isArray(node?.trail_branches)) return [];
-        return node.trail_branches
-            .map((branch) => ({
-                after: branch?.after || "",
-                prompt: branch?.prompt || "Choose the next path",
-                choices: Array.isArray(branch?.choices)
-                    ? branch.choices
-                        .map((choice) => ({
-                            label: choice?.label || "Continue",
-                            summary: choice?.summary || "",
-                            nodes: Array.isArray(choice?.nodes)
-                                ? choice.nodes.filter((id) => state.nodeIds.has(id))
-                                : []
-                        }))
-                        .filter((choice) => choice.nodes.length)
-                    : []
-            }))
-            .filter((branch) => branch.after && branch.choices.length);
+    function isAutoPlaybackActive(state) {
+        return Boolean(state?.tourActive || isTrailPlaybackActive(state));
+    }
+
+    function stopTrailPlayback(state, options = {}) {
+        if (!state?.activeTrail) return;
+        state.activeTrail.playback = false;
+        state.trailChoicePending = false;
+        if (!options.keepTrail) state.activeTrail = null;
+        if (!state.tourActive) {
+            clearTourTimers();
+            closeTrailChoice();
+            stopNarration();
+            const tourBtn = graphEl.querySelector("[data-tour-toggle]");
+            if (tourBtn) tourBtn.classList.remove("tour-ring-anim");
+        }
     }
 
     function pickNextTrailNode(state) {
-        const trail = state.activeTrail;
-        if (!trail?.nodes?.length) return null;
-        const branch = trail.branches?.find((candidate) => {
-            return candidate.after === state.focusId && !trail.branchChoices?.[candidate.after];
-        });
+        const choice = pickNextViewerTrailNode(state.activeTrail, state.focusId);
+        state.activeTrail = choice.trail;
+        const branch = choice.branch;
         if (branch) {
             showTrailChoice(branch, state);
             return null;
         }
-        const currentIndex = trail.nodes.indexOf(state.focusId);
-        const nextIndex = currentIndex >= 0 ? currentIndex + 1 : trail.index;
-        const nextId = trail.nodes[nextIndex];
-        trail.index = nextIndex + 1;
-        if (!nextId) {
-            state.activeTrail = null;
+        if (!choice.nextId) {
+            stopTrailPlayback(state);
             return null;
         }
-        rememberTourVisit(nextId, state);
-        return nextId;
+        rememberTourVisit(choice.nextId, state);
+        return choice.nextId;
+    }
+
+    function advanceAutoPlayback(state) {
+        const nextId = state.tourActive ? pickNextTourNode(state) : pickNextTrailNode(state);
+        if (nextId) {
+            travelToNode(nextId, state, false);
+            return;
+        }
+        if (state.trailChoicePending) return;
+        if (state.tourActive) stopTour(state);
+        else stopTrailPlayback(state);
     }
 
     function showTrailChoice(branch, state) {
@@ -2899,9 +2900,7 @@ import {
             button.addEventListener("click", () => {
                 const choice = branch.choices[Number(button.getAttribute("data-trail-choice"))];
                 if (!choice?.nodes?.length) return;
-                state.activeTrail.branchChoices[branch.after] = choice.label;
-                state.activeTrail.nodes = choice.nodes;
-                state.activeTrail.index = 0;
+                state.activeTrail = applyViewerTrailBranchChoice(state.activeTrail, branch.after, choice);
                 state.trailChoicePending = false;
                 closeTrailChoice();
                 travelToNode(choice.nodes[0], state, !state.tourActive);
@@ -2931,14 +2930,13 @@ import {
         if (!forceTimer && state.displaySettings?.tourMode === "narration" && state.displaySettings?.ttsNarrator && canNarrate()) return;
 
         _tourTimer = window.setTimeout(() => {
-            if (!state.tourActive) return;
-            const nextId = pickNextTourNode(state);
-            if (nextId) travelToNode(nextId, state, false);
-            if (state.tourActive && !state.trailChoicePending) scheduleTourAdvance(state);
+            if (!isAutoPlaybackActive(state)) return;
+            advanceAutoPlayback(state);
+            if (isAutoPlaybackActive(state) && !state.trailChoicePending) scheduleTourAdvance(state);
         }, TOUR_DWELL_MS);
     }
 
-    // ── End Guided Tour ──────────────────────────────────────────────────────
+    // â”€â”€ End Guided Tour â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
     function travelToNode(nextId, state, pushUrl) {
         if (!nextId || nextId === state.focusId) return;
@@ -3022,8 +3020,6 @@ import {
 
             ${renderProtocolFooter(node)}
 
-            ${node.type === "trail" ? "" : renderTrailPlaylist(node, state)}
-
             <details class="xana-connections" ${loadSetting(STORAGE_KEYS.connectionsOpen, false) ? "open" : ""}>
                 <summary class="xana-connections-summary">
                     <span>Connections</span>
@@ -3057,7 +3053,7 @@ import {
 
         // Tour: reset scroll and restart both the panel-scroll loop and the
         // countdown ring animation so both are in sync with the new node's dwell.
-        if (state.tourActive) {
+        if (state.tourActive || isTrailPlaybackActive(state)) {
             panelEl.scrollTop = 0;
             const narrated = narrateNode(node, state);
             restartTourRing();
@@ -3068,15 +3064,28 @@ import {
         }
     }
 
+    function trailContextForNode(node, state) {
+        return findViewerTrailContext(node, state.allNodes, {
+            nodeIds: state.nodeIds,
+            allEdges: state.allEdgesRaw
+        });
+    }
+
     function renderTrailPlaylist(node, state) {
-        const trailNodes = getTrailPlaylistNodeIds(node, state);
+        const trailNode = node?.type === "trail" ? node : null;
+        if (!trailNode) return "";
+        const trailNodes = getViewerTrailPlaylistNodeIds(trailNode, {
+            nodeIds: state.nodeIds,
+            allEdges: state.allEdgesRaw
+        });
         if (!trailNodes.length) return "";
         const items = trailNodes
             .map((id, index) => {
                 const target = state.allNodes.find((candidate) => candidate.id === id);
                 if (!target) return "";
+                const isActive = id === node.id;
                 return `
-                    <button type="button" data-trail-jump="${escapeHtml(target.id)}">
+                    <button type="button" data-trail-jump="${escapeHtml(target.id)}" ${isActive ? 'data-trail-current="true"' : ""}>
                         <span>${index + 1}</span>
                         <strong>${escapeHtml(target.title || target.id)}</strong>
                         <em>${escapeHtml(target.type || "node")}</em>
@@ -3091,51 +3100,161 @@ import {
             <section class="xana-trail-playlist" data-tts-skip>
                 <div class="xana-trail-playlist-head">
                     <span>Trail playlist</span>
-                    <button type="button" data-trail-start="${escapeHtml(node.id)}">Play trail</button>
+                    <button type="button" data-trail-start="${escapeHtml(trailNode.id)}">Play trail</button>
                 </div>
                 <div class="xana-trail-playlist-items">${items}</div>
             </section>
         `;
     }
 
-    function getTrailPlaylistNodeIds(node, state) {
-        const ids = [];
-        const add = (id) => {
-            if (!id || !state.nodeIds.has(id) || ids.includes(id)) return;
-            ids.push(id);
-        };
-
-        getTrailNodeIds(node, state).forEach(add);
-        getTrailBranches(node, state).forEach((branch) => {
-            branch.choices.forEach((choice) => {
-                choice.nodes.forEach(add);
-            });
-        });
-
-        return ids;
-    }
-
     function bindTrailPlaylist(state) {
         panelEl.querySelectorAll("[data-trail-jump]").forEach((button) => {
             button.addEventListener("click", () => {
                 const id = button.getAttribute("data-trail-jump");
-                const trailNodes = getTrailNodeIds(state.allNodes.find((node) => node.id === state.focusId), state);
-                const trailNode = state.allNodes.find((node) => node.id === state.focusId);
-                state.activeTrail = {
-                    trailId: state.focusId,
-                    nodes: trailNodes,
-                    index: Math.max(0, trailNodes.indexOf(id) + 1),
-                    branches: getTrailBranches(trailNode, state),
-                    branchChoices: {}
-                };
+                const focusNode = state.allNodes.find((node) => node.id === state.focusId);
+                const trailNode = trailContextForNode(focusNode, state);
+                const trailState = buildViewerTrailPlaybackState(trailNode, {
+                    nodeIds: state.nodeIds,
+                    allEdges: state.allEdgesRaw,
+                    playback: false
+                });
+                state.activeTrail = trailState
+                    ? {
+                        ...trailState,
+                        index: Math.max(0, trailState.nodes.indexOf(id) + 1)
+                    }
+                    : null;
                 travelToNode(id, state, true);
             });
         });
 
         panelEl.querySelector("[data-trail-start]")?.addEventListener("click", () => {
-            state.activeTrail = buildActiveTrail(state);
+            const trailId = panelEl.querySelector("[data-trail-start]")?.getAttribute("data-trail-start");
+            const trailNode = state.allNodes.find((node) => node.id === trailId);
+            if (trailNode) {
+                state.activeTrail = buildViewerTrailPlaybackState(trailNode, {
+                    nodeIds: state.nodeIds,
+                    allEdges: state.allEdgesRaw,
+                    playback: true
+                });
+            } else {
+                state.activeTrail = buildActiveTrail(state);
+                if (state.activeTrail) state.activeTrail.playback = true;
+            }
             const nextId = pickNextTrailNode(state);
             if (nextId) travelToNode(nextId, state, true);
+        });
+    }
+
+    function renderActiveTrailPlayer(state) {
+        const playerEl = graphEl.querySelector(".xana-trail-player");
+        if (!playerEl) return;
+        const activeTrail = state.activeTrail;
+        if (!activeTrail?.nodes?.length) {
+            playerEl.hidden = true;
+            playerEl.innerHTML = "";
+            return;
+        }
+
+        const trailNode = state.allNodes.find((node) => node.id === activeTrail.trailId);
+        const currentIndex = Math.max(0, activeTrail.nodes.indexOf(state.focusId));
+        const branchCount = Array.isArray(activeTrail.branches) ? activeTrail.branches.length : 0;
+        const items = activeTrail.nodes.map((id, index) => {
+            const target = state.allNodes.find((candidate) => candidate.id === id);
+            if (!target) return "";
+            const isCurrent = id === state.focusId;
+            return `
+                <button type="button" class="xana-trail-player-item${isCurrent ? " is-current" : ""}" data-trail-player-jump="${escapeHtml(id)}">
+                    <span>${index + 1}</span>
+                    <strong>${escapeHtml(target.title || target.id)}</strong>
+                    <em>${escapeHtml(target.type || "node")}</em>
+                </button>
+            `;
+        }).filter(Boolean).join("");
+
+        const prevDisabled = currentIndex <= 0 ? "disabled" : "";
+        const nextDisabled = currentIndex >= activeTrail.nodes.length - 1 ? "disabled" : "";
+        const playbackLabel = isTrailPlaybackActive(state) ? "Pause" : "Resume";
+
+        playerEl.hidden = false;
+        playerEl.innerHTML = `
+            <div class="xana-trail-player-head">
+                <div class="xana-trail-player-title">
+                    <span>Trail player</span>
+                    <strong>${escapeHtml(trailNode?.title || "Active trail")}</strong>
+                    <em>${currentIndex + 1} of ${activeTrail.nodes.length}${branchCount ? ` · ${branchCount} branch${branchCount === 1 ? "" : "es"}` : ""}</em>
+                </div>
+                <div class="xana-trail-player-actions">
+                    <button type="button" data-trail-player-prev ${prevDisabled}>&larr;</button>
+                    <button type="button" data-trail-player-toggle>${playbackLabel}</button>
+                    <button type="button" data-trail-player-next ${nextDisabled}>&rarr;</button>
+                    <button type="button" data-trail-player-close aria-label="Close trail player">&#x2715;</button>
+                </div>
+            </div>
+            <div class="xana-trail-player-items">${items}</div>
+        `;
+
+        bindActiveTrailPlayer(state, playerEl, activeTrail, currentIndex);
+    }
+
+    function bindActiveTrailPlayer(state, playerEl, activeTrail, currentIndex) {
+        playerEl.querySelectorAll("[data-trail-player-jump]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const id = button.getAttribute("data-trail-player-jump");
+                if (!id) return;
+                state.activeTrail = {
+                    ...activeTrail,
+                    index: Math.max(0, activeTrail.nodes.indexOf(id) + 1)
+                };
+                travelToNode(id, state, true);
+            });
+        });
+
+        playerEl.querySelector("[data-trail-player-prev]")?.addEventListener("click", () => {
+            if (currentIndex <= 0) return;
+            const id = activeTrail.nodes[currentIndex - 1];
+            if (!id) return;
+            state.activeTrail = {
+                ...activeTrail,
+                playback: false,
+                index: currentIndex
+            };
+            travelToNode(id, state, true);
+        });
+
+        playerEl.querySelector("[data-trail-player-next]")?.addEventListener("click", () => {
+            const id = activeTrail.nodes[currentIndex + 1];
+            if (!id) return;
+            state.activeTrail = {
+                ...activeTrail,
+                playback: false,
+                index: currentIndex + 2
+            };
+            travelToNode(id, state, true);
+        });
+
+        playerEl.querySelector("[data-trail-player-toggle]")?.addEventListener("click", () => {
+            if (!state.activeTrail) return;
+            state.activeTrail.playback = !state.activeTrail.playback;
+            if (state.activeTrail.playback) {
+                const narrated = narrateNode(state.allNodes.find((node) => node.id === state.focusId), state);
+                restartTourRing();
+                if (!narrated) {
+                    startTourPanelScroll(TOUR_DWELL_MS);
+                    scheduleTourAdvance(state, true);
+                }
+            } else {
+                clearTourTimers();
+                stopNarration();
+                const tourBtn = graphEl.querySelector("[data-tour-toggle]");
+                if (tourBtn) tourBtn.classList.remove("tour-ring-anim");
+            }
+            renderActiveTrailPlayer(state);
+        });
+
+        playerEl.querySelector("[data-trail-player-close]")?.addEventListener("click", () => {
+            stopTrailPlayback(state);
+            renderActiveTrailPlayer(state);
         });
     }
 
@@ -3244,16 +3363,14 @@ import {
         utterance.pitch = clampNumber(state.displaySettings.ttsPitch, 0.75, 1.35, DISPLAY_DEFAULTS.ttsPitch);
         utterance.volume = 0.88;
         utterance.onend = () => {
-            if (!state.tourActive) return;
+            if (!isAutoPlaybackActive(state)) return;
             window.setTimeout(() => {
-                if (!state.tourActive) return;
-                const nextId = pickNextTourNode(state);
-                if (nextId) travelToNode(nextId, state, false);
-                if (!nextId && !state.trailChoicePending) stopTour(state);
+                if (!isAutoPlaybackActive(state)) return;
+                advanceAutoPlayback(state);
             }, NARRATION_AFTER_END_PAUSE_MS);
         };
         utterance.onerror = () => {
-            if (state.tourActive) scheduleTourAdvance(state, true);
+            if (isAutoPlaybackActive(state)) scheduleTourAdvance(state, true);
         };
         window.speechSynthesis.speak(utterance);
         return true;
@@ -3354,22 +3471,22 @@ import {
             {
                 selector: ".xana-controls-strip",
                 title: "Controls",
-                body: "- zooms out, □ fits the graph, and + zooms in. The rest of this bar opens filters, path tracing, tours, settings, and tools."
+                body: "- zooms out, â–¡ fits the graph, and + zooms in. The rest of this bar opens filters, path tracing, tours, settings, and tools."
             },
             {
                 selector: "[data-filter-toggle]",
                 title: "Filters",
-                body: "≡ opens graph filters for node types, relationship types, media kinds, subtypes, and facets. Use it to isolate schemas, sources, implementations, evidence, or any other layer in the substrate."
+                body: "â‰¡ opens graph filters for node types, relationship types, media kinds, subtypes, and facets. Use it to isolate schemas, sources, implementations, evidence, or any other layer in the substrate."
             },
             {
                 selector: "[data-path-open]",
                 title: "Paths",
-                body: "⤴ compares two nodes. XanaNode traces connective paths and also writes a short story of the semantic route between them."
+                body: "â¤´ compares two nodes. XanaNode traces connective paths and also writes a short story of the semantic route between them."
             },
             {
                 selector: "[data-tour-toggle]",
                 title: "Node Tour",
-                body: "▶ starts the guided node tour. It moves through connected nodes by narration or timed advance, depending on your settings."
+                body: "â–¶ starts the guided node tour. It moves through connected nodes by narration or timed advance, depending on your settings."
             },
             {
                 selector: "#xana-panel",
@@ -3384,12 +3501,12 @@ import {
             {
                 selector: "[data-settings-toggle]",
                 title: "Settings",
-                body: "⚙ opens display and narration settings: theme, density, text size, graph motion, tour behavior, and voice preferences."
+                body: "âš™ opens display and narration settings: theme, density, text size, graph motion, tour behavior, and voice preferences."
             },
             {
                 selector: "[data-tools-toggle]",
                 title: "Tools",
-                body: "⋯ opens authoring utilities such as review suggestions and schema audit. You can reopen this tour later from ⋯, then Interface tour."
+                body: "â‹¯ opens authoring utilities such as review suggestions and schema audit. You can reopen this tour later from â‹¯, then Interface tour."
             }
         ];
 
@@ -3573,7 +3690,7 @@ import {
         if (!node.source_url) return "";
         const label = node.source_platform_label || "Open source";
         const platform = node.source_platform || "web";
-        const glyph = sourcePlatformFor(node.source_url)?.glyph || "↗";
+        const glyph = sourcePlatformFor(node.source_url)?.glyph || "â†—";
 
         return `
             <div class="xana-source-actions">
@@ -3687,9 +3804,9 @@ import {
             missing_importance: "Missing importance",
             missing_summary: "Missing summary",
             naked_image: "Naked image (no media node)",
-            media_missing_file: "Media — missing file",
-            media_missing_alt: "Media — missing alt text",
-            media_missing_rights: "Media — missing rights_status",
+            media_missing_file: "Media â€” missing file",
+            media_missing_alt: "Media â€” missing alt text",
+            media_missing_rights: "Media â€” missing rights_status",
             invalid_rel_type: "Invalid relationship type",
             dangling_ref: "Dangling reference (target not found)"
         };
@@ -3747,21 +3864,7 @@ import {
     }
 
     function resolveNodeSelection(query, allNodes) {
-        const raw = String(query || "").trim();
-        if (!raw) return null;
-
-        const rawLower = raw.toLowerCase();
-        const normalized = normalizeSearchText(raw);
-
-        return allNodes.find((node) => {
-            if (!node) return false;
-
-            const id = String(node.id || "").toLowerCase();
-            const title = String(node.title || "");
-            const titleNormalized = normalizeSearchText(title);
-
-            return id === rawLower || titleNormalized === normalized || normalizeSearchText(node.id || "") === normalized;
-        }) || null;
+        return resolveViewerNodeSelection(query, allNodes);
     }
 
     function buildPathOptions(allNodes) {
@@ -3772,117 +3875,8 @@ import {
         }).join("");
     }
 
-    function buildPathGraph(allEdges, allowReverse) {
-        const adjacency = new Map();
-
-        const addEdge = (fromId, toId, edge, reversed) => {
-            if (!adjacency.has(fromId)) adjacency.set(fromId, []);
-            adjacency.get(fromId).push({ toId, edge, reversed });
-        };
-
-        allEdges.forEach((edge, index) => {
-            const normalizedEdge = { ...edge, _edgeIndex: index };
-            addEdge(normalizedEdge.source, normalizedEdge.target, normalizedEdge, false);
-
-            if (allowReverse) {
-                addEdge(normalizedEdge.target, normalizedEdge.source, normalizedEdge, true);
-            }
-        });
-
-        return adjacency;
-    }
-
     function findConnectivePaths(allEdges, sourceId, targetId, options = {}) {
-        const allowReverse = options.allowReverse !== false;
-        const maxDepth = Number(options.maxDepth || 6);
-        const maxPaths = Number(options.maxPaths || 6);
-        const searchLimit = Math.max(maxPaths * 12, 48);
-        const adjacency = buildPathGraph(allEdges, allowReverse);
-        const results = [];
-        const visited = new Set([sourceId]);
-        const path = [];
-        const pathNodeIds = [sourceId];
-
-        const dfs = (currentId, depth) => {
-            if (results.length >= searchLimit) return;
-            if (depth > maxDepth) return;
-
-            if (currentId === targetId) {
-                results.push({
-                    nodes: [...pathNodeIds],
-                    hops: path.map((step) => ({ ...step }))
-                });
-                return;
-            }
-
-            const neighbors = adjacency.get(currentId) || [];
-
-            for (const step of neighbors) {
-                if (visited.has(step.toId)) continue;
-
-                visited.add(step.toId);
-                path.push({
-                    fromId: currentId,
-                    toId: step.toId,
-                    edge: step.edge,
-                    reversed: step.reversed
-                });
-                pathNodeIds.push(step.toId);
-
-                dfs(step.toId, depth + 1);
-
-                pathNodeIds.pop();
-                path.pop();
-                visited.delete(step.toId);
-
-                if (results.length >= searchLimit) return;
-            }
-        };
-
-        dfs(sourceId, 0);
-
-        return results.sort((a, b) => {
-            const scoreDiff = scoreConnectivePath(b) - scoreConnectivePath(a);
-            if (scoreDiff) return scoreDiff;
-            if (a.hops.length !== b.hops.length) return a.hops.length - b.hops.length;
-            return a.nodes.join(" ").localeCompare(b.nodes.join(" "));
-        }).slice(0, maxPaths);
-    }
-
-    function scoreConnectivePath(path) {
-        const hopCount = path.hops.length || 1;
-        const edgeScore = path.hops.reduce((sum, hop) => {
-            const edge = hop.edge || {};
-            const weight = Number(edge.weight || 1);
-            const visibility = edge.visibility === "primary" ? 8 : edge.visibility === "secondary" ? 4 : 0;
-            const directionPenalty = hop.reversed ? -1 : 0;
-            return sum + weight * 6 + visibility + relationshipStoryPriority(edge.type) + directionPenalty;
-        }, 0);
-        return edgeScore - hopCount * 5;
-    }
-
-    function relationshipStoryPriority(type) {
-        const priorities = {
-            defines: 10,
-            has_claim: 10,
-            supports: 9,
-            evidence_for: 9,
-            derived_from: 9,
-            authored: 8,
-            created: 8,
-            influenced: 8,
-            implements: 8,
-            enables: 8,
-            contains: 8,
-            uses: 7,
-            explains: 7,
-            documents: 7,
-            context_for: 6,
-            continues_to: 6,
-            related_to: 2,
-            mentions: 1
-        };
-        return priorities[type] || 4;
+        return findViewerConnectivePaths(allEdges, sourceId, targetId, options);
     }
 
     function renderPathNodeChip(node, direction = "") {
@@ -4141,131 +4135,11 @@ import {
     }
 
     function renderPathStory(path, nodeById) {
-        const parts = path.hops.map((hop, index) => {
-            const fromNode = nodeById.get(hop.fromId);
-            const toNode = nodeById.get(hop.toId);
-            const fromTitle = escapeHtml(fromNode?.title || hop.fromId);
-            const toTitle = escapeHtml(toNode?.title || hop.toId);
-            const phrase = relationshipPhrase(hop.edge?.type || "related_to", hop.reversed);
-            const lead = index === 0 ? "" : "Then ";
-            return `${lead}${fromTitle} ${phrase} ${toTitle}`;
-        });
-        return `${parts.join(". ")}.`;
+        return buildViewerPathStory(path, nodeById);
     }
 
     function relationshipPhrase(type, reversed = false) {
-        const forwardPhrases = {
-            supports: "supports",
-            contradicts: "contradicts",
-            explains: "explains",
-            defines: "defines",
-            has_claim: "has claim",
-            claim_of: "is a claim of",
-            demonstrates: "demonstrates",
-            derives_from: "derives from",
-            derived_from: "derives from",
-            cites: "cites",
-            quotes: "quotes",
-            mentions: "mentions",
-            references: "references",
-            documents: "documents",
-            authored: "authored",
-            authored_by: "was authored by",
-            created: "created",
-            created_by: "was created by",
-            participated_in: "participated in",
-            spoke_at: "spoke at",
-            features: "features",
-            presented: "presented",
-            introduced: "introduced",
-            proposed: "proposed",
-            influenced: "influenced",
-            influenced_by: "was influenced by",
-            popularized: "popularized",
-            anticipated: "anticipated",
-            anticipates: "anticipates",
-            shaped: "shaped",
-            shapes: "shapes",
-            implements: "implements",
-            implemented_by: "is implemented by",
-            enables: "enables",
-            preserves: "preserves",
-            transcludes: "transcludes",
-            deep_links_to: "deep-links to",
-            has_primary_media: "has primary media",
-            depicts: "depicts",
-            represents: "represents",
-            located_in: "is located in",
-            headquartered_in: "is headquartered in",
-            based_in: "is based in",
-            part_of: "is part of",
-            contains: "contains",
-            includes: "includes",
-            uses: "uses",
-            depends_on: "depends on",
-            requires: "requires",
-            starts_with: "starts with",
-            continues_to: "continues to",
-            member_of: "is a member of",
-            related_to: "relates to"
-        };
-        const reversePhrases = {
-            supports: "is supported by",
-            contradicts: "is contradicted by",
-            explains: "is explained by",
-            defines: "is defined by",
-            has_claim: "is a claim of",
-            claim_of: "has claim",
-            demonstrates: "is demonstrated by",
-            derives_from: "is the source for",
-            derived_from: "is the source for",
-            cites: "is cited by",
-            quotes: "is quoted by",
-            mentions: "is mentioned by",
-            references: "is referenced by",
-            documents: "is documented by",
-            authored: "was authored by",
-            authored_by: "authored",
-            created: "was created by",
-            created_by: "created",
-            participated_in: "had participant",
-            spoke_at: "featured speaker",
-            features: "is featured in",
-            presented: "was presented by",
-            introduced: "was introduced by",
-            proposed: "was proposed by",
-            influenced: "was influenced by",
-            influenced_by: "influenced",
-            popularized: "was popularized by",
-            anticipated: "was anticipated by",
-            anticipates: "is anticipated by",
-            shaped: "was shaped by",
-            shapes: "was shaped by",
-            implements: "is implemented by",
-            implemented_by: "implements",
-            enables: "is enabled by",
-            preserves: "is preserved by",
-            transcludes: "is transcluded by",
-            deep_links_to: "is deep-linked from",
-            has_primary_media: "is primary media for",
-            depicts: "is depicted by",
-            represents: "is represented by",
-            located_in: "contains",
-            headquartered_in: "is headquarters of",
-            based_in: "is base of",
-            part_of: "contains",
-            contains: "is contained by",
-            includes: "is included in",
-            uses: "is used by",
-            depends_on: "is a dependency of",
-            requires: "is required by",
-            starts_with: "starts",
-            continues_to: "appears in",
-            member_of: "has member",
-            related_to: "relates to"
-        };
-        const phrases = reversed ? reversePhrases : forwardPhrases;
-        return phrases[type] || String(type || "related_to").replace(/_/g, " ");
+        return viewerRelationshipPhrase(type, reversed);
     }
 
     function renderAuditResults(state) {
@@ -4335,7 +4209,7 @@ import {
         if (auditClearBtn) auditClearBtn.hidden = false;
 
         if (metaEl) {
-            metaEl.textContent = `${total} node${total === 1 ? "" : "s"} · ${violationCount} issue${violationCount === 1 ? "" : "s"}`;
+            metaEl.textContent = `${total} node${total === 1 ? "" : "s"} Â· ${violationCount} issue${violationCount === 1 ? "" : "s"}`;
             metaEl.hidden = false;
         }
 
@@ -4553,7 +4427,7 @@ import {
         activeNode = node;
         activeNodeStartedAt = Date.now();
 
-        const title = `${node.title || node.id} · XanaNode`;
+        const title = `${node.title || node.id} Â· XanaNode`;
         const pagePath = `${window.location.pathname}${window.location.search}` || "/";
         document.title = title;
 
@@ -5469,7 +5343,7 @@ import {
                     "text-max-width": 218
                 })
             },
-            // Compound overrides — claim dimensions per distance (placed after distance rules so they win)
+            // Compound overrides â€” claim dimensions per distance (placed after distance rules so they win)
             {
                 selector: ".focused-node.claim",
                 style: { width: 260, height: 110, "text-max-width": 300, "font-size": 16 }

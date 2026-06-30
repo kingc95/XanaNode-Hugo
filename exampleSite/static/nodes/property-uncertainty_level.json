@@ -1,0 +1,84 @@
+{
+  "id": "xananode.canonical:schema/property-uncertainty_level",
+  "title": "Uncertainty level",
+  "type": "schema",
+  "subtype": "property_registry_entry",
+  "importance": 4,
+  "summary": "A normalized level describing how uncertain a node, relationship, answer, or interpretation remains.",
+  "registry_type": "uncertainty_level",
+  "category": "epistemology",
+  "aliases": [
+    "certainty_level",
+    "unknown_level",
+    "confidence_gap"
+  ],
+  "applies_to": [
+    "claim",
+    "question",
+    "hypothesis",
+    "knowledge_gap",
+    "relationship",
+    "response"
+  ],
+  "unit_system": "none",
+  "value_schema": {
+    "type": "string",
+    "enum": [
+      "unknown",
+      "low",
+      "medium",
+      "high",
+      "unresolved"
+    ]
+  },
+  "examples": [
+    "high"
+  ],
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-uncertainty_level",
+      "type": "contains",
+      "source": "xananode.canonical:schema/property-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-uncertainty_level-uses-schema-node-type-claim",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-claim",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-uncertainty_level-uses-schema-node-type-hypothesis",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-hypothesis",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-uncertainty_level-uses-schema-node-type-knowledge_gap",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-knowledge_gap",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-uncertainty_level-uses-schema-node-type-question",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-question",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-uncertainty_level-uses-schema-node-type-relationship",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-relationship",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-uncertainty_level-uses-schema-node-type-response",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-response",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_property-uncertainty_level.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

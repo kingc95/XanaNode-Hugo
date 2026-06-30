@@ -15,7 +15,8 @@
     "institution_site",
     "online_space",
     "country",
-    "region"
+    "region",
+    "fictional_place"
   ],
   "required_frontmatter": [
     "title",
@@ -44,6 +45,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/media-node-type-place-projection-icon-represents-schema-node-type-place",
+      "type": "represents",
+      "source": "xananode.canonical:media/node-type-place-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-place",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
@@ -65,6 +72,12 @@
       "id": "xananode.canonical:rel/schema-node-subtype-place-country-extension_of-schema-node-type-place",
       "type": "extension_of",
       "source": "xananode.canonical:schema/node-subtype-place-country",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-place-fictional_place-extension_of-schema-node-type-place",
+      "type": "extension_of",
+      "source": "xananode.canonical:schema/node-subtype-place-fictional_place",
       "direction": "incoming"
     },
     {
@@ -110,6 +123,12 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-node-type-place-contains-schema-node-subtype-place-fictional_place",
+      "type": "contains",
+      "target": "xananode.canonical:schema/node-subtype-place-fictional_place",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-node-type-place-contains-schema-node-subtype-place-institution_site",
       "type": "contains",
       "target": "xananode.canonical:schema/node-subtype-place-institution_site",
@@ -134,9 +153,63 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-node-type-place-has_primary_media-media-node-type-place-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/node-type-place-projection-icon",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-aliases-uses-schema-node-type-place",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-aliases",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-content-uses-schema-node-type-place",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-content",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-facets-uses-schema-node-type-place",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-facets",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-property-geo_coordinates-uses-schema-node-type-place",
       "type": "uses",
       "source": "xananode.canonical:schema/property-geo_coordinates",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-sharing-uses-schema-node-type-place",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-sharing",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtype-uses-schema-node-type-place",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-subtype",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-place",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-subtypes",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-summary-uses-schema-node-type-place",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-summary",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-title-uses-schema-node-type-place",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-title",
       "direction": "incoming"
     }
   ],

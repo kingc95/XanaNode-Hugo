@@ -1,0 +1,42 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-son_of",
+  "title": "Son of",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source is the son of the target.",
+  "version": "0.5.1",
+  "registry_type": "son_of",
+  "registry_namespace": "xananode",
+  "category": "social",
+  "inverse": "parent_of",
+  "color": "#fecdd3",
+  "inverse_color": "#fb7185",
+  "line_style": "dashed",
+  "inverse_line_style": "solid",
+  "default_weight": 5,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-son_of",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-son_of",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-social",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-son_of-related_to-schema-relationship-type-parent_of-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-parent_of",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_relationship-type-son_of.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

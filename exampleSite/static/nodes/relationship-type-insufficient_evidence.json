@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source indicates that the target lacks enough evidence for the asserted interpretation or status.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "insufficient_evidence",
   "registry_namespace": "xananode",
   "category": "uncertainty",
@@ -17,6 +17,12 @@
   "default_weight": 4,
   "default_visibility": "primary",
   "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-insufficient_evidence-projection-icon-represents-schema-relationship-type-insufficient_evidence",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-insufficient_evidence-projection-icon",
+      "direction": "incoming"
+    },
     {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-insufficient_evidence",
       "type": "contains",
@@ -34,6 +40,12 @@
       "type": "related_to",
       "source": "xananode.canonical:schema/relationship-type-evidence_insufficient_for",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-insufficient_evidence-has_primary_media-media-relationship-type-insufficient_evidence-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-insufficient_evidence-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-insufficient_evidence-related_to-schema-relationship-type-evidence_insufficient_for-inverse",

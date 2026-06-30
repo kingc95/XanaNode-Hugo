@@ -12,24 +12,6 @@
   "review_status": "under_review",
   "relationships": [
     {
-      "id": "example.minimal:rel/response-answers-question",
-      "type": "answers",
-      "target": "example.minimal:question/why-relationships-matter",
-      "direction": "outgoing"
-    },
-    {
-      "id": "example.minimal:rel/response-answered-in-communication",
-      "type": "answered_in",
-      "target": "example.minimal:communication/minimal-substrate-discussion",
-      "direction": "outgoing"
-    },
-    {
-      "id": "example.minimal:rel/response-supports-claim",
-      "type": "supports",
-      "target": "example.minimal:claim/substrate-is-structure",
-      "direction": "outgoing"
-    },
-    {
       "id": "example.minimal:rel/response-answered-in-communication",
       "type": "answered_in",
       "target": "example.minimal:communication/minimal-substrate-discussion",
@@ -48,7 +30,7 @@
       "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/response-relationships-preserve-context.json",
-  "pack_id": "example.minimal",
+  "imported_from": "nodes/example.minimal_response_relationships-preserve-context.json",
+  "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

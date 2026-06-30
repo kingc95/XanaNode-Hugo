@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source communication, publication, event, or actor broadcast the target content or message to an audience.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "broadcast_to",
   "registry_namespace": "xananode",
   "category": "communication",
@@ -18,6 +18,12 @@
   "default_visibility": "primary",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-type-broadcast_to-projection-icon-represents-schema-relationship-type-broadcast_to",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-broadcast_to-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-broadcast_to",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
@@ -28,6 +34,12 @@
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-category-communication",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-broadcast_to-has_primary_media-media-relationship-type-broadcast_to-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-broadcast_to-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-broadcast_to-related_to-schema-relationship-type-received_broadcast_from-inverse",

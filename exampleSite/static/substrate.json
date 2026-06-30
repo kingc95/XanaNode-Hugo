@@ -9,22 +9,15 @@
     "url": "https://github.com/kingc95/xananode-hugo",
     "default_branch": "main"
   },
-  "schema_version": "xananode-core@0.5.0",
+  "schema_version": "xananode-core@0.5.1",
   "imports": [
     "xananode:core",
-    {
-      "mode": "mounted",
-      "id": "example.minimal",
-      "source": "../vendor/xananode-core/vendor/xananode-protocol/examples/minimal-substrate",
-      "version": "0.2.0",
-      "required": true
-    },
     {
       "mode": "mounted",
       "id": "xananode.canonical",
       "source": "../../XanaNode-Canonical-Substrate",
       "version": "0.1.0",
-      "required": false
+      "required": true
     },
     {
       "mode": "mounted",

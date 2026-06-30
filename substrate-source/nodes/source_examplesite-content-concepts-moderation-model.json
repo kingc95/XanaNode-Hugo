@@ -15,7 +15,7 @@
   "content_id": "sha256:5de7ef4ca601ad27e870409c7375593f234c5ee4fbe5c6b90edcaa20d6fcf483",
   "content": "---\ntitle: \"Moderation Model\"\ntype: \"concept\"\nimportance: 4\nsummary: \"The governance model that lets each substrate decide its own trust, inclusion, review, and publication rules.\"\nrelationships:\n  - type: \"defines\"\n    target: \"independent-moderation\"\n  - type: \"required_for\"\n    target: \"federation-rules\"\n  - type: \"context_for\"\n    target: \"dispute-resolution\"\n---\n\n[XanaNode](/node/xananode) does not require one global moderation authority.\n\nEach substrate can decide what it publishes, imports, hides, rejects, or marks as disputed. Federation works because those decisions are visible rather than silently normalized away.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/moderation-model.md",
     "method": "archive",
     "content_id": "sha256:5de7ef4ca601ad27e870409c7375593f234c5ee4fbe5c6b90edcaa20d6fcf483",

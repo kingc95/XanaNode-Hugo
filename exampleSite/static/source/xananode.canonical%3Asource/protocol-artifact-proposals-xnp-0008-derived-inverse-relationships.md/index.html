@@ -21,7 +21,34 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Proposals / XNP 0008 Derived Inverse Relationships...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Proposals / XNP 0008 Derived Inverse Relationships</h1>
+          <p class="xana-summary">A XanaNode proposal covering XNP 0008 Derived Inverse Relationships.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># XNP-0008: Derived Inverse Relationships</p>
+<p>Status: Accepted</p>
+<h2>Summary</h2>
+<p>Defines inverse relationship labels as derived views rather than separate canonical relationship types.</p>
+<h2>Decision</h2>
+<p>Canonical relationship types are authored in one direction only. A relationship type may declare an <code>inverse</code> label for display, querying, or generated indexes, but the inverse should not be registered as a second canonical type.</p>
+<p>Example:</p>
+<p>``<code>json { &quot;type&quot;: &quot;created&quot;, &quot;inverse&quot;: &quot;created_by&quot; } </code>``</p>
+<p>A relationship record should store:</p>
+<p>``<code>json { &quot;source&quot;: &quot;example:person/alice&quot;, &quot;target&quot;: &quot;example:essay/intro&quot;, &quot;type&quot;: &quot;created&quot; } </code>``</p>
+<p>An implementation may display <code>created_by</code> when viewing the target node, but should not store a second <code>created_by</code> relationship type or edge.</p>
+<h2>Rationale</h2>
+<p>Registering both directions bloats the canonical vocabulary and creates avoidable consistency risks:</p>
+<ul><li>duplicate relationship type definitions</li><li>mismatched inverse pairs</li><li>dangling inverse types</li><li>unnecessary authoring choices</li><li>harder validation</li></ul>
+<p>Derived inverse views keep the graph navigable in both directions without doubling the protocol vocabulary.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-proposals-xnp-0008-derived-inverse-relationships.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

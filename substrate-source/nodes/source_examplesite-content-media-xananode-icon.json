@@ -15,7 +15,7 @@
   "content_id": "sha256:14ffa975438073df7342ddbb55505eda1b06f7b5ee7f4e0c9a7c0e90d084ea4f",
   "content": "---\r\ntitle: \"XanaNode Icon\"\r\ntype: \"media\"\r\nmedia_type: \"image/svg+xml\"\r\nimportance: 5\r\nsummary: \"The abstract X-shaped network icon used as the visual mark for the XanaNode theme.\"\r\nfile: \"/xananode-icon.svg\"\r\nalt: \"An abstract X-shaped network logo with a central node and four outer nodes connected by blue and orange relationship lines.\"\r\nrights_status: \"open-source\"\r\nsource_name: \"XanaNode theme static asset\"\r\nsource_url: \"https://xananode.com/xananode-icon.svg\"\r\nlicense: \"MIT\"\r\nlicense_url: \"/LICENSE\"\r\ncreated_date: 2026-06-16\r\ncreator: \"Built By Bots\"\r\ndepicts:\r\n  - \"xananode-hugo-theme\"\r\nrelationships:\r\n  - type: \"used_as_primary_media_for\"\r\n    target: \"xananode-hugo-theme\"\r\n  - type: \"depicts\"\r\n    target: \"xananode-hugo-theme\"\r\n  - type: \"represents\"\r\n    target: \"xananode\"\r\n---\r\n\r\nThis icon is the visual mark for the [XanaNode](/node/xananode) theme.\r\n\r\nThe crossing lines and central node are meant to suggest [typed relationships](/node/typed-relationships), visible lineage, and a substrate whose meaning comes from the connections between things rather than from isolated documents.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/media/xananode-icon.md",
     "method": "archive",
     "content_id": "sha256:14ffa975438073df7342ddbb55505eda1b06f7b5ee7f4e0c9a7c0e90d084ea4f",

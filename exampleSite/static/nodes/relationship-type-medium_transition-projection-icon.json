@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-type-medium_transition-projection-icon",
+  "title": "Medium transition Relationship Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-types/medium_transition.svg",
+  "asset_role": "relationship_type_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/medium_transition.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the medium_transition relationship type.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-medium_transition-projection-icon-represents-schema-relationship-type-medium_transition",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-type-medium_transition",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-medium_transition-has_primary_media-media-relationship-type-medium_transition-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-type-medium_transition",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:4454a4502e92807230544323fc4c23122c12d99adece309614f10081b7f8a303",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:31.104Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/medium_transition.svg",
+    "method": "archive",
+    "content_id": "sha256:4454a4502e92807230544323fc4c23122c12d99adece309614f10081b7f8a303",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_media_relationship-type-medium_transition-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source is critical to the target and should be prioritized in navigation, review, or preservation.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "critical_to",
   "registry_namespace": "xananode",
   "category": "attention",
@@ -18,6 +18,12 @@
   "default_visibility": "primary",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-type-critical_to-projection-icon-represents-schema-relationship-type-critical_to",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-critical_to-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-critical_to",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
@@ -28,6 +34,12 @@
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-category-attention",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-critical_to-has_primary_media-media-relationship-type-critical_to-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-critical_to-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-critical_to-related_to-schema-relationship-type-critically_depends_on-inverse",

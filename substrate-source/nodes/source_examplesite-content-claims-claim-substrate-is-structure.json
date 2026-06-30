@@ -15,7 +15,7 @@
   "content_id": "sha256:411f97d744e0720d85013d01ba3ed05602737fd44e7a0b1d1d369094a593976a",
   "content": "---\ntitle: \"A knowledge substrate is structure, not information\"\ntype: \"claim\"\nimportance: 5\nstatus: \"active\"\nsummary: \"A knowledge substrate is not the information itself; it is the structure that determines how information relates, persists, and can be understood.\"\nrelationships:\n  - type: \"supported_by\"\n    target: \"xanadu-document-interconnection\"\n---\n\nMost information systems focus on what is stored.\n\n[XanaNode](/node/xananode) focuses on how what is stored relates.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/claims/claim-substrate-is-structure.md",
     "method": "archive",
     "content_id": "sha256:411f97d744e0720d85013d01ba3ed05602737fd44e7a0b1d1d369094a593976a",

@@ -21,7 +21,20 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Schemas / Merge Report Schema...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="schema">schema</span>
+            
+          </div>
+          <h1>Schemas / Merge Report Schema</h1>
+          <p class="xana-summary">The JSON Schema for the merge report.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p>{ &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;, &quot;$id&quot;: &quot;https://xananode.org/schemas/merge-report.schema.json&quot;, &quot;title&quot;: &quot;Merge Report&quot;, &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: false, &quot;required&quot;: [&quot;status&quot;, &quot;substrates&quot;], &quot;properties&quot;: { &quot;status&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;id&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;generated_at&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date-time&quot; }, &quot;substrates&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }, &quot;compatibility_level&quot;: { &quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 0, &quot;maximum&quot;: 5 }, &quot;base&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;ours&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;theirs&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;signature&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;mappings&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: false, &quot;required&quot;: [&quot;id&quot;, &quot;source&quot;, &quot;target&quot;, &quot;type&quot;, &quot;status&quot;], &quot;properties&quot;: { &quot;id&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;source&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;target&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;type&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;confidence&quot;: { &quot;type&quot;: &quot;number&quot;, &quot;minimum&quot;: 0, &quot;maximum&quot;: 1 }, &quot;status&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;preserves_local_nodes&quot;: { &quot;type&quot;: &quot;boolean&quot; }, &quot;creates_relationships&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }, &quot;rationale&quot;: { &quot;type&quot;: &quot;string&quot; } } } }, &quot;conflicts&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: false, &quot;required&quot;: [&quot;id&quot;, &quot;type&quot;, &quot;summary&quot;], &quot;properties&quot;: { &quot;id&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;type&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;nodes&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }, &quot;resolution&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;summary&quot;: { &quot;type&quot;: &quot;string&quot; } } } }, &quot;warnings&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } } } }</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:schema/protocol-artifact-schemas-merge-report.schema.json</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

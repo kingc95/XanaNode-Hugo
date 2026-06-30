@@ -10,7 +10,7 @@
   "media_type": "image",
   "mime_type": "image/svg+xml",
   "asset_role": "canonical_raw_source",
-  "rights_status": "CC-BY-4.0",
+  "rights_status": "trademarked - see TRADEMARK.md for permissions and reuse restrictions",
   "relationships": [
     {
       "id": "xananode.canonical:rel/media-protocol-artifact-media-images-xananode-icon.svg-documents-concept-protocol-artifacts-raw-file-docs-media-images-xananode-icon.svg",
@@ -34,11 +34,11 @@
   "asset_path": "assets/raw/protocol/media/images/xananode-icon.svg",
   "content_id": "sha256:d7b60a3f9a05156041dae523790d3465e7909a54425dfbeea3e112eace5f9c9a",
   "source_snapshot": {
-    "captured_at": "2026-06-27T06:48:18.530Z",
+    "captured_at": "2026-06-30T05:09:31.104Z",
     "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/images/xananode-icon.svg",
     "method": "archive",
     "content_id": "sha256:d7b60a3f9a05156041dae523790d3465e7909a54425dfbeea3e112eace5f9c9a",
-    "rights_status": "CC-BY-4.0",
+    "rights_status": "trademarked - see TRADEMARK.md for permissions and reuse restrictions",
     "tool": "@xananode/core"
   },
   "imported_from": "nodes/xananode.canonical_media_protocol-artifact-media-images-xananode-icon.svg.json",

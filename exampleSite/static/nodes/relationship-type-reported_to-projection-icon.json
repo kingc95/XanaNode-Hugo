@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-type-reported_to-projection-icon",
+  "title": "Reported to Relationship Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-types/reported_to.svg",
+  "asset_role": "relationship_type_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/reported_to.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the reported_to relationship type.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-reported_to-projection-icon-represents-schema-relationship-type-reported_to",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-type-reported_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-reported_to-has_primary_media-media-relationship-type-reported_to-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-type-reported_to",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:8b0d87c9ef22ba5694d4a85ada326e64ce2158a84fd93497182493850fdb3dcc",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:31.104Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/reported_to.svg",
+    "method": "archive",
+    "content_id": "sha256:8b0d87c9ef22ba5694d4a85ada326e64ce2158a84fd93497182493850fdb3dcc",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_media_relationship-type-reported_to-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

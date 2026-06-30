@@ -15,7 +15,7 @@
   "content_id": "sha256:52249659dcb090588474b3093b3b0506b6c5c3ad991ea393f87f8e6472e34476",
   "content": "---\ntitle: \"NLS\"\ntype: \"project\"\nimportance: 4\nsummary: \"Douglas Engelbart's oN-Line System, an early interactive computing environment for augmenting human intellect.\"\nrelationships:\n  - type: \"demonstrated_by\"\n    target: \"mother-of-all-demos\"\n  - type: \"anticipated\"\n    target: \"xananode\"\n---\n\nNLS demonstrated interactive navigation, collaborative editing, and computer-supported knowledge work decades before those ideas became common.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/projects/nls.md",
     "method": "archive",
     "content_id": "sha256:52249659dcb090588474b3093b3b0506b6c5c3ad991ea393f87f8e6472e34476",

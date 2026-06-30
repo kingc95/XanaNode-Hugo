@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source is overlooked by the target person, community, source, or substrate.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "overlooked_by",
   "registry_namespace": "xananode",
   "category": "attention",
@@ -18,6 +18,12 @@
   "default_visibility": "secondary",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-type-overlooked_by-projection-icon-represents-schema-relationship-type-overlooked_by",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-overlooked_by-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-overlooked_by",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
@@ -28,6 +34,12 @@
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-category-attention",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-overlooked_by-has_primary_media-media-relationship-type-overlooked_by-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-overlooked_by-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-overlooked_by-related_to-schema-relationship-type-overlooks-inverse",

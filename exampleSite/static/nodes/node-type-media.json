@@ -63,6 +63,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/media-node-type-media-projection-icon-represents-schema-node-type-media",
+      "type": "represents",
+      "source": "xananode.canonical:media/node-type-media-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-media",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
@@ -261,9 +267,123 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-node-type-media-has_primary_media-media-node-type-media-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/node-type-media-projection-icon",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-aliases-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-aliases",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-archive_url-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-archive_url",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-asset_path-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-asset_path",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-content-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-content",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-created_date-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-created_date",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-creator-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-creator",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-facets-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-facets",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-property-geo_coordinates-uses-schema-node-type-media",
       "type": "uses",
       "source": "xananode.canonical:schema/property-geo_coordinates",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-license-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-license",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-media_type-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-media_type",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-mime_type-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-mime_type",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-rights_status-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-rights_status",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-sharing-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-sharing",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-source_url-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-source_url",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtype-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-subtype",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-subtypes",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-summary-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-summary",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-title-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-title",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-year-uses-schema-node-type-media",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-year",
       "direction": "incoming"
     }
   ],

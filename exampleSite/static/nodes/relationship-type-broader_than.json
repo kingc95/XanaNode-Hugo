@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source schema type, concept, or relationship is broader or more general than the target.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "broader_than",
   "registry_namespace": "xananode",
   "category": "schema_mapping",
@@ -13,6 +13,12 @@
   "default_weight": 4,
   "default_visibility": "primary",
   "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-broader_than-projection-icon-represents-schema-relationship-type-broader_than",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-broader_than-projection-icon",
+      "direction": "incoming"
+    },
     {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-broader_than",
       "type": "contains",
@@ -24,6 +30,12 @@
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-category-schema_mapping",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-broader_than-has_primary_media-media-relationship-type-broader_than-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-broader_than-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-broader_than-related_to-schema-relationship-type-narrower_than-inverse",

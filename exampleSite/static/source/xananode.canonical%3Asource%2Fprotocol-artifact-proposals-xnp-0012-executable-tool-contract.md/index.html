@@ -21,7 +21,66 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Proposals / XNP 0012 Executable Tool Contract...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Proposals / XNP 0012 Executable Tool Contract</h1>
+          <p class="xana-summary">A XanaNode proposal covering XNP 0012 Executable Tool Contract.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># XNP-0012: Executable Tool Contract</p>
+<h2>Status</h2>
+<p>Draft</p>
+<h2>Summary</h2>
+<p>Define a stable executable contract for official XanaNode tooling so applications can call Core and Workspace behavior without embedding Node.js directly.</p>
+<h2>Motivation</h2>
+<p>XanaNode is a protocol, not a JavaScript framework.</p>
+<p>Right now, the reference stack is implemented in Node-based repositories:</p>
+<ul><li>XanaNode-Protocol</li><li>XanaNode-Core-SDK</li><li>XanaNode-Workspace</li><li>XanaNode-Hugo</li><li>XanaNode-Studio</li><li>XanaNode-Mobile</li></ul>
+<p>That is acceptable as an implementation phase, but it is not the right long-term dependency story for the protocol itself.</p>
+<p>If a desktop app, mobile app, static-site builder, AI agent, or institutional integration must install Node and call private JavaScript modules directly, then the protocol boundary is too soft. The protocol should be callable from any stack that can execute a program, pass files, and read JSON results.</p>
+<h2>Proposal</h2>
+<p>Official tooling should converge on two primary executable surfaces:</p>
+<ul><li><code>xananode-core</code></li><li><code>xananode-workspace</code></li></ul>
+<p>These names describe roles, not implementation language. They may be delivered as:</p>
+<ul><li>native binaries</li><li>packaged runtime executables</li><li>OS-specific launchers</li><li>language wrappers that preserve the same command contract</li></ul>
+<h2>Goals</h2>
+<p>1. Keep protocol behavior callable from any language or host environment. 2. Separate implementation language from protocol contract. 3. Give Studio, Mobile, Hugo helpers, AI agents, and third-party tools one stable thing to call. 4. Keep artifact generation, intake analysis, and projection derivation aligned across the stack.</p>
+<h2>Non-goals</h2>
+<p>1. This proposal does not replace language SDKs. 2. This proposal does not forbid direct in-process library use. 3. This proposal does not require one operating-system packaging strategy.</p>
+<h2>Core responsibilities</h2>
+<p><code>xananode-core</code> should own:</p>
+<ul><li>substrate validation</li><li>protocol inspection</li><li>artifact builds</li><li>portable bundle generation</li><li>fragment derivation</li><li>review suggestion generation</li><li>intake analysis</li><li>projection-data derivation</li></ul>
+<p>Recommended commands:</p>
+<ul><li><code>validate</code></li><li><code>inspect</code></li><li><code>build</code></li><li><code>bundle</code></li><li><code>analyze-intake</code></li><li><code>projection</code></li></ul>
+<h2>Workspace responsibilities</h2>
+<p><code>xananode-workspace</code> should own:</p>
+<ul><li>substrate initialization</li><li>workspace open/create behavior</li><li>author and repository enforcement</li><li>local build orchestration</li><li>portable export</li><li>mounted substrate intake</li><li>working-copy creation</li><li>de-intertwingle cleanup</li><li>health reporting</li><li>snapshot orchestration</li></ul>
+<p>Recommended commands:</p>
+<ul><li><code>init</code></li><li><code>open</code></li><li><code>build</code></li><li><code>export</code></li><li><code>intertwingle</code></li><li><code>deintertwingle</code></li><li><code>health</code></li><li><code>snapshot</code></li></ul>
+<h2>Input and output rules</h2>
+<p>Executable implementations should:</p>
+<ul><li>accept filesystem paths to substrate folders, <code>.substrate</code> archives, <code>substrate-bundle.json</code>, and <code>substrate-bundle.jsonl</code></li><li>support structured JSON output for machine callers</li><li>emit non-zero exit codes on failure</li><li>expose build metadata including implementation version and commit when possible</li><li>preserve protocol semantics regardless of implementation language</li></ul>
+<p>Machine callers should not be expected to scrape prose logs to determine success.</p>
+<h2>Why this matters</h2>
+<p>XanaNode is supposed to let knowledge move across tools and media without losing structure.</p>
+<p>The same principle applies to the tooling itself.</p>
+<p>If the protocol is real, then:</p>
+<ul><li>a Kotlin Android app should be able to call it</li><li>a Rust CLI should be able to call it</li><li>a Python workflow should be able to call it</li><li>a static-site renderer should be able to call it</li><li>an AI agent should be able to call it</li></ul>
+<p>without pretending JavaScript is the protocol.</p>
+<h2>Transition path</h2>
+<p>1. Keep the current Node reference implementations. 2. Tighten their command contracts and JSON outputs. 3. Package them as self-contained executables for supported platforms. 4. Teach official tools to prefer the executable boundary. 5. Allow alternate implementations later as long as they preserve the same artifact rules and command semantics.</p>
+<h2>Compatibility</h2>
+<p>This proposal is additive.</p>
+<p>Existing repositories may continue to expose:</p>
+<ul><li>Node modules</li><li>npm CLIs</li><li>internal helper APIs</li></ul>
+<p>But official documentation should increasingly describe the executable contract as the stable cross-stack surface.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-proposals-xnp-0012-executable-tool-contract.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

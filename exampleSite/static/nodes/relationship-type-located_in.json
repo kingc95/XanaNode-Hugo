@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-located_in",
+  "title": "Located in",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source entity, record, or activity is situated in the target place.",
+  "version": "0.5.1",
+  "registry_type": "located_in",
+  "registry_namespace": "xananode",
+  "category": "location",
+  "inverse": "location_of",
+  "color": "#84cc16",
+  "inverse_color": "#bef264",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-located_in",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-location-contains-schema-relationship-type-located_in",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-location",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-located_in-related_to-schema-relationship-type-location_of-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-location_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-location_of-related_to-schema-relationship-type-located_in-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-location_of",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_relationship-type-located_in.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

@@ -21,7 +21,41 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Specs / Interoperability...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Specs / Interoperability</h1>
+          <p class="xana-summary">A protocol specification covering Interoperability.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># Interoperability Profiles</p>
+<p>XanaNode keeps its author-facing JSON simple, but it should map cleanly to established standards.</p>
+<h2>JSON-LD</h2>
+<p>The canonical JSON-LD context lives at <a href="../contexts/xananode.context.jsonld">../contexts/xananode.context.jsonld</a>.</p>
+<p>Implementations should use the context when exporting nodes, relationships, fragments, and substrate packages into Linked Data environments.</p>
+<h2>Web Annotation Selectors</h2>
+<p>Fragment selectors should use Web Annotation selector names where possible:</p>
+<ul><li><code>TextQuoteSelector</code></li><li><code>TextPositionSelector</code></li><li><code>FragmentSelector</code></li><li><code>CssSelector</code></li><li><code>XPathSelector</code></li><li><code>RangeSelector</code></li></ul>
+<p>The older <code>semantic-anchor</code> selector remains acceptable for human-authored stable anchors.</p>
+<h2>PROV-O</h2>
+<p>XanaNode provenance fields map to PROV-O concepts:</p>
+<ul><li>nodes and relationship assertions are <code>prov:Entity</code></li><li>people, organizations, projects, and external actors are <code>prov:Agent</code></li><li>creation, assertion, review, import, and publication are <code>prov:Activity</code></li><li><code>created_by</code> maps to <code>prov:wasAttributedTo</code></li><li><code>created_at</code> maps to <code>prov:generatedAtTime</code></li><li><code>derived_from</code> maps to derivation provenance</li></ul>
+<h2>Content IDs</h2>
+<p>Human-readable protocol IDs remain the stable author-facing identifiers. Implementations may add immutable content identifiers:</p>
+<ul><li><code>protocol_id</code>: stable XanaNode ID</li><li><code>content_id</code>: immutable hash or CID-like identity for the content</li><li><code>version_id</code>: version identity such as a Git commit/path reference</li></ul>
+<p>Content IDs should not replace protocol IDs. They support verification, fixity, and preservation.</p>
+<h2>Preservation Packages</h2>
+<p>Substrates may include RO-Crate-compatible companion metadata named <code>ro-crate-metadata.json</code>. This metadata should describe the substrate package, schema references, rights, authorship, fixity, and dependencies.</p>
+<h2>Nanopublication Profile</h2>
+<p>High-value claim nodes may be exported in a nanopublication-like package separating:</p>
+<ul><li>assertion</li><li>provenance</li><li>publication information</li></ul>
+<p>This is optional but useful for scholarly, legal, scientific, and archival substrates.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-specs-interoperability.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

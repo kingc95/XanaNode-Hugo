@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source license, artifact, substrate, or policy requires attribution to the target person, organization, project, source, or community.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "requires_attribution",
   "registry_namespace": "xananode",
   "category": "governance",
@@ -15,6 +15,12 @@
   "line_style": "double",
   "inverse_line_style": "dashed",
   "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-requires_attribution-projection-icon-represents-schema-relationship-type-requires_attribution",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-requires_attribution-projection-icon",
+      "direction": "incoming"
+    },
     {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-requires_attribution",
       "type": "contains",
@@ -32,6 +38,12 @@
       "type": "related_to",
       "source": "xananode.canonical:schema/relationship-type-attribution_required_by",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-requires_attribution-has_primary_media-media-relationship-type-requires_attribution-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-requires_attribution-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-requires_attribution-related_to-schema-relationship-type-attribution_required_by-inverse",

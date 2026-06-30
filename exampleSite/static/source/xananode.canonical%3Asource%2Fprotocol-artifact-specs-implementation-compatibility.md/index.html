@@ -21,7 +21,29 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Specs / Implementation Compatibility...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Specs / Implementation Compatibility</h1>
+          <p class="xana-summary">A protocol specification covering Implementation Compatibility.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># Implementation Compatibility</p>
+<p>An implementation may describe itself as XanaNode-compatible when it validates, emits, imports, or projects XanaNode protocol artifacts according to the canonical specification and registries.</p>
+<p>Implementations should identify themselves clearly and reference the canonical specification:</p>
+<p>``<code>text This project is a XanaNode-compatible implementation. Canonical specification: https://github.com/kingc95/XanaNode </code>``</p>
+<p>If the implementation supports only part of the protocol, it should say so:</p>
+<p>``<code>text This project is a partial XanaNode-compatible renderer for mounted substrate packs. </code>``</p>
+<p>Implementations should not imply they are the canonical XanaNode project unless they are maintained as part of the canonical project. Compatibility means interoperability, not ownership.</p>
+<p>Recommended metadata:</p>
+<p>``<code>json { &quot;implements&quot;: &quot;xananode-protocol&quot;, &quot;compatibility&quot;: &quot;xananode-compatible&quot;, &quot;specification&quot;: &quot;https://github.com/kingc95/XanaNode&quot;, &quot;supported_artifacts&quot;: [&quot;substrate.json&quot;, &quot;nodes.json&quot;, &quot;relationships.json&quot;] } </code>``</p>
+<p>This convention supports legal attribution, community attribution, brand recognition, and independent federation.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-specs-implementation-compatibility.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

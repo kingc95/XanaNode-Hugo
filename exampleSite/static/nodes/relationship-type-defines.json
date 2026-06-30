@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source gives the defining explanation of the target.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "defines",
   "registry_namespace": "xananode",
   "category": "definition",
@@ -13,6 +13,12 @@
   "default_weight": 5,
   "default_visibility": "primary",
   "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-defines-projection-icon-represents-schema-relationship-type-defines",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-defines-projection-icon",
+      "direction": "incoming"
+    },
     {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-defines",
       "type": "contains",
@@ -30,6 +36,12 @@
       "type": "related_to",
       "source": "xananode.canonical:schema/relationship-type-defined_by",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-defines-has_primary_media-media-relationship-type-defines-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-defines-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-defines-related_to-schema-relationship-type-defined_by-inverse",

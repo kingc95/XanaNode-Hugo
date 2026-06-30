@@ -12,13 +12,13 @@
   "media_type": "document",
   "mime_type": "text/html",
   "rights_status": "Apache-2.0",
-  "content_id": "sha256:ff5a59fb97bdb25d3f0e3d1259117fd06e04ef127b30f4ee9030c4fd37a9d1b8",
-  "content": "﻿{{ define \"main\" }}\r\n<section class=\"xana-app\">\r\n  <div id=\"xana-graph\"></div>\r\n\r\n  <aside id=\"xana-panel\" class=\"xana-panel\">\r\n    <p class=\"panel-placeholder\">Select a node.</p>\r\n  </aside>\r\n</section>\r\n\r\n<script type=\"module\" src=\"{{ \"js/xananode.js\" | relURL }}?v={{ now.UnixNano }}\"></script>\r\n{{ end }}\r\n",
+  "content_id": "sha256:5f48fe07b8cf464ca558901b6e8c42a84a3ac0c6b42c15fe706c8d439ca3109f",
+  "content": "{{ define \"main\" }}\n<section class=\"xana-app\">\n  <div id=\"xana-graph\"></div>\n\n  <aside id=\"xana-panel\" class=\"xana-panel\">\n    <article class=\"xana-node-shell\">\n      <div class=\"xana-node-header no-media\">\n        <div class=\"xana-node-heading-text\">\n          <div class=\"xana-node-badges\">\n            {{ with .Params.type }}\n            <span class=\"xana-type-badge\" data-type=\"{{ . }}\">{{ humanize (replace (replace . \"_\" \" \") \"-\" \" \") }}</span>\n            {{ end }}\n            {{ with .Params.subtype }}\n            <span class=\"xana-subtype-badge\">{{ humanize (replace (replace . \"_\" \" \") \"-\" \" \") }}</span>\n            {{ end }}\n          </div>\n          <h1>{{ .Title }}</h1>\n          {{ with .Params.summary }}<p class=\"xana-summary\">{{ . }}</p>{{ end }}\n        </div>\n      </div>\n\n      {{ if .Content }}\n      <div class=\"xana-node-content\">{{ .Content }}</div>\n      {{ else }}\n      <p class=\"panel-placeholder\">Select a node.</p>\n      {{ end }}\n\n      {{ with or .Params.protocol_id .Params.node_id }}\n      <div class=\"xana-protocol-footer\">\n        <p class=\"xana-protocol-label\">Protocol</p>\n        <code>{{ . }}</code>\n      </div>\n      {{ end }}\n    </article>\n  </aside>\n</section>\n\n<script type=\"module\" src=\"{{ \"js/xananode.js\" | relURL }}?v={{ now.UnixNano }}\"></script>\n{{ end }}\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/layouts/_default/single.html",
     "method": "archive",
-    "content_id": "sha256:ff5a59fb97bdb25d3f0e3d1259117fd06e04ef127b30f4ee9030c4fd37a9d1b8",
+    "content_id": "sha256:5f48fe07b8cf464ca558901b6e8c42a84a3ac0c6b42c15fe706c8d439ca3109f",
     "rights_status": "Apache-2.0",
     "tool": "xananode-hugo/tools/build-substrate-source.mjs"
   },

@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-type-same_person-projection-icon",
+  "title": "Same person Relationship Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-types/same_person.svg",
+  "asset_role": "relationship_type_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/same_person.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the same_person relationship type.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-same_person-projection-icon-represents-schema-relationship-type-same_person",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-type-same_person",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-same_person-has_primary_media-media-relationship-type-same_person-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-type-same_person",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:e74843b30ada0fcb4566eff39ff48d6de80cd860c1d5c030b8a139a426137197",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:31.104Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/same_person.svg",
+    "method": "archive",
+    "content_id": "sha256:e74843b30ada0fcb4566eff39ff48d6de80cd860c1d5c030b8a139a426137197",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_media_relationship-type-same_person-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

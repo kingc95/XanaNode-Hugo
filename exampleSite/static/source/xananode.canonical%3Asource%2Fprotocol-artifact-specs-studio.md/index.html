@@ -21,7 +21,38 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Specs / Studio...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Specs / Studio</h1>
+          <p class="xana-summary">A protocol specification covering Studio.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># XanaNode Studio Guidance</p>
+<p>XanaNode Studio is an editor concept for local-first knowledge substrate authoring.</p>
+<p>It should be understood as:</p>
+<blockquote><p>VS Code for knowledge substrates, hiding Git until the user is ready.</p></blockquote>
+<h2>Principles</h2>
+<ul><li>Do not reinvent Git.</li><li>Use Git as the substrate versioning layer.</li><li>Present Git concepts in human language first.</li><li>Keep the published substrate preview close to the real Hugo/static output.</li><li>Make validation actionable rather than cryptic.</li></ul>
+<h2>Git UX Translation</h2>
+<p>| Git concept | Studio language | |---|---| | commit | save snapshot | | branch | draft path | | merge | bring changes together | | pull request | propose changes | | diff | what changed | | log | history |</p>
+<p>Power users may reveal the Git layer directly.</p>
+<h2>Core Workspace</h2>
+<p>Studio should use a three-panel model:</p>
+<ul><li>catalog and tools</li><li>live substrate view</li><li>node editor</li></ul>
+<p>The catalog is not a file tree. It should provide views by node type, trail, source, author, status, confidence, relationship cluster, recent edits, validation issues, unlinked nodes, and contradicted claims.</p>
+<h2>MVP</h2>
+<p>The first useful Studio should support:</p>
+<ul><li>create or open a substrate repo</li><li>show a node catalog</li><li>edit node content and metadata</li><li>add relationships with autocomplete</li><li>run validation</li><li>preview the Hugo implementation</li><li>save snapshots using Git</li><li>publish to GitHub Pages</li></ul>
+<h2>Assistants</h2>
+<p>Future Studio assistants may include:</p>
+<ul><li>friendly validation repair</li><li>relationship suggestion</li><li>fragment maker</li><li>trail builder</li><li>source importer</li><li>media importer</li><li>review workflow</li><li>conflict UI</li><li>extension marketplace</li></ul></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-specs-studio.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

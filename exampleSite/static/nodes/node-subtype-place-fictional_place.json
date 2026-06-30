@@ -1,0 +1,29 @@
+{
+  "id": "xananode.canonical:schema/node-subtype-place-fictional_place",
+  "title": "Place subtype: fictional place",
+  "type": "schema",
+  "subtype": "node_subtype_schema",
+  "importance": 4,
+  "summary": "fictional_place is an allowed subtype of the place node type.",
+  "version": "0.3.0",
+  "registry_type": "fictional_place",
+  "registry_namespace": "xananode",
+  "parent_node_type": "place",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-node-subtype-place-fictional_place-extension_of-schema-node-type-place",
+      "type": "extension_of",
+      "target": "xananode.canonical:schema/node-type-place",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-place-contains-schema-node-subtype-place-fictional_place",
+      "type": "contains",
+      "source": "xananode.canonical:schema/node-type-place",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_node-subtype-place-fictional_place.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

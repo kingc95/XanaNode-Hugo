@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-type-anticipated-projection-icon",
+  "title": "Anticipated Relationship Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-types/anticipated.svg",
+  "asset_role": "relationship_type_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/anticipated.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the anticipated relationship type.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-anticipated-projection-icon-represents-schema-relationship-type-anticipated",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-type-anticipated",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-anticipated-has_primary_media-media-relationship-type-anticipated-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-type-anticipated",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:fcd9957a7d6828996ebc593e32ef3e5c75ef9b2a56fcc13645c26a4e2721727a",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:31.104Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/anticipated.svg",
+    "method": "archive",
+    "content_id": "sha256:fcd9957a7d6828996ebc593e32ef3e5c75ef9b2a56fcc13645c26a4e2721727a",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_media_relationship-type-anticipated-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

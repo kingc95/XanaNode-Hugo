@@ -21,7 +21,20 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Examples / Federation Example / Merge Report...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="schema">schema</span>
+            
+          </div>
+          <h1>Examples / Federation Example / Merge Report</h1>
+          <p class="xana-summary">The merge report for the federation example.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p>{ &quot;id&quot;: &quot;example.merge:report/federation-example-001&quot;, &quot;status&quot;: &quot;review-needed&quot;, &quot;generated_at&quot;: &quot;2026-01-01T00:00:00Z&quot;, &quot;substrates&quot;: [ &quot;example.researcher_a&quot;, &quot;example.researcher_b&quot; ], &quot;compatibility_level&quot;: 4, &quot;mappings&quot;: [ { &quot;id&quot;: &quot;example.merge:mapping/knowledge-memory-substrate&quot;, &quot;source&quot;: &quot;example.researcher_a:concept/knowledge-substrate&quot;, &quot;target&quot;: &quot;example.researcher_b:concept/memory-substrate&quot;, &quot;type&quot;: &quot;possible_match&quot;, &quot;confidence&quot;: 0.78, &quot;status&quot;: &quot;review-needed&quot;, &quot;preserves_local_nodes&quot;: true, &quot;creates_relationships&quot;: [ &quot;example.researcher_a:rel/knowledge-substrate-possible-match-memory-substrate&quot;, &quot;example.researcher_b:rel/memory-substrate-possible-match-knowledge-substrate&quot; ], &quot;rationale&quot;: &quot;Both nodes describe substrate-like structures for preserving context and relationships, but one emphasizes knowledge objects while the other emphasizes memory over time.&quot; } ], &quot;conflicts&quot;: [ { &quot;id&quot;: &quot;example.merge:conflict/do-not-collapse-concepts&quot;, &quot;type&quot;: &quot;identity_ambiguity&quot;, &quot;nodes&quot;: [ &quot;example.researcher_a:concept/knowledge-substrate&quot;, &quot;example.researcher_b:concept/memory-substrate&quot; ], &quot;resolution&quot;: &quot;preserve_both&quot;, &quot;summary&quot;: &quot;The merge pass records a possible match but does not replace either local concept with a canonical node.&quot; } ], &quot;warnings&quot;: [ &quot;The two concepts are close but should not be automatically collapsed into a single canonical node.&quot; ] }</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:schema/protocol-artifact-examples-federation-example-merge-report.json</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

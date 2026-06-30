@@ -23,21 +23,9 @@
       "type": "answered_in",
       "source": "example.minimal:response/relationships-preserve-context",
       "direction": "incoming"
-    },
-    {
-      "id": "example.minimal:rel/question-asked-in-communication",
-      "type": "asked_in",
-      "source": "example.minimal:question/why-relationships-matter",
-      "direction": "incoming"
-    },
-    {
-      "id": "example.minimal:rel/response-answered-in-communication",
-      "type": "answered_in",
-      "source": "example.minimal:response/relationships-preserve-context",
-      "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/communication-minimal-substrate-discussion.json",
-  "pack_id": "example.minimal",
+  "imported_from": "nodes/example.minimal_communication_minimal-substrate-discussion.json",
+  "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

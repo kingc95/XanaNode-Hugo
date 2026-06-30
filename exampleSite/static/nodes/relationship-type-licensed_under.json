@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source artifact, content, code, schema, media, or substrate is distributed under the target license.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "licensed_under",
   "registry_namespace": "xananode",
   "category": "governance",
@@ -15,6 +15,12 @@
   "line_style": "double",
   "inverse_line_style": "dashed",
   "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-licensed_under-projection-icon-represents-schema-relationship-type-licensed_under",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-licensed_under-projection-icon",
+      "direction": "incoming"
+    },
     {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-licensed_under",
       "type": "contains",
@@ -32,6 +38,12 @@
       "type": "related_to",
       "source": "xananode.canonical:schema/relationship-type-license_for",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-licensed_under-has_primary_media-media-relationship-type-licensed_under-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-licensed_under-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-licensed_under-related_to-schema-relationship-type-license_for-inverse",

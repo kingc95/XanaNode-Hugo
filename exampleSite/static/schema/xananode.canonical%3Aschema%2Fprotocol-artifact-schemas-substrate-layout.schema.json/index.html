@@ -21,7 +21,20 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Schemas / Substrate Layout Schema...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="schema">schema</span>
+            
+          </div>
+          <h1>Schemas / Substrate Layout Schema</h1>
+          <p class="xana-summary">The JSON Schema for the substrate layout.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p>{ &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;, &quot;$id&quot;: &quot;https://xananode.org/schemas/substrate-layout.schema.json&quot;, &quot;title&quot;: &quot;XanaNode Substrate Layout Registry&quot;, &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: false, &quot;required&quot;: [&quot;id&quot;, &quot;version&quot;, &quot;description&quot;, &quot;required_paths&quot;, &quot;recognized_paths&quot;], &quot;properties&quot;: { &quot;$schema&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;id&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;version&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;description&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;root_contract&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;required_paths&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;$ref&quot;: &quot;#/$defs/path_record&quot; } }, &quot;recognized_paths&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;$ref&quot;: &quot;#/$defs/path_record&quot; } }, &quot;authoring_paths&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;$ref&quot;: &quot;#/$defs/path_record&quot; } }, &quot;archive_rules&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } } }, &quot;$defs&quot;: { &quot;path_record&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: false, &quot;required&quot;: [&quot;path&quot;, &quot;role&quot;], &quot;properties&quot;: { &quot;path&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;role&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;required&quot;: { &quot;type&quot;: &quot;boolean&quot; }, &quot;kind&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;file&quot;, &quot;directory&quot;, &quot;glob&quot;] }, &quot;format&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;description&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;tools_must_preserve&quot;: { &quot;type&quot;: &quot;boolean&quot; } } } } }</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:schema/protocol-artifact-schemas-substrate-layout.schema.json</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

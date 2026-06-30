@@ -21,7 +21,34 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Specs / Compatibility Levels...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Specs / Compatibility Levels</h1>
+          <p class="xana-summary">A protocol specification covering Compatibility Levels.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># Compatibility Levels</p>
+<p>Compatibility levels describe how safely one implementation can ingest or federate another substrate.</p>
+<h2>Level 0: Opaque</h2>
+<p>The substrate can be stored as raw data, but its schema is unknown.</p>
+<h2>Level 1: Manifest Recognized</h2>
+<p>The substrate declares a manifest and namespace.</p>
+<h2>Level 2: Core Valid</h2>
+<p>The substrate validates against XanaNode Core.</p>
+<h2>Level 3: Extensions Declared</h2>
+<p>The substrate uses custom types, but those types are declared in namespaced extension schemas.</p>
+<h2>Level 4: Merge Candidate</h2>
+<p>The substrate can participate in identity matching, schema mapping, and merge reporting.</p>
+<h2>Level 5: Federation Ready</h2>
+<p>The substrate supports stable IDs, provenance, declared schemas, merge reports, and compatibility reports.</p>
+<p>Compatibility is not a moral ranking. It is a practical statement about how much automated interoperation is safe.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-specs-compatibility-levels.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

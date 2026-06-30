@@ -1,0 +1,60 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-styled_as",
+  "title": "Styled as",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source is styled to resemble the target fashion, outfit, or aesthetic.",
+  "version": "0.5.1",
+  "registry_type": "styled_as",
+  "registry_namespace": "xananode",
+  "category": "representation",
+  "inverse": "style_of",
+  "color": "#8b5cf6",
+  "inverse_color": "#c4b5fd",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-styled_as-projection-icon-represents-schema-relationship-type-styled_as",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-styled_as-projection-icon",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-styled_as",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-representation-contains-schema-relationship-type-styled_as",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-representation",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-style_of-related_to-schema-relationship-type-styled_as-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-style_of",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-styled_as-has_primary_media-media-relationship-type-styled_as-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-styled_as-projection-icon",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-styled_as-related_to-schema-relationship-type-style_of-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-style_of",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_relationship-type-styled_as.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

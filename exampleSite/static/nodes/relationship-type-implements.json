@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source implements the target idea, technology, protocol, method, or concept.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "implements",
   "registry_namespace": "xananode",
   "category": "composition",
@@ -13,6 +13,12 @@
   "default_weight": 5,
   "default_visibility": "primary",
   "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-implements-projection-icon-represents-schema-relationship-type-implements",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-implements-projection-icon",
+      "direction": "incoming"
+    },
     {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-implements",
       "type": "contains",
@@ -30,6 +36,12 @@
       "type": "related_to",
       "source": "xananode.canonical:schema/relationship-type-implemented_by",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-implements-has_primary_media-media-relationship-type-implements-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-implements-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-implements-related_to-schema-relationship-type-implemented_by-inverse",

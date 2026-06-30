@@ -15,7 +15,7 @@
   "content_id": "sha256:6c83b4c77f8cf94338bda4cf58fcf59cb7ec1ae9ea8d4119ef9f137b7df7ae46",
   "content": "---\ntitle: \"Project Xanadu\"\ntype: \"project\"\nimportance: 5\nsummary: \"Ted Nelson's long-running hypertext project focused on deep linking, transclusion, versioning, and visible interconnection.\"\nrelationships:\n  - type: \"defines\"\n    target: \"transclusion\"\n  - type: \"influenced\"\n    target: \"xananode\"\n---\n\nProject Xanadu is the clearest historical predecessor for persistent [transclusion](/node/transclusion), [deep linking](/node/deep-linking), and relationship-preserving media.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/projects/project-xanadu.md",
     "method": "archive",
     "content_id": "sha256:6c83b4c77f8cf94338bda4cf58fcf59cb7ec1ae9ea8d4119ef9f137b7df7ae46",

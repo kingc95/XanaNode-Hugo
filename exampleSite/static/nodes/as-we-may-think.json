@@ -13,42 +13,6 @@
   "rights_status": "copyrighted",
   "relationships": [
     {
-      "id": "example.minimal:rel/source-supports-claim",
-      "type": "supports",
-      "target": "example.minimal:claim/substrate-is-structure",
-      "direction": "outgoing"
-    },
-    {
-      "id": "example.minimal:rel/source-discusses-associative-trails",
-      "type": "discusses",
-      "target": "example.minimal:concept/associative-trails",
-      "direction": "outgoing"
-    },
-    {
-      "id": "example.minimal:rel/trail-starts-with-source",
-      "type": "starts_with",
-      "source": "example.minimal:trail/start-here",
-      "direction": "incoming"
-    },
-    {
-      "id": "example.minimal:rel/trail-continues-to-claim",
-      "type": "continues_to",
-      "target": "example.minimal:claim/substrate-is-structure",
-      "direction": "outgoing"
-    },
-    {
-      "id": "example.minimal:rel/fragment-derived-from-source",
-      "type": "derived_from",
-      "source": "example.minimal:fragment/as-we-may-think-0004",
-      "direction": "incoming"
-    },
-    {
-      "id": "example.minimal:rel/gap-requires-source",
-      "type": "requires_source",
-      "source": "example.minimal:knowledge_gap/missing-relationship-evidence",
-      "direction": "incoming"
-    },
-    {
       "id": "example.minimal:rel/fragment-derived-from-source",
       "type": "derived_from",
       "source": "example.minimal:fragment/as-we-may-think-0004",
@@ -85,7 +49,7 @@
       "direction": "incoming"
     }
   ],
-  "imported_from": "nodes/source-as-we-may-think.json",
-  "pack_id": "example.minimal",
+  "imported_from": "nodes/example.minimal_source_as-we-may-think.json",
+  "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

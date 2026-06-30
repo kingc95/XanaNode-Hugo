@@ -15,7 +15,7 @@
   "content_id": "sha256:828ce0bc13e54053225cf02c1357abde85b0da7c8a46c713505ff3b6d3557499",
   "content": "---\ntitle: \"Namespacing\"\ntype: \"concept\"\nimportance: 5\nsummary: \"A way to identify which substrate or schema owns a node type, relationship type, node, or fragment.\"\nrelationships:\n  - type: \"clarifies\"\n    target: \"schema-extension\"\n---\n\nNamespacing prevents independent substrates and extension vocabularies from colliding.\n\nThe core namespace is `xananode`. A substrate can use its own namespace for local nodes and extension types, such as `example.researcher_a:concept/knowledge-substrate` or `example.merge:report/federation-example-001`.\n\nUnknown namespaced types are not invalid knowledge. They are declared extensions that can be displayed, preserved, mapped, or quarantined until another system understands them.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/namespacing.md",
     "method": "archive",
     "content_id": "sha256:828ce0bc13e54053225cf02c1357abde85b0da7c8a46c713505ff3b6d3557499",

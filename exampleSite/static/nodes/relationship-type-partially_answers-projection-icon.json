@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-type-partially_answers-projection-icon",
+  "title": "Partially answers Relationship Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-types/partially_answers.svg",
+  "asset_role": "relationship_type_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/partially_answers.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the partially_answers relationship type.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-partially_answers-projection-icon-represents-schema-relationship-type-partially_answers",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-type-partially_answers",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-partially_answers-has_primary_media-media-relationship-type-partially_answers-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-type-partially_answers",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:c54c0b4ed397b5615f8b76a2968c41e881902fb4b95b6fb6ec3c7e3dfd23ffe9",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:31.104Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/partially_answers.svg",
+    "method": "archive",
+    "content_id": "sha256:c54c0b4ed397b5615f8b76a2968c41e881902fb4b95b6fb6ec3c7e3dfd23ffe9",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_media_relationship-type-partially_answers-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

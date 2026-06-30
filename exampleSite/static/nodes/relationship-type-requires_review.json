@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source needs human, institutional, or automated review before it should be trusted or merged.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "requires_review",
   "registry_namespace": "xananode",
   "category": "knowledge_workflow",
@@ -18,6 +18,12 @@
   "default_visibility": "primary",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-type-requires_review-projection-icon-represents-schema-relationship-type-requires_review",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-requires_review-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-requires_review",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
@@ -28,6 +34,12 @@
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-category-knowledge_workflow",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-requires_review-has_primary_media-media-relationship-type-requires_review-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-requires_review-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-requires_review-related_to-schema-relationship-type-review_required_by-inverse",

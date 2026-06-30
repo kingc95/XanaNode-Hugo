@@ -21,7 +21,26 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Governance / Schema Extension Rules...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Governance / Schema Extension Rules</h1>
+          <p class="xana-summary">A governance document covering Schema Extension Rules.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># Schema Extension Rules</p>
+<p>Substrates may define custom node and relationship types.</p>
+<p>Custom types must be:</p>
+<ul><li>namespaced</li><li>versioned</li><li>human-readable</li><li>machine-readable</li><li>preserved even when not understood</li><li>optionally mapped to a core type</li></ul>
+<p>A valid extension should include:</p>
+<ul><li><code>id</code></li><li><code>namespace</code></li><li><code>type</code></li><li><code>label</code></li><li><code>purpose</code> or <code>meaning</code></li><li><code>core: false</code></li><li>optional <code>extends</code></li></ul>
+<p>Unknown extension types should not break import. They should be marked opaque and preserved.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-governance-schema-extension-rules.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

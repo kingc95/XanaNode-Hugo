@@ -15,7 +15,7 @@
   "content_id": "sha256:ab976996337d8c5532860b2e8f3a041fbb11043c5a949fc8be955f484780e88b",
   "content": "---\r\ntitle: \"XanaNode Relationship Types\"\r\ntype: \"schema\"\r\nimportance: 5\r\nsummary: \"The canonical relationship type registry for XanaNode substrates.\"\r\nversion: \"0.4.0\"\r\nstatus: \"draft\"\r\nrelationships:\r\n  - type: \"defines\"\r\n    target: \"typed-relationships\"\r\n  - type: \"equivalent_to\"\r\n    target: \"xananode.canonical:schema/relationship-type-registry\"\r\n---\r\n\r\nRelationship types describe why nodes are connected.\r\n\r\nThe current canonical registry contains 144 [typed relationships](/node/typed-relationships), grouped by relationship categories such as evidence, authorship, lineage, identity, media, trail, governance, [transclusion](/node/transclusion), [deep-linking](deep-linking), compatibility, and extension relationships.\r\n\r\nThe full pack-backed registry is available at [Relationship Type Registry](/schema/relationship-type-registry/).\r\n\r\nExamples include `supports`, `contradicts`, `explains`, `derived_from`, `memorializes`, `transcludes`, and `deep_links_to`.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/schemas/xananode-relationship-types.md",
     "method": "archive",
     "content_id": "sha256:ab976996337d8c5532860b2e8f3a041fbb11043c5a949fc8be955f484780e88b",

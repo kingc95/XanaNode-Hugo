@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source requires the target as a prerequisite, input, or condition.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "requires",
   "registry_namespace": "xananode",
   "category": "composition",
@@ -13,6 +13,12 @@
   "default_weight": 4,
   "default_visibility": "primary",
   "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-requires-projection-icon-represents-schema-relationship-type-requires",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-requires-projection-icon",
+      "direction": "incoming"
+    },
     {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-requires",
       "type": "contains",
@@ -30,6 +36,12 @@
       "type": "related_to",
       "source": "xananode.canonical:schema/relationship-type-required_for",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-requires-has_primary_media-media-relationship-type-requires-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-requires-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-requires-related_to-schema-relationship-type-required_for-inverse",

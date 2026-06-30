@@ -15,7 +15,7 @@
   "content_id": "sha256:8d7302cb4ca2348c8b2d4c31651595ab1d8a6bbd2fc3e58fba322fa026bd33de",
   "content": "---\r\ntitle: \"XanaNode Hugo Repository\"\r\ntype: \"source\"\r\nimportance: 5\r\nauthor: \"XanaNode Contributors\"\r\nyear: \"2026\"\r\nsummary: \"The Hugo theme repository that publishes XanaNode substrates as static websites while using Core for protocol validation.\"\r\nsource_url: \"https://github.com/kingc95/XanaNode-Hugo\"\r\nrights_status: \"open-source\"\r\nrelationships:\r\n  - type: \"implements\"\r\n    target: \"xananode-hugo-theme\"\r\n  - type: \"uses\"\r\n    target: \"hugo\"\r\n  - type: \"uses\"\r\n    target: \"xananode-core-schema\"\r\n---\r\n\r\nThe [Hugo](hugo) repository contains the public-site theme, example substrate, and graph viewer for publishing [XanaNode](xananode) substrates on a static host.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/sources/xananode-hugo-repo.md",
     "method": "archive",
     "content_id": "sha256:8d7302cb4ca2348c8b2d4c31651595ab1d8a6bbd2fc3e58fba322fa026bd33de",

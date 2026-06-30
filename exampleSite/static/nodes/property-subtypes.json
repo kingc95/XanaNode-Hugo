@@ -1,0 +1,215 @@
+{
+  "id": "xananode.canonical:schema/property-subtypes",
+  "title": "Subtypes",
+  "type": "schema",
+  "subtype": "property_registry_entry",
+  "importance": 4,
+  "summary": "Additional narrower classifications that stay attached to the same node without changing its primary type.",
+  "registry_type": "subtypes",
+  "category": "classification",
+  "aliases": [
+    "additional_subtypes"
+  ],
+  "applies_to": [
+    "person",
+    "concept",
+    "claim",
+    "question",
+    "hypothesis",
+    "problem",
+    "knowledge_gap",
+    "communication",
+    "response",
+    "source",
+    "observation",
+    "essay",
+    "media",
+    "event",
+    "place",
+    "organization",
+    "project",
+    "technology",
+    "publication",
+    "community",
+    "relationship",
+    "revision",
+    "trail",
+    "schema",
+    "fragment"
+  ],
+  "unit_system": "none",
+  "value_schema": {
+    "type": "array",
+    "items": {
+      "type": "string"
+    },
+    "uniqueItems": true
+  },
+  "examples": [
+    [
+      "writer",
+      "researcher"
+    ]
+  ],
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-subtypes",
+      "type": "contains",
+      "source": "xananode.canonical:schema/property-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-claim",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-claim",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-communication",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-communication",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-community",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-community",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-concept",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-concept",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-essay",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-essay",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-event",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-event",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-fragment",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-fragment",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-hypothesis",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-hypothesis",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-knowledge_gap",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-knowledge_gap",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-media",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-media",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-observation",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-observation",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-organization",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-organization",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-person",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-person",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-place",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-place",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-problem",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-problem",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-project",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-project",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-publication",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-publication",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-question",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-question",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-relationship",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-relationship",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-response",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-response",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-revision",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-revision",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-schema",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-source",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-source",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-technology",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-technology",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-trail",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-trail",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_property-subtypes.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

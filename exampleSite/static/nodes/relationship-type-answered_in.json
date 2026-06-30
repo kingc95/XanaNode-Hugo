@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source response, claim, or answer was given in the target communication context.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "answered_in",
   "registry_namespace": "xananode",
   "category": "communication",
@@ -18,6 +18,12 @@
   "default_visibility": "primary",
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-relationship-type-answered_in-projection-icon-represents-schema-relationship-type-answered_in",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-answered_in-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-answered_in",
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-type-registry",
@@ -28,6 +34,12 @@
       "type": "contains",
       "source": "xananode.canonical:schema/relationship-category-communication",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-answered_in-has_primary_media-media-relationship-type-answered_in-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-answered_in-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-answered_in-related_to-schema-relationship-type-had_answer-inverse",

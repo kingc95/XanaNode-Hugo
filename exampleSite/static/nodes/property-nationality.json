@@ -1,0 +1,41 @@
+{
+  "id": "xananode.canonical:schema/property-nationality",
+  "title": "Nationality",
+  "type": "schema",
+  "subtype": "property_registry_entry",
+  "importance": 4,
+  "summary": "A nationality or national affiliation when it helps identify or contextualize a person.",
+  "registry_type": "nationality",
+  "category": "identity",
+  "aliases": [
+    "citizenship",
+    "national_affiliation"
+  ],
+  "applies_to": [
+    "person"
+  ],
+  "unit_system": "none",
+  "value_schema": {
+    "type": "string"
+  },
+  "examples": [
+    "British"
+  ],
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-property-nationality-uses-schema-node-type-person",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-person",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-nationality",
+      "type": "contains",
+      "source": "xananode.canonical:schema/property-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_property-nationality.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

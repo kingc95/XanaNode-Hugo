@@ -11,15 +11,9 @@
       "type": "created",
       "target": "example.minimal:essay/relationship-navigation-intro",
       "direction": "outgoing"
-    },
-    {
-      "id": "example.minimal:rel/maintainer-created-intro-essay",
-      "type": "created",
-      "target": "example.minimal:essay/relationship-navigation-intro",
-      "direction": "outgoing"
     }
   ],
-  "imported_from": "nodes/person-example-maintainer.json",
-  "pack_id": "example.minimal",
+  "imported_from": "nodes/example.minimal_person_example-maintainer.json",
+  "pack_id": "xananode.canonical",
   "pack_mode": "mounted"
 }

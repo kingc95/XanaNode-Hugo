@@ -21,7 +21,30 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Proposals / XNP 0010 Federation Discovery And Trust...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Proposals / XNP 0010 Federation Discovery And Trust</h1>
+          <p class="xana-summary">A XanaNode proposal covering XNP 0010 Federation Discovery And Trust.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># XNP-0010: Federation Discovery and Trust</p>
+<p>Status: Accepted</p>
+<h2>Summary</h2>
+<p>Defines optional discovery and trust metadata in substrate manifests.</p>
+<h2>Decision</h2>
+<p>Substrate manifests may include:</p>
+<ul><li>federation inbox</li><li>federation outbox</li><li>subscription or feed URL</li><li>merge report endpoint</li><li>mapping endpoint</li><li>signature metadata</li><li>public key metadata</li><li>trust scopes</li></ul>
+<p>Trust scopes are:</p>
+<ul><li><code>local_substrate</code></li><li><code>imported_schema</code></li><li><code>mapping</code></li><li><code>assertion</code></li></ul>
+<h2>Rationale</h2>
+<p>Git-backed substrates can federate through repository exchange, but active federation benefits from discoverable update and mapping endpoints. Signatures and public keys provide a path toward verifiable manifests, merge reports, mappings, and assertions.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-proposals-xnp-0010-federation-discovery-and-trust.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

@@ -15,7 +15,7 @@
   "content_id": "sha256:bfaa0dd8d47a912929a3ec87d37ceb1d030c71effee6a411d0f59abe6a30f2fe",
   "content": "---\r\ntitle: \"Namespace Schema\"\r\ntype: \"schema\"\r\nimportance: 4\r\nsummary: \"The JSON Schema for namespace registry entries.\"\r\nversion: \"2020-12\"\r\nstatus: \"draft\"\r\nrelationships:\r\n  - type: \"defines\"\r\n    target: \"namespace-registry\"\r\n  - type: \"supports\"\r\n    target: \"namespacing\"\r\n  - type: \"required_for\"\r\n    target: \"schema-extension\"\r\n---\r\n\r\nNamespace records help identify who owns a prefix and how it should be interpreted.\r\n\r\nThey [support](source-support) registry tooling, extension discovery, and federation checks while allowing unknown namespaces to remain preserved rather than rejected.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/schemas/namespace-schema.md",
     "method": "archive",
     "content_id": "sha256:bfaa0dd8d47a912929a3ec87d37ceb1d030c71effee6a411d0f59abe6a30f2fe",

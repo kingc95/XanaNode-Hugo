@@ -15,7 +15,7 @@
   "content_id": "sha256:fd7ce203977b417f3063f2784553ac0b096a6addb40ae489e347beb8bdd546e7",
   "content": "---\ntitle: \"Substrate Manifest Schema\"\ntype: \"schema\"\nimportance: 5\nsummary: \"The JSON Schema that validates a XanaNode substrate manifest.\"\nversion: \"2020-12\"\nstatus: \"draft\"\nrelationships:\n  - type: \"defines\"\n    target: \"substrate-manifest\"\n  - type: \"part_of\"\n    target: \"xananode-core-schema\"\n  - type: \"required_for\"\n    target: \"compatibility-report\"\n---\n\nThis schema validates `substrate.json`.\n\nIt checks the substrate identifier, name, namespace, version, optional description, schema version, maintainers, imports, and extension declarations.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/schemas/substrate-manifest-schema.md",
     "method": "archive",
     "content_id": "sha256:fd7ce203977b417f3063f2784553ac0b096a6addb40ae489e347beb8bdd546e7",

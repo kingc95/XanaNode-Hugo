@@ -15,7 +15,7 @@
   "content_id": "sha256:bff7453a22abdfbc3cd427a1f8b8a7fd4763b757d2f83e99855f5a3eef9f0b78",
   "content": "---\ntitle: \"Fragment Node\"\ntype: \"concept\"\nimportance: 4\nsummary: \"A node representing a stable addressable portion of another source, publication, media object, or node.\"\nrelationships:\n  - type: \"required_for\"\n    target: \"transclusion\"\n  - type: \"preserves\"\n    target: \"provenance\"\n  - type: \"deep_links_to\"\n    target: \"mother-of-all-demos\"\n---\n\nFragment nodes represent stable addressable parts of larger objects.\n\nInstead of pointing only to a whole source, a fragment carries its own id, selector metadata, tumbler address, and relationship history.\n\nFor example, this concept cites a specific fragment of the [Mother of All Demos](/node/mother-of-all-demos) source node:\n\n{{< xana ref=\"mother-of-all-demos@v1/0001\" label=\"Fragment node example\" >}}\n\nThat fragment is not copied into this page. It is rendered from the source node's authored stable fragment map.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/fragment-node.md",
     "method": "archive",
     "content_id": "sha256:bff7453a22abdfbc3cd427a1f8b8a7fd4763b757d2f83e99855f5a3eef9f0b78",

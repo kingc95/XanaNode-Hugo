@@ -21,7 +21,20 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Schemas / Namespace Schema...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="schema">schema</span>
+            
+          </div>
+          <h1>Schemas / Namespace Schema</h1>
+          <p class="xana-summary">The JSON Schema for the namespace.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p>{ &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;, &quot;$id&quot;: &quot;https://xananode.org/schemas/namespace.schema.json&quot;, &quot;title&quot;: &quot;Namespace Descriptor&quot;, &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: false, &quot;required&quot;: [&quot;prefix&quot;, &quot;uri&quot;], &quot;properties&quot;: { &quot;prefix&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;uri&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uri&quot; }, &quot;owner&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;description&quot;: { &quot;type&quot;: &quot;string&quot; } } }</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:schema/protocol-artifact-schemas-namespace.schema.json</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

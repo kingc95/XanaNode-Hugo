@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source discusses, explores, or analyzes the target.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "discusses",
   "registry_namespace": "xananode",
   "category": "citation",
@@ -13,6 +13,12 @@
   "default_weight": 3,
   "default_visibility": "secondary",
   "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-discusses-projection-icon-represents-schema-relationship-type-discusses",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-discusses-projection-icon",
+      "direction": "incoming"
+    },
     {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-discusses",
       "type": "contains",
@@ -30,6 +36,12 @@
       "type": "related_to",
       "source": "xananode.canonical:schema/relationship-type-discussed_in",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-discusses-has_primary_media-media-relationship-type-discusses-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-discusses-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-discusses-related_to-schema-relationship-type-discussed_in-inverse",

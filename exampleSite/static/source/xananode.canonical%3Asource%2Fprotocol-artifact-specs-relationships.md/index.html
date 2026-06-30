@@ -21,7 +21,56 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Specs / Relationships...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Specs / Relationships</h1>
+          <p class="xana-summary">A protocol specification covering Relationships.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># Relationships</p>
+<p>Relationships connect nodes with explicit meaning.</p>
+<p>XanaNode relationships are typed.</p>
+<p>Examples:</p>
+<ul><li><code>supports</code></li><li><code>contradicts</code></li><li><code>explains</code></li><li><code>answers</code></li><li><code>investigates</code></li><li><code>requires_source</code></li><li><code>possibly_related_to</code></li><li><code>created</code></li><li><code>derived_from</code></li><li><code>communicated_to</code></li><li><code>transcludes</code></li><li><code>deep_links_to</code></li></ul>
+<p>Relationships may be simple edges or first-class nodes when the relationship itself needs evidence, provenance, dispute, or revision history.</p>
+<p>Relationship records should preserve assertion provenance when available. Common fields include <code>asserted_by</code>, <code>asserted_at</code>, <code>confidence</code>, <code>evidence</code>, and <code>tumbler</code>.</p>
+<p><code>asserted_by</code> should point to a person, organization, project, or external actor identifier when possible. If the actor is local to the substrate, it should be represented as a node.</p>
+<p>Relationships may also carry temporal validity when the relationship was true during a specific historical interval. Use <code>valid_from</code> for the beginning of the interval and <code>valid_to</code> for the end. These fields describe the modeled reality, while <code>asserted_at</code> describes when the substrate recorded the assertion.</p>
+<h2>Projection Style</h2>
+<p>Relationship type registries define canonical projection style metadata:</p>
+<ul><li><code>color</code></li><li><code>inverse_color</code></li><li><code>line_style</code></li><li><code>inverse_line_style</code></li><li>optional <code>projection</code> media metadata</li></ul>
+<p>Projection layers use these values for connective lines, arrows, trails, legends, and other relationship marks. This is not decoration only: visual stratification helps readers distinguish evidence, lineage, authorship, governance, uncertainty, communication, and other relationship families before reading every label.</p>
+<p>A protocol-compliant projection may adapt contrast for accessibility, theme, or media constraints, but it must preserve the registry-level distinction between relationship types and their inverse readings. If a renderer cannot display color, it should use line style, labels, or another accessible cue instead of flattening every relationship into the same visual treatment.</p>
+<p>Relationship type registries may also declare projection media:</p>
+<p>``<code>json { &quot;type&quot;: &quot;supports&quot;, &quot;category&quot;: &quot;evidence&quot;, &quot;projection&quot;: { &quot;icon&quot;: &quot;supports&quot;, &quot;icon_label&quot;: &quot;-&gt;&quot;, &quot;asset_path&quot;: &quot;assets/projection/relationship-types/supports.svg&quot;, &quot;category_asset_path&quot;: &quot;assets/projection/relationship-categories/evidence.svg&quot; } } </code>``</p>
+<p>Relationship projection assets should be carried as <code>media</code> nodes when bundled in a substrate or pack. Use <code>asset_role: &quot;relationship_type_projection_icon&quot;</code> for a specific relationship type and <code>asset_role: &quot;relationship_category_projection_icon&quot;</code> for category-level assets. Projection layers may use these assets in legends, path explainers, relationship catalogs, tooltips, and edge adornments, while edge color and line style still come from the relationship registry.</p>
+<h2>Inquiry, Uncertainty, And Workflow</h2>
+<p>XanaNode relationships should preserve knowledge states, not only settled assertions.</p>
+<p>Use inquiry relationships when a node participates in research or explanation:</p>
+<ul><li><code>answers</code></li><li><code>partially_answers</code></li><li><code>fails_to_answer</code></li><li><code>raises</code></li><li><code>investigates</code></li><li><code>motivates_inquiry</code></li><li><code>tests</code></li><li><code>falsifies</code></li><li><code>validates</code></li></ul>
+<p>Use workflow and uncertainty relationships when a node needs additional work:</p>
+<ul><li><code>requires_information</code></li><li><code>requires_source</code></li><li><code>requires_review</code></li><li><code>requires_validation</code></li><li><code>requires_context</code></li><li><code>insufficient_evidence</code></li><li><code>unresolved</code></li><li><code>under_review</code></li><li><code>speculative</code></li></ul>
+<p>These relationships make gaps explicit. A substrate should be able to say &quot;this claim needs a source&quot; or &quot;this question remains unresolved&quot; without pretending the missing knowledge is already known.</p>
+<h2>Discovery And Cognitive Relationships</h2>
+<p>Not every useful connection is strong enough to be evidence, influence, or identity. Early research often begins with low-commitment associations.</p>
+<p>Use discovery and cognitive relationships for provisional connective tissue:</p>
+<ul><li><code>possibly_related_to</code></li><li><code>shares_pattern_with</code></li><li><code>analogous_to</code></li><li><code>resonates_with</code></li><li><code>generalizes</code></li><li><code>specializes</code></li><li><code>abstraction_of</code></li><li><code>example_of</code></li></ul>
+<p>Authors should prefer more specific high-commitment relationships when the evidence supports them. Low-commitment relationships are still valuable because they preserve the path by which a stronger interpretation may later be discovered.</p>
+<h2>Communication Relationships</h2>
+<p>Communication has structure. When the communication itself matters, represent it as a <code>communication</code> node and connect participants, questions, responses, audiences, and consequences with typed relationships.</p>
+<p>Canonical communication relationships include:</p>
+<ul><li><code>asked</code></li><li><code>asked_in</code></li><li><code>answers</code></li><li><code>answered_in</code></li><li><code>replied_to</code></li><li><code>broadcast_to</code></li><li><code>communicated_to</code></li><li><code>presented_to</code></li><li><code>discussed_with</code></li><li><code>debated_with</code></li><li><code>negotiated_with</code></li><li><code>announced</code></li><li><code>reported_to</code></li></ul>
+<p>This lets a substrate model knowledge flow: who asked, who answered, where the exchange happened, how it reached an audience, and what claims, projects, or gaps emerged from it.</p>
+<h2>Inverse Views</h2>
+<p>Canonical relationship types are authored in one direction only. A type may name an <code>inverse</code> label for display or query purposes, but that inverse does not need to be registered as a second canonical type.</p>
+<p>For example, an implementation can display <code>created_by</code> when viewing the target of a <code>created</code> relationship, but the stored relationship type remains <code>created</code>. This avoids bloating the canonical registry and avoids dangling inverse-type pairs.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-specs-relationships.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

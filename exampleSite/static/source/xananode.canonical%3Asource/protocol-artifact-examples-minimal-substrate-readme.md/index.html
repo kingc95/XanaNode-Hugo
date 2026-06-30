@@ -21,7 +21,38 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Examples / Minimal Substrate / README...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Examples / Minimal Substrate / README</h1>
+          <p class="xana-summary">The README for Examples / Minimal Substrate.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># Minimal XanaNode Substrate Example</p>
+<p>This is the smallest useful XanaNode substrate that still follows the core rule:</p>
+<blockquote><p>Nodes should not float as isolated facts. Concepts are built from claims, claims are supported by sources, and trails are curated routes through an already-connected graph.</p></blockquote>
+<p>This example uses only canonical XanaNode Core node types:</p>
+<ul><li><code>source</code></li><li><code>concept</code></li><li><code>claim</code></li><li><code>person</code></li><li><code>essay</code></li><li><code>fragment</code></li><li><code>trail</code></li></ul>
+<p>It also uses canonical relationship types:</p>
+<ul><li><code>supports</code></li><li><code>discusses</code></li><li><code>related_to</code></li><li><code>defines</code></li><li><code>has_claim</code></li><li><code>starts_with</code></li><li><code>continues_to</code></li><li><code>features</code></li><li><code>created</code></li><li><code>derived_from</code></li><li><code>transcludes</code></li></ul>
+<h2>What this example demonstrates</h2>
+<p>The graph is intentionally tiny, but it is not just a bag of nodes.</p>
+<p>```text As We May Think supports A knowledge substrate is structure, not just information defines Knowledge Substrate</p>
+<p>As We May Think discusses Associative Trails related_to Knowledge Substrate</p>
+<p>Start Here starts_with As We May Think</p>
+<p>Relationship Navigation Intro transcludes As We May Think Fragment 0004 ```</p>
+<h2>Why the relationships matter</h2>
+<p>A normal hyperlink can show that the source, claim, and concept are somehow related.</p>
+<p>XanaNode requires the relationship to say **how** they are related:</p>
+<ul><li>The source <code>supports</code> the claim.</li><li>The claim <code>defines</code> the concept.</li><li>The concept <code>has_claim</code> so it is not unsupported.</li><li>The source <code>discusses</code> associative trails.</li><li>Associative trails are <code>related_to</code> the knowledge substrate as historical and conceptual context.</li><li>The trail provides a human reading route, but it is not the only connection.</li><li>The essay <code>transcludes</code> a fragment using the versioned tumbler address <code>example.minimal:source/as-we-may-think@git:8e47e70:examples/minimal-substrate/nodes/source-as-we-may-think.json#fragment/0004@sha256:example-as-we-may-think-fragment-0004</code>.</li></ul>
+<h2>Files</h2>
+<ul><li><code>substrate.json</code> declares the substrate namespace and schema version.</li><li><code>relationships.json</code> declares canonical typed edges.</li><li><code>nodes/*.json</code> are individually addressable nodes with relationship references.</li></ul></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-examples-minimal-substrate-readme.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

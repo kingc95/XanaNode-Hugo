@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-type-replied_to-projection-icon",
+  "title": "Replied to Relationship Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-types/replied_to.svg",
+  "asset_role": "relationship_type_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/replied_to.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the replied_to relationship type.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-replied_to-projection-icon-represents-schema-relationship-type-replied_to",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-type-replied_to",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-replied_to-has_primary_media-media-relationship-type-replied_to-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-type-replied_to",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:62541c2f3382610c1c7e4ac1d18bf60783b9b7e6a9bfa29e1788e7de694dc4d9",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:31.104Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/replied_to.svg",
+    "method": "archive",
+    "content_id": "sha256:62541c2f3382610c1c7e4ac1d18bf60783b9b7e6a9bfa29e1788e7de694dc4d9",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_media_relationship-type-replied_to-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

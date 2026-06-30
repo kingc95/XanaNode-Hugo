@@ -1,0 +1,84 @@
+{
+  "id": "xananode.canonical:schema/property-review_status",
+  "title": "Review status",
+  "type": "schema",
+  "subtype": "property_registry_entry",
+  "importance": 4,
+  "summary": "The current review state for a node, relationship, pack, claim, or suggested merge.",
+  "registry_type": "review_status",
+  "category": "workflow",
+  "aliases": [
+    "validation_status",
+    "curation_status"
+  ],
+  "applies_to": [
+    "claim",
+    "question",
+    "hypothesis",
+    "knowledge_gap",
+    "relationship",
+    "source"
+  ],
+  "unit_system": "none",
+  "value_schema": {
+    "type": "string",
+    "enum": [
+      "draft",
+      "needs_review",
+      "under_review",
+      "approved",
+      "rejected",
+      "deprecated"
+    ]
+  },
+  "examples": [
+    "needs_review"
+  ],
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-review_status",
+      "type": "contains",
+      "source": "xananode.canonical:schema/property-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-review_status-uses-schema-node-type-claim",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-claim",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-review_status-uses-schema-node-type-hypothesis",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-hypothesis",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-review_status-uses-schema-node-type-knowledge_gap",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-knowledge_gap",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-review_status-uses-schema-node-type-question",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-question",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-review_status-uses-schema-node-type-relationship",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-relationship",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-review_status-uses-schema-node-type-source",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-source",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_property-review_status.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

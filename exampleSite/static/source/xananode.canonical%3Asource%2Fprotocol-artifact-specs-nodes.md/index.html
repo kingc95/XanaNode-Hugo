@@ -21,7 +21,91 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Specs / Nodes...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Specs / Nodes</h1>
+          <p class="xana-summary">A protocol specification covering Nodes.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># Nodes</p>
+<p>Nodes are addressable knowledge objects.</p>
+<p>A node may represent a person, organism, concept, claim, question, hypothesis, problem, knowledge gap, communication, response, source, observation, essay, media item, event, place, organization, project, technology, publication, community, relationship, revision, trail, schema, or fragment.</p>
+<p>Nodes should have stable IDs and human-readable summaries.</p>
+<p>Nodes should carry provenance metadata when it is known. Common provenance fields include <code>created_by</code>, <code>created_at</code>, <code>updated_at</code>, <code>source_url</code>, <code>rights_status</code>, and <code>confidence</code>.</p>
+<p><code>created_by</code> should point to a person, organization, project, or external actor identifier when possible. If the actor is local to the substrate, it should be represented as a node.</p>
+<p>A node is not automatically true. It is an object in the substrate that can be connected to evidence, claims, sources, disputes, and revisions.</p>
+<h2>Inquiry And Knowledge States</h2>
+<p>Knowledge work is not only a collection of asserted facts. It also contains questions, provisional explanations, missing evidence, and unresolved problems. XanaNode models these as first-class nodes so a substrate can show what it knows, what it does not know, and what it is actively trying to find out.</p>
+<p>Use <code>question</code> for an explicit inquiry or prompt. A question may be answered, partially answered, raised by a source, asked in a communication, or connected to a knowledge gap.</p>
+<p>Use <code>hypothesis</code> for a provisional explanation or prediction. A hypothesis should be connected to tests, evidence, counterevidence, validation, falsification, and revision history.</p>
+<p>Use <code>problem</code> for a difficulty, risk, design challenge, or research problem that organizes work.</p>
+<p>Use <code>knowledge_gap</code> for a known absence: missing citation, unknown author, lost document, incomplete context, unresolved identity, or evidence that has not been found yet.</p>
+<p>Common epistemic workflow properties include <code>uncertainty_level</code>, <code>review_status</code>, <code>research_priority</code>, and <code>evidence_strength</code>. These fields are also listed in the property registry so tools can parse them consistently.</p>
+<p>Example:</p>
+<p>``<code>json { &quot;id&quot;: &quot;example.minimal:question/why-relationships-matter&quot;, &quot;title&quot;: &quot;Why do relationships matter?&quot;, &quot;type&quot;: &quot;question&quot;, &quot;status&quot;: &quot;open&quot;, &quot;importance&quot;: 5, &quot;summary&quot;: &quot;An inquiry into why preserving relationship structure changes what a knowledge system can do.&quot;, &quot;uncertainty_level&quot;: &quot;medium&quot;, &quot;review_status&quot;: &quot;needs_review&quot;, &quot;research_priority&quot;: 4, &quot;relationships&quot;: [] } </code>``</p>
+<h2>Communication Nodes</h2>
+<p>Communication should not always be flattened into a simple edge such as <code>authored</code> or <code>discusses</code>. A communication can have topology, participants, directionality, feedback, medium, audience, and consequences. When those properties matter, model the communication itself as a <code>communication</code> node.</p>
+<p>Use <code>communication_model</code> to describe participant topology:</p>
+<ul><li><code>one_to_one</code></li><li><code>one_to_many</code></li><li><code>many_to_one</code></li><li><code>many_to_many</code></li></ul>
+<p>Use <code>communication_pattern</code> to describe the semantic pattern:</p>
+<ul><li><code>dialogue</code></li><li><code>broadcast</code></li><li><code>collection</code></li><li><code>coordination</code></li><li><code>negotiation</code></li><li><code>debate</code></li><li><code>consensus</code></li><li><code>instruction</code></li><li><code>query_response</code></li><li><code>publication</code></li></ul>
+<p>Use <code>response</code> for an answer, reply, rebuttal, clarification, or follow-up. Responses can <code>answers</code> a question, <code>replied_to</code> another response or communication, or be <code>answered_in</code> a communication context.</p>
+<h2>Primary Type And Facets</h2>
+<p>Each node has one primary <code>type</code>. The primary type controls the node&#39;s stable route, required fields, default rendering, and validation behavior.</p>
+<p>Nodes may also carry a narrower <code>subtype</code>. The subtype does not replace the primary type. It describes a more specific kind inside that route and validation category. For example, a node can remain a <code>source</code> while declaring <code>subtype: &quot;git_repository&quot;</code>, <code>subtype: &quot;official_site&quot;</code>, <code>subtype: &quot;documentation&quot;</code>, <code>subtype: &quot;support_page&quot;</code>, or <code>subtype: &quot;web_snapshot&quot;</code>.</p>
+<p>Use <code>subtypes</code> when one node needs multiple narrow labels. Subtypes should use lower-case slugs. Namespaced subtypes are allowed for extension vocabularies.</p>
+<p>Some real knowledge objects naturally play several roles. A quotation can be a <code>fragment</code> of a source, evidence used like a <code>source</code>, and an assertion that functions like a <code>claim</code>. Do not duplicate the quotation into separate nodes just to satisfy those categories. Model one canonical node and add secondary <code>facets</code> when the object should participate in more than one role.</p>
+<p>Example:</p>
+<p>``<code>json { &quot;id&quot;: &quot;example.minimal:fragment/as-we-may-think-0004&quot;, &quot;title&quot;: &quot;Associative Trails Quote&quot;, &quot;type&quot;: &quot;fragment&quot;, &quot;facets&quot;: [&quot;source&quot;, &quot;claim&quot;], &quot;summary&quot;: &quot;A stable quotation fragment that can be cited as evidence and interpreted as an assertion.&quot; } </code>``</p>
+<p>Use relationships to explain why a facet matters in context. For example, a quote can <code>supports</code> a claim, <code>derived_from</code> a source, or <code>defines</code> a concept. Facets describe secondary behavior; relationships describe meaning.</p>
+<p>Projection layers should show those secondary roles instead of hiding them. The primary <code>type</code> keeps authority over routing, validation, and default presentation, but a graph projection should visually mix the primary type color with any facet colors it recognizes. In other words, a quote that is primarily a <code>fragment</code> and also has <code>source</code> and <code>claim</code> facets should not look like only a fragment. Its visual mark should intertwingle the fragment, source, and claim colors by slices, bands, rings, or another accessible mixed-color treatment.</p>
+<p>If a projection cannot use color, it should preserve the distinction with labels, texture, stroke patterns, badges, or another cue. A renderer may simplify the treatment at tiny sizes, but it should not erase the fact that the node carries multiple roles while claiming full projection compliance.</p>
+<h2>Organisms And Taxa</h2>
+<p>Non-human living things should not be forced into <code>item</code>, and a species record should not be treated as &quot;just a concept&quot; when the biological identity itself matters. Use <code>organism</code> for animals, plants, fungi, microbes, biological specimens, breeds, cultivars, species, genera, and similar taxonomic records.</p>
+<p>Keep <code>person</code> for human actors because personhood in XanaNode carries authoring, communication, kinship, participation, and social semantics beyond generic biology. If a human record also needs biological detail, add the relevant properties there instead of downgrading it into <code>organism</code>.</p>
+<p>Use subtypes such as:</p>
+<ul><li><code>animal</code></li><li><code>plant</code></li><li><code>fungus</code></li><li><code>microbe</code></li><li><code>specimen</code></li><li><code>species</code></li><li><code>genus</code></li><li><code>family</code></li><li><code>breed</code></li><li><code>cultivar</code></li><li><code>extinct_species</code></li><li><code>fictional_species</code></li></ul>
+<p>Common organism properties include <code>scientific_name</code>, <code>common_name</code>, <code>taxon_rank</code>, <code>biological_sex</code>, <code>life_stage</code>, <code>habitat</code>, and <code>conservation_status</code>.</p>
+<p>Example:</p>
+<p>``<code>json { &quot;id&quot;: &quot;example.field:organism/american-crow&quot;, &quot;title&quot;: &quot;American Crow&quot;, &quot;type&quot;: &quot;organism&quot;, &quot;subtype&quot;: &quot;species&quot;, &quot;scientific_name&quot;: &quot;Corvus brachyrhynchos&quot;, &quot;common_name&quot;: &quot;American Crow&quot;, &quot;taxon_rank&quot;: &quot;species&quot;, &quot;habitat&quot;: &quot;temperate urban woodland&quot;, &quot;conservation_status&quot;: &quot;least_concern&quot;, &quot;importance&quot;: 3, &quot;summary&quot;: &quot;A corvid species used here as an example of a non-human biological node.&quot;, &quot;relationships&quot;: [] } </code>``</p>
+<h2>Media Assets</h2>
+<p>Media should be represented as <code>media</code> nodes, then connected to other nodes with <code>has_primary_media</code>, <code>depicts</code>, <code>represents</code>, <code>transcribes</code>, or another appropriate relationship. A node that wants a representative image should use <code>primary_media</code> to reference a media node rather than embedding a renderer-specific image path.</p>
+<p>Portable media nodes should use a relative <code>asset_path</code> when the file is part of the substrate or pack:</p>
+<p>``<code>json { &quot;id&quot;: &quot;example.minimal:media/hugo-site-snapshot&quot;, &quot;title&quot;: &quot;Hugo Site Snapshot&quot;, &quot;type&quot;: &quot;media&quot;, &quot;subtype&quot;: &quot;web_snapshot&quot;, &quot;media_type&quot;: &quot;screenshot&quot;, &quot;mime_type&quot;: &quot;image/png&quot;, &quot;asset_path&quot;: &quot;assets/sources/hugo-official-site/snapshot.png&quot;, &quot;asset_role&quot;: &quot;source_snapshot&quot;, &quot;source_url&quot;: &quot;https://gohugo.io/&quot;, &quot;source_snapshot&quot;: { &quot;captured_at&quot;: &quot;2026-06-19T00:00:00Z&quot;, &quot;source_url&quot;: &quot;https://gohugo.io/&quot;, &quot;method&quot;: &quot;screenshot&quot;, &quot;tool&quot;: &quot;xananode-core&quot; }, &quot;rights_status&quot;: &quot;external&quot;, &quot;importance&quot;: 3, &quot;summary&quot;: &quot;A captured visual representation of the Hugo official site.&quot;, &quot;relationships&quot;: [] } </code>``</p>
+<p><code>asset_path</code> is always relative to the substrate or pack root. It must not escape that root. Implementations that build packs must copy referenced assets into the pack and preserve the relative path, or rewrite the path and record that rewrite in pack metadata.</p>
+<p>Media nodes should include stable content identifiers, usually <code>content_id: &quot;sha256:...&quot;</code>, whenever a tool can compute them. Content identifiers let federation tools detect duplicate files, distinguish duplicate bytes from duplicate titles, and explain how a file moved through different substrates.</p>
+<p>Recommended asset layout:</p>
+<p>``<code>text assets/ media/ projection/ node-types/ &lt;type&gt;.svg node-subtypes/ &lt;type&gt;/ &lt;subtype&gt;.svg sources/ &lt;source-node-local-id&gt;/ snapshot.png thumbnail.png metadata.json </code>``</p>
+<p>Source page previews, Open Graph images, screenshots, transcripts, and archived copies must preserve provenance, but they do not always require a second node. Use these rules:</p>
+<ul><li>if the captured file is itself the cited knowledge object, model it as one <code>source</code> node that may also carry the <code>media</code> facet, <code>media_type</code>, <code>mime_type</code>, <code>asset_path</code>, and related provenance fields</li><li>if the captured file is a distinct representation of another source object, use a separate <code>media</code> node and relate it back to the source with the appropriate relationship and provenance</li><li>if a renderer only needs the file as a projection aid and the file has no independent semantic role, keep it as an attached asset instead of elevating it to a new node</li></ul>
+<h2>Type And Subtype Projection Media</h2>
+<p>Node type registries may define projection media metadata under each node type&#39;s <code>projection</code> object. This lets projection layers draw a stable visual mark for a type without inventing renderer-local mappings.</p>
+<p>The canonical fields are:</p>
+<p>``<code>json { &quot;type&quot;: &quot;concept&quot;, &quot;projection&quot;: { &quot;icon&quot;: &quot;concept&quot;, &quot;icon_label&quot;: &quot;C&quot;, &quot;asset_path&quot;: &quot;assets/projection/node-types/concept.svg&quot;, &quot;subtype_asset_path_template&quot;: &quot;assets/projection/node-subtypes/concept/{subtype}.svg&quot; } } </code>``</p>
+<p>When a substrate or pack includes the actual icon file, the icon file must be preserved as an asset. It only needs its own <code>media</code> node when the icon is being discussed, governed, versioned, cited, or otherwise treated as a knowledge object in its own right. Otherwise the schema/type node may simply reference the asset through its projection metadata.</p>
+<p>Official XanaNode projections use this order for a node&#39;s center mark:</p>
+<p>1. primary media when the node has an explicit <code>primary_media</code> or resolved visual media 2. subtype projection media when a subtype-specific asset is available 3. node type projection media 4. registry <code>icon</code> or <code>icon_label</code> fallback</p>
+<p>The node title remains the title and should be shown outside the center mark. Type and subtype labels may be shown as subtle chips, legends, tooltips, or inspector metadata. They should not replace the title.</p>
+<h2>Branding As Knowledge</h2>
+<p>Branding is part of substrate identity and provenance. A logo, icon, color palette, tagline, or author mark should not live only inside renderer configuration. If a project, organization, author, or substrate changes its branding, that change has context and should be traceable.</p>
+<p>Represent brand assets as <code>media</code> nodes, usually with <code>subtype: &quot;logo&quot;</code> or <code>subtype: &quot;image&quot;</code>. Reference those media nodes from substrate manifests or author profiles through their <code>branding</code> blocks:</p>
+<p>``<code>json { &quot;branding&quot;: { &quot;brand_name&quot;: &quot;XanaNode&quot;, &quot;tagline&quot;: &quot;Relationships preserve knowledge&quot;, &quot;icon_media&quot;: &quot;example.minimal:media/xananode-icon&quot;, &quot;primary_color&quot;: &quot;#55D6BE&quot;, &quot;accent_color&quot;: &quot;#FF8C00&quot;, &quot;reason&quot;: &quot;Protocol branding is modeled as substrate metadata and media.&quot; } } </code>``</p>
+<p>Renderers should treat branding metadata as a projection input, not as the canonical source. The canonical source is the profile or manifest plus the referenced media node and its asset/provenance fields.</p>
+<h2>Software And Build Metadata</h2>
+<p>Software projects, SDKs, renderers, workspace layers, desktop applications, and generated packs should carry version and build provenance when known.</p>
+<p>Use <code>software_version</code> for the package or release version. Use <code>build_metadata</code> for the exact build context:</p>
+<p>``<code>json { &quot;software_version&quot;: &quot;0.1.0&quot;, &quot;build_metadata&quot;: { &quot;git_commit&quot;: &quot;abc123&quot;, &quot;git_branch&quot;: &quot;main&quot;, &quot;built_at&quot;: &quot;2026-06-19T00:00:00Z&quot;, &quot;built_by&quot;: &quot;@xananode/core&quot;, &quot;runtime&quot;: &quot;node&quot;, &quot;dependencies&quot;: [ { &quot;name&quot;: &quot;@xananode/core&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;relationship&quot;: &quot;uses&quot; } ] } } </code>``</p>
+<p>Compiled applications should record the version and compile/build date in their own metadata and, when represented in a substrate, on the project or technology node that describes that application. Generated canonical packs should include enough build metadata to identify which protocol, core, renderer, and workspace versions produced them.</p>
+<h2>Open Properties</h2>
+<p>Substrate nodes may carry extra root-level properties so authors can describe domain-specific facts without waiting for a protocol release. Common extra properties should use the canonical property registry when possible.</p>
+<p>The core property registry standardizes fields such as <code>birth_date</code>, <code>geo_coordinates</code>, <code>currency_value</code>, <code>measurement_si</code>, and <code>external_identifier</code>. Implementations can use <code>schemas/xananode-property-registry.v0.1.0.json</code> to parse these values consistently while still accepting custom extension properties.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-specs-nodes.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

@@ -47,6 +47,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/media-node-type-relationship-projection-icon-represents-schema-node-type-relationship",
+      "type": "represents",
+      "source": "xananode.canonical:media/node-type-relationship-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-relationship",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
@@ -135,6 +141,72 @@
       "type": "contains",
       "target": "xananode.canonical:schema/node-subtype-relationship-lineage",
       "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-relationship-has_primary_media-media-node-type-relationship-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/node-type-relationship-projection-icon",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-content-uses-schema-node-type-relationship",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-content",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-evidence_strength-uses-schema-node-type-relationship",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-evidence_strength",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-facets-uses-schema-node-type-relationship",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-facets",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-review_status-uses-schema-node-type-relationship",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-review_status",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-sharing-uses-schema-node-type-relationship",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-sharing",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtype-uses-schema-node-type-relationship",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-subtype",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-relationship",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-subtypes",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-summary-uses-schema-node-type-relationship",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-summary",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-title-uses-schema-node-type-relationship",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-title",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-uncertainty_level-uses-schema-node-type-relationship",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-uncertainty_level",
+      "direction": "incoming"
     }
   ],
   "imported_from": "nodes/xananode.canonical_schema_node-type-relationship.json",

@@ -21,7 +21,28 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Governance / Versioning Policy...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Governance / Versioning Policy</h1>
+          <p class="xana-summary">A governance document covering Versioning Policy.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># Versioning Policy</p>
+<p>XanaNode protocol files use semantic versioning where practical.</p>
+<ul><li>Patch versions fix wording or validation mistakes.</li><li>Minor versions add compatible types, fields, or examples.</li><li>Major versions change compatibility expectations.</li></ul>
+<p>Schemas should be versioned independently from individual substrates.</p>
+<p>Substrates should declare which core schema version they target.</p>
+<p>Substrate history should be tracked in Git. Protocol version fields describe schema compatibility; Git commits describe concrete substrate revisions.</p>
+<p>Example:</p>
+<p>``<code>json { &quot;schema_version&quot;: &quot;xananode-core@0.5.0&quot; } </code>``</p>
+<p>Breaking changes should go through the proposal process.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-governance-versioning-policy.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

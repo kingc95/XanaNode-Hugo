@@ -21,7 +21,20 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Schemas / Substrate Diff Schema...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="schema">schema</span>
+            
+          </div>
+          <h1>Schemas / Substrate Diff Schema</h1>
+          <p class="xana-summary">The JSON Schema for the substrate diff.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p>{ &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;, &quot;$id&quot;: &quot;https://xananode.org/schemas/substrate-diff.schema.json&quot;, &quot;title&quot;: &quot;Substrate Diff&quot;, &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: false, &quot;required&quot;: [&quot;id&quot;, &quot;base&quot;, &quot;head&quot;, &quot;changes&quot;], &quot;properties&quot;: { &quot;id&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;base&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;head&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;generated_at&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date-time&quot; }, &quot;changes&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: false, &quot;required&quot;: [&quot;nodes&quot;, &quot;relationships&quot;, &quot;schemas&quot;, &quot;fragments&quot;], &quot;properties&quot;: { &quot;nodes&quot;: { &quot;$ref&quot;: &quot;#/$defs/changeSet&quot; }, &quot;relationships&quot;: { &quot;$ref&quot;: &quot;#/$defs/changeSet&quot; }, &quot;schemas&quot;: { &quot;$ref&quot;: &quot;#/$defs/changeSet&quot; }, &quot;fragments&quot;: { &quot;$ref&quot;: &quot;#/$defs/changeSet&quot; } } }, &quot;conflicts&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: false, &quot;required&quot;: [&quot;type&quot;, &quot;summary&quot;], &quot;properties&quot;: { &quot;type&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;nodes&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }, &quot;resolution&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;summary&quot;: { &quot;type&quot;: &quot;string&quot; } } } } }, &quot;$defs&quot;: { &quot;changeSet&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: false, &quot;required&quot;: [&quot;added&quot;, &quot;removed&quot;, &quot;changed&quot;], &quot;properties&quot;: { &quot;added&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }, &quot;removed&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } }, &quot;changed&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; } } } } } }</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:schema/protocol-artifact-schemas-substrate-diff.schema.json</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

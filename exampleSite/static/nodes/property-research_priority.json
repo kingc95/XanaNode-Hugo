@@ -1,0 +1,71 @@
+{
+  "id": "xananode.canonical:schema/property-research_priority",
+  "title": "Research priority",
+  "type": "schema",
+  "subtype": "property_registry_entry",
+  "importance": 4,
+  "summary": "A priority signal for deciding which inquiry, problem, or knowledge gap deserves attention first.",
+  "registry_type": "research_priority",
+  "category": "attention",
+  "aliases": [
+    "priority",
+    "attention_priority"
+  ],
+  "applies_to": [
+    "question",
+    "problem",
+    "knowledge_gap",
+    "claim",
+    "hypothesis"
+  ],
+  "unit_system": "none",
+  "value_schema": {
+    "type": "integer",
+    "minimum": 1,
+    "maximum": 5
+  },
+  "examples": [
+    5
+  ],
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-research_priority",
+      "type": "contains",
+      "source": "xananode.canonical:schema/property-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-research_priority-uses-schema-node-type-claim",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-claim",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-research_priority-uses-schema-node-type-hypothesis",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-hypothesis",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-research_priority-uses-schema-node-type-knowledge_gap",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-knowledge_gap",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-research_priority-uses-schema-node-type-problem",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-problem",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-research_priority-uses-schema-node-type-question",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-question",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_property-research_priority.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

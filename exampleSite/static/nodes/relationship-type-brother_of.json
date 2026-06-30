@@ -1,0 +1,42 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-brother_of",
+  "title": "Brother of",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source is the brother of the target.",
+  "version": "0.5.1",
+  "registry_type": "brother_of",
+  "registry_namespace": "xananode",
+  "category": "social",
+  "inverse": "sibling_of",
+  "color": "#fb7185",
+  "inverse_color": "#fecdd3",
+  "line_style": "dotted",
+  "inverse_line_style": "dotted",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-brother_of",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-brother_of",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-social",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-brother_of-related_to-schema-relationship-type-sibling_of-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-sibling_of",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_relationship-type-brother_of.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

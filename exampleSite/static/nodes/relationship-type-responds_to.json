@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-responds_to",
+  "title": "Responds to",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source responds to the target communication, question, claim, observation, or prior response.",
+  "version": "0.5.1",
+  "registry_type": "responds_to",
+  "registry_namespace": "xananode",
+  "category": "communication",
+  "inverse": "responded_to_by",
+  "color": "#38bdf8",
+  "inverse_color": "#bae6fd",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-responds_to",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-communication-contains-schema-relationship-type-responds_to",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-communication",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-responded_to_by-related_to-schema-relationship-type-responds_to-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-responded_to_by",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-responds_to-related_to-schema-relationship-type-responded_to_by-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-responded_to_by",
+      "direction": "outgoing"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_relationship-type-responds_to.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

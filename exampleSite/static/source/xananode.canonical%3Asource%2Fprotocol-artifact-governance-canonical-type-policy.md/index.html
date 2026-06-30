@@ -21,7 +21,38 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Governance / Canonical Type Policy...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Governance / Canonical Type Policy</h1>
+          <p class="xana-summary">A governance document covering Canonical Type Policy.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># Canonical Type Policy</p>
+<p>Canonical types are the shared vocabulary that make independent XanaNode substrates interoperable.</p>
+<p>A type should become canonical only when it is:</p>
+<ul><li>broadly useful across many domains</li><li>clearly distinguishable from existing types</li><li>describable in plain language</li><li>stable enough to validate</li><li>useful to both humans and machines</li></ul>
+<p>Avoid adding canonical types for every domain-specific object. Prefer subtypes or namespaced extensions.</p>
+<h2>Projection Style Governance</h2>
+<p>Canonical relationship types include visual projection metadata. Every canonical relationship type must define:</p>
+<ul><li><code>color</code></li><li><code>inverse_color</code></li><li><code>line_style</code></li><li><code>inverse_line_style</code></li></ul>
+<p>These values are part of the shared vocabulary. Renderers use them to stratify connective lines so relationship meaning remains visible in graph projections, trails, maps, and other views.</p>
+<p>Implementations may adapt the exact rendered appearance for accessibility, contrast, print, color-blind themes, or device constraints, but they should not collapse all relationship types into one undifferentiated line treatment while claiming full protocol projection compliance.</p>
+<h2>Multi-Role Node Projection</h2>
+<p>The primary node <code>type</code> remains the authoritative validation and routing category. Secondary roles belong in <code>facets</code>, and narrower labels belong in <code>subtype</code> or <code>subtypes</code>.</p>
+<p>Projection layers should preserve visible evidence of every recognized role. When a node has facets that match known node types, the projected mark should mix the primary type color with the facet type colors. Slices, rings, bands, layered borders, or another accessible mixed treatment are all valid. The important governance rule is that the projection must not silently flatten a multi-role node into one color when the substrate says the node participates in several modeling categories.</p>
+<p>Schema vocabulary terms, schema fields, property registry entries, relationship categories, subtype entries, governance rules, and projection style rules should be modeled as <code>schema</code> nodes with specific subtypes. Those terms are part of the substrate vocabulary, not private implementation comments.</p>
+<h2>Canonical vs Extension</h2>
+<p>Use canonical types for common substrate structure.</p>
+<p>Use extensions for domain-specific modeling.</p>
+<p>Example:</p>
+<ul><li><code>xananode:media</code> should be canonical.</li><li><code>museum:artifact</code> should be an extension.</li><li><code>biology:species</code> should be an extension unless future adoption proves otherwise.</li></ul></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-governance-canonical-type-policy.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

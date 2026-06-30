@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source is a format translation of the target content.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "format_translated_into",
   "registry_namespace": "xananode",
   "category": "representation",
@@ -17,6 +17,12 @@
   "default_weight": 4,
   "default_visibility": "primary",
   "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-format_translated_into-projection-icon-represents-schema-relationship-type-format_translated_into",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-format_translated_into-projection-icon",
+      "direction": "incoming"
+    },
     {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-format_translated_into",
       "type": "contains",
@@ -34,6 +40,12 @@
       "type": "related_to",
       "source": "xananode.canonical:schema/relationship-type-format_translated_from",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-format_translated_into-has_primary_media-media-relationship-type-format_translated_into-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-format_translated_into-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-format_translated_into-related_to-schema-relationship-type-format_translated_from-inverse",

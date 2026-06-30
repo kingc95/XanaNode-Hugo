@@ -21,7 +21,27 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Specs / Namespaces...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Specs / Namespaces</h1>
+          <p class="xana-summary">A protocol specification covering Namespaces.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># Namespaces</p>
+<p>Namespaces prevent independently authored substrates from colliding.</p>
+<p>A namespace identifies who owns a local vocabulary or substrate.</p>
+<p>Examples:</p>
+<p>``<code>text xananode:claim example.merge:report/federation-example-001 example.researcher_a:concept/knowledge-substrate </code>``</p>
+<p>The core namespace is <code>xananode</code>.</p>
+<p>Custom substrates should use their own namespace.</p>
+<p>A namespace should be declared in a substrate manifest and in any extension schema files.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-specs-namespaces.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

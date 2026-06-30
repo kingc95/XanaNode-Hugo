@@ -1,0 +1,68 @@
+{
+  "id": "xananode.canonical:schema/property-license",
+  "title": "License",
+  "type": "schema",
+  "subtype": "property_registry_entry",
+  "importance": 4,
+  "summary": "The declared license for a source, media asset, schema, or code artifact.",
+  "registry_type": "license",
+  "category": "reference",
+  "aliases": [
+    "license_name"
+  ],
+  "applies_to": [
+    "source",
+    "media",
+    "schema",
+    "project",
+    "technology"
+  ],
+  "unit_system": "none",
+  "value_schema": {
+    "type": "string"
+  },
+  "examples": [
+    "CC-BY 4.0"
+  ],
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-property-license-uses-schema-node-type-media",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-media",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-license-uses-schema-node-type-project",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-project",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-license-uses-schema-node-type-schema",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-schema",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-license-uses-schema-node-type-source",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-source",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-license-uses-schema-node-type-technology",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-technology",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-license",
+      "type": "contains",
+      "source": "xananode.canonical:schema/property-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_property-license.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

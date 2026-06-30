@@ -15,7 +15,7 @@
   "content_id": "sha256:a83f557d6a6fcec55edb7d2907b9740574f965df08c5fc36d6a15664b0c53792",
   "content": "---\r\ntitle: \"Substrate Relationship List\"\r\ntype: \"concept\"\r\nimportance: 5\r\nsummary: \"The protocol-level relationship file containing typed edges with stable ids, source and target ids, summaries, visibility, weights, and assertion provenance.\"\r\nrelationships:\r\n  - type: \"uses\"\r\n    target: \"xananode-relationship-types\"\r\n  - type: \"preserves\"\r\n    target: \"provenance\"\r\n---\r\n\r\n`relationships.json` is the edge list for a substrate.\r\n\r\nEach relationship has its own id, source, target, type, and summary. It can also carry weight, visibility, assertion [provenance](/node/provenance), confidence, evidence, federation metadata, and tumbler references.\r\n\r\nA relationship list can be authored directly, imported from packs, or derived from structured content such as primary media links, trail membership, and stable [transclusion](/node/transclusion) references.\r\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/substrate-relationship-list.md",
     "method": "archive",
     "content_id": "sha256:a83f557d6a6fcec55edb7d2907b9740574f965df08c5fc36d6a15664b0c53792",

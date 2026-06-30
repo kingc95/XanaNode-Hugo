@@ -1,0 +1,40 @@
+{
+  "id": "xananode.canonical:media/relationship-type-answers-projection-icon",
+  "title": "Answers Relationship Projection Icon",
+  "type": "media",
+  "subtype": "projection_icon",
+  "media_type": "image",
+  "mime_type": "image/svg+xml",
+  "asset_path": "assets/projection/relationship-types/answers.svg",
+  "asset_role": "relationship_type_projection_icon",
+  "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/answers.svg",
+  "rights_status": "open-source",
+  "importance": 3,
+  "summary": "The canonical projection icon for the answers relationship type.",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-answers-projection-icon-represents-schema-relationship-type-answers",
+      "type": "represents",
+      "target": "xananode.canonical:schema/relationship-type-answers",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-answers-has_primary_media-media-relationship-type-answers-projection-icon",
+      "type": "has_primary_media",
+      "source": "xananode.canonical:schema/relationship-type-answers",
+      "direction": "incoming"
+    }
+  ],
+  "content_id": "sha256:c1225d985a3b090cb74d1b948db6c7f6122e79f25c11fb8325de26049525670c",
+  "source_snapshot": {
+    "captured_at": "2026-06-30T05:09:31.104Z",
+    "source_url": "https://github.com/kingc95/XanaNode-Protocol/blob/main/media/projection/relationship-types/answers.svg",
+    "method": "archive",
+    "content_id": "sha256:c1225d985a3b090cb74d1b948db6c7f6122e79f25c11fb8325de26049525670c",
+    "rights_status": "open-source",
+    "tool": "@xananode/core"
+  },
+  "imported_from": "nodes/xananode.canonical_media_relationship-type-answers-projection-icon.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

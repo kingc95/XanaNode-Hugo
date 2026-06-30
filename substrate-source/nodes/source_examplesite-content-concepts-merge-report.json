@@ -15,7 +15,7 @@
   "content_id": "sha256:d5ff558fe3da829c962a669e54f2f517cde75f9d7dfc24ba6f23bdb1f358c306",
   "content": "---\ntitle: \"Merge Report\"\ntype: \"concept\"\nimportance: 5\nsummary: \"A report that explains proposed mappings, conflicts, identity decisions, preserved disagreements, and unresolved issues when substrates are compared or merged.\"\nrelationships:\n  - type: \"documents\"\n    target: \"merge-validation\"\n  - type: \"preserves\"\n    target: \"provenance\"\n  - type: \"supports\"\n    target: \"claim-merge-without-collapse\"\n---\n\nA merge report is not a command to flatten two substrates into one truth.\n\nIt is an audit trail for a comparison. It preserves proposed identity matches, conflicts, unresolved decisions, warnings, and the reasoning behind mappings so disagreement remains navigable after analysis.\n\nThe canonical [federation example](/node/federation-example) uses a merge report to keep two overlapping concepts distinct while still recording their possible relationship.\n",
   "source_snapshot": {
-    "captured_at": "2026-06-27T16:35:32.292Z",
+    "captured_at": "2026-06-30T05:09:29.991Z",
     "source_url": "https://github.com/kingc95/XanaNode-Hugo/blob/main/exampleSite/content/concepts/merge-report.md",
     "method": "archive",
     "content_id": "sha256:d5ff558fe3da829c962a669e54f2f517cde75f9d7dfc24ba6f23bdb1f358c306",

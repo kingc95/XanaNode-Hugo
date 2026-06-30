@@ -21,7 +21,20 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Schemas / Property Registry Schema...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="schema">schema</span>
+            
+          </div>
+          <h1>Schemas / Property Registry Schema</h1>
+          <p class="xana-summary">The JSON Schema for the property registry.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p>{ &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;, &quot;$id&quot;: &quot;https://xananode.org/schemas/property-registry.schema.json&quot;, &quot;title&quot;: &quot;XanaNode Property Registry&quot;, &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: false, &quot;required&quot;: [&quot;id&quot;, &quot;version&quot;, &quot;property_registry&quot;], &quot;properties&quot;: { &quot;$schema&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;id&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;pattern&quot;: &quot;^[a-z][a-z0-9_-]*(\\.[a-z][a-z0-9_-]*)*:[a-z][a-z0-9_-]*$&quot; }, &quot;version&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;description&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;property_registry&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;additionalProperties&quot;: false, &quot;required&quot;: [&quot;id&quot;, &quot;label&quot;, &quot;category&quot;, &quot;value_schema&quot;], &quot;properties&quot;: { &quot;id&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;pattern&quot;: &quot;^([a-z][a-z0-9_-]*(\\.[a-z][a-z0-9_-]*)*:)?[a-z][a-z0-9_-]*$&quot; }, &quot;label&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;description&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;category&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [ &quot;identity&quot;, &quot;time&quot;, &quot;space&quot;, &quot;quantity&quot;, &quot;money&quot;, &quot;classification&quot;, &quot;reference&quot;, &quot;epistemology&quot;, &quot;workflow&quot;, &quot;attention&quot;, &quot;communication&quot; ] }, &quot;aliases&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;uniqueItems&quot;: true }, &quot;applies_to&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;uniqueItems&quot;: true }, &quot;canonical_unit&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;unit_system&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;SI&quot;, &quot;ISO-4217&quot;, &quot;ISO-8601&quot;, &quot;WGS84&quot;, &quot;none&quot;] }, &quot;value_schema&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;description&quot;: &quot;JSON Schema fragment for validating this property value.&quot; }, &quot;examples&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: true } } } } } }</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:schema/protocol-artifact-schemas-property-registry.schema.json</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

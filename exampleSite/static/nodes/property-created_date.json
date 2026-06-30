@@ -1,0 +1,49 @@
+{
+  "id": "xananode.canonical:schema/property-created_date",
+  "title": "Created date",
+  "type": "schema",
+  "subtype": "property_registry_entry",
+  "importance": 4,
+  "summary": "The date on which a media item or source asset was originally created.",
+  "registry_type": "created_date",
+  "category": "time",
+  "aliases": [
+    "creation_date",
+    "captured_date"
+  ],
+  "applies_to": [
+    "media",
+    "source"
+  ],
+  "unit_system": "ISO-8601",
+  "value_schema": {
+    "type": "string",
+    "format": "date"
+  },
+  "examples": [
+    "2010-04-16"
+  ],
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-property-created_date-uses-schema-node-type-media",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-media",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-created_date-uses-schema-node-type-source",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-source",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-created_date",
+      "type": "contains",
+      "source": "xananode.canonical:schema/property-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_property-created_date.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

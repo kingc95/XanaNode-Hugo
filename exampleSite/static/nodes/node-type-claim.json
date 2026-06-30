@@ -46,6 +46,12 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/media-node-type-claim-projection-icon-represents-schema-node-type-claim",
+      "type": "represents",
+      "source": "xananode.canonical:media/node-type-claim-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-claim",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
@@ -136,9 +142,81 @@
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-node-type-claim-has_primary_media-media-node-type-claim-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/node-type-claim-projection-icon",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-content-uses-schema-node-type-claim",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-content",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/schema-property-currency_value-uses-schema-node-type-claim",
       "type": "uses",
       "source": "xananode.canonical:schema/property-currency_value",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-evidence_strength-uses-schema-node-type-claim",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-evidence_strength",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-facets-uses-schema-node-type-claim",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-facets",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-research_priority-uses-schema-node-type-claim",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-research_priority",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-review_status-uses-schema-node-type-claim",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-review_status",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-sharing-uses-schema-node-type-claim",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-sharing",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtype-uses-schema-node-type-claim",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-subtype",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-subtypes-uses-schema-node-type-claim",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-subtypes",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-summary-uses-schema-node-type-claim",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-summary",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-title-uses-schema-node-type-claim",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-title",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-uncertainty_level-uses-schema-node-type-claim",
+      "type": "uses",
+      "source": "xananode.canonical:schema/property-uncertainty_level",
       "direction": "incoming"
     }
   ],

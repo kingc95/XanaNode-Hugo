@@ -46,6 +46,12 @@
   },
   "relationships": [
     {
+      "id": "xananode.canonical:rel/media-node-type-item-projection-icon-represents-schema-node-type-item",
+      "type": "represents",
+      "source": "xananode.canonical:media/node-type-item-projection-icon",
+      "direction": "incoming"
+    },
+    {
       "id": "xananode.canonical:rel/registry-contains-node-type-item",
       "type": "contains",
       "source": "xananode.canonical:schema/node-type-registry",
@@ -169,6 +175,12 @@
       "id": "xananode.canonical:rel/schema-node-type-item-contains-schema-node-subtype-item-utensil",
       "type": "contains",
       "target": "xananode.canonical:schema/node-subtype-item-utensil",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-node-type-item-has_primary_media-media-node-type-item-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/node-type-item-projection-icon",
       "direction": "outgoing"
     }
   ],

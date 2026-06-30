@@ -1,0 +1,41 @@
+{
+  "id": "xananode.canonical:schema/property-author",
+  "title": "Author",
+  "type": "schema",
+  "subtype": "property_registry_entry",
+  "importance": 4,
+  "summary": "The credited human or organizational author of a source.",
+  "registry_type": "author",
+  "category": "reference",
+  "aliases": [
+    "creator_name",
+    "byline"
+  ],
+  "applies_to": [
+    "source"
+  ],
+  "unit_system": "none",
+  "value_schema": {
+    "type": "string"
+  },
+  "examples": [
+    "Douglas Adams"
+  ],
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/schema-property-author-uses-schema-node-type-source",
+      "type": "uses",
+      "target": "xananode.canonical:schema/node-type-source",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-property-registry-contains-schema-property-author",
+      "type": "contains",
+      "source": "xananode.canonical:schema/property-registry",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_property-author.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

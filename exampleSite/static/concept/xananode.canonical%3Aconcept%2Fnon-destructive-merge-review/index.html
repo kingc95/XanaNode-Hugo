@@ -21,7 +21,20 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Non-Destructive Merge Review...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="concept">concept</span>
+            
+          </div>
+          <h1>Non-Destructive Merge Review</h1>
+          <p class="xana-summary">A federation pass should surface overlap, compatibility, and candidate mappings without silently collapsing distinct local nodes.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p>XanaNode merge behavior is review-first. A federation pass can detect overlap, record possible matches, score compatibility, and show a structural diff without pretending two authors meant exactly the same thing. That is why merge reports, compatibility reports, and diffs are protocol artifacts in their own right: they let tools expose the overlap before any permanent collapse or absorption happens.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:concept/non-destructive-merge-review</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

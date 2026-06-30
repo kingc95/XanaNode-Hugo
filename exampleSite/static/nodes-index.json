@@ -527,6 +527,20 @@
       "imported": false
     },
     {
+      "id": "example.merge:concept/non-destructive-merge-review",
+      "path": "nodes/non-destructive-merge-review.json",
+      "title": "Non-Destructive Merge Review",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "example.merge:trail/federation-review-proof",
+      "path": "nodes/federation-review-proof.json",
+      "title": "Federation Review Proof",
+      "type": "trail",
+      "imported": true
+    },
+    {
       "id": "example.minimal:claim/substrate-is-structure",
       "path": "nodes/substrate-is-structure.json",
       "title": "A knowledge substrate is structure, not just information",
@@ -544,6 +558,13 @@
       "id": "example.minimal:concept/associative-trails",
       "path": "nodes/associative-trails.json",
       "title": "Associative Trails",
+      "type": "concept",
+      "imported": true
+    },
+    {
+      "id": "example.minimal:concept/knowledge-substrate",
+      "path": "nodes/knowledge-substrate.json",
+      "title": "Knowledge Substrate",
       "type": "concept",
       "imported": true
     },
@@ -566,13 +587,6 @@
       "path": "nodes/missing-relationship-evidence.json",
       "title": "Missing Relationship Evidence",
       "type": "knowledge_gap",
-      "imported": true
-    },
-    {
-      "id": "example.minimal:concept/knowledge-substrate",
-      "path": "nodes/knowledge-substrate.json",
-      "title": "Knowledge Substrate",
-      "type": "concept",
       "imported": true
     },
     {
@@ -614,20 +628,6 @@
       "id": "example.minimal:trail/start-here",
       "path": "nodes/start-here.json",
       "title": "Start Here",
-      "type": "trail",
-      "imported": true
-    },
-    {
-      "id": "example.merge:concept/non-destructive-merge-review",
-      "path": "nodes/non-destructive-merge-review.json",
-      "title": "Non-Destructive Merge Review",
-      "type": "concept",
-      "imported": true
-    },
-    {
-      "id": "example.merge:trail/federation-review-proof",
-      "path": "nodes/federation-review-proof.json",
-      "title": "Federation Review Proof",
       "type": "trail",
       "imported": true
     },
@@ -954,6 +954,188 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:media/node-type-claim-projection-icon",
+      "path": "nodes/node-type-claim-projection-icon.json",
+      "title": "Claim Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-communication-projection-icon",
+      "path": "nodes/node-type-communication-projection-icon.json",
+      "title": "Communication Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-community-projection-icon",
+      "path": "nodes/node-type-community-projection-icon.json",
+      "title": "Community Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-concept-projection-icon",
+      "path": "nodes/node-type-concept-projection-icon.json",
+      "title": "Concept Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-essay-projection-icon",
+      "path": "nodes/node-type-essay-projection-icon.json",
+      "title": "Essay Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-event-projection-icon",
+      "path": "nodes/node-type-event-projection-icon.json",
+      "title": "Event Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-fragment-projection-icon",
+      "path": "nodes/node-type-fragment-projection-icon.json",
+      "title": "Fragment Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-hypothesis-projection-icon",
+      "path": "nodes/node-type-hypothesis-projection-icon.json",
+      "title": "Hypothesis Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-item-projection-icon",
+      "path": "nodes/node-type-item-projection-icon.json",
+      "title": "Item Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-knowledge_gap-projection-icon",
+      "path": "nodes/node-type-knowledge_gap-projection-icon.json",
+      "title": "Knowledge Gap Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-media-projection-icon",
+      "path": "nodes/node-type-media-projection-icon.json",
+      "title": "Media Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-observation-projection-icon",
+      "path": "nodes/node-type-observation-projection-icon.json",
+      "title": "Observation Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-organization-projection-icon",
+      "path": "nodes/node-type-organization-projection-icon.json",
+      "title": "Organization Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-person-projection-icon",
+      "path": "nodes/node-type-person-projection-icon.json",
+      "title": "Person Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-place-projection-icon",
+      "path": "nodes/node-type-place-projection-icon.json",
+      "title": "Place Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-problem-projection-icon",
+      "path": "nodes/node-type-problem-projection-icon.json",
+      "title": "Problem Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-project-projection-icon",
+      "path": "nodes/node-type-project-projection-icon.json",
+      "title": "Project Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-publication-projection-icon",
+      "path": "nodes/node-type-publication-projection-icon.json",
+      "title": "Publication Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-question-projection-icon",
+      "path": "nodes/node-type-question-projection-icon.json",
+      "title": "Question Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-relationship-projection-icon",
+      "path": "nodes/node-type-relationship-projection-icon.json",
+      "title": "Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-response-projection-icon",
+      "path": "nodes/node-type-response-projection-icon.json",
+      "title": "Response Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-revision-projection-icon",
+      "path": "nodes/node-type-revision-projection-icon.json",
+      "title": "Revision Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-schema-projection-icon",
+      "path": "nodes/node-type-schema-projection-icon.json",
+      "title": "Schema Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-source-projection-icon",
+      "path": "nodes/node-type-source-projection-icon.json",
+      "title": "Source Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-technology-projection-icon",
+      "path": "nodes/node-type-technology-projection-icon.json",
+      "title": "Technology Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/node-type-trail-projection-icon",
+      "path": "nodes/node-type-trail-projection-icon.json",
+      "title": "Trail Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:media/protocol-artifact-examples-minimal-substrate-assets-branding-xananode-icon.svg",
       "path": "nodes/protocol-artifact-examples-minimal-substrate-assets-branding-xananode-icon.svg.json",
       "title": "Examples / Minimal Substrate / Assets / Branding / XanaNode Icon Svg",
@@ -1188,6 +1370,1000 @@
       "id": "xananode.canonical:media/relationship-category-uncertainty-projection-icon",
       "path": "nodes/relationship-category-uncertainty-projection-icon.json",
       "title": "uncertainty Relationship Category Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-abstraction_of-projection-icon",
+      "path": "nodes/relationship-type-abstraction_of-projection-icon.json",
+      "title": "Abstraction of Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-adapted_from-projection-icon",
+      "path": "nodes/relationship-type-adapted_from-projection-icon.json",
+      "title": "Adapted from Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-adapted_into-projection-icon",
+      "path": "nodes/relationship-type-adapted_into-projection-icon.json",
+      "title": "Adapted into Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-alias_of-projection-icon",
+      "path": "nodes/relationship-type-alias_of-projection-icon.json",
+      "title": "Alias of Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-alternative_to-projection-icon",
+      "path": "nodes/relationship-type-alternative_to-projection-icon.json",
+      "title": "Alternative to Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-analogous_to-projection-icon",
+      "path": "nodes/relationship-type-analogous_to-projection-icon.json",
+      "title": "Analogous to Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-announced-projection-icon",
+      "path": "nodes/relationship-type-announced-projection-icon.json",
+      "title": "Announced Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-answered_in-projection-icon",
+      "path": "nodes/relationship-type-answered_in-projection-icon.json",
+      "title": "Answered in Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-answers-projection-icon",
+      "path": "nodes/relationship-type-answers-projection-icon.json",
+      "title": "Answers Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-anticipated-projection-icon",
+      "path": "nodes/relationship-type-anticipated-projection-icon.json",
+      "title": "Anticipated Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-anticipates-projection-icon",
+      "path": "nodes/relationship-type-anticipates-projection-icon.json",
+      "title": "Anticipates Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-appears_as-projection-icon",
+      "path": "nodes/relationship-type-appears_as-projection-icon.json",
+      "title": "Appears as Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-appears_in-projection-icon",
+      "path": "nodes/relationship-type-appears_in-projection-icon.json",
+      "title": "Appears in Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-approved-projection-icon",
+      "path": "nodes/relationship-type-approved-projection-icon.json",
+      "title": "Approved Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-arrives_at-projection-icon",
+      "path": "nodes/relationship-type-arrives_at-projection-icon.json",
+      "title": "Arrives at Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-asked-projection-icon",
+      "path": "nodes/relationship-type-asked-projection-icon.json",
+      "title": "Asked Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-asked_in-projection-icon",
+      "path": "nodes/relationship-type-asked_in-projection-icon.json",
+      "title": "Asked in Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-assembled_from-projection-icon",
+      "path": "nodes/relationship-type-assembled_from-projection-icon.json",
+      "title": "Assembled from Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-authored-projection-icon",
+      "path": "nodes/relationship-type-authored-projection-icon.json",
+      "title": "Authored Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-broadcast_to-projection-icon",
+      "path": "nodes/relationship-type-broadcast_to-projection-icon.json",
+      "title": "Broadcast to Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-broader_than-projection-icon",
+      "path": "nodes/relationship-type-broader_than-projection-icon.json",
+      "title": "Broader than Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-cites-projection-icon",
+      "path": "nodes/relationship-type-cites-projection-icon.json",
+      "title": "Cites Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-clarifies-projection-icon",
+      "path": "nodes/relationship-type-clarifies-projection-icon.json",
+      "title": "Clarifies Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-co_authored_with-projection-icon",
+      "path": "nodes/relationship-type-co_authored_with-projection-icon.json",
+      "title": "Co-authored with Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-coined-projection-icon",
+      "path": "nodes/relationship-type-coined-projection-icon.json",
+      "title": "Coined Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-collaborated_with-projection-icon",
+      "path": "nodes/relationship-type-collaborated_with-projection-icon.json",
+      "title": "Collaborated with Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-communicated_to-projection-icon",
+      "path": "nodes/relationship-type-communicated_to-projection-icon.json",
+      "title": "Communicated to Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-compatible_with-projection-icon",
+      "path": "nodes/relationship-type-compatible_with-projection-icon.json",
+      "title": "Compatible with Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-contains-projection-icon",
+      "path": "nodes/relationship-type-contains-projection-icon.json",
+      "title": "Contains Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-contemporary_of-projection-icon",
+      "path": "nodes/relationship-type-contemporary_of-projection-icon.json",
+      "title": "Contemporary of Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-context_for-projection-icon",
+      "path": "nodes/relationship-type-context_for-projection-icon.json",
+      "title": "Context for Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-continues_to-projection-icon",
+      "path": "nodes/relationship-type-continues_to-projection-icon.json",
+      "title": "Continues to Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-contradicts-projection-icon",
+      "path": "nodes/relationship-type-contradicts-projection-icon.json",
+      "title": "Contradicts Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-contrasts_with-projection-icon",
+      "path": "nodes/relationship-type-contrasts_with-projection-icon.json",
+      "title": "Contrasts with Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-costumed_as-projection-icon",
+      "path": "nodes/relationship-type-costumed_as-projection-icon.json",
+      "title": "Costumed as Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-created-projection-icon",
+      "path": "nodes/relationship-type-created-projection-icon.json",
+      "title": "Created Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-critical_to-projection-icon",
+      "path": "nodes/relationship-type-critical_to-projection-icon.json",
+      "title": "Critical to Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-debated_with-projection-icon",
+      "path": "nodes/relationship-type-debated_with-projection-icon.json",
+      "title": "Debated with Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-deep_links_to-projection-icon",
+      "path": "nodes/relationship-type-deep_links_to-projection-icon.json",
+      "title": "Deep links to Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-defines-projection-icon",
+      "path": "nodes/relationship-type-defines-projection-icon.json",
+      "title": "Defines Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-demonstrates-projection-icon",
+      "path": "nodes/relationship-type-demonstrates-projection-icon.json",
+      "title": "Demonstrates Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-depends_on-projection-icon",
+      "path": "nodes/relationship-type-depends_on-projection-icon.json",
+      "title": "Depends on Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-depicts-projection-icon",
+      "path": "nodes/relationship-type-depicts-projection-icon.json",
+      "title": "Depicts Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-derived_from-projection-icon",
+      "path": "nodes/relationship-type-derived_from-projection-icon.json",
+      "title": "Derived from Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-discussed_with-projection-icon",
+      "path": "nodes/relationship-type-discussed_with-projection-icon.json",
+      "title": "Discussed with Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-discusses-projection-icon",
+      "path": "nodes/relationship-type-discusses-projection-icon.json",
+      "title": "Discusses Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-disputed_identity-projection-icon",
+      "path": "nodes/relationship-type-disputed_identity-projection-icon.json",
+      "title": "Disputed identity Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-disputes-projection-icon",
+      "path": "nodes/relationship-type-disputes-projection-icon.json",
+      "title": "Disputes Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-documents-projection-icon",
+      "path": "nodes/relationship-type-documents-projection-icon.json",
+      "title": "Documents Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-enables-projection-icon",
+      "path": "nodes/relationship-type-enables-projection-icon.json",
+      "title": "Enables Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-equivalent_to-projection-icon",
+      "path": "nodes/relationship-type-equivalent_to-projection-icon.json",
+      "title": "Equivalent to Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-evidence_for-projection-icon",
+      "path": "nodes/relationship-type-evidence_for-projection-icon.json",
+      "title": "Evidence for Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-example_of-projection-icon",
+      "path": "nodes/relationship-type-example_of-projection-icon.json",
+      "title": "Example of Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-explains-projection-icon",
+      "path": "nodes/relationship-type-explains-projection-icon.json",
+      "title": "Explains Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-extends-projection-icon",
+      "path": "nodes/relationship-type-extends-projection-icon.json",
+      "title": "Extends Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-extension_of-projection-icon",
+      "path": "nodes/relationship-type-extension_of-projection-icon.json",
+      "title": "Extension of Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-fails_to_answer-projection-icon",
+      "path": "nodes/relationship-type-fails_to_answer-projection-icon.json",
+      "title": "Fails to answer Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-falsifies-projection-icon",
+      "path": "nodes/relationship-type-falsifies-projection-icon.json",
+      "title": "Falsifies Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-features-projection-icon",
+      "path": "nodes/relationship-type-features-projection-icon.json",
+      "title": "Features Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-format_translated_from-projection-icon",
+      "path": "nodes/relationship-type-format_translated_from-projection-icon.json",
+      "title": "Format translated from Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-format_translated_into-projection-icon",
+      "path": "nodes/relationship-type-format_translated_into-projection-icon.json",
+      "title": "Format translated into Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-frequently_misunderstood-projection-icon",
+      "path": "nodes/relationship-type-frequently_misunderstood-projection-icon.json",
+      "title": "Frequently misunderstood Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-friend_of-projection-icon",
+      "path": "nodes/relationship-type-friend_of-projection-icon.json",
+      "title": "Friend of Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-generalizes-projection-icon",
+      "path": "nodes/relationship-type-generalizes-projection-icon.json",
+      "title": "Generalizes Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-generated-projection-icon",
+      "path": "nodes/relationship-type-generated-projection-icon.json",
+      "title": "Generated Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-governed_by-projection-icon",
+      "path": "nodes/relationship-type-governed_by-projection-icon.json",
+      "title": "governed by Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-has_claim-projection-icon",
+      "path": "nodes/relationship-type-has_claim-projection-icon.json",
+      "title": "Has claim Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-has_primary_media-projection-icon",
+      "path": "nodes/relationship-type-has_primary_media-projection-icon.json",
+      "title": "Has primary media Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-high_risk_for-projection-icon",
+      "path": "nodes/relationship-type-high_risk_for-projection-icon.json",
+      "title": "High risk for Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-identified-projection-icon",
+      "path": "nodes/relationship-type-identified-projection-icon.json",
+      "title": "Identified Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-implements-projection-icon",
+      "path": "nodes/relationship-type-implements-projection-icon.json",
+      "title": "Implements Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-important_for-projection-icon",
+      "path": "nodes/relationship-type-important_for-projection-icon.json",
+      "title": "Important for Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-includes-projection-icon",
+      "path": "nodes/relationship-type-includes-projection-icon.json",
+      "title": "Includes Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-influenced-projection-icon",
+      "path": "nodes/relationship-type-influenced-projection-icon.json",
+      "title": "Influenced Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-ingredient_of-projection-icon",
+      "path": "nodes/relationship-type-ingredient_of-projection-icon.json",
+      "title": "Ingredient of Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-insufficient_evidence-projection-icon",
+      "path": "nodes/relationship-type-insufficient_evidence-projection-icon.json",
+      "title": "Insufficient evidence Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-interviewed-projection-icon",
+      "path": "nodes/relationship-type-interviewed-projection-icon.json",
+      "title": "Interviewed Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-introduced-projection-icon",
+      "path": "nodes/relationship-type-introduced-projection-icon.json",
+      "title": "Introduced Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-introduced_in-projection-icon",
+      "path": "nodes/relationship-type-introduced_in-projection-icon.json",
+      "title": "Introduced in Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-investigates-projection-icon",
+      "path": "nodes/relationship-type-investigates-projection-icon.json",
+      "title": "Investigates Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-licensed_under-projection-icon",
+      "path": "nodes/relationship-type-licensed_under-projection-icon.json",
+      "title": "licensed under Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-made_of-projection-icon",
+      "path": "nodes/relationship-type-made_of-projection-icon.json",
+      "title": "Made of Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-maps_to-projection-icon",
+      "path": "nodes/relationship-type-maps_to-projection-icon.json",
+      "title": "Maps to Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-medium_transition-projection-icon",
+      "path": "nodes/relationship-type-medium_transition-projection-icon.json",
+      "title": "Medium transition Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-medium_transitioned_from-projection-icon",
+      "path": "nodes/relationship-type-medium_transitioned_from-projection-icon.json",
+      "title": "Medium transitioned from Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-memorializes-projection-icon",
+      "path": "nodes/relationship-type-memorializes-projection-icon.json",
+      "title": "Memorializes Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-mentions-projection-icon",
+      "path": "nodes/relationship-type-mentions-projection-icon.json",
+      "title": "Mentions Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-motivated_by-projection-icon",
+      "path": "nodes/relationship-type-motivated_by-projection-icon.json",
+      "title": "Motivated by Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-motivates_inquiry-projection-icon",
+      "path": "nodes/relationship-type-motivates_inquiry-projection-icon.json",
+      "title": "Motivates inquiry Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-negotiated_with-projection-icon",
+      "path": "nodes/relationship-type-negotiated_with-projection-icon.json",
+      "title": "Negotiated with Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-occurred_at-projection-icon",
+      "path": "nodes/relationship-type-occurred_at-projection-icon.json",
+      "title": "Occurred at Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-overlooked_by-projection-icon",
+      "path": "nodes/relationship-type-overlooked_by-projection-icon.json",
+      "title": "Overlooked by Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-parallel_to-projection-icon",
+      "path": "nodes/relationship-type-parallel_to-projection-icon.json",
+      "title": "Parallel to Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-partially_answers-projection-icon",
+      "path": "nodes/relationship-type-partially_answers-projection-icon.json",
+      "title": "Partially answers Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-participated_in-projection-icon",
+      "path": "nodes/relationship-type-participated_in-projection-icon.json",
+      "title": "Participated in Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-popularized-projection-icon",
+      "path": "nodes/relationship-type-popularized-projection-icon.json",
+      "title": "Popularized Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-portrays-projection-icon",
+      "path": "nodes/relationship-type-portrays-projection-icon.json",
+      "title": "Portrays Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-possible_match-projection-icon",
+      "path": "nodes/relationship-type-possible_match-projection-icon.json",
+      "title": "Possible match Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-possibly_related_to-projection-icon",
+      "path": "nodes/relationship-type-possibly_related_to-projection-icon.json",
+      "title": "Possibly related to Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-preceded-projection-icon",
+      "path": "nodes/relationship-type-preceded-projection-icon.json",
+      "title": "Preceded Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-presented-projection-icon",
+      "path": "nodes/relationship-type-presented-projection-icon.json",
+      "title": "Presented Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-presented_to-projection-icon",
+      "path": "nodes/relationship-type-presented_to-projection-icon.json",
+      "title": "Presented to Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-preserves-projection-icon",
+      "path": "nodes/relationship-type-preserves-projection-icon.json",
+      "title": "Preserves Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-proposed-projection-icon",
+      "path": "nodes/relationship-type-proposed-projection-icon.json",
+      "title": "Proposed Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-quotes-projection-icon",
+      "path": "nodes/relationship-type-quotes-projection-icon.json",
+      "title": "Quotes Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-raises-projection-icon",
+      "path": "nodes/relationship-type-raises-projection-icon.json",
+      "title": "Raises Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-refines-projection-icon",
+      "path": "nodes/relationship-type-refines-projection-icon.json",
+      "title": "Refines Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-related_to-projection-icon",
+      "path": "nodes/relationship-type-related_to-projection-icon.json",
+      "title": "Related to Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-replied_to-projection-icon",
+      "path": "nodes/relationship-type-replied_to-projection-icon.json",
+      "title": "Replied to Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-reported_to-projection-icon",
+      "path": "nodes/relationship-type-reported_to-projection-icon.json",
+      "title": "Reported to Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-represents-projection-icon",
+      "path": "nodes/relationship-type-represents-projection-icon.json",
+      "title": "Represents Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-requires-projection-icon",
+      "path": "nodes/relationship-type-requires-projection-icon.json",
+      "title": "Requires Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-requires_attribution-projection-icon",
+      "path": "nodes/relationship-type-requires_attribution-projection-icon.json",
+      "title": "requires attribution Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-requires_context-projection-icon",
+      "path": "nodes/relationship-type-requires_context-projection-icon.json",
+      "title": "Requires context Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-requires_information-projection-icon",
+      "path": "nodes/relationship-type-requires_information-projection-icon.json",
+      "title": "Requires information Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-requires_review-projection-icon",
+      "path": "nodes/relationship-type-requires_review-projection-icon.json",
+      "title": "Requires review Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-requires_source-projection-icon",
+      "path": "nodes/relationship-type-requires_source-projection-icon.json",
+      "title": "Requires source Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-requires_validation-projection-icon",
+      "path": "nodes/relationship-type-requires_validation-projection-icon.json",
+      "title": "Requires validation Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-resonates_with-projection-icon",
+      "path": "nodes/relationship-type-resonates_with-projection-icon.json",
+      "title": "Resonates with Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-results_from-projection-icon",
+      "path": "nodes/relationship-type-results_from-projection-icon.json",
+      "title": "Results from Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-same_concept-projection-icon",
+      "path": "nodes/relationship-type-same_concept-projection-icon.json",
+      "title": "Same concept Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-same_entity-projection-icon",
+      "path": "nodes/relationship-type-same_entity-projection-icon.json",
+      "title": "Same entity Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-same_person-projection-icon",
+      "path": "nodes/relationship-type-same_person-projection-icon.json",
+      "title": "Same person Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-same_source-projection-icon",
+      "path": "nodes/relationship-type-same_source-projection-icon.json",
+      "title": "Same source Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-shapes-projection-icon",
+      "path": "nodes/relationship-type-shapes-projection-icon.json",
+      "title": "Shapes Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-shares_pattern_with-projection-icon",
+      "path": "nodes/relationship-type-shares_pattern_with-projection-icon.json",
+      "title": "Shares pattern with Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-specializes-projection-icon",
+      "path": "nodes/relationship-type-specializes-projection-icon.json",
+      "title": "Specializes Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-speculative-projection-icon",
+      "path": "nodes/relationship-type-speculative-projection-icon.json",
+      "title": "Speculative Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-spoke_at-projection-icon",
+      "path": "nodes/relationship-type-spoke_at-projection-icon.json",
+      "title": "Spoke at Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-starts_with-projection-icon",
+      "path": "nodes/relationship-type-starts_with-projection-icon.json",
+      "title": "Starts with Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-styled_as-projection-icon",
+      "path": "nodes/relationship-type-styled_as-projection-icon.json",
+      "title": "Styled as Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-supersedes-projection-icon",
+      "path": "nodes/relationship-type-supersedes-projection-icon.json",
+      "title": "Supersedes Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-supports-projection-icon",
+      "path": "nodes/relationship-type-supports-projection-icon.json",
+      "title": "Supports Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-tests-projection-icon",
+      "path": "nodes/relationship-type-tests-projection-icon.json",
+      "title": "Tests Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-threatens-projection-icon",
+      "path": "nodes/relationship-type-threatens-projection-icon.json",
+      "title": "Threatens Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-trademarked_by-projection-icon",
+      "path": "nodes/relationship-type-trademarked_by-projection-icon.json",
+      "title": "trademarked by Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-trained_on-projection-icon",
+      "path": "nodes/relationship-type-trained_on-projection-icon.json",
+      "title": "Trained on Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-transcludes-projection-icon",
+      "path": "nodes/relationship-type-transcludes-projection-icon.json",
+      "title": "Transcludes Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-under_review-projection-icon",
+      "path": "nodes/relationship-type-under_review-projection-icon.json",
+      "title": "Under review Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-unresolved-projection-icon",
+      "path": "nodes/relationship-type-unresolved-projection-icon.json",
+      "title": "Unresolved Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-uses-projection-icon",
+      "path": "nodes/relationship-type-uses-projection-icon.json",
+      "title": "Uses Relationship Projection Icon",
+      "type": "media",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:media/relationship-type-validates-projection-icon",
+      "path": "nodes/relationship-type-validates-projection-icon.json",
+      "title": "Validates Relationship Projection Icon",
       "type": "media",
       "imported": true
     },
@@ -1822,6 +2998,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/node-subtype-event-fictional_event",
+      "path": "nodes/node-subtype-event-fictional_event.json",
+      "title": "Event subtype: fictional event",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/node-subtype-event-historical_event",
       "path": "nodes/node-subtype-event-historical_event.json",
       "title": "Event subtype: historical event",
@@ -1839,6 +3022,13 @@
       "id": "xananode.canonical:schema/node-subtype-event-meeting",
       "path": "nodes/node-subtype-event-meeting.json",
       "title": "Event subtype: meeting",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-event-performance",
+      "path": "nodes/node-subtype-event-performance.json",
+      "title": "Event subtype: performance",
       "type": "schema",
       "imported": true
     },
@@ -2242,6 +3432,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/node-subtype-organization-fictional_organization",
+      "path": "nodes/node-subtype-organization-fictional_organization.json",
+      "title": "Organization subtype: fictional organization",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/node-subtype-organization-lab",
       "path": "nodes/node-subtype-organization-lab.json",
       "title": "Organization subtype: lab",
@@ -2298,6 +3495,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/node-subtype-person-fictional_character",
+      "path": "nodes/node-subtype-person-fictional_character.json",
+      "title": "Person subtype: fictional character",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/node-subtype-person-founder",
       "path": "nodes/node-subtype-person-founder.json",
       "title": "Person subtype: founder",
@@ -2350,6 +3554,13 @@
       "id": "xananode.canonical:schema/node-subtype-place-country",
       "path": "nodes/node-subtype-place-country.json",
       "title": "Place subtype: country",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/node-subtype-place-fictional_place",
+      "path": "nodes/node-subtype-place-fictional_place.json",
+      "title": "Place subtype: fictional place",
       "type": "schema",
       "imported": true
     },
@@ -3334,9 +4545,72 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/property-aliases",
+      "path": "nodes/property-aliases.json",
+      "title": "Aliases",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-archive_url",
+      "path": "nodes/property-archive_url.json",
+      "title": "Archive URL",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-asset_path",
+      "path": "nodes/property-asset_path.json",
+      "title": "Asset path",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-author",
+      "path": "nodes/property-author.json",
+      "title": "Author",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/property-birth_date",
       "path": "nodes/property-birth_date.json",
       "title": "Birth date",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-communication_model",
+      "path": "nodes/property-communication_model.json",
+      "title": "Communication model",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-communication_pattern",
+      "path": "nodes/property-communication_pattern.json",
+      "title": "Communication pattern",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-content",
+      "path": "nodes/property-content.json",
+      "title": "Content",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-created_date",
+      "path": "nodes/property-created_date.json",
+      "title": "Created date",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-creator",
+      "path": "nodes/property-creator.json",
+      "title": "Creator",
       "type": "schema",
       "imported": true
     },
@@ -3348,9 +4622,37 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/property-death_date",
+      "path": "nodes/property-death_date.json",
+      "title": "Death date",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-evidence_strength",
+      "path": "nodes/property-evidence_strength.json",
+      "title": "Evidence strength",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/property-external_identifier",
       "path": "nodes/property-external_identifier.json",
       "title": "External identifier",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-facets",
+      "path": "nodes/property-facets.json",
+      "title": "Facets",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-gender",
+      "path": "nodes/property-gender.json",
+      "title": "Gender",
       "type": "schema",
       "imported": true
     },
@@ -3362,6 +4664,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/property-license",
+      "path": "nodes/property-license.json",
+      "title": "License",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/property-measurement_si",
       "path": "nodes/property-measurement_si.json",
       "title": "SI measurement",
@@ -3369,9 +4678,30 @@
       "imported": true
     },
     {
-      "id": "xananode.canonical:schema/property-registry",
-      "path": "nodes/property-registry.json",
-      "title": "Property Registry",
+      "id": "xananode.canonical:schema/property-media_type",
+      "path": "nodes/property-media_type.json",
+      "title": "Media type",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-mime_type",
+      "path": "nodes/property-mime_type.json",
+      "title": "MIME type",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-nationality",
+      "path": "nodes/property-nationality.json",
+      "title": "Nationality",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-occupation",
+      "path": "nodes/property-occupation.json",
+      "title": "Occupation",
       "type": "schema",
       "imported": true
     },
@@ -3383,9 +4713,86 @@
       "imported": true
     },
     {
-      "id": "xananode.canonical:schema/protocol-artifact-contexts",
-      "path": "nodes/protocol-artifact-contexts.json",
-      "title": "Protocol Contexts",
+      "id": "xananode.canonical:schema/property-registry",
+      "path": "nodes/property-registry.json",
+      "title": "Property Registry",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-research_priority",
+      "path": "nodes/property-research_priority.json",
+      "title": "Research priority",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-review_status",
+      "path": "nodes/property-review_status.json",
+      "title": "Review status",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-rights_status",
+      "path": "nodes/property-rights_status.json",
+      "title": "Rights status",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-sharing",
+      "path": "nodes/property-sharing.json",
+      "title": "Sharing scope",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-source_url",
+      "path": "nodes/property-source_url.json",
+      "title": "Source URL",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-subtype",
+      "path": "nodes/property-subtype.json",
+      "title": "Subtype",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-subtypes",
+      "path": "nodes/property-subtypes.json",
+      "title": "Subtypes",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-summary",
+      "path": "nodes/property-summary.json",
+      "title": "Summary",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-title",
+      "path": "nodes/property-title.json",
+      "title": "Title",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-uncertainty_level",
+      "path": "nodes/property-uncertainty_level.json",
+      "title": "Uncertainty level",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/property-year",
+      "path": "nodes/property-year.json",
+      "title": "Year",
       "type": "schema",
       "imported": true
     },
@@ -3397,9 +4804,9 @@
       "imported": true
     },
     {
-      "id": "xananode.canonical:schema/protocol-artifact-examples",
-      "path": "nodes/protocol-artifact-examples.json",
-      "title": "Protocol Examples",
+      "id": "xananode.canonical:schema/protocol-artifact-contexts",
+      "path": "nodes/protocol-artifact-contexts.json",
+      "title": "Protocol Contexts",
       "type": "schema",
       "imported": true
     },
@@ -3537,13 +4944,6 @@
       "imported": true
     },
     {
-      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate",
-      "path": "nodes/protocol-artifact-examples-minimal-substrate.json",
-      "title": "examples/minimal-substrate/",
-      "type": "schema",
-      "imported": true
-    },
-    {
       "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate-author-profile.json",
       "path": "nodes/protocol-artifact-examples-minimal-substrate-author-profile.json.json",
       "title": "Examples / Minimal Substrate / Author Profile",
@@ -3670,6 +5070,20 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/protocol-artifact-examples-minimal-substrate",
+      "path": "nodes/protocol-artifact-examples-minimal-substrate.json",
+      "title": "examples/minimal-substrate/",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-examples",
+      "path": "nodes/protocol-artifact-examples.json",
+      "title": "Protocol Examples",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/protocol-artifact-governance",
       "path": "nodes/protocol-artifact-governance.json",
       "title": "Protocol Governance",
@@ -3680,13 +5094,6 @@
       "id": "xananode.canonical:schema/protocol-artifact-proposals",
       "path": "nodes/protocol-artifact-proposals.json",
       "title": "Protocol Proposals",
-      "type": "schema",
-      "imported": true
-    },
-    {
-      "id": "xananode.canonical:schema/protocol-artifact-registry",
-      "path": "nodes/protocol-artifact-registry.json",
-      "title": "Protocol Registry",
       "type": "schema",
       "imported": true
     },
@@ -3726,16 +5133,16 @@
       "imported": true
     },
     {
-      "id": "xananode.canonical:schema/protocol-artifact-root",
-      "path": "nodes/protocol-artifact-root.json",
-      "title": "Protocol Root Files",
+      "id": "xananode.canonical:schema/protocol-artifact-registry",
+      "path": "nodes/protocol-artifact-registry.json",
+      "title": "Protocol Registry",
       "type": "schema",
       "imported": true
     },
     {
-      "id": "xananode.canonical:schema/protocol-artifact-schemas",
-      "path": "nodes/protocol-artifact-schemas.json",
-      "title": "Protocol Schemas",
+      "id": "xananode.canonical:schema/protocol-artifact-root",
+      "path": "nodes/protocol-artifact-root.json",
+      "title": "Protocol Root Files",
       "type": "schema",
       "imported": true
     },
@@ -3862,6 +5269,13 @@
       "id": "xananode.canonical:schema/protocol-artifact-schemas-xananode-substrate-layout.v0.1.0.json",
       "path": "nodes/protocol-artifact-schemas-xananode-substrate-layout.v0.1.0.json.json",
       "title": "Schemas / XanaNode Substrate Layout v0.1.0",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/protocol-artifact-schemas",
+      "path": "nodes/protocol-artifact-schemas.json",
+      "title": "Protocol Schemas",
       "type": "schema",
       "imported": true
     },
@@ -4195,6 +5609,20 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-appearance_of",
+      "path": "nodes/relationship-type-appearance_of.json",
+      "title": "Appearance Of Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-appears_as",
+      "path": "nodes/relationship-type-appears_as.json",
+      "title": "Appears as",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-appears_in",
       "path": "nodes/relationship-type-appears_in.json",
       "title": "Appears in",
@@ -4272,6 +5700,20 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-aunt_of",
+      "path": "nodes/relationship-type-aunt_of.json",
+      "title": "Aunt of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-aunt_or_uncle_of",
+      "path": "nodes/relationship-type-aunt_or_uncle_of.json",
+      "title": "Aunt or uncle of",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-authored",
       "path": "nodes/relationship-type-authored.json",
       "title": "Authored",
@@ -4286,6 +5728,20 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-base_of",
+      "path": "nodes/relationship-type-base_of.json",
+      "title": "Base Of Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-based_in",
+      "path": "nodes/relationship-type-based_in.json",
+      "title": "Based in",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-broadcast_to",
       "path": "nodes/relationship-type-broadcast_to.json",
       "title": "Broadcast to",
@@ -4296,6 +5752,20 @@
       "id": "xananode.canonical:schema/relationship-type-broader_than",
       "path": "nodes/relationship-type-broader_than.json",
       "title": "Broader than",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-brother_of",
+      "path": "nodes/relationship-type-brother_of.json",
+      "title": "Brother of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-child_of",
+      "path": "nodes/relationship-type-child_of.json",
+      "title": "Child of",
       "type": "schema",
       "imported": true
     },
@@ -4454,6 +5924,27 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-costume_of",
+      "path": "nodes/relationship-type-costume_of.json",
+      "title": "Costume Of Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-costumed_as",
+      "path": "nodes/relationship-type-costumed_as.json",
+      "title": "Costumed as",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-cousin_of",
+      "path": "nodes/relationship-type-cousin_of.json",
+      "title": "Cousin of",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-created",
       "path": "nodes/relationship-type-created.json",
       "title": "Created",
@@ -4478,6 +5969,13 @@
       "id": "xananode.canonical:schema/relationship-type-critically_depends_on",
       "path": "nodes/relationship-type-critically_depends_on.json",
       "title": "Critically Depends On Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-daughter_of",
+      "path": "nodes/relationship-type-daughter_of.json",
+      "title": "Daughter of",
       "type": "schema",
       "imported": true
     },
@@ -4734,6 +6232,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-father_of",
+      "path": "nodes/relationship-type-father_of.json",
+      "title": "Father of",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-featured_in",
       "path": "nodes/relationship-type-featured_in.json",
       "title": "Featured In Relationship Term",
@@ -4832,6 +6337,34 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-grandchild_of",
+      "path": "nodes/relationship-type-grandchild_of.json",
+      "title": "Grandchild of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-grandfather_of",
+      "path": "nodes/relationship-type-grandfather_of.json",
+      "title": "Grandfather of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-grandmother_of",
+      "path": "nodes/relationship-type-grandmother_of.json",
+      "title": "Grandmother of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-grandparent_of",
+      "path": "nodes/relationship-type-grandparent_of.json",
+      "title": "Grandparent of",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-had_answer",
       "path": "nodes/relationship-type-had_answer.json",
       "title": "Had Answer Relationship Term",
@@ -4849,6 +6382,13 @@
       "id": "xananode.canonical:schema/relationship-type-had_question",
       "path": "nodes/relationship-type-had_question.json",
       "title": "Had Question Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-half_sibling_of",
+      "path": "nodes/relationship-type-half_sibling_of.json",
+      "title": "Half sibling of",
       "type": "schema",
       "imported": true
     },
@@ -4926,6 +6466,20 @@
       "id": "xananode.canonical:schema/relationship-type-has_primary_media",
       "path": "nodes/relationship-type-has_primary_media.json",
       "title": "Has primary media",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-headquartered_in",
+      "path": "nodes/relationship-type-headquartered_in.json",
+      "title": "Headquartered in",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-headquarters_of",
+      "path": "nodes/relationship-type-headquarters_of.json",
+      "title": "Headquarters Of Relationship Term",
       "type": "schema",
       "imported": true
     },
@@ -5105,6 +6659,20 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-located_in",
+      "path": "nodes/relationship-type-located_in.json",
+      "title": "Located in",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-location_of",
+      "path": "nodes/relationship-type-location_of.json",
+      "title": "Location Of Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-made_of",
       "path": "nodes/relationship-type-made_of.json",
       "title": "Made of",
@@ -5182,6 +6750,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-mother_of",
+      "path": "nodes/relationship-type-mother_of.json",
+      "title": "Mother of",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-motivated_by",
       "path": "nodes/relationship-type-motivated_by.json",
       "title": "Motivated by",
@@ -5213,6 +6788,27 @@
       "id": "xananode.canonical:schema/relationship-type-negotiated_with",
       "path": "nodes/relationship-type-negotiated_with.json",
       "title": "Negotiated with",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-nephew_of",
+      "path": "nodes/relationship-type-nephew_of.json",
+      "title": "Nephew of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-niece_of",
+      "path": "nodes/relationship-type-niece_of.json",
+      "title": "Niece of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-niece_or_nephew_of",
+      "path": "nodes/relationship-type-niece_or_nephew_of.json",
+      "title": "Niece or nephew of",
       "type": "schema",
       "imported": true
     },
@@ -5252,6 +6848,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-parent_of",
+      "path": "nodes/relationship-type-parent_of.json",
+      "title": "Parent of",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-part_of",
       "path": "nodes/relationship-type-part_of.json",
       "title": "Part Of Relationship Term",
@@ -5280,6 +6883,13 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-partner_of",
+      "path": "nodes/relationship-type-partner_of.json",
+      "title": "Partner of",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-popularized",
       "path": "nodes/relationship-type-popularized.json",
       "title": "Popularized",
@@ -5290,6 +6900,20 @@
       "id": "xananode.canonical:schema/relationship-type-popularized_by",
       "path": "nodes/relationship-type-popularized_by.json",
       "title": "Popularized By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-portrayed_by",
+      "path": "nodes/relationship-type-portrayed_by.json",
+      "title": "Portrayed By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-portrays",
+      "path": "nodes/relationship-type-portrays.json",
+      "title": "Portrays",
       "type": "schema",
       "imported": true
     },
@@ -5374,6 +6998,20 @@
       "id": "xananode.canonical:schema/relationship-type-proposed_by",
       "path": "nodes/relationship-type-proposed_by.json",
       "title": "Proposed By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-questioned_by",
+      "path": "nodes/relationship-type-questioned_by.json",
+      "title": "Questioned By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-questions",
+      "path": "nodes/relationship-type-questions.json",
+      "title": "Questions",
       "type": "schema",
       "imported": true
     },
@@ -5546,6 +7184,20 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-responded_to_by",
+      "path": "nodes/relationship-type-responded_to_by.json",
+      "title": "Responded To By Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-responds_to",
+      "path": "nodes/relationship-type-responds_to.json",
+      "title": "Responds to",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-results_from",
       "path": "nodes/relationship-type-results_from.json",
       "title": "Results from",
@@ -5616,9 +7268,30 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-sibling_of",
+      "path": "nodes/relationship-type-sibling_of.json",
+      "title": "Sibling of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-sister_of",
+      "path": "nodes/relationship-type-sister_of.json",
+      "title": "Sister of",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-site_of",
       "path": "nodes/relationship-type-site_of.json",
       "title": "Site Of Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-son_of",
+      "path": "nodes/relationship-type-son_of.json",
+      "title": "Son of",
       "type": "schema",
       "imported": true
     },
@@ -5665,9 +7338,79 @@
       "imported": true
     },
     {
+      "id": "xananode.canonical:schema/relationship-type-spouse_of",
+      "path": "nodes/relationship-type-spouse_of.json",
+      "title": "Spouse of",
+      "type": "schema",
+      "imported": true
+    },
+    {
       "id": "xananode.canonical:schema/relationship-type-starts_with",
       "path": "nodes/relationship-type-starts_with.json",
       "title": "Starts with",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-step_child_of",
+      "path": "nodes/relationship-type-step_child_of.json",
+      "title": "Step child of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-step_daughter_of",
+      "path": "nodes/relationship-type-step_daughter_of.json",
+      "title": "Step daughter of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-step_father_of",
+      "path": "nodes/relationship-type-step_father_of.json",
+      "title": "Step father of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-step_mother_of",
+      "path": "nodes/relationship-type-step_mother_of.json",
+      "title": "Step mother of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-step_parent_of",
+      "path": "nodes/relationship-type-step_parent_of.json",
+      "title": "Step parent of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-step_sibling_of",
+      "path": "nodes/relationship-type-step_sibling_of.json",
+      "title": "Step sibling of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-step_son_of",
+      "path": "nodes/relationship-type-step_son_of.json",
+      "title": "Step son of",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-style_of",
+      "path": "nodes/relationship-type-style_of.json",
+      "title": "Style Of Relationship Term",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-styled_as",
+      "path": "nodes/relationship-type-styled_as.json",
+      "title": "Styled as",
       "type": "schema",
       "imported": true
     },
@@ -5759,6 +7502,13 @@
       "id": "xananode.canonical:schema/relationship-type-transcludes",
       "path": "nodes/relationship-type-transcludes.json",
       "title": "Transcludes",
+      "type": "schema",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:schema/relationship-type-uncle_of",
+      "path": "nodes/relationship-type-uncle_of.json",
+      "title": "Uncle of",
       "type": "schema",
       "imported": true
     },
@@ -6281,13 +8031,6 @@
       "imported": true
     },
     {
-      "id": "xananode.canonical:source/repository-kingc95-xananode",
-      "path": "nodes/repository-kingc95-xananode.json",
-      "title": "XanaNode Protocol Repository",
-      "type": "source",
-      "imported": true
-    },
-    {
       "id": "xananode.canonical:source/repository-kingc95-xananode-core-sdk",
       "path": "nodes/repository-kingc95-xananode-core-sdk.json",
       "title": "XanaNode Core SDK Repository",
@@ -6319,6 +8062,13 @@
       "id": "xananode.canonical:source/repository-kingc95-xananode-workspace",
       "path": "nodes/repository-kingc95-xananode-workspace.json",
       "title": "XanaNode Workspace Repository",
+      "type": "source",
+      "imported": true
+    },
+    {
+      "id": "xananode.canonical:source/repository-kingc95-xananode",
+      "path": "nodes/repository-kingc95-xananode.json",
+      "title": "XanaNode Protocol Repository",
       "type": "source",
       "imported": true
     },

@@ -21,7 +21,34 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Specs / Transclusion...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Specs / Transclusion</h1>
+          <p class="xana-summary">A protocol specification covering Transclusion.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># Transclusion</p>
+<p>Transclusion is inclusion by reference rather than duplication.</p>
+<p>In XanaNode, transclusion should preserve:</p>
+<ul><li>source identity</li><li>attribution</li><li>version lineage</li><li>fragment address</li><li>rights metadata</li></ul>
+<p>The relationship type <code>transcludes</code> describes transclusion at the graph level. A viewer may derive the inverse view <code>transcluded_by</code> when looking from the fragment back to the consuming node.</p>
+<p>The minimal interoperable form is:</p>
+<ul><li>a source node, such as <code>source/as-we-may-think</code></li><li>a fragment node with <code>source_node</code>, <code>source_version_id</code>, <code>source_content_id</code>, <code>fragment_id</code>, <code>content_id</code>, <code>version_id</code>, <code>tumbler</code>, and <code>selector</code></li><li>a consuming node, such as an essay or trail</li><li>a <code>transcludes</code> relationship from the consuming node to the fragment node</li></ul>
+<p>The <code>transcludes</code> relationship should carry the same versioned fragment <code>tumbler</code> used by the fragment node. This makes the transclusion point to a specific source version and fragment version rather than to a floating latest passage.</p>
+<p>Selectors may point to more than paragraph-like text. A transcluded fragment can identify:</p>
+<ul><li>an exact text quote</li><li>a word or character range</li><li>a page or region selection in a document</li><li>an audio or video time span</li><li>an image region or other media-native chunk</li></ul>
+<p>The durable rule is the same in every case:</p>
+<p>1. the consuming node points to a fragment node 2. the fragment node preserves the versioned tumbler 3. the selector carries the chunking detail for that source version</p>
+<p>This is how XanaNode gets closer to the Nelson-style goal of reusing a precise span rather than only whole files or whole paragraphs.</p>
+<p>When a person pastes quoted material into an official XanaNode tool, the best-case authoring flow is not &quot;paste now, maybe relink later.&quot; The tool should prefer to create or reuse a fragment, record the <code>transcludes</code> relationship immediately, and preserve the source directionality at the moment of reuse.</p>
+<p>Implementations may begin with practical fragment references before attempting full Project Xanadu-style transclusion.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-specs-transclusion.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

@@ -5,7 +5,7 @@
   "subtype": "relationship_category_schema",
   "importance": 4,
   "summary": "The social category groups relationship types with related meaning.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "social",
   "registry_namespace": "xananode",
   "relationships": [
@@ -16,15 +16,87 @@
       "direction": "incoming"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-aunt_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-aunt_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-aunt_or_uncle_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-aunt_or_uncle_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-brother_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-brother_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-child_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-child_of",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-collaborated_with",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-collaborated_with",
       "direction": "outgoing"
     },
     {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-cousin_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-cousin_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-daughter_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-daughter_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-father_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-father_of",
+      "direction": "outgoing"
+    },
+    {
       "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-friend_of",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-friend_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-grandchild_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-grandchild_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-grandfather_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-grandfather_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-grandmother_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-grandmother_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-grandparent_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-grandparent_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-half_sibling_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-half_sibling_of",
       "direction": "outgoing"
     },
     {
@@ -49,6 +121,114 @@
       "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-memorializes",
       "type": "contains",
       "target": "xananode.canonical:schema/relationship-type-memorializes",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-mother_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-mother_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-nephew_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-nephew_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-niece_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-niece_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-niece_or_nephew_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-niece_or_nephew_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-parent_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-parent_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-partner_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-partner_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-sibling_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-sibling_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-sister_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-sister_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-son_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-son_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-spouse_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-spouse_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-step_child_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-step_child_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-step_daughter_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-step_daughter_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-step_father_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-step_father_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-step_mother_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-step_mother_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-step_parent_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-step_parent_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-step_sibling_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-step_sibling_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-step_son_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-step_son_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-social-contains-schema-relationship-type-uncle_of",
+      "type": "contains",
+      "target": "xananode.canonical:schema/relationship-type-uncle_of",
       "direction": "outgoing"
     },
     {

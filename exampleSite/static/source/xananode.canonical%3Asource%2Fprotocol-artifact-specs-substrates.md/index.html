@@ -21,7 +21,124 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Specs / Substrates...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="source">source</span>
+            
+          </div>
+          <h1>Specs / Substrates</h1>
+          <p class="xana-summary">A protocol specification covering Substrates.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p># Substrates</p>
+<p>A substrate is an independently authored XanaNode-compatible knowledge graph.</p>
+<p>A substrate includes:</p>
+<ul><li>a manifest</li><li>a declared namespace</li><li>a Git repository backing the substrate history</li><li>nodes</li><li>relationships</li><li>schema declarations</li><li>optional custom extensions</li><li>optional merge reports</li><li>optional mounted or imported substrate layers</li></ul>
+<h2>Standard Layout</h2>
+<p>A substrate root is the directory containing <code>substrate.json</code>. A hand-built substrate should be usable from that root without private tool state.</p>
+<p>The machine-readable layout registry is:</p>
+<ul><li><code>schemas/substrate-layout.schema.json</code></li><li><code>schemas/xananode-substrate-layout.v0.1.0.json</code></li></ul>
+<p>The minimal required file is:</p>
+<p>``<code>text substrate.json </code>``</p>
+<p>The standard production layout is:</p>
+<p>``<code>text substrate.json author-profile.json relationships.json nodes/ *.json nodes.json content/ nodes/ *.md assets/ media/ sources/ projection/ schemas/ *.json reports/ *.json packs/ &lt;mounted-substrate&gt;/ imports/ &lt;incoming-material&gt;/ ro-crate-metadata.json .xananode/ workspace.json authors.json </code>``</p>
+<p>Protocol JSON (<code>nodes/*.json</code>, <code>nodes.json</code>, and <code>relationships.json</code>) is the interchange surface. Markdown under <code>content/nodes/</code> is an authoring projection used by current tools. A substrate can be authored directly as protocol JSON and still be valid.</p>
+<p>Tools should preserve recognized files even when they do not understand every extension. Unknown local files under <code>assets/</code>, <code>schemas/</code>, <code>reports/</code>, <code>packs/</code>, or <code>imports/</code> are part of the substrate unless sharing or export policy explicitly excludes them.</p>
+<h2>Git Backing</h2>
+<p>Each production substrate is a Git repository. Git provides the substrate&#39;s version history, branching, review, merge, and synchronization layer.</p>
+<p>XanaNode does not replace Git. It defines knowledge-specific artifacts inside a repository:</p>
+<ul><li><code>substrate.json</code></li><li><code>nodes-index.json</code></li><li><code>relationships.json</code></li><li><code>nodes/*.json</code></li><li>optional <code>schemas/*.json</code></li><li>optional merge and compatibility reports</li></ul>
+<p>For static-host discovery, a substrate should also expose a machine front door such as <code>/.well-known/xananode</code>, plus ordinary crawl hints like <code>robots.txt</code> and head links that point to the protocol artifacts. The human viewer may live at the root, but the machine handshake should make the substrate obvious without scraping page prose or client-side graph code.</p>
+<p>The substrate manifest must include a <code>repository</code> block describing the Git remote and default branch. Example fixtures may live in subdirectories of the protocol repository, but independently maintained substrates should use the repository root as the substrate root.</p>
+<p>Substrates are sovereign. They can be moderated independently while still participating in federation.</p>
+<h2>Portable Substrates And Composition</h2>
+<p>In current XanaNode language, the substrate is the primary unit. A <code>.substrate</code> file is a portable bundled substrate for transmission or release. This specification still uses <code>pack</code> in a few field names and compatibility notes because older tools shipped that wording first, but official user-facing tools should teach substrate, <code>.substrate</code>, mount, import, merge, and Intertwingle. A portable substrate is a set of XanaNode protocol artifacts that can be added to another substrate without losing the ownership boundary of the source substrate.</p>
+<p>Portable substrates use the same artifact shapes as a normal substrate:</p>
+<ul><li>optional <code>substrate.json</code></li><li><code>nodes/*.json</code> or any JSON file containing one node, an array of nodes, or <code>{ &quot;nodes&quot;: [...] }</code></li><li><code>relationships.json</code> or any JSON file containing <code>{ &quot;relationships&quot;: [...] }</code></li><li>optional <code>assets/</code> files referenced by media node <code>asset_path</code> fields</li><li>optional schemas, reports, and companion metadata</li></ul>
+<p>Portable substrates may be used in three composition modes:</p>
+<ul><li><code>mounted</code>: the incoming substrate is included at build or analysis time, but remains externally governed. Its records are not copied into the receiving substrate as canonical local content.</li><li><code>imported</code>: the incoming substrate&#39;s records are copied into generated local artifacts with provenance, but identity is not reconciled beyond explicit namespace mappings. Imported records must retain <code>imported_from</code>, substrate identity, and composition mode metadata.</li><li><code>merged</code>: the incoming substrate is reconciled with the receiving substrate through identity mapping, duplicate detection, conflict handling, and review policy. Merged substrates should produce a merge or intake report.</li></ul>
+<p>Mounted substrates are the right model for optional example layers, lineage overlays, alternate interpretations, and domain extensions. Imported substrates are the right model when a substrate owner wants local generated artifacts for an external substrate without claiming authorship. Merged substrates are the right model when a substrate owner decides that incoming records should be reconciled with local canonical authorship.</p>
+<p><code>absorbed</code> is a legacy alias for <code>imported</code>. New manifests should prefer <code>imported</code> or <code>merged</code> so tools can distinguish copying from identity reconciliation.</p>
+<p>The substrate manifest may declare substrate references in <code>imports</code>:</p>
+<p>``<code>json { &quot;imports&quot;: [ &quot;xananode:core&quot;, { &quot;id&quot;: &quot;example.minimal&quot;, &quot;source&quot;: &quot;vendor/xananode-core/vendor/xananode-protocol/examples/minimal-substrate&quot;, &quot;mode&quot;: &quot;mounted&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;required&quot;: true } ] } </code>``</p>
+<p>String imports remain valid for simple vocabulary or schema dependencies. Object imports are used when the import is a concrete substrate source.</p>
+<p>The field name is <code>imports</code> for manifest compatibility, but user interfaces may describe these records as mounted substrates, federation sources, or substrate mounts. The important distinction is governance: a mounted substrate remains someone else&#39;s authored source unless an explicit import or merge step changes that status.</p>
+<p>Substrate ingress may declare namespace mappings:</p>
+<p>``<code>json { &quot;id&quot;: &quot;xananode.lineage&quot;, &quot;source&quot;: &quot;imports/lineage&quot;, &quot;mode&quot;: &quot;mounted&quot;, &quot;namespace_mappings&quot;: [ { &quot;from&quot;: &quot;xananode.example&quot;, &quot;to&quot;: &quot;xananode.com&quot;, &quot;scope&quot;: &quot;relationships&quot;, &quot;reason&quot;: &quot;Bind example-authored relationship endpoints to the receiving canonical substrate namespace.&quot; } ] } </code>``</p>
+<p>Namespace mappings are local federation rules. They do not rename the imported substrate&#39;s own nodes unless <code>scope</code> is <code>all</code>; with <code>scope: &quot;relationships&quot;</code> they only rebase relationship endpoints so mounted records can connect to equivalent local substrate nodes. Implementations should report mappings in review or merge/intake output so authors can audit how a mounted substrate is being interpreted.</p>
+<p>Implementations must not silently treat a mounted substrate as imported or merged. If a tool copies mounted records into local artifacts, it should record that as an explicit import step with review metadata. If a tool reconciles identity, de-duplicates nodes, or resolves conflicting claims, it should record that as a merge step. This prevents two repositories from accidentally claiming canonical ownership of the same governed records.</p>
+<p>When a substrate is cloned from an online federation target, the mounted name must include the Git branch and commit that were actually used, such as <code>Example Substrate (main@1a2b3c4d5e6f)</code>. Branch plus commit is the concrete version. A branch name alone is not enough provenance because the branch can move.</p>
+<h2>Substrate Media Portability</h2>
+<p>Portable substrates that include local media must include the media files alongside the node records. Media files belong under the substrate root, normally in <code>assets/</code>. Media nodes reference those files with relative <code>asset_path</code> values.</p>
+<p>Substrate builders must:</p>
+<ul><li>copy every file referenced by a media node <code>asset_path</code></li><li>copy authored local substrate files that the substrate carries as evidence or media, including images, PDFs, audio, video, diagrams, source snapshots, and other digital files unless sharing policy excludes them</li><li>reject or warn on paths that escape the substrate root</li><li>preserve <code>source_url</code>, <code>rights_status</code>, <code>license</code>, <code>source_snapshot</code>, and content identifiers when known</li><li>keep <code>primary_media</code> references pointing at media node ids, not raw file paths</li><li>include projection media assets referenced by node type, subtype, relationship type, and relationship category registries when the substrate claims to carry those registries</li><li>report duplicate local files by content hash so authors can see when the same literal file has propagated through multiple substrates</li><li>report path conflicts when two different files claim the same relative <code>asset_path</code></li></ul>
+<p>Substrate consumers must resolve <code>asset_path</code> relative to the source substrate root for mounted substrates and relative to the receiving substrate root for imported or merged assets after an explicit copy step.</p>
+<h2>Artifact Promotion Governance</h2>
+<p>Portable substrates should preserve important local files, but tools must distinguish between preserving a file and promoting that file into its own node.</p>
+<p>A raw repository or workspace file should be promoted to its own node when it has independent semantic weight inside the substrate, for example when it is:</p>
+<ul><li>a protocol, schema, registry, compatibility, or governance artifact</li><li>a citable spec, proposal, policy, source document, or canonical example</li><li>a report, bundle, manifest, or machine-facing artifact that other tools may need to inspect directly</li><li>a file whose contents are meaningfully discussed, reviewed, disputed, transcluded, or traversed as part of the graph</li></ul>
+<p>A raw file should usually remain an attached asset instead of becoming its own node when it mainly serves as:</p>
+<ul><li>implementation support</li><li>build or packaging glue</li><li>test scaffolding</li><li>projection inventory such as icons, thumbnails, sprites, static screenshots, or generated output</li><li>provenance attached to a higher-level source, media, schema, project, or substrate node</li></ul>
+<p>Live source URLs and captured media are often related, but not always separate objects. A <code>source</code> node may point to <code>https://example.com</code> and also carry a local captured file when the captured file is the actual evidentiary object being cited in the substrate. Use a separate <code>media</code> node only when the capture is a distinct representation, derivative, preview, depiction, or auxiliary asset rather than the source object itself.</p>
+<p>When two mounted substrates carry the same literal file, tools should preserve provenance from both substrates instead of blindly copying both files forever. Permanent federation or merge may keep one canonical media node, record duplicate-file evidence in the merge report, and use transclusion or media relationships from the other substrate back to the retained file. That keeps the file lineage visible without multiplying identical bytes.</p>
+<p>Linking to an online file is allowed, but a portable substrate should prefer a local captured asset or a reference to a media node in another mounted substrate when the file matters to the knowledge claim. Online links rot; substrate-carried media preserves the evidence path.</p>
+<h2>Substrate Archives</h2>
+<p>A portable substrate may be transmitted as a single <code>.substrate</code> archive. The archive is the whole substrate unit: manifest, nodes, relationships, media, registry extensions, source snapshots, and workspace metadata needed to keep the files together.</p>
+<p>The recommended media type is <code>application/vnd.xananode.substrate+json+gzip</code>. The archive should contain a JSON envelope compressed with gzip. Tools may support other containers later, but official XanaNode tooling should read and write this format.</p>
+<p>Mounted substrate records should preserve:</p>
+<ul><li>repository URL</li><li>branch</li><li>commit hash</li><li>archive file name when exported</li><li>namespace</li><li>mounted/imported/merged/absorbed mode</li></ul>
+<h2>Executable Tool Contract</h2>
+<p>The protocol does not require Node.js, Python, or any other language runtime. Those are implementation choices, not protocol rules.</p>
+<p>Official XanaNode tooling should converge on two boring machine entry points that other applications can call regardless of stack:</p>
+<ul><li><code>xananode-core</code></li><li><code>xananode-workspace</code></li></ul>
+<p>These may be delivered as native executables, self-contained packaged binaries, platform launchers, or language-specific wrappers, but the command contract should remain stable across forms.</p>
+<p>The intent is simple:</p>
+<ul><li>Core handles protocol reading, validation, analysis, fragment generation, bundle writing, and projection-ready graph derivation.</li><li>Workspace handles substrate folder lifecycle, authoring roots, imports, working copies, federation intake, archive packaging, and build orchestration.</li></ul>
+<p>Applications such as Studio, Mobile, Hugo helpers, AI agents, browser services, and third-party integrations should be able to call those tools without embedding the implementation language directly.</p>
+<h3>Required executable behavior</h3>
+<p>Official executable implementations should:</p>
+<ul><li>accept ordinary filesystem paths to substrate folders, <code>.substrate</code> archives, <code>substrate-bundle.json</code>, and <code>substrate-bundle.jsonl</code></li><li>return structured machine-readable output through JSON on stdout, JSON files on disk, or both</li><li>return non-zero exit codes on validation, parse, or runtime failure</li><li>preserve protocol semantics regardless of host language</li><li>expose build metadata such as version, commit, build date, and implementation identity</li><li>keep command names and output envelopes stable enough that one tool can replace another implementation without rewriting the whole caller</li></ul>
+<h3>Recommended Core commands</h3>
+<p>The stable Core surface should include commands equivalent to:</p>
+<ul><li><code>xananode-core validate</code></li><li><code>xananode-core inspect</code></li><li><code>xananode-core build</code></li><li><code>xananode-core bundle</code></li><li><code>xananode-core analyze-intake</code></li><li><code>xananode-core projection</code></li></ul>
+<p>Expected responsibilities:</p>
+<ul><li><code>validate</code>: schema and integrity validation without mutating source records</li><li><code>inspect</code>: summarize a substrate or portable substrate source</li><li><code>build</code>: emit split protocol artifacts and optional bundle variants</li><li><code>bundle</code>: emit a portable <code>.substrate</code> archive plus optional JSON and JSONL companions</li><li><code>analyze-intake</code>: evaluate an incoming substrate against a receiving substrate for merge candidates, conflicts, suggested links, suggested transclusions, duplicate files, and health signals</li><li><code>projection</code>: derive renderer-neutral graph/projection data from protocol artifacts</li></ul>
+<h3>Recommended Workspace commands</h3>
+<p>The stable Workspace surface should include commands equivalent to:</p>
+<ul><li><code>xananode-workspace init</code></li><li><code>xananode-workspace open</code></li><li><code>xananode-workspace build</code></li><li><code>xananode-workspace export</code></li><li><code>xananode-workspace intertwingle</code></li><li><code>xananode-workspace deintertwingle</code></li><li><code>xananode-workspace health</code></li><li><code>xananode-workspace snapshot</code></li></ul>
+<p>Expected responsibilities:</p>
+<ul><li><code>init</code>: create a compliant substrate folder with declared authorship and repository metadata</li><li><code>open</code>: open an existing local substrate folder or working copy</li><li><code>build</code>: orchestrate Core builds for the active workspace</li><li><code>export</code>: write <code>.substrate</code>, <code>substrate-bundle.json</code>, <code>substrate-bundle.jsonl</code>, and split artifact outputs from the same source substrate</li><li><code>intertwingle</code>: mount or clone another substrate into a local workspace without silently claiming ownership</li><li><code>deintertwingle</code>: remove mounted material that has not been explicitly merged, while warning about broken chains or lost references</li><li><code>health</code>: compute substrate health, intake reports, chain break warnings, summary/body duplication warnings, and other authoring signals</li><li><code>snapshot</code>: create a versioned workspace snapshot through the substrate&#39;s backing VCS</li></ul>
+<h3>JSON-first machine I/O</h3>
+<p>For interoperability, executable implementations should support JSON-first invocation patterns.</p>
+<p>Examples:</p>
+<ul><li>pass arguments by filesystem path and flags</li><li>optionally accept JSON request files or stdin envelopes</li><li>write JSON result envelopes to stdout when <code>--json</code> is requested</li></ul>
+<p>The exact envelope format may evolve, but official tools should preserve these principles:</p>
+<ul><li>callers should not scrape prose output</li><li>success and failure should be obvious without reading human narration</li><li>structured warnings should be distinguishable from fatal errors</li><li>file outputs should be declared in the response</li></ul>
+<h3>Relationship to language-specific packages</h3>
+<p>JavaScript, Python, Rust, Go, Java, Kotlin, or other language packages may still exist as implementation surfaces. That is fine.</p>
+<p>But the protocol-facing contract should be the executable behavior and the artifact formats, not a requirement that every downstream caller embed Node.js APIs directly.</p>
+<p>In other words: the substrate is the protocol object, and the executable contract is the boring transport layer that lets many tools participate without sharing one language runtime.</p>
+<p>The current reference stack now supports Windows launcher packaging for <code>xananode-core</code> and <code>xananode-workspace</code> as self-contained executables with sibling runtime trees. That packaging shape is still an implementation detail, but it proves the protocol boundary can be used without a separate Node install on the calling machine.</p>
+<h2>Federation Targets</h2>
+<p>The protocol registry may list known online federation targets. A federation target is a Git-backed substrate source that tools can discover, clone, validate, and mount into a local workspace.</p>
+<p>The registry is a discovery aid, not a central authority. A substrate can federate with targets outside the registry as long as their manifests, schemas, and sharing rules validate.</p>
+<p>Workspace-level tools are responsible for cloning, naming, caching, mounting, and exporting mixed substrates. Studio may expose those actions, but the substrate management behavior belongs below the projection layer.</p>
+<h2>Sharing Policy</h2>
+<p>Nodes are shareable by default. This matches the federation model: an authored substrate is expected to be portable unless an author marks specific records as private, restricted, or needing review.</p>
+<p>A substrate may declare a top-level <code>sharing</code> policy:</p>
+<p>``<code>json { &quot;sharing&quot;: { &quot;default_shareable&quot;: true, &quot;excluded_nodes&quot;: [&quot;personal:person/private-contact&quot;], &quot;excluded_trails&quot;: [&quot;personal:trail/private-family-history&quot;], &quot;rules&quot;: [ { &quot;selector&quot;: { &quot;tag&quot;: &quot;medical&quot; }, &quot;shareable&quot;: false, &quot;scope&quot;: &quot;private&quot;, &quot;reason&quot;: &quot;Contains sensitive personal context.&quot; } ] } } </code>``</p>
+<p>Individual nodes may override that default:</p>
+<p>``<code>json { &quot;id&quot;: &quot;personal:claim/something-i-can-share&quot;, &quot;sharing&quot;: { &quot;shareable&quot;: true, &quot;scope&quot;: &quot;public&quot; } } </code>``</p>
+<p>When a trail is excluded, tools should treat the trail node and the trail&#39;s listed members as excluded unless an individual node explicitly opts back in. When a relationship touches a non-shareable node, pack exporters must omit that relationship or replace it with an explicit redaction record if the export profile supports redactions.</p>
+<p>Core, Workspace, Studio, and official projection layers must respect <code>sharing</code> during export, publication, federation, mounted-pack preparation, and generated review reports. A renderer may show private records inside a local authoring session, but it must not publish them into static public artifacts.</p>
+<h2>Projection Governance</h2>
+<p>Projection layers are lenses over a substrate. They may choose layout, typography, motion, interaction, and density, but official XanaNode projections must preserve protocol semantics:</p>
+<ul><li>relationship direction must be visible when edges are shown</li><li>relationship colors and line styles should come from the relationship type registry, with accessible alternatives when color alone is insufficient</li><li>node titles should remain titles; official graph projections should use node type/subtype projection media or primary media as the node center mark</li><li>node type, subtype, and multi-type/facet signals should remain distinguishable through projection media, color mixing, subtle chips, legends, tooltips, or inspector metadata</li><li>hop-depth controls should actually filter by graph distance from the focused node</li><li>when a reader travels along visible connected nodes, the projection should animate the walked route rather than dragging a decorative line</li><li>when a reader jumps to an unconnected or hidden node, the projection should make that leap legible with staged reveal by hop depth</li></ul>
+<p>Custom renderers can be compatible without copying the official look, but they should not flatten away direction, authorship, provenance, or sharing policy.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:source/protocol-artifact-specs-substrates.md</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>

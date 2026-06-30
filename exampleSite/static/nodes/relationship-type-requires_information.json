@@ -5,7 +5,7 @@
   "subtype": "relationship_type_schema",
   "importance": 5,
   "summary": "The source cannot be resolved, accepted, or completed without additional information.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "registry_type": "requires_information",
   "registry_namespace": "xananode",
   "category": "knowledge_workflow",
@@ -17,6 +17,12 @@
   "default_weight": 4,
   "default_visibility": "primary",
   "relationships": [
+    {
+      "id": "xananode.canonical:rel/media-relationship-type-requires_information-projection-icon-represents-schema-relationship-type-requires_information",
+      "type": "represents",
+      "source": "xananode.canonical:media/relationship-type-requires_information-projection-icon",
+      "direction": "incoming"
+    },
     {
       "id": "xananode.canonical:rel/registry-contains-relationship-type-requires_information",
       "type": "contains",
@@ -34,6 +40,12 @@
       "type": "related_to",
       "source": "xananode.canonical:schema/relationship-type-information_required_by",
       "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-requires_information-has_primary_media-media-relationship-type-requires_information-projection-icon",
+      "type": "has_primary_media",
+      "target": "xananode.canonical:media/relationship-type-requires_information-projection-icon",
+      "direction": "outgoing"
     },
     {
       "id": "xananode.canonical:rel/schema-relationship-type-requires_information-related_to-schema-relationship-type-information_required_by-inverse",

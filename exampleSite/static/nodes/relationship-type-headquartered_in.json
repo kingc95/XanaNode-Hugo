@@ -1,0 +1,48 @@
+{
+  "id": "xananode.canonical:schema/relationship-type-headquartered_in",
+  "title": "Headquartered in",
+  "type": "schema",
+  "subtype": "relationship_type_schema",
+  "importance": 5,
+  "summary": "The source organization has its headquarters in the target place.",
+  "version": "0.5.1",
+  "registry_type": "headquartered_in",
+  "registry_namespace": "xananode",
+  "category": "location",
+  "inverse": "headquarters_of",
+  "color": "#84cc16",
+  "inverse_color": "#bef264",
+  "line_style": "solid",
+  "inverse_line_style": "dashed",
+  "default_weight": 4,
+  "default_visibility": "primary",
+  "relationships": [
+    {
+      "id": "xananode.canonical:rel/registry-contains-relationship-type-headquartered_in",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-type-registry",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-category-location-contains-schema-relationship-type-headquartered_in",
+      "type": "contains",
+      "source": "xananode.canonical:schema/relationship-category-location",
+      "direction": "incoming"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-headquartered_in-related_to-schema-relationship-type-headquarters_of-inverse",
+      "type": "related_to",
+      "target": "xananode.canonical:schema/relationship-type-headquarters_of",
+      "direction": "outgoing"
+    },
+    {
+      "id": "xananode.canonical:rel/schema-relationship-type-headquarters_of-related_to-schema-relationship-type-headquartered_in-inverse",
+      "type": "related_to",
+      "source": "xananode.canonical:schema/relationship-type-headquarters_of",
+      "direction": "incoming"
+    }
+  ],
+  "imported_from": "nodes/xananode.canonical_schema_relationship-type-headquartered_in.json",
+  "pack_id": "xananode.canonical",
+  "pack_mode": "mounted"
+}

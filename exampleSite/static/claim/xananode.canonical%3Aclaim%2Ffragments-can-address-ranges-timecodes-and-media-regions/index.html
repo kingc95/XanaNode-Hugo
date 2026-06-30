@@ -21,7 +21,20 @@
     <section class="xana-app" data-xana-protocol-resolver="true">
       <div id="xana-graph"></div>
       <aside id="xana-panel" class="xana-panel">
-        <p class="panel-placeholder">Resolving Fragments can address ranges, timecodes, and media regions...</p>
+        <article class="xana-node-shell">
+      <div class="xana-node-header no-media">
+        <div class="xana-node-heading-text">
+          <div class="xana-node-badges">
+            <span class="xana-type-badge" data-type="claim">claim</span>
+            
+          </div>
+          <h1>Fragments can address ranges, timecodes, and media regions</h1>
+          <p class="xana-summary">XanaNode fragments can point to granular spans such as quoted text, word ranges, timecoded audio/video segments, and other media-native chunks, not only paragraph blocks.</p>
+        </div>
+      </div>
+      <div class="xana-node-content"><p>The protocol already separates durable addressing from extraction detail. The tumbler identifies the exact fragment and source version. The selector describes how to locate the chunk inside that source version. That lets a fragment represent a quoted sentence, a word or character range, a page region, or a timecoded media segment while preserving one interoperable transclusion model.</p></div>
+      <div class="xana-protocol-footer"><p class="xana-protocol-label">Protocol</p><code>xananode.canonical:claim/fragments-can-address-ranges-timecodes-and-media-regions</code></div>
+    </article>
       </aside>
     </section>
     <script type="module" src="/js/xananode.js"></script>
